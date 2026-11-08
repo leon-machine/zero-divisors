@@ -1,0 +1,31 @@
+functions:
+  check_block_algebra_in_the_tower_planes:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "one block of three tower planes plus a kernel plane in the Clifford algebra (GA.mul): CAR, J central, parity odd on modes, the nine products of two pair creators zero, the transfers even, [Z_2*, S*] = B_2*, [Z_1*, S*] = B_1*, [t_+, Z_2*] = Z_1*, [t_-, B_1*] = B_2*; sums over blocks are the proof"
+  check_symmetric_band_spectrum_and_isospin:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "every band vector with P <= n_b for n_b = 1..4 at four couplings (both phases and the degenerate point), its isospin Casimir, vanishing at P = n_b + 1, and [H, t_+-] = 0 on every Fock vector of n_b = 1, 2; every n_b is the proof"
+  check_doublet_quanta_ladder_charges_and_canonical_defect:
+    kind: exact
+    clauses: ["(i)", "(iii)"]
+    omits: "ladder relation, [Z_2, Z_2*] = P - 2n on the ladder, harmonic energies at four couplings for n_b = 1..4 and every P; charges and the doublet partner on the ladder; the operator identity [Z_2, Z_2*] = N_1 - N_3 on every Fock vector of n_b = 1, 2; the J form of the fields is the stored lemma"
+  check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "degenerate doublet-band multiplets and both pair additions at four couplings, n_b = 1..4; the stretched sector by exact inertia at one doublet-condensed coupling; the affine slope argument is the proof"
+  check_casimir_identity_for_the_pair_sum:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "the identity on every Fock vector of n_b = 1, 2, 3 (512 vectors at n_b = 3); general n_b is the normal-ordering proof"
+  check_threshold_binding_and_the_pair_sum_spectrum:
+    kind: exact
+    clauses: ["(v)", "(viii)"]
+    omits: "X and X_2 on V_P for n_b = 2..6 and every P by exact inertia (cross-checked with GA.congruence_signature for n_b <= 3); the G_D = 0 threshold by inertia for n_b <= 4 at one coupling; the general formula is conjectured"
+  check_lowest_doublet_level_and_its_separation:
+    kind: exact
+    clauses: ["(vii)", "(viii)"]
+    omits: "inertia of H - E on V_P for n_b = 2..5, every P, three couplings with G_S > G_D > 0 at zero kinetic terms (constant on V_P); n_b = 6 rests on the W computation and (vii)"
+untouched_premises:
+  synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet: "used only in the argued reading (parity of the rung field, the doublet-singlet route of its step 5); the checks compute the even doublets directly"

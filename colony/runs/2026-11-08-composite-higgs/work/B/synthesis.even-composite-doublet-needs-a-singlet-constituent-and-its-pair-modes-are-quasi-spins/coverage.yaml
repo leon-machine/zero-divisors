@@ -1,0 +1,13 @@
+functions:
+  check_doublets_are_odd_in_the_doublet_modes:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "complete for one doublet pair of modes with 0, 1 and 2 singlet planes (the full Clifford algebras, 16, 64 and 256 blades): every block A^(pD, pS) is invariant under the isospin Casimir, C = 3/4 on the doublet-odd blocks, C(C - 2) = 0 on the doublet-even blocks with the eigenvalue 2 of multiplicity 3, 6, 24, and no even doublet without a singlet plane; the weight argument for several doublets is the proof"
+  check_bilinear_doublets_and_their_hypercharge:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "one doublet and one singlet plane, sample weights Y_d = 1/6, Y_s = -1/3: the four bilinear pairs are isospin doublets (T_+ kills the upper, T_- maps it to the lower, T_+ maps back, T_3 = +-1/2) with hypercharges 1/2, -1/2, 1/6, -1/6; general weights are the proof"
+  check_charged_pair_modes_are_quasi_spins:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "window N = 2, channels (up, down, s): [W, M] = (1/2) M for the hypercharge weights and +-1/2 for the isospin weights, M^2 = 0, M not normal; commutator q + 1 and q - 1 on two edge-clean vectors at q = 1; mutual commutator of the two components maps a bulk down particle to an up particle; quasi-spin norms 1, 1, 0 (q = 1) and 1, 2, 4, 0 (q = 2) on the chiral sea, which rho_q(M) annihilates; the hypothesis M^2 = 0 is needed: M = E_{up,s} + E_{s,down} (T_3 weight 1/2, M^2 = E_{up,down}) has norms 1, 2, 6, 18 at q = 1; general weights, windows and ranks are the cited theorem"

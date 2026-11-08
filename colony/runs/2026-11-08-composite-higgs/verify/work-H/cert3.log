@@ -1,0 +1,2 @@
+n_b=4 P=2 band -18 threshold -6: [((0, 2, 2), 36, 'levels below threshold', 1, 'levels below band', 0, 'band multiplicity', 1), ((1, 1, 2), 96, 'levels below threshold', 16, 'levels below band', 0, 'band multiplicity', 1)]
+n_b=5 P=2 band -24 threshold -9: [((0, 2, 2), 100, 'levels below threshold', 1, 'levels below band', 0, 'band multiplicity', 1), ((1, 1, 2), 250, 'levels below threshold', 25, 'levels below band', 0, 'band multiplicity', 1)]

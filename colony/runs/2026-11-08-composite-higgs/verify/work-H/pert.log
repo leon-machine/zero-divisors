@@ -1,0 +1,49 @@
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p1a_check.py
+PASS check_block_algebra_in_the_tower_planes   premises touched: ['field-theory.imported-tower-limit', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS check_casimir_identity_for_the_pair_sum   premises touched: ['field-theory.imported-tower-limit']
+PASS check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+FAIL check_doublet_quanta_ladder_charges_and_canonical_defect   (returned False)
+PASS check_lowest_doublet_level_and_its_separation   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_symmetric_band_spectrum_and_isospin   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit']
+PASS check_threshold_binding_and_the_pair_sum_spectrum   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p1b_check.py
+PASS check_block_algebra_in_the_tower_planes   premises touched: ['field-theory.imported-tower-limit', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS check_casimir_identity_for_the_pair_sum   premises touched: ['field-theory.imported-tower-limit']
+PASS check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_doublet_quanta_ladder_charges_and_canonical_defect   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS check_lowest_doublet_level_and_its_separation   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_symmetric_band_spectrum_and_isospin   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit']
+FAIL check_threshold_binding_and_the_pair_sum_spectrum   (returned False)
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p1c_check.py
+PASS check_block_algebra_in_the_tower_planes   premises touched: ['field-theory.imported-tower-limit', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+FAIL check_casimir_identity_for_the_pair_sum   (returned False)
+PASS check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_doublet_quanta_ladder_charges_and_canonical_defect   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS check_lowest_doublet_level_and_its_separation   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_symmetric_band_spectrum_and_isospin   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit']
+PASS check_threshold_binding_and_the_pair_sum_spectrum   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p2a_check.py
+PASS check_collective_limit_at_fixed_gap   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_no_order_parameter_in_a_sector   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit', 'tower.ladder-pairs-satisfy-car-vectors']
+PASS check_single_shell_rotor_and_uniform_channel   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+FAIL check_variational_bounds_on_every_sector   (returned False)
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p2b_check.py
+PASS check_collective_limit_at_fixed_gap   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS check_no_order_parameter_in_a_sector   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit', 'tower.ladder-pairs-satisfy-car-vectors']
+PASS check_single_shell_rotor_and_uniform_channel   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+FAIL check_variational_bounds_on_every_sector   (returned False)
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p3a_check.py
+PASS check_bilinear_doublets_and_their_hypercharge   premises touched: ['synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet']
+FAIL check_charged_pair_modes_are_quasi_spins   (returned False)
+PASS check_doublets_are_odd_in_the_doublet_modes   premises touched: ['synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet', 'tower.ladder-pairs-satisfy-car-vectors']
+exit 1
+== colony/runs/2026-11-08-composite-higgs/verify/work-H/pert/p3b_check.py
+PASS check_bilinear_doublets_and_their_hypercharge   premises touched: ['synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet']
+PASS check_charged_pair_modes_are_quasi_spins   premises touched: ['synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins', 'tower.ladder-pairs-satisfy-car-vectors']
+FAIL check_doublets_are_odd_in_the_doublet_modes   (returned False)
+exit 1

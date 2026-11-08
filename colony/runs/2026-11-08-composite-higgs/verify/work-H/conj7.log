@@ -1,0 +1,7 @@
+n_b=7 P=1 m=7 dim=49 top eigenvalues [7. 0. 0. 0.] conjectured X=7 X2=0
+n_b=7 P=2 m=6 dim=1029 top eigenvalues [12.  9.  9.  9.] conjectured X=12 X2=9
+n_b=7 P=3 m=5 dim=5145 top eigenvalues [15. 13. 13. 13.] conjectured X=15 X2=13
+n_b=7 P=4 m=4 dim=8575 top eigenvalues [16. 15. 15. 15.] conjectured X=16 X2=15
+n_b=7 P=5 m=3 dim=5145 top eigenvalues [15. 15. 15. 15.] conjectured X=15
+n_b=7 P=6 m=2 dim=1029 top eigenvalues [13. 13. 13. 13.] conjectured X=13
+n_b=7 P=7 m=1 dim=49 top eigenvalues [9. 9. 9. 9.] conjectured X=9

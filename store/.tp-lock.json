@@ -49375,6 +49375,31 @@
   "status": "proved",
   "version": 5
  },
+ "synthesis.even-composite-doublet-needs-a-singlet-constituent-and-its-pair-modes-are-quasi-spins": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a0ca3edb176976c4",
+  "ledger": null,
+  "parts": {
+   "checks": "640bcb3d973e7cb7",
+   "proofs": "9bde3575027f7ba8",
+   "rest": "33009deb10105397",
+   "statement": "f405eab4bf92f211"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.even-slots-need-a-spectator-generator": {
   "assumes": [],
   "credit": [
@@ -59869,6 +59894,56 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "b861c5eacba62575",
+  "ledger": null,
+  "parts": {
+   "checks": "0287f10c5d33609c",
+   "proofs": "a8c0f49095d49ace",
+   "rest": "33009deb10105397",
+   "statement": "e60541e3333e8c3c"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.uniform-pair-channel-of-a-tower-condensate-is-a-goldstone-rotor": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "b8f73e35ea316317",
+  "ledger": null,
+  "parts": {
+   "checks": "3ece254612510182",
+   "proofs": "b5d396e6a2b1f8cc",
+   "rest": "33009deb10105397",
+   "statement": "67ba025e9a544f0a"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands": {
   "assumes": [],

@@ -35546,6 +35546,44 @@
 }
 ]
 },
+"synthesis.even-composite-doublet-needs-a-singlet-constituent-and-its-pair-modes-are-quasi-spins": {
+"failed": false,
+"findings": [],
+"key": "46f5ccf181c8786f",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_doublets_are_odd_in_the_doublet_modes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet",
+"tower.ladder-pairs-satisfy-car-vectors",
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_bilinear_doublets_and_their_hypercharge",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet"
+]
+},
+{
+"derivation": null,
+"func": "check_charged_pair_modes_are_quasi_spins",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+}
+]
+},
 "synthesis.even-slots-need-a-spectator-generator": {
 "failed": false,
 "findings": [],
@@ -47281,6 +47319,138 @@
 "standard-model.chain",
 "standard-model.spectrum-run",
 "synthesis.imported-two-loop-yukawa-gauge-terms"
+]
+}
+]
+},
+"synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses": {
+"failed": false,
+"findings": [],
+"key": "ada4e96754d254fe",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_block_algebra_in_the_tower_planes",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower"
+]
+},
+{
+"derivation": null,
+"func": "check_symmetric_band_spectrum_and_isospin",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.composite-scalars-mean-field-level",
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_doublet_quanta_ladder_charges_and_canonical_defect",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower"
+]
+},
+{
+"derivation": null,
+"func": "check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_casimir_identity_for_the_pair_sum",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_threshold_binding_and_the_pair_sum_spectrum",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_lowest_doublet_level_and_its_separation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_band_need_not_hold_the_ground_state_and_condensate_levels_below_threshold",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+}
+]
+},
+"synthesis.uniform-pair-channel-of-a-tower-condensate-is-a-goldstone-rotor": {
+"failed": false,
+"findings": [],
+"key": "74822371a5148d03",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_no_order_parameter_in_a_sector",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.composite-scalars-mean-field-level",
+"field-theory.imported-tower-limit",
+"tower.ladder-pairs-satisfy-car-vectors",
+"tower.structure-tower-c-norms"
+]
+},
+{
+"derivation": null,
+"func": "check_variational_bounds_on_every_sector",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.imported-tower-limit",
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_single_shell_rotor_and_uniform_channel",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.how-close-tower-comes-ccr",
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_collective_limit_at_fixed_gap",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
 ]
 }
 ]

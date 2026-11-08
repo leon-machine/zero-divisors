@@ -1,0 +1,9 @@
+PASS  at fixed mean-field gap E = G n_b/2 the rotor splitting is at most 4E/n_b (1/3 at n_b = 60) while the pair-breaking threshold stays 2E
+PASS check_collective_limit_at_fixed_gap   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS  a pair field has no expectation on sector vectors; at K/G = n_b/2 - n the ground band levels n, n+1 coincide and their sum has <P> = (n+1)(n_b - n)|psi_n|^2
+PASS check_no_order_parameter_in_a_sector   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit', 'tower.ladder-pairs-satisfy-car-vectors']
+PASS  single shell: the ground state is the band state nearest gamma; in the condensed phase both neighbours lie within 2G and carry all of (P + P*) psi; in the symmetric phase the bound pair sits at 2K - G n_b
+PASS check_single_shell_rotor_and_uniform_channel   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS  on every sector of the n_b = 2, 3 floors, for four H_0 commuting with P: E(s +- h) - E(s) is at most the Rayleigh quotient, which is +-(2K + G c), and the second difference is at most 2G
+PASS check_variational_bounds_on_every_sector   premises touched: ['field-theory.imported-tower-limit', 'synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+exit 0

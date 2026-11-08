@@ -1100,6 +1100,20 @@
     in the tower, so no pair boson is the rung field; what a composite Higgs would still need is a gap and a
     charged doublet, and channel-resolved pair densities can carry a canonical pair
     (\claimref{synthesis.density-modes-bosonise-only-along-one-null-direction}).
+
+    (8 November, composite doublet.) A composite doublet is allowed by parity: an even doublet needs an odd
+    number of singlet fermion factors, the simplest a doublet-singlet bilinear, and when its channel matrix
+    squares to zero its pair modes on a null generator are quasi-spins, not exact bosons
+    (\claimref{synthesis.even-composite-doublet-needs-a-singlet-constituent-and-its-pair-modes-are-quasi-spins}).
+    For pairing-type elements a finite Goldstone bound holds at every size: a condensate's uniform pair channel
+    lies within $2G$ of the ground state, a rotor, not a gapped boson
+    (\claimref{synthesis.uniform-pair-channel-of-a-tower-condensate-is-a-goldstone-rotor}). On the symmetric band of
+    a two-species floor the doublet pair mode is a gapped composite doublet, even, of isospin $\tfrac12$, bound
+    below pair breaking with gap $\omega_{D}$, which closes exactly where the band's doublet condenses; the band
+    need not hold the floor's ground state, and the condensed phase has further levels below threshold
+    (\claimref{synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses}).
+    So no model here gives a doublet vacuum value together with a gapped doublet, and the elementary reading of
+    the Higgs stands (argued); coupled condensates and the off-band ground states are not covered.
   attack:
     - "The branch with a level: the one-loop effective potential and the running of the linear field with a level, a second doublet near 2.5 to 3.5 TeV and perturbative quartics; the charged pair's mass and the alignment of the light doublet."
     - "The coupling reading: whether the series fixes the family matrices of the covariant completion as complex symmetric (the rung 10), under which the transmutation branch is excluded, or admits general matrices, where a tuned right-handed mixing could evade the B-mixing bound at the price of |m_H^2 - m_A^2|/m^2 of order 1e-5."
@@ -1109,6 +1123,10 @@
     - >-
       A gapped composite scalar with today's exact boson results: whether a two-condensate pairing on the tower
       gives an even doublet of helicity-zero pair bosons with a gap, and its charge.
+    - >-
+      (Low priority.) Prove the spectrum of the pair sum of the two-species floor for every number of blocks
+      (computed exactly for up to six), through the duality between block rotations and flavour rotations, so
+      that the lowest doublet level of the band is a theorem at every size.
   success: >-
     A quantised rung field on the branch with a level, with its one-loop effective potential
     computed in the formalism and a second doublet consistent with flavour and collider limits, or a

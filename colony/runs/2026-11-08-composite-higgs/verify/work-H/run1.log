@@ -1,0 +1,15 @@
+PASS  one block of three tower planes: CAR, J central, pair creators sharing a mode multiply to zero, even doublet transfers with [Z*, S*] = B*
+PASS check_block_algebra_in_the_tower_planes   premises touched: ['field-theory.imported-tower-limit', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS  2W = N(Om + 2) - C_u3 - C_O on every Fock state of the floors Om = 1, 2, 3
+PASS check_casimir_identity_for_the_pair_sum   premises touched: ['field-theory.imported-tower-limit']
+PASS  doublet-condensed: isospin multiplet degenerate, both components add pairs alike, amplitude threshold GD Om with no level between
+PASS check_condensed_doublet_is_degenerate_and_has_no_subthreshold_amplitude   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS  doublet quanta: Z_2* x_n = (P - n) x_(n+1), harmonic quantum (Kc - Kp) + (GS - GD)(Om - P + 1), [Z_2, Z_2*] = N_1 - N_chi = P - 2n
+PASS check_doublet_quanta_ladder_charges_and_canonical_defect   premises touched: ['field-theory.how-close-tower-comes-ccr', 'synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower']
+PASS  one doublet quantum, GS > GD: lowest level E_D for Om - P + 1 >= 3, within c GD otherwise; every other level >= E_th0 - 3 GD
+PASS check_lowest_doublet_level_and_its_separation   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+PASS  block-symmetric even states: E = Kp(2nS + n) + Kc n - (GS nS + GD n)(Om - P + 1), isospin n/2
+PASS check_symmetric_band_spectrum_and_isospin   premises touched: ['field-theory.composite-scalars-mean-field-level', 'field-theory.imported-tower-limit']
+PASS  pair-sum spectrum on the one-quantum sector: max (P-1)(Om-P+1) + max(Om-P+1, 3), second (P-1)(Om-P+1) + 3; G_D = 0 threshold (P-1)(Om-P+1) pairs
+PASS check_threshold_binding_and_the_pair_sum_spectrum   premises touched: ['synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy']
+exit 0

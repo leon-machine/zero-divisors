@@ -1,0 +1,7 @@
+PASS  the doublet-singlet bilinears are even doublets; with Y_d - Y_s = 1/2 the hoppings carry +-1/2, the pairs -+(Y_d + Y_s)
+PASS check_bilinear_doublets_and_their_hypercharge   premises touched: ['synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet']
+PASS  a doublet-singlet hopping of hypercharge 1/2 is nilpotent and not normal: commutator q +- 1 on two edge-clean vectors, quasi-spin norms 1, 1, 0 (q = 1) and 1, 2, 4, 0 (q = 2) on the sea
+PASS check_charged_pair_modes_are_quasi_spins   premises touched: ['synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins', 'tower.ladder-pairs-satisfy-car-vectors']
+PASS  ad-isospin on one or two singlet planes beside a doublet: C = 3/4 on the doublet-odd part, C in {0, 2} on the doublet-even part; with no singlet plane no even doublet; the even doublets are A^(1,1), of dimension 16 and 64
+PASS check_doublets_are_odd_in_the_doublet_modes   premises touched: ['synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet', 'tower.ladder-pairs-satisfy-car-vectors']
+exit 0

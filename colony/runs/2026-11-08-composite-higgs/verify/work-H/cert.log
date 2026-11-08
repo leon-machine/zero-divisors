@@ -1,0 +1,3 @@
+n_b=5 P=3 sector=(2, 2, 2) (Kp,Kc,GS,GD)=(0,0,1,1/2) omega_D=3/2 m=3: numeric lowest -9.162278; exact Rayleigh quotient -9.153285 (-1254/137) vs singlet band E(P,0)=-9: below band: True
+n_b=6 P=3 sector=(2, 2, 2) (Kp,Kc,GS,GD)=(0,0,1,4/5) omega_D=4/5 m=4: numeric lowest -12.393018; exact Rayleigh quotient -12.343799 (-243358/19715) vs singlet band E(P,0)=-12: below band: True
+n_b=7 P=3 sector=(2, 2, 2) (Kp,Kc,GS,GD)=(0,0,1,9/10) omega_D=1/2 m=5: numeric lowest -15.018345; exact Rayleigh quotient -15.018345 (-80631235244/5368849565) vs singlet band E(P,0)=-15: below band: True
