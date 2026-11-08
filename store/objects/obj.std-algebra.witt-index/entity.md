@@ -1,7 +1,7 @@
 ---
 id: obj.std-algebra.witt-index
 kind: object
-version: 1
+version: 2
 title: The Witt index
 status: defined
 region: std-algebra
@@ -20,15 +20,25 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 2
+  source: run 2026-11-08-foundation-layer
 review: typed
 trust: ai-proposed
 about:
 - obj.std-algebra.signature
+founded_on:
+- synthesis.continuum-completion-premise@2
 locators:
   sources:
   - key: Lam2005
     locator: Ch. I (hyperbolic planes, the Witt decomposition, Witt's theorems)
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.continuum-completion-premise: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   by: algebra-core-2026-10-26
 ---
 

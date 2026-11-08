@@ -465,6 +465,8 @@ ALLOWED = {
     "settled_by": ({"question"}, {"claim", "prediction"}),
     "refuted_by": ({"claim"}, {"claim", "prediction"}),
     "comments_on": ({"note"}, {"claim", "object", "prediction", "question"}),
+    # an entity rests on the foundation layer (store/conventions.md, "The foundation")
+    "founded_on": ({"claim", "object", "prediction"}, {"claim"}),
 }
 
 
@@ -600,8 +602,15 @@ def layer2(store: Store, rep: Report):
             elif ed.kind == "uses" and tgt.status == "postulate":
                 rep.add("E203", ed.src, f"uses -> {ed.dst}: a postulate is taken via "
                         "'assumes'", "move it to the derivation's assumes list")
+            elif ed.kind == "founded_on" and not derive.is_foundation(tgt):
+                rep.add("E203", ed.src, f"founded_on -> {ed.dst}: target is not a foundation postulate",
+                        "founded_on names a postulate marked foundation: true")
             elif ed.kind == "uses" and tgt.kind == "object":
                 rep.add("W209", ed.src, f"uses -> {ed.dst}: an object belongs in 'about'")
+    for eid, e in store.entities.items():
+        if e.meta.get("foundation") and e.status != "postulate":
+            rep.add("E216", eid, "foundation: true is for postulates only",
+                    "mark only the foundation postulates (store/conventions.md, \"The foundation\")")
     subject_ids = {x.get("id") for x in store.subjects}
     if subject_ids:
         for eid, e in store.entities.items():

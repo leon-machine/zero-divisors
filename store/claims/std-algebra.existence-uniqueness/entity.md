@@ -26,7 +26,7 @@ about:
 derivations:
 - name: main
   uses:
-  - std-algebra.polarisation@1
+  - std-algebra.polarisation@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

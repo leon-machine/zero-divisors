@@ -27,7 +27,7 @@ derivations:
   uses:
   - std-algebra.orthogonal-anticommute@1
   - transport.classification-real-clifford-algebras@3
-  - primer.sign@2
+  - primer.sign@3
   - tower.commuting-copies@5
   - tower.rigidity-clock-frozen@5
   proof: proof-main.tex

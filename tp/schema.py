@@ -71,6 +71,11 @@ ENTITY = {
         "derivations": {"type": "array", "items": DERIVATION},
         "checked_by": {"type": "array", "items": EVIDENCE},
         "specialises": PINS,
+        # the foundation layer: postulates that are mathematical primitives of the whole graph
+        # (the bit and what follows), kept out of the premise ledger, and the edges that root
+        # entities in them (see store/conventions.md, "The foundation")
+        "foundation": {"type": "boolean"},
+        "founded_on": PINS,
         "equivalent_to": PINS,
         "contradicts": PINS,
         "supports": PINS,

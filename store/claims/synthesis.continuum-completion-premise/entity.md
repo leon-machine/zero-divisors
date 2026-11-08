@@ -1,7 +1,7 @@
 ---
 id: synthesis.continuum-completion-premise
 kind: claim
-version: 1
+version: 2
 title: 'Premise (F4): the coefficients are completed to a complete ordered field'
 status: postulate
 region: synthesis
@@ -17,15 +17,26 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-07-bit-root
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 2
+  source: run 2026-11-08-foundation-layer
 review: draft
 about:
 - obj.std-algebra.clifford-algebra
 - obj.std-algebra.quadratic-space
+foundation: true
+founded_on:
+- synthesis.premise-superposition-over-the-integers@2
 lineage:
   motivated_by:
   - synthesis.nilpotent-steps-derivative-exponential-and-boost
   - synthesis.completion-recovers-the-real-clifford-algebras
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 8 November 2026: the foundation layer. Marked as a foundation postulate, founded on synthesis.premise-superposition-over-the-integers. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   note: >-
     The source document calls this primitive (C); the store names the four foundation postulates F1 to F4. From Leon's working document "From the Bit to the Numbers" (7 November 2026), Step 5 (the
     continuum), the fourth of its four chosen primitives; filed with the other three (the bit, minimal

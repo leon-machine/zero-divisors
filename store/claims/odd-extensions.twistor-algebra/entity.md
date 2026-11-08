@@ -25,7 +25,7 @@ derivations:
   - odd-extensions.four-extensions-oriented-pair@6
   - odd-extensions.imported-conformal-completion@5
   - std-algebra.pseudoscalar-commutation@1
-  - primer.sign@2
+  - primer.sign@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

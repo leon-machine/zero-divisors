@@ -1,7 +1,7 @@
 ---
 id: obj.std-algebra.rotor
 kind: object
-version: 2
+version: 3
 title: Rotors
 status: defined
 region: std-algebra
@@ -19,11 +19,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 3
+  source: run 2026-11-08-foundation-layer
 review: typed
 trust: ai-proposed
 about:
 - obj.std-algebra.pin-spin
 - obj.std-algebra.reversion
+founded_on:
+- synthesis.continuum-completion-premise@2
 locators:
   sources:
   - key: DoranLasenby2003
@@ -31,6 +37,10 @@ locators:
   - key: HestenesSobczyk1984
     locator: Ch. 3 (versors, rotors and the bivector algebra)
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 2 -> 3. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.continuum-completion-premise: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   by: algebra-core-2026-10-26
   maintainer_pass:
     by: maintainer-2026-10-31

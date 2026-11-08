@@ -33,7 +33,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.witt-basis-car@1
-  - std-algebra.pure-spinors@1
+  - std-algebra.pure-spinors@2
   - std-algebra.bivector-lie-algebra@1
   proof: proof-main.tex
 checked_by:

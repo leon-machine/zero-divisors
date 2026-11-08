@@ -26,7 +26,7 @@ derivations:
   - correspondence.spinor-identification@7
   - correspondence.twistors-are-states-three-ladder-pairs@6
   - mass.imported-flat-model-twistor-chart-infinity@7
-  - std-algebra.pure-spinors@1
+  - std-algebra.pure-spinors@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -31,7 +31,7 @@ derivations:
   - std-algebra.involution-properties@1
   - std-algebra.z2-grading@1
   - std-algebra.vector-squares@1
-  - primer.centre@2
+  - primer.centre@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -29,9 +29,9 @@ derivations:
 - name: main
   uses:
   - dark-matter.flag-insensitive-residue-no-flag-level@3
-  - primer.twisted-adjoint-action@3
+  - primer.twisted-adjoint-action@4
   - std-algebra.witt-basis-car@1
-  - std-algebra.witt-extension@1
+  - std-algebra.witt-extension@2
   - std-algebra.pseudoscalar-commutation@1
   proof: proof-main.tex
 checked_by:

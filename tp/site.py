@@ -19,7 +19,7 @@ PAPER_ORDER = ["T00", "T01", "T02", "T03", "T04", "T05", "T05-pairing", "T05-ang
                "T14a", "T14b", "T14c", "T15", "T16", "T17", "T17-rule2", "FT"]
 KEEP = ("id", "kind", "version", "title", "status", "effective", "ledger", "check",
         "region", "review", "one_liner", "formal", "technical", "lay", "locators",
-        "imported_from", "flags", "typing_note", "conditional_on", "subject", "stale",
+        "imported_from", "flags", "typing_note", "conditional_on", "foundation", "is_foundation", "subject", "stale",
         "kill_condition", "observations", "refuted_by")
 FEATURED = ["transport.transport-algorithm", "transport.noinverse", "transport.minimality",
             "singularity.type-n-only-type-n", "tower.witt-index-quantum-capacity",
@@ -161,7 +161,7 @@ def _documents(root, nodes, store=None, site="site"):
 SIDE_HUE = {"metric": 212, "algebra": 272, "car": 168, "matter": 22, "synthesis": 330}
 # in the page (the map, search before its index loads, the record views) ...
 V2_INLINE = ("id", "kind", "version", "status", "effective", "ledger", "check", "one_liner",
-             "conditional_on", "subject", "kill_condition", "observations", "refuted_by",
+             "conditional_on", "foundation", "is_foundation", "subject", "kill_condition", "observations", "refuted_by",
              "locators")
 # ... and in site/data/<subject>.json, fetched when the result is opened
 V2_DEFER = ("formal", "technical", "lay", "imported_from", "flags", "typing_note", "review")

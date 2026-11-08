@@ -52,7 +52,7 @@ extraction:
     by: ai-typing-pass
     note: Imported classical theorem, no derivation edges.
 equivalent_to:
-- std-algebra.witt-extension@1
+- std-algebra.witt-extension@2
 ---
 
 ## formal

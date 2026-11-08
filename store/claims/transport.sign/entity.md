@@ -19,7 +19,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - primer.sign@2
+  - primer.sign@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -52,7 +52,7 @@ extraction:
 subject: clifford-structure
 tags: [pseudoscalar-and-centre]
 equivalent_to:
-- primer.sign@2
+- primer.sign@3
 ---
 
 ## formal

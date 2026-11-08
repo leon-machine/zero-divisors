@@ -25,7 +25,7 @@ derivations:
   uses:
   - transport.rule-1-morita-trivial@6
   - std-algebra.pseudoscalar-commutation@1
-  - primer.centre@2
+  - primer.centre@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

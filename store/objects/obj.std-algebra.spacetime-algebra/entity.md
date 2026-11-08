@@ -1,7 +1,7 @@
 ---
 id: obj.std-algebra.spacetime-algebra
 kind: object
-version: 2
+version: 3
 title: The spacetime algebra
 status: defined
 region: std-algebra
@@ -27,16 +27,26 @@ credit:
   role: 'GA rewrite (the pseudoscalar named I_4, at reader R11''s request)'
   version: 2
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 3
+  source: run 2026-11-08-foundation-layer
 review: typed
 trust: ai-proposed
 about:
 - obj.std-algebra.clifford-algebra
 - obj.std-algebra.signature
+founded_on:
+- synthesis.continuum-completion-premise@2
 locators:
   sources:
   - key: DoranLasenby2003
     locator: Ch. 5 (relativity and spacetime)
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 2 -> 3. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.continuum-completion-premise: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   maintainer_pass_ga_rewrite_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'

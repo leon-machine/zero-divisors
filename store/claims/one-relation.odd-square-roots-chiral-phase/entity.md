@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.pseudoscalar-commutation@1
-  - primer.sign@2
+  - primer.sign@3
   - std-algebra.vector-squares@1
   proof: proof-main.tex
 checked_by:

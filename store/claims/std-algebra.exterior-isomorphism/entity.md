@@ -35,7 +35,7 @@ derivations:
   - std-algebra.grade-decomposition@2
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.existence-uniqueness@1
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

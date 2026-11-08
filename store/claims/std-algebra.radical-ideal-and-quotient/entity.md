@@ -34,7 +34,7 @@ derivations:
   - std-algebra.blade-basis@1
   - std-algebra.existence-uniqueness@1
   - std-algebra.functoriality@1
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   - std-algebra.bivector-exponential@4
   proof: proof-main.tex
 checked_by:

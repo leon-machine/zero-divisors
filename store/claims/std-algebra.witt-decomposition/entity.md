@@ -33,8 +33,8 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
-  - std-algebra.polarisation@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
+  - std-algebra.polarisation@2
   - std-algebra.vector-squares@1
   proof: proof-main.tex
 checked_by:

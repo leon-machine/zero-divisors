@@ -31872,6 +31872,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "fff8e9915839bb8f",
@@ -31883,7 +31888,7 @@
    "statement": "101b7bd923f2a3b6"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.clifford-algebra": {
   "assumes": [],
@@ -31897,6 +31902,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "07140c56f45b6e63",
@@ -31908,7 +31918,7 @@
    "statement": "9b5cdcf0004306c5"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.clifford-conjugation": {
   "assumes": [],
@@ -31922,6 +31932,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "2840e0d990697fea",
@@ -31933,7 +31948,7 @@
    "statement": "5f0c3319355083db"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.clifford-group": {
   "assumes": [],
@@ -31947,6 +31962,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "79ca11d1bdb4f127",
@@ -31958,7 +31978,7 @@
    "statement": "bfcacd52263c832f"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.conformal-algebra": {
   "assumes": [],
@@ -31972,6 +31992,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "c929e737398d0aaf",
@@ -31983,7 +32008,7 @@
    "statement": "249a5ea4c000150d"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.even-subalgebra": {
   "assumes": [],
@@ -31997,6 +32022,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "1d04c7ff6162abde",
@@ -32008,7 +32038,7 @@
    "statement": "0512b79456ff3dd1"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.grade-involution": {
   "assumes": [],
@@ -32022,6 +32052,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "0b11d78fccbc5338",
@@ -32033,7 +32068,7 @@
    "statement": "0047ac4c1ffe98dc"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.grade-projection": {
   "assumes": [],
@@ -32047,6 +32082,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "aaa3f8f95bc46e8f",
@@ -32058,7 +32098,7 @@
    "statement": "b144eadff8ff0fe1"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.hyperbolic-plane": {
   "assumes": [],
@@ -32072,6 +32112,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "d7738e77bc5d1758",
@@ -32083,7 +32128,7 @@
    "statement": "ba344a1747af67cb"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.left-contraction": {
   "assumes": [],
@@ -32097,6 +32142,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "e8888843a971a8b8",
@@ -32108,7 +32158,7 @@
    "statement": "6a5a4d7df33090ac"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.minimal-left-ideal": {
   "assumes": [],
@@ -32122,6 +32172,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "eaac54b2f9925205",
@@ -32133,7 +32188,7 @@
    "statement": "6d1d284c26d86b5d"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.outer-product": {
   "assumes": [],
@@ -32147,6 +32202,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "bdc3c46e87521b8f",
@@ -32158,7 +32218,7 @@
    "statement": "7e617dadeeb42066"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.outermorphism": {
   "assumes": [],
@@ -32172,6 +32232,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "ab8b88903d842576",
@@ -32183,7 +32248,7 @@
    "statement": "0c3bf38739d623c1"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.pin-spin": {
   "assumes": [],
@@ -32197,6 +32262,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "8838d53918f2b07a",
@@ -32208,7 +32278,7 @@
    "statement": "0f7be276d928f0d8"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.primitive-idempotent": {
   "assumes": [],
@@ -32222,6 +32292,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "d8b9e3415a18a08f",
@@ -32233,7 +32308,7 @@
    "statement": "eede0538671a74ae"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.projective-algebra": {
   "assumes": [],
@@ -32247,6 +32322,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "8f49e1a8cee9f993",
@@ -32258,7 +32338,7 @@
    "statement": "30d04e0032901907"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.pseudoscalar": {
   "assumes": [],
@@ -32272,6 +32352,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "b7759b04ed7b6cef",
@@ -32283,7 +32368,7 @@
    "statement": "24e6ca9d80455ddf"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.quadratic-space": {
   "assumes": [],
@@ -32297,6 +32382,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "07058e00ae55cb90",
@@ -32308,7 +32398,7 @@
    "statement": "39426a36ca14e509"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.radical": {
   "assumes": [],
@@ -32322,6 +32412,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "b31d95a14fbbf370",
@@ -32333,7 +32428,7 @@
    "statement": "52d5e053f43bc88c"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.reversion": {
   "assumes": [],
@@ -32347,6 +32442,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "0179cd998762166d",
@@ -32358,7 +32458,7 @@
    "statement": "4a2e5dcd286cdea8"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.std-algebra.rotor": {
   "assumes": [],
@@ -32372,6 +32472,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "7f2f6cb662bdfbb4",
@@ -32383,7 +32488,7 @@
    "statement": "73eb20147adaeae7"
   },
   "status": "defined",
-  "version": 2
+  "version": 3
  },
  "obj.std-algebra.signature": {
   "assumes": [],
@@ -32402,6 +32507,11 @@
     "Claude Opus 5.5",
     "maintainer pass, citation of the retired imported Fact repointed to its derivation in geometric algebra",
     2
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "f48ad3a95f0ac0ef",
@@ -32413,7 +32523,7 @@
    "statement": "c79f47c8a48c82bd"
   },
   "status": "defined",
-  "version": 2
+  "version": 3
  },
  "obj.std-algebra.spacetime-algebra": {
   "assumes": [],
@@ -32437,6 +32547,11 @@
     "Claude Opus 5.5",
     "GA rewrite (the pseudoscalar named I_4, at reader R11's request)",
     2
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "f21f801ba221fbe7",
@@ -32448,7 +32563,7 @@
    "statement": "5a651426e786e40b"
   },
   "status": "defined",
-  "version": 2
+  "version": 3
  },
  "obj.std-algebra.witt-index": {
   "assumes": [],
@@ -32462,6 +32577,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "53090837eab9a8cc",
@@ -32473,7 +32593,7 @@
    "statement": "8a5430a41928b489"
   },
   "status": "defined",
-  "version": 1
+  "version": 2
  },
  "obj.synthesis.cosmological-horizon-boundary-modes": {
   "assumes": [],
@@ -35380,6 +35500,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "2a7f749e48cccb29",
@@ -35391,7 +35516,7 @@
    "statement": "838117f024a6f081"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "primer.classification-real-clifford-algebras": {
   "assumes": [],
@@ -35430,6 +35555,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "ac4b5c8a7eb2e51c",
@@ -35441,7 +35571,7 @@
    "statement": "21aaf11ef9efe80b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "primer.sign": {
   "assumes": [],
@@ -35455,6 +35585,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "9625c94a4aceb8b3",
@@ -35466,7 +35601,7 @@
    "statement": "409cd75865eaa9ec"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "primer.splitting-along-hyperbolic-plane": {
   "assumes": [],
@@ -35480,6 +35615,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    3
    ]
   ],
   "hash": "4127163af4208680",
@@ -35491,7 +35631,7 @@
    "statement": "9fffff8c6be235c7"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "primer.twisted-adjoint-action": {
   "assumes": [],
@@ -35505,6 +35645,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    4
    ]
   ],
   "hash": "f9a620db32f56af6",
@@ -35516,7 +35661,7 @@
    "statement": "e97f9d15d2c54ad4"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "programme.n-parameter-of-the-laws": {
   "assumes": [],
@@ -45586,6 +45731,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "484d7915e7906756",
@@ -45597,7 +45747,7 @@
    "statement": "8716b3835160643b"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "std-algebra.chevalley-pairing": {
   "assumes": [],
@@ -46256,6 +46406,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "7a13aabc88089073",
@@ -46267,7 +46422,7 @@
    "statement": "9b170d2002c457ad"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "std-algebra.product-decomposition": {
   "assumes": [],
@@ -46331,6 +46486,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "de8772c739c88c75",
@@ -46342,7 +46502,7 @@
    "statement": "0683a67448caadf2"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "std-algebra.quaternions": {
   "assumes": [],
@@ -46666,6 +46826,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "4a8f80870d7bd2e3",
@@ -46677,7 +46842,7 @@
    "statement": "d01f568078194267"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "std-algebra.z2-grading": {
   "assumes": [],
@@ -48273,6 +48438,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "a866a67f1aafc528",
@@ -48284,7 +48454,7 @@
    "statement": "ba8c6c8e6d94c181"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.complex-neutrino-stages-keep-the-solar-sum-rule": {
   "assumes": [],
@@ -48383,6 +48553,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "e54fcec684269796",
@@ -48394,7 +48569,7 @@
    "statement": "8312a7b6fa3238d9"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.cosmological-horizon-completed-pair": {
   "assumes": [],
@@ -49093,6 +49268,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "918dca8951910585",
@@ -49104,7 +49284,7 @@
    "statement": "ff5c71255c34438d"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
   "assumes": [],
@@ -49872,6 +50052,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "127a233c47f66fcc",
@@ -49883,7 +50068,7 @@
    "statement": "44d2481852da2027"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.frozen-phase-spectrum-not-red": {
   "assumes": [],
@@ -57134,6 +57319,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "daa12ba5f5b9a53e",
@@ -57145,7 +57335,7 @@
    "statement": "23ad026cc2a03084"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.premise-superposition-over-the-integers": {
   "assumes": [],
@@ -57159,6 +57349,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "866b21c9c2e849c2",
@@ -57170,7 +57365,7 @@
    "statement": "35dfb4014b272af5"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.premise-the-bit": {
   "assumes": [],
@@ -57184,6 +57379,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "e5ae03c53559def9",
@@ -57195,7 +57395,7 @@
    "statement": "5458a4a5733b21f3"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.principality-is-genericity": {
   "assumes": [],
@@ -58688,6 +58888,11 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "maintainer pass, foundation layer",
+    2
    ]
   ],
   "hash": "0ad428788a5f5d65",
@@ -58699,7 +58904,7 @@
    "statement": "3ee41763862dfff8"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.slot-count-not-from-constituent-fock-space": {
   "assumes": [],

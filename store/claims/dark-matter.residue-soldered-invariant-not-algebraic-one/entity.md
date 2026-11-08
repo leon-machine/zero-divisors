@@ -30,7 +30,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.type-residue-what-each-tower-can@5
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   - primer.classification-real-clifford-algebras@3
   proof: proof-main.tex
 checked_by:

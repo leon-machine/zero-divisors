@@ -1,7 +1,7 @@
 ---
 id: primer.commutation-rule
 kind: claim
-version: 2
+version: 3
 title: The commutation rule
 status: proved
 region: primer
@@ -18,7 +18,13 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T00, deposited version
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 3
+  source: run 2026-11-08-foundation-layer
 review: typed
+founded_on:
+- synthesis.continuum-completion-premise@2
 derivations:
 - name: main
   proof: proof-main.tex
@@ -33,6 +39,10 @@ locators:
   label: tk:commutation
   line: 447
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 2 -> 3. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.continuum-completion-premise: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

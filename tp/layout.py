@@ -68,7 +68,7 @@ WEIGHT = {"uses": 1.0, "assumes": 1.0, "specialises": 1.0, "equivalent_to": 1.5,
           "about": 0.6, "motivated_by": 0.6, "refuted_by": 0.6, "derived_from": 0.6,
           "supersedes": 0.6, "inverts": 0.6, "supports": 0.6, "tests": 0.6,
           "kills": 0.6, "settled_by": 0.6, "contradicts": 0.4}
-LOGICAL = ("uses", "assumes", "specialises")
+LOGICAL = ("uses", "assumes", "specialises", "founded_on")
 
 
 def graph(g):
@@ -186,12 +186,13 @@ def depth_ranks(g, ids, ix):
     return np.argsort(np.argsort(dep + 1e-6 * np.arange(len(dep)))) / max(len(dep) - 1, 1), dep
 
 
-CORE_LINKS = ("uses", "assumes", "specialises", "equivalent_to")
+CORE_LINKS = ("uses", "assumes", "specialises", "equivalent_to", "founded_on")
 
 
 def is_core(node):
-    """The algebra core: the standard programme's algebra subject (docs/ALGEBRA_CORE.md)."""
-    return node.get("subject") == "standard-algebra"
+    """The algebra core: the standard programme's algebra subject (docs/ALGEBRA_CORE.md), and
+    the foundation postulates beneath it (store/conventions.md, "The foundation")."""
+    return node.get("subject") == "standard-algebra" or node.get("is_foundation", False)
 
 
 def core_distance(g, ids, about=True):

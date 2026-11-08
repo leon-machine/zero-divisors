@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.witt-decomposition@2
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

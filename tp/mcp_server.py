@@ -47,6 +47,7 @@ class Lab:
         self.ledger = derive.ledger(self.store, g)
         self.past, self.future = derive.cones(g, self.store.entities.keys())
         self.conds = derive.conditions(self.store, self.past)
+        self.fnd = derive.foundation_of(self.store, self.past)
         gp = os.path.join(self.lab, "build", "graph.json")
         self.checks = {}
         if os.path.exists(gp):
@@ -152,7 +153,8 @@ class Lab:
         return {"id": id, "status": e.status, "effective_status": self.eff.get(id),
                 "statement": e.levels.get("formal"), "derivations": ders, "proofs": out,
                 "imported_from": e.meta.get("imported_from"),
-                "holds_given": self.conds.get(id, [])}
+                "holds_given": self.conds.get(id, []),
+                "rests_on_foundation": self.fnd.get(id, [])}
 
     def conventions(self):
         """How to read the store: the model, notation, the two imaginary units and
@@ -497,6 +499,7 @@ class Lab:
                "tags": e.meta.get("tags") or [], "one_liner": one,
                "evidence": self.checks.get(eid),
                "holds_given": self.conds.get(eid, []),
+               "rests_on_foundation": self.fnd.get(eid, []),
                "past_cone_size": len(self.past.get(eid, ())),
                "future_cone_size": len(self.future.get(eid, ())),
                "future_cone_size_without_restatements": len(

@@ -42,8 +42,8 @@ derivations:
   uses:
   - std-algebra.existence-uniqueness@1
   - std-algebra.blade-basis@1
-  - primer.centre@2
-  - primer.sign@2
+  - primer.centre@3
+  - primer.sign@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

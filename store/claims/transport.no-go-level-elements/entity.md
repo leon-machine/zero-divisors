@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - transport.splitting-along-hyperbolic-plane@3
-  - primer.commutation-rule@2
+  - primer.commutation-rule@3
   - std-algebra.witt-decomposition@2
   proof: proof-main.tex
 checked_by:

@@ -139,6 +139,24 @@ conventions of notation and of the imaginary units that the texts assume.
   complex structure on a vector space (CPT, positive-energy, the Hermitian $J = I_7e_1e_+$), a map
   (`transport.totality`); $J_a$ are modular conjugations.
 
+## The foundation
+
+The graph rests on four foundation postulates, mathematical primitives of the whole graph rather
+than premises of particular results (Leon's decisions, 7 and 8 November 2026): F1 the bit
+(`synthesis.premise-the-bit`), F2 minimal non-commutativity
+(`synthesis.premise-minimal-non-commutativity`), F3 superposition over the integers
+(`synthesis.premise-superposition-over-the-integers`) and F4 the completion
+(`synthesis.continuum-completion-premise`). Each is a postulate marked `foundation: true`;
+F2, F3 and F4 are each `founded_on` the one before. A `founded_on` edge roots an entity in the
+foundation: the integer and rational Clifford algebras rest on F3, the real ones and the roots of
+the algebra core (its definitions and the core results that use nothing) on F4, so everything
+built on the algebra core rests on the foundation. `founded_on` is a logical edge (it is drawn and
+spreads through past cones) but a foundation postulate is never a condition: "holds given" lists
+the other postulates only, and a result's foundation is reported separately ("rests on the
+foundation", `rests_on_foundation` in the tools). The core is stated over the reals as written;
+much of it holds over the rationals or any field of characteristic not two, which the individual
+results say where it matters.
+
 ## The language: geometric algebra
 
 The graph's language is real geometric algebra. Statements (`formal`, `technical`),

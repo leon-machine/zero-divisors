@@ -19,7 +19,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - primer.splitting-along-hyperbolic-plane@2
+  - primer.splitting-along-hyperbolic-plane@3
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -48,7 +48,7 @@ extraction:
 subject: zero-divisors
 tags: [hyperbolic-plane]
 equivalent_to:
-- primer.splitting-along-hyperbolic-plane@2
+- primer.splitting-along-hyperbolic-plane@3
 ---
 
 ## formal

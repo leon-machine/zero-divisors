@@ -35,7 +35,7 @@ derivations:
   - sheaf.wall-gram@4
   - sheaf.one-sided-completion@4
   - std-algebra.existence-uniqueness@1
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

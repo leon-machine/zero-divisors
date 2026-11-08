@@ -29,10 +29,10 @@ derivations:
   uses:
   - std-algebra.involution-properties@1
   - std-algebra.bivector-lie-algebra@1
-  - std-algebra.cartan-dieudonne@1
-  - primer.twisted-adjoint-action@3
-  - primer.centre@2
-  - primer.sign@2
+  - std-algebra.cartan-dieudonne@2
+  - primer.twisted-adjoint-action@4
+  - primer.centre@3
+  - primer.sign@3
   - std-algebra.spin-double-cover@1
   - std-algebra.bivector-exponential@4
   - std-algebra.inverse-of-vector@1

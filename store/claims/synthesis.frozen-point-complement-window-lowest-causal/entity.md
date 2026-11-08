@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   - synthesis.residues-zero-four-real-chirality-anomaly@4
   proof: proof-main.tex
 checked_by:

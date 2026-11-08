@@ -1,7 +1,7 @@
 ---
 id: obj.std-algebra.pin-spin
 kind: object
-version: 1
+version: 2
 title: Pin and Spin
 status: defined
 region: std-algebra
@@ -20,11 +20,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 2
+  source: run 2026-11-08-foundation-layer
 review: typed
 trust: ai-proposed
 about:
 - obj.std-algebra.clifford-group
 - obj.std-algebra.even-subalgebra
+founded_on:
+- synthesis.continuum-completion-premise@2
 locators:
   sources:
   - key: Lounesto2001
@@ -34,6 +40,10 @@ locators:
   - key: LawsonMichelsohn1989
     locator: Ch. I, Sec. 2
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.continuum-completion-premise: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   referee_fixes: '2026-10-26: SO+ stated to mean the kernel of the spinor norm throughout; its equality with the identity component cited, not proved (referee part 2, point 1).'
   by: algebra-core-2026-10-26
 ---

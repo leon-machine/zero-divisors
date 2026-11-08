@@ -66,8 +66,8 @@ payload:
     omega_of(5), GA.sig(p, 5 - p)) for i in range(5)) for p in range(6))'
   note: for n = 5, omega is central and omega^2 = (-1)^q, all six signatures
 specialises:
-- primer.centre@2
-- primer.sign@2
+- primer.centre@3
+- primer.sign@3
 ---
 
 ## formal

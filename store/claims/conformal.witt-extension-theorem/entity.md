@@ -42,7 +42,7 @@ extraction:
     by: ai-typing-pass
     note: "Imported textbook result; levels describe the classical theorem only."
 equivalent_to:
-- std-algebra.witt-extension@1
+- std-algebra.witt-extension@2
 ---
 
 ## formal

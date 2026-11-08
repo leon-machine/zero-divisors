@@ -1,7 +1,7 @@
 ---
 id: synthesis.premise-the-bit
 kind: claim
-version: 1
+version: 2
 title: 'Premise (F1): the bit'
 status: postulate
 region: synthesis
@@ -17,11 +17,20 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-07-bit-root
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 2
+  source: run 2026-11-08-foundation-layer
 review: draft
+foundation: true
 lineage:
   motivated_by:
   - synthesis.blade-square-signs-f2-quadratic-form
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 8 November 2026: the foundation layer. Marked as a foundation postulate. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   env: premise
   note: >-
     The source document calls this primitive (B); the store names the four foundation postulates F1 to F4. From Leon's working document "From the Bit to the Numbers" (7 November 2026), Steps 0 and 1:

@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - std-algebra.witt-extension@1
+  - std-algebra.witt-extension@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -29,9 +29,9 @@ about:
 derivations:
 - name: main
   uses:
-  - primer.twisted-adjoint-action@3
-  - primer.centre@2
-  - std-algebra.cartan-dieudonne@1
+  - primer.twisted-adjoint-action@4
+  - primer.centre@3
+  - std-algebra.cartan-dieudonne@2
   - std-algebra.reflection@1
   - std-algebra.inverse-of-vector@1
   - std-algebra.orthogonal-anticommute@1

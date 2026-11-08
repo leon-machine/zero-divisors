@@ -1,7 +1,7 @@
 ---
 id: synthesis.division-gives-the-rationals
 kind: claim
-version: 1
+version: 2
 title: Division in the integer Clifford algebra gives the rationals
 status: proved
 region: synthesis
@@ -17,7 +17,13 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-07-bit-root
+- name: Claude Opus 5.5
+  role: 'maintainer pass, foundation layer'
+  version: 2
+  source: run 2026-11-08-foundation-layer
 review: draft
+founded_on:
+- synthesis.premise-superposition-over-the-integers@2
 lineage:
   motivated_by:
   - std-algebra.orthogonal-anticommute
@@ -40,6 +46,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_08_foundation:
+    by: ai-maintainer-pass
+    note: >-
+      Version 1 -> 2. Leon's decision of 8 November 2026: the foundation layer. Founded on synthesis.premise-superposition-over-the-integers: the algebra it is stated in rests on the foundation. Foundation postulates are reported as what a result rests on, separately from the premises it holds given (store/conventions.md, "The foundation").
   note: >-
     From Leon's working document "From the Bit to the Numbers" (7 November 2026), Step 4, the row
     "Q: inverses of non-unit vectors, v^{-1} = v/Q(v)", proved and checked here; not an attack on an

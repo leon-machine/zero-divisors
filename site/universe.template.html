@@ -1020,12 +1020,16 @@ function txInline(s, ctx) {
   }
   return out;
 }
-const LOGICAL = new Set(["uses", "assumes", "specialises"]);
+const LOGICAL = new Set(["uses", "assumes", "specialises", "founded_on"]);
+// lineage: what motivated a result (not a premise; shown in the reader, not drawn)
+const LINEAGE = new Set(["motivated_by", "derived_from", "supersedes", "inverts"]);
 const edges = DATA.edges.filter(e => byId.has(e.src) && byId.has(e.dst));
 const prem = new Map(), dept = new Map(), link = new Map();
-nodes.forEach(n => { prem.set(n.id, []); dept.set(n.id, []); link.set(n.id, []); });
+const motBy = new Map(), mots = new Map();
+nodes.forEach(n => { prem.set(n.id, []); dept.set(n.id, []); link.set(n.id, []); motBy.set(n.id, []); mots.set(n.id, []); });
 edges.forEach(e => { link.get(e.src).push(e); link.get(e.dst).push(e);
-  if (LOGICAL.has(e.kind)) { prem.get(e.src).push(e.dst); dept.get(e.dst).push(e.src); } });
+  if (LOGICAL.has(e.kind)) { prem.get(e.src).push(e.dst); dept.get(e.dst).push(e.src); }
+  else if (LINEAGE.has(e.kind)) { motBy.get(e.src).push(e.dst); mots.get(e.dst).push(e.src); } });
 function cone(id, map) { const out = new Set(), st = [id]; while (st.length) { for (const t of map.get(st.pop())) if (!out.has(t)) { out.add(t); st.push(t); } } return out; }
 // the foundations arrangement (docs/ALGEBRA_CORE.md): the algebra core at the centre, each
 // shell one more premise step out, results no premise chain connects in an outer band
@@ -1476,6 +1480,7 @@ function overlay() {
 // over the quantities. Until data/search.json arrives (fetched on the first keystroke) titles and
 // one-liners are searched; both indexes are postings term -> [doc, count, doc, count, ...].
 const TOK = s => (String(s || "").toLowerCase().match(/[a-z0-9]{2,}/g) || []);
+const STOPW = new Set(["the","of","a","an","and","in","on","is","are","to","its","by","for","with","as","at","it","be","or"]);
 const MINI = (() => { const docs = [], post = {};
   const add = (typ, id, text) => { const c = {}; TOK(text).forEach(t => c[t] = (c[t] || 0) + 1); let L = 0;
     for (const [t, k] of Object.entries(c)) { (post[t] || (post[t] = [])).push(docs.length, k); L += k; } docs.push([typ, id, L]); };
@@ -1492,6 +1497,16 @@ function search(q, k = 8) {
   TOK(q).forEach(t => { const p = X.post[t]; if (!p) return; const df = p.length / 2, idf = Math.log(1 + (X.N - df + 0.5) / (df + 0.5));
     for (let j = 0; j < p.length; j += 2) { const i = p[j], c = p[j + 1], L = X.docs[i][2];
       score.set(i, (score.get(i) || 0) + idf * c * 2.2 / (c + 1.2 * (0.25 + 0.75 * L / X.avg))); } });
+  // a query word in a result's title counts for more, and the more of the title the query covers
+  // the more it counts, so a short title that names the query ("Premise (F1): the bit") is not
+  // outranked by long texts that repeat the word
+  const qt = [...new Set(TOK(q))].filter(w => !STOPW.has(w));
+  if (qt.length) for (const [i] of score) { const [typ, id] = X.docs[i];
+    const t = typ === "n" ? (byId.get(id) || {}).title : typ === "t" ? (NOTES[id] || {}).title : (byQ.get(id) || {}).title;
+    if (!t) continue; const tt = new Set(TOK(t).filter(w => !STOPW.has(w))); if (!tt.size) continue;
+    const hit = qt.filter(w => tt.has(w)), f = hit.length / tt.size;
+    hit.forEach(w => { const p = X.post[w], df = p ? p.length / 2 : 1;
+      score.set(i, score.get(i) + Math.log(1 + (X.N - df + 0.5) / (df + 0.5)) * (1 + 3 * f)); }); }
   return [...score].sort((a, b) => b[1] - a[1]).map(([i]) => X.docs[i])
     .filter(([typ, id]) => typ === "n" ? byId.has(id) : typ === "t" ? NOTES[id] && noteHost(NOTES[id]) : byQ.has(id)).slice(0, k)
     .map(([typ, id]) => typ === "n" ? { n: byId.get(id) } : typ === "t" ? { note: NOTES[id] } : { q: byQ.get(id) });
@@ -2092,6 +2107,7 @@ function wireSections(root) {
 }
 function renderResult(n, fly) {
   const id = n.id, given = (n.conditional_on || []).filter(x => byId.has(x) && x !== id);
+  const fnd = (n.foundation || []).filter(x => byId.has(x) && x !== id);
   const colls = DATA.collections.filter(c => c.members.includes(id));
   const loc = n.locators || {};
   const signs = n.signoffs || [];
@@ -2106,6 +2122,7 @@ function renderResult(n, fly) {
     ${(n.tags || []).length ? `<div class="chips" aria-label="Tags">${n.tags.map(t => { const tg = TAGS.find(x => x.id === t); return tg ? `<button class="tg" data-tag="${esc(t)}" title="${esc(tg.about)}">${esc(tg.title)}</button>` : ""; }).join("")}</div>` : ""}
     ${n.one_liner ? `<p class="lead">${esc(n.one_liner)}</p>` : ""}
     ${given.length ? `<div class="given"><b>Holds given</b> ${given.map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(", ")}.</div>` : ""}
+    ${n.is_foundation ? `<div class="given"><b>Foundation</b> a primitive of the whole graph, assumed rather than derived, and not counted among the premises a result holds given.</div>` : fnd.length ? `<p class="note" style="margin:2px 0 8px">Rests on the foundation: ${fnd.map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(", ")}.</p>` : ""}
     <details data-sec="statement"${secOpen("statement")}><summary>Statement</summary><div class="box tx">${tex(n.formal)}</div></details>
     <details data-sec="lay"${secOpen("lay")}><summary>In plain words</summary><div class="prose">${tex(n.lay)}</div></details>
     ${notesSection(n, true)}
@@ -2117,6 +2134,8 @@ function renderResult(n, fly) {
     ${notesSection(n)}
     <details open><summary>Rests on <span class="c">${prem.get(id).length}</span></summary>${linkList(prem.get(id), "Nothing: it is a starting point.")}</details>
     <details><summary>Used by <span class="c">${dept.get(id).length}</span></summary>${linkList(dept.get(id), "Nothing in the store builds on it yet.")}</details>
+    ${motBy.get(id).length ? `<details><summary>Motivated by <span class="c">${motBy.get(id).length}</span></summary>${linkList(motBy.get(id), "")}</details>` : ""}
+    ${mots.get(id).length ? `<details><summary>Motivates <span class="c">${mots.get(id).length}</span></summary>${linkList(mots.get(id), "")}</details>` : ""}
     ${historySection(n)}
     <details><summary>Source</summary>
       <p class="note">${colls.length ? "In: " + colls.map(c => esc(c.title)).join("; ") + "." : ""}${loc.number ? ` Numbered ${esc(loc.number)} there.` : ""}</p>

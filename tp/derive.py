@@ -19,9 +19,9 @@ RANK.update({g: 3 for g in GIVEN})
 RANK["killed"] = 0
 RANK["refuted"] = 0
 
-LOGICAL = ("uses", "assumes", "specialises")
+LOGICAL = ("uses", "assumes", "specialises", "founded_on")
 TOP_PINNED = ("specialises", "equivalent_to", "contradicts", "supports",
-              "tests", "kills")
+              "tests", "kills", "founded_on")
 LINEAGE = ("derived_from", "supersedes", "inverts", "motivated_by")
 
 
@@ -304,8 +304,22 @@ def _stale_specialisations(store, stale_pairs, stale, check_failed):
                     changed = True
 
 
+def is_foundation(e) -> bool:
+    """A foundation postulate: a mathematical primitive of the whole graph (the bit and
+    what follows), not a premise a result is conditional on."""
+    return e.status == "postulate" and bool(e.meta.get("foundation"))
+
+
 def conditions(store: Store, past: dict) -> dict[str, list[str]]:
     """The postulates each claim ultimately rests on: its past cone's
-    postulates.  A result is shown as proved *given* these."""
-    post = {k for k, e in store.entities.items() if e.status == "postulate"}
+    postulates.  A result is shown as proved *given* these.  Foundation
+    postulates are not conditions: they are reported by foundation_of."""
+    post = {k for k, e in store.entities.items()
+            if e.status == "postulate" and not is_foundation(e)}
     return {k: sorted(past.get(k, set()) & post) for k in store.entities}
+
+
+def foundation_of(store: Store, past: dict) -> dict[str, list[str]]:
+    """The foundation postulates each entity rests on, through its past cone."""
+    fnd = {k for k, e in store.entities.items() if is_foundation(e)}
+    return {k: sorted(past.get(k, set()) & fnd) for k in store.entities}

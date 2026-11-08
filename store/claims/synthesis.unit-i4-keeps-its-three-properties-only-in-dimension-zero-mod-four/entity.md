@@ -28,7 +28,7 @@ derivations:
 - name: main
   uses:
   - field-theory.imported-tower-limit@3
-  - primer.sign@2
+  - primer.sign@3
   - std-algebra.pseudoscalar-commutation@1
   - synthesis.imported-dimensional-regularisation-and-the-bmhv-gamma5@3
   proof: proof-main.tex

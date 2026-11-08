@@ -23,7 +23,7 @@ derivations:
   uses:
   - std-algebra.blade-basis@1
   - std-algebra.orthogonal-anticommute@1
-  - primer.commutation-rule@2
+  - primer.commutation-rule@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

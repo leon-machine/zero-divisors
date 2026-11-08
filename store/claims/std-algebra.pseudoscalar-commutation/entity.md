@@ -29,7 +29,7 @@ derivations:
   uses:
   - std-algebra.orthogonal-anticommute@1
   - std-algebra.grade-decomposition@2
-  - primer.sign@2
+  - primer.sign@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

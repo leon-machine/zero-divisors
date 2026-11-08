@@ -27,7 +27,7 @@ derivations:
 - name: main
   uses:
   - odd-extensions.volume-element-odd-dimension@4
-  - primer.centre@2
+  - primer.centre@3
   - odd-extensions.doubling-or-complexification@6
   - std-algebra.complexification@3
   proof: proof-main.tex

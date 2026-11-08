@@ -27,6 +27,7 @@ def compile_store(store_root: str, out_dir: str, run_mutants=True, author=None,
     if not past:
         past, future = derive.cones(rep.graph, store.entities.keys())
     conds = derive.conditions(store, past)
+    fnd = derive.foundation_of(store, past)
     stale_edge_keys = {(e.src, e.dst, e.derivation) for e in st["stale_edges"]}
     nodes = []
     for eid, e in sorted(store.entities.items()):
@@ -50,6 +51,8 @@ def compile_store(store_root: str, out_dir: str, run_mutants=True, author=None,
             "derivations": len(e.derivations()),
             "past": sorted(past.get(eid, ())), "future_size": len(future.get(eid, ())),
             "conditional_on": conds.get(eid, []),
+            "foundation": fnd.get(eid, []),
+            "is_foundation": derive.is_foundation(e),
             "imported_from": e.meta.get("imported_from") or [],
             "kill_condition": e.meta.get("kill_condition"),
             "observations": e.meta.get("observations") or [],

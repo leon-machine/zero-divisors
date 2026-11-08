@@ -31,7 +31,7 @@ derivations:
   - transport.existence-classification-type-c@4
   - transport.rule-2-ideal-fusion-sharp-form@4
   - std-algebra.blade-basis@1
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

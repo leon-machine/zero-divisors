@@ -19,7 +19,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - primer.centre@2
+  - primer.centre@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -50,7 +50,7 @@ extraction:
 subject: clifford-structure
 tags: [pseudoscalar-and-centre]
 equivalent_to:
-- primer.centre@2
+- primer.centre@3
 payload:
 - kind: count
   clause: dimension of the centre

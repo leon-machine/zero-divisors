@@ -32,7 +32,7 @@ derivations:
 - name: main
   uses:
   - std-algebra.exterior-isomorphism@2
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   - std-algebra.involution-properties@1
   - std-algebra.grade-decomposition@2
   proof: proof-main.tex

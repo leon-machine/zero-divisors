@@ -26,7 +26,7 @@ derivations:
   - std-algebra.bivector-exponential@4
   - tower.structure-tower-c-norms@10
   - singularity.kms-uniqueness-factor@6
-  - primer.centre@2
+  - primer.centre@3
   proof: proof-main.tex
 checked_by:
 - kind: check

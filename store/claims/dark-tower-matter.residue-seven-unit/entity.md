@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - primer.sign@2
+  - primer.sign@3
   - std-algebra.pseudoscalar-commutation@1
   - std-algebra.involution-properties@1
   proof: proof-main.tex

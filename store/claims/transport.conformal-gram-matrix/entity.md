@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - synthesis.completion-recovers-the-real-clifford-algebras@1
+  - synthesis.completion-recovers-the-real-clifford-algebras@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

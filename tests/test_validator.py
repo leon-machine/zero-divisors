@@ -429,6 +429,18 @@ class Fixes(StoreCase):
         self.assertEqual(c["fx.thermo.temperature"],
                          ["fx.thermo.period-premise", "fx.transport.principle"])
 
+    def test_foundation_postulates_are_not_conditions(self):
+        from tp import derive
+        self.edit("fx.transport.principle", "status: postulate",
+                  "status: postulate\nfoundation: true")
+        st = load_store(self.root)
+        g = derive.logical_graph(st)
+        past, _ = derive.cones(g, st.entities.keys())
+        self.assertEqual(derive.conditions(st, past)["fx.thermo.temperature"],
+                         ["fx.thermo.period-premise"])
+        self.assertEqual(derive.foundation_of(st, past)["fx.thermo.temperature"],
+                         ["fx.transport.principle"])
+
 
 class Repin(StoreCase):
     def test_repin_clears_stale_edges(self):

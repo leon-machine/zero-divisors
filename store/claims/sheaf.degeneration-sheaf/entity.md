@@ -26,7 +26,7 @@ derivations:
   - sheaf.blade-basis-degenerate-forms-included@5
   - sheaf.imported-classification-values@5
   - std-algebra.vector-squares@1
-  - primer.commutation-rule@2
+  - primer.commutation-rule@3
   - std-algebra.existence-uniqueness@1
   - std-algebra.radical-ideal-and-quotient@2
   assumes:

@@ -30,7 +30,7 @@ derivations:
   - std-algebra.existence-uniqueness@1
   - std-algebra.blade-basis@1
   - std-algebra.orthogonal-anticommute@1
-  - primer.sign@2
+  - primer.sign@3
   - std-algebra.pseudoscalar-commutation@1
   - std-algebra.cl11-matrix@2
   proof: proof-main.tex
