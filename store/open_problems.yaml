@@ -983,11 +983,24 @@
     (\claimref{synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law}).
     Asymptotic freedom of both non-abelian factors under the Krein-form premise
     is in \claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces}.
+
+    (8 November.) On a finite window of a null generator the pair currents of the channels satisfy, exactly, the
+    level-one $\mathfrak{u}(n)$ current algebra
+    (\claimref{synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators}(i)), and the energy is
+    quadratic in the currents with the central term (\claimref{synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves}).
+    With the sixteen Weyl components per generation per light ray
+    (\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}) these are exact $\mathfrak{u}(16)$
+    currents per light ray and generation: a one-dimensional current algebra along each generator, not the
+    four-dimensional Yang-Mills field.
   attack:
     - "The interacting charge: the operator BRST charge of the interacting theory on the Krein space (renormalisation and the Slavnov-Taylor identities, for example in causal perturbation theory, where the local construction is imported for electrodynamics and Yang-Mills), and positivity of its physical space under Kugo and Ojima's hypotheses."
     - "Higgs-sector BRST: the field-level differential with the Goldstone and doublet terms (s phi), and the breaking pattern derived from the series' scalar sector instead of the aligned vacuum taken as input."
     - "Colour: a colour rotor lattice (none is stored) and its continuum limit; pure-colour confinement is the Yang-Mills mass-gap problem and is not addressed."
     - "The weak factor on the lattice: the phase structure of the rotor lattice with the two doublets beyond strong coupling, and its continuum limit."
+    - >-
+      The current algebra along generators: compute the embedding of the Standard Model gauge algebra in the
+      exact $\mathfrak{u}(16)$ channel currents per light ray, its level, and what the Sugawara form gives for
+      its dynamics along a generator.
   success: >-
     Interacting non-abelian gauge fields with a consistent gauge fixing (or a
     gauge-invariant non-perturbative definition) and a positive physical space,
@@ -1071,12 +1084,31 @@
     energy, which excludes the top quark as sole constituent; a light composite of several species
     is not excluded, so the Higgs is elementary as recorded, argued rather than proved
     (\claimref{synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy}).
+
+    (8 November.) Beyond mean field the tower now has exact composite bosons: the density waves of a
+    generator's filled sea are canonical pairs there, with the unit the kernel bivector
+    (\claimref{synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum},
+    \claimref{synthesis.kernel-bivector-is-the-unit-of-hermitian-boson-fields-on-the-tower}), the fluctuation
+    states of product block states converge to the Gaussian state at rate $N^{-1/2}$
+    (\claimref{synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit}), and their dynamics is
+    the window Sugawara form with linear dispersion, gapless also with a Luttinger coupling
+    (\claimref{synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves}).
+    These exact pair bosons have helicity $0$; helicity-one pair modes are quasi-spins, not bosons
+    (\claimref{synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins}), which is why the photon
+    stays elementary (\claimref{synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators}). That
+    obstruction does not touch a helicity-zero scalar, but the pair bosons are even while the rung field is odd
+    in the tower, so no pair boson is the rung field; what a composite Higgs would still need is a gap and a
+    charged doublet, and channel-resolved pair densities can carry a canonical pair
+    (\claimref{synthesis.density-modes-bosonise-only-along-one-null-direction}).
   attack:
     - "The branch with a level: the one-loop effective potential and the running of the linear field with a level, a second doublet near 2.5 to 3.5 TeV and perturbative quartics; the charged pair's mass and the alignment of the light doublet."
     - "The coupling reading: whether the series fixes the family matrices of the covariant completion as complex symmetric (the rung 10), under which the transmutation branch is excluded, or admits general matrices, where a tuned right-handed mixing could evade the B-mixing bound at the price of |m_H^2 - m_A^2|/m^2 of order 1e-5."
     - "The curvature coupling xi_R of the doublets, an open datum: whether anything in the series fixes it, and its running."
     - "Collider and flavour limits on the second doublet of the level branch (B and K mixing with QCD running, direct searches)."
     - "The light multi-species composite: two-condensate pairing on the tower (a doublet-singlet fermion condensate), the one composite route left open."
+    - >-
+      A gapped composite scalar with today's exact boson results: whether a two-condensate pairing on the tower
+      gives an even doublet of helicity-zero pair bosons with a gap, and its charge.
   success: >-
     A quantised rung field on the branch with a level, with its one-loop effective potential
     computed in the formalism and a second doublet consistent with flavour and collider limits, or a
@@ -1343,6 +1375,17 @@
     (\claimref{synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint});
     on the working branch with a level the second doublet is heavy, about $2.5$ to $3.5$ TeV, and
     the low-energy content is one doublet.
+
+    (8 November.) The statistics half is now derived at the level of the tower: by the foundation's sign bit
+    distinct directions anticommute (\claimref{synthesis.premise-minimal-non-commutativity},
+    \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}), so the tower modes are fermions at
+    every $N$, and on the ladder the bosons' spin and statistics are fixed by the single modes' spins: spin and
+    statistics agree on the whole tower algebra exactly when every mode is a spinor, and the collective limit
+    neither creates nor repairs the connection
+    (\claimref{synthesis.ladder-bosons-inherit-spin-statistics-from-the-single-modes}). The tower does not supply
+    the spin: which modes are spinors is what locality with a positive norm fixes for the attached free fields
+    (\claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}). So the remaining input is
+    the spinor assignment, not the statistics.
   attack:
     - "Three generations: the number is free under the slot-module premise; find a premise or dynamics of the series that fixes it (for example the slot su(3) of the maximal composite acting on the generation labels as a family symmetry), or prove that none does."
     - "Spin and statistics beyond perturbation theory: derive Kuckert's modular P1CT symmetry (the modular conjugations of the wedge algebras acting on the local algebras as the wedge reflections) from a premise the series holds, or record it as one; the charged sectors localised in hypercones."
@@ -2789,6 +2832,12 @@
     conventions, and the twist is unique up to a central phase, so on the composite's module the joint Clifford
     system exists canonically (\claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space};
     \claimref{synthesis.even-slots-need-a-spectator-generator} already uses the twist).
+    - >-
+      The joint Clifford system from the sign bit: by
+      \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}, directions sharing one central sign
+      bit, with distinct directions not commuting, generate exactly a Clifford algebra; check whether the clause
+      asks for more than that the slot and pair directions are distinct directions sharing one sign bit (the
+      adjoint, the signature), and if not, record it as an instance of the foundation postulates.
   success: A theorem deriving (S) or its weaker form from stated structure, or one of the five outcomes adopted and recorded
     in the tier declaration with its consequences carried to T13 and T15.
   entities:
