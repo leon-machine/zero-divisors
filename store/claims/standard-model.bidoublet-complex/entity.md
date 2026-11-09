@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

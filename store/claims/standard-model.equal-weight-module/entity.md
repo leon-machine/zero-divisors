@@ -24,7 +24,7 @@ derivations:
   - standard-model.invariant-pairing-five-modes@5
   - standard-model.majorana-element@7
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

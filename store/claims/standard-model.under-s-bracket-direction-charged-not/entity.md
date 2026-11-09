@@ -24,7 +24,7 @@ derivations:
   - standard-model.imported-spinor-bilinears@1
   - standard-model.mass-bracket-charged-singlet@4
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -30,7 +30,7 @@ derivations:
   - standard-model.automorphisms-preserve-slot-pair-split-are@7
   - standard-model.generation-ten-under-pati-salam@7
   - standard-model.yukawa-pattern-two-rung-module@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@3
   proof: proof-main.tex
 checked_by:

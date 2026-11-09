@@ -1,7 +1,7 @@
 ---
 id: synthesis.rung-unit-second-free-number
 kind: claim
-version: 3
+version: 4
 title: 'The weak scale as a second free number beside $N$'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Opus 5.5
+  role: note citing the model pair that leaves the D-term level free at fixed N
+  version: 4
+  source: maintainer pass of 2026-11-09
 review: draft
 about:
 - obj.dark-energy.four-ways-number-enters-theory-shape
@@ -30,6 +34,10 @@ lineage:
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
   - synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion
 extraction:
+  maintainer_pass_2026_11_09:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Version 3 -> 4. Note added at the formal and technical levels citing synthesis.d-term-level-free-at-fixed-n: two models of the premise set and the stored relations at equal N with different xi G and v/M_P, so no stored relation fixes xi G and it is not a function of N, consistent with this premise. No content change.'
   maintainer_pass_3:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -50,6 +58,8 @@ Under the action as written, where $N$ is a parameter of the laws, $v/M_{P}$ and
 
 \emph{Note (the Hubble unit).} Here $H$ is the de Sitter rate of $\Lambda$, $H^{2} = \Lambda/3$, that is $H_{0}\sqrt{\Omega_{\Lambda}}$, the $H$ of $N = M_{P}/H$; some texts quote $v/H$ with $H_{0}$. The two differ by the factor $\sqrt{\Omega_{\Lambda}}$, of order one: $v/H \approx 2.1 \times 10^{44}$ with $H^{2} = \Lambda/3$ and $v/H_{0} \approx 1.7 \times 10^{44}$, so $\ln(v/H)$ changes by about $0.2$. The orders of magnitude quoted here hold for both.
 
+\emph{Note (independence at fixed $N$).} Theorem \claimref{synthesis.d-term-level-free-at-fixed-n} gives two models of the premise set and the stored relations at their pinned versions with equal $G$, $\Lambda$ (so equal $N$) and equal couplings but different $\xi G$ and $v/M_{P}$, on the branch $W = \kappa\mathsf{N}^{2}$, which the record excludes: no stored relation fixes $\xi G$, and it is not a function of $N$. This is consistent with the premise and does not change it.
+
 \emph{Version note.} Version 2 of this premise held $v/H$ as the parameter of the laws and $v/M_{P}$ as initial data under the promotion, with refutation condition a derivation of $v/H$ or a dynamics of the rung component under which $v/H$ would be initial data. The stored D-term action with its level a constant of the action, read under the promotion, is such a dynamics (Theorem \claimref{synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion}): it met that condition, and the premise is restated here with the level as the constant of the laws.
 
 \emph{Refutation condition.} The premise is false if the weak scale is derived, that is if $\xi G$ (equivalently $v/M_{P}$ up to relative order $(H/v)^{4}$) is computed from the transport structure, from another premise of the register, or from a dynamics with no further free dimensionless constant (for example a breaking pattern of the Pati-Salam stage that fixes the level, or a transmutation scale fixed by the couplings alone); or if it is shown to be a function of $N$; or if the rung action is coupled to the promoted $\Lambda$ so that the level is proportional to $\Lambda$ (a level $\hat{\xi}\Lambda$), under which $v/H$, not $v/M_{P}$, would be the law.
@@ -57,7 +67,7 @@ Under the action as written, where $N$ is a parameter of the laws, $v/M_{P}$ and
 ## technical
 In the lift of the frozen point to the rung directions, the scale of the rung component, which sets the weak scale, is the boost of the rung frame against the lift's null pair. Transport cannot see it: every clause of totality holds in every boosted frame, the rung component's tractor norm is $-\Lambda/3$ whatever the boost, and a change of the boost moves the component along a level set of that norm, transverse to the direction in which $\Lambda$, and so $N$, would move it. The one frame the structure singles out, the balanced one, would put the weak scale at the Hubble scale, which is off by about $10^{44}$. In the rung field's D-term action the frame is set by the level, a constant of the action.
 
-This premise records the decision: the level, made dimensionless as $\xi G$, is a second free number of the laws beside $N$, not derived and not a function of $N$. Under the Henneaux-Teitelboim promotion, which the series adopts, $N$ is initial data; the D-term potential at the vacuum does not contain the Hubble rate, so the weak scale against the Planck mass, $v/M_{P}$, is the law up to a relative correction of order $(H/v)^{4}$, and the rung-frame boost $v/H$ is initial data. The relation $Gv^{2}N^{2} = (v/H)^{2}$ is an identity in the units used, not a law. An earlier version held $v/H$ as the law; the D-term action read under the promotion met its refutation condition, and it is restated here. The premise would be refuted by a derivation of $\xi G$, from the transport structure, another premise, or a dynamics with no further free constant, by a proof that it is a function of $N$, or by a coupling of the rung action to the promoted $\Lambda$ that makes the level proportional to it.
+This premise records the decision: the level, made dimensionless as $\xi G$, is a second free number of the laws beside $N$, not derived and not a function of $N$. Under the Henneaux-Teitelboim promotion, which the series adopts, $N$ is initial data; the D-term potential at the vacuum does not contain the Hubble rate, so the weak scale against the Planck mass, $v/M_{P}$, is the law up to a relative correction of order $(H/v)^{4}$, and the rung-frame boost $v/H$ is initial data. The relation $Gv^{2}N^{2} = (v/H)^{2}$ is an identity in the units used, not a law. Two models at equal $N$ with different levels satisfy every stored relation (\claimref{synthesis.d-term-level-free-at-fixed-n}), so nothing stored fixes $\xi G$, as the premise says. An earlier version held $v/H$ as the law; the D-term action read under the promotion met its refutation condition, and it is restated here. The premise would be refuted by a derivation of $\xi G$, from the transport structure, another premise, or a dynamics with no further free constant, by a proof that it is a function of $N$, or by a coupling of the rung action to the promoted $\Lambda$ that makes the level proportional to it.
 
 ## lay
 In this framework almost every hierarchy of scales comes from one huge number, N, the ratio of the Planck mass to the scale set by the cosmological constant. The strength of the weak force's symmetry breaking, about 246 GeV, does not: it is set by how a particular reference frame in the extra dimensions is stretched, and the framework's construction works equally well for every stretch. The only stretch the structure itself prefers gives a weak scale far too small, by 44 powers of ten. In the field theory written for the Higgs field the stretch is fixed by one constant, and this assumption accepts that constant as a second basic number of the laws, put in by hand beside N. Since the framework treats N as a fact about the universe's history, the weak scale measured against the Planck mass is then the law, and the weak scale measured against the cosmological scale is a historical fact. It would be overturned if anyone derived the constant, showed it follows from N, or tied it to the cosmological constant.

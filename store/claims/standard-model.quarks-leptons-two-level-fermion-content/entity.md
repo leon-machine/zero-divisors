@@ -25,7 +25,7 @@ derivations:
   - standard-model.imported-cauchy-decomposition-exterior-power@1
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.raw-representation-content-state-space@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: legacy

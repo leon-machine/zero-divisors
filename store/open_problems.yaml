@@ -917,7 +917,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The review of what a quantum field theory still needs, 1 November; the BRST, running and lattice results and Leon's decision adopting the Krein-form premise, 1 November; the field-level BRST, quartet, Clifford-conjugation and Gribov results and Leon's decisions (the Neuberger, Fradkin-Shenker and Singer imports), 2 November; the colour-lattice results and Leon's decisions (no import of the strong-coupling clustering or of finite-group freezing; the colour item restated), 8 November"
+  source: "The review of what a quantum field theory still needs, 1 November; the BRST, running and lattice results and Leon's decision adopting the Krein-form premise, 1 November; the field-level BRST, quartet, Clifford-conjugation and Gribov results and Leon's decisions (the Neuberger, Fradkin-Shenker and Singer imports), 2 November; the colour-lattice results and Leon's decisions (no import of the strong-coupling clustering or of finite-group freezing; the colour item restated), 8 November; the 9 November results and Leon's decisions"
   statement: >-
     The gauge algebra of the minimal massive composite
     (\claimref{synthesis.gauge-algebra-by-tower},
@@ -1026,9 +1026,39 @@
     premise gives the gauge field a lattice spacing on flat spacetime, and no stored gap is a spectral gap of the
     four-dimensional gauge field. All of this is strong-coupling lattice physics in geometric-algebra form; it does not
     bear on the Yang-Mills existence and mass-gap problem, which lives in the weak-coupling continuum limit.
+
+    (9 November.) Virasoro relations: on the band of the null vacuum each gauge factor's Sugawara modes
+    $L^{\mathfrak{f}}_{n}$, for all $n$, shift its currents and satisfy the Virasoro relations with $c =
+    2\dim\mathfrak{f}/(2 + \lambda)$, giving $\tfrac{32}{7}$, $2$, $1$, $1$; the band energy has $c = 16$, and
+    the remainder commutes with the factors and is a Virasoro algebra at $c = \tfrac{52}{7}$, the coset of
+    $\so(10)$ at level $4$ by the gauge algebra, all unitary; on a finite window the relations cannot hold, so
+    the statement is on the band domain only
+    (\claimref{synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band}). Higgs-sector
+    BRST: with the two doublets as even elements of $\Cl(3,0)$, weak bivectors acting on the left and
+    hypercharge on the right, $sh = -g\rho(c)(v + h)$ extends the stored differential nilpotently for every
+    vacuum; the 't Hooft gauge-fixing fermion is exact and cancels the vector-Goldstone mixing up to a total
+    derivative, and at $\xi = 1$, with the canonical normalisation of the Yang-Mills term and at a stationary
+    vacuum, vectors, Goldstones and ghosts share one mass matrix, of rank $3$ for the neutral aligned vacuum
+    (\claimref{synthesis.field-level-brst-of-the-two-doublets-and-the-thooft-feynman-gauge}). The free part of
+    the scalar differential, the one the quartet construction quantises, is a symmetry of the quadratic action
+    only at a stationary point of the potential; the Goldstone rank of two doublets is $3$ exactly for aligned
+    doublets; two gauge-invariant quartics differing in the sign of one coupling have their global minima on
+    the neutral and on a charge-breaking pattern with the BRST structure intact in both (classical two-doublet
+    physics, in geometric-algebra form); so BRST does not fix the breaking pattern, the potential does, and on
+    the rung field's lift locus the stored D-term vacuum lies on the charge-preserving boundary, where the
+    rank is $3$, a corollary of stored clauses
+    (\claimref{synthesis.higgs-sector-brst-does-not-fix-the-breaking-pattern-of-two-doublets}). All of this is
+    free and perturbative.
   attack:
     - "The interacting charge: the operator BRST charge of the interacting theory on the Krein space (renormalisation and the Slavnov-Taylor identities, for example in causal perturbation theory, where the local construction is imported for electrodynamics and Yang-Mills), and positivity of its physical space under Kugo and Ojima's hypotheses."
-    - "Higgs-sector BRST: the field-level differential with the Goldstone and doublet terms (s phi), and the breaking pattern derived from the series' scalar sector instead of the aligned vacuum taken as input."
+    - >-
+      Higgs-sector BRST in the interacting theory: the free differential with the Goldstone and doublet terms, the
+      't Hooft gauge and the common masses at a stationary vacuum are stored, and the breaking pattern is an output
+      of the potential, not of BRST (9 November;
+      \claimref{synthesis.field-level-brst-of-the-two-doublets-and-the-thooft-feynman-gauge},
+      \claimref{synthesis.higgs-sector-brst-does-not-fix-the-breaking-pattern-of-two-doublets}). What remains is
+      the scalar sector in the interacting BRST charge (with the first item), at a stationary vacuum of the series'
+      own potential, and the pattern that potential selects beyond the D-term case.
     - "Colour beyond strong coupling: the colour rotor lattice is stored at strong coupling only (centre bound, Polyakov lines, leading tube, string breaking with triplets at infinite coupling). Its continuum limit needs beta -> infinity (asymptotic freedom), which no stored result reaches. The series' colour sector has quark triplets, so its physical question is the one with quarks (string breaking, no Wilson-loop order parameter), as in QCD; pure-colour confinement and the mass gap of pure Yang-Mills (the Clay problem) are a different question and are not addressed."
     - "The weak factor on the lattice: the phase structure of the rotor lattice with the two doublets beyond strong coupling, and its continuum limit."
     - >-
@@ -1036,14 +1066,17 @@
       exact $\mathfrak{u}(16)$ channel currents per light ray, its level, and what the Sugawara form gives for
       its dynamics along a generator.
     - >-
-      Derive the Virasoro relations of the gauge factors' Sugawara parts on the band domain, so that their central
-      values ($32/7$, $2$, $1$, $1$ and the remainder $52/7$) are central charges in the full sense.
+      Done on the band domain (9 November;
+      \claimref{synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band}): the
+      Virasoro relations of the gauge factors' Sugawara parts and of the remainder hold there, so their central
+      values ($32/7$, $2$, $1$, $1$ and the remainder $52/7$) are central charges in the full sense on the band; on
+      finite windows they cannot hold.
   success: >-
     Interacting non-abelian gauge fields with a consistent gauge fixing (or a
     gauge-invariant non-perturbative definition) and a positive physical space,
     with the scalar sector's BRST included, or a proof that the series cannot
     carry them.
-  entities: [synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent, synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta, synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law, synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts, synthesis.weak-factor-rotor-lattice-strong-coupling-area-law, standard-model.gauge-algebra-minimal-massive-composite, synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube, synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three, synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling]
+  entities: [synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent, synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta, synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law, synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts, synthesis.weak-factor-rotor-lattice-strong-coupling-area-law, standard-model.gauge-algebra-minimal-massive-composite, synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube, synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three, synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling, synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band, synthesis.field-level-brst-of-the-two-doublets-and-the-thooft-feynman-gauge, synthesis.higgs-sector-brst-does-not-fix-the-breaking-pattern-of-two-doublets]
   added: 2026-11-01
 
 - id: op.qft-bosons-and-the-rung-field
@@ -1374,7 +1407,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November"
+  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November; the 9 November results and Leon's decisions"
   statement: >-
     The field theory takes three generations, one Higgs doublet and
     spin-statistics (imported via the Jost point,
@@ -1441,14 +1474,33 @@
     the spin: which modes are spinors is what locality with a positive norm fixes for the attached free fields
     (\claimref{synthesis.locality-of-the-attached-free-fields-fixes-their-statistics}). So the remaining input is
     the spinor assignment, not the statistics.
+
+    (9 November.) Three generations, a test: the one-window parity recurrence of the light-ray sea holds
+    exactly when the number of arrays is a multiple of $24$; it strengthens (Q) and is independent of the
+    cone's postulates, by two models with one and with three generations
+    (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}). On
+    sixteen Weyl components per generation it gives $3 \mid n_{g}$, not $n_{g} = 3$, under J3's reading of the
+    integer-weight channels as currents of the arrays; with the null data of the bosons counted additively its
+    verdict is set by the doublet count (the two doublets of the linear rung field pass $n_{g} = 1, 4$ and
+    fail $3$) and fails for every content once the graviton is counted
+    (\claimref{synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content}). By
+    Leon's decision of 9 November it is recorded as a test, not a premise, so the generation number stays free
+    under the stored premises; the value $78$ quoted in op.counted-mode-energy is a reading, not a stored
+    result. The conclusion $3 \mid n_{g}$ has prior art by anomaly routes (J. Wang's framing-anomaly count;
+    the mod-9 Dai-Freed anomaly of baryon triality of I. Garcia-Etxebarria and M. Montero).
   attack:
-    - "Three generations: the number is free under the slot-module premise; find a premise or dynamics of the series that fixes it (for example the slot su(3) of the maximal composite acting on the generation labels as a family symmetry), or prove that none does."
+    - >-
+      Three generations: the number is free under the slot-module premise; find a premise or dynamics of the series
+      that fixes it (for example the slot su(3) of the maximal composite acting on the generation labels as a family
+      symmetry), or prove that none does. The light-ray recurrence test (9 November) gives $3 \mid n_{g}$ under J3's
+      reading and is recorded as a test, not a premise; it does not choose three over six or nine
+      (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}).
     - "Spin and statistics beyond perturbation theory: derive Kuckert's modular P1CT symmetry (the modular conjugations of the wedge algebras acting on the local algebras as the wedge reflections) from a premise the series holds, or record it as one; the charged sectors localised in hypercones."
     - "The doublet count: decide whether the null-lift constraint is a hard constraint and the Higgs exactly the rung unit; on the branch with a level, whether the second doublet is needed at all, and whether a light multi-species composite would change n_h."
   success: >-
     A derivation of one structural input in the field theory, or an
     independence proof.
-  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum]
+  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content]
   added: 2026-11-01
 
 - id: op.deposit-state-is-hadamard
@@ -1655,7 +1707,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October"
+  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions"
   statement: >-
     The invariant of tame walls is $W(\Sigma) = (w(\Sigma), w_{1}(\mathcal
     L))$, and the number $k(\Sigma)$ of adjoined hyperbolic planes (rungs) a
@@ -1740,23 +1792,59 @@
     (\claimref{obj.std-algebra.hyperbolic-plane}), and the mod 8 entry of the
     graded Brauer class is the index $p - q \bmod 8$ of the real Clifford
     classification (\claimref{std-algebra.periodicity}).
+
+    (9 November.) Attack item 1 is answered in the negative on lens-space walls, given classical facts on lens
+    spaces that are cited from memory and are not in the store (the integral and mod-2 cohomology rings of
+    $L^{2n+1}(4)$ and its tangent bundle, the spin class $q_{1}$ with $2q_{1} = p_{1}$, the complex K-ring
+    with its lambda-operations, and $Sq^{1}$ on classes that lift to $\mathbb{Z}_{4}$), which both results
+    state as explicit hypotheses. Two rungs force $\mathcal L \oplus \mathcal L$ to be stably trivial on every
+    side, and a definite side needs exactly $e(\mathcal L)$ rungs; on $L^{2m+1}(4)$, $m \ge 2$, the spin class
+    $q_{1} = 2y^{2}$ of $\mathcal L \oplus \mathcal L$ is nonzero, so these walls need at least three rungs
+    with any physical signature, the store's physical type $(1, 2m+1)$ included, although $\mathrm{ht}(x) =
+    2$: on indefinite sides $k(\Sigma) > \mathrm{ht}(w_{1}\mathcal L)$ from dimension five, where complex
+    K-theory is still blind; only the necessity of stable triviality is proved
+    (\claimref{synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial}). A $k$-rung completion forces
+    $2^{k-1}(1 - \xi) = 0$ in the K-theory of the wall, $\xi$ the complexified dying line, on every side; on
+    $L^{2n+1}(4)$ this gives $k(\Sigma) \ge 1 + \lfloor n/2 \rfloor$, so the excess of the rung count over the
+    mod-2 height is unbounded (\claimref{synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height}).
+    Neither result gives the exact rung count of these walls, which lies between these lower bounds and
+    $e(\mathcal L)$, nor shows that $W(\Sigma)$, $\beta x$ and the signature leave it undetermined. By Leon's
+    decision of 9 November the lens-space inputs are to be derived in the store, not imported; until then both
+    results keep them as hypotheses, flagged at every level.
   attack:
     - >-
-      On a tame wall of dimension at least four with an indefinite physical
-      side, find a wall whose rung count lies strictly between
-      $\mathrm{ht}(w_{1}\mathcal L)$ and $e(\mathcal L)$, or prove $k(\Sigma)
-      = \mathrm{ht}(w_{1}\mathcal L)$ there; the step of
-      \claimref{synthesis.lens-space-wall-rung-count-sees-the-integral-twist}
-      that uses the stable range is the one to replace.
+      Answered in the negative (9 November), given the lens-space inputs
+      cited from memory: on lens-space walls $k(\Sigma) >
+      \mathrm{ht}(w_{1}\mathcal L)$ on indefinite sides from dimension five
+      (\claimref{synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial}),
+      with unbounded excess
+      (\claimref{synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height}).
+      What remains of the item is the exact rung count on such walls,
+      between those lower bounds and $e(\mathcal L)$, and the integral datum
+      that decides it, or a wall on which $W(\Sigma)$, $\beta x$ and the
+      signature do not determine it.
     - >-
       File the table for $\dim\Sigma \le 3$: import the classification of
       bundles of rank at least three over three-complexes by $(w_{1}, w_{2})$
       as a Fact and prove $k(\Sigma) = \mathrm{ht}(x)$ except on definite
-      sides with $x^{2} = 0 \neq \beta x$, where $k(\Sigma) = 3$.
+      sides with $x^{2} = 0 \neq \beta x$, where $k(\Sigma) = 3$. The
+      item needs that classification as a Fact; Leon decided on 9 November
+      that the lens-space inputs are derived in the store rather than
+      imported, and an import here would need a decision of the same kind.
     - >-
       Prove the general form of clause (c): that the graded Brauer class of
       the Clifford sheaf's jump is $(-2 \bmod 8, 0, w_{1}(\mathcal L)^{2})$,
       importing Donovan and Karoubi's description as a Fact.
+    - >-
+      Derive the lens-space cohomology rings, $q_{1}$ and the K-ring in the
+      store (Leon's decision of 9 November: derive, not import): the integral
+      and mod-2 cohomology rings of $L^{2n+1}(4)$ and $T\Sigma \oplus \R$,
+      the spin class $q_{1}$ with $2q_{1} = p_{1}$ and $p_{1} = e^{2}$ for
+      oriented plane bundles, the complex K-ring
+      $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$ with its
+      lambda-operations, and $Sq^{1} = 0$ on classes that lift to
+      $\mathbb{Z}_{4}$; the two lens-space wall results of 9 November take
+      them as hypotheses.
   success: >-
     The exact rung count $k(\Sigma)$ of every tame wall of dimension at least
     four in terms of $W(\Sigma)$, the integral class $\beta w_{1}(\mathcal L)$
@@ -1771,6 +1859,8 @@
     - synthesis.wall-rung-count-is-height-of-dying-line-class
     - synthesis.lens-space-wall-rung-count-sees-the-integral-twist
     - synthesis.imported-stiefel-connectivity-and-grassmannian-classification
+    - synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial
+    - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -2267,7 +2357,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October"
+  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October; the 9 November results and Leon's decisions"
   statement: >-
     Under Premise (Q) version 3 one registered boundary mode carries two
     s-wave arrays. With the count taken per light ray (decision of 26
@@ -2327,16 +2417,38 @@
     same count and entropy (argued). J3 holds at the horizon only (argued, not
     filed): each partial-wave channel of a massless field of spin $0$,
     $\tfrac12$, $1$ or $2$ obeys a two-dimensional wave equation in the
-    tortoise coordinate with a potential proportional to $1 - 2M/r$, which
-    decays as $e^{2\kappa r_{*}}$ towards the horizon; on the exterior the
+    tortoise coordinate with a potential that vanishes at the horizon,
+    proportional to $1 - 2M/r$ for spins $0$ and $1$ (and $2$, from
+    memory), decaying as $e^{2\kappa r_{*}}$, and to $\sqrt{1 - 2M/r}$ for
+    spin $\tfrac12$, decaying as $e^{\kappa r_{*}}$ (corrected 9 November;
+    the text had $1 - 2M/r$ for every spin); on the exterior the
     barrier gives greybody factors. That argument rests on the Regge-Wheeler,
     Zerilli, Teukolsky and Chandrasekhar reductions, cited from memory and not
     in the store.
+
+    (9 November.) The channel-reduction clause of J3 is proved at the horizon for spins $0$, $\tfrac12$ and
+    $1$, in Gauge Theory Gravity from stored premises rather than from imported reductions: in the static
+    gauge on the Schwarzschild exterior every partial-wave channel of the scalar, Dirac and Maxwell fields
+    obeys a two-dimensional equation in time and the tortoise coordinate whose coupling vanishes at the
+    horizon, as $e^{2\kappa r_{*}}$ for spins $0$ and $1$ and as $e^{\kappa r_{*}}$ for spin $\tfrac12$,
+    massive fields included for spins $0$ and $\tfrac12$, not uniformly in $\ell$; it is conditional on the
+    completeness of spherical and spinor harmonics and the exact/co-exact split of one-forms on $S^{2}$, cited
+    from memory
+    (\claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}). Spin $2$
+    is open. By Leon's decision of 9 November J3 (\claimref{hawking.joint-j3-s-wave-reduction}) is restated
+    (version 2): the current-boson identification and the partial-wave lift stay premise for every massless
+    field, and the channel-reduction clause is assumed for spin $2$ only, the graviton's channels; for spins
+    $0$, $\tfrac12$ and $1$ it follows from the result.
   attack:
     - >-
-      Import the partial-wave reductions (Regge-Wheeler, Zerilli, Teukolsky,
-      and Chandrasekhar's for the Dirac field) as a Fact after checking the
-      sources, then prove J3 at the horizon from the decay of the potential.
+      Spin $2$: derive the Regge-Wheeler and Zerilli reductions of the
+      linearised gravitational field at the horizon in the same setting (the
+      reductions for spins $0$, $\tfrac12$ and $1$ are derived, 9 November,
+      \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}),
+      which would take the channel-reduction clause out of J3, leaving its
+      current-boson identification and partial-wave lift as premise; and derive the harmonic-analysis inputs that result cites from
+      memory (completeness of spherical and spinor harmonics, the
+      exact/co-exact split of one-forms on $S^{2}$).
     - >-
       Derive the partial-wave identification from the fuzzy sphere of the
       counting programme, shared with T08 and T10.
@@ -2351,6 +2463,7 @@
     - synthesis.array-ln2-is-zero-mode-doublet-one-tower
     - synthesis.half-integer-weight-array-carries-half-ln2
     - singularity.q-joint-quasi-freeness-s-wave
+    - synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional
   added: "2026-10-22"
 
 - id: op.residue-killing-weights
@@ -2359,7 +2472,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November"
+  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November; the 9 November results and Leon's decisions"
   statement: >-
     Under Premise (Q) version 3, weights $\kappa(k + \tfrac12)$, one s-wave
     array carries exactly $\tfrac12\ln 2$ at the Hawking temperature, so under
@@ -2407,10 +2520,10 @@
     (\claimref{synthesis.window-reading-array-killing-energy}) the half offset
     is therefore singled out by (N$_{+}$), a reason for it that is not the area
     law. The count unit, two arrays per registered unit, is not derived and
-    remains a decision. Independence (argued): replacing the array per
-    generator by $N$ identical copies keeps every stored premise copy by copy,
-    so the residue fixes only the product of arrays per generator and cells
-    per Planck area. Without the weight clause the per-array entropy, hence
+    remains a decision. Independence: the argued form recorded here
+    earlier ($N$ identical copies of the array per generator) is replaced by
+    the proved form of 9 November below, in which the free datum is the
+    grouping of arrays into registered units. Without the weight clause the per-array entropy, hence
     the residue, is a free function of the slope and offset
     (\claimref{synthesis.q-splits-maximum-entropy-affine-weights}). No recount
     with a rational residue reaches $\kappa_c$
@@ -2444,17 +2557,39 @@
     area law (and that counting was later corrected by Domagala and
     Lewandowski); the asymptotic quasinormal $\ln 3$ of Dreyer and Hod holds
     for spins $0$ and $2$ and vanishes for spin $\tfrac12$; none supplies the
-    unit without the area law. The stored N-copies independence is the
+    unit without the area law. The independence of the grouping is the
     series' form of the Susskind-Uglum species and cutoff degeneracy: the
-    entropy fixes only the product of species per light ray and cells per
-    Planck area. The count unit stays a decision.
+    entropy fixes only the mean number of arrays per unit together with the
+    density of units per Planck area. The count unit stays a decision.
+
+    (9 November.) The residue fixes a mean, not a grouping (proved). Under the area-law hypothesis, with the
+    arrays of (Q) version 3 carrying $\tfrac12\ln 2$ each and sixteen per generation per light ray, a grouping
+    of arrays into registered units with mean $\bar u$ arrays per unit gives $\kappa_{c} = 1/(2\bar u\ln 2)$,
+    so the registered residue holds exactly when $\bar u = 2$: eight units per generation, whatever the sizes
+    of the individual units (of the $231$ groupings of a generation's sixteen arrays by size, the $22$ with
+    eight units). No premise of the cone fixes the grouping (J3's channels offer a candidate, units as
+    channels or as the two helicity channels of one $(\omega, \ell, m)$, without imposing it), and no single
+    ladder pair qualifies, since at these weights every mode carries less than $0.21 < \ln 2$
+    (\claimref{synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping}). This
+    replaces the argued $N$-copies form of the independence: with the sixteen Weyl components fixed, the free
+    datum is the grouping, not a number of copies. With $c$ arrays per light ray the light rays per Planck
+    area per modular period are $1/(2c\ln 2)$, so on the cosmological horizon the number $\pi N^{2}/\ln 2$
+    counts registered units, $c/2$ per light ray, and the light rays number $2\pi N^{2}/(c\ln 2)$; the wording
+    of \claimref{dark-matter.stored-asymmetry-charge-not-number} is corrected accordingly, its argument
+    unaffected. The second branch of attack item 1 is answered: a mean of two arrays per unit. The count unit
+    stays a decision, and the density $\nu = 1/(16\pi\ln 2)$ of \claimref{pred.boundary-mode-density} rests on
+    it.
   attack:
     - >-
       Derive the count unit from the boundary-mode structure: show that a
       registered mode is two arrays without the area law, by a route other
-      than the chirality channels of one light ray (closed, see above), or
-      show which unit the residue requires given sixteen Weyl components per
-      generation.
+      than the chirality channels of one light ray (closed, see above), for
+      instance a premise that groups arrays into registered units (none of
+      the present ones does; J3's channels are a candidate). The second
+      branch, which unit the residue requires given sixteen Weyl components
+      per generation, is answered (9 November;
+      \claimref{synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping}):
+      a mean of two arrays per unit, with the grouping free.
     - >-
       Separate the alternative per-shell reading (one Weyl field's lowest
       $j = \tfrac12$ shell, two members) from the two-array reading by an
@@ -2481,6 +2616,7 @@
     - synthesis.half-integer-weight-array-carries-half-ln2
     - singularity.q-joint-quasi-freeness-s-wave
     - pred.boundary-mode-density
+    - synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping
   added: "2026-10-22"
 
 - id: op.counted-mode-energy
@@ -2489,7 +2625,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "BUILD_REPORT, the calibration residue (22 October); synthesis.residue-from-mode-entropy, clause (v); maintainer decision of 23 October (temperature clause read before the crossing); the counted-unit energy result, 26 October; the null-ordering result and the adopted window reading, 31 October"
+  source: "BUILD_REPORT, the calibration residue (22 October); synthesis.residue-from-mode-entropy, clause (v); maintainer decision of 23 October (temperature clause read before the crossing); the counted-unit energy result, 26 October; the null-ordering result and the adopted window reading, 31 October; the 9 November results and Leon's decisions"
   statement: >-
     For a mode of positive weight $\beta\omega n < s(x)$, so if the counted
     modes carry the entropy $A/4$ their Killing excitation energy satisfies
@@ -2541,10 +2677,34 @@
     fermion parity with the zeta ordering needs the total chiral central
     charge of the sea to be a multiple of $24$. If the integer-weight fields
     (gauge bosons, the Higgs, the graviton) share the sea it is $78$ at three
-    generations and the test fails; if only the spin-$\tfrac12$ content forms
+    generations and the test fails (a reading, not a stored result; see 9
+    November); if only the spin-$\tfrac12$ content forms
     it, sixteen per generation, it is $48$ at three generations and the test
     passes exactly when the number of generations is a multiple of $3$. A
     test, not a derivation.
+
+    (9 November.) The recurrence test is now exact. On every finite window an array's one-window flow is its
+    grading, and the window reading adds $-\kappa/24$ per array, so the one-window Killing evolution of a sea
+    of $n$ arrays is $e^{2\pi Jn/24}\Gamma$, which equals the grading exactly when $24 \mid n$ ($12 \mid n$
+    with the grading's sign left free). The condition strengthens the one-period clause of (Q) from the
+    automorphism to the operator, is not implied by (Q), the KMS condition, (N$_{+}$) or the window reading,
+    and is independent of every postulate of the cone: models with one and with three generations satisfy them
+    all and differ on it. On sixteen Weyl components per generation it gives $n_{g} \equiv 0 \pmod 3$, not
+    $n_{g} = 3$, and $n_{g} \equiv 0 \pmod 8$ without the neutral singlet
+    (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}). The
+    verdict depends on how the bosons are read. Under J3's reading of the integer-weight channels as currents
+    of the arrays they add nothing, $c = 16n_{g}$, and the one-window and two-window tests both give $3 \mid
+    n_{g}$. If instead the null data of the vectors, the scalar doublets and the graviton are counted
+    additively as real arrays (a reading outside (N$_{+}$), the window reading and J3), then $c = 16n_{g} +
+    2n_{V} + n_{s} + 2\epsilon$, the twelve vectors drop out, the verdict is set by the scalar content ($n_{h}
+    \equiv 2n_{g} \pmod 6$ for one window, $n_{g} + n_{h} \equiv 0 \pmod 3$ for two), and with the graviton no
+    content passes
+    (\claimref{synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content}). Both
+    statements are relative to J3 at version 1; J3's restatement of 9 November (version 2) narrows only its
+    channel-reduction clause to spin $2$ and keeps the current-boson identification for every massless field,
+    so under J3 the integer-weight channels are still read as currents of the arrays. By Leon's decision of 9
+    November the condition is recorded as a test, not a premise. The value $78$ above is a reading, not a
+    stored result. The conclusion $3 \mid n_{g}$ has prior art by anomaly routes (cited in both results).
   attack:
     - >-
       Derive the label's energy function $\mu(m)$ from the series rather than
@@ -2558,9 +2718,16 @@
       in, summed over the history, is carried along the generators beyond the
       windows, where the label would then sit.
     - >-
-      Decide which fields form the light-ray sea, and with it the central
-      charge test above: derive whether the integer-weight fields share the
-      sea of the counted arrays.
+      Decide which fields form the light-ray sea. The central charge test is
+      now exact and recorded as a test, not a premise (9 November): its
+      verdict is $3 \mid n_{g}$ if the integer-weight channels are currents
+      of the arrays and is set by the scalar and graviton content if their
+      null data are counted additively
+      (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays},
+      \claimref{synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content});
+      what remains is to derive whether the integer-weight fields enter the
+      sea as currents of the arrays, as J3 (version 2) reads them, or as
+      further arrays.
   success: >-
     A derivation of the label's energy function, or of the structure carrying
     $M$ at the level of the whole horizon, compatible with the counted units
@@ -2575,6 +2742,8 @@
     - synthesis.residue-from-mode-entropy
     - synthesis.quarter-from-temperature
     - synthesis.clausius-is-window-first-law-plus-boost-charge-conservation
+    - synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays
+    - synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content
   added: "2026-10-22"
 
 - id: op.island-dictionary
@@ -2787,7 +2956,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: T12, successor problem (6); maintainer decisions of 23 and 26 October and Leon's decision of 31 October
+  source: T12, successor problem (6); maintainer decisions of 23 and 26 October and Leon's decision of 31 October; the 9 November results and Leon's decisions
   statement: 'Hypothesis (S) is derived (\claimref{standard-model.hyp-s-slot-statistics}) from the slot-module hypothesis
     (\claimref{standard-model.slot-module-hypothesis}): a graded $U(2)$ slot module tensored with one pair system, hypercharge
     from the centre, the slot module generated from a unique vacuum by one doublet of slot creation operators, the chirality
@@ -2866,6 +3035,22 @@
     invariance of the chirality on the pair factor; what it still needs is the identification of the
     label copy's parity with the twistor's, which the store's notes call the same missing theorem as (S)
     and which, with the relative unit sign, would also fix the orientation bit.
+
+    (9 November.) Clause (f) asks no more than the signed-direction postulates: on the composite space the CAR
+    of the five slot and pair modes are exactly Premise (F2) for their ten Majoranas with the sign bit acting
+    as $-1$ (a group of order $2^{11}$, signature $(5,5)$, of the class of $(10,0)$ by its Gauss sum $2^{5}$);
+    the Fock adjoint is the group inverse and the invariant form is unique up to scale. The untwisted slot
+    operators generate the same group but are not signed directions, so the clause's content is the choice of
+    directions: once the ten Klein-twisted Majoranas are declared the directions, a choice the postulates do
+    not make, clause (f) is an instance of (F2) and (F3), (F1) entering only as the index set of the ten
+    labels (\claimref{synthesis.joint-clifford-clause-is-an-instance-of-the-signed-direction-postulates}; the
+    twist is canonical up to a central unit by
+    \claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space}). The sign-bit
+    item is done. By Leon's decision of 9 November clause (f) of
+    \claimref{standard-model.slot-module-hypothesis} is restated in that form: the ten slot and pair Majoranas
+    (slots Klein-twisted) are distinct directions of one group of signed directions, (F2) and (F3), the sign
+    bit acting as $-1$; the identification of the direction labels with (F1)'s distinctions is flagged as a
+    reading.
   attack:
   - Derive the single doublet of slot creation operators ($b = 1$) from the label copy of the pair space that the hierarchy
     bundle carries.
@@ -2887,12 +3072,13 @@
     conventions, and the twist is unique up to a central phase, so on the composite's module the joint Clifford
     system exists canonically (\claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space};
     \claimref{synthesis.even-slots-need-a-spectator-generator} already uses the twist).
-    - >-
-      The joint Clifford system from the sign bit: by
-      \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}, directions sharing one central sign
-      bit, with distinct directions not commuting, generate exactly a Clifford algebra; check whether the clause
-      asks for more than that the slot and pair directions are distinct directions sharing one sign bit (the
-      adjoint, the signature), and if not, record it as an instance of the foundation postulates.
+  - >-
+    Done (9 November): the joint Clifford system from the sign bit. By
+    \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}, directions sharing one central sign
+    bit, with distinct directions not commuting, generate exactly a Clifford algebra; the clause asks no more than
+    that the ten Klein-twisted slot and pair Majoranas are such directions (the adjoint is the group inverse, the
+    signature is forced by the modes), and it is restated as an instance of (F2) and (F3), (F1) only as the index
+    set (\claimref{synthesis.joint-clifford-clause-is-an-instance-of-the-signed-direction-postulates}).
   success: A theorem deriving (S) or its weaker form from stated structure, or one of the five outcomes adopted and recorded
     in the tier declaration with its consequences carried to T13 and T15.
   entities:
@@ -2904,6 +3090,7 @@
   - standard-model.automorphisms-preserve-slot-pair-split-are
   - standard-model.no-spectator-slots
   - standard-model.quarks-leptons-two-level-fermion-content
+  - synthesis.joint-clifford-clause-is-an-instance-of-the-signed-direction-postulates
   added: '2026-10-22'
 
 - id: op.pair-sector-current
@@ -2913,7 +3100,7 @@
   difficulty: substantial
   status: partial
   source: T12, successor problems (3) and (8); T13, successor problem (6); T11, successor problem (3); T17, open direction
-    10
+    10; the 9 November results and Leon's decisions
   statement: 'The Georgi-Jarlskog term is one grade-five element whose three factors are all present in the series, yet
     neither the family structure, nor the frozen point and its lifts, nor the bracket and its composites reach it. Derive
     the coupling of the rung vector to the pair-sector $\mathfrak u(1)$ current that would, or, on the registered Pati-Salam
@@ -2941,7 +3128,7 @@
     At two loops every Dirac-type Yukawa, the $10$ and the $120$ included, shifts the three Pati-Salam couplings equally
     and moves neither $M_{I}$ nor $M_{U}$, so the gauge running cannot probe the $10$ or $120$ strengths (\claimref{synthesis.two-loop-running-cannot-fix-majorana-coupling}).
     The Majorana scaling $f \mapsto \lambda f$, $w \mapsto w/\lambda$ keeps $w_{d}f$ fixed and so does not free the $126$
-    coefficient (argued, not filed); no proof that the coefficient is independent of the stored structure was found. The
+    coefficient (argued, not filed); no proof that the coefficient is independent of the stored structure was found then (see 9 November). The
     degree-four part $G_{4}$ of $TT^{\dagger}$ splits into Pati-Salam parts: the pair-only part $P_{4} = \tfrac{3}{32}(B
     - L)(-1)^{N_{P}}$ in the $(15,1,1)$, the pair-rung part $X_{4} = 8\mu_{R}\mu_{P}$ in the $(15,1,3)$ and the rung-only
     part $-\chi/32$, a singlet. On the sixteen the rung vector times $P_{4}$ is exactly $-\tfrac{3}{32}$ times the Georgi-Jarlskog
@@ -2950,7 +3137,16 @@
     fixes its coefficient: the symmetric forms of the three parts cancel, and $w_{4}G_{4}$ has no symmetric form at all
     (\claimref{synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square}; the stored statement that the
     unsplit square gives the $10$ relation is corrected to multiple zero, \claimref{synthesis.georgi-jarlskog-square-of-majorana-element}(iv)).
-    The Dirac-neutrino entries hold on the halving $(-1)^{N}$ that the Pati-Salam stage forces (\claimref{synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5}).'
+    The Dirac-neutrino entries hold on the halving $(-1)^{N}$ that the Pati-Salam stage forces (\claimref{synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5}).
+
+    (9 November.) The $126$ weight is free on the stored relations (proved): operator functions of the
+    Majorana element give the down-type rung vector only the $10$; the $(15,1,1)$ weight $b/a$ sets
+    $m_{\mu}/m_{s}$ as $(32a + 3b)/(32a - b)$ and is $w_{d}f$ against $v_{d}Y$; the scaling $w_{d} \mapsto \mu
+    w_{d}$ fixes every stored relation ((EW), the Majorana scale, Hypothesis (U) in its eigenvalue reading,
+    the chain) and moves $\mathrm{Sym}(M_{d} - M_{e})$ by $\mu$, with models giving the factors $3$, $2$ and
+    $37/19$ (\claimref{synthesis.georgi-jarlskog-weight-free-on-the-stored-relations}). So the third attack
+    item is done, and the second family''s factor $3$ is an input of the record. Unlike the Majorana scaling
+    $f \mapsto \lambda f$, $w \mapsto w/\lambda$ above, the scaling of $w_{d}$ alone moves $w_{d}f$.'
   attack:
   - Fix the weight of the $(15,1,1)$ projection of $TT^{\dagger}$ relative to the rung vector's $10$ term from one potential
     along the Majorana element, or from Pati-Salam invariance allowing one coupling per component (argued, not checked);
@@ -2958,8 +3154,10 @@
   - On the Pati-Salam route, derive the strength of the $120$ coupling from a second stage of the breaking that is $S_{2}$-odd
     in the charged-fermion couplings (op.second-order-breaking); the residual-$S_{2}$ $120$ alone cannot supply the Cabibbo
     angle.
-  - Or prove the $126$ coefficient independent of every relation the store holds, which would make the second family's factor
-    $3$ an input.
+  - >-
+    Done (9 November; \claimref{synthesis.georgi-jarlskog-weight-free-on-the-stored-relations}): the $126$ weight
+    is free on the stored relations, so the second family's factor $3$ is an input of the record; a dynamics fixing it
+    (the first two items) would add a relation.
   success: A derived coupling producing the $126$ coefficient relative to the $10$, or a no-go showing the series' structures
     cannot, which would make the second family's factor $3$ an input.
   entities:
@@ -2971,6 +3169,7 @@
   - synthesis.residual-s2-fixes-120-family-form
   - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns
   - standard-model.majorana-element
+  - synthesis.georgi-jarlskog-weight-free-on-the-stored-relations
   added: '2026-10-22'
 
 - id: op.rung-unit
@@ -2980,7 +3179,7 @@
   difficulty: frontier
   status: partial
   source: T12, successor problem (1); T13, successor problem (6); maintainer decisions of 23 and 26 October; results of
-    31 October; results and Leon's decisions of 1 November; the B-mixing and quartic-running results and Leon's decisions of 2 November (the transmutation branch excluded under the coupling reading, the branch with a level the working branch)
+    31 October; results and Leon's decisions of 1 November; the B-mixing and quartic-running results and Leon's decisions of 2 November (the transmutation branch excluded under the coupling reading, the branch with a level the working branch); the 9 November results and Leon's decisions
   statement: >-
     The weak scale is the size of the rung's algebraic unit, $v/H \approx 10^{44}$ Hubble units
     ($H^{2} = \Lambda/3$), which nothing in the series fixes. On the null-lift locus the rung field's one
@@ -3088,6 +3287,17 @@
     scale: the rung component's norm has its only critical point at the mirror frame, and a D-term
     even under $c \mapsto c^{*}$ has $\xi = 0$ and its vacuum at the balanced frame, so the weak
     scale enters through a $c^{*}$-odd constant such as $\xi$.
+
+    (9 November.) $\xi G$ is free at fixed $N$ on the stored relations (proved): with $W =
+    \kappa\mathsf{N}^{2}$ every frame of the lift family is a stable vacuum at $\xi = m(g^{2} + g'^{2} +
+    8\kappa)/g'^{2}$, with all tree masses squared fixed multiples of $\mathsf{N}$, and two frames at equal
+    $G$, $\Lambda$ (so equal $N$) and couplings are models with different $\xi G$ and $v/M_{P}$ in which every
+    stored relation mixing the Planck and weak scales holds
+    (\claimref{synthesis.d-term-level-free-at-fixed-n}). The models use the branch $W = \kappa\mathsf{N}^{2}$,
+    which the record excludes (\claimref{synthesis.rung-field-charged-scalar-sum-rule}); they are models of
+    the premise set, which is what independence needs. This is consistent with the register, which holds $\xi
+    G$ as the constant of the laws (\claimref{synthesis.rung-unit-second-free-number}); a derived $\xi G$
+    would still refute it.
   attack:
   - >-
     Compute the charged pair's mass from the second invariant $W(N)$ on the covariant completion, where it
@@ -3098,7 +3308,8 @@
     Derive $\xi$, or $\xi G$, from the Pati-Salam breaking pattern: the electroweak level must be an
     $\su(2)_{R}$-breaking remnant, since a D-term level exists only for abelian factors; ask whether the
     right-handed breaking fixes its size, or whether the rung action couples to the promoted $\Lambda$ (a
-    level proportional to $\Lambda$, under which $v/H$ would be the law).
+    level proportional to $\Lambda$, under which $v/H$ would be the law). No stored relation fixes $\xi G$ at
+    fixed $N$ (9 November; \claimref{synthesis.d-term-level-free-at-fixed-n}).
   - >-
     Derive or bound $|Y| - |\tilde{Y}|$, or the CP phases: under the covariant completion the up-down split is
     $2m^{*}(\|Y\|^{2} - \|\tilde{Y}\|^{2})$, under the per-sector reading it needs a $T_{3R}$-odd weighting or
@@ -3124,6 +3335,7 @@
   - synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch
   - synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev
   - synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd
+  - synthesis.d-term-level-free-at-fixed-n
   added: '2026-10-22'
 
 - id: op.non-gaussian-completion
@@ -3366,7 +3578,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: T13, successor problems (2), (4) and (5)
+  source: T13, successor problems (2), (4) and (5); the 9 November results and Leon's decisions
   statement: Derive that the full three-family Yukawa form is the square of a face-space map; find, or refute, a real structure
     on the complexified face space under which the bracket form has signature $(1,2)$ on the physical slice; and account
     for the quarks' failure of the Koide relation, which the perturbative strong dressing cannot produce from Koide brackets.
@@ -3393,7 +3605,9 @@
     (argued, standard QCD: \claimref{synthesis.imported-flavour-blind-quark-mass-running}, \claimref{synthesis.imported-one-loop-pole-mass-relation}),
     so they cannot turn Koide brackets into the measured quark masses; a Koide bracket would need a dressing favouring the
     heaviest quark by at least $1.88$ (down) and $8.67$ (up, own-scale masses); dressings that raise the middle mass and
-    lower the lightest relative to the heaviest are not treated (\claimref{synthesis.mass-ordered-dressing-cannot-spoil-koide}).
+    lower the lightest relative to the heaviest ($D_{2} > D_{3} > D_{1}$) are covered by the same theorem''s part (iv), although
+    the last sentence of its version 1 said they were not treated (\claimref{synthesis.mass-ordered-dressing-cannot-spoil-koide};
+    corrected in its version 2, 9 November).
     The selectivity observation is restated accordingly (\claimref{families.selectivity-observation-level}). Both parts
     of the success clause are met, the first under a premise, but the light-cone reading stays a choice rather than a consequence,
     and whether the quark brackets satisfy the relation at all is open. The one quark triple near the relation is a look-elsewhere
@@ -3402,11 +3616,25 @@
     by chance, and it moves with the mass definition ($0.6575$ with the charm pole mass, $0.7209$ at $M_{Z}$); so the $(c,
     b, t)$ relation (Rodejohann and Zhang 2011, cited from memory) is no evidence that quark brackets satisfy Koide, while
     the lepton triple, a single triple within about $5 \times 10^{-6}$, is far from chance (computed with masses partly
-    cited from memory, not filed).'
+    cited from memory, not filed).
+
+    (9 November.) The remaining class is closed: every positive triple with Koide quotient $\tfrac23$ has its
+    middle entry at least $\tfrac{17}{2} - 6\sqrt{2} \approx 0.0147$ times its largest, which $m_{c}/m_{t}$
+    violates at own scale and at $M_{Z}$, so no up-type triple $(x, m_{c}, m_{t})$ with $x \le m_{c}$ is a
+    Koide triple; part (iv) of the stored theorem covers the class $D_{2} > D_{3} > D_{1}$, whose sharp
+    threshold is $D_{3}/D_{1} \ge 7.88$ (down) and about $2010$ (up, own-scale masses, with the bracket order
+    of $u$ and $c$ reversed); so no ordering of the dressing factors escapes a dressing that favours the
+    heaviest quark, which no perturbative strong effect does
+    (\claimref{synthesis.koide-middle-mass-bound-closes-the-remaining-quark-dressing-class}). Attack item 1 is
+    closed in the negative for QCD-type dressing. The data alone exclude no class, so whether the quark
+    brackets satisfy the relation is decided only by a dressing law, which no stored premise supplies; the
+    selectivity account for quarks is dropped unless a dressing law favouring the heaviest quark is proposed.'
   attack:
-  - 'Decide whether the quark brackets satisfy the Koide relation at all: the dressing that would reconcile them must favour
-    the heaviest quark, which no perturbative strong effect does; test the remaining class ($D_{2} > D_{3} > D_{1}$) or
-    drop the selectivity account for quarks. The $(c, b, t)$ near-hit is at chance level and does not count.'
+  - 'Closed in the negative for QCD-type dressing (9 November; \claimref{synthesis.koide-middle-mass-bound-closes-the-remaining-quark-dressing-class}):
+    in every ordering of the dressing factors, the remaining class $D_{2} > D_{3} > D_{1}$ included, a Koide bracket needs
+    a dressing favouring the heaviest quark, which no perturbative strong effect does. The selectivity account for quarks
+    is dropped unless a dressing law favouring the heaviest quark is proposed, which would reopen the item. The $(c, b,
+    t)$ near-hit is at chance level and does not count.'
   - 'Look for what would make the light-cone member a consequence: since the real structure and the member are one datum
     (\claimref{synthesis.light-cone-koide-is-quarter-turn}) and every equivariant real structure looks the same from the
     source, the selection must come from structure outside face space.'
@@ -3420,6 +3648,7 @@
   - synthesis.coherent-face-vector-real-slices
   - synthesis.mass-ordered-dressing-cannot-spoil-koide
   - synthesis.real-structure-breaks-source-stabiliser-to-z2
+  - synthesis.koide-middle-mass-bound-closes-the-remaining-quark-dressing-class
   added: '2026-10-22'
 
 # ---------------------------------------------------------------- neutrinos
@@ -3432,7 +3661,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T14, successor problem (7); the dark-matter results and maintainer decisions of 26 October; the findings of 31 October"
+  source: "T14, successor problem (7); the dark-matter results and maintainer decisions of 26 October; the findings of 31 October; the 9 November results and Leon's decisions"
   statement: >-
     The unit-ball rule turns on R3, one cell radius of the unseen direction on
     one side, and R2 and R3 are deposit clauses, set at the descent. Find a
@@ -3508,13 +3737,30 @@
     and black-hole lifetimes exclude an open fifth direction when a massless
     five-dimensional species exists
     (\claimref{dark-matter.thickness-not-gravitational-quantity}, note).
+
+    (9 November.) Attack item 1 is done on the orbit reading of licensing. With separate thicknesses $\lambda$
+    and $\mu$ for the five- and three-dimensional towers every premise of the unit-ball relation other than R3
+    holds and $T(\lambda, \mu) = 1 + 8/3\mu + 16\lambda/3\pi$ takes every value above $1$, so the thickness is
+    independent of the other premises. P2 as stored licenses no filling rule; on its orbit reading (a rule may
+    equate fillings only within one orbit of the symmetries of the deposited structure, as in equal filling of
+    common objects) every licensed rule gives each odd tower the share $1$ or $1/\epsilon$, while R3's
+    five-dimensional share is $8/3\pi < 1$, so no licensed rule gives R3
+    (\claimref{synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3}). The licensed rules do not miss the
+    observed total: with the charge branch for all four odd towers $T = 1 + 4/\epsilon$, which reaches $5.364$
+    at $\epsilon \approx 0.917$, $\epsilon$ being free initial data of the descent; so the fit moves from R3
+    to the asymmetry $\epsilon$ rather than being removed, and $5.364$ remains a fit. The five-dimensional
+    towers' window is the relation's other recorded input
+    (\claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}).
   attack:
     - >-
-      Find a reason other than the observed ratio why a symmetric tower's
-      count should equal $\epsilon$ times the common count (the
-      asymmetric-dark-matter coincidence carried over to the towers), or prove
-      that no rule the series' premises license gives it; the defect-count
-      route is closed for the three-dimensional towers.
+      Done on the orbit reading of licensing (9 November;
+      \claimref{synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3}): no
+      rule P2 licenses gives R3's shares, and a licensed rule reaches the
+      observed total only with $\epsilon \approx 0.917$ fitted. What
+      remains is a reason other than the observed ratio for that value of
+      $\epsilon$ (the asymmetric-dark-matter coincidence carried over to the
+      towers), or a notion of licensing beyond the orbit reading; the
+      defect-count route is closed for the three-dimensional towers.
     - >-
       Under the deposit reading, ask whether anything at $T_{\mathrm{desc}}$
       fixes one cell radius of the hidden direction: the deposit's own
@@ -3541,6 +3787,7 @@
     - dark-matter.stored-asymmetry-charge-not-number
     - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands
     - synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
+    - synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
   added: "2026-10-22"
 
 - id: op.odd-towers
@@ -3549,7 +3796,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T14, successor problems (1), (3) and (4); synthesis.gauge-algebra-by-tower (22 October); the dark-matter results and maintainer decisions of 26 October; the results of 31 October"
+  source: "T14, successor problems (1), (3) and (4); synthesis.gauge-algebra-by-tower (22 October); the dark-matter results and maintainer decisions of 26 October; the results of 31 October; the 9 November results and Leon's decisions"
   statement: >-
     Establish the odd-dimensional Fock ideals, their mass formulas and gauge
     algebras; derive the coupling rule relating an odd tower's dimensionful
@@ -3624,11 +3871,26 @@
     (\claimref{std-algebra.complexification}); its Fock ideals are minimal
     left ideals of the simple factors
     (\claimref{obj.std-algebra.minimal-left-ideal}).
+
+    (9 November.) Attack item 1 was already answered in the store, at proved level: the constituent's field in
+    each tower, $\R$ in the three-dimensional towers and $\HH$ in the five-dimensional ones
+    (\claimref{dark-tower-matter.constituents-field}); mass begins at two constituents in dimension three and
+    at one in dimension five (\claimref{dark-tower-matter.where-mass-begins}); and the three- and
+    five-dimensional towers' content (\claimref{dark-tower-matter.three-dimensional-content},
+    \claimref{dark-tower-matter.five-dimensional-content}). The item is marked done. Those results are stated
+    at the representatives P3 gives; the five-dimensional towers' dimension is not fixed by the descent's
+    other premises, while Premise U fixes the three-dimensional ones
+    (\claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}).
   attack:
     - >-
-      Compute the Fock ideals and mass formulas of the odd towers'
-      representatives (dimensions three and five under P3) with the series'
-      tools, checking them against the gauge algebras already obtained.
+      Done (marked 9 November): the Fock ideals, fields, mass onset and
+      content of the odd towers' representatives (dimensions three and five
+      under P3) are proved
+      (\claimref{dark-tower-matter.constituents-field},
+      \claimref{dark-tower-matter.where-mass-begins},
+      \claimref{dark-tower-matter.three-dimensional-content},
+      \claimref{dark-tower-matter.five-dimensional-content}) and agree with
+      the gauge algebras already obtained.
     - >-
       Name the premise the coupling rule needs and cost it, including the
       choice of shared length, since by
@@ -3653,6 +3915,10 @@
     - synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
     - synthesis.gauge-algebra-by-tower
     - synthesis.pati-salam-monopoles-bound-descent-history
+    - dark-tower-matter.constituents-field
+    - dark-tower-matter.where-mass-begins
+    - dark-tower-matter.three-dimensional-content
+    - dark-tower-matter.five-dimensional-content
   added: "2026-10-22"
 
 - id: op.window-p3
@@ -3661,7 +3927,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T14, successor problem (6); synthesis.oriented-causal-towers-mirror-pair-every-window (accepted 21 October); the dark-matter results and maintainer decisions of 26 October; the results and decisions of 31 October"
+  source: "T14, successor problem (6); synthesis.oriented-causal-towers-mirror-pair-every-window (accepted 21 October); the dark-matter results and maintainer decisions of 26 October; the results and decisions of 31 October; the 9 November results and Leon's decisions"
   statement: >-
     Derive the tower dimension per residue from the descent and retire P3,
     which represents each tower at the dimension nearest four. Of its two
@@ -3742,12 +4008,31 @@
     type) is periodic mod 8 along a residue, so none can pick the lowest
     member; independence of the lowest-causal clause from the descent's
     premises is the expected outcome.
+
+    (9 November.) The lowest-causal clause splits by residue. At residues $1$ and $7$ the constituent field is
+    $\R$ in every causal member, and the stored pair count $\lfloor (n+2)/2 \rfloor$ exceeds the real Witt
+    index $2$ of $\hatV$ above dimension three, so Premise U (U3) admits only $(2,1)$ and $(1,2)$: there the
+    window follows from U, and P3's lowest-causal clause is not independent. At residues $3$ and $5$ adding
+    eight directions of the majority sign splits off a factor $\Mat(16, \R)$, reversion included, and the
+    model with those towers at $(12,1)$ and $(1,12)$ satisfies every premise of the window-sensitive results
+    other than P3, Premise U included (the field $\HH$ supplies the units), with R2 in its dimension-generic
+    reading; so the descent leaves the five-dimensional towers' dimension free, the window there is an input,
+    and P3 stays a costed premise for those residues (the dark-to-baryon ratio is about $9.94$ in the shifted
+    model against $5.364$) (\claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}).
+    Premise (W) admits the lowest representatives and neither shifted one. This revises the argued expectation
+    above: the stored pair count is a selector that is not periodic mod $8$ along a residue, and through
+    Premise U it fixes the window at residues $1$ and $7$. The thickness of R3 is the other recorded input of
+    the same unit-ball relation (\claimref{synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3}).
   attack:
     - >-
-      Find a reason for (W) or for the lowest causal member that does not use
-      the fit, for instance a selector that is not periodic mod 8 along a
-      residue; or prove that the descent leaves the clause free, so that P3
-      stays, costed.
+      Split by residue (9 November;
+      \claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}):
+      at residues $1$ and $7$ the window follows from Premise U; at residues
+      $3$ and $5$ the descent leaves the clause free, so the window there is
+      an input and P3 stays, costed, unless a reason for (W) or for the
+      lowest causal member is found that does not use the fit (a selector
+      not periodic mod 8 along those residues, as the stored pair count is
+      along residues $1$ and $7$).
     - >-
       Derive the pairing reading of mass, now the only alternative to the
       momentum reading, from what a field mass term needs in the series' own
@@ -3766,6 +4051,7 @@
     - synthesis.residues-zero-four-real-chirality-anomaly
     - dark-matter.towers-are-residues-single-clock-filter
     - dark-matter.status-rule
+    - synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free
   added: "2026-10-22"
 
 - id: op.pre-descent-theory

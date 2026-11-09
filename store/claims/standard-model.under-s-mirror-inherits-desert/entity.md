@@ -33,7 +33,7 @@ derivations:
   - standard-model.imported-sectors-superselection-mirror-copy@4
   - standard-model.no-tower-but-one-contributes-towers@3
   - standard-model.weak-angle-over-derived-generation@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

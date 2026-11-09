@@ -1,0 +1,41 @@
+DIRECT PREMISES:
+  [uses] synthesis.residue-from-mode-entropy pinned@4 current@4 status=proved
+  [uses] synthesis.half-integer-weight-array-carries-half-ln2 pinned@5 current@5 status=proved
+  [uses] synthesis.boundary-mode-thermal-entropy pinned@2 current@2 status=proved
+  [uses] synthesis.capacity-per-mode-independent-of-helicity pinned@2 current@2 status=proved
+  [uses] synthesis.slot-module-light-ray-arrays-are-weyl-components pinned@3 current@3 status=proved
+  [uses] synthesis.de-sitter-entropy-pi-n-squared pinned@6 current@6 status=proved
+  [uses] dark-matter.stored-asymmetry-charge-not-number pinned@9 current@9 status=proved
+CLAIMREFS NOT IN uses/assumes: ['pred.boundary-mode-density', 'singularity.c2-cell-density', 'singularity.q-joint-quasi-freeness-s-wave', 'standard-model.largeness-number-universes-boundary-modes', 'synthesis.window-reading-array-killing-energy']
+PAST CONE SIZE (union): 336
+POSTULATES IN CONE:
+  dark-matter.hyp-u-equal-rank-one-eigenvalues @3 via ['dark-matter.stored-asymmetry-charge-not-number']
+  dark-matter.p1-single-frozen-point @1 via ['dark-matter.stored-asymmetry-charge-not-number']
+  dark-matter.p2-indifference @2 via ['dark-matter.stored-asymmetry-charge-not-number', 'synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.p3-nearest-dimension-representatives @2 via ['dark-matter.stored-asymmetry-charge-not-number', 'synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.p4-democracy-asymmetry-over-oriented-towers @1 via ['dark-matter.stored-asymmetry-charge-not-number']
+  dark-matter.p5-boundary-modes-hold-entropy-not @1 via ['dark-matter.stored-asymmetry-charge-not-number']
+  dark-matter.r1-equal-mass-per-quantum @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.r2-one-quantum-per-unit-ball @2 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.r3-one-cell-per-unshared-direction @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-tower-matter.h1-momentum @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  hawking.joint-j3-s-wave-reduction @1 via ['pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  hawking.premise-i-interface-identification @1 via ['dark-matter.stored-asymmetry-charge-not-number']
+  scrambling.indifference-structural-premise-series @2 via ['dark-matter.stored-asymmetry-charge-not-number']
+  scrambling.intrinsic-clock-ic-flagged-premise @3 via ['pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  sheaf.tameness @1 via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  singularity.c1-curvature-cutoff @4 via ['pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  singularity.c2-cell-density @4 via ['(direct)', 'pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  singularity.c3-counted-epoch @1 via ['pred.boundary-mode-density', 'synthesis.capacity-per-mode-independent-of-helicity']
+  singularity.p-univalence @2 via ['dark-matter.stored-asymmetry-charge-not-number', 'synthesis.boundary-mode-thermal-entropy', 'synthesis.capacity-per-mode-independent-of-helicity']
+  singularity.q-joint-quasi-freeness-s-wave @3 via ['(direct)', 'dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density']
+  singularity.r-regularity-fixed-locus @4 via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.boundary-mode-thermal-entropy']
+  singularity.rate-models-kinematic-inputs-l-u @2 via ['dark-matter.stored-asymmetry-charge-not-number']
+  standard-model.slot-module-hypothesis @4 via ['dark-matter.stored-asymmetry-charge-not-number', 'synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  synthesis.common-ceiling-coupling-premise @1 via ['dark-matter.stored-asymmetry-charge-not-number']
+  synthesis.continuum-completion-premise @2 FOUNDATION via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.boundary-mode-thermal-entropy']
+  synthesis.premise-minimal-non-commutativity @2 FOUNDATION via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.boundary-mode-thermal-entropy']
+  synthesis.premise-superposition-over-the-integers @2 FOUNDATION via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.boundary-mode-thermal-entropy']
+  synthesis.premise-the-bit @2 FOUNDATION via ['dark-matter.stored-asymmetry-charge-not-number', 'pred.boundary-mode-density', 'synthesis.boundary-mode-thermal-entropy']
+  synthesis.r-lambda-regularity-cosmological-horizon @5 via ['synthesis.capacity-per-mode-independent-of-helicity', 'synthesis.half-integer-weight-array-carries-half-ln2', 'synthesis.residue-from-mode-entropy']
+  synthesis.window-reading-array-killing-energy @1 via ['(direct)']

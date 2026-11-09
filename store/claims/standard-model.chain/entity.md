@@ -34,7 +34,7 @@ derivations:
   - standard-model.matching-traces@4
   - standard-model.one-threshold-exact-criterion@3
   - standard-model.spectrum-run@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

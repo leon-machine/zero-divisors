@@ -1,0 +1,30 @@
+DIRECT PREMISES:
+  [uses] synthesis.georgi-jarlskog-is-rung-vector-times-pair-part-of-majorana-square pinned@2 current@2 status=proved
+  [uses] synthesis.georgi-jarlskog-square-of-majorana-element pinned@3 current@3 status=proved
+  [uses] standard-model.majorana-element pinned@7 current@7 status=proved
+  [uses] standard-model.invariant-pairing-five-modes pinned@5 current@5 status=proved
+  [uses] families.doublet-direction-module-georgi-jarlskog-clebsch pinned@6 current@6 status=proved
+  [uses] standard-model.imported-clebsch-structure-seesaw pinned@1 current@1 status=imported
+  [uses] synthesis.majorana-scale-is-126-doublet-vev pinned@3 current@3 status=proved
+  [uses] synthesis.majorana-scale-free-on-pati-salam-route pinned@5 current@5 status=proved
+  [uses] standard-model.neutrino-dirac-matrix-charged-fermions pinned@6 current@6 status=proved
+  [uses] synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition pinned@1 current@1 status=proved
+  [uses] synthesis.residual-s2-fixes-120-family-form pinned@1 current@1 status=proved
+  [uses] standard-model.fits-record-level pinned@6 current@6 status=proved
+  [uses] standard-model.imported-spinor-bilinears pinned@1 current@1 status=imported
+  [uses] neutrino.breaking-relation pinned@3 current@3 status=proved
+CLAIMREFS NOT IN uses/assumes: ['dark-matter.hyp-u-equal-rank-one-eigenvalues', 'scrambling.indifference-structural-premise-series', 'standard-model.premise-ew-equal-weight', 'synthesis.majorana-scale-free-input']
+PAST CONE SIZE (union): 150
+POSTULATES IN CONE:
+  dark-matter.hyp-u-equal-rank-one-eigenvalues @3 via ['(direct)']
+  families.hyp-face-identification @3 via ['synthesis.majorana-scale-free-on-pati-salam-route']
+  neutrino.h-second-stage-hierarchical @1 via ['synthesis.majorana-scale-free-on-pati-salam-route']
+  neutrino.m-framework-realises-majorana-term-scale @1 via ['synthesis.majorana-scale-free-on-pati-salam-route']
+  scrambling.indifference-structural-premise-series @2 via ['(direct)', 'synthesis.majorana-scale-free-on-pati-salam-route']
+  standard-model.premise-ew-equal-weight @1 via ['(direct)', 'standard-model.fits-record-level', 'standard-model.neutrino-dirac-matrix-charged-fermions']
+  standard-model.slot-module-hypothesis @4 via ['families.doublet-direction-module-georgi-jarlskog-clebsch', 'standard-model.fits-record-level', 'standard-model.majorana-element']
+  synthesis.continuum-completion-premise @2 FOUNDATION via ['families.doublet-direction-module-georgi-jarlskog-clebsch', 'standard-model.fits-record-level', 'standard-model.invariant-pairing-five-modes']
+  synthesis.majorana-scale-free-input @2 via ['(direct)']
+  synthesis.premise-minimal-non-commutativity @2 FOUNDATION via ['families.doublet-direction-module-georgi-jarlskog-clebsch', 'standard-model.fits-record-level', 'standard-model.invariant-pairing-five-modes']
+  synthesis.premise-superposition-over-the-integers @2 FOUNDATION via ['families.doublet-direction-module-georgi-jarlskog-clebsch', 'standard-model.fits-record-level', 'standard-model.invariant-pairing-five-modes']
+  synthesis.premise-the-bit @2 FOUNDATION via ['families.doublet-direction-module-georgi-jarlskog-clebsch', 'standard-model.fits-record-level', 'standard-model.invariant-pairing-five-modes']

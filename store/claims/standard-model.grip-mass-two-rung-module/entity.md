@@ -32,7 +32,7 @@ derivations:
   - standard-model.module-factorises-even-ground-elements-act@5
   - standard-model.moment-map-grip-mass-are-insensitive@4
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

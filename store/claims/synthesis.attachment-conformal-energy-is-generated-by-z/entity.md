@@ -44,7 +44,7 @@ derivations:
   - correspondence.twistors-are-states-three-ladder-pairs@6
   - field-theory.twistor-attachment@6
   - synthesis.positive-energy-selects-rule-2-sign@4
-  - hawking.helicity-lift-joints-itemised@5
+  - hawking.helicity-lift-joints-itemised@6
   - synthesis.positive-conformal-energy-gives-positive-null-translations@7
   - synthesis.de-sitter-horizon-translation-is-conformal-null-rotation@4
   - synthesis.null-vacuum-on-a-horizon-generator@1

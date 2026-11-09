@@ -1,0 +1,344 @@
+{
+ "problem": {
+  "id": "op.gram-square-and-face-space",
+  "title": "The Gram-square structure and the real structure of face space",
+  "area": "generations",
+  "kind": "research",
+  "difficulty": "substantial",
+  "status": "partial",
+  "source": "T13, successor problems (2), (4) and (5)",
+  "statement": "Derive that the full three-family Yukawa form is the square of a face-space map; find, or refute, a real structure on the complexified face space under which the bracket form has signature $(1,2)$ on the physical slice; and account for the quarks' failure of the Koide relation, which the perturbative strong dressing cannot produce from Koide brackets.",
+  "why": "The Gaussian section and the alignment result assume the Gram-square form; the real structure would promote Koide's light-cone reading from a choice to a consequence; the quark account decides whether the relation is selective at bracket level at all.",
+  "known": "The alignment result rests on the Gram-square form (\\claimref{families.alignment-computed-thirteenth-refutation-democracy-one}(3)); the light-cone reading is a choice in \\claimref{families.koide-nullity-condition-one-member-invariant}; the face identification is a working hypothesis (\\claimref{families.hyp-face-identification}). Under the adopted premise of slot covariance (\\claimref{families.slot-covariance-of-mass-law}), a family form sesquilinear in the face vector, with constant coefficients and face-wise diagonal $2|\\beta_{k}|^{2}$, is forced to be the Gram square, exact at $\\Lambda = 0$ and rank one, while the permutations alone leave a nine-dimensional freedom (\\claimref{synthesis.slot-covariance-forces-gram-square}). The real structure is found: the one on which the bracket form is Lorentzian is complex conjugation conjugated by the doublet quarter-turn, under which the bracket form becomes the light-cone member, so the real structure and the choice of member are one datum and the physical vector is null on no slice; the Koide angle is the Hilbert-Schmidt angle between the mass matrix and the identity (\\claimref{synthesis.light-cone-koide-is-quarter-turn}). Every $S_{3}$-equivariant real structure gives the same geometry with the coherent source after a face unitary (\\claimref{synthesis.real-structure-breaks-source-stabiliser-to-z2}(i)), so nothing built covariantly in face space can select the Lorentzian member. The Gaussian coherent face vector lies on no permutation-equivariant real slice, and its projection satisfies Koide exactly when the channel feeding ratio is $\\lambda^{2} = 2$ (\\claimref{synthesis.coherent-face-vector-real-slices}). The third part, the strong dressing, is answered in the negative at perturbative level: a dressing that is flavour-blind or favours the lighter quarks can only lower the Koide quotient, the measured quark quotients exceed $\\tfrac23$ in both sectors at every standard mass definition (between $0.731$ and $0.889$), and perturbative QCD running, pole conversion and constituent dressing are of that kind (argued, standard QCD: \\claimref{synthesis.imported-flavour-blind-quark-mass-running}, \\claimref{synthesis.imported-one-loop-pole-mass-relation}), so they cannot turn Koide brackets into the measured quark masses; a Koide bracket would need a dressing favouring the heaviest quark by at least $1.88$ (down) and $8.67$ (up, own-scale masses); dressings that raise the middle mass and lower the lightest relative to the heaviest are not treated (\\claimref{synthesis.mass-ordered-dressing-cannot-spoil-koide}). The selectivity observation is restated accordingly (\\claimref{families.selectivity-observation-level}). Both parts of the success clause are met, the first under a premise, but the light-cone reading stays a choice rather than a consequence, and whether the quark brackets satisfy the relation at all is open. The one quark triple near the relation is a look-elsewhere effect: over the twenty quark triples at three mass definitions (sixty quotients spread from $0.448$ to $0.987$) the nearest to $\\tfrac23$ is $(c, b, t)$ at own-scale masses, $0.6693$, against a nearest deviation of about $0.0045$ expected by chance, and it moves with the mass definition ($0.6575$ with the charm pole mass, $0.7209$ at $M_{Z}$); so the $(c, b, t)$ relation (Rodejohann and Zhang 2011, cited from memory) is no evidence that quark brackets satisfy Koide, while the lepton triple, a single triple within about $5 \\times 10^{-6}$, is far from chance (computed with masses partly cited from memory, not filed).",
+  "attack": [
+   "Decide whether the quark brackets satisfy the Koide relation at all: the dressing that would reconcile them must favour the heaviest quark, which no perturbative strong effect does; test the remaining class ($D_{2} > D_{3} > D_{1}$) or drop the selectivity account for quarks. The $(c, b, t)$ near-hit is at chance level and does not count.",
+   "Look for what would make the light-cone member a consequence: since the real structure and the member are one datum (\\claimref{synthesis.light-cone-koide-is-quarter-turn}) and every equivariant real structure looks the same from the source, the selection must come from structure outside face space."
+  ],
+  "success": "The Gram-square form derived from stated structure, and a real structure found or excluded.",
+  "entities": [
+   "families.koide-nullity-condition-one-member-invariant",
+   "families.selectivity-observation-level",
+   "families.slot-covariance-of-mass-law",
+   "synthesis.slot-covariance-forces-gram-square",
+   "synthesis.light-cone-koide-is-quarter-turn",
+   "synthesis.coherent-face-vector-real-slices",
+   "synthesis.mass-ordered-dressing-cannot-spoil-koide",
+   "synthesis.real-structure-breaks-source-stabiliser-to-z2"
+  ],
+  "added": "2026-10-22"
+ },
+ "entities": [
+  {
+   "id": "families.koide-nullity-condition-one-member-invariant",
+   "title": "Koide as a nullity condition, for one member of the invariant family",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "null-directions"
+   ],
+   "one_liner": "The Koide relation is equivalent to the family vector being null for the equal-coefficient member $s^{2} - Q(d)$ of the $S_{3}$-invariant quadratic forms, a member that is chosen rather than forced.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 0,
+   "future_cone_size": 13,
+   "future_cone_size_without_restatements": 13,
+   "used_by": 4,
+   "source": {
+    "paper": "T13",
+    "number": "Prop 5.3",
+    "label": "prop:nullity",
+    "line": 710
+   },
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [],
+   "used_by_ids": [
+    "synthesis.coherent-face-vector-real-slices",
+    "synthesis.koide-channel-phase-is-no-symmetry-angle",
+    "synthesis.koide-channel-phase-target-depends-on-mass-definition",
+    "synthesis.light-cone-koide-is-quarter-turn"
+   ]
+  },
+  {
+   "id": "families.selectivity-observation-level",
+   "title": "Selectivity, at observation level",
+   "kind": "claim",
+   "status": "conjectured",
+   "effective_status": "conjectured",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing"
+   ],
+   "one_liner": "Under Hypothesis (S) leptons are undressed colour singlets and quarks strongly dressed, but the known strong dressing can only lower the Koide quotient and the quarks are already above $\\tfrac23$, so it does not explain the quarks' failure; seesaw-composed neutrinos are exempt; at observation level.",
+   "evidence": "none",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 0,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {
+    "paper": "T13",
+    "number": "Obs 7.3",
+    "label": "obs:selectivity",
+    "line": 875
+   },
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [],
+   "used_by_ids": []
+  },
+  {
+   "id": "families.slot-covariance-of-mass-law",
+   "title": "Slot covariance of the family mass law: a flavour symmetry of the law, broken by the state",
+   "kind": "claim",
+   "status": "postulate",
+   "effective_status": "postulate",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "mass-generation",
+    "face-identification"
+   ],
+   "one_liner": "Premise: the family mass law is covariant under the slot mixing $U(3)$ of the three-spinor system, a flavour symmetry of the law broken by the state, which forces the rank-one Gram square.",
+   "evidence": "none",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 0,
+   "future_cone_size": 1,
+   "future_cone_size_without_restatements": 1,
+   "used_by": 1,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [],
+   "used_by_ids": [
+    "synthesis.slot-covariance-forces-gram-square"
+   ]
+  },
+  {
+   "id": "synthesis.slot-covariance-forces-gram-square",
+   "title": "Slot covariance forces the Gram square",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "mass-generation"
+   ],
+   "one_liner": "For a family form sesquilinear in the face vector $\\beta$ with constant coefficients and face-wise diagonal $2|\\beta_{k}|^{2}$, covariance under the three-spinor slot mixing $U(3)$ (under which $\\beta$ transforms by the cofactor law), assumed as the premise of slot covariance, forces the Gram square $2\\bar\\beta\\beta^{\\mathsf T}$ (exact at $\\Lambda = 0$, rank one), while the permutations alone leave a nine-dimensional affine freedom including a face-wise form with three equal families.",
+   "evidence": "pass",
+   "holds_given": [
+    "families.slot-covariance-of-mass-law"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 82,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "families.chart-computation-sign-twist-bracket-form",
+    "families.slot-covariance-of-mass-law",
+    "standard-model.internal-symmetry-ladder",
+    "synthesis.many-twistor-join"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.light-cone-koide-is-quarter-turn",
+   "title": "The Lorentzian Koide slice is a quarter-turn of the doublet",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "representation-theory"
+   ],
+   "one_liner": "The face-space real structure on which the bracket form is Lorentzian is complex conjugation conjugated by the doublet quarter-turn $P_{s} + I_4 P_{d}$, under which the bracket form becomes the light-cone member, so it adds nothing to that choice and the physical vector is null on no slice; and the Gram-square property is automatic, the Koide angle selecting only the positive square root.",
+   "evidence": "pass",
+   "holds_given": [
+    "scrambling.indifference-structural-premise-series"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 100,
+   "future_cone_size": 6,
+   "future_cone_size_without_restatements": 6,
+   "used_by": 2,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "families.alignment-computed-thirteenth-refutation-democracy-one",
+    "families.chart-computation-sign-twist-bracket-form",
+    "families.koide-nullity-condition-one-member-invariant",
+    "families.linear-conjecture-refuted-data",
+    "synthesis.coherent-face-vector-real-slices"
+   ],
+   "used_by_ids": [
+    "synthesis.koide-channel-phase-is-no-symmetry-angle",
+    "synthesis.real-structure-breaks-source-stabiliser-to-z2"
+   ]
+  },
+  {
+   "id": "synthesis.coherent-face-vector-real-slices",
+   "title": "The coherent face vector meets no real slice",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "representation-theory"
+   ],
+   "one_liner": "The Gaussian coherent face vector lies on no permutation-equivariant real slice for any channel phase, every slice projection keeps half its doublet norm, and the projected vector satisfies Koide exactly when the channel feeding ratio is $\\lambda^{2} = 2$, the choice of slice moving only the Koide phase by a quarter turn (up to orientation).",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 5,
+   "future_cone_size": 12,
+   "future_cone_size_without_restatements": 12,
+   "used_by": 7,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "families.chart-computation-sign-twist-bracket-form",
+    "families.koide-nullity-condition-one-member-invariant",
+    "families.rigidity-pairing-sector-one-event"
+   ],
+   "used_by_ids": [
+    "synthesis.channel-phase-invisible-to-axially-covariant-completions",
+    "synthesis.koide-channel-phase-is-no-symmetry-angle",
+    "synthesis.koide-channel-phase-target-depends-on-mass-definition",
+    "synthesis.light-cone-koide-is-quarter-turn",
+    "synthesis.light-pair-split-needs-broken-source-stabiliser",
+    "synthesis.real-structure-breaks-source-stabiliser-to-z2",
+    "synthesis.series-family-structures-give-no-lopsided-second-stage"
+   ]
+  },
+  {
+   "id": "synthesis.mass-ordered-dressing-cannot-spoil-koide",
+   "title": "Mass-ordered dressing cannot turn Koide brackets into quark masses",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "flavour-and-mixing",
+    "no-go",
+    "confronted-with-data"
+   ],
+   "one_liner": "The Koide quotient is unchanged by a common dressing factor and strictly lowered by raising the lighter masses, so a strong dressing that is flavour-blind at a common scale and favours the lighter quarks at own scales, as pole masses or as constituent masses (argued from standard QCD) can only lower it; with the measured quark quotients above $\\tfrac23$ in both sectors (between $0.731$ and $0.889$), a Koide bracket would need a dressing favouring the heaviest quark by at least $1.88$ (down) and $8.67$ (up).",
+   "evidence": "pass",
+   "holds_given": [
+    "scrambling.indifference-structural-premise-series"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 94,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "families.linear-conjecture-refuted-data"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.real-structure-breaks-source-stabiliser-to-z2",
+   "title": "The real structure leaves a $\\mathbb{Z}_{2}$ stabiliser and cannot give 207",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "generations",
+   "programme": "transport-papers",
+   "tags": [
+    "pairing-and-bogoliubov",
+    "flavour-and-mixing",
+    "no-go",
+    "representation-theory",
+    "needs-continuum"
+   ],
+   "one_liner": "Every $S_{3}$-equivariant real structure and the coherent source $\\kappa(u' + \\lambda e^{I_4\\chi}f_{+})$ are carried by a face unitary to conjugation and the line of $(1, a, I_4 a)$, $a = \\lambda/\\sqrt2$, with a phase independent of $\\chi$; the residual symmetry is the single reflection $R_{n}$, $n = c_{R}\\times c_{I}$ (at the Koide point the reflection of the Koide vector through the democratic axis), which forces $n$ to be an exact eigenvector of the face mass form (at the floor, so the lowest, in every state built from the source, its conjugate and $\\hat{V}$, not in general) and leaves a five-parameter block that exact Fock instances fill, while a cubic family word has no residual symmetry at all: the $207$ cannot come from the real structure or the cubic family word acting by covariance, only from the selected state.",
+   "evidence": "pass",
+   "holds_given": [
+    "scrambling.indifference-structural-premise-series"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 105,
+   "future_cone_size": 5,
+   "future_cone_size_without_restatements": 5,
+   "used_by": 2,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "families.chart-computation-sign-twist-bracket-form",
+    "families.imported-squeezed-vacuum-bosonic-pairing",
+    "families.rigidity-pairing-sector-one-event",
+    "families.skeleton-rank-one-plus-ordering-shift",
+    "synthesis.channel-phase-invisible-to-axially-covariant-completions",
+    "synthesis.coherent-face-vector-real-slices",
+    "synthesis.face-mass-form-unit-plus-gram",
+    "synthesis.light-cone-koide-is-quarter-turn",
+    "synthesis.light-pair-split-needs-broken-source-stabiliser"
+   ],
+   "used_by_ids": [
+    "synthesis.koide-channel-phase-is-no-symmetry-angle",
+    "synthesis.pair-singlet-mass-form-is-floor-plus-face-density"
+   ]
+  }
+ ],
+ "work_in_store": [
+  "synthesis.coherent-face-vector-real-slices",
+  "synthesis.light-cone-koide-is-quarter-turn",
+  "synthesis.mass-ordered-dressing-cannot-spoil-koide",
+  "synthesis.slot-covariance-forces-gram-square"
+ ]
+}

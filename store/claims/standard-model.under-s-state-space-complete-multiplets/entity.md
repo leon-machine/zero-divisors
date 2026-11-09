@@ -24,7 +24,7 @@ derivations:
   - standard-model.complete-multiplets-shift-all-three-coefficients@3
   - standard-model.one-threshold-exact-criterion@3
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

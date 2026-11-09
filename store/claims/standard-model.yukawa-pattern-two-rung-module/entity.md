@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - standard-model.invariant-pairing-five-modes@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 - name: standard-route
   uses:

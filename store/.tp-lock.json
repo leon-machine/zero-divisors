@@ -2116,7 +2116,7 @@
  "dark-matter.contact-mechanism-returns-r3": {
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2"
+   "dark-matter.r2-one-quantum-per-unit-ball@3"
   ],
   "credit": [
    [
@@ -2221,7 +2221,7 @@
  },
  "dark-matter.flag-bit-exists-exactly-tower-dimension": {
   "assumes": [
-   "dark-matter.p3-nearest-dimension-representatives@2"
+   "dark-matter.p3-nearest-dimension-representatives@3"
   ],
   "credit": [
    [
@@ -2978,18 +2978,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "note on the premise by residue, the odd residues' choice following from Premise U at 1 and 7 and independent at 3 and 5",
+    3
    ]
   ],
-  "hash": "d23fa633c1adbd7a",
+  "hash": "1b14e42b3d090e65",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "ba24a4dbed76617d"
+   "statement": "9d9046e53114bafa"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.p4-democracy-asymmetry-over-oriented-towers": {
   "assumes": [],
@@ -3074,7 +3079,7 @@
   "assumes": [
    "dark-matter.p1-single-frozen-point@1",
    "dark-matter.p2-indifference@2",
-   "dark-matter.p3-nearest-dimension-representatives@2",
+   "dark-matter.p3-nearest-dimension-representatives@3",
    "dark-matter.p4-democracy-asymmetry-over-oriented-towers@1",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
@@ -3250,18 +3255,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "wording of the premise, the list of dimensions marked as P3's window",
+    3
    ]
   ],
-  "hash": "1a6f16989a08d4a9",
+  "hash": "378632e86369e495",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "87913e39fa60e5b2"
+   "statement": "211967ba715630b4"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.r3-one-cell-per-unshared-direction": {
   "assumes": [],
@@ -3483,18 +3493,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the cold-mirror exception stated at P2's version-1 reach, with P2 as scoped leaving xi free",
     9
+   ],
+   [
+    "Claude Opus 5.5",
+    "wording of the P1 parenthetical, the number pi N^2/ln 2 named a count of registered units and the light-ray count corrected",
+    10
    ]
   ],
-  "hash": "8cb17a9fbf24d064",
+  "hash": "5071b31829d134ce",
   "ledger": null,
   "parts": {
    "checks": "2d0097beeae084dd",
    "proofs": "af1a4a59f14c48b0",
    "rest": "d3b65c89b700e77b",
-   "statement": "7f18a2a535a4dee1"
+   "statement": "045a59ccdb0e9042"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "dark-matter.superselected-hence-dark-exactly-stable": {
   "assumes": [
@@ -3552,7 +3567,7 @@
   "assumes": [
    "dark-matter.p2-indifference@2",
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2"
+   "dark-matter.r2-one-quantum-per-unit-ball@3"
   ],
   "credit": [
    [
@@ -3580,7 +3595,7 @@
  "dark-matter.towers-are-residues-single-clock-filter": {
   "assumes": [
    "dark-matter.p2-indifference@2",
-   "dark-matter.p3-nearest-dimension-representatives@2"
+   "dark-matter.p3-nearest-dimension-representatives@3"
   ],
   "credit": [
    [
@@ -3715,7 +3730,7 @@
  "dark-matter.unit-ball-rule": {
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2",
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
    "dark-matter.r3-one-cell-per-unshared-direction@1"
   ],
   "credit": [
@@ -4112,7 +4127,7 @@
  },
  "dark-tower-matter.imported-towers-their-types": {
   "assumes": [
-   "dark-matter.p3-nearest-dimension-representatives@2"
+   "dark-matter.p3-nearest-dimension-representatives@3"
   ],
   "credit": [
    [
@@ -4140,7 +4155,7 @@
  "dark-tower-matter.imported-unit-ball-rule": {
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2",
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
    "dark-matter.r3-one-cell-per-unshared-direction@1"
   ],
   "credit": [
@@ -4333,7 +4348,7 @@
  },
  "dark-tower-matter.population": {
   "assumes": [
-   "dark-matter.r2-one-quantum-per-unit-ball@2"
+   "dark-matter.r2-one-quantum-per-unit-ball@3"
   ],
   "credit": [
    [
@@ -4468,7 +4483,7 @@
  },
  "dark-tower-matter.survival-sheets": {
   "assumes": [
-   "dark-matter.r2-one-quantum-per-unit-ball@2"
+   "dark-matter.r2-one-quantum-per-unit-ball@3"
   ],
   "credit": [
    [
@@ -6677,7 +6692,7 @@
  },
  "hawking.helicity-lift-joints-itemised": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@1"
+   "hawking.joint-j3-s-wave-reduction@2"
   ],
   "credit": [
    [
@@ -6689,18 +6704,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "restatement of Joint J3 to the narrowed premise, channel reduction assumed for spin 2 only",
+    6
    ]
   ],
-  "hash": "e16465deeadef7aa",
+  "hash": "2dc7f36122b0cb6c",
   "ledger": null,
   "parts": {
    "checks": "969842d81cbde4d8",
-   "proofs": "a475e55bd753bd34",
+   "proofs": "b47c23d88780d0e0",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "4d8cb415e8f453e4"
+   "statement": "eb85223bcb7dbbe6"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "hawking.homogeneity-ordering-shift": {
   "assumes": [],
@@ -7144,18 +7164,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "restatement of the premise, the channel-reduction clause narrowed to spin 2 since spins 0, 1/2 and 1 are derived",
+    2
    ]
   ],
-  "hash": "0947937c1e8e1506",
+  "hash": "6f95ef28b0759ce8",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "eaed93a453ec6554"
+   "statement": "788fddfc9659d22b"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "hawking.kms-restricts-invariant-subalgebras": {
   "assumes": [],
@@ -40218,7 +40243,7 @@
  "simulations.cluster-bound-two-dimensions": {
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2"
+   "dark-matter.r2-one-quantum-per-unit-ball@3"
   ],
   "credit": [
    [
@@ -40465,7 +40490,7 @@
  "simulations.imported-unit-ball-rule-family": {
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@2",
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
    "dark-matter.r3-one-cell-per-unshared-direction@1"
   ],
   "credit": [
@@ -43474,7 +43499,7 @@
  },
  "standard-model.hyp-s-slot-statistics": {
   "assumes": [
-   "standard-model.slot-module-hypothesis@4"
+   "standard-model.slot-module-hypothesis@5"
   ],
   "credit": [
    [
@@ -43486,18 +43511,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "note on clause (v) against the restated clause (f), the five-mode system taken with the Klein-twisted slot operators",
+    10
    ]
   ],
-  "hash": "d5bb15dbcaf14708",
+  "hash": "748b44178e9ae209",
   "ledger": null,
   "parts": {
    "checks": "67c376450db96675",
-   "proofs": "224ca99014a2775a",
+   "proofs": "c3d7616e77205cb4",
    "rest": "d3b65c89b700e77b",
-   "statement": "d2a8b5ce424bdf62"
+   "statement": "4f378998a1428437"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "standard-model.hypercharge-global-form-pair-counting-consistency": {
   "assumes": [],
@@ -44853,18 +44883,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "restatement of clause (f) as an instance of the signed-direction postulates (F2) and (F3)",
+    5
    ]
   ],
-  "hash": "aacd02925e359e4e",
+  "hash": "d1de827406e00014",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "d368f75be359b466"
+   "statement": "d973c256402d7169"
   },
   "status": "postulate",
-  "version": 4
+  "version": 5
  },
  "standard-model.space-symmetric-doublet-mass-forms-two": {
   "assumes": [],
@@ -47374,6 +47409,33 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free": {
+  "assumes": [
+   "dark-tower-matter.u-transposition-rule@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "87bd344127569e4a",
+  "ledger": null,
+  "parts": {
+   "checks": "c46c63d83dababd1",
+   "proofs": "a9e7de523edf482c",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2976c4c9c3521fa1"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.boundary-mode-first-law-of-entanglement": {
   "assumes": [],
   "credit": [
@@ -48169,7 +48231,7 @@
  },
  "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@1"
+   "hawking.joint-j3-s-wave-reduction@2"
   ],
   "credit": [
    [
@@ -48191,22 +48253,27 @@
     "Claude Opus 5.5",
     "notation: r - 2M renamed zeta",
     3
+   ],
+   [
+    "Claude Opus 5.5",
+    "note on the channel-reduction step, derived for spins 0, 1/2 and 1 and assumed through J3 only for spin 2",
+    4
    ]
   ],
-  "hash": "4879a8765786cd07",
+  "hash": "82b7ef31e2e7cd4d",
   "ledger": null,
   "parts": {
    "checks": "a1be04ca3a6a1861",
    "proofs": "d8ae046f30fca80c",
    "rest": "5ef59c08a022541a",
-   "statement": "9041a7c359c4137d"
+   "statement": "1deb7aa805549ffa"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@1"
+   "hawking.joint-j3-s-wave-reduction@2"
   ],
   "credit": [
    [
@@ -48248,18 +48315,23 @@
     "Claude Opus 5.5",
     "GA rewrite of (ii)'s affine-parameter statement (the ingoing velocity is D-parallel), Gamma^r_rr = 0 kept as the reading; new exact check",
     4
+   ],
+   [
+    "Claude Opus 5.5",
+    "note on the channel-reduction step, derived for spins 0, 1/2 and 1 and assumed through J3 only for spin 2",
+    5
    ]
   ],
-  "hash": "5a95fa866cc4dd65",
+  "hash": "17fa0c98a7479a4e",
   "ledger": null,
   "parts": {
    "checks": "700ba285a0b8c914",
    "proofs": "ea4d51233541549d",
    "rest": "5ef59c08a022541a",
-   "statement": "0b06bdbb7eb5ab7c"
+   "statement": "6963c70ede992266"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.collar-isotropy-selects-t-boost": {
   "assumes": [],
@@ -48922,6 +48994,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.d-term-level-free-at-fixed-n": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0a34ac71214c14d5",
+  "ledger": null,
+  "parts": {
+   "checks": "74f2cc457b603671",
+   "proofs": "b8dba5208d9741a3",
+   "rest": "d3b65c89b700e77b",
+   "statement": "47ccfa525bdc9f60"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.de-sitter-entropy-pi-n-squared": {
   "assumes": [],
@@ -49915,6 +50012,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.field-level-brst-of-the-two-doublets-and-the-thooft-feynman-gauge": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "3db7df418f2d5106",
+  "ledger": null,
+  "parts": {
+   "checks": "a2c1f1bed8cf9288",
+   "proofs": "3887a1bf9dd065ca",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2a83b1a4d2a072cb"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.field-space-premise-parallel-frozen-point": {
   "assumes": [],
   "credit": [
@@ -50509,6 +50631,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "3db49a8192a19b2b",
+  "ledger": null,
+  "parts": {
+   "checks": "7f7d2d7639344c6b",
+   "proofs": "8829fe32f1755e42",
+   "rest": "33009deb10105397",
+   "statement": "a75e48bec06efaa1"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state": {
   "assumes": [],
   "credit": [
@@ -50633,6 +50780,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.georgi-jarlskog-weight-free-on-the-stored-relations": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "4953d95a251aa032",
+  "ledger": null,
+  "parts": {
+   "checks": "4665b275811efb15",
+   "proofs": "2222c2f7620c9972",
+   "rest": "d3b65c89b700e77b",
+   "statement": "9f9b1f4388308c9f"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection": {
   "assumes": [],
@@ -50854,6 +51026,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.higgs-sector-brst-does-not-fix-the-breaking-pattern-of-two-doublets": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "646bbfef107c3a64",
+  "ledger": null,
+  "parts": {
+   "checks": "0f28be8bab859d0a",
+   "proofs": "cc37301c5b1da011",
+   "rest": "d3b65c89b700e77b",
+   "statement": "bdf7f323cd6df33f"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.hole-mass-is-ground-energy-label": {
   "assumes": [],
   "credit": [
@@ -50903,6 +51100,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "bb85badfeda62d29",
+  "ledger": null,
+  "parts": {
+   "checks": "d4b86a70c19c99be",
+   "proofs": "b59cdb4cc35eecb0",
+   "rest": "36880587349d3e5c",
+   "statement": "6719b95dab2f056e"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.hypothesis-u-readings-on-the-rung-coupling-line": {
   "assumes": [],
@@ -54328,6 +54550,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.joint-clifford-clause-is-an-instance-of-the-signed-direction-postulates": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "6c9675e52d47ebdb",
+  "ledger": null,
+  "parts": {
+   "checks": "1c7db0b7c2017513",
+   "proofs": "fe0820e747b6f5f7",
+   "rest": "d3b65c89b700e77b",
+   "statement": "713d508399ebd0d0"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
   "assumes": [],
   "credit": [
@@ -54838,6 +55085,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.koide-middle-mass-bound-closes-the-remaining-quark-dressing-class": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d8146b4ccbcfa126",
+  "ledger": null,
+  "parts": {
+   "checks": "963f9746d3a3832b",
+   "proofs": "5ebd9a8e2d863098",
+   "rest": "d3b65c89b700e77b",
+   "statement": "609931f8d45a4327"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields": {
   "assumes": [],
   "credit": [
@@ -54979,6 +55251,11 @@
     "Claude Opus 5.5",
     "consistency pass, formal now cites the imported Stiefel and Grassmannian Fact its proof uses",
     5
+   ],
+   [
+    "Claude Opus 5.5",
+    "lay and technical scope, the indefinite-side reading limited to dimension three",
+    6
    ]
   ],
   "hash": "fe40a7bd08c7368a",
@@ -54990,7 +55267,34 @@
    "statement": "2b727a7277362874"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
+ },
+ "synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height": {
+  "assumes": [
+   "sheaf.tameness@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "b9b2fbfcd951bf17",
+  "ledger": null,
+  "parts": {
+   "checks": "64b53cec5e92350d",
+   "proofs": "1891f9bbb4560ec2",
+   "rest": "8428bc93cb263500",
+   "statement": "a177cf0d20e00054"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.light-cone-koide-is-quarter-turn": {
   "assumes": [],
@@ -55118,6 +55422,34 @@
   },
   "status": "proved",
   "version": 5
+ },
+ "synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content": {
+  "assumes": [
+   "singularity.q-joint-quasi-freeness-s-wave@3",
+   "synthesis.window-reading-array-killing-energy@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "1913353d02fe4453",
+  "ledger": null,
+  "parts": {
+   "checks": "3a5b0c9f9ed6cfda",
+   "proofs": "42bcee65e2296649",
+   "rest": "d3b65c89b700e77b",
+   "statement": "f1f37c190d944054"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum": {
   "assumes": [],
@@ -55665,18 +55997,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "correction of the last sentence of (iv), which covers the class D2 > D3 > D1",
+    2
    ]
   ],
-  "hash": "ddc68c141a47c648",
+  "hash": "344a2b6074b2252e",
   "ledger": null,
   "parts": {
    "checks": "5ce8fc414c17d4b5",
    "proofs": "aa1f2b45e17f6955",
    "rest": "d3b65c89b700e77b",
-   "statement": "da3c5a81b63fc609"
+   "statement": "8b8b03ad6da93d2b"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.mass-squared-reading-needs-millions-of-face-pairs": {
   "assumes": [],
@@ -56165,6 +56502,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a3e91183e1c54a26",
+  "ledger": null,
+  "parts": {
+   "checks": "5f8ca89fbb7030c8",
+   "proofs": "e4d9156c5dfbe8b5",
+   "rest": "d3b65c89b700e77b",
+   "statement": "6d1667579a74e0a5"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law": {
   "assumes": [],
   "credit": [
@@ -56637,6 +56999,34 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays": {
+  "assumes": [
+   "singularity.q-joint-quasi-freeness-s-wave@3",
+   "synthesis.window-reading-array-killing-energy@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "25dbd7f5c7b7303e",
+  "ledger": null,
+  "parts": {
+   "checks": "afd92fc15dbedcf5",
+   "proofs": "3232bab009754660",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "fe84cbcab10e2177"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.operator-join-casimir-shifts": {
   "assumes": [],
@@ -58340,7 +58730,7 @@
  },
  "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": {
   "assumes": [
-   "synthesis.rung-unit-second-free-number@3"
+   "synthesis.rung-unit-second-free-number@4"
   ],
   "credit": [
    [
@@ -58569,18 +58959,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "note citing the model pair that leaves the D-term level free at fixed N",
+    4
    ]
   ],
-  "hash": "ada7701430b4bcb7",
+  "hash": "eaa64421bbfa994c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "6602487ba0978896",
-   "statement": "1e28ba8fb18e6846"
+   "statement": "e91c63d12c4ae846"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "synthesis.rung-unit-transverse-to-norm": {
   "assumes": [],
@@ -59075,7 +59470,7 @@
  },
  "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free": {
   "assumes": [
-   "standard-model.slot-module-hypothesis@4",
+   "standard-model.slot-module-hypothesis@5",
    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
   ],
   "credit": [
@@ -59590,6 +59985,35 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": {
+  "assumes": [
+   "singularity.c2-cell-density@4",
+   "singularity.q-joint-quasi-freeness-s-wave@3",
+   "synthesis.window-reading-array-killing-energy@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "81932a97320cbc06",
+  "ledger": null,
+  "parts": {
+   "checks": "00af9a29b3b1a18c",
+   "proofs": "7828e16f417ec224",
+   "rest": "d3b65c89b700e77b",
+   "statement": "8fa7793d674171f2"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state": {
   "assumes": [],
@@ -60224,6 +60648,33 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial": {
+  "assumes": [
+   "sheaf.tameness@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "28043518f87c0d4f",
+  "ledger": null,
+  "parts": {
+   "checks": "fc80a10dcc43c0f5",
+   "proofs": "a36cf800667de28a",
+   "rest": "8428bc93cb263500",
+   "statement": "dfeaa5a35baa951b"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses": {
   "assumes": [],

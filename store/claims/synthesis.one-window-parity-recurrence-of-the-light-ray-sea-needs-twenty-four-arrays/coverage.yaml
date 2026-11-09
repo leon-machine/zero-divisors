@@ -1,0 +1,30 @@
+functions:
+  check_one_window_flow_is_the_grading_on_every_window:
+    kind: sampled
+    clauses:
+    - "(i) e^{2 pi J H} = (-1)^M prod e_j f_j on windows L = 2, 4 from the stored factorisation; Gamma squares to 1, commutes with J, anticommutes with every v_j and w_j; on all occupation states H and Gamma act by h and (-1)^Q with h - Q/2 an integer, h >= Q^2/2 and h = 0 on the sea; the zero offset gives the identity"
+    omits: "windows L >= 6 and the infinite band, covered by the stored factorisation and identity cited in the proof"
+  check_window_reading_zero_is_minus_one_twenty_fourth_per_array:
+    kind: complete
+    clauses:
+    - "(ii) the finite part of the exponentially regulated tower is -B_2(a)/2 at five offsets; the symmetric sea at the half offset is -1/24 per array (units of kappa); the square identity B_2/2 + 1/24 = (delta - 1/2)^2/2 and equality with -1/24 only at 1/2; n arrays carry -n/24"
+    omits: "the identification of the symmetric ordering with the null ordering, which is the stored null-ordering result under the window reading"
+  check_joint_flow_is_the_parity_exactly_when_twenty_four_divides_the_array_count:
+    kind: complete
+    clauses:
+    - "(ii) e^{2 pi J/24} exact in Q(sqrt2, sqrt3): unit norm, sixth power J, twelfth -1, phase 1 for 1 <= n <= 96 exactly at multiples of 24; U^2 = 1 and U = +-Gamma exactly at multiples of 12; a generation's phase has order 3"
+    - "(iii) 16 n_g: n_g = 3, 6, 9, 12 up to 12; 15 n_g: n_g = 8, 16, 24 up to 24; at n_g = 3 with r singlets, r = 3, 27 up to 48"
+    omits: "that the phase commutes with the mode vectors, checked for J in the first function"
+  check_integer_weight_content_on_the_light_ray:
+    kind: complete
+    clauses:
+    - "(iv) zeta(-1, 1) = -1/12; the complex CCR zero point -B_2(delta)/2 and its identity with delta(1 - delta)/2 at five offsets, equal to -2/24 only at delta = 0; a real component -1/24; J^{4k} = 1 and J^2 != 1; for every c_B < 48 the solutions n_g <= 12 of 16 n_g + c_B = 0 mod 24 are exactly those with 8 | c_B and n_g = c_B/8 mod 3"
+    omits: "that -kappa/12 is the null-ordered value of a complex chiral boson, cited from memory in the proof"
+  check_two_models_of_the_cone_differ_on_the_condition:
+    kind: complete
+    clauses:
+    - "(v) the phase of U over Gamma in M_1 (sixteen arrays) is e^{4 pi J/3}, neither 1 nor -1, of order 3; in M_3 (forty-eight arrays) it is 1"
+    omits: "the audit of the cone's postulates and the slot-module premise for n copies, which are the stored generation-number result and the audit in the proof"
+untouched_premises:
+  singularity.q-joint-quasi-freeness-s-wave: "supplies the arrays and the one-period clause at the automorphism level; the checks compute the window flow and its phase directly"
+  synthesis.window-reading-array-killing-energy: "fixes the zero of each array's Killing energy (the -kappa/24 per array) that the phase uses; the checks take that constant as given and compute the phase"

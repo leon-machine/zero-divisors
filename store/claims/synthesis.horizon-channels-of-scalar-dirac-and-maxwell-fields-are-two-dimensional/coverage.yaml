@@ -1,0 +1,19 @@
+functions:
+  check_dirac_channel_reduction:
+    kind: sampled
+    clauses: ["(2) r f^{3/4} D(r^{-1} f^{-1/4} Phi) = A Phi + W K Phi for a generic second-order jet of Phi, at two points", "(2) the static field is torsion-free with the stored rotation-gauge values", "(2) the measure factor r^{-1} f^{+1/4} fails"]
+    omits: "checked at jet points where f is a fourth power; the general identity is the proof's computation of Gamma"
+  check_angular_operator_and_squared_channel:
+    kind: sampled
+    clauses: ["(2) gamma^0 gamma^1 squares to 1, anticommutes with gamma^0, gamma^1 and commutes with gamma^2, gamma^3", "(2) T~ Phi = gamma^0 gamma^1 (K Phi) gamma_0 is even for even Phi, while gamma^0 gamma^1 K Phi is odd", "(2) T~ commutes with A and with right multiplication by I sigma_3 and gamma_0, and T~^2 = K^2", "(2) the squared channel operator is d_t^2 - d_{r*}^2 + lambda^2 W^2 + lambda (d_{r*} W) [Phi -> gamma^0 Phi gamma_0], lambda = 1, -2, 3, and fails without the right factor", "(4) the free two-dimensional equation is solved by the right movers of the idempotent (1 + gamma^0 gamma^1)/2"]
+    omits: "the completeness of the eigenfunctions of T~ is the classical input (C1)"
+  check_scalar_channel_potential:
+    kind: sampled
+    clauses: ["(1) f r (D . D phi + mu^2 phi) / Y = d_t^2 u - d_{r*}^2 u + V u, for l = 1, 2 and mu^2 = 1/9"]
+  check_horizon_decay_orders:
+    kind: exact
+    clauses: ["(4) f'(2M) = 2 kappa", "(4) V/f regular and nonzero at the horizon for l(l+1) = 0, 2, 6, 12", "(4) (d_{r*} W)/sqrt f = (3M - r)/r^3, value 1/(8M^2) at the horizon", "(4) (f' - 2 kappa)/f = -(r + 2M)/(2 M r), regular at the horizon"]
+  check_maxwell_channels_both_parities:
+    kind: sampled
+    clauses: ["(3) for the odd-parity potential, D ^ F = 0, D . A = 0 and D . F = (1/f)(d_t^2 psi - d_{r*}^2 psi + f l(l+1) psi / r^2) A / psi, l = 1, 2, two jets of psi", "(3) D(IF) = -I DF"]
+    omits: "that every odd-parity potential has this form and that duality exchanges the parity sectors are the proof's"

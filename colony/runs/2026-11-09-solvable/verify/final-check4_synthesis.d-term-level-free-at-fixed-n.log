@@ -1,0 +1,13 @@
+I405  synthesis.d-term-level-free-at-fixed-n
+      families.why-kinematic-attacks-had-fail is declared and untouched, as expected: coverage.yaml: cited in (iii) for the reading of m/M_P under the rescaling; nothing to compute
+I405  synthesis.d-term-level-free-at-fixed-n
+      standard-model.trichotomy-what-kind-number is declared and untouched, as expected: coverage.yaml: cited in (iii) for what the kinematic rescaling relates; nothing to compute
+I405  synthesis.d-term-level-free-at-fixed-n
+      synthesis.einstein-route-makes-n-initial-data is declared and untouched, as expected: coverage.yaml: cited in (iii) for the register's branch; nothing to compute
+I405  synthesis.d-term-level-free-at-fixed-n
+      synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors is declared and untouched, as expected: coverage.yaml: cited in (iii); the level's placement on the hypercharge is the stored action's, not recomputed
+I405  synthesis.d-term-level-free-at-fixed-n
+      synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off is declared and untouched, as expected: coverage.yaml: cited in (iii); the matching through a free cut-off is argued from the stored formula
+
+synthesis.d-term-level-free-at-fixed-n: 0 error(s), 5 other finding(s); check result: pass
+EXIT 0

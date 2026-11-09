@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - rungs.imported-fock-representation-bogoliubov-group@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - rungs.hyp-r-rung-reading@2
   proof: proof-main.tex

@@ -1,7 +1,7 @@
 ---
 id: synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet
 kind: claim
-version: 4
+version: 5
 title: 'Late-time Hawking state from the ground state on the ingoing sheet'
 status: proved
 region: synthesis
@@ -41,6 +41,10 @@ credit:
   role: 'GA rewrite of (ii)''s affine-parameter statement (the ingoing velocity is D-parallel), Gamma^r_rr = 0 kept as the reading; new exact check'
   version: 4
   source: maintainer pass 2026-11-07 (decisions, second round)
+- name: Claude Opus 5.5
+  role: note on the channel-reduction step, derived for spins 0, 1/2 and 1 and assumed through J3 only for spin 2
+  version: 5
+  source: maintainer pass of 2026-11-09
 review: draft
 about:
 - obj.hawking.continuum-mode-space
@@ -57,7 +61,7 @@ derivations:
   - singularity.euclidean-section-period@6
   - synthesis.r-loc-needs-sheet-labelled-modes@4
   assumes:
-  - hawking.joint-j3-s-wave-reduction@1
+  - hawking.joint-j3-s-wave-reduction@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -83,6 +87,10 @@ lineage:
   - angle.imported-theorems-deliver-their-hypotheses
   - hawking.greybody-inheritance-under-interface-premise
 extraction:
+  maintainer_pass_2026_11_09:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Version 4 -> 5. Note added at the formal and technical levels after J3 was narrowed (hawking.joint-j3-s-wave-reduction version 2): the channel-reduction step is derived for spins 0, 1/2 and 1 by synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional (cited in the text; no uses edge added) and assumed through J3 only for spin 2; the current-boson identification stays J3''s for every field. Statement, premises and checks unchanged; the J3 pin is left for the repin.'
   maintainer_pass_decisions_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -179,10 +187,12 @@ the squared ratio of the two kernels being $1 + \tfrac16 S_{\xi}(U)(U - U')^{2} 
 \end{enumerate}
 \emph{Beyond one flat chart.} The Painlev\'e-Gullstrand chart covers both sides of $\mathcal{H}^{+}$, so (i) to (v) are statements on one flat chart with one gravitational field; the collapsing matter is a different gravitational field on the same background, joined to the Painlev\'e-Gullstrand field at the matter's surface (Birkhoff, literature), and only the late-time region outside the matter is used.
 
+\emph{Note (the channel-reduction step).} The step that reduces each $(\omega, \ell, m, s)$ channel of a massless field near the horizon to a two-dimensional mode is now derived for spins $0$, $\tfrac12$ and $1$ by Theorem \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional} and is assumed through J3 (\claimref{hawking.joint-j3-s-wave-reduction}, version 2) only for spin $2$; the identification of the current boson with these channels is assumed through J3 for every field. The statement and the premises are unchanged.
+
 ## technical
 The stored premise (N$_{+}$) asks for a ground state for the affine null translations along a horizon's generators, and the stored restriction theorem turns it into the Hawking temperature by cutting the generator at the bifurcation surface. For a hole formed by collapse the future horizon's generators have no past half, and the open problem asked for an Unruh-type condition in its place. The answer is that the same premise is to be posed on the other sheet. Through every point of the future horizon runs the ingoing null generator, which crosses the horizon from the exterior to the interior and so has two halves for every hole. The outgoing modes, the ones that reach infinity, are the field's data along that generator, parametrised by the Kruskal function $U$, and the hole's symmetry dilates $U$ at the surface-gravity rate. In the Painlev\'e-Gullstrand gauge of the store, which covers both sides of the horizon, $U = -e^{-\kappa t}(s - 1)e^{s^{2}/2 + s}$ with $s = \sqrt{r/2M}$, an exact smooth function changing sign on the horizon.
 
-Two lemmas carry the argument. First, for the series' weight-one-half fields the ground-state kernel is the same in every regular parameter up to a continuous remainder vanishing on the diagonal (a Schwarzian times the separation); so the class of short-distance-regular states, kernel plus a bounded remainder, is parametrisation-free. Second, since late Killing time is a dilation of $U$ towards zero, the late-time state of the outgoing modes is exactly the scaling limit of the state at the horizon, and for every state in the class that limit is the ground state. Restricted to the exterior half it is the continuum I-state at $\beta = 2\pi/\kappa$, by the stored theorem: the Hawking flux. The condition is therefore (N$_{+}$) on the ingoing sheet in its local form; it is implied by short-distance regularity across the horizon, and it is sufficient rather than necessary, since finite-rank changes of the symbol reach the same limit. The Boulware-type state, whose remainder is homogeneous of degree $-1$, is outside it. The outgoing sector is taken as one chiral field per light ray (the s-wave reduction premise), and the state is that of the near-horizon modes; carrying it to infinity is the interface premise and the greybody inheritance. Hartle-Hawking, Unruh and Boulware read as ground-state conditions on two sheets, one sheet, and the Killing flow of one half. The analytic core is standard (Fredenhagen and Haag); the store gains the condition in its own terms, the sheet reading, and the exact gauge form of the Kruskal functions.
+Two lemmas carry the argument. First, for the series' weight-one-half fields the ground-state kernel is the same in every regular parameter up to a continuous remainder vanishing on the diagonal (a Schwarzian times the separation); so the class of short-distance-regular states, kernel plus a bounded remainder, is parametrisation-free. Second, since late Killing time is a dilation of $U$ towards zero, the late-time state of the outgoing modes is exactly the scaling limit of the state at the horizon, and for every state in the class that limit is the ground state. Restricted to the exterior half it is the continuum I-state at $\beta = 2\pi/\kappa$, by the stored theorem: the Hawking flux. The condition is therefore (N$_{+}$) on the ingoing sheet in its local form; it is implied by short-distance regularity across the horizon, and it is sufficient rather than necessary, since finite-rank changes of the symbol reach the same limit. The Boulware-type state, whose remainder is homogeneous of degree $-1$, is outside it. The outgoing sector is taken as one chiral field per light ray (the s-wave reduction premise), and the state is that of the near-horizon modes; carrying it to infinity is the interface premise and the greybody inheritance. Hartle-Hawking, Unruh and Boulware read as ground-state conditions on two sheets, one sheet, and the Killing flow of one half. The analytic core is standard (Fredenhagen and Haag); the store gains the condition in its own terms, the sheet reading, and the exact gauge form of the Kruskal functions. The channel reduction it takes from J3 is now derived for scalar, Dirac and Maxwell fields and assumed through J3 only for gravitons.
 
 ## lay
 A black hole that forms from a collapsing star has no past horizon, so the series' rule for the temperature of an eternal black hole, which looks at both sides of a horizon's light rays, cannot be applied as it stands. This result finds the rule that does apply. Through every point of the horizon there is a second family of light rays, the ones falling in; those cross the horizon from outside to inside and so always have two halves. The radiation that escapes to infinity is carried by the field's values along those infalling rays, measured in a coordinate that the hole's own time flow squeezes towards the horizon. Waiting a long time is the same as looking at ever shorter distances from the horizon, and at short distances any field that is not singular at the horizon looks like its own vacuum. Cutting that vacuum at the horizon, by a result already in the series, gives a thermal state at Hawking's temperature. So the condition for a collapsing hole is the series' existing vacuum condition, applied to the infalling rays and only at short distances; it is enough for the thermal outcome, though not the only condition that gives it. One state that fails it is the one that would make the horizon a place of infinite energy. The result treats each light ray's field as a one-dimensional field, an assumption the series states separately.

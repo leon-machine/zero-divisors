@@ -27,7 +27,7 @@ derivations:
   - dark-matter.type-residue-what-each-tower-can@5
   - tower.rigidity-clock-frozen@5
   assumes:
-  - dark-matter.p3-nearest-dimension-representatives@2
+  - dark-matter.p3-nearest-dimension-representatives@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

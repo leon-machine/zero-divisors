@@ -38,7 +38,7 @@ derivations:
   assumes:
   - dark-matter.p1-single-frozen-point@1
   - dark-matter.p2-indifference@2
-  - dark-matter.p3-nearest-dimension-representatives@2
+  - dark-matter.p3-nearest-dimension-representatives@3
   - dark-matter.p4-democracy-asymmetry-over-oriented-towers@1
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex

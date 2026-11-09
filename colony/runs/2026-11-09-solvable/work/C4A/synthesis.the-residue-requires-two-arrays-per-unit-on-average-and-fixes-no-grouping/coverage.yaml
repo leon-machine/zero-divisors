@@ -1,0 +1,17 @@
+functions:
+  check_mean_two_arrays_is_what_the_residue_requires:
+    kind: complete
+    clauses:
+    - "(ii) over all 231 groupings of sixteen arrays by size, kappa_c = 1/(4 ln 2) exactly for the 22 with eight units, the mean being two; uniform units qualify only at u = 2"
+    - "(i) the groupings give different residues 1/(2 u-bar ln 2)"
+    omits: "which arrays go to which unit, which changes no entropy"
+  check_no_single_ladder_pair_and_no_zero_offset_union_carries_ln2:
+    kind: complete
+    clauses:
+    - "(ii) e^3 > 20 by partial sums, s(pi) < 21/100, ln 2 in (69/100, 70/100) by partial sums, so no ladder pair at the half offset carries ln 2; at offset 0, u S_0 > ln 2 for u = 1 to 8 from the stored lower bound"
+    omits: "the monotonicity of s in |x|, in the proof"
+  check_light_rays_are_arrays_over_content_not_registered_units:
+    kind: complete
+    clauses:
+    - "(iii) light rays 2/c and registered units 2/u in units of pi N^2/ln 2, units per light ray c/u, 8 n_g for the fermion content, 24 at n_g = 3"
+    omits: "none"

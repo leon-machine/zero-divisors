@@ -24,7 +24,7 @@ derivations:
   - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.ceiling-valued-inherited-success@5
   - dark-matter.orientation-arrow-seventeenth-refutation@10
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - dark-matter.hyp-u-equal-rank-one-eigenvalues@3
   - dark-matter.premise-cpt-covariance@3

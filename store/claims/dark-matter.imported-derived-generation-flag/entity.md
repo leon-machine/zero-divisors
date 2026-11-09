@@ -27,7 +27,7 @@ derivations:
   - correspondence.twistors-are-states-three-ladder-pairs@6
   - families.alignment-computed-thirteenth-refutation-democracy-one@4
   - standard-model.chirality-two-halves-spinor-module-conjugation@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

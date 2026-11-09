@@ -1,0 +1,22 @@
+functions:
+  check_lens_action_and_walls:
+    kind: sampled
+    clauses: ["(3) J = . B is orthogonal with J^2 = -1, a free Z_4 action, for m = 2, 3", "(3) c J = -J c, so c(x) embeds the dying line in T*M along the wall", "(3) the indefinite and definite cometrics are J-equivariant, det -t and t, signatures (1, 2m+1) and (2m+2, 0) for t > 0, corank one with radical c(x) at t = 0"]
+    omits: "sampled at rational points of the sphere's cone; that the walls are tame by Jacobi's formula is the proof's"
+  check_spin_lift_of_doubled_line:
+    kind: exact
+    clauses: ["(3) the rotor e1e2 squares to -1 and covers the half turn, the holonomy of L + L", "(3) under the rotor isomorphism e1e2 goes to the quarter turn, -e1e2 = (e1e2)^3 to its inverse"]
+  check_spin_class_of_doubled_line_on_lens_spaces:
+    kind: exact
+    clauses: ["(2) w(L + L) = (1 + x)^2 = 1 + x^2 (Whitney)", "(2) on BSpin(2): e = 2a, p1 = 4a^2, q1 = 2a^2", "(3) q1(L + L) = 2y^2 != 0 in Z_4 for m = 2, 3 and both spin structures, 0 for m = 1; p1 = 0", "(3) w = (1 + u)^{m+1} is 1 for m = 1, 3 and not for m = 2"]
+    omits: "the cohomology rings of lens spaces and the spin class are classical inputs cited from memory; the check does their arithmetic"
+  check_k_theory_cross_check:
+    kind: exact
+    clauses: ["remark: 2(eta^2 - 1) is not in the ideal for m = 3 and is for m = 1, 2"]
+    omits: "the K-theory ring of lens spaces is a classical input cited from memory"
+  check_quaternionic_odd_map_bounds_embedding_rank:
+    kind: sampled
+    clauses: ["(3) right multiplication by e2e3 is an orthogonal complex structure", "(3) R e2 R~ is odd with |R e2 R~|^2 = (R R~)^2, so e(L) <= 6 on L^7(4)"]
+untouched_premises:
+  sheaf.degeneration-sheaf: "used for the signature (p - 1, q) of the induced form in clause (1)'s argument, which is proof-only"
+  synthesis.lens-space-wall-rung-count-sees-the-integral-twist: "cited in (4) only for the consistency of the vanishing obstruction at m = 1 with its two-rung completion"

@@ -1,0 +1,28 @@
+functions:
+  check_operator_functions_of_the_majorana_element_give_only_the_ten:
+    kind: complete
+    clauses:
+    - "(i) T^2 = 0, (T^dag)^2 = 0, T T^dag T = T, T^dag T T^dag = T^dag and closure of products, so 1, T, T^dag, T T^dag, T^dag T span the generated algebra; w_4 times each of T, T^dag, T T^dag, T^dag T gives no form; v_4 T^dag T gives half the 10's neutrino entry and an antisymmetric part; the GJ form is not a multiple of the 10"
+    omits: "linearity over the five-element basis is used in the text, not iterated in the check"
+  check_weighting_of_the_pair_part_moves_the_lepton_quark_ratio:
+    kind: sampled
+    clauses:
+    - "(ii) w_4 (a + b P_4): quark a - b/32, lepton a + 3b/32, no antisymmetric part, ratio (32a + 3b)/(32a - b) at five weights including b = 0, a = 0 and b/a = 32/3"
+    - "(ii) P_4 commutes with B - L and the rung parity and not with the pair bracket (its full Pati-Salam type is the stored result)"
+    - "(ii) (a, b) = (v_d Y_kk, -32 w_d f_kk) realises the Clebsch down and lepton entries, two samples"
+    omits: "the Moebius bijection is proved in the text; the three-family coupling is checked family by family"
+  check_h_mu_fixes_every_stored_relation_and_moves_the_down_type_126:
+    kind: sampled
+    clauses:
+    - "(iii) M_u, M_nu, M_R, m_nu invariant; (EW) and m_t = 4 w_u f_33; (M_R)_33 = m_t v_R/(4 w_u); Sym(M_d - M_e) = 4 mu w_d f; antisymmetric parts unchanged; 10 rescaling fixes every Dirac matrix"
+    - "(iii) f-hat = f/f_33 and M_nu = M_u - m_t f-hat (diagonal model, no 120)"
+    omits: "two data instances (diagonal; off-diagonal f with a 120) and four values of mu; the chain, v_R, (H) and real breaking are argued in the text, not computed; the restoring k of the electroweak normalisation is shown to fix the Dirac matrices at k = 2, its existence is argued"
+  check_two_models_of_the_premises_differ_in_the_second_family_factor:
+    kind: complete
+    clauses:
+    - "(iv) diagonal model: factor 3 at w_d = 1/3, 2 at w_d = 1/5, 37/19 at w_d = 1/5 with v_d = 47/45 and the same sigma_1(M_d) = 10/3; same M_u, M_nu, M_R, m_nu; M_nu = diag(-2/5, -4, 0) (top reading of (U))"
+    - "(iv) S_3-invariant f: Sym(M_d - M_e) S_3-invariant with light-plane value 4 mu w_d alpha for four mu"
+    omits: "none for the stated models"
+untouched_premises:
+  standard-model.fits-record-level: "cited for the record-level remark of the conclusion (the fits' second-family 126 share), not computed"
+  synthesis.majorana-scale-free-on-pati-salam-route: "cited for the invariance of the chain and of v_R, which contain no Yukawa datum; argued in the text, not computed"

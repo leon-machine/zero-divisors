@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - standard-model.imported-clebsch-structure-seesaw@1
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - standard-model.premise-ew-equal-weight@1
   proof: proof-main.tex

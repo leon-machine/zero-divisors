@@ -26,7 +26,7 @@ derivations:
   - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - dark-matter.premise-cpt-covariance@3
   - dark-matter.premise-flag-as-datum@4

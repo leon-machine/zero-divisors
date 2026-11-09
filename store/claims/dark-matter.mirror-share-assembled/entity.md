@@ -33,8 +33,8 @@ derivations:
   - dark-matter.mode-counts-two-modules-which-one@6
   - dark-matter.population-count-one-share-half-percent@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
-  - dark-matter.stored-asymmetry-charge-not-number@9
-  - standard-model.hyp-s-slot-statistics@9
+  - dark-matter.stored-asymmetry-charge-not-number@10
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - dark-matter.p1-single-frozen-point@1
   - dark-matter.p2-indifference@2

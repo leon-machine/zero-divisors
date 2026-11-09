@@ -25,7 +25,7 @@ derivations:
   uses:
   - mass.mass-symplectic-area-two-twistor-formula@3
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: legacy

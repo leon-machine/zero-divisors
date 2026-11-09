@@ -26,7 +26,7 @@ derivations:
   - standard-model.direction-demanded-content-doublet-heavy@7
   - standard-model.grip-mass-two-rung-module@7
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

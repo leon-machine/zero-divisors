@@ -24,7 +24,7 @@ derivations:
   - standard-model.chain@8
   - standard-model.imported-clebsch-structure-seesaw@1
   - standard-model.matching-traces@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

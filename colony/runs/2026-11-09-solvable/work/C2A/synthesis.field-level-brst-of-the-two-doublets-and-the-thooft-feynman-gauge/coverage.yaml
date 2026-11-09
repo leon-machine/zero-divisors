@@ -1,0 +1,27 @@
+functions:
+  check_doublets_as_ga_quaternions_carry_the_gauge_algebra:
+    kind: complete
+    clauses:
+    - "(i) the twelve 8 x 8 matrices from GA products: homomorphism for the stored structure constants and antisymmetry, for y = 1/2 and y = 1/3; hypercharge on the left gives four homomorphism failures"
+    omits: "other y, covered by the proof (T_12 is central)"
+  check_scalar_brst_is_nilpotent_for_every_vacuum:
+    kind: sampled
+    clauses:
+    - "(ii) s^2 = 0 on the 40 generators h^i_J with |J| <= 1 (formal vacuum, polynomial in g) and the 72 underived gauge, ghost and antighost generators; y = 1/3 on the scalars; the opposite sign fails on all 40"
+    omits: "higher derivatives, which follow from [s, d_mu] = 0 (proof)"
+  check_covariant_derivative_kinetic_term_and_invariants:
+    kind: complete
+    clauses:
+    - "(iii) s D_mu phi = -g rho(c) D_mu phi on all 32 components; s of the kinetic term and of the four quadratic invariants is zero; <phi_1, phi_2 e_01> and <phi_1, e_12 phi_2> are not s-closed"
+    omits: "higher polynomials in the invariants, which follow by the derivation property"
+  check_thooft_fermion_is_exact_and_cancels_the_mixing:
+    kind: exact
+    clauses:
+    - "(iv) s Psi equals the stated expansion term by term and s(s Psi) = 0 (formal vacuum, formal xi); the A-h bilinear of the kinetic plus gauge-fixing Lagrangian equals g d_mu(A^a_mu <rho_a v, h>) for xi = 1, 3 (256 monomials); its Euler derivatives vanish; with the opposite sign the remainder has a nonzero Euler derivative"
+    omits: "other rational xi, covered by the proof (the identity is linear in xi after elimination)"
+  check_thooft_feynman_masses_for_the_neutral_aligned_vacuum:
+    kind: exact
+    clauses:
+    - "(v) at v = (1, 0, 0, 0), (2, 0, 0, 0), y = 1/2, xi = 1: the vector, ghost and Goldstone mass matrices read off the computed Lagrangian equal g^2 Gamma, xi g^2 Gamma and xi g^2 W kappa^{-1} W^T; rank 3, nine massless; the characteristic polynomials t^9 (t - 5)^2 (t - 20/3) and t^5 (t - 5)^2 (t - 20/3)"
+    omits: "general v_1, v_2, y, given by the 2 x 2 computation of the proof"
+untouched_premises: {}

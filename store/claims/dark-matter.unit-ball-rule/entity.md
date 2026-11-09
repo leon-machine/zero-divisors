@@ -27,7 +27,7 @@ derivations:
   - dark-matter.towers-are-residues-single-clock-filter@5
   assumes:
   - dark-matter.r1-equal-mass-per-quantum@1
-  - dark-matter.r2-one-quantum-per-unit-ball@2
+  - dark-matter.r2-one-quantum-per-unit-ball@3
   - dark-matter.r3-one-cell-per-unshared-direction@1
   proof: proof-main.tex
 checked_by:

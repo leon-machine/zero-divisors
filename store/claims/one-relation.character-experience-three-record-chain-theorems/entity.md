@@ -27,7 +27,7 @@ derivations:
   uses:
   - one-relation.imported-flag-arrow-superselection@7
   - one-relation.imported-single-mode-thermality-modular-period@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - one-relation.recording-irreversible-stated-so-it-can@1
   - one-relation.supervenience-stated-so-it-can-be@1

@@ -27,7 +27,7 @@ derivations:
   - standard-model.imported-cauchy-decomposition-exterior-power@1
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
   - standard-model.mass-bracket-charged-singlet@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: legacy

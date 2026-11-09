@@ -35,7 +35,7 @@ derivations:
   - one-relation.odd-square-roots-chiral-phase@5
   - one-relation.one-datum-not-two-imaginary-unit@4
   - one-relation.vector-derivative-covariant-first-order-operator@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - std-algebra.vector-squares@1
   proof: proof-main.tex
 checked_by:
