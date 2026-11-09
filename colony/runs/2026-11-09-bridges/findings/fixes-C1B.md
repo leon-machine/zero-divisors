@@ -45,4 +45,49 @@ Bridge links.
 
 runcheck: all five functions pass. Style scan (em dash, banned words): clean.
 
+# Fix round, part two
+
+Proposal: synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac
+(referee R1, SOUND WITH FIXES). Id unchanged. Edited in place: entity.md, proof-main.tex, check.py, coverage.yaml.
+
+1. Title: "Mass terms as pair terms on four tower modes: the charge separating Majorana from Dirac" (87
+   characters; four-mode scope, no "only"). Clause (iii) now says S and D also differ by array structure and by
+   rank (S alone gives a mass to two of the four modes, D to all four) and are not equivalent under
+   automorphisms preserving the mode space; check adds the two rank statements.
+2. Clause (ii): "among the six charges listed"; added the general statement that a diagonal charge commutes with
+   D exactly on the family q = (alpha, beta, -beta, -alpha) and S then has charge alpha + beta (proof line and a
+   check on seven sample charges, four on the family and three off it).
+3. Gap theorem: the sentence now says an explicit bilinear term has vanishing compression on the fixed-charge
+   sectors and is not part of H_4; that vanishing compression is not absence of effect (H_4 plus a mass term
+   mixes sectors); and that clause (iii) of the gap theorem ties the gap to the mean-field mass of the paired
+   array, a self pair term in this vocabulary, with nothing stored identifying that array with the neutral
+   singlet or G with a scale. "Sees no mass term at all", "is not the Majorana scale" and "bears on neither"
+   are gone from note, technical and reading.
+4. Clause (i): the stored one-array block is itself a self pair term (L charge -2, N_a - N_c charge 0), with a
+   check; and "every mass term is a pair term" beyond the stored block is flagged as the definition used.
+5. Extraction note: cross-reference by name to
+   synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element (the opposite number is the
+   mode-level image of B - L; the Z4 parity of T is its reduction modulo 4). Plain text, no claimref (a proposal
+   cannot cite a proposal); maintainer to convert once both are stored.
+6. One-liner: "differs, among the block's charges, by its charge 2 ... (and by rank)".
+
+Bridge link B1: folded into the reading (argued) and the note: every mass form on the sixteen has odd Clifford
+grade, so the row "N: -2 on both" corresponds to the order-four element, and the row "L" to that element times
+the centre of su(2)_L, under which a Dirac (doublet) form is even and T stays odd; the charge-dependence of
+(iii) gets the invariant form "class of the order-four element modulo the unbroken gauge group". Labelled
+argued; nothing about the sixteen is computed in this proposal's check (it is a four-mode check), and the
+order-four element is not a stored entity.
+
+K != 0 extension (C1A's): ADDED as part of clause (iv) after verifying it myself, by a route that does not use
+C1A's script: ad_N is +1 on creators and -1 on annihilators, so ad_H has diagonal blocks K, -K and off-diagonal
+blocks -Omega, Omega; the cross terms cancel in the square and ad_H^2 = K^2 - Omega^2. Hence
+(ad^2 - K^2)^2 - (M^2 + 2m^2)(ad^2 - K^2) + m^4 = 0, mode energies sqrt(K^2 + x^2). Check added on all eight
+mode operators at fifteen rational (K, m, M). I did not open work/C1A/x4.py. Clause (iv) is now "proved" without
+the K = 0 restriction; the credit sentence for C1A's first record is in the note without agent names.
+
+runcheck: all four functions pass. Style scan clean.
+
+For Leon (from the referee): whether the stored gap theorem should carry a note that its clause (iii) is a
+statement about a self pair term.
+
 check4: pending (orchestrator)
