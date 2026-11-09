@@ -106,3 +106,36 @@ xi = 1/6 by its spectrum; rung doublets xi = 0 at tree level in the store; the t
 each against the stored entities at their versions; the one-field arithmetic (index 3 - sqrt(1 + 4(n_g - 3)/n_h); first
 hit n_h = 14, n_g = 32) recomputed and presented as a tested hypothesis, not asserted; "no single coupling serves" in the
 title: is it a theorem or a reading; numerology risk: the answer three was known in advance.
+
+## Referee R3: the two added targets
+- synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components
+- synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
+- synthesis.eviction-keeps-one-replica-saddle (a corrected version 4 of a stored entity: compare with store/claims/<id>)
+- synthesis.eviction-keeps-one-of-catalan-many-replica-saddles (corrected version 4 likewise)
+
+Specific points to settle.
+No odd map: verify the higher diagonal Delta_1 as a chain homotopy mod 2 between the stored diagonal and its transpose
+by your own code (for which degrees and orders is it verified; is a general-order statement claimed); the fibre cocycle
+theta is a cocycle and restricts to the fibre generator; the identity theta cup_1 theta = p^*(eps_5) + delta(beta) mod 2;
+that neither side is a coboundary; the controls (obstruction present at orders 4, 12; absent at 8, 16; primary at 2, 6).
+The background: is Steenrod's theorem (S) stated exactly and is it all that is used beyond the stored (G) and the
+product-complex statement (P); is "odd maps are sections of the sphere bundle" proved; does the passage from "no section
+carrying the homotopies" to "no continuous odd map" use exactly (S); is "proved given (G), (P), (S)" plain at title,
+one-liner and lay level; is the comparison with the three classical theories it replaces stated without overclaiming
+(one theorem in place of three theories, not a subset). Check Steenrod's cup-i construction on the web if you can.
+Mode split: is the blade projection the trace-preserving conditional expectation and positive (prove or counterexample);
+the Klein twist to commuting subalgebras, uniqueness up to sign; "d_B E_A is the partial trace for every element; d_A E_B
+only on even elements" (recompute on a two-mode example, including the stated non-even pure state with purities 1 and
+1/2); the sector mean purity and moment formula are a sibling's results (named, not cited): is anything re-proved that
+should be cited, and is the short lemma correct; the sector mean entropy sum_{k=n/2+1}^{mn/2} 1/k - (m-2)/(2n) (recompute
+at m = n = 2: 1/2 against Page's 1/3; and one larger case by direct integration or enumeration), its bounds, and the
+background it rests on (labelled); the literature cited from memory (Bianchi, Hackl, Kieburg, Rigol, Vidmar 2022 and
+others): check on the web whether the sector mean entropy is already published and say so. The fate table of stored
+results: verify each row against the stored entity at its current version, in particular the one stored bound said to
+fail on a sector (the lower bound (m-1)/(2n) at m = 2).
+The two corrected eviction entities: diff each against its stored version: is every stored file kept, is every change
+either the split wording or the sector column, are the abstract tensor-product values kept beside the sector values, is
+any stored clause weakened without saying so (the Catalan "lies strictly between" is now "verified for n = 2, 3, 4 and
+d = 2, 4, 8": is that the true status of the stored version too), are leading terms unchanged, the 4^g genus weights
+recomputed for n = 3, 4 (and the genus-one count 420 at n = 6), amendments entries present and accurate, removed
+references to the retired Haar mean-purity import consistent.
