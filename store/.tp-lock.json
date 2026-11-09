@@ -49458,6 +49458,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.down-type-126-weight-registered-free-input": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "01e17c7280026762",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "831134bad56634a9"
+  },
+  "status": "postulate",
+  "version": 1
+ },
  "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
   "assumes": [],
   "credit": [

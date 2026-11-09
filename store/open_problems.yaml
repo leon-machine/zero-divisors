@@ -3146,7 +3146,9 @@
     the chain) and moves $\mathrm{Sym}(M_{d} - M_{e})$ by $\mu$, with models giving the factors $3$, $2$ and
     $37/19$ (\claimref{synthesis.georgi-jarlskog-weight-free-on-the-stored-relations}). So the third attack
     item is done, and the second family''s factor $3$ is an input of the record. Unlike the Majorana scaling
-    $f \mapsto \lambda f$, $w \mapsto w/\lambda$ above, the scaling of $w_{d}$ alone moves $w_{d}f$.'
+    $f \mapsto \lambda f$, $w \mapsto w/\lambda$ above, the scaling of $w_{d}$ alone moves $w_{d}f$.
+    The weight is registered as a free input of the series by Leon''s decision of 9 November
+    (\claimref{synthesis.down-type-126-weight-registered-free-input}).'
   attack:
   - Fix the weight of the $(15,1,1)$ projection of $TT^{\dagger}$ relative to the rung vector's $10$ term from one potential
     along the Majorana element, or from Pati-Salam invariance allowing one coupling per component (argued, not checked);

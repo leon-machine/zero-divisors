@@ -35317,6 +35317,13 @@
 }
 ]
 },
+"synthesis.down-type-126-weight-registered-free-input": {
+"failed": false,
+"findings": [],
+"key": "8ce72ac3c0137fa5",
+"result": "none",
+"runs": []
+},
 "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
 "failed": false,
 "findings": [],
