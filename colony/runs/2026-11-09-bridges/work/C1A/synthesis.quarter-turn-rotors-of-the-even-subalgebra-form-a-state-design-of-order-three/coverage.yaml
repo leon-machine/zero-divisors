@@ -1,0 +1,17 @@
+functions:
+  check_group_is_finite_and_transitive_on_classes_and_commuting_pairs:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "Cl(1,3), Cl(3,1), Cl(6,0), Cl(7,1): the pseudoscalar squares to -1 and commutes with the units; each generator acts as the signed transvection; one orbit on nonzero classes and one on ordered commuting pairs; the count of commuting pairs with a given product; group orders 24, 24, 11520 (the order in Cl(7,1) is not computed); transitivity for every N is the proof's transvection argument"
+  check_two_identities_of_a_state:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "a blade state and one generic rational state in each of Cl(1,3), Cl(3,1), Cl(6,0); the identities for every state are the proof's two coefficient comparisons"
+  check_moments_to_order_three_equal_the_invariant_ones:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "full group averages in Cl(1,3) and Cl(6,0) on a blade state and a generic rational state: all first and second moments, and third moments on every ordered pair with its product class and on three further families of triples (not all 3375 triples in Cl(6,0)); each value is also computed from the permutation formula of the imported Fact; the statement for every N and every triple is the proof"
+  check_mean_purity_of_a_matrix_factor_is_the_imported_value:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "the closed forms for m, n powers of two up to 64; the group average of the purity of one two-dimensional factor in Cl(6,0) on a generic state; the identification of P_W with the purity of the reduced state is the proof's"
