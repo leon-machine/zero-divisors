@@ -1,0 +1,140 @@
+{
+ "front_matter": {
+  "id": "synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height",
+  "kind": "claim",
+  "version": 2,
+  "title": "Lens-space walls need more rungs than the mod-2 height, without bound",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "walls",
+  "tags": [
+   "degenerate-algebras",
+   "tameness",
+   "hyperbolic-plane",
+   "no-go"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "2026-11-09-solvable"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "run 2026-11-09-solvable"
+   },
+   {
+    "name": "Claude Fable 5.2",
+    "role": "restatement, the K-ring hypothesis (L2) and the Steenrod-square hypothesis (L3) replaced by citations of the stored cohomology theorem, the result left conditional on the lambda-operations (L1)",
+    "version": 2,
+    "source": "maintainer pass of 2026-11-09"
+   }
+  ],
+  "review": "draft",
+  "about": [
+   "obj.sheaf.collar-data-coupling"
+  ],
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "synthesis.wall-rung-count-is-height-of-dying-line-class@2",
+     "synthesis.lens-space-wall-rung-count-sees-the-integral-twist@6",
+     "sheaf.degeneration-sheaf@6",
+     "sheaf.imported-real-line-bundles@1",
+     "synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1"
+    ],
+    "assumes": [
+     "sheaf.tameness@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::check_lambda_series_forces_power_of_two_multiple"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_k_ring_order_of_dying_line_on_lens_spaces"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_gaussian_bound_on_powers"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_lens_walls_exist_with_both_sides"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "lineage": {
+   "motivated_by": [
+    "sheaf.wall-class",
+    "synthesis.wall-rung-count-is-height-of-dying-line-class",
+    "synthesis.lens-space-wall-rung-count-sees-the-integral-twist"
+   ]
+  },
+  "extraction": {
+   "maintainer_pass": {
+    "by": "maintainer-2026-11-09",
+    "date": "2026-11-09",
+    "note": "Cross-reference: the intended citation of the companion spin-class result is now a plain cross-reference to its stored id (extraction note only); statement unchanged."
+   },
+   "maintainer_pass_2026_11_09b": {
+    "by": "maintainer-2026-11-09",
+    "date": "2026-11-09",
+    "note": "Version 1 -> 2 (decisions of 9 November 2026): restated, the K-ring of the lens spaces (L2) is no longer cited from memory but is clause (6) of synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure (new uses edge; a stored theorem given the imported Atiyah-Hirzebruch filtration), and the Steenrod-square hypothesis (L3) is dropped, x^2 = 0 being its clause (3) computed directly; the result stays conditional on the lambda-operations (L1), which clause (1) uses; bounds, proof steps and check are unchanged."
+   },
+   "open_problem": "op.wall-class-invariant",
+   "note": "Attack item 1 of op.wall-class-invariant (indefinite sides, walls of dimension at least four). The obstruction found is stable: it does not come from the failure of the stable-range step of the lens-space proof but from the complex K-theory class of the doubled dying line, which the mod-2 class x does not see. On the lead that Adams' theorem on RP^n would separate ht, k and e: on RP^n the only nontrivial line is the tautological one, where ht(x) = e(L) = n + 1, so k = n + 1 on every side and Adams' 2^phi(n) (which concerns multiples mL) never enters; Adams-type input enters instead through the order of L - 1 in K-theory, on lens spaces. Of the classical inputs (L1) to (L3), cited from memory at version 1, two are now taken from the store (version 2). The K-ring of the lens space, K(S^{2n+1}/Z_4) = Z[chi]/(chi^4 - 1, (chi - 1)^{n+1}) (L2), is clause (6) of synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure, a stored theorem given the imported Atiyah-Hirzebruch filtration (literature for the ring, from memory: M. F. Atiyah, K-Theory, Benjamin 1967; M. F. Atiyah, Characters and cohomology of finite groups, Publ. Math. IHES 9 (1961); T. Kambe, J. Math. Soc. Japan 18 (1966) 135). The Bockstein fact Sq^1 = 0 on classes that lift to Z_4 (L3) is no longer used: x^2 = 0 is clause (3) of that theorem, computed directly from the cell structure. What remains cited from memory and not in the store is (L1), the lambda-operations on K-theory (Atiyah, K-Theory), which clause (1) uses and on which every clause is conditional; deriving them is an open item. Not claimed: the exact rung count of any lens-space wall of dimension at least seven (only lower bounds, against the parent's upper bound e(L) <= dim + 1); the general order formula 2^{floor((n+1)/2)} beyond n = 8, which is computed, not proved, there; anything on L^5(4), where the complex K-class gives no obstruction (a real or spin invariant might). The companion result synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial proves k >= 3 on L^5(4) and L^7(4) by the spin class q1, so the failure of k = ht on indefinite sides starts in dimension five, and builds walls of physical type (1, 2n+1) for every n; this result owns the general K obstruction and the unbounded excess. Transport-absent: the result is bundle topology of the stored wall setting."
+  },
+  "outside_ga": {
+   "kind": "other",
+   "why": "Clauses (1) and (2) compute in the complex K-ring of the wall, a ring of stable classes of complex vector bundles with its lambda-operations; the lambda-operations are taken from the literature as the explicit hypothesis (L1) of the statement (cited from memory, not in the store) and the K-ring of the lens spaces from the stored cohomology theorem. The complex structure of the doubled dying line is the unit bivector of each fibre plane of L + L, as in the parent lens-space result; the K-ring itself and the ring map to the Gaussian integers (written with the GA unit I = e1e2, I^2 = -1) are not geometric-algebra statements."
+  }
+ },
+ "levels": {
+  "formal": "Let $(M, G)$ be a tame corank-one degeneration (\\claimref{sheaf.tameness}) with compact wall $\\Sig$, physical side $\\Mp$ of any signature $(p,q)$, $p \\geq 1$, dying line $\\shL$, $x := w_1(\\shL)$, and $k(\\Sig)$ the least number of rungs of a completion in the sense of \\claimref{synthesis.wall-rung-count-is-height-of-dying-line-class}. Let $\\xi \\in K(\\Sig)$ be the class of the complexification of $\\shL$: the plane bundle $\\shL \\oplus \\shL$ with the unit bivector of each fibre plane as complex structure. Given the classical fact (L1), cited from memory and not in the store: (L1) complex K-theory $K(X)$ of a finite complex is a commutative ring with lambda-operations, $\\lambda_t$ additive-to-multiplicative, $\\lambda_t(\\ell) = 1 + \\ell t$ on line bundles and $\\lambda^{j}(E) = 0$ for $j > \\operatorname{rank} E$; and with (L2) $K(L^{2n+1}(4)) = \\Z[\\chi]/(\\chi^{4} - 1, (\\chi - 1)^{n+1})$, $\\chi^{e}$ the flat line on which the generator acts by $\\chi^{e}$, supplied by clause (6) of Theorem \\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure} (proved there given the imported Atiyah-Hirzebruch filtration and its stated background of cellular cohomology), and the former (L3) on $Sq^{1}$ replaced by clause (3) of the same theorem ($x^{2} = 0$, computed directly); the following hold.\n\\begin{enumerate}\n\\item \\emph{(A stable obstruction on every side.)} If a $k$-rung completion exists, then $2^{k-1}(1 - \\xi) = 0$ in $K(\\Sig)$. Hence $k(\\Sig) \\geq 1 + \\log_{2} \\operatorname{ord}(1 - \\xi)$, whatever the signature of the physical side.\n\\item \\emph{(Lens-space walls.)} Let $\\Sig = L^{2n+1}(4) = S^{2n+1}/\\mathbb{Z}_{4}$, the generator acting by a complex structure, and $x \\neq 0$. Then $x^{2} = 0$ (clause (3) of the cited theorem), so $\\operatorname{ht}(x) = 2$, in every dimension; with $K(\\Sig)$ as in (L2) and $\\xi = \\chi^{2}$, the order of $1 - \\xi$ is at least $2^{\\lfloor n/2 \\rfloor}$ for every $n$ and equals $2^{\\lfloor (n+1)/2 \\rfloor}$ for $1 \\leq n \\leq 8$. So on every side\n\\[\nk(\\Sig) \\;\\geq\\; 1 + \\lfloor n/2 \\rfloor \\quad (\\text{all } n), \\qquad k(\\Sig) \\;\\geq\\; 1 + \\lfloor (n+1)/2 \\rfloor \\quad (1 \\leq n \\leq 8),\n\\]\nfor instance $k \\geq 3$ on $L^{7}(4)$, $k \\geq 4$ on $L^{11}(4)$ and $k \\geq 5$ on $L^{15}(4)$, while $\\operatorname{ht}(x) = 2$. At $n = 1$ the bound is $2$, consistent with the stored two-rung completion of the $L(4,1)$ wall with an indefinite side (\\claimref{synthesis.lens-space-wall-rung-count-sees-the-integral-twist}).\n\\item \\emph{(The walls exist, with either side.)} For $n$ odd, $\\Sig \\times \\R$ carries tame walls with cross-section $L^{2n+1}(4)$, dying line $\\shL$ with $x \\neq 0$, and physical side of signature $(2n+1, 1)$ (one negative direction) or $(2n+2, 0)$. The obstruction of (1) and (2) holds on every side, including the physical type $(1, 2n+1)$, but the walls built here have one negative direction, not that type. On a definite side $k(\\Sig) = e(\\shL)$: with $N(\\overline G) = 0$, clause (1) of the parent gives $\\shL \\oplus N \\cong \\underline{\\R}^{k}$, so $k \\geq e(\\shL)$, and clause (2) gives $k \\leq e(\\shL)$.\n\\item \\emph{(Consequence for the open question.)} On the walls of (3) with cross-section $L^{4r-1}(4)$, $r \\geq 2$, and the indefinite side $(4r-1, 1)$, $k(\\Sig) = \\operatorname{ht}(x)$ fails, and no function of $\\operatorname{ht}(x)$ bounds $k(\\Sig)$: along $L^{4r-1}(4)$ the class $x$ has height $2$, $\\beta x$ has order $2$ and $(\\beta x)^{2} = 0$, while $k(\\Sig) \\geq r$ grows without bound. The excess over $\\operatorname{ht}(x)$ is a stable K-theoretic datum, present on definite and indefinite sides alike, not a failure of the stable range.\n\\end{enumerate}\nEvery clause is conditional on (L1), the lambda-operations, which is not derived in the store; clauses (2) and (4) rest in addition on the cited cohomology theorem, and through it on the imported Atiyah-Hirzebruch filtration and on that theorem's stated background.",
+  "technical": "The parent claim bounds the rung count of a tame wall below by the height of the mod-2 class of the dying line and above by the least rank of a trivial bundle containing it, and its necessity clause says more: $k$ rungs give a bundle $N$ of rank $k-1$ with $N(\\overline G) \\oplus \\shL \\oplus N \\cong N(\\overline G) \\oplus \\underline{\\R}^{k}$. Complexifying and passing to K-theory removes $N(\\overline G)$, so the class of $N$ is $k - \\xi$, and an actual bundle of rank $k-1$ has vanishing exterior powers above $k-1$; the coefficient of $t^{k}$ in $(1+t)^{k}(1+\\xi t)^{-1}$ is $(1-\\xi)^{k} = 2^{k-1}(1-\\xi)$ (as $\\xi^{2} = 1$), so this must vanish. That is an obstruction on every side, independent of the stable-range step, and it sees what $x$ cannot: on the lens spaces $L^{2n+1}(4)$ the class $x$ always squares to zero, but the order of $1 - \\xi$ in the K-ring, which the stored cohomology theorem (\\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure}) derives from the Atiyah-Hirzebruch filtration, grows with $n$. A ring map to the Gaussian integers modulo a power of $1 + I$ (with $I$ the GA unit $e_1e_2$) sends $1 - \\xi$ to $2$ and gives the bound $k \\geq 1 + \\lfloor n/2 \\rfloor$ in every dimension; an exact lattice computation gives the sharper $1 + \\lfloor (n+1)/2 \\rfloor$ up to $n = 8$, which is $3$ already on $L^{7}(4)$.\n\nThe walls are explicit: on the unit sphere of $\\HH^{r}$, with the $\\mathbb{Z}_{4}$ generated by left multiplication by the rotor bivector $B = e_2e_3$, left multiplication by $e_3e_1$, which anticommutes with $B$, is a unit tangent field that changes sign under the generator, so its span descends to the twisted line inside $T^*\\Sig$; collapsing the metric along it, with a time direction of either sign, gives tame walls with a definite side or an indefinite side with one negative direction. On $L(4,1)$ the bound is $2$, matching the stored completion; complex K-theory says nothing on $L^{5}(4)$, and on the walls built here the obstruction first bites in dimension seven. What this result adds to the first attack item is unboundedness: on these walls the rung count with an indefinite side is not the mod-2 height and is not bounded by any function of it. All of this assumes the tame-wall setting of the parent claim and the lambda-operations of K-theory (L1), cited from memory; the K-ring of the lens spaces and the vanishing of $x^{2}$ are taken from the stored cohomology theorem.",
+  "lay": "At a wall where the geometry changes signature in the well-behaved way the series assumes, an earlier result counted the extra pairs of directions needed to repair the wall: at least the number of times the twist of the dying direction can be multiplied by itself before it vanishes, and on one small three-dimensional example exactly that many. This result shows that in higher dimensions the count can be much larger. On a family of walls shaped like lens spaces the twist always vanishes after two multiplications, yet the repair needs at least three extra pairs in seven dimensions, four in eleven, five in fifteen, and more without limit as the dimension grows. The extra cost is invisible to the usual mod-2 bookkeeping and is read off from the K-theory of the wall, an algebra of bundles; it applies whatever the signature on the physical side.",
+  "one-liner": "Assuming the tameness hypotheses and the lambda-operations of K-theory (cited from memory; the K-ring of the lens spaces is a stored theorem given the imported Atiyah-Hirzebruch filtration), a $k$-rung completion forces $2^{k-1}(1 - \\xi) = 0$ in the K-theory of the wall ($\\xi$ the complexified dying line), on every side; on lens-space walls $L^{2n+1}(4)$, where $\\operatorname{ht}(w_1\\shL) = 2$, this gives $k \\geq 1 + \\lfloor n/2 \\rfloor$ (and $k \\geq 3$ in dimension seven), so the rung count is not bounded by the mod-2 height."
+ },
+ "proofs": {
+  "main": "\\emph{Setting.} Throughout, $(M,G)$ satisfies (T1) to (T3) of \\claimref{sheaf.tameness}, with the definitions of \\claimref{synthesis.wall-rung-count-is-height-of-dying-line-class}: a $k$-rung completion is a smooth symmetric form $h$ on $T_k = T^*M \\oplus \\underline{\\R}^{2k}$ over $\\Mp$, nondegenerate on $\\Mp$ including $\\Sig$, with $h|_{T^*M} = G$ along $\\Sig$ and $h = G \\perp H_k$ outside a collar. $N(\\cdot)$ denotes a maximal negative subbundle and $\\overline G$ the induced form on $T^*M|_\\Sig/\\shL$ (\\claimref{sheaf.degeneration-sheaf}). Line bundles with equal $w_1$ are isomorphic and $w$ is multiplicative (Fact \\claimref{sheaf.imported-real-line-bundles}).\n\n\\emph{Inputs.} (K1) is the hypothesis (L1) of the statement, cited from memory and not in the store. (K2) is (L2), which is now clause (6) of Theorem \\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure}, proved there given the imported Atiyah-Hirzebruch filtration; the route recorded below is the literature's, kept for reference and not used. (K3) was the hypothesis (L3) of version 1 and is no longer used: $x^{2} = 0$ is clause (3) of the same theorem. That theorem is stated for the quarter turn $J$ in every coordinate plane; any orthogonal complex structure $g$ on $\\R^{2n+2}$ is conjugate to $J$ by an orthogonal map (an orthonormal basis $u_{1}, g u_{1}, \\dots, u_{n+1}, g u_{n+1}$), so $S^{2n+1}/\\langle g \\rangle$ is isometric to its $\\Sig_{n}$, with the flat lines corresponding. (K1) Complex K-theory $K(X)$ of a finite complex is a commutative ring with lambda-operations: $\\lambda_t(a) = \\sum_{j} \\lambda^{j}(a) t^{j}$ satisfies $\\lambda_t(a + b) = \\lambda_t(a)\\lambda_t(b)$, $\\lambda_t(\\ell) = 1 + \\ell t$ for a line bundle $\\ell$, $\\lambda_t(1) = 1 + t$, and $\\lambda^{j}(E) = 0$ for $j > \\operatorname{rank} E$ when $E$ is an actual bundle; the reduced ring $\\widetilde K(X)$ is nilpotent (Atiyah, \\emph{K-Theory}, 1967). (K2) For a finite group $\\Gamma$ acting freely and linearly on the unit sphere $S(V)$ of a complex representation $V$, $K(S(V)/\\Gamma) \\cong R(\\Gamma)/(\\lambda_{-1}(V))$: the Gysin sequence of the equivariant Thom isomorphism $K_\\Gamma(D(V), S(V)) \\cong R(\\Gamma)$, whose Thom class restricts to $\\lambda_{-1}(V) = \\sum_i (-1)^{i}\\Lambda^{i}V$ on the zero section, together with $K^{1}_\\Gamma(\\mathrm{pt}) = 0$ and $K_\\Gamma(S(V)) = K(S(V)/\\Gamma)$ for a free action (Atiyah, ibid., Section 2.7; Atiyah 1961; Kambe 1966). For $\\Gamma = \\Z_{4}$ with character $\\chi$ (the generator acting by a complex structure) and $V = (n+1)\\chi$ this gives $K(L^{2n+1}(4)) = \\Z[\\chi]/(\\chi^{4} - 1, (\\chi - 1)^{n+1})$, the class $\\chi^{e}$ being the flat line bundle on which the generator acts by $\\chi^{e}$. (K3) The mod-2 reduction of a class in $H^{1}(X; \\Z_{4})$ has $Sq^{1} = 0$, since $Sq^{1}$ is the Bockstein of $0 \\to \\Z_{2} \\to \\Z_{4} \\to \\Z_{2} \\to 0$; for a degree-one class $Sq^{1}x = x^{2}$ (Hatcher, \\emph{Algebraic Topology}, Section 4.L).\n\n\\emph{(1).} Let $h$ be a $k$-rung completion. By clause (1) of \\claimref{synthesis.wall-rung-count-is-height-of-dying-line-class} there is a real bundle $N$ of rank $k - 1$ over $\\Sig$ with $N(\\overline G) \\oplus \\shL \\oplus N \\cong N(\\overline G) \\oplus \\underline{\\R}^{k}$. Complexify: writing $c(E)$ for the complexification of a real bundle $E$ (the bundle $E \\oplus E$ with the complex structure $(y_1, y_2) \\mapsto (-y_2, y_1)$, the unit bivector of each plane $\\operatorname{span}(y, y')$ of a copy of $E \\oplus E$), complexification commutes with direct sums, so in the group $K(\\Sig)$, after cancelling $c(N(\\overline G))$, $[c(N)] = k - \\xi$ with $\\xi := [c(\\shL)]$. Since $\\shL \\otimes \\shL$ is trivial, $\\xi^{2} = 1$. By (K1),\n\\[\n\\lambda_t(c(N)) = \\lambda_t(k)\\,\\lambda_t(\\xi)^{-1} = (1+t)^{k}(1 + \\xi t)^{-1} = (1+t)^{k} \\sum_{j \\geq 0} (-\\xi)^{j} t^{j},\n\\]\nthe inverse being a formal power series. The coefficient of $t^{k}$ is $\\sum_{j=0}^{k} \\binom{k}{k-j}(-\\xi)^{j} = (1 - \\xi)^{k}$, and it vanishes because $c(N)$ is an actual bundle of complex rank $k - 1 < k$. From $\\xi^{2} = 1$, $(1-\\xi)^{2} = 2(1 - \\xi)$, so $(1-\\xi)^{k} = 2^{k-1}(1-\\xi)$; hence $2^{k-1}(1-\\xi) = 0$. If $1 - \\xi$ has order $2^{a}$ in $K(\\Sig)$, then $k - 1 \\geq a$. Nothing in this argument depends on $q$: the obstruction is the same on definite and indefinite sides. (The check computes the coefficient of $t^{k}$ in $\\Z[\\xi]/(\\xi^{2} - 1)$ and finds $2^{k-1}(1-\\xi)$ for $k = 1, \\dots, 5$.)\n\n\\emph{(2).} Let $\\Sig = L^{2n+1}(4) = S^{2n+1}/\\langle g \\rangle$, $g$ acting by a complex structure on $\\R^{2n+2}$. Then $\\pi_1(\\Sig) = \\Z_{4}$, $H^{1}(\\Sig; \\Z_{2}) = \\operatorname{Hom}(\\Z_{4}, \\Z_{2}) = \\Z_{2}$, and the line bundle $\\shL$ with $x \\neq 0$ is the flat line on which $g$ acts by $-1$. Its class $x$ is the reduction of the generator of $H^{1}(\\Sig; \\Z_{4}) = \\operatorname{Hom}(\\Z_{4}, \\Z_{4})$, and $x^{2} = 0$ by clause (3) of Theorem \\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure} (the cup coefficient of two odd cochains is $6$, even; in version 1 this step was $x^{2} = Sq^{1}x = 0$ by (K3)): $\\operatorname{ht}(x) = 2$ for every $n$. The complexification of $\\shL$ is the flat complex line on which $g$ acts by $-1 = \\chi(g)^{2}$, so $\\xi = \\chi^{2}$ in (K2), and $1 - \\xi = 1 - \\chi^{2}$.\n\n\\emph{Lower bound for every $n$.} Let $I := e_1 e_2$ in $\\Cl(2,0)$, so $I^{2} = -1$ and $\\Z[I] = \\{a + bI\\}$ is the ring of Gaussian integers written with the GA unit; put $\\pi := I - 1$. Then $\\pi(-1 - I) = 2$ and $I\\pi^{2} = I(-2I) = 2$, so $2 = I \\pi^{2}$ with $I$ a unit. The assignment $\\chi \\mapsto I$ kills $\\chi^{4} - 1$ ($I^{4} = 1$) and sends $(\\chi - 1)^{n+1}$ to $\\pi^{n+1}$, so it defines a ring map $\\phi : K(\\Sig) \\to \\Z[I]/(\\pi^{n+1})$. It sends $2^{j-1}(1 - \\chi^{2})$ to $2^{j-1}(1 - I^{2}) = 2^{j} = I^{j}\\pi^{2j}$, whose $\\pi$-adic valuation is exactly $2j$ ($\\pi$ is prime of norm $2$; $a + bI$ is divisible by $\\pi$ iff $a + b$ is even). So $2^{j-1}(1 - \\xi) \\neq 0$ whenever $2j < n + 1$. A $k$-rung completion needs $2^{k-1}(1-\\xi) = 0$ by (1), hence $2k \\geq n + 1$, that is $k \\geq \\lceil (n+1)/2 \\rceil = 1 + \\lfloor n/2 \\rfloor$.\n\n\\emph{Exact orders for $n \\leq 8$.} In the coordinates $s = \\chi - 1$, $K(\\Sig) = \\Z[s]/(s^{n+1}, (1+s)^{4} - 1)$, and $\\widetilde K(\\Sig)$ is the quotient of $\\Z s \\oplus \\dots \\oplus \\Z s^{n}$ by the lattice spanned by $s^{i}((1+s)^{4} - 1)$, $0 \\leq i \\leq n - 1$, truncated at $s^{n}$. This basis is triangular with diagonal entries $4$, so the lattice has index $4^{n}$, the order of $\\widetilde K(L^{2n+1}(4))$ (clause (6) of the cited theorem: its Atiyah-Hirzebruch filtration quotients are $H^{2j}(\\Sig; \\Z) = \\Z_{4}$, $1 \\leq j \\leq n$), and membership is decided exactly by back substitution. With $1 - \\chi^{2} = -(2s + s^{2})$, the least $a$ with $2^{a}(1 - \\chi^{2})$ in the lattice is $1, 1, 2, 2, 3, 3, 4, 4$ for $n = 1, \\dots, 8$, that is $\\lfloor (n+1)/2 \\rfloor$. With (1), $k \\geq 1 + \\lfloor (n+1)/2 \\rfloor$ for $n \\leq 8$. In particular at $n = 3$: $2(1 - \\chi^{2}) = -4s - 2s^{2}$ is not in the lattice spanned by $(4,6,4)$, $(0,4,6)$, $(0,0,4)$ (the coefficient of $s^{3}$ would need $6 + 4c = 4$), so $k(L^{7}(4)) \\geq 3$. At $n = 1$, $2(1 - \\chi^{2}) = -4s = -((1+s)^{4} - 1)$ modulo $s^{2}$, so the bound is $2$, as it must be: the $L(4,1)$ wall with an indefinite side has a two-rung completion (\\claimref{synthesis.lens-space-wall-rung-count-sees-the-integral-twist}(1)). The same code returns the order $2^{n}$ of $\\chi - 1$ in $\\widetilde K(\\R P^{2n+1})$, the classical value, as a control.\n\n\\emph{(3), the walls.} Let $n = 2r - 1$ and identify $\\R^{2n+2} = \\R^{4r}$ with $r$-tuples $q = (q_1, \\dots, q_r)$ of even elements of $\\Cl(3,0)$ (quaternions), with the inner product $\\langle q, q' \\rangle = \\sum_a \\langle q_a \\tilde q'_a \\rangle_0$. Let $B := e_2e_3$ and $C := e_3e_1$; then $B^{2} = C^{2} = -1$ and $BC = -CB$. Left multiplication $q \\mapsto Bq$ (componentwise) is an isometry with square $-1$, a complex structure, so it generates a free $\\Z_{4}$ action on the unit sphere with quotient $\\Sig = L^{2n+1}(4)$. Put $f(q) := Cq$. Then $\\langle q, f(q) \\rangle = \\sum_a \\langle q_a \\tilde q_a \\tilde C \\rangle_0 = |q|^{2}\\langle \\tilde C \\rangle_0 = 0$ and $|f(q)| = |q|$, so $f$ is a unit tangent field on the sphere, and $f(Bq) = CBq = -B f(q)$. The differential of $q \\mapsto Bq$ is again left multiplication by $B$, so $f$ is not a vector field on $\\Sig$ but a nowhere-zero section of $\\shL \\otimes T\\Sig$ for the line $\\shL$ on which the generator acts by $-1$: its span is a line subbundle of $T\\Sig \\cong T^*\\Sig$ (via the round metric $A$, which $B$ preserves) isomorphic to $\\shL$, with $x \\neq 0$. On $M = \\Sig \\times \\R$ put\n\\[\nG_t := \\bigl(A - (1-t)\\, A(\\pi_f\\,\\cdot, \\pi_f\\,\\cdot)\\bigr) \\perp (\\epsilon\\, dt^{2}), \\qquad \\epsilon = \\pm 1,\n\\]\nwith $\\pi_f$ the orthogonal projection on the span of $f$. It is single valued on $\\Sig$, since $f$ enters quadratically. At $t = 0$ it has corank exactly one with radical the span of $f$, a smooth line bundle isomorphic to $\\shL$; $G_t(f, f) = t|f|^{2}$, so the degeneration is first order and (T3) holds; the wall $\\Sig \\times \\{0\\}$ is a closed hypersurface separating $M$. For $t > 0$ the physical side has signature $(2n+1, 1)$ if $\\epsilon = -1$ and $(2n+2, 0)$ if $\\epsilon = +1$. The check verifies at exact rational points of $\\R^{8}$ and $\\R^{12}$ ($r = 2, 3$: $L^{7}(4)$ and $L^{11}(4)$), for $\\epsilon = \\pm 1$ and $t \\in \\{0, \\tfrac13, 2\\}$: $B$ is orthogonal with $B^{2} = -1$, $f \\perp q$, $|f| = |q|$, $f(Bq) = -Bf(q)$, the pull-back of $G_t$ at $Bq$ by $B$ equals $G_t$ at $q$, $G_t(f, f) = t|f|^{2}$, the normal direction $q$ decouples, and the signatures are those stated (on $q^{\\perp} \\oplus \\R$, one positive direction less than on $\\R^{4r} \\oplus \\R$).\n\n\\emph{(4).} By (2) and (3), for every odd $n \\geq 3$ there is a tame wall with cross-section $L^{2n+1}(4)$, $\\operatorname{ht}(x) = 2$ and an indefinite physical side, with $k(\\Sig) \\geq 1 + \\lfloor n/2 \\rfloor$, and $k(\\Sig) \\geq 3$ already at $n = 3$; so $k(\\Sig) = \\operatorname{ht}(x)$ fails on these walls, $L^{4r-1}(4) \\times \\R$ with $r \\geq 2$ and indefinite side $(4r-1, 1)$, and $k(\\Sig) - \\operatorname{ht}(x)$ is unbounded. On these walls $\\beta x$ is the element of order two of $H^{2}(\\Sig; \\Z) = \\Z_{4}$ (nonzero since $H^{1}(\\Sig; \\Z) = 0$ and $x \\neq 0$), and $(\\beta x)^{2} = 0$ always when $x^{2} = 0$: $\\beta x$ reduces to $x^{2} = 0$, so $\\beta x = 2z$ for an integral $z$, and $2\\beta x = 0$ gives $4z = 0$, hence $(\\beta x)^{2} = 4z^{2} = 0$. The obstruction of (1) is a statement about stable classes, so it applies in the stable range as well: the failure of $k = \\operatorname{ht}(x)$ here does not come from the step of the lens-space proof that needed the stable range. By the parent claim, $k(\\Sig) \\leq e(\\shL) \\leq 2n + 2$ on these walls, and on a definite side $k(\\Sig) = e(\\shL)$: with $q = 0$, $N(\\overline G) = 0$ and clause (1) of the parent gives $\\shL \\oplus N \\cong \\underline{\\R}^{k}$, so $\\shL \\hookrightarrow \\underline{\\R}^{k}$ and $k \\geq e(\\shL)$, while clause (2) gives $k \\leq e(\\shL)$. The exact values are not determined here. The indefinite side built in (3) has one negative direction, $(2n+1, 1)$, not the physical type $(1, q)$; the obstruction (1) holds on every side, so it applies equally to walls of type $(1, 2n+1)$ wherever they exist.\n"
+ },
+ "notes": [],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "sheaf.degeneration-sheaf",
+   "sheaf.imported-real-line-bundles",
+   "sheaf.tameness",
+   "synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure",
+   "synthesis.lens-space-wall-rung-count-sees-the-integral-twist",
+   "synthesis.wall-rung-count-is-height-of-dying-line-class"
+  ],
+  "used_by": [],
+  "ledger": "absent",
+  "programme": "transport-papers",
+  "holds_given": [
+   "sheaf.tameness"
+  ],
+  "evidence": "pass",
+  "past_cone_size": 60,
+  "future_cone_size": 0
+ }
+}

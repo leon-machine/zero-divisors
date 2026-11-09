@@ -49,3 +49,28 @@ entities of an earlier run.
   and order-four proposals (every mass form on the sixteen has odd Clifford grade, so all anticommute with the
   pseudoscalar; what a Dirac term keeps is the pseudoscalar times the centre of su(2)_L).
 Fixers run only runcheck. Write findings/fixes-<name>.md ending "check4: pending (orchestrator)".
+- From verify/R1.md:
+  - Definite-side rung count (C2A): fixes 1-8 (Stolz's level formula as prior art replacing the wrong recollection; the
+    extra obstruction-theory background stated as an extension of the stored (G); "does not obstruct" wording for d = 0
+    mod 8; cross-reference to the three-rung sibling by name in the extraction note). Leon has asked for the classical
+    inputs (T) to be derived, not imported; a separate attacker is attempting the specific obstruction in the cell model.
+    Keep the lower bound conditional on (T), stated exactly as fix 6 words it.
+  - Three rungs (C2B): fixes 1-5 (title scope: dimension five and more, dimension five given the spin class; the
+    extension of (G); 4 <= k <= 5 on L^5(4)). The twisted cohomology stays in this proposal; the rung-count sibling
+    names it as intended citation.
+  - Curved-field kernel (C2A): verdict OVERSTATED with one coefficient WRONG. Restate at EVERY level to the referee's
+    weaker statement (a)-(d): correct the sign and coefficient (D_x U = +(1/12) Riem(xi) R in the store's convention
+    Riem(B) = -R(h(B)); gauge Omega = -(1/2) Riem(z ^ a)); the check must test the gauge's field strength against the
+    stored sign and carry the de Sitter test; define Pi_6 or state Weyl squared at degree 2 through the Van Vleck
+    determinant; scope (normal coordinates at x', transported index, torsion-free, one loop, parametrix trace form,
+    time-ordered kernel) in title or one-liner; the freedom is 15 local terms per index pair with coefficient FUNCTIONS
+    of x' unless local covariance with scaling is added; status: (i) and corrected (ii) proved, (iii) and (iv) argued.
+    Leon has decided to import both the scaling-degree rules and local covariance with scaling (maintainer pass): state
+    in the extraction note exactly which rules and which form of local covariance the result would need, including the
+    additions the referee lists (sd of sigma^-k log^j sigma, subadditivity, the first Hadamard transport equation), so
+    the Fact is written to fit. If you dispute the sign, rebut only with a computation against the stored convention.
+  - Order-four element (C2B): fixes 1-6 (omega = -I(-1)^N on the stored conventions with a state evaluation in the check;
+    the Dirac sentence "modulo the Standard Model group" with its check; omega = exp(-(pi/2) I X), classical attribution;
+    the two readings marked argued).
+  - Mass terms as pair terms (C1B): fixes 1-6 (title scope and no "only"; "among the six listed charges"; the gap
+    theorem's clause (iii) and the softened sentences; cross-reference to the order-four sibling by name).
