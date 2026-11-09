@@ -1,0 +1,26 @@
+functions:
+  check_dying_line_has_sign_holonomy:
+    kind: sampled
+    clauses: ["(2) c J = -J c and J^2 = -1 on six vectors of Cl(6,0), so the embedded dying line has holonomy -1 and the twisted coefficient system is the sign character"]
+    omits: "linear identities, tested on six vectors that span the space"
+  check_twisted_cochain_complex_of_lens_spaces:
+    kind: exact
+    clauses: ["(2) twisted cohomology of L^{2n+1}(4), n = 1..6: Z_2 in odd degrees, 0 in even degrees, in particular twisted H^2 = 0", "(2) the untwisted control: Z_4 in even degrees", "(2) controls with the group of order two: twisted H^2 of the projective plane is Z, of projective three- and five-space 0"]
+    omits: "that the cell complex computes cohomology with local coefficients is the background (G)"
+  check_whitney_class_of_the_rank_two_complement:
+    kind: exact
+    clauses: ["(1) w(N) = (1 + x)^{-1} = 1 + x where x^2 = 0, the classes of L + 1", "(1) the control on projective space, where the inverse has a degree-two part"]
+  check_doubled_line_in_the_k_ring:
+    kind: exact
+    clauses: ["(3) 2(1 - chi^2) is not zero in the presented ring for 3 <= n <= 12 and is zero for n = 1, 2", "(3) 4(1 - chi^2) = 0 for n = 3, 4 and not for n = 5"]
+    omits: "the identification of the presented ring with K-theory is clause (6) of the stored cohomology theorem; the statement for all n >= 3 is the proof's, from the stored order formula up to 14 and the Gaussian-integer bound beyond"
+  check_spin_class_in_dimension_five:
+    kind: exact
+    clauses: ["(3) q_1(L + L) = 2a^2 = 2y^2 for a = y, 3y, not zero in Z_4, while p_1 = 0"]
+    omits: "the spin class is the hypothesis (L2) of the stored two-rung result; the check does its arithmetic"
+  check_gaussian_image_for_every_dimension:
+    kind: exact
+    clauses: ["(3) under chi -> I = e1e2 the class 2(1 - chi^2) goes to 4 = -(1 - I)^4, and 4 / (1 - I)^5 is not a Gaussian integer, so 2(1 - chi^2) is not zero for n >= 4"]
+untouched_premises:
+  sheaf.tameness: "the setting of the parent claim; no check computes with it"
+  synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory: "enters only through clause (6) of the stored cohomology theorem"
