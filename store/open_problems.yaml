@@ -917,7 +917,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The review of what a quantum field theory still needs, 1 November; the BRST, running and lattice results and Leon's decision adopting the Krein-form premise, 1 November; the field-level BRST, quartet, Clifford-conjugation and Gribov results and Leon's decisions (the Neuberger, Fradkin-Shenker and Singer imports), 2 November"
+  source: "The review of what a quantum field theory still needs, 1 November; the BRST, running and lattice results and Leon's decision adopting the Krein-form premise, 1 November; the field-level BRST, quartet, Clifford-conjugation and Gribov results and Leon's decisions (the Neuberger, Fradkin-Shenker and Singer imports), 2 November; the colour-lattice results and Leon's decisions (no import of the strong-coupling clustering or of finite-group freezing; the colour item restated), 8 November"
   statement: >-
     The gauge algebra of the minimal massive composite
     (\claimref{synthesis.gauge-algebra-by-tower},
@@ -1006,10 +1006,30 @@
     only two are anomaly-free
     (\claimref{synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation}). This is a
     current algebra along each generator, not the four-dimensional Yang-Mills field.
+
+    (8 November, colour lattice.) Colour rotors are the rotors of the $e_{3}, \dots, e_{8}$ block fixing a pure-spinor
+    idempotent (one condition for $J$-commutation and unit determinant); the triplet character is
+    $4(\langle R\rangle_{0} + \langle R\rangle_{6}) - 1$, so Wilson's weight is the scalar part of the plaquette rotor
+    with $\beta = 6/g^{2}$. On a finite lattice the centre $Z_{3}$ forces a flux chain on every surviving term: no
+    rectangular fundamental loop has a term below order $A$, its leading term is $(\beta/18)^{A}$; Polyakov lines vanish
+    at every $\beta$, a pair and a baryonic junction have leading terms $\tfrac19(\beta/18)^{N_{t}r}$ and
+    $\tfrac1{27}(\beta/18)^{3N_{t}}$; the connected plaquette correlator has leading term $\tfrac1{18}(\beta/18)^{4t}$,
+    a leading decay rate $4\ln(18/\beta)$ per time step at fixed $t$ (a gap uniform in $t$ is argued, not proved)
+    (\claimref{synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube}). A centreless finite
+    subgroup of order $96$ has the Haar averages through link degree three and differs at degree four, so every
+    strong-coupling term of link degree at most three is the same for it and for $SU(3)$, while a finite group freezes
+    at weak coupling (argued): strong-coupling data decide neither confinement nor a continuum gap
+    (\claimref{synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three}).
+    With colour triplets the fundamental loop has a perimeter law at infinite coupling (exactly for frozen triplets, at
+    leading hopping order for Wilson quarks), as the weak factor with doublets
+    (\claimref{synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling}). No stored
+    premise gives the gauge field a lattice spacing on flat spacetime, and no stored gap is a spectral gap of the
+    four-dimensional gauge field. All of this is strong-coupling lattice physics in geometric-algebra form; it does not
+    bear on the Yang-Mills existence and mass-gap problem, which lives in the weak-coupling continuum limit.
   attack:
     - "The interacting charge: the operator BRST charge of the interacting theory on the Krein space (renormalisation and the Slavnov-Taylor identities, for example in causal perturbation theory, where the local construction is imported for electrodynamics and Yang-Mills), and positivity of its physical space under Kugo and Ojima's hypotheses."
     - "Higgs-sector BRST: the field-level differential with the Goldstone and doublet terms (s phi), and the breaking pattern derived from the series' scalar sector instead of the aligned vacuum taken as input."
-    - "Colour: a colour rotor lattice (none is stored) and its continuum limit; pure-colour confinement is the Yang-Mills mass-gap problem and is not addressed."
+    - "Colour beyond strong coupling: the colour rotor lattice is stored at strong coupling only (centre bound, Polyakov lines, leading tube, string breaking with triplets at infinite coupling). Its continuum limit needs beta -> infinity (asymptotic freedom), which no stored result reaches. The series' colour sector has quark triplets, so its physical question is the one with quarks (string breaking, no Wilson-loop order parameter), as in QCD; pure-colour confinement and the mass gap of pure Yang-Mills (the Clay problem) are a different question and are not addressed."
     - "The weak factor on the lattice: the phase structure of the rotor lattice with the two doublets beyond strong coupling, and its continuum limit."
     - >-
       The current algebra along generators: compute the embedding of the Standard Model gauge algebra in the
@@ -1023,7 +1043,7 @@
     gauge-invariant non-perturbative definition) and a positive physical space,
     with the scalar sector's BRST included, or a proof that the series cannot
     carry them.
-  entities: [synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent, synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta, synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law, synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts, synthesis.weak-factor-rotor-lattice-strong-coupling-area-law, standard-model.gauge-algebra-minimal-massive-composite]
+  entities: [synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent, synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta, synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law, synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts, synthesis.weak-factor-rotor-lattice-strong-coupling-area-law, standard-model.gauge-algebra-minimal-massive-composite, synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube, synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three, synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling]
   added: 2026-11-01
 
 - id: op.qft-bosons-and-the-rung-field

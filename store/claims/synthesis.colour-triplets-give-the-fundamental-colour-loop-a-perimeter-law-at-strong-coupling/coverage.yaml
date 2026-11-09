@@ -1,0 +1,26 @@
+functions:
+  check_colour_moments_of_a_matrix_entry_from_invariants:
+    kind: complete
+    clauses:
+    - "(i) degree four: 20 G-invariants, 12 annihilated by su(3); from the projectors E[x^2] = 1/6 and E[x^4] = 1/16; the finite group gives E[x^4] = 1/6 (not shared) and E[x^2] = 1/6 (shared)"
+    omits: "the average-equals-projector lemma is the argument of Step 1"
+  check_frozen_triplet_mean_link_is_rank_one_and_its_coefficient:
+    kind: partial
+    clauses:
+    - "(ii) the mean link through order kappa^3 is (kappa/6 - kappa^3/288) Pi entry by entry; Pi^P = Pi and chi(Pi) = 1/3 for P = 4, 6, 8; the unitary-gauge identity for the hopping term on a sample of group elements"
+    omits: "exactness for all kappa is the stabiliser and independence argument of Steps 2 to 4; positivity of c is the symmetry argument of Step 3"
+  check_wilson_quark_corner_factor_is_independent_of_the_rectangle:
+    kind: complete
+    clauses:
+    - "(iii) in Cl(4,0): (1 - d)^2 = 2(1 - d) and (1 - d)(1 + d) = 0 for each direction; the spin trace round every R x T rectangle, R, T <= 3, in all twelve ordered planes and both orientations, is -2^(P-1)"
+    omits: "larger rectangles follow from idempotence along the sides (Step 5)"
+  check_quark_loop_gives_the_rectangle_a_perimeter_term_at_beta_zero:
+    kind: sampled
+    clauses:
+    - "(iii) on the 1x1 and 2x1 patches with links in the finite group (three samples each), the sum over all closed walks of length P of spin trace times half the real colour trace, divided by P, is -2^(P-1) tr U_C; the colour average of chi(U) tr U is 1/3 over G; 2^(P-1)/3 = 2^P/6"
+    omits: "the determinant and loop expansion of the Grassmann integral are the standard argument of Step 5; larger rectangles by the same walk count"
+  check_spinor_ideal_and_its_complex_unit:
+    kind: complete
+    clauses:
+    - "(iii) f = (1 + d1d2d3d4)/2 is idempotent; the left ideal Cl(4,0) f is eight-dimensional; right multiplication by d1d2 squares to -1 on it and commutes with the left action; for every plaquette corner product (twelve ordered planes, both orientations) the real trace on the ideal is 8 times the scalar part (-16) and the trace composed with the complex unit vanishes, so the complex spin trace is 4 times the scalar part"
+    omits: "the identification of the spinor unit with j on colour is the tensor-product convention of Step 5"

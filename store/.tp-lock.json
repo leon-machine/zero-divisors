@@ -46894,6 +46894,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "8ac71e71ff064472",
+  "ledger": null,
+  "parts": {
+   "checks": "58414af6c6ef6abb",
+   "proofs": "846e06673c4bbfcf",
+   "rest": "3ae2f3aba227a8a2",
+   "statement": "2b41a79c47b00bd4"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
   "assumes": [],
   "credit": [
@@ -48376,6 +48401,31 @@
   "status": "proved",
   "version": 4
  },
+ "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "563dc19a9c1974fe",
+  "ledger": null,
+  "parts": {
+   "checks": "ca2ec1cc9995646d",
+   "proofs": "cf3114aef93ca158",
+   "rest": "d3b65c89b700e77b",
+   "statement": "d57aac0afa18fea6"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.colour-light-content-proton-ceiling": {
   "assumes": [],
   "credit": [
@@ -48400,6 +48450,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d28eb6813a1ef82a",
+  "ledger": null,
+  "parts": {
+   "checks": "599a79fed6202fb4",
+   "proofs": "cb4178fed9e4e0f9",
+   "rest": "3ae2f3aba227a8a2",
+   "statement": "f7a7817db0950619"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.common-ceiling-coupling-premise": {
   "assumes": [],

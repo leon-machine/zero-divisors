@@ -31479,6 +31479,70 @@
 }
 ]
 },
+"synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three": {
+"failed": false,
+"findings": [],
+"key": "adbfe9a0fba031ff",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_colour_block_su3_and_the_finite_group_inside_it",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite"
+]
+},
+{
+"derivation": null,
+"func": "check_finite_group_averages_equal_haar_through_degree_three",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite"
+]
+},
+{
+"derivation": null,
+"func": "check_degree_four_separates_them_by_a_centre_violating_moment",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite"
+]
+},
+{
+"derivation": null,
+"func": "check_gluing_rule_and_own_plaquette_loop_terms_agree",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite",
+"synthesis.weak-factor-rotor-lattice-strong-coupling-area-law"
+]
+},
+{
+"derivation": null,
+"func": "check_plaquette_series_agrees_through_beta_squared_and_differs_at_beta_cubed",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite",
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_finite_plaquette_weight_has_a_gap_and_colour_has_none",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite"
+]
+}
+]
+},
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
@@ -33635,6 +33699,87 @@
 }
 ]
 },
+"synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube": {
+"failed": false,
+"findings": [],
+"key": "0e4f4691d8913b3a",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_colour_block_pure_spinor_and_det_one",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite",
+"synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent"
+]
+},
+{
+"derivation": null,
+"func": "check_finite_colour_group_reproduces_haar_through_degree_three",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent"
+]
+},
+{
+"derivation": null,
+"func": "check_character_from_scalar_and_pseudoscalar_parts",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent"
+]
+},
+{
+"derivation": null,
+"func": "check_centre_rotor_in_q_sqrt3",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent"
+]
+},
+{
+"derivation": null,
+"func": "check_character_moments_and_gluing",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_wilson_loops_leading_coefficients",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_polyakov_lines_and_the_baryonic_junction",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_glueball_tube_leading_coefficient",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+}
+]
+},
 "synthesis.colour-light-content-proton-ceiling": {
 "failed": false,
 "findings": [],
@@ -33653,6 +33798,60 @@
 "standard-model.one-threshold-exact-criterion",
 "standard-model.spectrum-run",
 "standard-model.table-exact"
+]
+}
+]
+},
+"synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling": {
+"failed": false,
+"findings": [],
+"key": "d48a1f10f0afa9a7",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_colour_moments_of_a_matrix_entry_from_invariants",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite"
+]
+},
+{
+"derivation": null,
+"func": "check_frozen_triplet_mean_link_is_rank_one_and_its_coefficient",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law"
+]
+},
+{
+"derivation": null,
+"func": "check_wilson_quark_corner_factor_is_independent_of_the_rectangle",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_quark_loop_gives_the_rectangle_a_perimeter_term_at_beta_zero",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.gauge-algebra-minimal-massive-composite",
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+]
+},
+{
+"derivation": null,
+"func": "check_spinor_ideal_and_its_complex_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
 ]
 }
 ]

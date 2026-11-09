@@ -1,0 +1,42 @@
+functions:
+  check_colour_block_pure_spinor_and_det_one:
+    kind: complete
+    clauses:
+    - "(i) E is a Hermitian idempotent with scalar part 1/4, P_k E = -I E, J E = -3 I E; the bivectors annihilating E are exactly su(3); su(3) fixes J, Re Omega and Im Omega, J turns them; the generators fix E, J and Omega; the J quarter turn sends Re Omega to -Im Omega; an even element with R R~ = 1 and R E = E that is not a rotor (R e3 R~ of grades 1 and 5), excluded by the vector condition, which the generators satisfy"
+    omits: "the isomorphism onto SU(3) and the determinant formula for general U(3) elements are proved in the text from these computed facts"
+  check_finite_colour_group_reproduces_haar_through_degree_three:
+    kind: complete
+    clauses:
+    - "(iii) lemma: G has 96 elements fixing E; invariant dimensions 0, 2, 2 in degrees 1, 2, 3; the degree 1, 2 and 3 averages entry by entry; the wedge form of the cubic moment on all twenty basis trivectors; the rotor average E with eight invariant dimensions for left multiplication; the vector actions span the 18 J-commuting matrices"
+    omits: "degree 4 and higher, which nothing uses"
+  check_character_from_scalar_and_pseudoscalar_parts:
+    kind: sampled
+    clauses:
+    - "(ii) chi = 4(<R>_0 + <R>_6) - 1 against the vector-action complex trace on all of G and on 36 conjugated rational torus rotors; 1 - w = (4/3)(1 - <U>_0)"
+    - "(i) the J quarter turns, outside SU(3), turn Re Omega and average it to zero over their cyclic group"
+    omits: "general colour rotors, covered by the torus argument of the proof"
+  check_centre_rotor_in_q_sqrt3:
+    kind: complete
+    clauses:
+    - "(iv) z fixes E, z^3 = 1, <z>_0 = -1/8, w(z) = -1/2, z commutes with the generators of G and with su(3), and acts on e3, e5, e7 as omega"
+    omits: "the vanishing of moments of nonzero N-ality and the charge-chain condition are proved in the text"
+  check_character_moments_and_gluing:
+    kind: complete
+    clauses:
+    - "(iii) lemma: the single-link character moments and the three gluing identities on all pairs in G x G (complete by bilinearity, the vector actions of G spanning the J-commuting matrices)"
+    omits: "none"
+  check_wilson_loops_leading_coefficients:
+    kind: sampled
+    clauses:
+    - "(v) the leading coefficient (1/18)^A for the 1x1 and 2x1 loops in the tree gauge over G, and for 1x1, 3x1 and 2x2 by contracting the degree-two moment; gauge invariance of a closed loop and not of an open line"
+    omits: "larger rectangles and the lower-order bound, which are the tree-gauge induction and the chain projection of the proof"
+  check_polyakov_lines_and_the_baryonic_junction:
+    kind: sampled
+    clauses:
+    - "(vi) the Polyakov pair at N_t = 1 and 2 (r = 1), zero for two lines of the same orientation at that order, and the baryonic junction at N_t = 1 with each sheet reducing to chi/54"
+    omits: "larger N_t and r and the exact zeros from the centre, covered by the proof"
+  check_glueball_tube_leading_coefficient:
+    kind: sampled
+    clauses:
+    - "(vii) the tube coefficient (1/18)^(4t+1) for t = 1, 2 by contracting the degree-two moment over the closed tube; the face count and the orientation formula"
+    omits: "larger t and the absence of lower-order connected terms, which is the slab argument of the proof"
