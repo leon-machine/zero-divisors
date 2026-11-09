@@ -1,0 +1,24 @@
+functions:
+  check_explicit_map_into_five_dimensions:
+    kind: exact
+    clauses: ["(2) F is a vector with no e4 component and F(J(v)) = -F(v), on a grid of 3^6 points (degree at most 2 in each variable)", "(2) Q(F) = (Q(w0) + Q(w1))^2 on a grid of 5^4 points and Q(w2)^2 on a grid of 5^2 points (degree at most 4 in each variable); the full identity at three mixed points", "(2), (3) on the three-sphere of the first two planes the map has three components", "(2) control: without the mirror image the map is not odd"]
+    omits: "that the grids decide the polynomial identities is the degree bound stated in the proof"
+  check_twisted_cochain_complex:
+    kind: exact
+    clauses: ["(3) the twisted coboundaries of the stored cell model are -2, 0, -2, 0, -2 and the untwisted ones 0, 4, 0, 4, 0", "(3) twisted cohomology of order 2 in odd degrees and trivial in even degrees up to degree 5", "(3) the Euler class 2y of the half-turn plane bundle is not zero modulo 4"]
+    omits: "that the classes are obstruction classes is the background (G)"
+  check_squaring_operation_on_the_thom_space:
+    kind: exact
+    clauses: ["(4) Sq^2(U h) = (d + 1) U h^2 in Z_2[h, U]/(h^3, U^2 - d h U), d = 1..12; the control d = 1 (projective space of dimension three)", "(4) the class needed is n U h with n = -1 for d = 4, and it is obstructed", "(5) the table d = 2 primary, 4 and 12 secondary, 8 and 16 none"]
+    omits: "the properties (T1) and (T3) of the squaring operation and of the Thom space are hypotheses of the statement"
+  check_square_of_the_second_chern_class:
+    kind: exact
+    clauses: ["(4) Sq^2 c_2 = c_1 c_2 + c_3 modulo 2 on two and on three Chern roots"]
+    omits: "the splitting principle (T2) is a hypothesis of the statement"
+  check_chern_character_lattice:
+    kind: exact
+    clauses: ["(4) second route: n U h is in the Chern character lattice of the Thom space with no part of degree six if and only if n (d + 1) is even, d = 1..12, n = -3..3"]
+    omits: "the integrality of the Chern character and the Thom isomorphism of K-theory, on which this route would rest, are not in the store; the route is a cross-check and not part of the proof"
+  check_upper_bounds_by_blocks:
+    kind: exact
+    clauses: ["(2) the number of components of the block map is ceil(3(n+1)/2), n = 0..11, at most 2n + 2; values 2, 3, 5, 6 for n = 0, 1, 2, 3"]
