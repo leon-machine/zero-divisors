@@ -1,0 +1,28 @@
+{
+ "accepted_for_review": true,
+ "folder": "/home/claude/phys-graph/proposals/synthesis.eviction-keeps-one-replica-saddle",
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": true,
+ "findings": [
+  {
+   "code": "I126",
+   "severity": "info",
+   "entity": "store",
+   "message": "coverage records: 3338 check function(s) in 966 entities (exact 773, complete 257, sampled 2109, partial 199); 0 check function(s) in those entities have no record",
+   "fix": ""
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 1 entities; 1 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was stored but not run: evidence checks run when a maintainer reviews the proposal"
+}
