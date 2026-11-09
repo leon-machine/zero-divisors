@@ -56,6 +56,10 @@ extraction:
     by: maintainer-2026-11-09
     date: '2026-11-09'
     note: 'Leon approved the assumes edges named at acceptance: (Q) singularity.q-joint-quasi-freeness-s-wave@3 and the window reading synthesis.window-reading-array-killing-energy@1, under which the tests are posed, are now assumed directly and cited in the proof; the intended citation of the sibling one-window result is now a plain cross-reference; the sentence on the narrowing of J3 now follows its version 2 (the current-boson identification kept for every massless field, so vectors and scalars stay currents under J3); statement unchanged.'
+  maintainer_pass_2026_11_09b:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Note only: one sentence added on hawking.joint-j3-s-wave-reduction version 3 (even-parity spin 2 only, partial-wave wording, identification not injective); reading (2) and the statement are unchanged.'
   open_problem: op.counted-mode-energy
   note: >-
     Adversarial attack on the open question of op.counted-mode-energy "which fields form the light-ray sea" and,
@@ -80,7 +84,11 @@ extraction:
     On 9 November J3 was restated (version 2): its channel-reduction clause is assumed for spin 2 only, since
     synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional derives it for spins 0, 1/2
     and 1, while its current-boson identification is kept for every massless field; so under J3 version 2 the
-    vectors and scalars are still read as currents of the arrays, and reading (2) is unchanged. The modulus 3 appears because 16 is 2^4 and 24 = 8 * 3: any per-generation count of 8 or 16
+    vectors and scalars are still read as currents of the arrays, and reading (2) is unchanged. J3 version 3 (same
+    day) keeps the channel-reduction clause for even-parity spin 2 only, words the reduction per partial-wave
+    channel, l >= |s|, and records that the identification is not one array tower per helicity channel; reading (2),
+    in which the integer-weight channels add no array, is again unchanged, and is the reading J3 version 3 states.
+    The modulus 3 appears because 16 is 2^4 and 24 = 8 * 3: any per-generation count of 8 or 16
     mod 24 gives it. Under boson-fermion balance, the vanishing of the stored quartic Sakharov coefficient, c = 48
     n_g and the test is blind to n_g. The two-window test (the evolution over two windows equal to 1, equivalently
     the one-window evolution equal to the grading up to sign) is included because it is the weakest operator-level

@@ -1,0 +1,29 @@
+functions:
+  check_quarter_turn_in_the_algebra:
+    kind: exact
+    clauses: ["(1) J^2 = -1, Q(Jv) = Q(v), v . J(v) = 0 on six vectors of Cl(6,0)", "(1) J^a - 1 has rank 6 for a = 1, 2, 3"]
+  check_cell_complex:
+    kind: exact
+    clauses: ["(2) the boundary squares to zero for groups of order 2 and 4", "(2) g - 1 has rank m - 1 and N rank 1 on the group ring"]
+    omits: "that the cells are discs with these boundaries is the proof's geometric description"
+  check_diagonal_approximation_is_a_chain_map:
+    kind: partial
+    clauses: ["(3) the diagonal commutes with the boundary on e_k, k <= 9, for groups of order 2, 3, 4 (a control; the proof is by the four group-ring identities)", "(3) it preserves the augmentation", "(3) the formula without the twist by g is not a chain map"]
+    omits: "that an augmentation-preserving equivariant chain map computes cup products is the background (G)"
+  check_four_group_ring_identities:
+    kind: exact
+    clauses: ["(3) the four identities in Z[G x G] to which the chain-map condition reduces by parity, for groups of order 2, 3, 4, 5, 6, 8", "(3) the form with N (x) g - 1 (x) N in the odd-odd case is false for order above 2"]
+    omits: "the identities for a general order are the proof's three-line argument"
+  check_cup_products_and_bocksteins:
+    kind: exact
+    clauses: ["(3) the cup coefficient is 6 for two odd degrees and 1 otherwise, all degrees up to 9", "(3) the integral coboundary is 4 on odd cochains and 0 on even ones", "(3) x^2 = 0 mod 2, the degree-one square is 2 mod 4, x u^i is a generator", "(4) the integral Bockstein of x is 2y of order two and the mod-2 Bockstein vanishes", "(3) the control with the group of order two: x^2 and the Bockstein are not zero"]
+  check_euler_class_sections:
+    kind: sampled
+    clauses: ["(5) the quarter turn of the plane is v -> v . B", "(5) v e1 v changes sign under the quarter turn, is the double-angle map and is nowhere zero on the circle, at three rational points"]
+    omits: "that the degree of the section on the boundary of the 2-cell is the Euler class is the background (G)"
+  check_presented_ring_orders:
+    kind: exact
+    clauses: ["(6) the augmentation ideal of the presented ring has order 4^n, n = 1..14", "(6) the order of 1 - chi^2 is 2^{floor((n+1)/2)}, n = 1..14; 2(1 - chi^2) is zero for n = 1, 2 and not for n = 3"]
+    omits: "the isomorphism with K-theory is the proof's, given (AH)"
+untouched_premises:
+  synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory: "imported general fact about the filtration of K-theory; the check computes inside the presented ring only, and the identification with K-theory is the proof's clause (6)"

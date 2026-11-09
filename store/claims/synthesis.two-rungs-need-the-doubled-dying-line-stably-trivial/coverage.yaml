@@ -13,10 +13,11 @@ functions:
   check_k_theory_cross_check:
     kind: exact
     clauses: ["remark: 2(eta^2 - 1) is not in the ideal for m = 3 and is for m = 1, 2"]
-    omits: "the K-theory ring of lens spaces is a classical input cited from memory"
+    omits: "the K-theory ring of lens spaces is clause (6) of the stored cohomology theorem, given the imported filtration"
   check_quaternionic_odd_map_bounds_embedding_rank:
     kind: sampled
     clauses: ["(3) right multiplication by e2e3 is an orthogonal complex structure", "(3) R e2 R~ is odd with |R e2 R~|^2 = (R R~)^2, so e(L) <= 6 on L^7(4)"]
 untouched_premises:
+  synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure: "supplies the lens-space inputs (L1) and (L3) of the statement (cohomology rings, stable tangent bundle, K-ring), which the proof cites; the checks compute in the presented rings and do not call it"
   sheaf.degeneration-sheaf: "used for the signature (p - 1, q) of the induced form in clause (1)'s argument, which is proof-only"
   synthesis.lens-space-wall-rung-count-sees-the-integral-twist: "cited in (4) only for the consistency of the vanishing obstruction at m = 1 with its two-rung completion"
