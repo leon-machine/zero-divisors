@@ -89,6 +89,14 @@ class ReleaseNotesTest(unittest.TestCase):
         self.assertEqual(releases.update_zenodo(self.tmp, st), [])
         self.assertIsNone(releases.update_zenodo(os.path.join(self.tmp, "nowhere"), st))
 
+    def test_contributors_warning(self):
+        path = os.path.join(self.tmp, ".zenodo.json")
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump({"contributors": [{"name": f"Person {i}"} for i in range(5)]}, fh)
+        self.assertIsNone(releases.contributors_warning(self.tmp, limit=5))
+        self.assertIn("lists 5 contributors, over 4", releases.contributors_warning(self.tmp, limit=4))
+        self.assertIsNone(releases.contributors_warning(os.path.join(self.tmp, "nowhere")))
+
     def test_is_model(self):
         for n in ("Claude Opus 5.5", "Claude Fable 5", "Claude (model not recorded)", "GPT-5",
                   "o3", "Gemini 3 Pro", "DeepSeek-R1", "Grok 4"):

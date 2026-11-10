@@ -37,6 +37,9 @@ from .model import load_store
 
 RELEASES = "releases"
 ZENODO = ".zenodo.json"
+# past this many contributors the list is hard to read on Zenodo (DataCite Commons shows 20) and to
+# edit by hand: time to decide on a threshold or a CONTRIBUTORS file (RELEASING.md)
+CONTRIBUTORS_WARN = 300
 # model families, matched at the start of a credit name: "Claude Opus 5.5", "GPT-5", "o3", ...;
 # a person who shares a name with one (a Claude who is not a model) is marked kind: person
 MODEL_RE = re.compile(r"^(claude(\s+(opus|sonnet|haiku|fable|mythos|instant|code|[0-9])\b|\s*\(|$)|"
@@ -268,6 +271,21 @@ def update_zenodo(lab, store):
     return changed
 
 
+def contributors_warning(lab, limit=CONTRIBUTORS_WARN):
+    """A warning when .zenodo.json lists more than `limit` contributors, else None."""
+    path = os.path.join(lab, ZENODO)
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as fh:
+        n = len(json.load(fh).get("contributors") or [])
+    if n <= limit:
+        return None
+    return (f"warning: {ZENODO} lists {n} contributors, over {limit}. Zenodo takes long lists, but "
+            "DataCite Commons shows only 20 and the record is hard to edit by hand: consider listing "
+            "only substantive contributors there, with the full list in the archive (RELEASING.md, "
+            "\"A long contributor list\")")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="tp release-notes")
     ap.add_argument("cmd")
@@ -294,4 +312,7 @@ def main(argv=None):
               "check them and commit the file with the notes")
     elif added is None:
         print(f"no {ZENODO} found, so the Zenodo contributors were not updated")
+    warn = contributors_warning(lab)
+    if warn:
+        print(warn)
     return 0

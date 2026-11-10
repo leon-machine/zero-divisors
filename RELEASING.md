@@ -46,4 +46,14 @@ taken when enough has been merged to be worth a new version.
 6. If the papers' deposits changed in the same period, record them first (before step 3) with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.
 
+## A long contributor list
+
+Zenodo publishes no limit on contributors, but DataCite Commons shows only the first 20, and a
+list of hundreds is hard to check or edit by hand. `tp release-notes` warns once `.zenodo.json`
+lists more than 300 (`CONTRIBUTORS_WARN` in `tp/releases.py`). Nothing is cut automatically; the
+choices then are to list on Zenodo only those credited for a correction, restatement or new result,
+or to write the full list to a file in the archive and keep one group entry on Zenodo pointing to
+it. Either way every person stays credited on their own results. Rehearse a long list on
+sandbox.zenodo.org before the first real release that carries one.
+
 The history of the repository before its first public release is not kept.
