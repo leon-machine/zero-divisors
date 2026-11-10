@@ -1,0 +1,17 @@
+functions:
+  check_sum_and_difference_of_two_observables_anticommute:
+    kind: sampled
+    clauses: ["(i)", "(iv)"]
+    omits: "the commutation of the three twisted pairs and the failure with a single twist factor, and for 25 pairs of rational directions of the shared party the anticommutation of the diagonals, the sum of their squares, the regrouped CHSH element, and the anticommutation and square of the mixed products at one pair of scalars; the identities for all observables are the proof's (they use only the squares and the commutation between parties)"
+  check_two_chsh_values_sharing_a_party_have_squares_summing_to_at_most_eight:
+    kind: sampled
+    clauses: ["(ii)", "(iv)"]
+    omits: "147 combinations of 21 settings and seven rational states with the largest sum met pinned at 1296/169, the equality case (2, 2), one state entangled across all three parties with values (24/13, 30/17), and the written-out pure state of value 14/5 with its idempotency; for the product of that state with (1 + p_3)/2 the values with the third party are asserted to be 0 on 25 pairs of directions, which is a trivial sample and no evidence for the bound 4/25; the inequality for every state and setting is the proof's"
+  check_commuting_directions_give_square_four_and_values_two:
+    kind: partial
+    clauses: ["(iii)"]
+    omits: "one party's directions equal or opposite against 25 pairs of the other's, and all 256 configurations in the commutative subalgebra of two parities with the values on its four minimal idempotents; the general commutative statement and the bound 4 are the proof's"
+  check_pair_state_value_and_what_it_leaves_a_third_party:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "the written-out pair state idempotent and self-adjoint at five rational amplitude pairs (the five points the proof's degree argument needs), its four correlations at three amplitude pairs, and at amplitudes (3/5, 4/5), the value 402/145, the comparison with 4804/625, and the squared values of a third party on 50 settings against the bound 6596/21025; the formula for general weights and directions is the proof's"
