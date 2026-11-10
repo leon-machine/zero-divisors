@@ -48286,6 +48286,54 @@
 }
 ]
 },
+"synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction": {
+"failed": false,
+"findings": [],
+"key": "b876a05017a1b586",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_volume_rate_of_constant_r_surfaces_is_flow_independent",
+"ok": true,
+"quantities": [],
+"touched": [
+"interior.imported-kerr-schild-form-kerr-gauge"
+]
+},
+{
+"derivation": null,
+"func": "check_rate_per_area_over_proper_distance_is_the_surface_gravity_at_every_latitude",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.c-loc-is-a-second-placement-of-the-count",
+"synthesis.exceptional-boundary-measure-one-calibration",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_three_schwarzschild_forms_split_on_kerr_and_the_area_form_is_the_smarr_rate",
+"ok": true,
+"quantities": [],
+"touched": [
+"scrambling.epoch-modular-period-two-unknowns-become",
+"singularity.stretched-singularity-count",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_schwarzschild_rate_is_reached_on_three_slices",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.stretched-singularity-count"
+]
+}
+]
+},
 "synthesis.sudden-descent-feature-not-tilt": {
 "failed": false,
 "findings": [],
