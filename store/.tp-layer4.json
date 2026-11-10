@@ -42480,6 +42480,49 @@
 }
 ]
 },
+"synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values": {
+"failed": false,
+"findings": [],
+"key": "ca058c7d47bbf2d5",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_local_weights_bound_values_and_the_box_fails_them",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_local_values_do_not_fix_positivity",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_descents_mode_wise_gives_positivity_total_parity_does_not",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"singularity.p-reduced-metric-level-reading-many",
+"synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state",
+"synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects"
+]
+}
+]
+},
 "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics": {
 "failed": false,
 "findings": [],
@@ -43815,6 +43858,45 @@
 "scrambling.epoch-modular-period-two-unknowns-become",
 "singularity.stretched-singularity-count",
 "synthesis.imported-kerr-surface-gravity-entropy"
+]
+}
+]
+},
+"synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them": {
+"failed": false,
+"findings": [],
+"key": "2eccb398823575fa",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_eighteen_atoms_in_nine_contexts_admit_no_two_valued_weight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional",
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_square_of_nine_blades_has_no_multiplicative_sign_assignment",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_even_subalgebra_of_two_modes_has_a_two_valued_weight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
 ]
 }
 ]
@@ -46431,6 +46513,46 @@
 "touched": [
 "families.rigidity-pairing-sector-one-event",
 "synthesis.channel-phase-invisible-to-axially-covariant-completions"
+]
+}
+]
+},
+"synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables": {
+"failed": false,
+"findings": [],
+"key": "9d063fedd7bfa9b2",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_record_map_commutes_with_parity_exactly_for_homogeneous_observables",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_one_mode_per_party_at_homogeneous_settings_even_states_give_at_most_two",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_two_modes_per_party_odd_homogeneous_observables_exceed_two_on_an_even_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"tower.commuting-copies"
 ]
 }
 ]
