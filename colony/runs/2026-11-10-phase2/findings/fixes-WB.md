@@ -40,3 +40,9 @@ condition (b) should carry "at spacing kappa" if this result is accepted.
   consistency checks of the cited values.
 - Extraction note: the "intended citation" sentences replaced by the two citations.
 runcheck: 5/5 pass. check4: pending (orchestrator). validate: pending (orchestrator).
+
+## Step 3 (central gate, W215)
+synthesis.counted-unit-energy-at-half-offset supported only the twist 1/2 step removed in step 2 (now the base's
+clause (ii)). Dropped from `uses` and from the premise() call in check_thermal_test_holds_at_three_points; it was not
+in coverage.yaml. No reference to it remains in the proposal. runcheck: 5/5 pass. check4, validate: pending
+(orchestrator).
