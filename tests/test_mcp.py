@@ -20,9 +20,9 @@ class McpServer(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
 
-    def call(self, msgs):
+    def call(self, msgs, *flags):
         inp = "\n".join(json.dumps(m) for m in msgs) + "\n"
-        cp = subprocess.run([sys.executable, "-m", "tp.mcp_server", "--store", self.root],
+        cp = subprocess.run([sys.executable, "-m", "tp.mcp_server", "--store", self.root, *flags],
                             input=inp, capture_output=True, text=True, cwd=LAB, timeout=120)
         return [json.loads(l) for l in cp.stdout.splitlines() if l.strip()]
 
@@ -49,10 +49,11 @@ class McpServer(unittest.TestCase):
                  "entity_md": draft, "proofs": {"proof-direct.tex": "Generators are odd."}}}},
             {"jsonrpc": "2.0", "id": 8, "method": "tools/call",
              "params": {"name": "nonsense", "arguments": {}}},
-        ])
+        ], "--maintainer")
         by = {m["id"]: m for m in out}
         self.assertEqual(len(out), 8)                     # the notification gets no reply
-        self.assertEqual(by[1]["result"]["serverInfo"]["name"], "transport-lab")
+        self.assertEqual(by[1]["result"]["serverInfo"]["name"], "physics-graph")
+        self.assertIn("conventions", by[1]["result"]["instructions"])
         names = {t["name"] for t in by[2]["result"]["tools"]}
         self.assertIn("propose_claim", names)
         hits = json.loads(by[3]["result"]["content"][0]["text"])
@@ -146,6 +147,37 @@ class McpNavigation(unittest.TestCase):
 
     def tearDown(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def test_modes_prompts_and_text(self):
+        from tp import mcp_server as M
+        local, ro, mt = M.offered("local"), M.offered("read-only"), M.offered("maintainer")
+        self.assertNotIn("propose_claim", local)
+        self.assertIn("validate_draft", local)
+        self.assertIn("propose_claim", mt)
+        for n in ("generate_doc", "regenerate_doc", "validate_draft", "propose_claim"):
+            self.assertNotIn(n, ro)
+        self.assertIn("get_claim", ro)
+        out = McpServer.call(self, [
+            {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {}},
+            {"jsonrpc": "2.0", "id": 2, "method": "tools/list"},
+            {"jsonrpc": "2.0", "id": 3, "method": "tools/call",
+             "params": {"name": "generate_doc", "arguments": {"recipe_yaml": "doc: x"}}},
+            {"jsonrpc": "2.0", "id": 4, "method": "prompts/list"},
+            {"jsonrpc": "2.0", "id": 5, "method": "prompts/get",
+             "params": {"name": "explain-result", "arguments": {"id": "fx.boost.sigma"}}},
+            {"jsonrpc": "2.0", "id": 6, "method": "prompts/get",
+             "params": {"name": "explain-result", "arguments": {}}},
+            {"jsonrpc": "2.0", "id": 7, "method": "tools/call",
+             "params": {"name": "digest", "arguments": {"subject": "algebra"}}},
+        ], "--read-only")
+        by = {m["id"]: m for m in out}
+        self.assertEqual({t["name"] for t in by[2]["result"]["tools"]}, set(ro))
+        self.assertTrue(by[3]["result"]["isError"])
+        self.assertIn("not offered", by[3]["result"]["content"][0]["text"])
+        self.assertIn("explain-result", {p["name"] for p in by[4]["result"]["prompts"]})
+        self.assertIn("fx.boost.sigma", by[5]["result"]["messages"][0]["content"]["text"])
+        self.assertIn("error", by[6])
+        self.assertTrue(by[7]["result"]["content"][0]["text"].startswith("## "))   # text, not JSON
 
     def test_neighbourhood_proof_and_digest(self):
         r = self.lab.neighbourhood("fx.boost.sigma")

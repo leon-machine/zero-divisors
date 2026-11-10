@@ -1,0 +1,9 @@
+# Everything needed to read the graph through the MCP server, check results and build the site.
+#   pip install -r requirements.txt
+pyyaml>=6.0
+jsonschema>=4.17
+# meaning-based search in search_claims (without it, search falls back to word matching);
+# it also brings numpy and scipy, which five of the papers' verify scripts use
+scikit-learn>=1.3,<2
+# the graph's layout (python -m tp.layout), which the site and the neighbourhood tool use
+networkx>=3.0

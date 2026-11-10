@@ -11,3 +11,11 @@ colony/.graph_cache_v2.pkl
 
 # per-result share pages: built when site_url is set, for the public site; not kept in git
 site/r/
+# pages that need no JavaScript (tp/static_pages.py): built by tp.site for the public host
+site/results/
+site/subjects/
+site/conventions.md
+site/open-problems.md
+site/llms.txt
+site/sitemap.xml
+site/robots.txt

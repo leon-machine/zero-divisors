@@ -43,6 +43,10 @@ taken when enough has been merged to be worth a new version.
    site's public address, so shared links and link previews use it and each result gets its share
    page `site/r/<id>.html`):
    `git checkout vX.Y.Z && python -m tp.site`, then deploy `site/`, then `git checkout main`.
+   `site/` then also holds the pages that need no JavaScript (`results/`, `subjects/`,
+   `llms.txt`, and with `site_url` set `sitemap.xml` and `robots.txt`); deploy them with the rest.
+   If the hosted MCP endpoint is running, rebuild and redeploy it from the same tag
+   (docs/HOSTING.md).
 6. If the papers' deposits changed in the same period, record them first (before step 3) with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.
 

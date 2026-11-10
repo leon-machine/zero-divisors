@@ -1,15 +1,18 @@
-"""MCP server for the Transport Lab store (stdio transport, JSON-RPC 2.0).
+"""MCP server for the Physics Graph (JSON-RPC 2.0 over stdio, or over HTTP for hosting).
 
 Run:  python -m tp.mcp_server --store store
 Register it with an MCP client (for example Claude) as a stdio server whose
-command is `python -m tp.mcp_server --store <path to store>`, with the lab
-folder as the working directory.
+command is `python -m tp.mcp_server --store <path to store>`, with the repository
+folder as the working directory (or PYTHONPATH set to it).
 
-Tools: list_programmes, list_subjects, search_claims, get_claim, cone, neighbourhood, get_proof,
-trail, digest, validate_draft,
-propose_claim, list_proposals, generate_doc, regenerate_doc.
-Proposals are written to <lab>/proposals/<id>/ with status proposed; a
-maintainer accepts them with `python -m tp accept <id>`.
+Modes:
+  (default)      every reading tool, validate_draft, and generate_doc / regenerate_doc, which
+                 write generated documents into this copy;
+  --read-only    the reading tools only, for a hosted public endpoint (tp/mcp_http.py);
+  --maintainer   also propose_claim and list_proposals, the old local review queue. Pull
+                 requests are the way in from outside (CONTRIBUTING.md).
+
+Text results (conventions, digest) are returned as text; everything else as compact JSON.
 """
 from __future__ import annotations
 
@@ -27,6 +30,7 @@ import yaml
 
 from . import derive
 from .model import ID_RE, load_store, parse_entity_text
+from .checkone import command
 from .validate import programme_of, validate
 
 PROTOCOL = "2024-11-05"
@@ -98,7 +102,7 @@ class Lab:
     # ---- tools -----------------------------------------------------------
     def neighbourhood(self, id, k=12):
         """The results nearest in the argument: direct premises and dependants,
-        then the nearest points of the universe layout (which places each result
+        then the nearest points of the graph's layout (which places each result
         near what it rests on and what rests on it)."""
         if id not in self.store.entities:
             raise ValueError(f"no entity {id!r}")
@@ -113,9 +117,9 @@ class Lab:
             p = self.pos[id]
             dist = sorted((math.dist(p, q), x) for x, q in self.pos.items()
                           if x != id and x not in prem and x not in dep)
-            near = [self._summary(x, round(d, 3)) for d, x in dist[:int(k)]]
-        return {"rests_on": [self._summary(x) for x in prem if x in self.store.entities],
-                "used_by": [self._summary(x) for x in dep],
+            near = [self._brief(x, round(d, 3)) for d, x in dist[:int(k)]]
+        return {"rests_on": [self._brief(x) for x in prem if x in self.store.entities],
+                "used_by": [self._brief(x) for x in dep],
                 "nearby": near}
 
     STEP_SPLIT = re.compile(r"\n\s*\n|(?<=[.:;])\s+(?=\((?:[1-9]|i{1,3}|iv|v|vi{0,3})\)\s)"
@@ -178,28 +182,38 @@ class Lab:
         for t in _trails(os.path.join(self.lab, "documents")):
             if t["subject"] == subject or t["id"] == subject:
                 for s in t["steps"]:
-                    s.update(self._summary(s["id"]))
+                    s.update(self._brief(s["id"]))
                 return t
         raise ValueError(f"no trail for {subject!r}; subjects: "
                          + ", ".join(x["id"] for x in self.store.subjects))
 
-    def digest(self, subject, level="technical", limit=60):
+    def digest(self, subject, level="technical", limit=60, include_notes=False):
         """A subject as Markdown for reading in one go: each result's statement or
-        level text, its premises, and its proof, in dependency order."""
+        level text, its premises, and its proof, in dependency order. Notes (the papers'
+        running text, remarks, examples) are left out unless include_notes is set."""
         if level not in ("formal", "technical", "lay", "one-liner"):
             raise ValueError("level must be formal, technical, lay or one-liner")
-        ids = [x for x, e in self.store.entities.items() if e.meta.get("subject") == subject]
+        if not any(x["id"] == subject for x in self.store.subjects):
+            raise ValueError(f"no subject {subject!r}; list_subjects gives them")
+        ids = [x for x, e in self.store.entities.items() if e.meta.get("subject") == subject
+               and (include_notes or e.kind != "note")]
         if not ids:
             raise ValueError(f"no subject {subject!r}")
         order = [x for x in derive.topo_order(self.graph, self.store.entities.keys()) if x in ids]
         out = []
+        if len(order) > int(limit):
+            out.append(f"_{len(order)} entries in this subject; the first {int(limit)} in "
+                       "dependency order follow (raise limit for more)._\n")
         for x in order[:int(limit)]:
             e = self.store.entities[x]
+            text = (e.levels.get(level) or "").strip()
+            if e.kind == "note" or not text or text == "pending":
+                text = (e.levels.get("formal") or "").strip()
             prem = sorted({p.split("@")[0] for d in e.derivations() if isinstance(d, dict)
                            for p in (d.get("uses") or []) + (d.get("assumes") or [])})
             out.append(f"## {e.title}\n`{x}` · {e.status}"
                        + (f" · holds given {', '.join(self.conds.get(x, []))}" if self.conds.get(x) else "")
-                       + f"\n\n{(e.levels.get(level) or '').strip()}\n"
+                       + f"\n\n{text}\n"
                        + (f"\nRests on: {', '.join(prem)}\n" if prem else "")
                        + "".join(f"\n**{k}**\n{v.strip()}\n" for k, v in e.proofs.items() if v.strip()))
         return "\n".join(out)
@@ -415,19 +429,19 @@ class Lab:
         op = next((o for o in self.store.open_problems or [] if o.get("id") == id), None)
         if op is None:
             raise ValueError(f"no open problem {id!r}; list_open_problems lists them")
-        ents = [self._summary(x) if x in self.store.entities else {"id": x, "error": "no such entity"}
+        ents = [self._brief(x) if x in self.store.entities else {"id": x, "error": "no such entity"}
                 for x in op.get("entities") or []]
         work = [eid for eid, e in self.store.entities.items()
                 if ((e.meta.get("extraction") or {}).get("open_problem") == id)]
         return {"problem": op, "entities": ents, "work_in_store": work}
 
     def search_claims(self, query, subject=None, status=None, limit=10, tag=None,
-                      include_notes=False, programme=None):
+                      include_notes=False, programme=None, fields=None):
         q = TOKEN.findall((query or "").lower())
         if not q:   # no words: list what the filters select
             return self.list_entities(subject=subject, tag=tag, status=status,
                                       include_notes=include_notes, programme=programme,
-                                      sort_by="future_cone_size", limit=limit)["results"]
+                                      sort_by="future_cone_size", limit=limit, fields=fields)["results"]
         N = len(self.docs)
         scores = []
         for eid, c in self.docs.items():
@@ -462,7 +476,7 @@ class Lab:
             if b > 0 or sem.get(eid, 0) > 0.35:
                 ranked.append((v, eid))
         ranked.sort(reverse=True)
-        return [self._summary(eid, round(v, 3)) for v, eid in ranked[:int(limit)]]
+        return [self._brief(eid, round(v, 3), fields) for v, eid in ranked[:int(limit)]]
 
     def _semantic_scores(self, query):
         """Cosine similarity in a latent semantic space (TF-IDF reduced by SVD)
@@ -486,6 +500,21 @@ class Lab:
             return {i: float(x) for i, x in zip(ids, sims)}
         except Exception:
             return {}
+
+    BRIEF = ("id", "title", "kind", "status", "effective_status", "subject", "one_liner", "evidence",
+             "holds_given", "used_by", "past_cone_size", "future_cone_size", "score")
+
+    def _brief(self, eid, score=None, fields=None):
+        """The summary the list-style tools return by default: what an agent needs to choose
+        what to read next. Empty values and an effective status equal to the status are left
+        out; get_claim, get_claims or fields give the rest."""
+        if fields:
+            return self._summary(eid, score, fields)
+        full = self._summary(eid, score)
+        out = {k: full[k] for k in self.BRIEF if k in full and full[k] not in (None, [], {}, "none")}
+        if out.get("effective_status") == out.get("status"):
+            out.pop("effective_status", None)
+        return out
 
     def _summary(self, eid, score=None, fields=None):
         e = self.store.entities[eid]
@@ -559,14 +588,15 @@ class Lab:
                             "programme": programme_of(self.store, e),
                             "holds_given": self.conds.get(id, []),
                             "evidence": self.checks.get(id),
+                            "check_command": (command(id) if e.meta.get("checked_by") else None),
                             "past_cone_size": len(self.past.get(id, ())),
                             "future_cone_size": len(self.future.get(id, ()))}}
 
-    def cone(self, id, direction="past", limit=200):
+    def cone(self, id, direction="past", limit=200, fields=None):
         if id not in self.store.entities:
             raise ValueError(f"no entity {id!r}")
         ids = self.past[id] if direction == "past" else self.future[id]
-        return [self._summary(x) for x in sorted(ids)[:int(limit)]]
+        return [self._brief(x, fields=fields) for x in sorted(ids)[:int(limit)]]
 
     PROOF_NAME = re.compile(r"^proof-[A-Za-z0-9_-]{1,60}\.tex$")
     SAFE_LAYERS = (1, 2, 3, 5)      # layer 4 runs code; it runs at review, never over MCP
@@ -664,8 +694,9 @@ class Lab:
                "findings": credit_findings + [{"code": f.code, "severity": f.severity, "entity": f.entity,
                                                "message": f.message, "fix": f.fix} for f in new]}
         if check_py:
-            out["note"] = ("check.py was stored but not run: evidence checks run when a "
-                           "maintainer reviews the proposal")
+            out["note"] = ("check.py was not run (validate_draft never runs code). Put the folder "
+                           "under store/ in your copy and run `python -m tp check-one <id> --store "
+                           "store`; the pull request's checks run it again")
         return out
 
     def propose_claim(self, entity_md, proofs=None, check_py=None, author="ai"):
@@ -768,11 +799,13 @@ TOOLS = [
                          "attack, what would settle it, the entities to start from, and work "
                          "already filed against it.", {"id": {"type": "string"}}, ["id"]),
     ("search_claims", "Search claims by text (titles and all four levels); filter by "
-                      "subject, status, tag or programme.",
+                      "subject, status, tag or programme. Each hit is a brief summary; fields "
+                      "picks summary fields instead (get_claims lists them).",
      {"query": {"type": "string"}, "subject": {"type": "string"}, "tag": {"type": "string"},
       "programme": {"type": "string"},
       "include_notes": {"type": "boolean"},
-      "status": {"type": "string"}, "limit": {"type": "integer"}}, ["query"]),
+      "status": {"type": "string"}, "limit": {"type": "integer"},
+      "fields": {"type": "array", "items": {"type": "string"}}}, ["query"]),
     ("get_claim", "One entity: front matter, levels, proofs and derived fields "
                   "(effective status, ledger, postulates it holds given, evidence), and "
                   "the notes on it (settings from the paper's text, remarks, examples): "
@@ -780,11 +813,11 @@ TOOLS = [
                   "itself be passed to get_claim.",
      {"id": {"type": "string"}, "notes_text": {"type": "boolean"}}, ["id"]),
     ("cone", "The past cone (everything an entity rests on) or future cone "
-             "(everything resting on it).",
+             "(everything resting on it), as brief summaries; fields picks summary fields.",
      {"id": {"type": "string"}, "direction": {"type": "string", "enum": ["past", "future"]},
-      "limit": {"type": "integer"}}, ["id"]),
+      "limit": {"type": "integer"}, "fields": {"type": "array", "items": {"type": "string"}}}, ["id"]),
     ("neighbourhood", "What a result rests on, what rests on it, and the nearest other "
-                      "results in the universe layout: the quickest way to explore around it.",
+                      "results in the graph's layout: the quickest way to explore around it.",
      {"id": {"type": "string"}, "k": {"type": "integer"}}, ["id"]),
     ("get_proof", "A result's statement, derivations and proofs cut into steps, each with "
                   "the results it cites; premises the text never cites; sources and the "
@@ -792,11 +825,14 @@ TOOLS = [
     ("trail", "The guided walk through one subject: ordered steps with explanatory prose.",
      {"subject": {"type": "string"}}, ["subject"]),
     ("digest", "A whole subject as Markdown in dependency order, with statements, "
-               "premises and proofs, for reading in one go.",
+               "premises and proofs, for reading in one go. level is formal, technical "
+               "(default), lay or one-liner; notes are left out unless include_notes.",
      {"subject": {"type": "string"}, "level": {"type": "string"},
-      "limit": {"type": "integer"}}, ["subject"]),
+      "limit": {"type": "integer"}, "include_notes": {"type": "boolean"}}, ["subject"]),
     ("validate_draft", "Validate a draft entity.md (plus optional proof files and "
-                       "check.py) against the store without changing it.",
+                       "check.py) against the store without changing it: layers 1 to 3 "
+                       "(and 5 on request) of the rules a pull request is checked by. It never "
+                       "runs check.py; `python -m tp check-one ID` does that locally.",
      {"entity_md": {"type": "string"}, "proofs": {"type": "object"},
       "check_py": {"type": "string"}, "layers": {"type": "string"}}, ["entity_md"]),
     ("propose_claim", "Validate and, if clean, file a draft as a proposal for "
@@ -804,46 +840,148 @@ TOOLS = [
      {"entity_md": {"type": "string"}, "proofs": {"type": "object"},
       "check_py": {"type": "string"}, "author": {"type": "string"}}, ["entity_md"]),
     ("list_proposals", "Proposals waiting for review.", {}),
-    ("generate_doc", "Generate and store a document from a recipe (YAML text).",
+    ("generate_doc", "Generate and store a document from a recipe (YAML text), in this "
+                     "copy of the repository.",
      {"recipe_yaml": {"type": "string"}}, ["recipe_yaml"]),
     ("regenerate_doc", "Regenerate a stored document from its last version.",
      {"doc_id": {"type": "string"}}, ["doc_id"]),
 ]
 
 
-def tool_list():
+# which tools each mode offers: the hosted endpoint only reads; the old proposal queue is the
+# maintainer's own (pull requests are the way in from outside)
+WRITING = {"generate_doc", "regenerate_doc"}
+HEAVY = {"validate_draft"}                 # copies the whole store per call
+MAINTAINER = {"propose_claim", "list_proposals"}
+
+
+def offered(mode="local"):
+    names = [t[0] for t in TOOLS]
+    if mode == "read-only":
+        return [n for n in names if n not in WRITING | HEAVY | MAINTAINER]
+    if mode == "maintainer":
+        return names
+    return [n for n in names if n not in MAINTAINER]
+
+
+def tool_list(mode="local"):
+    keep = set(offered(mode))
     out = []
     for t in TOOLS:
         name, desc, props = t[0], t[1], t[2]
+        if name not in keep:
+            continue
         req = t[3] if len(t) > 3 else []
         out.append({"name": name, "description": desc,
                     "inputSchema": {"type": "object", "properties": props, "required": req}})
     return out
 
 
-def handle(lab, msg):
+INSTRUCTIONS = (
+    "The Physics Graph: every result of the Transport Papers as an entry with its statement at four "
+    "levels, its proof, the results it rests on and a machine check, written in geometric algebra. "
+    "Call `conventions` first, before reading or writing anything: it explains the notation, the two "
+    "imaginary units and how results are stored. Then `search_claims` or `list_subjects` to find a "
+    "way in, `get_claim` / `get_proof` / `neighbourhood` to read and move around, and "
+    "`list_open_problems` for what is open. Pitch explanations at the user's level. New results and "
+    "corrections come in as pull requests to github.com/leon-machine/phys-graph (CONTRIBUTING.md).")
+
+# prompts: one-click starting points that clients show to the user
+PROMPTS = [
+    ("explain-result", "Explain one result at your level, with what it rests on.",
+     [("id", "the result's id, or a few words naming it", True),
+      ("level", "beginner, student or expert", False)],
+     "Call conventions first. Then find the result {id} (search_claims if it is not an id) and read it "
+     "with get_claim and get_proof. Explain it to me at {level} level: what it says, why it matters, "
+     "and the proof's idea. List what it rests on, marking which premises are proved and which are "
+     "postulated or imported (holds_given), and say how it is machine-checked (check_command)."),
+    ("audit-result", "Trace everything a result assumes and look for weak points.",
+     [("id", "the result's id", True)],
+     "Call conventions first. For the result {id}, read get_claim, get_proof and cone (past). Report "
+     "every postulate and imported fact it holds given, any premise its proof lists but never cites, "
+     "and any step that looks unjustified. Say which checks cover it and which parts are only "
+     "checked at samples. Be specific and sceptical: the aim is to find errors, not to praise."),
+    ("attack-open-problem", "Pick up an open problem and plan an attack on it.",
+     [("id", "an open problem id (op.*), or leave empty to choose a tractable one", False)],
+     "Call conventions first. If {id} is empty, call list_open_problems with difficulty tractable and "
+     "pick one; otherwise call get_open_problem for {id}. Read the entities it starts from. Summarise "
+     "what is known, then propose a concrete route: the result you would try to prove, in geometric "
+     "algebra, what it would rest on, and the exact check.py you would write. Contributions go in as "
+     "a pull request (CONTRIBUTING.md); validate_draft checks a draft first."),
+    ("tour", "A guided tour of the graph for a newcomer.",
+     [("interest", "what draws you: black holes, dark matter, the algebra, particles...", False)],
+     "Call conventions first. Then give me a short tour of the Physics Graph, starting from the "
+     "geometric algebra at its core and heading towards {interest}. Use list_subjects and trail to pick "
+     "the path, show me five or six key results with their one-line statements, and tell me which "
+     "are proved, which are assumed and which are predictions that data could refute."),
+]
+
+
+def prompt_list():
+    return [{"name": n, "description": d,
+             "arguments": [{"name": a, "description": ad, "required": r} for a, ad, r in args]}
+            for n, d, args, _ in PROMPTS]
+
+
+def prompt_get(name, arguments):
+    for n, d, args, text in PROMPTS:
+        if n == name:
+            vals = {a: str((arguments or {}).get(a) or "") for a, _, _ in args}
+            for a, _, r in args:
+                if r and not vals[a]:
+                    raise ValueError(f"prompt {name} needs {a}")
+            vals.setdefault("level", "")
+            if "level" in vals and not vals["level"]:
+                vals["level"] = "an interested non-specialist's"
+            if "interest" in vals and not vals["interest"]:
+                vals["interest"] = "whatever is most surprising"
+            return {"description": d, "messages": [
+                {"role": "user", "content": {"type": "text", "text": text.format(**vals)}}]}
+    raise ValueError(f"unknown prompt {name}")
+
+
+def as_text(res):
+    """Text results go out as text; the rest as compact JSON (no indentation: it roughly halves
+    what an agent reads, and agents parse it as easily)."""
+    if isinstance(res, str):
+        return res
+    return json.dumps(res, ensure_ascii=False, default=str)
+
+
+def handle(lab, msg, mode="local"):
     mid, method, params = msg.get("id"), msg.get("method"), msg.get("params") or {}
     if method == "initialize":
         return {"jsonrpc": "2.0", "id": mid, "result": {
             "protocolVersion": params.get("protocolVersion", PROTOCOL),
-            "capabilities": {"tools": {"listChanged": False}},
-            "serverInfo": {"name": "transport-lab", "version": "1.0"}}}
+            "capabilities": {"tools": {"listChanged": False}, "prompts": {"listChanged": False}},
+            "serverInfo": {"name": "physics-graph", "title": "Zero Divisors: Physics Graph",
+                           "version": "1.0"},
+            "instructions": INSTRUCTIONS}}
     if method in ("notifications/initialized", "notifications/cancelled"):
         return None
     if method == "ping":
         return {"jsonrpc": "2.0", "id": mid, "result": {}}
     if method == "tools/list":
-        return {"jsonrpc": "2.0", "id": mid, "result": {"tools": tool_list()}}
+        return {"jsonrpc": "2.0", "id": mid, "result": {"tools": tool_list(mode)}}
+    if method == "prompts/list":
+        return {"jsonrpc": "2.0", "id": mid, "result": {"prompts": prompt_list()}}
+    if method == "prompts/get":
+        try:
+            return {"jsonrpc": "2.0", "id": mid,
+                    "result": prompt_get(params.get("name"), params.get("arguments"))}
+        except ValueError as exc:
+            return {"jsonrpc": "2.0", "id": mid, "error": {"code": -32602, "message": str(exc)}}
     if method == "tools/call":
         name, args = params.get("name"), params.get("arguments") or {}
         try:
-            if name not in {t[0] for t in TOOLS}:
-                raise ValueError(f"unknown tool {name}")
+            if name not in offered(mode):
+                raise ValueError(f"unknown tool {name}" if name not in {t[0] for t in TOOLS}
+                                 else f"{name} is not offered by this server")
             res = getattr(lab, name)(**args)
             if name in ("propose_claim", "generate_doc", "regenerate_doc"):
                 lab.reload()
             return {"jsonrpc": "2.0", "id": mid, "result": {
-                "content": [{"type": "text", "text": json.dumps(res, indent=1, default=str)}]}}
+                "content": [{"type": "text", "text": as_text(res)}]}}
         except Exception as exc:
             return {"jsonrpc": "2.0", "id": mid, "result": {
                 "content": [{"type": "text", "text": f"{type(exc).__name__}: {exc}"}],
@@ -857,7 +995,11 @@ def handle(lab, msg):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--store", default="store")
+    g = ap.add_mutually_exclusive_group()
+    g.add_argument("--read-only", action="store_true", help="reading tools only (a public endpoint)")
+    g.add_argument("--maintainer", action="store_true", help="also the local proposal queue")
     a = ap.parse_args(argv)
+    mode = "read-only" if a.read_only else "maintainer" if a.maintainer else "local"
     lab = Lab(a.store)
     for line in sys.stdin:
         line = line.strip()
@@ -869,7 +1011,7 @@ def main(argv=None):
             out = {"jsonrpc": "2.0", "id": None,
                    "error": {"code": -32700, "message": "parse error"}}
         else:
-            out = handle(lab, msg)
+            out = handle(lab, msg, mode)
         if out is not None:
             sys.stdout.write(json.dumps(out) + "\n")
             sys.stdout.flush()
