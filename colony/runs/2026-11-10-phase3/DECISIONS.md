@@ -31,3 +31,20 @@ Third round (10 November).
 8. Primordial spectrum (after the referee): keep "no mechanism". The spectrum stays free initial data; the open
    problem records what was examined, labelled argued, and the rule that a future index match counts only with a
    second number.
+
+Fourth round (10 November, before the maintainer pass).
+
+9. R3's unit of thickness: each tower's own cell radius (the store's literal wording and the convention of the
+   thickness function). R2 therefore also supplies R3's unit and stays a premise of the total; the unit-ball
+   reduction is recorded as holding only in the fixed-common-length reading, which is not adopted.
+10. Dark-matter re-typings, apply all: retire P4 as a postulate (repoint its assumes edges to the stored theorem that
+    proves the instance used, after giving that theorem's clause its actual premises); re-type U as a definition and
+    the six simulation premises as model specification with S2 and C as exclusive readings; stop counting D with R1
+    to R3 (D with R1 and R2 forces one quantum per de Sitter ball; D belongs to the de Sitter reading); split P1
+    into its three clauses. The flag premise is left alone.
+11. Field-space premise: add assumes edges on the action results that state field equations with matter, so the cone
+    shows what a confirmed w different from -1 would take.
+12. Conventions text, as drafted: "Gravity in this series is the classical gauge field of Gauge Theory Gravity. The
+    series holds no quantum of that field: the graviton does not exist here. Where stored text says graviton it names
+    a helicity-2 channel of the classical field, a counting convention, or prior art; no stored result is to be read
+    as resting on a quantised gravitational field, and results that import such a process are flagged."
