@@ -1,0 +1,25 @@
+functions:
+  check_two_vacua_at_one_level_and_two_values_of_n:
+    kind: sampled
+    clauses:
+    - "(i), (ii) both frames have m = 2080, lie inside (0, H), and are critical along the lift family at the one level 171808/9 with positive second derivative; N^2 = 441 and 256"
+    omits: "criticality in the directions off the lift family and the Hessian masses are the stored theorem's, not recomputed; two models and one choice of couplings"
+  check_dimensionless_spectrum_equal_and_weak_scale_moves_only_through_h4:
+    kind: sampled
+    clauses:
+    - "(ii) equal ratios 16/25, 413/125, 368/125; N* = 3104, 4481; difference of squares H_B^4 - H_A^4"
+    - "(ii) realistic sizes: relative change of (v/M_P)^4 between 2 x 10^-177 and 10^-176"
+  check_stored_relations_with_n_hold_in_both_models:
+    kind: sampled
+    clauses:
+    - "(iii) Q(I) = H^2 in Cl(2,4); G Lambda = 3 N^-2; A/4G = pi N^2; Casimir identity; G v^2 N^2 = (v/H)^2; N^2 ratio (21/16)^2"
+    omits: "that no further stored relation contains N is argued from the search in the extraction note; the promoted solution space is cited"
+  check_isometry_and_rescaling_join_the_two_frozen_points:
+    kind: sampled
+    clauses:
+    - "(iv) a versor of Cl(2,4) fixing the spacetime vectors carries I at norm H_A^2 to (H_A/H_B) I at norm H_B^2, for three pairs of rational norms"
+    omits: "the general transitivity is the two-reflection argument of the text"
+untouched_premises:
+  synthesis.promoted-norm-one-global-pair: "cited in (iii) for the promoted solution space; nothing to compute"
+  synthesis.einstein-route-makes-n-initial-data: "cited in (iii); nothing to compute"
+  dark-energy.under-action-written-norm-parameter-laws: "cited in (iii) for the family of theories; nothing to compute"

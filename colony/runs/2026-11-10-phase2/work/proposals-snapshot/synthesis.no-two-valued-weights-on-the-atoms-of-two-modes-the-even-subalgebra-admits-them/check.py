@@ -93,6 +93,7 @@ def check_eighteen_atoms_in_nine_contexts_admit_no_two_valued_weight():
         q = pi[r]
         assert prod(q, q) == q and clean(dagger(q)) == q and s0(q) == F(1, 4)
         assert all(prod(q, b, q) == clean(GA.scal(4 * s0(prod(q, b)), q)) for b in blades)
+    assert pi[(1, 1, 1, 1)].get((0,), F(0)) == F(1, 4)
     for b in BASES:
         assert lin(*[(1, pi[r]) for r in b]) == ONE
         assert all(prod(pi[r], pi[t]) == {} for r in b for t in b if r != t)
