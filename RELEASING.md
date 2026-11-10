@@ -29,8 +29,11 @@ taken when enough has been merged to be worth a new version.
 3. Draft the release notes: `python -m tp release-notes vX.Y.Z`. It writes `releases/vX.Y.Z.md`,
    listing the results added, the corrections and restatements (each with the defect it fixed and
    who made it), other revisions, the results retired and everyone credited for the first time,
-   all compared with the previous release. Add a line or two on the main changes where the comment
-   says, then `python -m tp.site` and commit both. The site shows every file in `releases/` on its
+   all compared with the previous release. The same command adds every person credited in the
+   store, other than the creators, to `contributors` in `.zenodo.json` (type Researcher, with the
+   ORCID iD from their credit entry), leaving AI models out and keeping the entries already there;
+   it prints the names it added, so check them. Add a line or two on the main changes where the
+   comment says, then `python -m tp.site` and commit the notes, `.zenodo.json` and the site. The site shows every file in `releases/` on its
    Release notes page (from the Physics Graph menu).
 4. On GitHub, Releases, Draft a new release: the tag from step 2, on `main`; paste the notes file
    (without its first line) as the description, and optionally Generate release notes below it for
@@ -40,7 +43,21 @@ taken when enough has been merged to be worth a new version.
    site's public address, so shared links and link previews use it and each result gets its share
    page `site/r/<id>.html`):
    `git checkout vX.Y.Z && python -m tp.site`, then deploy `site/`, then `git checkout main`.
+   `site/` then also holds the pages that need no JavaScript (`results/`, `subjects/`,
+   `llms.txt`, and with `site_url` set `sitemap.xml` and `robots.txt`); deploy them with the rest.
+   If the hosted MCP endpoint is running, rebuild and redeploy it from the same tag
+   (docs/HOSTING.md).
 6. If the papers' deposits changed in the same period, record them first (before step 3) with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.
+
+## A long contributor list
+
+Zenodo publishes no limit on contributors, but DataCite Commons shows only the first 20, and a
+list of hundreds is hard to check or edit by hand. `tp release-notes` warns once `.zenodo.json`
+lists more than 300 (`CONTRIBUTORS_WARN` in `tp/releases.py`). Nothing is cut automatically; the
+choices then are to list on Zenodo only those credited for a correction, restatement or new result,
+or to write the full list to a file in the archive and keep one group entry on Zenodo pointing to
+it. Either way every person stays credited on their own results. Rehearse a long list on
+sandbox.zenodo.org before the first real release that carries one.
 
 The history of the repository before its first public release is not kept.

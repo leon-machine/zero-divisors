@@ -124,6 +124,19 @@ def _note_texts(e):
 DASH_RE = re.compile(r"—|(?<![-!])---(?!-)")
 
 
+ORCID_RE = re.compile(r"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$")
+
+
+def orcid_ok(oid):
+    """The ISO 7064 mod 11-2 check digit of an ORCID iD."""
+    digits = oid.replace("-", "")
+    total = 0
+    for ch in digits[:-1]:
+        total = (total + int(ch)) * 2
+    check = (12 - total % 11) % 11
+    return digits[-1] == ("X" if check == 10 else str(check))
+
+
 def layer1(store: Store, rep: Report):
     banned = [w.lower() for w in
               (store.config.get("house_style") or {}).get("banned_words", [])]
@@ -143,6 +156,11 @@ def layer1(store: Store, rep: Report):
         if tl > TITLE_MAX:
             rep.add("E124", eid, f"title is {tl} characters, over {TITLE_MAX}: it states the result instead of naming it",
                     "write a short name, as a theorem is named in a paper; the claim itself goes in the one-liner and formal levels")
+        for c in e.meta.get("credit") or []:
+            oid = c.get("orcid") if isinstance(c, dict) else None
+            if isinstance(oid, str) and ORCID_RE.match(oid) and not orcid_ok(oid):
+                rep.add("E125", eid, f"credit: the ORCID iD {oid} of {c.get('name')} fails its check digit",
+                        "copy the iD from the person's orcid.org page")
         if e.kind in STATUSES and e.status not in STATUSES[e.kind]:
             rep.add("E105", eid, f"status '{e.status}' is not allowed for a {e.kind}",
                     f"use one of {', '.join(STATUSES[e.kind])}")

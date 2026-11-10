@@ -1,4 +1,4 @@
-# Conventions of the Transport Lab store
+# Conventions of the Physics Graph
 
 Read this before working with the store. It says what the entities are, what
 the links mean, which numbers the build computes for you, and the
@@ -433,10 +433,11 @@ gravitational field, and results that import such a process are flagged.
   `check.py` in exact arithmetic that imports GA and reaches premises through
   `premise()`), and check it with `validate_draft` until it is clean.
   `validate_draft` runs layers 1 to 3 (and 5 on request); it never runs
-  `check.py`, so run `python -m tp check --store store --layers 4` locally.
-  From outside the repository the way in is a pull request adding the folders
-  under `store/`, where CI runs all six layers; `propose_claim` only files the
-  draft under `proposals/` in this copy, for a maintainer here to accept.
+  `check.py`, so put the folder under `store/` in your copy and run
+  `python -m tp check-one <id> --store store` (every result's `check_command`
+  in `get_claim` is the same command). The way in is a pull request adding
+  the folders under `store/`, where CI runs all six layers. A hosted
+  read-only server offers the reading tools only; contributing needs a clone.
   Write `ai_involved` as `'yes'`, `'no'` or `'unknown'` in quotes. CONTRIBUTING.md
   in the repository has the full rules, and docs/example-contribution/ a worked
   example.

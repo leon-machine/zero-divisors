@@ -94,6 +94,16 @@ class Layer1Shape(StoreCase):
         self.edit("fx.witt.car", "title: ", "title: " + "a title that runs on and on " * 4)
         self.assertFires("E124", (1,))
 
+    def test_E125_orcid_check_digit(self):
+        self.edit("fx.witt.car", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: Ada Lovelace\n  role: idea\n  orcid: 0000-0002-1825-0098\n")
+        self.assertFires("E125", (1,))
+
+    def test_orcid_well_formed(self):
+        self.edit("fx.witt.car", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: Ada Lovelace\n  role: idea\n  orcid: https://orcid.org/0000-0002-1825-0097\n")
+        self.assertFires("E116", (1,))
+
     def test_E104_bad_kind(self):
         self.edit("fx.witt.car", "kind: claim", "kind: lemma")
         self.assertFires("E104")

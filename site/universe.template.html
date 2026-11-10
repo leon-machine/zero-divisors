@@ -391,6 +391,14 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   /* the Singularity fills the screen below the header (its own page scrolls inside the frame) */
   .view.story.on { display: flex; height: calc(100dvh - var(--hdrh, 120px)); }
 }
+/* phones: the views get a row of their own under the name and the buttons, so more than one
+   of them shows without scrolling */
+@media (max-width: 600px) {
+  header { flex-wrap: wrap; height: auto; row-gap: 6px; padding-bottom: 6px; }
+  nav { order: 5; flex: 1 0 100%; }
+  #sharebtn { margin-left: auto; }
+  nav a { padding: 5px 8px; font-size: 13px; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -634,6 +642,17 @@ function txFindEnd(s, i, env) {
   return null;
 }
 // a claim title as plain words for use inside \text{..}
+// a title with TeX in it, as plain text for the canvas labels (MathJax cannot reach a canvas):
+// "(R$_{\mathrm{loc}}$)" reads "(R_loc)", "$\Lambda$" reads "Λ"
+const TEX_CH = { alpha: "α", beta: "β", gamma: "γ", delta: "δ", epsilon: "ε", varepsilon: "ε", zeta: "ζ", eta: "η", theta: "θ",
+  kappa: "κ", lambda: "λ", mu: "μ", nu: "ν", xi: "ξ", pi: "π", rho: "ρ", sigma: "σ", tau: "τ", phi: "φ", varphi: "φ", chi: "χ",
+  psi: "ψ", omega: "ω", Gamma: "Γ", Delta: "Δ", Theta: "Θ", Lambda: "Λ", Xi: "Ξ", Pi: "Π", Sigma: "Σ", Phi: "Φ", Psi: "Ψ",
+  Omega: "Ω", infty: "∞", to: "→", times: "×", cdot: "·", pm: "±", leq: "≤", le: "≤", geq: "≥", ge: "≥", neq: "≠", ne: "≠",
+  approx: "≈", sim: "~", in: "∈", ell: "ℓ", hbar: "ħ", partial: "∂", nabla: "∇", wedge: "∧", otimes: "⊗", oplus: "⊕" };
+const canvasText = t => String(t || "").indexOf("$") < 0 && String(t || "").indexOf("\\") < 0 ? String(t || "") : String(t)
+  .replace(/\\(?:mathrm|mathbf|mathcal|mathbb|operatorname|text|textrm|mathsf|boldsymbol)\s*\{([^{}]*)\}/g, "$1")
+  .replace(/\\([A-Za-z]+)/g, (m, w) => TEX_CH[w] || (DATA.notation && DATA.notation[w] ? String(DATA.notation[w]).replace(/\\[A-Za-z]+\{([^{}]*)\}/g, "$1").replace(/[\\{}]/g, "") : w))
+  .replace(/[{}$]/g, "").replace(/\s+/g, " ").trim();
 const txPlainTitle = id => String((byId.get(id) || NOTES[id] || { title: id }).title).replace(/[\\{}$%#&^_~]/g, "");
 // tidy maths for MathJax: equation labels and stray references go; a \claimref becomes its title
 // (also: \qedhere goes, booktabs rules in an array become \hline, and the mathtools
@@ -1278,7 +1297,7 @@ function draw() {
   const placed = [];
   for (const id of labels) {
     const n = byId.get(id), p = proj.get(id); if (!n || !visible(n)) continue;
-    let t = n.title; if (t.length > 46) t = t.slice(0, 44) + "…";
+    let t = canvasText(n.title); if (t.length > 46) t = t.slice(0, 44) + "…";
     const w = ctx.measureText(t).width, x = p.x + 9, y = p.y;
     if (placed.some(q => Math.abs(q.y - y) < 15 && x < q.x + q.w && q.x < x + w)) continue;
     placed.push({ x, y, w });
@@ -2049,7 +2068,7 @@ const byline = n => { const cr = n.credit || []; if (!cr.length) return "";
 const GA_KIND = { imported: "an imported result, stated in its source's language", "complex-analysis": "complex analysis or Hilbert-space structure", bridge: "a bridge to the standard formalism", other: "" };
 const gaNote = n => n.outside_ga ? `<p class="note">Stated outside geometric algebra${GA_KIND[n.outside_ga.kind] ? ": " + esc(GA_KIND[n.outside_ga.kind]) : ""}. ${esc(n.outside_ga.why)}${/[.!?]$/.test(n.outside_ga.why) ? "" : "."}</p>` : "";
 const amendNote = n => (n.amendments || []).length ? `<p class="note">Amendments:</p><ul class="hist">${[...n.amendments].sort((a, b) => a.version - b.version).map(a => `<li><span class="v">v${esc(a.version)}</span><span><b>${a.kind === "restatement" ? "Restatement" : "Correction"}</b>${(() => { const by = (n.credit || []).filter(c => c.version === a.version).map(c => c.name); return by.length ? " by " + by.map(esc).join(", ") : ""; })()}: ${esc(a.defect)}${a.evidence ? ` (shown by <code>${esc(a.evidence)}</code>)` : ""}</span></li>`).join("")}</ul>` : "";
-const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
+const creditNote = n => (n.credit || []).length ? `<p class="note">Credit: ${n.credit.map(c => `${c.orcid ? `<a href="https://orcid.org/${esc(c.orcid)}" target="_blank" rel="noopener" title="ORCID ${esc(c.orcid)}">${esc(c.name)}</a>` : esc(c.name)} (${esc(c.role)}${c.version ? `, version ${c.version}` : ""}${c.source ? `; source: ${esc(c.source)}` : ""})`).join("; ")}.</p>` : "";
 // a result's title as its heading; some titles are whole statements, so a long one is set smaller and held to
 // three lines, with a control to show it in full (the statement itself follows below in any case)
 function titleHead(t) {
@@ -2742,7 +2761,7 @@ const TOOL_GROUPS = [
   ["Find", ["search_claims", "find_text", "list_entities", "get_claims"]],
   ["Read and follow", ["get_claim", "get_proof", "cone", "neighbourhood", "trail", "digest"]],
   ["Open problems", ["list_open_problems", "get_open_problem"]],
-  ["Check and submit", ["validate_draft", "propose_claim", "list_proposals"]],
+  ["Check a draft", ["validate_draft"]],
   ["Documents", ["generate_doc", "regenerate_doc"]]];
 let pendingAnchor = null;
 function renderContribute() {
@@ -2758,17 +2777,22 @@ function renderContribute() {
     <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
     <div class="ways">
       <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>
-      <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer.</p></div>
+      <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer: <code>python -m tp check-one &lt;id&gt; --store store</code>.</p></div>
       <div><b>Build</b><p>Take an open problem, a weak check or a gap you have found, write a new result in the graph's form, and send it. <a href="#contribute/build">How to contribute</a></p></div>
     </div>
 
     <h3>Set up</h3>
-    <p>Python 3.11 or later, then:</p>
-    ${code(`git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install pyyaml jsonschema        # scikit-learn as well, for meaning-based search`)}
+    ${DATA.mcp_url ? `<p><b>With nothing to install.</b> Add this address to your AI as a remote MCP server (in claude.ai, a custom connector; other apps that take an MCP server by its address work the same way):</p>
+    ${code(DATA.mcp_url)}
+    <p>It offers every reading tool. To check a draft or contribute, set it up on your own computer as below.</p>` : ""}
+    <p><b>An AI that can read the web</b> can also read the graph without connecting anything: point it at <a href="llms.txt">llms.txt</a>, which lists the conventions, every subject as one file in dependency order, and a page for every result.</p>
+    <p><b>On your own computer</b> (needed to check drafts and contribute): Python 3.11 or later, then:</p>
+    ${code(`git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`)}
     <p><b>Claude Code</b>, from the repository folder:</p>
     ${code(`claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}
     <p><b>The Claude desktop app, or any client that runs stdio MCP servers</b>: add this to its server list, with your own path. On Windows, <code>register_mcp.ps1</code> does it for the desktop app.</p>
     ${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}
+    <p>Apps that show an MCP server's prompts offer four ready-made starting points: <code>tour</code>, <code>explain-result</code>, <code>audit-result</code> and <code>attack-open-problem</code>.</p>
 
     <h3 id="build">Working on something?</h3>
     <p>If you or your AI are working on an open problem, a check that could be sharper, an error or a gap in a proof, or a new result, it can come into the graph. Every result is reviewed before it enters: nothing is added, and the site does not change, until it has been read and accepted. Your name, and the AI model that drafted the work, are shown on every result you add.</p>
@@ -2783,7 +2807,7 @@ function renderContribute() {
           <li><code>check.py</code>: a machine check in exact arithmetic, using the series' <code>GA.py</code>.</li>
         </ul>
         An amendment is judged by what it fixes, not by how much it changes. A wording change keeps the version and earns no credit entry. A <b>correction</b> (a proof step, a check, the status or a link was wrong; the statement stands) or a <b>restatement</b> (the statement itself was wrong) raises the version and adds an <code>amendments</code> entry saying what was wrong with the accepted version, <code>{version, kind, defect, evidence}</code>, where the evidence is a check of the result that shows the fix. It keeps every credit entry already there, so the original author stays named, and adds one for you and one for the AI that drafted the change, each with the new version. A different or stronger conclusion is a new result, linked to the original. <code>validate_draft</code> refuses an amendment that drops an earlier credit, adds none of its own, does not say what it fixes, or declares a kind that does not match what changed. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
-      <li><b>Check it yourself.</b> <code>validate_draft</code> runs the graph's rules against your draft and reports every problem it introduces, including any it causes in other results. Then run the evidence on your copy: <code>python -m tp check --store store --keep-going</code>.</li>
+      <li><b>Check it yourself.</b> <code>validate_draft</code> runs the graph's rules against your draft and reports every problem it introduces, including any it causes in other results. Then put the folder under <code>store/</code> in your copy and run its checks: <code>python -m tp check-one &lt;id&gt; --store store</code>, and the whole store's with <code>python -m tp check --store store --keep-going</code>.</li>
       <li><b>Open a pull request.</b> Fork <a href="https://github.com/leon-machine/phys-graph" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request against <code>main</code>. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with the rules taken from <code>main</code> and every contributed <code>check.py</code> sealed off from the network. Nothing is merged until it has been reviewed.</li>
     </ol>
     ${ex["entity.md"] ? `<details><summary><b>A worked example</b>: a small result in the graph's form, which passes every check</summary>
