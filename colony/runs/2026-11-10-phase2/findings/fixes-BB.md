@@ -60,3 +60,39 @@ turned into a citation (step 2); each is left as a "sibling result of the same r
   definition and effects (iii).
 - Maintainer: assumes edge (P)@1 on the records proposal; the three stored phrases affected by the local-weights
   result.
+
+# Step 2 (sibling citations), after the base and the effects result were stored at version 1
+
+check4: pending (orchestrator). validate: pending (orchestrator). runcheck: all nine functions PASS.
+Abbreviations: BASE = synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional,
+EFF = synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects.
+
+## Local weights
+- uses: BASE@1 and EFF@1 added. premise(BASE) in check_local_values_do_not_fix_positivity, premise(EFF) in the
+  descent check.
+- (iv): P_s is now "an atom in the sense of BASE" and lambda_{-1} = omega_{P_s}, the one state sharp on it by BASE
+  (iii); added lambda_c(P_s) = (3 - c)/4 (already in the check). Proof cites BASE.
+- (v) (L7): the general statement (lambda o E_N satisfies (P) iff the four sector weights are non-negative; the
+  total-parity average adds no positivity) is now cited from the rider and statement of EFF (iv); its derivation is
+  removed from statement and proof. Kept: the two-mode instances (the box and lambda_c) and the checked formula.
+- Sibling sentences removed from the Reading and the note.
+
+## Records
+- uses: EFF@1 added, premise(EFF) in the one-mode check. lineage: synthesis.univalence-from-even-stationary-dynamics
+  added (comparison only, as instructed); the Remark keeps its claimref.
+- (iv) (R5): cites EFF (v) for the even state, E(C) and the value 14/5 (with u = U, Gamma = V; the check asserts
+  U = e2 f1 and still recomputes 14/5 as a consistency test); only the record computation 12/25 is the clause's own
+  content. The duplicated derivation is removed from statement and proof.
+- Reading: the list of consistent "at most 2" conditions now cites EFF (v) for the formula; the splits condition
+  (not one of the two stored results) is moved to the note as plain text.
+- The assumes edge to (P)@1 remains for the maintainer (unchanged from step 1).
+
+## Kochen-Specker
+- uses: BASE@1 and EFF@1 added. premise(BASE) in the 18-atom check. EFF is cited only for the size-2 comparison in
+  the Reading and is declared in coverage.yaml under untouched_premises with that reason; if the gate prefers, it can
+  be moved to lineage instead (nothing in the proof depends on it).
+- Atom definition (K3): now BASE's, with the special form (corner Q Pi) named in BASE's Definitions; the proof says
+  each Pi_r is an atom of the orbit of P_0 in BASE (ii). The step-1 "argued" sentence about the two forms is gone.
+- Size 2 (K2): a sentence in the Reading citing EFF (iii).
+
+References among my own three proposals: plain text in notes only; none in formal text.
