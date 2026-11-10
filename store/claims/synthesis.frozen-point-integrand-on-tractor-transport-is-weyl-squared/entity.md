@@ -78,6 +78,10 @@ lineage:
   - synthesis.imported-miskovic-olea-identity
   - synthesis.promoted-norm-weyl-clock-flat-weight
 extraction:
+  maintainer_pass_2026_11_10_protraction:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept. The check of this result imposes the first Bianchi identity d_a ^ W(a ^ b) = 0 as one of the linear conditions that define an algebraic Weyl map. Since 10 November 2026 the identity is a stored theorem for the curvature operator of a torsion-free gravitational field, synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion (clause (iii); clause (iv) computes that the maps obeying it form the 20-dimensional space of algebraic curvature maps in four dimensions). Here the identity is a defining condition on a linear map, not a property derived for a field, so no premise is replaced and no uses edge is added; the citation says where the condition comes from when the map is the Weyl part of the curvature operator of a torsion-free field. Proof (iv) also uses the identity for the curvature operator of the field (the frame-leg term K vanishes by it): on a torsion-free field that is clause (iii) of the same theorem; the proof text is unchanged.'
   flags:
   - 'beyond one flat chart: the closed Riemannian S^2 x S^2 and the integrals over it'
   maintainer_pass_decisions_2:

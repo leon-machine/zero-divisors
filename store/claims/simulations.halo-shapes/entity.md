@@ -29,6 +29,10 @@ locators:
   label: obs:halo
   line: 486
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'No version change (note only). Leon''s decision 10 of 10 November 2026: the six premises S1 to S5 and C assumed here are model specification, and S2 and C are the premises of the two exclusive readings (W) and (C): this result lists both because it reports both readings, and does not hold them together. The pins to the six premises are left for the pin review (each is raised by one).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

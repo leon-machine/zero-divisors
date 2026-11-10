@@ -29,4 +29,5 @@ functions:
     - '(vi) on the Euclidean section the local pair (c_2 dslash delta, c_V n delta delta) preserves the identity exactly when c_V = -c_2 (three coefficient pairs, against the linear part of f)'
     - '(iv) scale derivatives xi e^2/(8 pi^2) dslash delta and -xi e^2/(8 pi^2) n delta delta, from the shell integral and again from the logarithmic form'
     omits: 'clause (iii) itself is the proof (Fubini and integration by parts in t); no eight-dimensional integral is computed in the check; the mass term''s scale derivative is arithmetic in the proof; the ranks of the stored count are not recomputed in Cl(4,0)'
-untouched_premises: {}
+untouched_premises:
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields: "a premise of the reading of the kernels as electrodynamics (the covariant photon propagator inside a loop); the check computes kernel identities, which use no inner product"

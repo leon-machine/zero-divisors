@@ -1,7 +1,7 @@
 ---
 id: dark-matter.total-function-thickness
 kind: claim
-version: 5
+version: 6
 title: The total as a function of the thickness
 status: proved
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Fable 5.2
+  role: 'the two registered conditions (single-ideal clause, population of the odd towers) assumed; the unit of the thickness named'
+  version: 6
+  source: maintainer pass of 2026-11-10
 review: typed
 derivations:
 - name: main
@@ -24,9 +28,11 @@ derivations:
   - dark-matter.population-count-one-share-half-percent@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
+  - dark-matter.odd-towers-populated@1
   - dark-matter.p2-indifference@2
   - dark-matter.r1-equal-mass-per-quantum@1
   - dark-matter.r2-one-quantum-per-unit-ball@3
+  - dark-matter.single-ideal-at-residues-zero-and-four@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -49,6 +55,10 @@ locators:
   label: prop:Tc
   line: 947
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 5 -> 6. Leon''s decision 5 of 10 November 2026: assumes edges added to dark-matter.single-ideal-at-residues-zero-and-four and dark-matter.odd-towers-populated, the two conditions of the sum over the mirror and the four odd towers that were held only as text; the hypotheses name them. Decision 9: one sentence says that d_b is each tower''s own cell radius, common under R2, so the thickness is in the unit R2 supplies. T(c), its values and the check are unchanged; coverage.yaml records the two new premises as untouched.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -85,7 +95,7 @@ extraction:
 ---
 
 ## formal
-Let the five-dimensional towers' matter count through a length $c\,d_{b}$ of the extra direction and the three-dimensional towers' sheets be stacked $c\,d_{b}$ apart, with R1, R2 and the sourcing rule otherwise as before. Then
+Let the five-dimensional towers' matter count through a length $c\,d_{b}$ of the extra direction and the three-dimensional towers' sheets be stacked $c\,d_{b}$ apart, with R1, R2 and the sourcing rule otherwise as before, the four odd towers populated (Premise \claimref{dark-matter.odd-towers-populated}) and residues $0$ and $4$ empty (Premise \claimref{dark-matter.single-ideal-at-residues-zero-and-four}). Here $d_{b}$ is the cell radius, each tower's own and common to all towers under R2, so the thickness is measured in the unit R2 supplies. Then
 \[
 T(c) \;:=\; \frac{\Omega_{\mathrm{dark}}}{\Omega_{b}} \;=\; 1 + \frac{8}{3c} + \frac{16c}{3\pi},
 \]

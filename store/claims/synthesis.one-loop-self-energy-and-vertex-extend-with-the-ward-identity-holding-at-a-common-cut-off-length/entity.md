@@ -26,7 +26,9 @@ derivations:
   - field-theory.second-quantisation@6
   - field-theory.coupled-system-tree-level@4
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@2
-  - synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants@4
+  - synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants@5
+  assumes:
+  - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -47,6 +49,10 @@ lineage:
   - synthesis.one-loop-qed-in-the-spacetime-algebra
 extraction:
   open_problem: op.qft-loops-and-renormalisation
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept (accepted in the same pass). An assumes edge to the Krein-form premise synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3 is added, as on the stored regulator-free result and for the same reason: the one-liner states the premise, and the kernels contain the photon propagator in a covariant gauge, which the series may use inside a loop only under it. The formal statement now says so in one sentence and says that the identities themselves are identities of kernels and need no premise. The regulator-free result is pinned at its version 5, whose clause (iii) now records this result as supporting, not discharging, the imported existence. Independent of the two curved-field results accepted with it (synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion and synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse); the three share the open problem only.'
   note: >-
     Answers, at one loop, the second attack line of the problem (existence of Ward-preserving extensions of the
     self-energy and vertex inside the store) and the self-energy and vertex half of the first. The stored
@@ -82,9 +88,9 @@ extraction:
     Transport-absent. The self-energy and vertex kernels contain the photon propagator in a covariant gauge, so,
     as in the stored result, they are read under the Krein-form premise
     synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, which is in the past cone through the
-    stored result; no assumes edge is filed here. Premises used, assumes edge for the maintainer: the kernel
+    stored result; an assumes edge to it was added on 10 November 2026: the kernel
     identity needs no premise, its reading as electrodynamics needs
-    synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields (recommended by the referee). Clause
+    synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields. Clause
     (vi) carries the stored count, made in $\Cl(1,3)$ in the momenta, to position-space kernels in $\Cl(4,0)$;
     the ranks are not recomputed there, only the relation $c_{V} = -c_{2}$ is rederived. Not covered: the continuation to the
     Feynman distributions (the standard Wick rotation, as in the stored result); on-shell renormalisation
@@ -95,11 +101,11 @@ extraction:
   - 'Euclidean section only: the imported existence for the time-ordered products in signature (1,3) is supported, not discharged; no Wick rotation of the vertex kernel is stored'
   - 'the identification of the vertex scale of clause (v) with the scale of the differential-renormalisation literature is not shown'
   - 'the massive propagator is used through its standard properties (fundamental solution, exponential decay, local integrability, scaling degree 3), which are not checked; the checks are on the massless kernels and the order-m coefficient'
-  - 'the Krein-form premise is in the cone through the stored regulator-free result; whether this result should carry its own assumes edge is the maintainer''s decision'
+  - 'the Krein-form premise is assumed (edge added on 10 November 2026) for the reading of the kernels as electrodynamics; the kernel identities need no premise'
 ---
 
 ## formal
-Units $\hbar = c = 1$; the Euclidean section of the flat field, as in Theorem \claimref{synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants} (the Feynman distributions follow by the standard Wick rotation), under the imported extension theorem (Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}(ii)). Vectors are those of $\Cl(4,0)$ with orthonormal basis $\gamma_{1},\dots,\gamma_{4}$; $\nabla = \sum_{a}\gamma_{a}\partial_{a}$. For the Dirac field of Proposition \claimref{field-theory.second-quantisation} of mass $m \ge 0$ let $S$ be its Euclidean propagator, the vector-plus-scalar valued kernel with $(\nabla + m)S = \delta = S(\overleftarrow{\nabla} + m)$ that tends to zero at infinity; for $m = 0$, $S(w) = w/(2\pi^{2}Q(w)^{2})$. The photon propagator in the covariant gauge with parameter $\xi$ ($\xi = 1$ Feynman, $\xi = 0$ Landau) is the bilinear form $D_{w}(a,b) = \frac{1}{4\pi^{2}Q(w)}\big(\tfrac{1+\xi}{2}\,a\cdot b + (1-\xi)\frac{(a\cdot w)(b\cdot w)}{Q(w)}\big)$. With the vertex and coupling $e$ of Proposition \claimref{field-theory.coupled-system-tree-level}, the one-loop kernels are, with $x$, $y$ the ends of the electron line, $z$ the photon vertex, $u = x - z$, $v = z - y$, $w = u + v$ and $n$ the vector at the photon vertex,
+Units $\hbar = c = 1$; the Euclidean section of the flat field, as in Theorem \claimref{synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants} (the Feynman distributions follow by the standard Wick rotation), under the imported extension theorem (Fact \claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products}(ii)). Vectors are those of $\Cl(4,0)$ with orthonormal basis $\gamma_{1},\dots,\gamma_{4}$; $\nabla = \sum_{a}\gamma_{a}\partial_{a}$. For the Dirac field of Proposition \claimref{field-theory.second-quantisation} of mass $m \ge 0$ let $S$ be its Euclidean propagator, the vector-plus-scalar valued kernel with $(\nabla + m)S = \delta = S(\overleftarrow{\nabla} + m)$ that tends to zero at infinity; for $m = 0$, $S(w) = w/(2\pi^{2}Q(w)^{2})$. The photon propagator in the covariant gauge with parameter $\xi$ ($\xi = 1$ Feynman, $\xi = 0$ Landau) is the bilinear form $D_{w}(a,b) = \frac{1}{4\pi^{2}Q(w)}\big(\tfrac{1+\xi}{2}\,a\cdot b + (1-\xi)\frac{(a\cdot w)(b\cdot w)}{Q(w)}\big)$. The use of this covariant photon propagator inside a loop is under the Krein-form premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, as for the self-energy and vertex parts of clause (iii) of the cited theorem; the identities below are identities of the kernels and need no premise. With the vertex and coupling $e$ of Proposition \claimref{field-theory.coupled-system-tree-level}, the one-loop kernels are, with $x$, $y$ the ends of the electron line, $z$ the photon vertex, $u = x - z$, $v = z - y$, $w = u + v$ and $n$ the vector at the photon vertex,
 \[
 \Sigma(w) = e^{2}\sum_{a,b}\gamma_{a}S(w)\gamma_{b}\,D_{w}(\gamma_{a},\gamma_{b}), \qquad \Lambda(n;u,v) = e^{2}\sum_{a,b}\gamma_{a}S(u)\,n\,S(v)\gamma_{b}\,D_{u+v}(\gamma_{a},\gamma_{b}),
 \]

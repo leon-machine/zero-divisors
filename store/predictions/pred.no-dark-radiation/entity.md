@@ -1,7 +1,7 @@
 ---
 id: pred.no-dark-radiation
 kind: prediction
-version: 3
+version: 4
 title: No dark radiation
 status: live
 subject: dark-matter
@@ -21,6 +21,10 @@ credit:
   role: 'maintainer pass on Leon''s decisions, the cold-mirror exception stated at P2''s version-1 reach, with P2 as scoped leaving xi free'
   version: 3
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Fable 5.2
+  role: 'pointer to the open problem on the imported graviton-exchange rate; prediction unchanged'
+  version: 4
+  source: maintainer pass of 2026-11-10
 review: typed
 kill_condition:
   threshold: One confirmed massless dark species
@@ -44,6 +48,10 @@ locators:
   number: T17 stance 9
   label: tab:stances
 extraction:
+  maintainer_pass_2026_11_10_graviton:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 3 -> 4, by Leon''s decision of 10 November 2026 (flag now, derive later): one sentence added to the formal and technical levels pointing to open problem op.graviton-rate-as-classical-field-process. The prediction, its status, its kill condition and every number are unchanged.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -78,10 +86,10 @@ derivations:
 ---
 
 ## formal
-No dark radiation: $\Delta N_{\mathrm{eff}} \approx 0$, conditionally on the dark towers\' open channels closing, which holds if the descent\'s deposit is no hotter than the dark-matter paper\'s estimate, and only with the mirror\'s seeded temperature taken as a free datum: applied with the reach of the copy theorem, P2 gives the mirror $\xi = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}), so the stance rests on an exception to P2 for the mirror. This is an exception to P2 at its version-1 reach; P2 as scoped leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}).
+No dark radiation: $\Delta N_{\mathrm{eff}} \approx 0$, conditionally on the dark towers\' open channels closing, which holds if the descent\'s deposit is no hotter than the dark-matter paper\'s estimate, and only with the mirror\'s seeded temperature taken as a free datum: applied with the reach of the copy theorem, P2 gives the mirror $\xi = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}), so the stance rests on an exception to P2 for the mirror. This is an exception to P2 at its version-1 reach; P2 as scoped leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit imports a rate computed with a quantised gravitational field (Fact \claimref{dark-matter.imported-massless-graviton-production-rate}, flagged), which the series does not hold; whether the classical gauge field gives that rate, another or none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
 
 ## technical
-The prediction is $\Delta\Neff \approx 0$: the dark towers add no relativistic species to the radiation content measured in the cosmic microwave background. It is conditional on the dark towers' open channels closing, which holds if the descent's deposit is no hotter than the dark-matter paper's estimate. It also needs the mirror to be cold, which the T14c note shows is an exception to indifference (P2): applied with the copy theorem's reach, P2 makes the mirror as hot as our tower, $\Delta N_{\mathrm{eff}} = 7.45$, which would meet the kill condition. That is an exception to indifference at its version-1 reach; indifference as scoped (labels, not states) leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}).
+The prediction is $\Delta\Neff \approx 0$: the dark towers add no relativistic species to the radiation content measured in the cosmic microwave background. It is conditional on the dark towers' open channels closing, which holds if the descent's deposit is no hotter than the dark-matter paper's estimate. It also needs the mirror to be cold, which the T14c note shows is an exception to indifference (P2): applied with the copy theorem's reach, P2 makes the mirror as hot as our tower, $\Delta N_{\mathrm{eff}} = 7.45$, which would meet the kill condition. That is an exception to indifference at its version-1 reach; indifference as scoped (labels, not states) leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit imports a rate computed with a quantised gravitational field (Fact \claimref{dark-matter.imported-massless-graviton-production-rate}, flagged), which the series does not hold; whether the classical gauge field gives that rate, another or none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
 
 ## lay
 The afterglow of the early universe records how many kinds of light, fast-moving particles existed at the time. The framework predicts that the dark towers add none, provided the remaining ways of heating them stay closed, which holds if the descent left them no hotter than the paper estimates. It also needs the mirror world to have started cold, which a later note (T14c) shows is an unstated exception to the framework's own indifference principle; applied evenly, that principle would make the mirror as hot as our world and the prediction would fail. As the principle is now scoped, it applies to labels such as charges and not to temperatures, so it leaves the mirror's temperature free; a cold mirror then needs the descent to have left the towers out of equilibrium.

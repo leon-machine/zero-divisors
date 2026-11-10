@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation
 kind: claim
-version: 2
+version: 3
 title: 'The frozen-point field space as GTG''s pair, and the torsion equation'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text'
+  version: 3
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -28,7 +32,9 @@ derivations:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared@4
   - synthesis.imported-einstein-cartan-matter-coupling@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
+  assumes:
+  - synthesis.field-space-premise-parallel-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,6 +50,10 @@ lineage:
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 2 -> 3, at Leon''s decision of 2026-11-10: assumes edge added to the field-space premise (FS), synthesis.field-space-premise-parallel-frozen-point, which the Reading already named as the premise the result does not derive: clause (i) states the frame equation and the torsion equation, with spinning matter the Einstein-Cartan one, on the field space of (ii), which is the field space of (FS). The bijection of (ii) is algebra and holds without the premise; the Reading says so. The pin to synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part moves 4 -> 5 (the same edge added there; clauses (i) to (iv), cited here, unchanged). Statement and checks unchanged; the premise is recorded as untouched in coverage.yaml.'
   maintainer_pass_pin_review_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -84,7 +94,7 @@ F(a \wedge b) \;=\; R(a \wedge b) + 2\rho\,E(a) \wedge E(b) - u_{\rho} \wedge T(
 \]
 for constant background directions, with $R$ the field strength of $\Omega$ and $T$ the torsion; on physical bivectors the Lorentz block is $-(\mathcal{R}(B) - \tfrac{\Lambda}{3}B)$ in the store's sign, as in Fact \claimref{dark-energy.imported-macdowell-mansouri-theorem-stelle-west}. For $\rho \neq 0$ the stabiliser is $\so(1,4)$ or $\so(2,3)$; for $\rho = 0$, $I_{0} = \nInf$ and the block $u_{0} \wedge W$ is abelian, so the stabiliser is the Poincar\'e algebra, the internal form of the pair's own gauge algebra, of which the frozen point is the deformation with $[u_{\rho} \wedge a, u_{\rho} \wedge b] = 2\rho\, a \wedge b$.
 \end{enumerate}
-\emph{Reading.} Clause (i) is the comparison: the tractor gauge field of a torsion-free field and $\Phi_{\rho}(\hb, \Omega(\hb))$ share the rotation-gauge field and the soldering and differ only in the special-conformal slot ($\Sch$ against $\rho\,\mathrm{id}$, agreeing exactly on Einstein fields by (ii) and Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}(ii)); on the first the integrand gives the Bach equations, on the second Einstein's. Treating $\Omega$ as independent changes only the torsion equation. Clause (ii) identifies the field space with GTG's pair and a constant tractor; that the varied field is this field space, rather than the normal tractor connection, is not derived here and remains a premise (Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}).
+\emph{Reading.} Clause (i) is the comparison: the tractor gauge field of a torsion-free field and $\Phi_{\rho}(\hb, \Omega(\hb))$ share the rotation-gauge field and the soldering and differ only in the special-conformal slot ($\Sch$ against $\rho\,\mathrm{id}$, agreeing exactly on Einstein fields by (ii) and Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}(ii)); on the first the integrand gives the Bach equations, on the second Einstein's. Treating $\Omega$ as independent changes only the torsion equation. Clause (ii) identifies the field space with GTG's pair and a constant tractor; that the varied field is this field space, rather than the normal tractor connection, is not derived here and remains a premise (Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), which this result assumes: clause (i), read as the field equations of the series' gravitational action, with or without spinning matter, holds on the field space of that premise; the bijection of (ii) is algebra and does not need it.
 
 ## technical
 The question is whether the field space on which the frozen-point MacDowell-Mansouri integrand gives Einstein's equations, the $\Cl(2,4)$ connections preserving the frozen point $I$, is Gauge Theory Gravity's gauge principle: two independent gauge fields, $\hb$ for displacements and $\Omega$ for rotations.

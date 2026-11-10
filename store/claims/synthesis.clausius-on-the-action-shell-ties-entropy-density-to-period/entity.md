@@ -1,7 +1,7 @@
 ---
 id: synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period
 kind: claim
-version: 1
+version: 2
 title: 'On the action shell, Clausius ties entropy density to the period'
 status: proved
 region: synthesis
@@ -17,13 +17,17 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text'
+  version: 2
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
 derivations:
 - name: main
   uses:
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.r-loc-independent-sets-matter-coupling@5
   - synthesis.einstein-equations-from-c-loc-and-clausius@8
@@ -33,6 +37,8 @@ derivations:
   - synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term@3
   - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-jacobson-clausius-1995@3
+  assumes:
+  - synthesis.field-space-premise-parallel-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,6 +59,10 @@ lineage:
   - synthesis.r-loc-independent-sets-matter-coupling
   - synthesis.field-space-premise-parallel-frozen-point
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 1 -> 2, at Leon''s decision of 2026-11-10: assumes edge added to the field-space premise (FS), synthesis.field-space-premise-parallel-frozen-point, which premise (A) of the statement already names (the field equations with matter of the gravitational action on the field space of that postulate); the edge records what the text says, so the cone of (FS) shows it. The pin to synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part moves 4 -> 5 (the same edge added there; its clauses are unchanged). Statement, proof and checks unchanged; the premise is recorded as untouched in coverage.yaml.'
   maintainer_pass_pin_review_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'

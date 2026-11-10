@@ -24,8 +24,8 @@ derivations:
 - name: main
   uses:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
-  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@5
+  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -44,7 +44,12 @@ lineage:
   motivated_by:
   - synthesis.kasner-approach-gives-horizon-exit-and-index-three
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+  - synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1 (accepted in this pass): the index ledger is now named by its stored id in the note and in lineage (comparison only; that result uses this one as a row, so no edge is drawn from here); the pins to the two stored Kasner results move 4 -> 5 and 3 -> 4, whose only change is a pointer to this result in their not-covered sentences.'
   open_problem: op.descent-state-and-spectrum
   note: >-
     Closes, at the one isotropic point of the scalar Kasner disk, two items the stored Kasner results list as not
@@ -67,9 +72,10 @@ extraction:
     (2002, arXiv hep-th/0204091, read on the web: the reduced field has a massless scalar proportional to the
     logarithm of the time, and free fields cross with no particle production under their matching rule). What is
     added here is the exact linearised computation in the store's setting and the forced form of the lapse and
-    shift. The intended base citation for the index table over all stored sources is the sibling result on the
-    red-tilt criterion on power-law stages, filed in the same session and not cited here because it is not yet
-    stored. Not covered: anisotropic points of the disk, where the scalar sector couples to the diagonal shear
+    shift. The index table over all stored mode equations is
+    synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources,
+    which carries this result as its row for the scalar sector (named here for comparison; it uses this result,
+    so it is not a premise). Not covered: anisotropic points of the disk, where the scalar sector couples to the diagonal shear
     modes; the vacuum normalisation of the mode (the quadratic action of the curvature variable is textbook and
     is not rederived; the index does not depend on a momentum-independent normalisation).
 ---

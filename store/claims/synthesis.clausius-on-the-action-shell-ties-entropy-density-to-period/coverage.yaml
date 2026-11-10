@@ -29,3 +29,4 @@ untouched_premises:
   synthesis.imported-jacobson-clausius-1995: cited in (i) as the standard identification the relation generalises; the defect is computed from the stored pencil identity
   synthesis.local-normality-at-the-edge-gives-the-null-ground-state: cited in (ii) as one way the hypothesis c = 1 is met; nothing is computed from it
   synthesis.euler-entropy-of-a-horizon-patch-is-an-edge-term: cited in the reading as a comparison with the action's Wald entropy; nothing is computed from it
+  synthesis.field-space-premise-parallel-frozen-point: assumed through premise (A), the field equations of the gravitational action on its field space; the checks take that field equation as given and do not touch the premise

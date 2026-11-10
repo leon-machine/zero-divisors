@@ -32,6 +32,10 @@ lineage:
   - synthesis.locality-of-the-attached-free-fields-fixes-their-statistics
   - synthesis.imported-brst-kugo-ojima-strocchi-and-gribov
 extraction:
+  maintainer_pass_2026_11_10_one_loop:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept; the premise is unchanged. One more result carries an assumes edge to it since 10 November 2026: synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length (the covariant photon propagator inside the one-loop self-energy and vertex; its kernel identities need no premise). It is not yet in the list of results in the formal text. The sentence of the Note of 2 November, that the regulator-free extensions of the self-energy and vertex are imported and not computed, is to be read with that result: on the Euclidean section at one loop a pair obeying the Ward-Takahashi identity is exhibited, which supports the import and does not discharge it; F_2(0) and the on-shell conditions are still stored only with regulator fields, so clause (K3) is not retired.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'

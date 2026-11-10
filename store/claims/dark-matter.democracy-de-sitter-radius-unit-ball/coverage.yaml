@@ -11,6 +11,9 @@ functions:
     kind: exact
     clauses: ["the total is that of the unit-ball rule, 11/3 + 16/(3 pi)"]
     omits: "evaluated at one sample M and l, the result being independent of both"
+untouched_premises:
+  dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the check computes shares by dimension and takes the list of towers as given"
+  dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; no term for them is computed"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

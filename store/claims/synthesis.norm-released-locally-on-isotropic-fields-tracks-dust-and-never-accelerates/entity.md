@@ -55,7 +55,12 @@ lineage:
   - synthesis.stelle-west-norm-is-no-local-output
   - synthesis.promoted-norm-weyl-clock-flat-weight
   - pred.dark-energy-w-minus-one
+  - synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1 (accepted in this pass): the note names, for comparison, the index ledger of the stored mode equations, whose de Sitter and dust rows take the constant fixed (lineage only); it also records that the w = -1 prediction (version 5), the field-space premise and Premise (N) now cite this result for the statement that the series has no fallback, which is labelled argued there.'
   note: >-
     Exposure of the w = -1 prediction: does any stored structure let the dark-energy density evolve? The promoted
     norm does not (stored: its multiplier is constant by its own equation). The one stored variant in which the
@@ -95,7 +100,10 @@ extraction:
     the polynomial family with derivative terms of the Stelle-West vector, for which the literature reports
     rolling quintessence (H. F. Westman and T. G. Zlosnik, Exploring Cartan gravity with dynamical symmetry
     breaking, Class. Quantum Grav. 31 (2014) 095004, arXiv:1302.1103; abstract checked on the web, the body from
-    memory); the store evaluates that family only on torsion-free fields of constant norm. No open-problem entry
+    memory); the store evaluates that family only on torsion-free fields of constant norm. The spectrum side of the same exposure, whether a stage with a slowly varying constant
+    could tilt the spectrum, is in the index ledger
+    synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources
+    (clauses (v), (vi); comparison only). No open-problem entry
     exists for the dark-energy exposure; the settled entry on the gravitational action is the nearest. The
     reduction to the isotropic family is by covariance of the Euler-Lagrange expressions under rotations and one
     reflection, proved in the proof text; the connection equation was also verified in form language by hand.

@@ -40,6 +40,10 @@ lineage:
   - synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four
 extraction:
   open_problem: op.qft-loops-and-renormalisation
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept (accepted in the same pass). Where the note below lists the places that used the identity without deriving it: the curved-field kernel result cites clause (iii) by a uses edge since its version 2; synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse cites it by a uses edge; the three results whose checks impose the identity to define algebraic Weyl maps, and pairing.loop-classes-are-weyl-components, carry a note naming this theorem and are otherwise unchanged (there the identity is a defining condition on a linear map, or is read through the imported dictionary, so no premise is replaced); synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen, which wrote torsion-free and obeying the identity as one condition, is reworded by the converse examples of clause (iii). The identity has a line in docs/ALGEBRA_CORE.md.'
   note: >-
     Answers the attack item of op.qft-loops-and-renormalisation that asks for the protraction identity of the
     curvature operator to be derived from vanishing torsion. The identity is the first Bianchi identity of a

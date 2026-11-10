@@ -22,8 +22,8 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-bessel-reduction-and-small-argument-hankel-forms@2
-  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@3
-  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@4
+  - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling@4
+  - synthesis.kasner-approach-gives-horizon-exit-and-index-three@5
   - synthesis.kasner-hidden-scale-coupled-scalars-stay-blue@4
   - synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point@4
   - synthesis.imported-wands-duality-of-perturbation-spectra@1
@@ -55,7 +55,12 @@ lineage:
   - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
   - synthesis.frozen-phase-spectrum-not-red
   - synthesis.imported-wands-duality-of-perturbation-spectra
+  - synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1 (accepted in this pass): the note names the open problem that records the structures outside the ledger and, for comparison, the released-norm result (lineage); the pins to the two stored Kasner results move 4 -> 5 and 3 -> 4, whose only change is a pointer to the scalar-sector result in their not-covered sentences.'
   open_problem: op.descent-state-and-spectrum
   note: >-
     A consolidation with three additions. Stored already, and cited, not re-proved: the order formula and the index
@@ -77,7 +82,11 @@ extraction:
     problem. The search is by pattern and reading, not a formal audit of every derivation: the clause "no other
     stored structure" is argued on that basis. Structures with no stored mode equation on a slice (the tower's pair
     channel, the density-wave bosons of a null generator, the horizon arrays, the frozen point's norm and point at
-    infinity, the deposit's band data) are outside this result; they are listed in the run's findings. Stored results that bear on
+    infinity, the deposit's band data) are outside this result; they are recorded, with why each is not a candidate (argued), in the known text of
+    op.descent-state-and-spectrum. The dark-energy side of the same question, whether a stored structure lets the
+    constant of clauses (v) and (vi) vary, is
+    synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+    (comparison only; neither result uses the other). Stored results that bear on
     the index and are not rows of this ledger, because they are not mode equations of the form (E): the thermal
     reading with an area-law heat capacity, index $2 - \gamma - 2\tau$, exactly $0$ for the area law at fixed
     temperature, whose imported formula admits a red tilt through a chosen temperature exponent

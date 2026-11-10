@@ -1,7 +1,7 @@
 ---
 id: dark-matter.population-count-one-share-half-percent
 kind: claim
-version: 6
+version: 7
 title: 'The population count: one share to half a percent, and a symmetric remainder'
 status: proved
 region: dark-matter
@@ -25,12 +25,16 @@ credit:
   role: 'pin review, the scope clause (iii) now cites the established facts of the no-coupling-rule proposition, where it quoted its old conclusion'
   version: 6
   source: maintainer pass 2026-11-07 (pin review)
+- name: Claude Fable 5.2
+  role: 'Premise P4 retired: the assumes edge removed, the equal asymmetry of the mirror cited from the copy theorem''s clause (v)'
+  version: 7
+  source: maintainer pass of 2026-11-10
 review: typed
 derivations:
 - name: main
   uses:
   - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.superselected-hence-dark-exactly-stable@5
@@ -39,7 +43,6 @@ derivations:
   - dark-matter.p1-single-frozen-point@1
   - dark-matter.p2-indifference@2
   - dark-matter.p3-nearest-dimension-representatives@3
-  - dark-matter.p4-democracy-asymmetry-over-oriented-towers@1
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex
 checked_by:
@@ -61,6 +64,10 @@ locators:
   label: prop:count
   line: 377
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 6 -> 7. Leon''s decision 10 of 10 November 2026: Premise P4 is retired as a postulate; this proposition used only its mirror instance, clause (v) of dark-matter.mirror-tower-copy-one (repinned 9 -> 10). The assumes edge to P4 is removed and the hypotheses read P1 to P3 with the common ceiling coupling; values unchanged. The check is unchanged; coverage.yaml loses the untouched-premise line.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -110,7 +117,7 @@ For an oriented residue $r$ write $\epsilon_{r}$ for the asymmetry per mode, $n_
 \[
 f_{r} \;=\; \frac{\epsilon_{r}\,n_{r}\,m_{r}}{\epsilon_{6}\,n_{6}\,m_{6}}
 \]
-for the tower factor. Under Premises \claimref{dark-matter.p1-single-frozen-point}-\claimref{dark-matter.p4-democracy-asymmetry-over-oriented-towers} and the common-ceiling-coupling Premise \claimref{synthesis.common-ceiling-coupling-premise}, with every tower's matter diluting as this one's (Lemma \claimref{dark-matter.projection-every-towers-content-dilutes-ones}):
+for the tower factor. Under Premises \claimref{dark-matter.p1-single-frozen-point}, \claimref{dark-matter.p2-indifference} and \claimref{dark-matter.p3-nearest-dimension-representatives} (the paper's P1 to P4, of which P4, democracy of the asymmetry, is retired as a postulate: only its mirror instance is used, and that is Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)) and the common-ceiling-coupling Premise \claimref{synthesis.common-ceiling-coupling-premise}, with every tower's matter diluting as this one's (Lemma \claimref{dark-matter.projection-every-towers-content-dilutes-ones}):
 \begin{enumerate}
 \item[(i)] \emph{(Asymmetric.)} The asymmetric dark matter is the mirror tower's alone (Corollary \claimref{dark-matter.which-towers-can-carry-arrow}: the odd towers carry none; residues $0$ and $4$ are sterile), and its share is exactly one (Theorem \claimref{dark-matter.mirror-tower-copy-one}(iii), assembled with its premises in Theorem \claimref{dark-matter.mirror-share-assembled}):
 \begin{equation}
@@ -123,12 +130,12 @@ the one holding to half a percent on the burning branch (Proposition \claimref{d
 The profile: the mirror's dark matter is mirror baryons at the proton mass, cold and dissipative within its own sector; the odd towers' is symmetric, of undetermined mass; both couple to this tower by gravity alone. Two conditional stances are registered at the premises' level: permanent null results in direct detection, and no indirect-detection signal from dark decays or visible annihilation products. Observation level on the flagged premises; the observed ratio is the survey record's \cite{Planck2018}.
 
 ## technical
-For an oriented residue write $f_{r} = \epsilon_{r}n_{r}m_{r}/(\epsilon_{6}n_{6}m_{6})$ for the tower factor. Under Premises P1 to P4 and the common ceiling coupling, with every tower's matter diluting as this one's, (i) the asymmetric dark matter is the mirror tower's alone, the odd towers carrying none and residues $0$ and $4$ being sterile, with $\Omega^{\mathrm{asym}}_{\mathrm{dark}}/\Omega_{b} = f_{2} = 1$ against the observed $\Omega_{c}/\Omega_{b} \approx 5.364 \pm 0.065$, the one holding to half a percent on the burning branch. (ii) The remainder, $4.364\,\Omega_{b}$ or $\Omega h^{2} = 0.0976 \pm 0.0012$, is not asymmetric relic: an odd tower's matter, if any, is a symmetric relic deposited by the descent and heated afterwards only through gravity, its density set by the sector's own dynamics.
+For an oriented residue write $f_{r} = \epsilon_{r}n_{r}m_{r}/(\epsilon_{6}n_{6}m_{6})$ for the tower factor. Under Premises P1 to P3 and the common ceiling coupling (the paper's P4 being used only on the mirror, where it is a clause of the copy theorem), with every tower's matter diluting as this one's, (i) the asymmetric dark matter is the mirror tower's alone, the odd towers carrying none and residues $0$ and $4$ being sterile, with $\Omega^{\mathrm{asym}}_{\mathrm{dark}}/\Omega_{b} = f_{2} = 1$ against the observed $\Omega_{c}/\Omega_{b} \approx 5.364 \pm 0.065$, the one holding to half a percent on the burning branch. (ii) The remainder, $4.364\,\Omega_{b}$ or $\Omega h^{2} = 0.0976 \pm 0.0012$, is not asymmetric relic: an odd tower's matter, if any, is a symmetric relic deposited by the descent and heated afterwards only through gravity, its density set by the sector's own dynamics.
 
 (iii) The remainder is not derived: the series derives no rule relating an odd tower's dimensionful coupling to this tower's dimensionless one, and no premise that equates across towers reaches the odd towers. The profile is mirror baryons at the proton mass, cold and dissipative within their sector, together with symmetric odd-tower matter of undetermined mass, both coupling to us by gravity alone; null results in direct and indirect detection are registered as conditional stances, at observation level on the flagged premises.
 
 ## lay
-Astronomers find about 5.4 times as much dark matter as ordinary matter. Assuming the four premises P1 to P4 (a single frozen point, indifference, nearest-dimension representatives and a matter excess shared evenly across the oriented towers) and that the mirror world starts with the same force strengths as ours (the common ceiling coupling), and that every hidden sector's matter thins out with cosmic expansion as ours does, this result accounts for one of those units: a mirror copy of ordinary matter holding the same amount as ours to within half a percent. The other 4.4 units are not explained here; they would have to be a different, symmetric kind of matter in the other hidden sectors, felt by us only through gravity. The account is held at observation level on those premises.
+Astronomers find about 5.4 times as much dark matter as ordinary matter. Assuming the three premises P1 to P3 (a single frozen point, indifference and nearest-dimension representatives; a fourth, a matter excess shared evenly across the oriented towers, is needed only for the mirror, where it follows from the mirror being a copy) and that the mirror world starts with the same force strengths as ours (the common ceiling coupling), and that every hidden sector's matter thins out with cosmic expansion as ours does, this result accounts for one of those units: a mirror copy of ordinary matter holding the same amount as ours to within half a percent. The other 4.4 units are not explained here; they would have to be a different, symmetric kind of matter in the other hidden sectors, felt by us only through gravity. The account is held at observation level on those premises.
 
 ## one-liner
-Under P1 to P4 and the common ceiling coupling, with every tower's matter diluting as ours, the mirror tower supplies an asymmetric dark share of one $\Omega_{b}$ to half a percent, leaving a symmetric remainder of $4.364\,\Omega_{b}$ that is not derived.
+Under P1 to P3 and the common ceiling coupling (with the equal asymmetry of the mirror from the copy theorem), with every tower's matter diluting as ours, the mirror tower supplies an asymmetric dark share of one $\Omega_{b}$ to half a percent, leaving a symmetric remainder of $4.364\,\Omega_{b}$ that is not derived.

@@ -183,6 +183,7 @@ def weyl_examples():
 
 def check_contraction_of_the_field_strength_is_the_ricci_vector():
     premise("synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field")
+    premise("synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion")
     for W in weyl_examples():
         assert any(W[k] for k in BIV)                    # the field strength is not zero
         for xv in VECS:

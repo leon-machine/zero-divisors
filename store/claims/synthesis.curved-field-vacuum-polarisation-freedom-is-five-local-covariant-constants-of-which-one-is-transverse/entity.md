@@ -23,10 +23,10 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.imported-local-covariance-with-scaling-of-time-ordered-products@1
+  - synthesis.imported-local-covariance-with-scaling-of-time-ordered-products@2
   - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@2
-  - synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants@4
-  - synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four@1
+  - synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants@5
+  - synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four@2
   - synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion@1
   proof: proof-main.tex
 checked_by:
@@ -43,11 +43,15 @@ lineage:
   - synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four
 extraction:
   open_problem: op.qft-loops-and-renormalisation
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Pins and wording only, version kept (accepted in the same pass): the curved-field kernel result is pinned at its version 2, which cites the protraction identity as a stored theorem and restates its clause (iv) by clause (iii) here, and the regulator-free result at its version 5, whose clause (v) now cites this result; the sentences that called the identity a hypothesis of the kernel result are updated; the local-covariance Fact is pinned at its version 2, which was compared with its sources at abstract level and adds the Dirac-field literature (where the text here says cited from memory, read: written from memory and compared at that level; its scalar-field scope and the absence of an existence statement are unchanged). The uses made here are unchanged: the degree of divergence 2 of the kernel result (argued there, a hypothesis here), and clause (iii) of the flat result for the flat count. Independent of the one-loop self-energy and vertex result accepted with it (synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length), which is flat and Euclidean; the two share the open problem only.'
   note: >-
     Works on attack item 3 of op.qft-loops-and-renormalisation (the reduction of the 15 local terms per index pair
     to a constant using the imported local covariance with scaling). It addresses the last sentence of clause (iv)
-    of the cited curved-field kernel result, "that the Ward identity on the field then leaves the single constant
-    Z_3 is argued and not derived". What the imported Fact supplies, exactly: its clause (iii) turns the
+    of version 1 of the cited curved-field kernel result, "that the Ward identity on the field then leaves the single
+    constant Z_3 is argued and not derived", which version 2 of that result replaces by a citation of clause (iii) here. What the imported Fact supplies, exactly: its clause (iii) turns the
     coefficient functions of the point into constant-coefficient polynomials in the curvature operator, its
     covariant derivatives and the mass, and fixes their dimension at 2 - j. What is derived here from that form:
     the list of terms (five constants) and the effect of transversality on it (one constant, the divergence of
@@ -57,11 +61,11 @@ extraction:
     gravitational field is not proved (clause (iv) below is argued and names the missing input); (c) the imported
     Fact is cited from memory, is sourced for a scalar field, and its use for the current of the Dirac field is
     the less well sourced part; (d) the kernel of the cited result is the trace form of the parametrix, not a
-    state's current two-point function. Not needed for this count, contrary to the cited result's own note: the
+    state's current two-point function. Not needed for this count, as the cited result's note says since its version 2: the
     first Hadamard transport equation (it enters only the coefficients at degree four, not the degree of
     divergence). The protraction identity is the stored theorem
-    synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion, clause (iii), cited and pinned (in the
-    cited curved-field result it is still a hypothesis); it enters the count
+    synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion, clause (iii), cited and pinned (the
+    cited curved-field result cites the same clause since its version 2); it enters the count
     of curvature terms (two instead of three). Without it, on symmetric maps, a third invariant appears, and for
     general maps six: both computed. Checked on the web on 10 November 2026 (arXiv abstract pages, through a
     text-extraction tool): Hollands and Wald, arXiv:gr-qc/0103074 (uniqueness of local covariant Wick polynomials
@@ -85,7 +89,7 @@ extraction:
 ---
 
 ## formal
-Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a smooth gravitational field on four-dimensional flat spacetime with vanishing torsion (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $D = \hb^{T}(\partial_{a})D_{a}$ its covariant vector derivative, $\mathcal{R}$ its curvature operator, $\mathcal{R}(b) = \partial_{a}\cdot\mathcal{R}(a\wedge b)$ the Ricci vector and $\mathcal{R}_{0} = \partial_{a}\cdot\mathcal{R}(a)$ the scalar. The result is conditional on Fact \claimref{synthesis.imported-local-covariance-with-scaling-of-time-ordered-products}, which is cited from memory; its sources treat the time-ordered products of a scalar field, and its use for the current of the Dirac field is part of the import. It concerns the difference of two extensions and does not show that a transverse one exists. The stored kernel it refers to is the trace form of the parametrix, not a state's current two-point function. By Theorem \claimref{synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion}(iii), the field being torsion-free, its curvature operator obeys the protraction identity $\partial_{a}\wedge\mathcal{R}(a\wedge b) = 0$ and its Ricci map is symmetric; the cited curved-field theorem carries the identity as a hypothesis. For a physical vector field $A$ write
+Units $\hbar = c = 1$. Let $(\hb, \Omega)$ be a smooth gravitational field on four-dimensional flat spacetime with vanishing torsion (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $D = \hb^{T}(\partial_{a})D_{a}$ its covariant vector derivative, $\mathcal{R}$ its curvature operator, $\mathcal{R}(b) = \partial_{a}\cdot\mathcal{R}(a\wedge b)$ the Ricci vector and $\mathcal{R}_{0} = \partial_{a}\cdot\mathcal{R}(a)$ the scalar. The result is conditional on Fact \claimref{synthesis.imported-local-covariance-with-scaling-of-time-ordered-products}, which is cited from memory; its sources treat the time-ordered products of a scalar field, and its use for the current of the Dirac field is part of the import. It concerns the difference of two extensions and does not show that a transverse one exists. The stored kernel it refers to is the trace form of the parametrix, not a state's current two-point function. By Theorem \claimref{synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion}(iii), the field being torsion-free, its curvature operator obeys the protraction identity $\partial_{a}\wedge\mathcal{R}(a\wedge b) = 0$ and its Ricci map is symmetric; the cited curved-field theorem cites the same clause. For a physical vector field $A$ write
 \[
 K_{1}A = \nabla^{2}A, \qquad K_{2}A = D\,(D\cdot A), \qquad K_{3}A = m^{2}A, \qquad K_{4}A = \mathcal{R}_{0}\,A, \qquad K_{5}A = \mathcal{R}(A),
 \]

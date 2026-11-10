@@ -39,3 +39,4 @@ functions:
 untouched_premises:
   synthesis.imported-einstein-cartan-matter-coupling: imported matter coupling used in clause (iv) as stated; the
     checks verify the frame identity and the vacuum statements
+  synthesis.field-space-premise-parallel-frozen-point: assumed as the field space on which the functional is varied (the pair with Q(I) fixed); the checks compute the frame equation on that field space and do not touch the premise

@@ -1,7 +1,7 @@
 ---
 id: pred.gravity-entangles-standard-phase
 kind: prediction
-version: 1
+version: 2
 title: Gravity entangles two masses by the standard phase
 status: live
 subject: one-relation
@@ -16,6 +16,10 @@ credit:
   role: 'idea, direction and review'
 - name: Claude (model not recorded)
   role: mathematics and drafting
+- name: Claude Fable 5.2
+  role: 'scope sentence: the prediction is about the phase only, with no claim about a mediator or a quantised gravitational field; observation row'
+  version: 2
+  source: maintainer pass of 2026-11-10
 review: draft
 kill_condition:
   threshold: A null result at a sensitivity that resolves the standard phase on the experiment's geometry,
@@ -23,6 +27,21 @@ kill_condition:
   data_source: gravity-mediated entanglement experiments (BMV type)
   registered: 2026-10-09; reading chosen 2026-10-12 (third addendum)
 observations:
+- date: 2026-11
+  dataset: Mass in spatial superposition; proposals for gravity-mediated entanglement
+  result: 'Status unchanged: no experiment has observed gravity-mediated entanglement, and the kill condition
+    is neither met nor probed. The largest mass shown in spatial superposition is a sodium nanoparticle
+    of more than 7,000 atoms, above 170,000 Da (macroscopicity 15.5), many orders below the milligram
+    scale at which gravity between small masses has been measured classically. Current work is design
+    and theory: a chip-based magnetic levitation and superposition scheme for nanodiamonds of 1e-19 to
+    1e-15 kg (numerical simulation only), and a mass-independent scheme with two Stern-Gerlach interferometers
+    (analytical). Whether a classical gravitational interaction with quantised matter could itself produce
+    entanglement is disputed in print (Nature 646, 813 (2025), and a reply attributing the entanglement
+    there to diffusion of particles between the objects); the stored prediction concerns the phase only
+    and takes no side.'
+  verdict: pending
+  source: Pedalino et al., arXiv:2507.21211 (2025); Xiang et al., arXiv:2601.06608 (2026); Braccini, Serafini
+    and Bose, arXiv:2602.19306 (2026); Gundhi, Infantino and Bassi, arXiv:2604.19696 (2026)
 - date: 2026-10
   dataset: Tabletop gravity between small masses
   result: 'No experiment has reached gravity-mediated entanglement. The newest step is classical: Newtonian
@@ -40,6 +59,10 @@ locators:
   number: registration 2026-10-09, third addendum
   label: ''
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 1 -> 2: a scope sentence at every level says the prediction concerns the phase only, makes no claim about a mediator and is not a test of a quantised gravitational field, which the series does not hold (the conventions state the position); observation row of 2026-11 added from four arXiv abstracts read on the web on 2026-11-10, status unchanged. The prediction and its kill condition are unchanged.'
   env: registration
   source: 'Project: claude/QG_entanglement_prediction_registration.md'
   flags:
@@ -61,6 +84,8 @@ extraction:
 ## formal
 Gravity entangles two masses, each held in a superposition of two places, by the standard phase $\Phi = (G m_A m_B/\hbar)\int (1/r_{11} + 1/r_{22} - 1/r_{12} - 1/r_{21})\,dt$, under the element reading and premises P-i to P-vi.
 
+\emph{Scope.} The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it.
+
 ## technical
 Registered prediction (registered 2026-10-09; reading chosen 2026-10-12, third addendum). Under the element reading of the frozen-point connection's equations, and under premises P-i to P-vi, held fixed before any result (P-ii is unitary evolution), two masses $m_A$ and $m_B$, each held in a superposition of two places, become entangled by the standard phase
 $$\Phi = \frac{G m_A m_B}{\hbar}\int \left(\frac{1}{r_{11}} + \frac{1}{r_{22}} - \frac{1}{r_{12}} - \frac{1}{r_{21}}\right)dt,$$
@@ -68,8 +93,10 @@ with $r_{ij}$ the distance between branch $i$ of the first mass and branch $j$ o
 
 The prediction was first registered under the other reading of the same equations, the value reading (a single grade-two connection with real coefficients), as no entanglement; choosing the element reading inverted it. A null result at a sensitivity that resolves the standard phase on the experiment's geometry, with coherence kept for the duration, refutes the element reading together with P-i to P-vi. The basis is a working note, not a series paper.
 
+The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it.
+
 ## lay
-Take two small masses and put each into a superposition of being in two places at once. This prediction says that, under one of the two readings the framework's equations allow (the element reading, chosen on 12 October 2026) and six premises fixed in advance (P-i to P-vi, one of them that quantum evolution stays unitary), gravity between the masses entangles them by exactly the standard amount, the phase that Newtonian gravity gives in ordinary quantum mechanics. Under the other reading the framework had predicted no entanglement at all. Tabletop experiments have not yet reached this sensitivity; a clear null result at the needed sensitivity, with the superpositions kept coherent throughout, would refute the chosen reading together with its premises.
+Take two small masses and put each into a superposition of being in two places at once. This prediction says that, under one of the two readings the framework's equations allow (the element reading, chosen on 12 October 2026) and six premises fixed in advance (P-i to P-vi, one of them that quantum evolution stays unitary), gravity between the masses entangles them by exactly the standard amount, the phase that Newtonian gravity gives in ordinary quantum mechanics. Under the other reading the framework had predicted no entanglement at all. Tabletop experiments have not yet reached this sensitivity; a clear null result at the needed sensitivity, with the superpositions kept coherent throughout, would refute the chosen reading together with its premises. The prediction is about the size of the effect only. It says nothing about what carries gravity between the masses and is not a test of whether gravity comes in quanta: in this framework gravity is a classical field, and seeing the effect would not show otherwise.
 
 ## one-liner
-Under the element reading and premises P-i to P-vi, gravity entangles two superposed masses by the standard phase.
+Under the element reading and premises P-i to P-vi, gravity entangles two superposed masses by the standard phase; a statement about the phase only, with no claim about a mediator or a quantised gravitational field.

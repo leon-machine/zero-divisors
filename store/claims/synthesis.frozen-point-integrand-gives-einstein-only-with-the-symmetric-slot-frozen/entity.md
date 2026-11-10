@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen
 kind: claim
-version: 2
+version: 3
 title: 'The frozen-point integrand gives Einstein only with the symmetric slot frozen'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'wording of the torsion hypothesis: vanishing torsion and the first Bianchi identity are no longer written as one condition'
+  version: 3
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -50,6 +54,10 @@ lineage:
   - synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared
   - synthesis.stelle-west-norm-is-no-local-output
 extraction:
+  maintainer_pass_2026_11_10_protraction:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 2 -> 3, wording of one hypothesis. The statement and the proof wrote torsion-free and curvature obeying the first Bianchi identity as one condition. The identity follows from vanishing torsion (synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion, clause (iii)) and the converse fails (its two examples), so the two are now separated: the fields are torsion-free, and what the proofs use of that is the identity. No clause, value or check changes; the theorem is cited by name, with no uses edge, since the proofs here work on algebraic curvature maps and use the identity as a condition on them.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -94,10 +102,10 @@ Work in $\Cl(2,4)$ with $\nO$, $\nInf$ as in Theorem \claimref{synthesis.gtg-tra
 \[
 A(a) \;=\; \Omega(a) \;-\; \nInf \wedge \hb^{-1}(a) \;+\; \nO \wedge S\bigl(\hb^{-1}(a)\bigr) \;+\; \beta(a)\,\nInf \wedge \nO ,
 \]
-with $\Omega$ the rotation gauge field, $\hb^{-1}(a)$ the coframe, $S$ a field of linear maps of spacetime vectors (the special-conformal slot; the normal tractor connection has $S = \Sch$) and $\beta$ a scalar one-form (the dilation). Split $S$, with respect to the derived metric, into its trace part $\sigma\,\id$, its antisymmetric part and its trace-free symmetric part. A \emph{slot field space} varies $\hb$ and $\Omega$ and, for each of the three parts, either freezes it at its Lorentz-invariant value ($\sigma = \rho$, a constant; the other two zero) or varies it as an independent field; $\beta$ is zero or varied. Fields are torsion-free (the curvature of $\Omega$ obeys the first Bianchi identity). $E_{4}$, $|W|^{2}$, $|\Ric_{0}|^{2}$ and $R^{2}$ denote the Euler density, the Weyl square, the square of the trace-free Ricci map and of the Ricci scalar (index readings, store's curvature sign), $\mathcal{L}$ the density $\epsilon(I, V, F, F) = \epsilon(I, X, F, F)$ as a multiple of the volume form.
+with $\Omega$ the rotation gauge field, $\hb^{-1}(a)$ the coframe, $S$ a field of linear maps of spacetime vectors (the special-conformal slot; the normal tractor connection has $S = \Sch$) and $\beta$ a scalar one-form (the dilation). Split $S$, with respect to the derived metric, into its trace part $\sigma\,\id$, its antisymmetric part and its trace-free symmetric part. A \emph{slot field space} varies $\hb$ and $\Omega$ and, for each of the three parts, either freezes it at its Lorentz-invariant value ($\sigma = \rho$, a constant; the other two zero) or varies it as an independent field; $\beta$ is zero or varied. Fields are torsion-free; what the proofs use of this is that the curvature of $\Omega$ obeys the first Bianchi identity, which holds on a torsion-free field by Theorem \claimref{synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion}(iii) and does not by itself give vanishing torsion (the converse fails, same clause). $E_{4}$, $|W|^{2}$, $|\Ric_{0}|^{2}$ and $R^{2}$ denote the Euler density, the Weyl square, the square of the trace-free Ricci map and of the Ricci scalar (index readings, store's curvature sign), $\mathcal{L}$ the density $\epsilon(I, V, F, F) = \epsilon(I, X, F, F)$ as a multiple of the volume form.
 \begin{enumerate}
 \item[(i)] \emph{(What the integrand sees; proved.)} $\mathcal{L}$ depends on $A$ only through the Lorentz block of $F$, $F_{W}(B) = -\mathcal{R}(B) + T_{S}(B)$ with $T_{S}(a \wedge b) = a \wedge S(b) + S(a) \wedge b$ (on frame vectors), and on the frozen point only through the blade $I \wedge X = \nInf \wedge \nO$, so not on $\Lambda$; it does not depend on $\beta$. The connection preserves $\nInf + \rho\,\nO$ if and only if $S = \rho\,\id$ and $\beta = 0$.
-\item[(ii)] \emph{(The free slot is the normal tractor connection; proved.)} $\mathcal{L}$ is quadratic in $S$ with a nondegenerate quadratic part on all sixteen components. With the whole slot varied, its equation has the unique solution $S = \Sch$, the Schouten map, at which $F_{W} = -\mathcal{W}$ and $\mathcal{L} = \tfrac14 |W|^{2}$. So on the torsion-free conformal Cartan connections (values in all bivectors, nondegenerate soldering, curvature of $\Omega$ obeying the first Bianchi identity, gauged by the parabolic group of the line of $X$), with the whole slot varied, the on-shell connection is the normal tractor connection, and the reduced functional is the Weyl-squared functional of Theorem \claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared}, with the Bach equations (Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(a)). The equation for $\Omega$ on this field space with torsion is not treated here. This proves in the series the elimination step of Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(b).
+\item[(ii)] \emph{(The free slot is the normal tractor connection; proved.)} $\mathcal{L}$ is quadratic in $S$ with a nondegenerate quadratic part on all sixteen components. With the whole slot varied, its equation has the unique solution $S = \Sch$, the Schouten map, at which $F_{W} = -\mathcal{W}$ and $\mathcal{L} = \tfrac14 |W|^{2}$. So on the torsion-free conformal Cartan connections (values in all bivectors, nondegenerate soldering, vanishing torsion, of which only the first Bianchi identity of the curvature of $\Omega$ is used; gauged by the parabolic group of the line of $X$), with the whole slot varied, the on-shell connection is the normal tractor connection, and the reduced functional is the Weyl-squared functional of Theorem \claimref{synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared}, with the Bach equations (Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(a)). The equation for $\Omega$ on this field space with torsion is not treated here. This proves in the series the elimination step of Fact \claimref{synthesis.imported-conformal-gravity-bach-equations-and-conformal-gauge-form}(b).
 \item[(iii)] \emph{(The lattice; proved.)} After eliminating the varied parts, with $\Lambda = 6\rho$:
   \begin{itemize}
   \item symmetric part frozen (antisymmetric part frozen or varied, $\beta$ zero or varied): $\tfrac14 E_{4} - 2\rho\,(R - 2\Lambda)$, Euler, Einstein-Hilbert and volume terms with the frozen point's $\Lambda$;

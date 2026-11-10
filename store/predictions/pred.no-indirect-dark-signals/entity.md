@@ -1,7 +1,7 @@
 ---
 id: pred.no-indirect-dark-signals
 kind: prediction
-version: 4
+version: 5
 title: No indirect dark-sector signals
 status: live
 subject: dark-matter
@@ -21,6 +21,10 @@ credit:
   role: consistency pass, the asymmetric-relic clause restricted to the mirror
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Fable 5.2
+  role: 'pointer to the open problem on the imported graviton-exchange rate; prediction unchanged'
+  version: 5
+  source: maintainer pass of 2026-11-10
 review: typed
 kill_condition:
   threshold: Any confirmed indirect signal
@@ -46,6 +50,10 @@ locators:
   number: T17 stance 8
   label: tab:stances
 extraction:
+  maintainer_pass_2026_11_10_graviton:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 4 -> 5, by Leon''s decision of 10 November 2026 (flag now, derive later): one sentence added to the formal and technical levels pointing to open problem op.graviton-rate-as-classical-field-process. The prediction, its status, its kill condition and every number are unchanged.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -76,10 +84,10 @@ derivations:
 ---
 
 ## formal
-No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$, and for the mirror, a charge-asymmetric relic, further by its negligible anti-mirror density.
+No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$, and for the mirror, a charge-asymmetric relic, further by its negligible anti-mirror density. The words ``graviton exchange'' import a process of a quantised gravitational field, which the series does not hold (conventions, section ``Gravity and the graviton''); whether the classical gauge field sourced by matter gives an annihilation channel at that rate, at another or at none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
 
 ## technical
-In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$; for the mirror it acts on a charge-asymmetric relic with negligible anti-mirror density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), while the odd towers' matter, if any, is a symmetric relic (Proposition \claimref{dark-matter.population-count-one-share-half-percent}(ii)) whose annihilation into this tower is held down by the graviton suppression alone. Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q).
+In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$; for the mirror it acts on a charge-asymmetric relic with negligible anti-mirror density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), while the odd towers' matter, if any, is a symmetric relic (Proposition \claimref{dark-matter.population-count-one-share-half-percent}(ii)) whose annihilation into this tower is held down by the graviton suppression alone. Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q). The words ``graviton exchange'' import a process of a quantised gravitational field, which the series does not hold (conventions, section ``Gravity and the graviton''); whether the classical gauge field sourced by matter gives an annihilation channel at that rate, at another or at none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
 
 ## lay
 Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen (and that in the mirror world there is almost no anti-matter for its matter to meet), so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.

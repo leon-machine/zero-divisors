@@ -1,0 +1,50 @@
+---
+id: note.synthesis.where-stored-text-names-a-graviton
+kind: note
+version: 1
+title: 'Where stored text names a graviton: the list, grouped'
+status: remark
+subject: quantum-fields
+proposed_by:
+  kind: ai
+  session: maintainer-2026-11-10
+ai_involved: 'yes'
+credit:
+- name: Leon Butler
+  role: direction and the decision to record this list
+- name: Claude Fable 5.2
+  role: search and drafting
+  source: maintainer pass of 2026-11-10
+comments_on:
+- dark-matter.imported-massless-graviton-production-rate
+- hawking.joint-j3-s-wave-reduction
+- dark-energy.acoustic-no-go-one-way-grip
+extraction:
+  open_problem: op.graviton-rate-as-classical-field-process
+  maintainer_pass_note:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'List stored at Leon''s decision of 10 November 2026 so that later work can go through it; none of the 51 entities is edited by this note, and it changes no statement and no status. Method: a text search of the store for the word, one sentence read per entity; the grouping is argued from that reading, not from a full reading of each entity. The search was made on 10 November 2026; entities added later are not in it.'
+---
+
+## formal
+The conventions (section ``Gravity and the graviton'') state the series' position: gravity is the classical gauge field of Gauge Theory Gravity, the series holds no quantum of that field, and where stored text says graviton it names a helicity-2 channel of the classical field, a counting convention, or prior art. On 10 November 2026 the word occurred in 51 entities of the store and in five top-level files. They are listed here in seven groups, by the use made of the word; the grouping rests on a text search and one sentence per entity and is argued, not a full reading.
+\begin{enumerate}
+\item[(a)] \emph{Kinematics: helicity and homogeneity tables, joint J1. Reading: a helicity-2 channel of the classical field.} \claimref{hawking.helicity-lift-joints-itemised}, \claimref{scrambling.imported-collars-coframe-exceptional-set-helicity}, \claimref{note.hawking.point-contact-weinberg-witten-triage}, \claimref{note.hawking.setting-introduction}, \claimref{note.hawking.setting-what-proved-what-imported-what}.
+\item[(b)] \emph{Channel count: the spin-2 clause of joint J3 and the horizon channels. Reading: a helicity-2 channel of the classical field; the clause is assumed for the even-parity channels only.} \claimref{hawking.joint-j3-s-wave-reduction}, \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}, \claimref{synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature}, \claimref{synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet}. The first entity of (a) belongs here as well; so do the open problems op.helicity-per-boundary-mode and op.counted-mode-energy.
+\item[(c)] \emph{Counting readings: additive counts with a term for the gravitational field. Reading: a counting convention.} \claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}, \claimref{synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content}. Also the open problem op.qft-structural-inputs.
+\item[(d)] \emph{Processes and rates: emission or exchange of a quantum, which is more than a count. The imported rate is flagged, and this group is the subject of the open problem.} \claimref{dark-matter.imported-massless-graviton-production-rate}, \claimref{dark-matter.seeding-gravity-floor-dark-towers-temperature}, \claimref{dark-matter.coefficients-floors-they-give-what-gravity}, \claimref{synthesis.seeding-remainder-excludes-perturbative-pati-salam}, \claimref{synthesis.untuned-fit-caps-lightest-heavy-neutrino}, \claimref{dark-matter.radiation-audit-what-theorem-closes-what}, \claimref{pred.no-indirect-dark-signals}, \claimref{synthesis.dimmed-burst-time-rescaled-copy}, \claimref{pred.dimmed-evaporation-bursts}, \claimref{note.standard-model.what-settled-what-gravitational-channel-cannot}, \claimref{note.dark-matter.setting-levels-results}, \claimref{note.dark-matter.setting-machine-verification}, \claimref{note.dark-matter.setting-position-series}, \claimref{note.dark-matter.setting-premises-attacked-what-would-refute}, \claimref{note.dark-matter.setting-seeding-gravity-why-no-coupling}, \claimref{quantity.reduced-planck-mass}. The fifth of these and the last two of the notes contain the word only inside the imported Fact's id; the sixth has it in its check only. Also the open problem op.odd-towers.
+\item[(e)] \emph{Ontology readings: the mode of the gravitational field treated as a collective mode, or its nature left open.} \claimref{dark-energy.acoustic-no-go-one-way-grip}, \claimref{dark-energy.lift-inherits-no-go-steps-itemised}, \claimref{dark-energy.conclusion-does-not-depend-ontology-level}, \claimref{dark-matter.imported-gravity-only-coupling}, \claimref{note.dark-energy.setting-introduction}, \claimref{note.dark-energy.setting-one-way-grip-acoustic-no}, \claimref{note.mass.point-contact-what-gravity-why-everything}.
+\item[(f)] \emph{Polarisation count of the classical field, and linear modes of it given a vacuum state.} \claimref{dark-energy.point-infinity-has-no-physical-fluctuation}, \claimref{synthesis.promoted-norm-one-global-pair}, \claimref{synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling}. The third has the word in its proof and check only; there the off-diagonal modes of the gravitational field are given an adiabatic vacuum.
+\item[(g)] \emph{Prior art and names, with no quantum of the series implied (Penrose's nonlinear graviton is a classical construction).} \claimref{correspondence.imported-nonlinear-graviton}, \claimref{correspondence.googly-localisation-quartic-order}, \claimref{correspondence.no-real-lorentzian-vacuum-half-flat}, \claimref{synthesis.quartic-ordering-tensor-locally-trivial}, \claimref{note.correspondence.boundary-stated-plainly}, \claimref{note.correspondence.setting-nonlinear-graviton-boundary-googly-conjecture}, \claimref{note.correspondence.setting-ordering-quartic-order-ordering-insensitivity}, \claimref{note.correspondence.setting-prior-art}, \claimref{note.correspondence.setting-what-proved-what-imported-what}, \claimref{note.correspondence.setting-contribution}, \claimref{synthesis.imported-null-plane-modular-hamiltonian-first-law}, \claimref{synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel}, \claimref{note.hawking.setting-prior-art}, \claimref{note.dark-energy.setting-prior-art}. Also the top-level files references.yaml, labels.yaml, tags.yaml and notebook.yaml.
+\end{enumerate}
+Groups (a), (b), (c) and (g), and the first two entities of (f), fall under the three readings of the conventions. Group (d) does not: it uses a process, and the imported rate is flagged for it (open problem op.graviton-rate-as-classical-field-process). Group (e) and the third entity of (f) are recorded here as places where the stored text goes beyond the three readings (a collective-mode reading of the field's mode, or a vacuum state for linear modes of the gravitational field); they are not changed and not flagged, and what to do with them is not decided.
+
+## technical
+pending
+
+## lay
+pending
+
+## one-liner
+The 51 stored entities that use the word graviton, in seven groups: helicity kinematics, channel counts, counting readings, processes and rates (flagged through the imported production rate), ontology readings, polarisation counts and linear modes, and prior art.

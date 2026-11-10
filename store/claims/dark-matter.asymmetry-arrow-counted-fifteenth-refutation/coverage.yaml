@@ -10,11 +10,10 @@ functions:
   check_asymmetry_confined_to_this_tower_and_the_mirror:
     kind: complete
     clauses: ["(iii) the asymmetry is confined to the oriented causal towers, this one and the mirror; odd towers carry none"]
-    omits: "universality of the value (Premise P4), that a flag exists on every rung, and (iv) the stance on epsilon are not computed"
+    omits: "the common value on the reversal pair (the copy theorem, clause (v)), that a flag exists on every rung, and (iv) the stance on epsilon are not computed"
 untouched_premises:
   dark-matter.imported-trichotomy-descents-data: "(iv) uses the trichotomy's kinematic clause at its observation level; no computable content in this statement"
   dark-matter.mirror-tower-copy-one: "equality of theta and epsilon across the reversal orbit is cited from its parts (iv) and (v), not recomputed here"
-  dark-matter.p4-democracy-asymmetry-over-oriented-towers: "premise stated as a hypothesis, not a computation (docstring)"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

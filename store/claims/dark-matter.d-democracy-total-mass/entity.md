@@ -1,7 +1,7 @@
 ---
 id: dark-matter.d-democracy-total-mass
 kind: claim
-version: 1
+version: 2
 title: 'D: democracy of the total mass'
 status: postulate
 region: dark-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Fable 5.2
+  role: 'note on where D belongs: the de Sitter reading, not counted with R1 to R3; joint consequence with R1 and R2; exposure of w = -1'
+  version: 2
+  source: maintainer pass of 2026-11-10
 review: typed
 locators:
   paper: T14
@@ -24,6 +28,10 @@ locators:
   label: prem:D
   line: 1041
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 1 -> 2. Leon''s decision 10 of 10 November 2026: D is no longer counted with R1 to R3. A note at every level records that D with R1 and R2 forces one quantum per de Sitter ball (argued, by the equality of the ball and sphere forms and x^2 = x^3 = x^4 only at x = 1), that D is the premise of the de Sitter reading only, and that it is the one dark-matter postulate naming the de Sitter radius, so it shares in content the exposure of w = -1 (text only, no edge). The reference to P4, retired the same day, is reworded. The premise is unchanged.'
   env: premise
   typing:
     by: ai-typing-pass
@@ -31,13 +39,17 @@ extraction:
 ---
 
 ## formal
-Every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere. This is a democracy of mass, distinct from P4's democracy of the asymmetry, which the odd towers do not carry.
+Every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere. This is a democracy of mass, distinct from an equality of the asymmetry per mode (the former Premise P4, retired as a postulate; the asymmetry is equal in this tower and the mirror by Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)), which the odd towers do not carry.
+
+\emph{Note (where D belongs).} D is the premise of the de Sitter reading of the count (Propositions \claimref{dark-matter.democracy-de-sitter-radius-unit-ball}, \claimref{dark-matter.two-reductions}) and is not counted with R1 to R3: no stored statement of the fitted total with the cell radius as unit has D in its past cone, and Observation \claimref{dark-matter.status-rule}(iv) has the de Sitter reading replace R2 by D. The two readings cannot be held together with more than one quantum per tower (argued): D with R1 (\claimref{dark-matter.r1-equal-mass-per-quantum}) gives every populated tower the same number of quanta on its de Sitter sphere, and R2 (\claimref{dark-matter.r2-one-quantum-per-unit-ball}) gives a tower of dimension $D$ one quantum per ball of the common cell radius $a$, so by the equality of the ball and sphere forms the number is $(\ell/a)^{D}$ for $D = 2, 3, 4$, and $x^{2} = x^{3} = x^{4}$ holds for $x > 0$ only at $x = 1$: the cell radius is the de Sitter radius and each tower holds one quantum per de Sitter ball. D is also the one postulate of the dark-matter subject that names the de Sitter radius, so it is the one whose content depends on that radius being a constant of the laws: it shares the exposure of $w = -1$. If $w$ differed from $-1$ the unit of D would change with time and the two results under D would go with it; the fitted total, which does not use D, would not.
 
 ## technical
-This premise states that every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its own de Sitter sphere. It is a democracy of mass, distinct from the democracy of the asymmetry, which concerns the asymmetry per mode in the oriented towers and which the odd towers do not carry. It is the premise under which the shares can be read at the de Sitter radius rather than at a microscopic spacing.
+This premise states that every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its own de Sitter sphere. It is a democracy of mass, distinct from an equality of the asymmetry per mode, which holds for this tower and the mirror and which the odd towers do not carry. It is the premise under which the shares can be read at the de Sitter radius rather than at a microscopic spacing.
+
+Note: D belongs to the de Sitter reading and is not counted with R1 to R3. Held together with R1 and R2 it forces the cell radius to be the de Sitter radius, one quantum per de Sitter ball (argued), so the two readings are alternatives. It is the one dark-matter postulate that names the de Sitter radius, and so shares the exposure of $w = -1$.
 
 ## lay
-This is an assumption, not a result: every populated hidden world holds the same total amount of mass, spread over its own version of the cosmic sphere. It is separate from the assumption that the matter excess is the same in every world that can carry one, which the odd-dimensional worlds do not.
+This is an assumption, not a result: every populated hidden world holds the same total amount of mass, spread over its own version of the cosmic sphere. It is separate from the statement that the matter excess is the same in our world and its mirror, which the odd-dimensional worlds cannot carry. It belongs to one of two alternative ways of counting, the one that uses the size of the cosmic horizon as its unit, and it cannot be combined with the other way (one particle per ball of a small fixed size) unless each world holds a single particle. Because it uses the horizon size, it depends on dark energy being a true constant.
 
 ## one-liner
-Premise: every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere.
+Premise of the de Sitter reading (not counted with R1 to R3, and the one dark-matter postulate naming the de Sitter radius): every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere.

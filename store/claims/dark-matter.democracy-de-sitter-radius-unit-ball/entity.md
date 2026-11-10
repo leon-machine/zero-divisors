@@ -1,7 +1,7 @@
 ---
 id: dark-matter.democracy-de-sitter-radius-unit-ball
 kind: claim
-version: 4
+version: 5
 title: Democracy at the de Sitter radius is the unit-ball rule
 status: proved
 region: dark-matter
@@ -17,12 +17,18 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Fable 5.2
+  role: 'the two registered conditions assumed; note on R3''s unit in the de Sitter reading'
+  version: 5
+  source: maintainer pass of 2026-11-10
 review: typed
 derivations:
 - name: main
   assumes:
-  - dark-matter.d-democracy-total-mass@1
-  - dark-matter.r3-one-cell-per-unshared-direction@1
+  - dark-matter.d-democracy-total-mass@2
+  - dark-matter.odd-towers-populated@1
+  - dark-matter.r3-one-cell-per-unshared-direction@2
+  - dark-matter.single-ideal-at-residues-zero-and-four@1
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -39,6 +45,10 @@ locators:
   label: prop:democracy
   line: 1045
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 4 -> 5. Leon''s decisions 5, 9 and 10 of 10 November 2026: assumes edges added to dark-matter.single-ideal-at-residues-zero-and-four and dark-matter.odd-towers-populated (the total is the unit-ball rule''s, summed over the same towers); a note says that the thickness of one de Sitter radius is R3''s own-cell-radius unit only with one quantum per de Sitter ball, and that D belongs to this reading and is not counted with R1 to R3. D and R3 repinned 1 -> 2 after their notes (D: where it belongs; R3: the unit), both uses holding as cited. Shares and check unchanged; coverage.yaml records the two new premises as untouched.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -72,7 +82,7 @@ extraction:
 ---
 
 ## formal
-Under D, with the thickness set to $\ell$ (R3 with $\ell$ as the unit), the shares are $\tfrac{|\Sph^{4}|}{|\Sph^{n}|}$, the sphere form of Remark \ref{rem:forms}, and the total is that of Proposition \claimref{dark-matter.unit-ball-rule}.
+Under D, with the thickness set to $\ell$ (R3 with $\ell$ as the unit), the shares are $\tfrac{|\Sph^{4}|}{|\Sph^{n}|}$, the sphere form of Remark \ref{rem:forms}, and the total is that of Proposition \claimref{dark-matter.unit-ball-rule}, summed as there over the mirror and the four odd towers (populated by Premise \claimref{dark-matter.odd-towers-populated}, residues $0$ and $4$ empty by Premise \claimref{dark-matter.single-ideal-at-residues-zero-and-four}). \emph{Note (the unit).} Premise R3 takes each tower's own cell radius as its unit; the thickness $\ell$ used here is that unit only if each tower holds one quantum per de Sitter ball, which is what D gives when held with R1 and R2 (Premise \claimref{dark-matter.d-democracy-total-mass}, note); otherwise it is R3's form with another unit, as stated. D belongs to this reading and is not counted with R1 to R3 among the premises of the fitted total.
 
 ## technical
 Assume every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere of radius $\ell$, and take the thickness rule with $\ell$ as its unit. A tower of dimension $n$ then has density $M_{\mathrm{tot}}/(|\Sph^{n}|\,\ell^{n})$ on its sphere; counting one thickness $\ell$ of the direction we cannot see, or sheets $\ell$ apart, turns this into a density per unit of our four-measure, and the share is

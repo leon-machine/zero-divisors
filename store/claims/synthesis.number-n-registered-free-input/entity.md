@@ -1,7 +1,7 @@
 ---
 id: synthesis.number-n-registered-free-input
 kind: claim
-version: 1
+version: 2
 title: 'Premise (N): the large number N is a registered free input'
 status: postulate
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'last refutation clause worded as the registered rule of the w = -1 prediction, with the no-fallback sentence'
+  version: 2
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.dark-energy.four-ways-number-enters-theory-shape
@@ -31,6 +35,10 @@ lineage:
   - synthesis.field-space-premise-parallel-frozen-point
   - synthesis.rung-unit-second-free-number
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 1 -> 2, at Leon''s decisions of 2026-11-10: the last refutation clause now carries the rule registered on the w = -1 prediction (two independent surveys, each at five standard deviations) and the sentence, labelled argued, that the series has no fallback. The premise is unchanged and no assumes edge to it is added (not decided).'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'
@@ -55,13 +63,13 @@ extraction:
 
 \emph{What it does not give.} It does not explain why $N$ is large or $\Lambda$ small, which is declared outside the series (\claimref{programme.n-parameter-of-the-laws}); the one measure the promotion names is flat in whichever function of the norm is promoted (Theorem \claimref{synthesis.promoted-norm-one-global-pair}). It does not fix Newton's constant, which is a unit here.
 
-\emph{Refutation condition.} The premise is false if $N$ (equivalently $G\Lambda$) is derived: computed from the transport structure, from another premise of the register, or from a dynamics with no further free dimensionless constant; or if it is shown to be a function of another registered number, such as $\xi G$; or if $\Lambda$, read as $3Q(I)$, is shown not to be one constant (a confirmed $w \neq -1$ with dark energy read as the frozen point's norm, the condition (a) of Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), so that there is no single $N$ to register.
+\emph{Refutation condition.} The premise is false if $N$ (equivalently $G\Lambda$) is derived: computed from the transport structure, from another premise of the register, or from a dynamics with no further free dimensionless constant; or if it is shown to be a function of another registered number, such as $\xi G$; or if $\Lambda$, read as $3Q(I)$, is shown not to be one constant (a confirmed $w \neq -1$ with dark energy read as the frozen point's norm, the condition (a) of Premise \claimref{synthesis.field-space-premise-parallel-frozen-point}), so that there is no single $N$ to register. Confirmed means the rule registered on the prediction \claimref{pred.dark-energy-w-minus-one}: two independent surveys each excluding the point $(w_{0}, w_{a}) = (-1, 0)$ of the form $w(a) = w_{0} + w_{a}(1 - a)$ at five standard deviations, each survey allowed the shared CMB prior, by the collaboration's published frequentist distance, Bayesian evidence recorded beside it; a model-independent exclusion of $w = -1$ at any epoch counts by the same rule; the rule is conservative. The series has no fallback for $w \neq -1$ (argued: a search of the store, not a proof): the promoted norm keeps $w = -1$ and the norm released locally tracks one fluid and decelerates (Theorem \claimref{synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates}, within its scope), and the one stored structure with a late-time equation of state different from $-1$, the unadopted branch of Theorem \claimref{synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands}(ii) with effective $w = -\tfrac14$, is a dark-matter component with $w_{a} > 0$ and no crossing of $-1$, not a variable norm.
 
 ## technical
-The series reads the cosmological constant as the norm of the frozen point, $\Lambda = 3Q(I)$, and the large number $N = M_{P}/H$, with $H^{2} = \Lambda/3$, as the one number that sets it; until now that number was carried only by a conjectured programme entity. This premise registers it, as the D-term level of the weak scale is registered: $N$, equivalently $G\Lambda = 3N^{-2}$, is not derived from the transport structure, from another premise, or from a dynamics without a further free constant, and is not a function of the D-term level; its value, about $10^{61}$, comes from the record. What kind of number it is stays as the programme entity states: a parameter of the laws under the action as written, and initial data of the descent, fixed at the origin, under the Henneaux-Teitelboim promotion the series adopts, which is also the Clausius route's own variational form. It sets the value of $\Lambda$, the norm the field-space premise leaves open, and the rung unit $v/H$ against the law $v/M_{P}$. It does not explain why $N$ is large. It would be refuted by a derivation of $N$, by showing it is a function of another registered number, or by a confirmed change of dark energy with time, read as the frozen point's norm.
+The series reads the cosmological constant as the norm of the frozen point, $\Lambda = 3Q(I)$, and the large number $N = M_{P}/H$, with $H^{2} = \Lambda/3$, as the one number that sets it; until now that number was carried only by a conjectured programme entity. This premise registers it, as the D-term level of the weak scale is registered: $N$, equivalently $G\Lambda = 3N^{-2}$, is not derived from the transport structure, from another premise, or from a dynamics without a further free constant, and is not a function of the D-term level; its value, about $10^{61}$, comes from the record. What kind of number it is stays as the programme entity states: a parameter of the laws under the action as written, and initial data of the descent, fixed at the origin, under the Henneaux-Teitelboim promotion the series adopts, which is also the Clausius route's own variational form. It sets the value of $\Lambda$, the norm the field-space premise leaves open, and the rung unit $v/H$ against the law $v/M_{P}$. It does not explain why $N$ is large. It would be refuted by a derivation of $N$, by showing it is a function of another registered number, or by a confirmed change of dark energy with time, read as the frozen point's norm (confirmed by the registered rule: two independent surveys each excluding $(w_{0}, w_{a}) = (-1, 0)$ at five standard deviations, a conservative rule; the series has no fallback, as far as a search of the store shows).
 
 ## lay
-In this framework one huge number, N, the ratio of the Planck mass to the scale set by the cosmological constant, about ten to the sixty-one, lies behind most of its puzzles about scales. Nothing in the framework produces it: its value is taken from observation. This entry records it as one of the basic numbers put in by hand, beside the one that sets the weak scale. Whether it counts as a constant of the laws or as a fact about the universe's history depends on how the gravitational action is written; the framework adopts the version in which it is a fact fixed at the start, without settling why it is so large. The entry would be overturned if anyone derived N, showed it follows from another basic number, or found that dark energy changes with time.
+In this framework one huge number, N, the ratio of the Planck mass to the scale set by the cosmological constant, about ten to the sixty-one, lies behind most of its puzzles about scales. Nothing in the framework produces it: its value is taken from observation. This entry records it as one of the basic numbers put in by hand, beside the one that sets the weak scale. Whether it counts as a constant of the laws or as a fact about the universe's history depends on how the gravitational action is written; the framework adopts the version in which it is a fact fixed at the start, without settling why it is so large. The entry would be overturned if anyone derived N, showed it follows from another basic number, or found that dark energy changes with time (by a rule fixed in advance: two independent surveys, each at five standard deviations).
 
 ## one-liner
-Premise (N): with $\Lambda = 3Q(I)$ fixed by the frozen point and $H^{2} = \Lambda/3$, the number $N = M_{P}/H$ (equivalently $G\Lambda = 3N^{-2}$, about $10^{61}$ from the record) is a registered free input, not derived and not a function of $\xi G$; a parameter of the laws under the action as written and initial data under the Henneaux-Teitelboim promotion the series adopts, as the programme entity states; its largeness is outside the series; refuted by a derivation of $N$, a dependence on another registered number, or a confirmed $w \neq -1$.
+Premise (N): with $\Lambda = 3Q(I)$ fixed by the frozen point and $H^{2} = \Lambda/3$, the number $N = M_{P}/H$ (equivalently $G\Lambda = 3N^{-2}$, about $10^{61}$ from the record) is a registered free input, not derived and not a function of $\xi G$; a parameter of the laws under the action as written and initial data under the Henneaux-Teitelboim promotion the series adopts, as the programme entity states; its largeness is outside the series; refuted by a derivation of $N$, a dependence on another registered number, or a confirmed $w \neq -1$ (two independent surveys each excluding $(w_{0}, w_{a}) = (-1, 0)$ at five standard deviations).

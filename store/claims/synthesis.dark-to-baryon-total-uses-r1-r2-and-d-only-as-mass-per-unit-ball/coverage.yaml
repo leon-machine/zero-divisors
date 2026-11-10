@@ -21,3 +21,7 @@ functions:
     kind: exact
     clauses:
     - "(iv) thicknesses (2, 1) and (1, 2), cubic cells (exactly 5), one tower moved from D = 2 to D = 4: values as identities in pi and distances from the record by rational bounds on pi"
+untouched_premises:
+  dark-matter.p1-single-frozen-point: "enters through the stored sourcing rule that defines the shares; a reading, not a computation"
+  dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the checks sum over the stored list of towers"
+  dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; no term for them is computed"

@@ -11,6 +11,10 @@ functions:
     kind: exact
     clauses: ["Omega_dark/Omega_b = (11 pi + 16)/(3 pi) = 5.36432", "within the error bar of 5.364 +- 0.065"]
     omits: "that the agreement is a fit chosen with the value known, and the count of fourteen candidates, have no computable content here"
+untouched_premises:
+  dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the list of dark towers is an input of the check, as its docstring says"
+  dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; the check sums over the five listed towers and does not compute the alternative totals"
+  dark-matter.projection-every-towers-content-dilutes-ones: "the sourcing rule in which the shares are read (a reading of P1); the check codes the densities per unit three-volume and does not derive the rule"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
