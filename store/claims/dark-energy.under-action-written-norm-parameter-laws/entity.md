@@ -27,7 +27,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-frozen-point-geometry@7
   - dark-energy.point-infinity-has-no-physical-fluctuation@4
-  - standard-model.trichotomy-what-kind-number@11
+  - standard-model.trichotomy-what-kind-number@12
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -1,0 +1,3 @@
+{"t": 1794323804.5995893, "problem": "op.positivity-of-values", "tokens": 1350000, "outcome": "proved-partial", "proposal": "synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional", "verdict": "SOUND WITH FIXES"}
+{"t": 1794323804.6289678, "problem": "the number N (no open problem)", "tokens": 1100000, "outcome": "negative", "proposal": "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent", "verdict": "SOUND WITH FIXES"}
+{"t": 1794323804.657598, "problem": "op.residue-killing-weights", "tokens": 1100000, "outcome": "proved-partial", "proposal": "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r", "verdict": "SOUND WITH FIXES"}

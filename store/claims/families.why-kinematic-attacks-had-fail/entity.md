@@ -29,7 +29,7 @@ derivations:
 - name: main
   uses:
   - families.imported-dictionary-exact-join@7
-  - standard-model.trichotomy-what-kind-number@11
+  - standard-model.trichotomy-what-kind-number@12
   proof: proof-main.tex
 checked_by:
 - kind: legacy

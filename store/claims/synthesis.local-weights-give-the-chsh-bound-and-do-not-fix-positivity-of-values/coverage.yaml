@@ -1,0 +1,14 @@
+functions:
+  check_local_weights_bound_values_and_the_box_fails_them:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "the two sum identities of clause (ii) are checked at three direction pairs and are identities of elements for all; the bound of clause (ii) is the proof's (density of rational unit vectors and a two-term inequality), sampled here on 20 rational directions per party for four values of c; the box values of clause (iii) are exact"
+  check_local_values_do_not_fix_positivity:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "complete on the nine local products and the sixteen blades for five values of c; the statement for every c in k is the proof's, the table being affine in c"
+  check_descents_mode_wise_gives_positivity_total_parity_does_not:
+    kind: complete
+    clauses: ["(v)"]
+    omits: "the formula for the mode-wise average is checked on all sixteen blades; the densities are the box and four values of c"
+untouched_premises: {}

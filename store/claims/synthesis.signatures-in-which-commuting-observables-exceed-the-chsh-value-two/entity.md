@@ -26,7 +26,7 @@ derivations:
   - transport.classification-real-clifford-algebras@3
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
   assumes:
-  - synthesis.premise-positivity-of-values@1
+  - synthesis.premise-positivity-of-values@2
   proof: proof-main.tex
 checked_by:
 - kind: check

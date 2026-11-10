@@ -1,7 +1,7 @@
 ---
 id: note.programme.setting-seventeen-refutations
 kind: note
-version: 3
+version: 4
 title: Seventeen conjectures, sixteen refutations
 status: setting
 subject: conformal-spacetime
@@ -19,6 +19,10 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Fable 5.2
+  role: 'pointer line after the table, at Leon''s decision of 10 November 2026: the eleventh conjecture is restated in the store and returned to open'
+  version: 4
+  source: maintainer pass of 2026-11-10
 comments_on:
 - refuted.twistors-are-the-ladder-operators
 locators:
@@ -28,6 +32,10 @@ locators:
   line: 484
   subsection: Seventeen refutations
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 3 -> 4, at Leon''s decision of 10 November 2026. The table is left as a transcript of the paper. One pointer line is added after it: the eleventh conjecture (a mystery of largeness) is restated in the store and returned to open, its corrected statement resting on a rule-dependent reading.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -66,6 +74,8 @@ Table \claimref{refuted.twistors-are-the-ladder-operators} is the refutation tab
 \emph{The refutation table. Seventeen natural conjectures were attempted in the development of the programme; sixteen were refuted, each failure locating a better statement one level up, and the twelfth (row 10--12, third entry) is placed rather than refuted. Ordinals follow the order in which the conjectures were attempted, the fifth through seventeenth having been numbered at the time; rows 2--4 carry the early corrections without insisting on their internal order. The right column names the series paper that now proves the corrected statement.}
 
 \end{longtable}
+
+\emph{Note (pointer).} The table is kept as the paper has it. The second entry of row 10--12 (a mystery of largeness) has since been restated in the store and returned to open: its corrected statement, `largeness is generic for a tower', rests on a reading that is one of at least two counting rules and not a step of the proved ascent; see \claimref{refuted.the-number-n-is-a-mystery-of-largeness} (version 3) and Observation \claimref{standard-model.why-large} (version 4).
 
 ## technical
 pending

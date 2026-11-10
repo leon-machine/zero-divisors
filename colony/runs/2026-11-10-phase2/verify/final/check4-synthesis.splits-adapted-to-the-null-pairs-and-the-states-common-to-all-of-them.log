@@ -1,0 +1,4 @@
+I405  synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them
+      synthesis.positive-structure-is-twistor-form-at-imaginary-time is declared and untouched, as expected: coverage.yaml: cited in the scope for comparison (its clause (iv), in the Hermitian setting of signature (2,4)); nothing of it is computed or used in a proof step
+
+synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them: 0 error(s), 1 other finding(s); check result: pass

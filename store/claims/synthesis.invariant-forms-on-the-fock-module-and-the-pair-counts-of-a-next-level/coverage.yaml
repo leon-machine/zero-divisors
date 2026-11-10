@@ -1,0 +1,13 @@
+functions:
+  check_forms_are_invariant_and_unique:
+    kind: partial
+    clauses: ["(i)"]
+    omits: "k = 1, 2, 3 only: the vacuum idempotent, Omega p = Omega, independence of the 2^k states, every product a multiple of Omega, the adjoint property as a matrix identity for the 2k generators, and the dimension (one) of the space of all bilinear forms with that property; the statement for every k is the proof's"
+  check_symmetry_law_neutral_signature_and_parity_pairing:
+    kind: partial
+    clauses: ["(ii)", "(iii)"]
+    omits: "k = 1, 2, 3, 4 only: the symmetry sign against the formula, the one nonzero entry per row between complementary states, full rank, and the signature (2^(k-1), 2^(k-1)) of each symmetric form; the Witt-index reading as a count of mode pairs is the cited theorem's, and the symplectic pairs are read off the same Gram matrix without a separate computation"
+  check_counts_at_three_and_the_two_iterations:
+    kind: partial
+    clauses: ["(iv)", "(v)"]
+    omits: "the forms at k = 3 and k = 2, the totally null parity halves, the zero common kernel of the bivectors of B_3 on F_3 and their commuting with the new pair of B_4, the equality 2^(k-1) = k + 1 scanned to k = 64 (the induction is the proof's), the first terms of the second rule with their residues, state counts and one numerical bracket, and the place of the bracket of the horizon count quoted in the base result; the isometry with the vector space of the next floor is by equal signature and is not computed, the first rule, the ascent's pair count and the bracket of the horizon count are the cited base result's and are not recomputed, and the argued sentence on what the store selects is not a computation"

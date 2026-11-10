@@ -1,0 +1,19 @@
+functions:
+  check_self_adjoint_blades_and_the_order_unit:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "in six signatures: that a blade is self-adjoint exactly when its square is 1, the number of such blades, the identity 1 -+ b = (1/2)(1 -+ b)(1 -+ b)-dagger for all of them, and for three self-adjoint sample elements the certificate that n_s - s is a non-negative combination of such squares; all signatures and all elements are the proof's"
+  check_an_effect_relation_forces_the_born_weight_on_one_mode:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "nothing of the instance: the three projectors, the relation, the complement showing both sides are effects, the forced value 9/10, its agreement with the state of the projector, the three values of the cubic function, its additivity on the complementary pair of E_a and the value 239/500 against 275/500; that complementary pairs are the only orthogonal families of one mode is the proof's"
+  check_parity_average_keeps_the_cone_and_adds_no_positivity:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "for the total parity of two modes: the average commutes with the dagger and sends y y-dagger to the sum of the hermitian squares of the even part and of the odd part times e_1, on three sample elements; the example functional with the value -1/2 is computed in full; a general involution Gamma and the equivalence for functionals are the proof's"
+  check_even_atom_sees_the_products_of_odd_directions:
+    kind: partial
+    clauses: ["(v)"]
+    omits: "at the stated rational directions: the observables and their commutation, the element u, the average of the CHSH element, the CHSH element of the averaged directions, the even projector, the value 14/5 and the values of single odd elements and of one product; the formula for general directions and the inequality are the proof's"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "the premise is called in the check of clause (iii), where the state of a projector is evaluated; in the other checks functionals are explicit and the premise is not computed"

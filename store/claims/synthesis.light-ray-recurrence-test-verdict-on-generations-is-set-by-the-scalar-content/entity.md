@@ -30,7 +30,7 @@ derivations:
   - synthesis.null-ordering-of-counted-units-is-zeta-symmetric@4
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
-  - synthesis.window-reading-array-killing-energy@2
+  - synthesis.window-reading-array-killing-energy@3
   proof: proof-main.tex
 checked_by:
 - kind: check

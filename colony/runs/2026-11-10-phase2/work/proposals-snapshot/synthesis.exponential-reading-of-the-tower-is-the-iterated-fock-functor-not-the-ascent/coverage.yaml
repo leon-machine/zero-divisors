@@ -1,0 +1,31 @@
+functions:
+  check_three_pairs_have_eight_states_and_the_level_above_has_eight_pairs_and_256_states:
+    kind: exact
+    clauses:
+    - "(i) dim of the Fock module of three pairs is 8 (rank of the left ideal in Cl(3,3))"
+    - "(i) the 8 state-indexed pairs of Cl(8,8) are a CAR family of vectors; vacuum idempotent of scalar part 1/256; module dimension 256 by trace and by the Fock criterion"
+    - "(i) the recursion 3, 8, 256, 2^256"
+    omits: "the general statement for every k is proved in the text; the level with 256 pairs is not constructed"
+  check_one_ascent_from_three_pairs_gives_four_pairs_and_sixteen_states:
+    kind: exact
+    clauses:
+    - "(ii) Cl(4,4): four pairs, module of dimension 16; 2^k = k + 1 only at k = 0, 1 (k up to 64; all k in the text)"
+  check_non_vector_car_families_fill_the_level_and_the_dimension_bound:
+    kind: sampled
+    clauses:
+    - "(iii) a CAR family of non-vector elements in Cl(2,2) and Cl(3,3) has independent ordered monomials (rank 16, 64)"
+    - "(iii) the arithmetic of the bound: no fourth pair in Cl(3,3), eight pairs first at floor 8, floors skipped 4 and 247"
+    omits: "one non-vector family per algebra; the bound for every family is the simplicity argument of the text"
+  check_the_lift_of_the_ladder_to_the_level_above_is_lie_and_not_car:
+    kind: sampled
+    clauses:
+    - "(iv) k = 2, 3: [L(v_1), L(w_1)] = L([v_1, w_1]); L(v_1)^2 nonzero; two anticommutators fail"
+    omits: "k = 2 and 3 and one pair of operators; the commutator identity and the failure for every k are proved in the text"
+  check_the_horizon_count_lies_between_the_third_and_fourth_levels:
+    kind: exact
+    clauses:
+    - "(v) with the stored bracket 2^407 < C < 2^408: 2^256 < C < 2^(2^256); floor 408"
+    omits: "the bracket itself is the stored one and is not recomputed"
+untouched_premises:
+  tower.answers-iteration-question: "cited in (iii) for one rung per wall; nothing to compute"
+  std-algebra.existence-uniqueness: "cited in (iii) for the universal property; nothing to compute"

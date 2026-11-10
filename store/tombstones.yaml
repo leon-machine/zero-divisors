@@ -100,3 +100,13 @@
     the value at dimensions m, n that are powers of two only; for general m, n the classical value (Lubkin 1978) is prior
     art named in synthesis.imported-haar-moments-of-random-pure-state, whose n = 2 case states it (version 3 on). The
     all-moment import and Page''s average entropy stay'
+- id: one-relation.imported-envariance-born-rule
+  date: '2026-11-10'
+  reason: 'retired, no replacement by a derivation (Leon''s decision 4 of 10 November 2026): its one user,
+    one-relation.measure-indifference-borns-rule-located, rests from version 4 on clause (iii) of
+    synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional (under Premise (P), a
+    state sharp on an atom is that atom''s scalar-part functional) in place of this import. That result does not
+    derive the envariance theorem and is not a derivation of the Born rule: the non-contextuality assumption is
+    relocated into (P), sharpness on an atom is assumed, and the stored statement was narrowed to finite algebras,
+    sharp states and projectors of the algebra. The envariance argument (W. H. Zurek, Phys. Rev. A 71 (2005) 052105)
+    stays named as prior art in that entity, which carries this Fact''s verification record in its note'

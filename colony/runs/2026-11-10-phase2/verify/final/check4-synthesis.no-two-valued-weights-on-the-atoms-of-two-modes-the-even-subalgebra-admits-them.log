@@ -1,0 +1,4 @@
+I405  synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them
+      synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects is declared and untouched, as expected: coverage.yaml: cited for a comparison in the Reading (size 2, its clause (iii)); not used in the proof and not computed here
+
+synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them: 0 error(s), 1 other finding(s); check result: pass

@@ -1,0 +1,18 @@
+functions:
+  check_maximal_commuting_blade_sets_give_atoms_in_every_small_signature:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "in each of the 20 signatures with p + q <= 5 and in (2,4), (3,3), two greedy maximal sets (blades in increasing and decreasing order): maximality, the projector property, the trace 2^-m, the dimension of the corner and of its self-adjoint part; other maximal sets, other signatures and the sign changes are the proof's, which is a blade argument valid in every signature"
+  check_orbit_atoms_hermitian_squares_and_overlap_weights:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "in signatures (2,2), (3,0), (1,3), three pairs of rational elements each: the orbit elements are projectors of the same trace with the same corner dimensions, the weight between them equals the overlap formula and is symmetric and in [0,1], and y y-dagger equals the combination of orbit atoms over all sign changes; the statements for all elements are the proof's"
+  check_sharpness_on_an_atom_leaves_one_functional:
+    kind: partial
+    clauses: ["(i)", "(iii)", "(iv)"]
+    omits: "for a blade atom and an orbit atom in six signatures: the span of N A, A N and the anti-self-adjoint blades has codimension exactly one and the trace functional of the atom vanishes on it, which is the linear part of the uniqueness proof; the Cauchy-Schwarz step that a state of value zero on N vanishes on N A is the proof's and is not computed; the vacuum projector of two modes and one projector that is not an atom (three-dimensional family) are computed"
+  check_reality_positivity_and_the_atom_condition_are_each_needed:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "the three examples: values of the functionals as stated; non-negativity of the first on y y-dagger for the 625 elements with coefficients in -2..2 and its agreement with the trace functional on self-adjoint parts; the value -4/3 of the second; for the third, two values of t with non-negativity sampled on three elements; non-negativity on all elements and the existence of epsilon for a general projector are the proof's"
+untouched_premises: {}
