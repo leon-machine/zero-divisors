@@ -61,3 +61,25 @@ copies of the identity, the single-pair bound and the blade lemma, as the overla
   never inside one setting pair; "follows from positivity on" in place of "needs positivity on exactly"; the inertia
   (12, 4, 0); clause (iii) moves to the base).
 Fixers run only runcheck. Write findings/fixes-<name>.md ending "check4: pending (orchestrator)".
+- From verify/R2.md (Kerr; both SOUND WITH FIXES, with titles, one-liners and lay levels OVERSTATED as filed). Ids are
+  kept for now (Leon is asked about renaming; if he agrees the orchestrator renames at acceptance): fix titles (at
+  most 90 characters), one-liners and lay levels so the scope and the tautology lead. Leon's decision 3: (SH) is recorded
+  as a hypothesis, identified with the stored horizon placement, not adopted; (C1) unchanged.
+  - KB first: synthesis.no-spin-independent-curvature-level-set-carries-the-count-to-slow-kerr, fixes 1 to 10: scope
+    (modulus level sets, rho <= M/3, 0 < a <= 4 rho/5, exact equality; the untreated window; "for a/rho -> 0 the count
+    still agrees with A_+/4 at leading order") at title, one-liner and lay; the determinant lemma stated ONCE for a
+    general Killing-invariant surface r = R(u) and proved in the Kerr-Schild gauge alone (cofactor rule, det g =
+    -Sigma^2 by the rank-one rule, g^rr = Delta/Sigma, g^uu = (1-u^2)/Sigma, g^ru = 0), replacing the Boyer-Lindquist
+    paragraph; both halves of the bound; one GA.py point in the store's product in the check, the unused premise
+    removed. Report the clause label of the determinant lemma so the sibling can cite it.
+  - KA after KB's is accepted: synthesis.stretched-horizon-count-on-kerr-gives-the-area-law-at-every-spin, fixes 1 to
+    13: title, one-liner and lay lead with the cancellation (the count is a fixed multiple of the area for every spin
+    because the surface gravity cancels; the Kerr entropy is no test of the density); (SH) is the three-volume form of
+    the unadopted hypothesis (H), identified with (not added to) the stored placements, citing
+    synthesis.c-loc-is-a-second-placement-of-the-count at its current version; only the product nu rho_0 enters and
+    rho_0 = 2 is set by the Schwarzschild area law; the remainder c(a/M) rho_0^2/M^2 with c(0) = 1/12; the inner-locus
+    sentence restricted (not uniform as a -> 0; needs rho_0^2 M << r_-^3; the rate tends to 12 pi M rho_0, three times
+    kappa_+ rho_0 A_+, labelled computed); attribution of kappa_-, A_- and Smarr corrected; the signature sentence; the
+    check ties Omega_H to the generator (null at Omega_H, not at -Omega_H) and carries one GA.py point in the store's
+    product; prior art Lee and Kim hep-th/9603055 added, so area proportionality is not claimed as new; cite the
+    sibling's determinant lemma at version 1.
