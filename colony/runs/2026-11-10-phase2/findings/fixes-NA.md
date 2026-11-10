@@ -62,3 +62,11 @@ computation, said in coverage; untouched_premises removed.
 ## For the orchestrator
 - Both checked_by lists changed (renamed functions); proposal.json untouched.
 - Step 2 (sibling citation of the invariant-forms result in the base's note) not done, as instructed.
+
+## 3. W413 on the base (central gate, after step 1)
+check_one_ascent_from_three_pairs_gives_four_pairs_and_sixteen_states rewritten: decorative literals removed
+(min(2, 4) == 2, the != 2 ** 8 comparison, the repeated BASE + 1); the stored capacities are computed by a helper
+and compared as pairs ((2,4) -> (2, 6), (3,5) -> (3, 8)); the pair count is read from the constructed algebra
+(n = len(v) == 4) and the module dimension computed from it (16, by rank); the search bound is a module constant.
+Scratch test with the gate's own mutator (tp.evidence.mutate) through runcheck only: 14 literal perturbations of the
+function, 0 survive. runcheck: 5/5 PASS. No power above 2^64 in this function. check4: pending (orchestrator).

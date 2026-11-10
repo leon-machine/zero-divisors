@@ -44151,6 +44151,59 @@
 }
 ]
 },
+"synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations": {
+"failed": false,
+"findings": [],
+"key": "259bbb7ddcc4756e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_two_vacua_at_one_level_and_two_values_of_n",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.d-term-level-free-at-fixed-n",
+"synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus"
+]
+},
+{
+"derivation": null,
+"func": "check_dimensionless_spectrum_equal_and_weak_scale_moves_only_through_h4",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion",
+"synthesis.d-term-level-free-at-fixed-n"
+]
+},
+{
+"derivation": null,
+"func": "check_weak_scale_relation_at_fixed_level_and_the_identities_in_n",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.under-action-written-norm-parameter-laws",
+"synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion",
+"synthesis.de-sitter-entropy-pi-n-squared",
+"synthesis.de-sitter-mode-count",
+"synthesis.einstein-route-makes-n-initial-data",
+"synthesis.promoted-norm-one-global-pair",
+"synthesis.smallness-monomials-exact-hierarchy-casimir"
+]
+},
+{
+"derivation": null,
+"func": "check_isometry_and_rescaling_join_the_two_frozen_points",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.imported-frozen-point-dictionary",
+"standard-model.trichotomy-what-kind-number"
+]
+}
+]
+},
 "synthesis.number-n-registered-free-input": {
 "failed": false,
 "findings": [],
@@ -48187,6 +48240,54 @@
 "quantities": [],
 "touched": [
 "standard-model.hyp-s-slot-statistics"
+]
+}
+]
+},
+"synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them": {
+"failed": false,
+"findings": [],
+"key": "f92536da41c8552e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_adapted_frames_and_the_stored_boosted_frame",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_number_parity_and_sector_projectors_are_self_adjoint_for_every_adapted_split",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_functionals_real_for_all_adapted_splits_are_functions_of_the_number",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_pair_state_depends_on_the_split_and_common_states_stay_at_two",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product"
 ]
 }
 ]
