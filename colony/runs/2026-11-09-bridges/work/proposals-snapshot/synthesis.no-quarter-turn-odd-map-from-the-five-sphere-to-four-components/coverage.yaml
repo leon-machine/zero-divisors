@@ -1,0 +1,31 @@
+functions:
+  check_quarter_turn_rotor_and_quaternion_fibre:
+    kind: sampled
+    clauses: ["(setup) J(v) = v . B is the sandwich of the unnormalised rotor (1 + e1e2)(1 + e3e4)(1 + e5e6), on six vectors of Cl(6,0); J^2 = -1", "(setup) points of the cell e_5 are carried by J into the next quarter plane, at three rational points", "(setup), (1) the even subalgebra of Cl(3,0): three unit bivectors of square -1 that anticommute; q q~ is a multiplicative positive scalar; the deck action -1 preserves it"]
+    omits: "that the cells are balls with the stored boundaries is the cited theorem's geometric description"
+  check_product_cell_complex:
+    kind: complete
+    clauses: ["(setup) the integral boundary of the product complex squares to zero on all 48 orbits of cells", "(setup) the stored boundary formulas for the groups of order 4 and 2", "(P) the projection that keeps e_k (x) (vertex) is a chain map"]
+    omits: "that the tensor product computes the cellular chains of the product space is the background (P)"
+  check_higher_diagonal_on_the_factors:
+    kind: complete
+    clauses: ["(2) bd Delta_1 + Delta_1 bd = Delta_0 + t Delta_0 modulo 2 on e_0 .. e_5 for the group of order 4 and on d_0 .. d_3 for the group of order 2", "(2) Delta_0 and Delta_1 are carried by closed cells, and Delta_1 raises the degree by one", "(2) the transposed higher diagonal satisfies the same identity", "(2) controls: with N in place of N' on e_3, or one term in place of N on e_2, the identity fails"]
+    omits: "that maps with these properties compute the squaring operation is the background (S)"
+  check_higher_diagonal_on_the_product:
+    kind: complete
+    clauses: ["(2) the identity for the product higher diagonal on all 48 orbits of cells, for both product formulas", "(2) the product diagonal and higher diagonal are carried by products of closed cells", "(2) equivariance under the generator on a sample cell"]
+  check_fibre_class_is_an_integral_cocycle:
+    kind: complete
+    clauses: ["(3) theta is an integral cocycle with value 1 on the fibre sphere", "(3) changing theta by one on any orbit of cells of dimension 3 destroys the cocycle condition", "(4), (5) stored: the integral coboundary of the lens complex is 4 into degree 4 and 0 into degree 5, so there is no nonzero invariant integral cocycle of degree 3 and eps_5 is not a coboundary modulo 2"]
+  check_cup_one_square_is_the_top_class:
+    kind: complete
+    clauses: ["(3) a cup_1 a is the cochain equal to 1 on e_4 (x) T^b d_1 and 0 on the other orbits of dimension 5, for the four choices of higher diagonal", "(3) a cup_1 a + pi^* eps_5 is the coboundary of the cochain beta; neither a cup_1 a nor pi^* eps_5 is a coboundary modulo 2", "(3) a cup_1 a is a cocycle; the square of 2 theta is zero; theta plus a coboundary has the same square class"]
+    omits: "the identification of the class of a cup_1 a with the squaring operation of the space M is the background (S)"
+  check_chain_level_section_exists:
+    kind: complete
+    clauses: ["(4) the explicit integral chain map phi from the complex of the five-sphere to that of the three-sphere, and that (1 (x) phi) Delta_0 projects to the identity", "(4) the first solution in degree 3 does not extend over e_4 and is corrected by a multiple of (1 + T) d_3"]
+    omits: "the non-existence of the triple (sigma, h_0, h_1) is the proof's argument from clause (3)"
+  check_controls_other_orders_and_trivial_action:
+    kind: complete
+    clauses: ["(6) the factor identity of (2) for the groups of order 6, 8, 12, 16", "(6) orders 4 and 12: the square is cohomologous to pi^* eps_5 and not to zero; orders 8 and 16: it is a coboundary", "(6) orders 2 and 6: the cocycle with value 1 on e_0 (x) d_3 is not integral", "(6) trivial action on the fibre and the three-dimensional base: the square is a coboundary"]
+    omits: "for orders 2 and 6 the check shows that the particular cochain is not integral; that no integral cocycle has an odd value on the fibre sphere is the proof's two-line argument"

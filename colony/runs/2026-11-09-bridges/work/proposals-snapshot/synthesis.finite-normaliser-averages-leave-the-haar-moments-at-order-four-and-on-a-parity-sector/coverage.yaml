@@ -1,0 +1,21 @@
+functions:
+  check_sixty_two_mode_states_give_four_fifths_seven_tenths_and_thirteen_twentieths:
+    kind: exact
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "two modes in Cl(4,1) only: the central unit, the stored forms as commutation and square signs of the fifteen blades, the fifteen families and sixty idempotents, the blade projection as partial trace, ranks 36 and 24, the three means and the Haar values 4/5, 7/10, 22/35; that the blade projection is the conditional expectation in general is the proof's lemma"
+  check_rank_count_and_moments_agree_with_haar_at_two_and_three_and_never_at_four:
+    kind: partial
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "the count by rank by enumeration of every family at m = 2, 3 only; the totals and moments two and three from the count formula for a, b <= 6; moment four above Haar for a + b <= 8; the crossing coefficients at c = 16 and 24 for n = 2..6 against the subspace counts; the sum over spanned subspaces against the count at seven sizes; the general count, the general agreement at two and three and the limit of each term to a Gaussian binomial are the proof's"
+  check_parity_sector_moments_are_the_sector_values_not_the_imported_ones:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "the trace count behind the sector moments by enumeration at five small cases; the sector purity formula for a, b <= 5; the sector orbit and its moments two, three, four at m = 2, 3, 4; the six states at m = 2 by actual quarter turns in Cl(4,1); the closed form of the third sector moment for a, b <= 4 and the pair count for a <= 3; the general purity and third-moment statements are the proof's"
+  check_bivector_quarter_turns_alone_fail_first_at_eight_directions:
+    kind: partial
+    clauses: ["(v)"]
+    omits: "orbit sizes at m = 2, 3, 4, the two orbits 28 and 35 and their q values, the means 17/35 and 4/7, the effect of one quartic turn, unit norm of quarter turns about blades of grades 2, 4, 6 in Cl(6,0) and Cl(8,0), the square of the full blade; class orbits 45 + 210 at m = 5 and the q counts 528, 495 at m = 6 (counts, not orbits); the statements for every m are the proof's"
+  check_mean_entropy_of_the_finite_average_is_not_the_page_value:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "a rational bracket of ln 2 from its series; the mean rank at one against one, the exact crossing deficits 3/5, 40/51, 921/1105 at c = 1, 2, 3 and brackets at c = 8, 16, 24; Page's value at 2 x 2 and its deficit at 4 x 4; the limit of Page's deficit is the imported asymptotic form"
