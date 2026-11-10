@@ -13565,7 +13565,7 @@
 "note.programme.setting-seventeen-refutations": {
 "failed": false,
 "findings": [],
-"key": "ef2b304cb882ef5b",
+"key": "5cb402c86fed4ed2",
 "result": "none",
 "runs": []
 },
@@ -18294,13 +18294,6 @@
 }
 ]
 },
-"one-relation.imported-envariance-born-rule": {
-"failed": false,
-"findings": [],
-"key": "e6920259a4b264d4",
-"result": "none",
-"runs": []
-},
 "one-relation.imported-flag-arrow-superselection": {
 "failed": false,
 "findings": [],
@@ -18488,7 +18481,7 @@
 ""
 ]
 ],
-"key": "9a12768473f983f2",
+"key": "d6b51a48ae0e03f1",
 "result": "pass",
 "runs": [
 {
@@ -18515,6 +18508,25 @@
 "ok": true,
 "quantities": [],
 "touched": []
+},
+{
+"derivation": null,
+"func": "check_squared_norm_of_the_split_is_the_dirac_density",
+"ok": true,
+"quantities": [],
+"touched": [
+"one-relation.dirac-current-conserved-density",
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional"
+]
+},
+{
+"derivation": null,
+"func": "check_sharp_state_weights_are_squared_norm_ratios",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional"
+]
 }
 ]
 },
@@ -18637,7 +18649,7 @@
 "one-relation.record-chain-votes-measurement-without-collapse": {
 "failed": false,
 "findings": [],
-"key": "9b10f1ede23113b1",
+"key": "4244c4e4bc7ae3b5",
 "result": "proof-only",
 "runs": []
 },
@@ -19651,7 +19663,7 @@
 "pred.no-objective-collapse": {
 "failed": false,
 "findings": [],
-"key": "292540a8dbf2273e",
+"key": "8f0cf78a17690412",
 "result": "none",
 "runs": []
 },
@@ -20189,7 +20201,7 @@
 "refuted.the-number-n-is-a-mystery-of-largeness": {
 "failed": false,
 "findings": [],
-"key": "e7f921cbc115afd9",
+"key": "ed48caaa3781292c",
 "result": "none",
 "runs": []
 },
@@ -28426,7 +28438,7 @@
 "standard-model.largeness-number-universes-boundary-modes": {
 "failed": false,
 "findings": [],
-"key": "d2d87d1ca26dbffb",
+"key": "adc294dbe8ecfd43",
 "result": "none",
 "runs": []
 },
@@ -29603,7 +29615,7 @@
 ""
 ]
 ],
-"key": "9209d42e7288b997",
+"key": "7e6a1170f8f06387",
 "result": "pass",
 "runs": [
 {
@@ -30038,7 +30050,7 @@
 "standard-model.why-large": {
 "failed": false,
 "findings": [],
-"key": "9a6663d068214bcc",
+"key": "6e8b75758c1c88f5",
 "result": "none",
 "runs": []
 },
@@ -32205,7 +32217,7 @@
 "synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional": {
 "failed": false,
 "findings": [],
-"key": "103ca778de589213",
+"key": "6c0fc42dd5c23de9",
 "result": "pass",
 "runs": [
 {
@@ -33317,7 +33329,7 @@
 "synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state": {
 "failed": false,
 "findings": [],
-"key": "6283134601f33a71",
+"key": "c4e45f47a8eadbb3",
 "result": "pass",
 "runs": [
 {
@@ -36701,7 +36713,7 @@
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
-"key": "0ebf82d2c4afe5f6",
+"key": "994de92d20d86d7d",
 "result": "pass",
 "runs": [
 {
@@ -42522,7 +42534,7 @@
 "synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values": {
 "failed": false,
 "findings": [],
-"key": "ca058c7d47bbf2d5",
+"key": "565c087ab1239c81",
 "result": "pass",
 "runs": [
 {
@@ -45685,7 +45697,7 @@
 "synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects": {
 "failed": false,
 "findings": [],
-"key": "e83659ba873ea2d3",
+"key": "1525230e5be629ea",
 "result": "pass",
 "runs": [
 {
@@ -45756,7 +45768,7 @@
 "synthesis.premise-positivity-of-values": {
 "failed": false,
 "findings": [],
-"key": "f61a61d46f2f9c55",
+"key": "1660b7df704cb203",
 "result": "none",
 "runs": []
 },
@@ -46559,7 +46571,7 @@
 "synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables": {
 "failed": false,
 "findings": [],
-"key": "9d063fedd7bfa9b2",
+"key": "e096ebe2d0c11e44",
 "result": "pass",
 "runs": [
 {
@@ -51434,7 +51446,7 @@
 "synthesis.window-reading-array-killing-energy": {
 "failed": false,
 "findings": [],
-"key": "83582aac43fde3e7",
+"key": "5be096b677525560",
 "result": "none",
 "runs": []
 },

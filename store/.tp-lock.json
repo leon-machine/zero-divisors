@@ -20037,18 +20037,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer line after the table, at Leon's decision of 10 November 2026: the eleventh conjecture is restated in the store and returned to open",
+    4
    ]
   ],
-  "hash": "7b74774ba292e1fa",
+  "hash": "151114a2c4b609ab",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "d419eb0142a2f152",
-   "statement": "5042a5d2912b30c6"
+   "statement": "b163209571345733"
   },
   "status": "setting",
-  "version": 3
+  "version": 4
  },
  "note.programme.setting-thesis": {
   "assumes": [],
@@ -33928,31 +33933,6 @@
   "status": "proved",
   "version": 3
  },
- "one-relation.imported-envariance-born-rule": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "direction",
-    null
-   ],
-   [
-    "Claude Opus 5.5",
-    "proposal and drafting",
-    1
-   ]
-  ],
-  "hash": "73e7f112149e087f",
-  "ledger": null,
-  "parts": {
-   "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "2f0fbe6ae5f1818f",
-   "statement": "95be440ae0fbb6a8"
-  },
-  "status": "imported",
-  "version": 1
- },
  "one-relation.imported-flag-arrow-superselection": {
   "assumes": [
    "dark-matter.premise-cpt-covariance@3",
@@ -34178,7 +34158,9 @@
   "version": 3
  },
  "one-relation.measure-indifference-borns-rule-located": {
-  "assumes": [],
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
   "credit": [
    [
     "Leon Butler",
@@ -34194,18 +34176,23 @@
     "Claude Opus 5.5",
     "maintainer pass, uses edge to the imported envariance Fact at Leon's decisions",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: the stored result on the weights of a state sharp on an atom under Premise (P) in place of the imported envariance argument; statement narrowed to what that route covers",
+    4
    ]
   ],
-  "hash": "93e340391a9b722b",
+  "hash": "7b468aa769f9ec55",
   "ledger": null,
   "parts": {
-   "checks": "4366fafc7902e908",
-   "proofs": "83e23e7699226834",
+   "checks": "0a190099048315d7",
+   "proofs": "e4f3098da1532e75",
    "rest": "d3b65c89b700e77b",
-   "statement": "fec2c3a7f6ded608"
+   "statement": "0ea599185747b6db"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "one-relation.odd-square-roots-chiral-phase": {
   "assumes": [],
@@ -34314,18 +34301,23 @@
     "Claude Opus 5.5",
     "maintainer pass, the recording remark entered as a premise and assumed, at Leon's decisions",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "premise wording: the branch weights are those of the stored Born account in its version 4, which hold under Premise (P) for a state sharp on an atom",
+    8
    ]
   ],
-  "hash": "976b01e6cb2ffa6b",
+  "hash": "e614ba908abb74d7",
   "ledger": null,
   "parts": {
    "checks": "0a0fc2855036da45",
-   "proofs": "a83f8121654e91d5",
+   "proofs": "6bc09cc3a86e59dc",
    "rest": "d3b65c89b700e77b",
-   "statement": "d4db87bdf7c3de91"
+   "statement": "d3c5fc7c99713ad0"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "one-relation.recorded-sectors-superselected-premise": {
   "assumes": [],
@@ -37025,18 +37017,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement and return to open at Leon's decisions of 10 November 2026: what the exponential reading supports is rule-dependent, and nothing proved refutes the claim",
+    3
    ]
   ],
-  "hash": "f771a4d34dc405f0",
+  "hash": "302ccf6d181b13fb",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
-   "rest": "576fa612f0d2d67f",
+   "rest": "85079d304d5cbecd",
    "statement": "c54446d479316c45"
   },
-  "status": "refuted",
-  "version": 2
+  "status": "conjectured",
+  "version": 3
  },
  "refuted.the-particle-antiparticle-orientation-is-determi": {
   "assumes": [],
@@ -44276,18 +44273,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "qualifier at Leon's decision of 10 November 2026: the horizon count is of registered units, not of rungs or ladder pairs",
+    4
    ]
   ],
-  "hash": "b2e21de7b97c1bb5",
+  "hash": "4d7d51076655ff74",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "b23e207fea0bf2a0"
+   "statement": "3c07bbfdd2a17ca2"
   },
   "status": "conjectured",
-  "version": 3
+  "version": 4
  },
  "standard-model.left-right-parity-what-breaks-it": {
   "assumes": [],
@@ -45138,18 +45140,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the adopted Henneaux-Teitelboim promotion named in clause (4)",
     11
+   ],
+   [
+    "Claude Fable 5.2",
+    "qualifier on the units sentence at Leon's decision of 10 November 2026: the horizon count is of registered units, not of rungs or ladder pairs",
+    12
    ]
   ],
-  "hash": "262c5fe2ce0c44c9",
+  "hash": "294e4c5a39f441bf",
   "ledger": null,
   "parts": {
    "checks": "55b7ccaa64d46efe",
    "proofs": "e5511d6cd84d4610",
    "rest": "8c21e5ad58770f49",
-   "statement": "4ebcbe2d75652c03"
+   "statement": "264f9dfdc2314c37"
   },
   "status": "proved",
-  "version": 11
+  "version": 12
  },
  "standard-model.two-threshold-criterion": {
   "assumes": [],
@@ -45448,18 +45455,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at Leon's decision of 10 November 2026: the exponential reading is rule-dependent and supports no mechanism for the largeness of N",
+    4
    ]
   ],
-  "hash": "ef75c9b67f618c84",
+  "hash": "6e90e02225794c92",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "c282cbdafdd266d3"
+   "statement": "5474cb7d551048e8"
   },
   "status": "conjectured",
-  "version": 3
+  "version": 4
  },
  "standard-model.yukawa-pattern-two-rung-module": {
   "assumes": [],
@@ -47104,6 +47116,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d1936a5f203eb626",
+  "ledger": null,
+  "parts": {
+   "checks": "72ced878b27641bf",
+   "proofs": "284768aaf476af6a",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "e0f46c58711fb249"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.array-ln2-is-zero-mode-doublet-one-tower": {
   "assumes": [],
   "credit": [
@@ -47453,6 +47490,33 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "ecf2eeffe51400b3",
+  "ledger": null,
+  "parts": {
+   "checks": "631435249a76f3be",
+   "proofs": "4070f5e3520e96f7",
+   "rest": "f3aec8140ee84842",
+   "statement": "a41b0a573f87aff4"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free": {
   "assumes": [
@@ -48066,7 +48130,7 @@
  },
  "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -48093,7 +48157,7 @@
  },
  "synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -48105,22 +48169,27 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of scope: the setting pairs are the four configured ones; the box has a negative weight at a pair of local directions outside them; title and lay level restated",
+    2
    ]
   ],
-  "hash": "9827b932974a59ff",
+  "hash": "0276749bb850ef91",
   "ledger": null,
   "parts": {
    "checks": "deb6e479f8c99250",
    "proofs": "6726e987a3b65487",
    "rest": "d3b65c89b700e77b",
-   "statement": "9a03e0fdf60ca5db"
+   "statement": "78cebec1e1726558"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -48147,7 +48216,7 @@
  },
  "synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -50236,6 +50305,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "336fc9be8ca60b0a",
+  "ledger": null,
+  "parts": {
+   "checks": "97425d154ba429f1",
+   "proofs": "f852dee34fd24ef4",
+   "rest": "d3b65c89b700e77b",
+   "statement": "33ceb2bec3687520"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.face-mass-form-unit-plus-gram": {
   "assumes": [],
@@ -54925,6 +55019,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "3930e0f94d024976",
+  "ledger": null,
+  "parts": {
+   "checks": "a77fce0a485acbbc",
+   "proofs": "af0260db56aea88f",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ef038938677da6d8"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point": {
   "assumes": [],
   "credit": [
@@ -55816,6 +55935,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "78c9d15a53242ecf",
+  "ledger": null,
+  "parts": {
+   "checks": "a83ebb94d453248f",
+   "proofs": "bf252ef326cef907",
+   "rest": "22cd46a92ec6fa2c",
+   "statement": "e02bd9f3f35785f0"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
   "assumes": [],
   "credit": [
@@ -55886,7 +56030,7 @@
  "synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content": {
   "assumes": [
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@2"
+   "synthesis.window-reading-array-killing-energy@3"
   ],
   "credit": [
    [
@@ -56085,6 +56229,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7a0131fc167a226f",
+  "ledger": null,
+  "parts": {
+   "checks": "98b0f3d8e65a4389",
+   "proofs": "dafbe95c3ec4cc8d",
+   "rest": "d3b65c89b700e77b",
+   "statement": "9f048114d041e959"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.locality-of-the-attached-free-fields-fixes-their-statistics": {
   "assumes": [],
@@ -57114,6 +57283,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "bd43a7a330da5aa0",
+  "ledger": null,
+  "parts": {
+   "checks": "fba7853ef617df21",
+   "proofs": "0726a2fba1fcbbf1",
+   "rest": "d3b65c89b700e77b",
+   "statement": "e522ff314ea95954"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law": {
   "assumes": [],
   "credit": [
@@ -57236,7 +57430,7 @@
  },
  "synthesis.null-ordering-of-counted-units-is-zeta-symmetric": {
   "assumes": [
-   "synthesis.window-reading-array-killing-energy@2"
+   "synthesis.window-reading-array-killing-energy@3"
   ],
   "credit": [
    [
@@ -57380,6 +57574,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "91acff424b418124",
+  "ledger": null,
+  "parts": {
+   "checks": "377d170e8c5b2c7a",
+   "proofs": "935cd779db6d295e",
+   "rest": "d3b65c89b700e77b",
+   "statement": "bde5244ca8e3b05d"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.number-n-registered-free-input": {
   "assumes": [],
@@ -57590,7 +57809,7 @@
  "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays": {
   "assumes": [
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@2"
+   "synthesis.window-reading-array-killing-energy@3"
   ],
   "credit": [
    [
@@ -58334,6 +58553,33 @@
   "status": "proved",
   "version": 5
  },
+ "synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "c2cc3f14d255ac92",
+  "ledger": null,
+  "parts": {
+   "checks": "35577fc38a860cf5",
+   "proofs": "f1cda6648aed4c30",
+   "rest": "f3aec8140ee84842",
+   "statement": "f818a718b4e0757d"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.pre-descent-contracting-kasner-stage-premise": {
   "assumes": [],
   "credit": [
@@ -58426,18 +58672,23 @@
     "Claude Fable 5.2",
     "drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "premise wording: what the counter-model shows restated (local weights already give the bound in the one-mode realisation); pointers to the results on weights on effects, on the split and on sharp states",
+    2
    ]
   ],
-  "hash": "1c9c510ee473f2f2",
+  "hash": "71ff8c234e4d5e55",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "7304ecc66c0af127",
-   "statement": "a1ceebe727f4c92c"
+   "statement": "1d28ddc1a6ad28fe"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.premise-superposition-over-the-integers": {
   "assumes": [],
@@ -59035,6 +59286,33 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f792944d9a693b36",
+  "ledger": null,
+  "parts": {
+   "checks": "1126b8cda91b8218",
+   "proofs": "b128affeaba7667a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "c620a78eb23e146b"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns": {
   "assumes": [],
@@ -60010,7 +60288,7 @@
  },
  "synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -60324,6 +60602,33 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "41a3f32ad96bf717",
+  "ledger": null,
+  "parts": {
+   "checks": "2f243489a4b433e4",
+   "proofs": "d86a5f75e11fde4c",
+   "rest": "f3aec8140ee84842",
+   "statement": "9c1e6b405ff0b1bb"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split": {
   "assumes": [],
@@ -60704,7 +61009,7 @@
   "assumes": [
    "singularity.c2-cell-density@4",
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@2"
+   "synthesis.window-reading-array-killing-energy@3"
   ],
   "credit": [
    [
@@ -60821,7 +61126,7 @@
  },
  "synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two": {
   "assumes": [
-   "synthesis.premise-positivity-of-values@1"
+   "synthesis.premise-positivity-of-values@2"
   ],
   "credit": [
    [
@@ -62060,6 +62365,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "05fa3e17da187a96",
+  "ledger": null,
+  "parts": {
+   "checks": "74eac0857b3b11f1",
+   "proofs": "bcba924cfaa3f767",
+   "rest": "d3b65c89b700e77b",
+   "statement": "1f8d6e8c1fe1fd9f"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.window-reading-array-killing-energy": {
   "assumes": [],
   "credit": [
@@ -62077,18 +62407,23 @@
     "Claude Fable 5.2",
     "scope sentence at Leon's decision of 10 November 2026: the reading equates mean Killing energy only",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "two further scope statements at Leon's decision of 10 November 2026: the energy equalities hold at one thermal period and at spacing kappa; the array is the twist one half fibre of the continuum, not a Killing-invariant subsystem, with the twist and the spacing inputs of (Q)",
+    3
    ]
   ],
-  "hash": "b39ac6977b624e28",
+  "hash": "06d62462f57f0456",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "394b08c472c97bfb",
-   "statement": "5d375728480efdac"
+   "statement": "5a0ac56149e650b6"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
   "assumes": [],
