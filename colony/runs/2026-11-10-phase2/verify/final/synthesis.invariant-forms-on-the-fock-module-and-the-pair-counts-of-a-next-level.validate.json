@@ -11,7 +11,7 @@
    "code": "I305",
    "severity": "info",
    "entity": "store",
-   "message": "this change touches 3 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "message": "this change touches 11 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
    "fix": ""
   }
  ],

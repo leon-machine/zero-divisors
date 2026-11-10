@@ -40348,6 +40348,45 @@
 }
 ]
 },
+"synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
+"failed": false,
+"findings": [],
+"key": "039668e9f49ab530",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_forms_are_invariant_and_unique",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.fock-representation",
+"tower.fock-module-one-qubit-per-rung"
+]
+},
+{
+"derivation": null,
+"func": "check_symmetry_law_neutral_signature_and_parity_pairing",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.chevalley-pairing",
+"tower.fock-module-one-qubit-per-rung"
+]
+},
+{
+"derivation": null,
+"func": "check_counts_at_three_and_the_two_iterations",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent",
+"tower.fock-module-one-qubit-per-rung",
+"tower.witt-index-quantum-capacity"
+]
+}
+]
+},
 "synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point": {
 "failed": false,
 "findings": [],
@@ -51332,6 +51371,62 @@
 "touched": [
 "synthesis.slot-module-light-ray-arrays-are-weyl-components",
 "synthesis.spin10-clause-content-is-the-neutral-singlet-choice"
+]
+}
+]
+},
+"synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
+"failed": false,
+"findings": [],
+"key": "f14ca4e83de4583b",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_ground_test_is_a_conic",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.null-ordering-of-counted-units-is-zeta-symmetric"
+]
+},
+{
+"derivation": null,
+"func": "check_thermal_test_holds_at_three_points",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r",
+"synthesis.imported-theta-function-identities",
+"synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages"
+]
+},
+{
+"derivation": null,
+"func": "check_entropies_at_the_three_points",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.half-integer-weight-array-carries-half-ln2"
+]
+},
+{
+"derivation": null,
+"func": "check_parity_clause_leaves_the_half_array_and_its_two_halves",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.null-ordering-of-counted-units-is-zeta-symmetric",
+"synthesis.q-splits-maximum-entropy-affine-weights"
+]
+},
+{
+"derivation": null,
+"func": "check_odd_resonance_at_twist_one_third",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.univalence-from-even-stationary-dynamics"
 ]
 }
 ]
