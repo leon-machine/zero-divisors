@@ -1,2 +1,4 @@
+W413  synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components
+      5 of 8 perturbations of check_controls_other_orders_and_trivial_action's literals still pass: the check is weak
 
-synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components: 0 error(s), 0 other finding(s); check result: pass
+synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components: 0 error(s), 1 other finding(s); check result: pass
