@@ -121,6 +121,13 @@ ENTITY = {
             "properties": {"name": {"type": "string", "minLength": 1},
                            "role": {"type": "string", "minLength": 1},
                            "source": {"type": "string"},
+                           # optional: the person's ORCID iD (bare, 0000-0000-0000-000X), carried
+                           # into the Zenodo record's contributors at each release (tp/releases.py)
+                           "orcid": {"type": "string",
+                                     "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"},
+                           # optional: person or ai; when absent, a name of a known model family
+                           # reads as ai (tp/releases.py is_model)
+                           "kind": {"enum": ["person", "ai"]},
                            # the version an amendment produced; absent for the original credit
                            "version": {"type": "integer", "minimum": 1}}}},
         # what each amendment did (tp/amend.py): a correction fixes a proof, a check, a status or a
