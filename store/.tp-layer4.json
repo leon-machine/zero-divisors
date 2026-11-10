@@ -32143,6 +32143,53 @@
 }
 ]
 },
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional": {
+"failed": false,
+"findings": [],
+"key": "103ca778de589213",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_maximal_commuting_blade_sets_give_atoms_in_every_small_signature",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_orbit_atoms_hermitian_squares_and_overlap_weights",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_sharpness_on_an_atom_leaves_one_functional",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_reality_positivity_and_the_atom_condition_are_each_needed",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+}
+]
+},
 "synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free": {
 "failed": false,
 "findings": [],
