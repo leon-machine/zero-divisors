@@ -49,3 +49,28 @@ definite form free. Restated at every level:
 - S5: sentence added in (iv) and in the proof. S6: flags unchanged.
 - Not added: the referee's remark that the pair state also fails positivity for the second split (-171/80); I did not
   recompute it, so it is not in the text.
+
+## Step 2 (base stored at version 1)
+check4: pending (orchestrator). Only runcheck run: all functions PASS in both proposals.
+### Effects (done first)
+- uses edge added: synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1;
+  premise() call added in the check of clause (iii).
+- Clause (iii): the state of Pi_p is now cited as the one state sharp on the atom Pi_p (base (i), (iii)), so the two
+  input values 1 and 1/2 hold for every weight with value 1 on Pi_p. Clause (v): the four even projectors are named
+  atoms by base (i), with the maximality argument in the proof (hand enumeration of the even blades).
+- E3: the sibling sentence is removed from the formal text (clause (v) keeps the statement that homogeneous
+  directions give at most 2, from the formula). The three references to results not yet stored (records for the
+  homogeneous case, local weights for the two-mode instance of the averages, Kochen-Specker for projector-only
+  weights) stay as plain text in the extraction note only.
+- Nothing of the base was duplicated in this proposal, so nothing was removed beyond that sentence; the
+  parity-average lemma with its rider and the formula E(C) = X u + Z Gamma are kept, as the overlap ruling says.
+- Final clause labels: (i) the unit bounds every self-adjoint element: proved; (ii) weights on effects are the
+  states of (P): proved for Q and Archimedean ordered fields (the reading of the stored residual postulate: argued);
+  (iii) an effect relation, one instance: proved; (iv) parity average keeps the cone and adds no positivity, rider on
+  the mode-wise average, grading form citing the stored even-extension theorem: proved; (v) even states see the
+  products of odd directions, value 14/5 with mixed-parity directions: proved, under (P) for the inequality.
+  Check kinds: sampled, exact, partial, partial.
+### Splits
+- uses edge to the base @1; clause (ii) and its proof cite the base for the vacuum projector as an atom and for the
+  uniqueness of the vacuum state for every adapted split; premise() call added in the check of clause (ii).
+- No sibling references were in its text; nothing removed.
