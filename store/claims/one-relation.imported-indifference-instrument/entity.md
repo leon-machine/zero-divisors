@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - families.imported-indifference-instrument@2
-  - standard-model.trichotomy-what-kind-number@11
+  - standard-model.trichotomy-what-kind-number@12
   assumes:
   - dark-matter.p2-indifference@2
   - scrambling.indifference-structural-premise-series@2

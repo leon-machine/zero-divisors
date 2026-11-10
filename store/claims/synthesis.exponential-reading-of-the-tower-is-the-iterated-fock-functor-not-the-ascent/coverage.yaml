@@ -26,4 +26,4 @@ functions:
     kind: partial
     clauses:
     - "(v) arithmetic on the quoted bracket 2^407 < |J| < 2^408: above 2^256, below 2^(2^256) (on exponents)"
-    omits: "the bracket is quoted (the trichotomy's check and the refuted entry's technical level), not recomputed; the premises are touched for the quoted number, the count and the rider on registered units, none of which is computed here"
+    omits: "the bracket is quoted (the trichotomy's check and the stored largeness entry's technical level), not recomputed; the premises are touched for the quoted number, the count and the rider on registered units, none of which is computed here"

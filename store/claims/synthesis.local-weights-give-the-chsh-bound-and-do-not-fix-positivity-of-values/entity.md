@@ -24,7 +24,7 @@ derivations:
   - synthesis.signed-directions-and-the-integer-clifford-algebra@2
   - tower.commuting-copies@5
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
-  - synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state@1
+  - synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state@2
   - singularity.descent-parity-average@5
   - singularity.p-reduced-metric-level-reading-many@7
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1

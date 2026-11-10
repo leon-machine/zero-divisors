@@ -136,3 +136,63 @@ None was false to the stored mathematics. Two places where the edit is narrower 
   by version (lineage and refuted_by are unpinned).
 - No folder removal, no retirement, no tombstone in MN.
 - Layers 1-3 should be rerun once MB has finished, since its files were still changing during this pass.
+
+---
+
+# Second round: Leon's decisions 5 to 8 (same pass)
+
+Layers 1-3 after these edits: 0 errors, 0 warnings, 121 information findings (119 I213, I126, I305), as at
+baseline. (One W221 appeared on the note for its missing credit entry and was fixed.) No check.py changed.
+
+| entity | version | what |
+|---|---|---|
+| synthesis.window-reading-array-killing-energy | 3 (kept, unreleased) | Decision 5. "in every state" replaced by "at the sea and at the Hawking state" in the first paragraph of the formal level, the only place the clause was stated (technical, lay and one-liner never carried it); the scope paragraph and the pass note brought into line. |
+| standard-model.trichotomy-what-kind-number | 11 -> 12 | Decision 6. Plain-text qualifier after the units sentence (formal) and in the technical level: the qubit is a unit of capacity ln 2, the count is of registered units, not rungs or ladder pairs, no integrality claimed. No edge, proof, check, coverage or orig-proof change; credit entry and `maintainer_pass_2026_11_10`. |
+| standard-model.largeness-number-universes-boundary-modes | 3 -> 4 | Decision 6. The same qualifier in plain text at all four levels where the mode count is stated; credit entry and `maintainer_pass_2026_11_10`. |
+| refuted.the-number-n-is-a-mystery-of-largeness | 3 (kept, unreleased) | Decision 7, see below. |
+| note.programme.setting-seventeen-refutations | 3 -> 4 | Decision 8. Table untouched; one line `\emph{Note (pointer).}` after it (the form three other notes use), naming the restated entity and why-large; credit entry and `maintainer_pass_2026_11_10`. |
+| synthesis.exponential-reading-of-the-tower-... | 1 (kept) | Consequence of decision 7: "the refuted entry on largeness" reads "the stored entry on largeness" (formal, two places; proof-main.tex, one; coverage.yaml, one; note). Wording only. |
+
+## Decision 7, exactly what was set
+The store has no status "open" for a claim: the allowed values are proved, imported, conjectured, refuted,
+postulate (tp/schema.py, store/conventions.md). No rule ties the id prefix `refuted.` or the folder to a status
+(no code or convention reads the prefix), so nothing forbids the change. Set:
+- `status: refuted` -> `status: conjectured` (the only status for a claim that is neither proved, imported,
+  refuted nor a premise; the validator then requires lineage.motivated_by and no proof text, both satisfied).
+- `refuted_by: [standard-model.why-large]` removed. `lineage.motivated_by: [standard-model.why-large,
+  synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent]` added: the former
+  refuter is kept as lineage, since it is now one conjectured answer and not a refuter.
+- tag `refutation` removed (tag `the-number-n` kept). id, title, region, subject, locators unchanged.
+- version stays 3; the version 3 credit role and pass note reworded to cover both decisions.
+- Levels: formal unchanged (the claim itself). Technical, lay and one-liner now open with "Open" and say the
+  claim is refuted by nothing proved, that Observation why-large is one conjectured answer, conditional on a
+  counting rule, and that N's largeness is not explained. The mathematics quoted is as in the first round.
+Left as they are, for Leon or the orchestrator to judge: standard-model.why-large keeps its tag `refutation` and
+its phrase "the question then refutes into its opposite" survives only in source_formal; the title of the T17
+note ("Seventeen conjectures, sixteen refutations") is the paper's count and is now qualified by the pointer
+line; store/open_problems_settled.yaml (op.t12-n-after-the-count) lists the entity among "two refutations
+(10 and 11)", a record of a settled problem, not edited (outside the two entries assigned to MN).
+
+## Pins the orchestrator must move (complete list for MN, both rounds)
+synthesis.window-reading-array-killing-energy @2 -> @3 (assumes), in:
+- synthesis.null-ordering-of-counted-units-is-zeta-symmetric
+- synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays
+- synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content
+- synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping
+
+standard-model.trichotomy-what-kind-number @11 -> @12, in:
+- synthesis.d-term-level-free-at-fixed-n
+- dark-energy.under-action-written-norm-parameter-laws
+- synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations
+- one-relation.imported-indifference-instrument
+- dark-matter.imported-trichotomy-descents-data
+- synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent
+- families.why-kinematic-attacks-had-fail
+- one-relation.record-chain-votes-measurement-without-collapse (an MB dependant)
+
+No versioned pin exists on standard-model.why-large, standard-model.largeness-number-universes-boundary-modes,
+refuted.the-number-n-is-a-mystery-of-largeness or the note. The trichotomy change is a qualifier in the units
+sentence only, so none of the eight dependants is affected in content.
+
+Still open for Leon from the first round: item 4 (claimrefs from the window reading to results in its own cone)
+and item 5 (the colony path in the N-free result's note).

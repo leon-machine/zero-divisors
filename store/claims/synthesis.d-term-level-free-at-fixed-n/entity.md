@@ -26,7 +26,7 @@ derivations:
   - synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@5
   - synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion@3
   - synthesis.smallness-monomials-exact-hierarchy-casimir@3
-  - standard-model.trichotomy-what-kind-number@11
+  - standard-model.trichotomy-what-kind-number@12
   - families.why-kinematic-attacks-had-fail@4
   - synthesis.einstein-route-makes-n-initial-data@4
   - synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off@2

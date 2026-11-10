@@ -26,7 +26,7 @@ derivations:
   - tower.commuting-copies@5
   - singularity.descent-parity-average@5
   assumes:
-  - synthesis.premise-positivity-of-values@1
+  - synthesis.premise-positivity-of-values@2
   proof: proof-main.tex
 checked_by:
 - kind: check

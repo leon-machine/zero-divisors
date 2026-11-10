@@ -27,7 +27,7 @@ derivations:
   - synthesis.smallness-monomials-exact-hierarchy-casimir@3
   - synthesis.de-sitter-entropy-pi-n-squared@6
   - synthesis.de-sitter-mode-count@3
-  - standard-model.trichotomy-what-kind-number@11
+  - standard-model.trichotomy-what-kind-number@12
   - standard-model.imported-frozen-point-dictionary@9
   - synthesis.promoted-norm-one-global-pair@5
   - synthesis.einstein-route-makes-n-initial-data@4
