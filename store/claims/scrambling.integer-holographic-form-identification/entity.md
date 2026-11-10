@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - scrambling.epoch-modular-period-two-unknowns-become@6
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

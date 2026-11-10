@@ -31,7 +31,7 @@ derivations:
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
   - singularity.c2-cell-density@4
-  - synthesis.window-reading-array-killing-energy@1
+  - synthesis.window-reading-array-killing-energy@2
   proof: proof-main.tex
 checked_by:
 - kind: check

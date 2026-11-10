@@ -1,0 +1,17 @@
+functions:
+  check_volume_rate_of_constant_r_surfaces_is_flow_independent:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the Gram determinant -Delta Sigma at four rational points (between the horizon loci, outside, inside the inner locus) for three angular velocities each, with pinned values; the identity for all points is the proof's (rank-one determinant rule); the integral over u giving V'(r) and the a = 0 form are not computed; the metric components are entered from the statement, so this checks consistency with the stored Kerr-Schild form, not that form"
+  check_rate_per_area_over_proper_distance_is_the_surface_gravity_at_every_latitude:
+    kind: partial
+    clauses: ["(ii)", "(iii)", "(iv)", "(vi)"]
+    omits: "five rational holes and four latitudes at both loci: the constant term in delta of the polynomial |Delta| Sigma / delta against kappa^2 P^2 times the leading squared proper distance over delta, P = 2 M r at each locus, kappa_+ A_+ = kappa_- A_- = 4 pi s, and the cancellation 2 pi nu rho_0 = 1/4 at nu rho_0 = 1/8 pi; the leading form of the proper distance, the limit, the volume rate of the surface at fixed proper distance and its error term are the proof's"
+  check_three_schwarzschild_forms_split_on_kerr_and_the_area_form_is_the_smarr_rate:
+    kind: sampled
+    clauses: ["(v)", "(vii)"]
+    omits: "five rational Kerr holes and one Schwarzschild hole: the three count ratios 1, M/s, M r_+/(2 s^2) with pinned values, the Smarr relation and the rate 8 pi nu (M - 2 Omega_H J), the closed forms of the second-order coefficients 1/2 and 3/4, and two near-extremal holes where the rate over 8 pi nu M is s/M; nu = 1/(16 pi), the epoch and the Kerr horizon data are entered as inputs from the premises; the divergence of the proper distance at a = M is the proof's"
+  check_schwarzschild_rate_is_reached_on_three_slices:
+    kind: sampled
+    clauses: ["(vi)"]
+    omits: "at cutoff radii 4 and 10: the sign changes of r^3 |2M - r| - 4 M^2 bracketing the three roots, its value -r_c^4 at the cutoff radius, the interior maximum, and the leading stretched-horizon rate 8 pi M; that there are exactly three roots and the proper distance 2 of the near-horizon roots are the proof's"

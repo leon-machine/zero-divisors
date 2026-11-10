@@ -14818,7 +14818,7 @@
 "note.singularity.monogamy-firewalls-small-corrections-theorem": {
 "failed": false,
 "findings": [],
-"key": "9c5a1acde099cbbb",
+"key": "c8daefdebe249a20",
 "result": "none",
 "runs": []
 },
@@ -21863,7 +21863,7 @@
 ""
 ]
 ],
-"key": "7c9d5ec1d634f5da",
+"key": "a74bb59d121d717b",
 "result": "pass",
 "runs": [
 {
@@ -24477,7 +24477,7 @@
 "singularity.c1-curvature-cutoff": {
 "failed": false,
 "findings": [],
-"key": "19405d0def6f0dc2",
+"key": "af594d9e940cdc97",
 "result": "none",
 "runs": []
 },
@@ -26544,7 +26544,7 @@
 ""
 ]
 ],
-"key": "02a7376a38c9d97d",
+"key": "f73d96556ce081c3",
 "result": "pass",
 "runs": [
 {
@@ -32614,7 +32614,7 @@
 "synthesis.c1-c2-forms-forced-one-number": {
 "failed": false,
 "findings": [],
-"key": "e48c813d8b59d6ad",
+"key": "5f3ec3d440d95166",
 "result": "pass",
 "runs": [
 {
@@ -33117,6 +33117,189 @@
 "quantities": [],
 "touched": [
 "synthesis.anomaly-freedom-forces-slot-content"
+]
+}
+]
+},
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate": {
+"failed": false,
+"findings": [],
+"key": "e456e82329f1517e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_square_of_the_chsh_element_and_the_rational_certificate",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_scalar_part_is_positive_and_every_sample_state_obeys_the_bound",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_blade_configurations_give_square_four_plus_four_k_and_states_of_value_eight_r",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_functional_violating_positivity_reaches_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_square_one_element_that_is_not_self_adjoint_exceeds_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_klein_twisted_directions_commute_and_the_square_is_four_plus_four_wedges_k",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_saturating_state_is_a_pure_state_over_the_field_with_root_two",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_square_eight_on_a_state_with_nonzero_anticommutator",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals",
+"tower.commuting-copies"
+]
+}
+]
+},
+"synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state": {
+"failed": false,
+"findings": [],
+"key": "6283134601f33a71",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_box_functional_has_value_four_and_fails_positivity_only_across_settings",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+}
+]
+},
+"synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records": {
+"failed": false,
+"findings": [],
+"key": "266364db447c53dc",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_quarter_turned_chsh_elements_anticommute_and_values_lie_in_a_disc",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_pure_states_of_the_sector_are_rational_points_of_the_circle_of_square_radius_eight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.division-gives-the-rationals",
+"synthesis.the-sign-is-the-rotor-at-infinity"
+]
+},
+{
+"derivation": null,
+"func": "check_denominator_law_and_the_pell_records",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.division-gives-the-rationals"
+]
+}
+]
+},
+"synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist": {
+"failed": false,
+"findings": [],
+"key": "1404c31969b25173",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_even_observables_commute_without_twist_and_one_mode_has_only_the_parity",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_two_modes_per_party_reach_square_eight_with_even_observables_and_even_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate"
+]
+},
+{
+"derivation": null,
+"func": "check_twisted_one_mode_split_exceeds_two_only_through_odd_observables",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"tower.commuting-copies"
 ]
 }
 ]
@@ -40809,7 +40992,7 @@
 "synthesis.kerr-ring-count-misses-area-law": {
 "failed": false,
 "findings": [],
-"key": "164d4aaa5a5ed8ad",
+"key": "1dffd787d1930306",
 "result": "pass",
 "runs": [
 {
@@ -43364,6 +43547,62 @@
 }
 ]
 },
+"synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr": {
+"failed": false,
+"findings": [],
+"key": "65203f578b58ce03",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_level_set_determinant",
+"ok": true,
+"quantities": [],
+"touched": [
+"interior.complex-scale-inverse-cube-killing-spinor",
+"interior.imported-kerr-schild-form-kerr-gauge",
+"synthesis.kerr-ring-count-misses-area-law"
+]
+},
+{
+"derivation": null,
+"func": "check_determinant_in_the_store_product",
+"ok": true,
+"quantities": [],
+"touched": [
+"interior.imported-kerr-schild-form-kerr-gauge"
+]
+},
+{
+"derivation": null,
+"func": "check_regime_and_bracket_bounds",
+"ok": true,
+"quantities": [],
+"touched": [
+"interior.imported-kerr-schild-form-kerr-gauge",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_quarter_power_bounds",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_count_ratio",
+"ok": true,
+"quantities": [],
+"touched": [
+"scrambling.epoch-modular-period-two-unknowns-become",
+"singularity.stretched-singularity-count",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+}
+]
+},
 "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law": {
 "failed": false,
 "findings": [],
@@ -45071,6 +45310,13 @@
 "failed": false,
 "findings": [],
 "key": "3c0527da07ac4b27",
+"result": "none",
+"runs": []
+},
+"synthesis.premise-positivity-of-values": {
+"failed": false,
+"findings": [],
+"key": "f61a61d46f2f9c55",
 "result": "none",
 "runs": []
 },
@@ -47261,6 +47507,44 @@
 }
 ]
 },
+"synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two": {
+"failed": false,
+"findings": [],
+"key": "805632e3f3ca9664",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_excluded_signatures_have_only_an_anticommuting_frame_of_observables",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.blade-square-signs-f2-quadratic-form",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_remaining_signatures_carry_blades_with_chsh_square_four_plus_four_k",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.blade-square-signs-f2-quadratic-form",
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_excluded_list_is_matrix_size_at_most_two_in_the_classification",
+"ok": true,
+"quantities": [],
+"touched": [
+"transport.classification-real-clifford-algebras"
+]
+}
+]
+},
 "synthesis.signed-directions-and-the-integer-clifford-algebra": {
 "failed": false,
 "findings": [],
@@ -48009,6 +48293,54 @@
 }
 ]
 },
+"synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction": {
+"failed": false,
+"findings": [],
+"key": "b876a05017a1b586",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_volume_rate_of_constant_r_surfaces_is_flow_independent",
+"ok": true,
+"quantities": [],
+"touched": [
+"interior.imported-kerr-schild-form-kerr-gauge"
+]
+},
+{
+"derivation": null,
+"func": "check_rate_per_area_over_proper_distance_is_the_surface_gravity_at_every_latitude",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.c-loc-is-a-second-placement-of-the-count",
+"synthesis.exceptional-boundary-measure-one-calibration",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_three_schwarzschild_forms_split_on_kerr_and_the_area_form_is_the_smarr_rate",
+"ok": true,
+"quantities": [],
+"touched": [
+"scrambling.epoch-modular-period-two-unknowns-become",
+"singularity.stretched-singularity-count",
+"synthesis.imported-kerr-surface-gravity-entropy"
+]
+},
+{
+"derivation": null,
+"func": "check_schwarzschild_rate_is_reached_on_three_slices",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.stretched-singularity-count"
+]
+}
+]
+},
 "synthesis.sudden-descent-feature-not-tilt": {
 "failed": false,
 "findings": [],
@@ -48414,6 +48746,55 @@
 "quantities": [],
 "touched": [
 "neutrino.breaking-relation"
+]
+}
+]
+},
+"synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two": {
+"failed": false,
+"findings": [],
+"key": "774e2c16d0b0bd10",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_sum_and_difference_of_two_observables_anticommute",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_two_chsh_values_sharing_a_party_have_squares_summing_to_at_most_eight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.division-gives-the-rationals",
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_commuting_directions_give_square_four_and_values_two",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_pair_state_value_and_what_it_leaves_a_third_party",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate"
 ]
 }
 ]
@@ -50469,7 +50850,7 @@
 "synthesis.window-reading-array-killing-energy": {
 "failed": false,
 "findings": [],
-"key": "14f3f6308dda9c23",
+"key": "83582aac43fde3e7",
 "result": "none",
 "runs": []
 },

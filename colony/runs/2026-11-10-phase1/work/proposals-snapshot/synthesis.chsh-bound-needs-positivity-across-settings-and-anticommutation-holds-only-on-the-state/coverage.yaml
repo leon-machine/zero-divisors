@@ -1,0 +1,5 @@
+functions:
+  check_box_functional_has_value_four_and_fails_positivity_only_across_settings:
+    kind: partial
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "complete for the values of the functional, all sixteen joint probabilities with the marginals, the value on (C - t)^2 for t = 0..8, the element A1(B1+B2) - 2 and the inertia of the form on the sixteen blades; non-negativity inside a setting pair is sampled on one element per pair and is otherwise the proof's; for clause (iii) the two conditions are evaluated on the box functional and on three states, and the implication is the proof's two lines"

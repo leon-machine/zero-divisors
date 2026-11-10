@@ -1,0 +1,4 @@
+I405  synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction
+      synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr is declared and untouched, as expected: coverage.yaml: its clause (2), the determinant lemma, is cited for the Gram determinant on r = R(u); the check here recomputes the case R' = 0 from the metric and does not call it
+
+synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction: 0 error(s), 1 other finding(s); check result: pass

@@ -33,7 +33,7 @@ derivations:
   - synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free@2
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
-  - synthesis.window-reading-array-killing-energy@1
+  - synthesis.window-reading-array-killing-energy@2
   proof: proof-main.tex
 checked_by:
 - kind: check

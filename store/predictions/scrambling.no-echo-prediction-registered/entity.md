@@ -21,7 +21,7 @@ derivations:
   uses:
   - interior.imported-equivalence-einstein-equations@3
   assumes:
-  - singularity.c1-curvature-cutoff@4
+  - singularity.c1-curvature-cutoff@5
 locators:
   paper: T08
   number: Rec 7.1

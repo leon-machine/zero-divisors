@@ -297,7 +297,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T06, successor problem (3); T04, scope (higher codimension); T08, successor problem (2); T07, successor problem (3); T05, Rem 7.33(d); T10, successor problem (4); the interior results of 26 and 31 October"
+  source: "T06, successor problem (3); T04, scope (higher codimension); T08, successor problem (2); T07, successor problem (3); T05, Rem 7.33(d); T10, successor problem (4); the interior results of 26 and 31 October; the Kerr count results and Leon's decisions of 10 November"
   statement: >-
     Extend the wall theory to the codimension-two ring of Kerr and prove or
     refute Conjecture \claimref{interior.duality-monodromy-fibration-over-ring}:
@@ -308,9 +308,16 @@
     the I-state continuum.
   why: >-
     Every result of the series on the singularity, the temperature and the
-    count is proved for Schwarzschild; Kerr is the generic astrophysical hole
-    and its entropy's known dependence on spin is an external test of the
-    count that the Schwarzschild case cannot provide.
+    count is proved for Schwarzschild, and Kerr is the generic astrophysical
+    hole. Its entropy's known dependence on spin was taken here as an external
+    test of the count. It is not an external test of the density (10
+    November): placed at the horizon the count is a fixed multiple of the area
+    by construction and cannot fail, and the literal cutoff placement fails at
+    both ends of the spin range, so the Kerr entropy neither meets nor probes
+    the kill condition of \claimref{pred.boundary-mode-density}. What Kerr
+    does test is the placement premise (C1), whose class of placements fails
+    there, and the form in which the Schwarzschild rate is carried to a
+    spinning hole.
   known: >-
     The Kerr curvature scale is $\mathfrak M = -M\chi^{-3}$ with $\chi$ the
     Walker-Penrose Killing-spinor scalar, so the duality monodromy is three
@@ -321,7 +328,11 @@
     and variable-order weights with a focal double cover appear forced
     (\claimref{note.sheaf.setting-scope-successor-problems}); the Kerr
     composite itself is open. T07 records that superradiance leaves no global
-    KMS state at fixed angular velocity for all modes, and T05's discharge of
+    KMS state at fixed angular velocity for all modes (this concerns bosons
+    and the extension of the state to the exterior; for the fermionic horizon
+    modes the stored I-state theorem \claimref{hawking.i-state-continuum}
+    gives a state in every channel, which for Kerr is argued and not proved,
+    since Kerr is outside the scope of (N$_{+}$)), and T05's discharge of
     hypothesis (iii) treats the sphere directions as inert, which holds for
     Schwarzschild by symmetry only. On the double cover branched along the
     ring, with $z = \sqrt{w}$ and $w$ a complex normal coordinate of the ring,
@@ -387,6 +398,32 @@
     maximal extension rather than about generic rotating holes, and a count
     meant for generic holes should be placed before the Cauchy horizon
     (argued).
+
+    (10 November.) Attack item 2 is answered, by two results. At the horizon: under hypothesis (SH), a hypothesis
+    of that result and not adopted (the count rule read on the surface at proper distance $\rho_{0}$ from the
+    horizon locus, over the modular period of the co-rotating Killing flow; a three-volume form of the unadopted
+    mode-count hypothesis (H), identified with the stored horizon placement and not added to it), the count is
+    $2\pi\nu\rho_{0}A_{+}$ at leading order in $\rho_{0}/M$ for every $a < M$, because the surface gravity cancels
+    between the rate and the period. With $\nu\rho_{0} = 1/8\pi$, the value set on Schwarzschild, this is
+    $A_{+}/4$ and could not have come out otherwise: the comparison is no test of the density. The three forms of
+    the Schwarzschild rate that agree there, $8\pi\nu M$, $\nu/T_{H}$ and $2\nu\kappa A$, give on Kerr $M/s$,
+    $Mr_{+}/(2s^{2})$ and $1$ times $A_{+}/4$, $s = \sqrt{M^{2} - a^{2}}$, so the Schwarzschild count does not fix
+    its own carry
+    (\claimref{synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction}).
+    At the cutoff: for $0 < a \le \tfrac45\rho$ and $\rho \le M/3$, no level set $|z| = \rho$ of the modulus of
+    the curvature scale chosen independently of the spin, with any density, gives $A_{+}/4$ exactly at zero and
+    at nonzero spin; the count's ratio to its Schwarzschild value is at most
+    $(1 - a^{2}/12\rho^{2})/\sqrt{1 - a^{2}/M^{2}}$, a miss at leading order when $a/\rho$ is bounded below,
+    while for $a/\rho \to 0$ the count still agrees with $A_{+}/4$ at leading order
+    (\claimref{synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr}).
+    With the ring count for $a \ge 2\rho_{c}^{2}$ the literal cutoff placement fails at both ends of the spin
+    range; the window $\tfrac45\rho_{c} < a < 2\rho_{c}^{2}$ and criteria that use the phase of the complex scale
+    are not treated. Decisions (Leon, 10 November): (SH) is recorded as a hypothesis and not adopted; (C1) is
+    unchanged, with a scope note that its class of placements fails on Kerr; the Kerr entropy neither meets nor
+    probes the kill condition of \claimref{pred.boundary-mode-density} (a horizon placement cannot fail; the
+    literal cutoff placement fails at both ends of the spin range). The closing sentence of the ring count on
+    small spin is corrected in its version 7: the locus is a closed surface between the horizon loci only for
+    $a < \rho_{c}$ with $\sqrt{\rho_{c}^{2} - a^{2}} > r_{-}$.
   attack:
     - >-
       Decide whether the limiting values of
@@ -397,16 +434,31 @@
       conjecture asserts; or restate the conjecture with that fibre
       ($\mathfrak n$ on tangential directions) and that deck action.
     - >-
-      Find the spin-dependent ingredient the count lacks: test whether placing
-      the count on the horizon's modular data for the co-rotating Killing
-      flow, before the Cauchy horizon, rather than on the Planck-curvature
-      locus, restores $A_{+}/4$, or whether (C1) must be restated for rotating
-      holes; a count on the light-ray component along the principal null
+      Answered (10 November;
+      \claimref{synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction},
+      \claimref{synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr}).
+      The item asked for the spin-dependent ingredient the count lacks: whether placing the count on the
+      horizon's modular data for the co-rotating Killing flow, before the Cauchy horizon, rather than on the
+      Planck-curvature locus, restores $A_{+}/4$, or whether (C1) must be restated for rotating holes. Placed
+      at the horizon the count returns $A_{+}/4$ by construction, which is no test; the literal cutoff
+      placement fails at slow rotation as well as at fast rotation. What remains of the item: the window
+      $\tfrac45\rho_{c} < a < 2\rho_{c}^{2}$; placements that use the phase of the complex scale as well as
+      its modulus (the Kretschmann scalar among them); and whether (C1) is to be restated for rotating holes
+      or kept as a Schwarzschild calibration. A count on the light-ray component along the principal null
       direction does not see the winding.
     - >-
       Formulate the rotating state statement for the horizon modes at the
       co-rotating Killing flow, starting from
       \claimref{hawking.i-state-continuum}, and identify which channels fail.
+    - >-
+      The inner-locus factor three. At fixed $a/M$ the surface at proper distance $\rho_{0}$ from the inner
+      horizon locus sweeps the same leading rate as the stretched outer horizon, $\kappa_{-}\rho_{0}A_{-} =
+      \kappa_{+}\rho_{0}A_{+}$, provided $\rho_{0}^{2}M \ll r_{-}^{3}$; as $a \to 0$ at fixed $\rho_{0}$ its rate tends
+      to $12\pi M\rho_{0}$, three times as much (computed at seven spins, not proved;
+      \claimref{synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction},
+      clause (vi)). So no single $\rho_{0}$ serves both the cutoff calibration at zero spin ($\rho_{0} = 2/3$)
+      and the horizon value ($\rho_{0} = 2$). Prove the interpolation between the two rates, and decide whether
+      it bears on where the modes of a slowly rotating hole are placed.
   success: >-
     A proof or refutation of the fibration conjecture, and a ring count whose
     mass and spin dependence matches or contradicts the Kerr entropy; a
@@ -421,6 +473,8 @@
     - synthesis.kerr-ring-count-misses-area-law
     - synthesis.charged-vaidya-cauchy-horizon-tractor-threshold
     - hawking.i-state-continuum
+    - synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction
+    - synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr
   added: "2026-10-22"
 
 - id: op.cauchy-horizon-transport
@@ -2208,6 +2262,118 @@
     - note.correspondence.setting-successor-problems
   added: "2026-10-22"
 
+# ---------------------------------------------------------------- clifford structure
+
+- id: op.positivity-of-values
+  title: "Positivity of values (P): derive it or show it independent, and settle the split and the observables"
+  area: clifford-structure
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side)"
+  statement: >-
+    Premise (P), positivity of values (\claimref{synthesis.premise-positivity-of-values}), says that values are
+    given by a state: a $k$-linear $\omega$ on the Clifford algebra $\Cl_{k}(p,q)$ over an ordered field with
+    $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$, where $\dagger$ is the
+    blade inverse for the split of the generators into squares $+1$ and $-1$ that defines the modes. It is
+    assumed, not derived, and it is not a foundation postulate. Derive (P) from the series' structure (for
+    example from the record-chain account of measurement and a derived Born rule), or show that it is
+    independent of the series' other premises. With that, settle the two questions the premise leaves open:
+    which stored premise supplies the split that defines the adjoint when the signature is indefinite, and
+    whether elements odd under the total parity are observables.
+  why: >-
+    Every stored statement about CHSH values holds given (P), and (P) is the only premise about values between
+    the algebra of the foundation and the quantum bound: the identity for the square of the CHSH element is a
+    theorem of the algebra, the bound $2\sqrt{2}$ on its value is not, and without positivity the value $4$
+    occurs. So whether the series derives the quantum limit on correlations, or assumes it in the form of (P),
+    turns on this problem. The same premise is where a Born rule would enter: the store's Born rule is an
+    imported argument, and (P) with a sharpness condition may replace it.
+  known: >-
+    Six results hold given (P) (10 November). The base
+    (\claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}): for two
+    commuting pairs of self-adjoint elements of square one, $C^{2} = 4 - XY$ with $X$, $Y$ the two commutators,
+    and $8 - C^{2}$ is one half of a sum of three squares with rational coefficients; these are identities of
+    elements and need only the foundation postulates F1 to F3. Under (P) they give $\omega(C)^{2} \le 8$, with
+    strict inequality over $\Q$; every rational value of square below $8$ occurs, and the value $2\sqrt{2}$ is
+    attained only when $\sqrt{2}$ is adjoined, by a state that is a single primitive idempotent of the algebra.
+    The completion postulate F4 is not needed. The other five: the fourteen signatures in which one copy of the
+    algebra has no two commuting pairs with value above $2$
+    (\claimref{synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two}); the two settings
+    for observables
+    (\claimref{synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist}); the
+    counter-model
+    (\claimref{synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state});
+    the values over the rationals at fixed settings, where the pure states of a sector are the rational points
+    of a circle and every rational value $P/Q$ in lowest terms obeys $8 - (P/Q)^{2} \ge 4/Q^{2}$, with equality
+    on a Pell sequence $2, \tfrac{14}{5}, \tfrac{82}{29}, \tfrac{478}{169}, \dots$
+    (\claimref{synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records}); and the
+    three-party trade-off $\omega(C_{AB})^{2} + \omega(C_{AD})^{2} \le 8$ for a shared party using the same two
+    observables in both
+    (\claimref{synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two}). What each proof uses
+    of (P): positivity on elements of the form $xx^{\dagger}$ built from the configuration, and normalisation; the reality
+    clause only where a functional is fixed on all elements by its values on self-adjoint ones. The
+    counter-model: on the algebra of two modes the functional $\lambda(x) = \langle(1 + C)x\rangle_{0}$ is
+    linear, normalised and real, gives a probability table with no signalling at each of the four pairs of
+    settings (the Popescu-Rohrlich box), and has $\lambda(C) = 4$; the form $\lambda(xy^{\dagger})$ has inertia
+    $(12, 4, 0)$, and $\lambda$ is negative only on elements that combine different pairs of settings, never
+    inside one pair. So the algebra with linearity, normalisation and reality does not imply (P). This is a
+    functional on one algebra; it is not a model of the store's whole premise set, so the independence of (P)
+    from the other premises is not proved. Stored states, elements $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of
+    unit trace, satisfy (P); the premise extends that definition from elements to functionals. The split: in
+    definite signature the adjoint does not depend on the orthonormal frame; in indefinite signature it does,
+    and in $\Cl_{\Q}(2,2)$ a unit vector of a boosted frame, of square one and not self-adjoint for the
+    original split, gives the CHSH combination the value $\tfrac{17}{4}$ on a state of the original split (the
+    base, clause (vi)); the list of fourteen signatures does not depend on the frame. The observables: with
+    parity-even observables one mode per party never exceeds $2$ and two modes per party reach every value
+    $8r$ with $8r^{2} \le 1$, with no twist; with parity-odd elements allowed, one mode against the
+    Klein-twisted other mode exceeds $2$, and the parity average of the descent sends those odd elements to
+    zero. Neither setting is singled out. The Born rule in the store is the imported envariance argument
+    (\claimref{one-relation.imported-envariance-born-rule}).
+  attack:
+    - >-
+      Derive (P) from the series' structure, for instance from the record-chain account of measurement
+      together with a derived Born rule; or prove it independent of the full premise set. The independence
+      proof needs more than the counter-model, which is a functional on one algebra and not a model of the
+      whole store: it needs an assignment of values that satisfies every other stored premise and violates
+      positivity.
+    - >-
+      Decide which stored premise supplies the split of the generators into squares $+1$ and $-1$ that defines
+      the adjoint in indefinite signature. The flag as datum
+      (\claimref{dark-matter.premise-flag-as-datum}) is the candidate: test whether its datum fixes the split
+      that defines the modes, or only part of it, and what (P) becomes under a change of flag.
+    - >-
+      Decide whether elements odd under the total parity are observables. Both settings are recorded side by
+      side: parity-even observables need two modes per party and no twist; the one-mode Klein-twisted
+      realisation uses parity-odd elements, which the parity average of the descent erases. A stored premise
+      that selects one setting, or a result that both describe one physical situation, would settle it; the
+      univalence premise (\claimref{singularity.p-univalence}) restricts states, not observables, and its
+      bearing is to be worked out.
+    - >-
+      Obtain the Born weights from (P) and sharpness on a primitive idempotent, in place of the imported
+      envariance argument. In the base this is done for one state: normalisation, positivity and the sharp
+      value $2\sqrt{2}$ of $C$ fix the functional on self-adjoint elements as $4\langle Px\rangle_{0}$, $P$ the saturating idempotent, and
+      reality fixes it on all elements (clause (viii)); its reading as a Born rule is argued. The general statement, for every primitive
+      idempotent and every state sharp on it, is open, as is its relation to the envariance argument.
+    - >-
+      Decide whether the pure-state values of the sector that meet the denominator law with equality are the
+      running maxima among pure-state values for every denominator. Computed: for denominators up to $400$ in
+      the stored check and below $1200$ in a separate computation, the running maxima are exactly the Pell
+      values; not proved.
+  success: >-
+    (P) derived from the series' structure, or shown independent of the full premise set; with the split that
+    defines the adjoint traced to a stored premise (or shown to be a further datum), and the status of
+    parity-odd elements as observables decided.
+  entities:
+    - synthesis.premise-positivity-of-values
+    - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate
+    - synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state
+    - synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist
+    - synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two
+    - synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records
+    - synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two
+    - dark-matter.premise-flag-as-datum
+  added: "2026-11-10"
+
 # ---------------------------------------------------------------- completion
 
 - id: op.which-capacity
@@ -2778,7 +2944,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November; the 9 November results and Leon's decisions"
+  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November; the 9 November results and Leon's decisions; the scope of the window reading, Leon's decision of 10 November"
   statement: >-
     Under Premise (Q) version 3, weights $\kappa(k + \tfrac12)$, one s-wave
     array carries exactly $\tfrac12\ln 2$ at the Hawking temperature, so under
@@ -2885,6 +3051,12 @@
     unaffected. The second branch of attack item 1 is answered: a mean of two arrays per unit. The count unit
     stays a decision, and the density $\nu = 1/(16\pi\ln 2)$ of \claimref{pred.boundary-mode-density} rests on
     it.
+
+    (10 November.) The window reading equates mean Killing energy only: the array's entropy $\tfrac12\ln 2$
+    and the continuum's entropy rate times the window, $\pi/6$ per complex component, are different objects,
+    and the reading does not equate them (scope sentence, version 2 of
+    \claimref{synthesis.window-reading-array-killing-energy}). Which object's entropy the count compares with
+    $A/4$ is attack item 4.
   attack:
     - >-
       Derive the count unit from the boundary-mode structure: show that a
@@ -2907,6 +3079,30 @@
       Supply a first-principles slice-to-epoch aggregation rule (T08's
       successor problem (4)) to replace the two naive rules refuted in
       \claimref{scrambling.per-slice-verification-two-failed-aggregations}.
+    - >-
+      Decide which object's entropy the count compares with $A/4$: the array's own Gibbs entropy,
+      $\tfrac12\ln 2$ per array, which is what the count uses, or an entropy constructed from the continuum
+      modes of the light ray, with which the window reading identifies the array for mean energy only
+      (\claimref{synthesis.window-reading-array-killing-energy}). Evidence (computed, 10 November; not a stored
+      result). The array is a chiral complex fermion on a circle of Killing time of length $L = 2\pi/\kappa$
+      with the antiperiodic condition, at $L = \beta$. In the symmetric ordering its $\ln Z$ at ratio
+      $x = L/\beta$ is the continuum's extensive value $\pi x/12$ plus a correction from the dual channel,
+      and it is invariant under $x \to 1/x$; the energy is its derivative in $\beta$, which vanishes at the
+      self-dual point $x = 1$ whatever the correction is. So the energy match of
+      \claimref{synthesis.null-ordering-of-counted-units-is-zeta-symmetric} is a fixed-point identity at
+      window length equal to the thermal period, not extensivity. The entropy at that point is $\ln Z$ itself,
+      $\tfrac12\ln 2$, against $\pi/6$ for the continuum's rate times the window: the difference is of order
+      one at one thermal length ($-0.177$), $-0.020$ at two and below $10^{-4}$ at four, so the array has the
+      continuum's thermodynamics only for windows of many thermal lengths, and the stored window is one. The
+      variance of the energy differs as well ($\beta^{2}$ times it is about $0.798$ per array, against $\pi/6$
+      per component). The continuum has no density matrix on a window (the store's entropy statements for it
+      are differences), so $\pi/6$ is a rate times a length and not the entropy of a state on a window. What
+      would decide: a construction of the arrays out of the continuum modes of a light ray, as refutation
+      condition (a) of the window reading asks for energy, and the entropy of the constructed object. If the
+      counted object were the continuum per unit Killing time, the light rays per Planck area per period would
+      change from $1/(2c\ln 2)$ to $3/(2\pi c)$ and the capacity convention would no longer apply. The
+      Clausius route uses entropy differences only, which both objects satisfy; only the count uses the
+      absolute value.
   success: >-
     A derivation from the series' structure that the registered unit is two
     arrays, returning $\kappa_c = 1/(4\ln 2)$ without the area law, settles the
@@ -3144,6 +3340,16 @@
     So the imported mean-purity Fact is retired in favour of the derived second moment (at powers of two; for
     general dimensions the classical value is the $n = 2$ case of the all-moment Fact), while the all-moment
     import and Page's average stay. The comparison at nonzero weight is not touched and remains open.
+
+    (10 November.) CHSH values of the eviction pairs, under Premise (P), positivity of values
+    (\claimref{synthesis.premise-positivity-of-values}), and in the setting in which parity-odd elements count as
+    observables: the stored pair state at equal weights reaches the CHSH bound $2\sqrt{2}$ at suitable settings
+    of one mode against the Klein-twisted other mode (directions with $\sqrt{2}$ adjoined; rational directions
+    give values such as $\tfrac{14}{5}$), and on the stored thermal weights, with $r = c^{2} - s^{2} \ne 0$, the
+    pair's maximum is $2\sqrt{2 - r^{2}}$
+    (\claimref{synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist}, clause (iv);
+    \claimref{synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two}, clause (v)); with parity-even
+    observables one mode on each side gives at most $2$.
   attack:
     - >-
       Compute the Renyi comparison at nonzero weight: the island side needs

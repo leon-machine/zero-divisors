@@ -1,0 +1,2 @@
+{"t": 1794315602.2591577, "problem": "op.positivity-of-values", "tokens": 1500000, "outcome": "proved-partial", "proposal": "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate", "verdict": "SOUND WITH FIXES"}
+{"t": 1794315602.2889187, "problem": "op.kerr-ring", "tokens": 1100000, "outcome": "negative", "proposal": "synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction", "verdict": "SOUND WITH FIXES"}

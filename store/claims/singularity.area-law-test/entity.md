@@ -21,10 +21,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - singularity.stretched-singularity-count@8
+  - singularity.stretched-singularity-count@9
   - singularity.causal-epoch-computed-exactly@4
   assumes:
-  - singularity.c1-curvature-cutoff@4
+  - singularity.c1-curvature-cutoff@5
   - singularity.c2-cell-density@4
   - singularity.c3-counted-epoch@1
   proof: proof-main.tex

@@ -1,0 +1,21 @@
+functions:
+  check_level_set_determinant:
+    kind: sampled
+    clauses: ["(2): det h = -Sigma (Delta + (1 - u^2) R'^2), and rho^2 B(u) on the level set, also for the flow d_t + Omega d_phi"]
+    omits: "sampled, consistency check of the identity proved in the text (cofactor rule in the Kerr-Schild gauge): five holes (three on the Planck level set rho^3 = 2M, one off it, one with rational horizon radii) and five Pythagorean points each, 25 exact Gram determinants from the Kerr-Schild components entered from the statement; one Omega; one point of the general lemma with a slope off the level set; the agreement with the stored tube determinant after the change of variable; one value of B written out"
+  check_determinant_in_the_store_product:
+    kind: sampled
+    clauses: ["(2): in the store's product the Gram determinant is +Sigma (Delta + (1 - u^2) R'^2)"]
+    omits: "one exact point (M = 7, a = 3, r = 4, u = 3/5, the level set's slope there) computed in Cl(1,3) through GA.py from hb^{-1}(b) = b - H (b.k) k on the Cartesian frame of the flat background, with Q(k) = 0 checked and one Omega; a consistency check of the sign against the stored convention, not a proof; the point is not in the regime of items 1, 3 and 4, which the identity does not need"
+  check_regime_and_bracket_bounds:
+    kind: sampled
+    clauses: ["(1): r_- <= a^2/M < 3 rho/5 <= R <= rho < M", "(2): (1 - delta) R (2M - rho) <= B <= R (2M - rho), B > 0"]
+    omits: "the same 25 points; the inequalities for all u and all holes of the regime are the proof's; the constants 13/9 and 65/27 <= 5/2 of the lower bound are checked as exact numbers; the horizon radii of one hole (r_+ = 65536/1025, r_- = 64/1025) are verified as roots"
+  check_quarter_power_bounds:
+    kind: complete
+    clauses: ["(3): (1 - x/4)^4 - (1 - x) = x^2 (3/8 - x/16 + x^2/256)", "(3): the integrals 2 - eps/6 and 2 - 2 eps/3 of the two bounding polynomials"]
+    omits: "the polynomial identity is exact; the integrals are checked at three values of eps through the antiderivatives; that the volume integral itself lies between the bounds is the proof's, and G(eps) is not evaluated"
+  check_count_ratio:
+    kind: sampled
+    clauses: ["(3): V'(M,0,rho) = 8 pi M sqrt(1 - rho/2M) on rho^3 = 2M (squared form)", "(4): N/(A_+/4) = 2 nu V'/sqrt(M^2 - a^2)", "(4): (1 - eps/12)^2 < 1 - a^2/M^2"]
+    omits: "three Schwarzschild holes; the factor 2/sqrt(M^2 - a^2) at one exact Kerr hole from kappa_+ and A_+ entered as in the imported Fact; the strict inequality at the five sample holes and the two general steps ((1 - eps/12)^2 <= 1 - eps(1/6 - 1/225), a^2/M^2 <= eps/9) at those holes with the constants compared exactly; the count's value itself is not computed"

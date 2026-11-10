@@ -1,7 +1,7 @@
 ---
 id: synthesis.c1-c2-forms-forced-one-number
 kind: claim
-version: 3
+version: 4
 title: 'The forms of (C1) and (C2) are forced, up to one number'
 status: proved
 region: synthesis
@@ -17,6 +17,10 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'scope note: the class of placements called forced is forced on the Schwarzschild family only and fails on Kerr at both ends of the spin range'
+  version: 4
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -48,6 +52,10 @@ lineage:
   - scrambling.uniqueness-internal-scaling
   - pred.boundary-mode-density
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 3 -> 4. Scope note added at Leon''s decision of 10 November 2026; clauses (i) to (iv), the proof and the checks are unchanged. The class of algebraic mass-independent placements is forced on the Schwarzschild family only: on Kerr an algebraic curvature scalar is not a function of one eigenvalue, and the placements read through the modulus of the curvature scale fail the area law at both ends of the spin range (synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr, synthesis.kerr-ring-count-misses-area-law), while a horizon placement is a multiple of the area by construction (synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction).'
   correction:
     by: maintainer-2026-10-22
     date: '2026-10-22'
@@ -82,12 +90,16 @@ At leading order in $r_c/2M$ the count depends on the threshold $\lambda$ of (C1
 \end{enumerate}
 Consequently, under an algebraic mass-independent placement and an invariant density, the slice and the uniform density are forced, and what (C1) and (C2) add is two numbers, $\lambda$ and $\nu$, which the leading count sees only as $\kappa_s$; the area-law condition with the counted epoch at the modular period, which the store states for $\nu$ at $\lambda = 1$ (Prediction \claimref{pred.boundary-mode-density}), is a condition on $\kappa_s$, $\kappa_s = 1/(16\pi\ln 2)$ in the capacity convention. The value of $\kappa_s$ is not derived here. Filed alongside, synthesis.exceptional-boundary-measure-one-calibration: the same reduction read on the exceptional set, whose constant is $\nu' = \nu\tau_c = \tfrac23\kappa_s$ for an eigenvalue threshold; the two area-law values agree ($\kappa_s = 1/(16\pi\ln 2)$ exactly when $\nu' = 1/(24\pi\ln 2)$).
 
+\emph{Scope (Schwarzschild only).} The class of placements is forced on the Schwarzschild family, where every algebraic curvature scalar is a function of one eigenvalue. On the Kerr field an algebraic curvature scalar can depend on the phase of the complex curvature scale as well as on its modulus $M|z|^{-3}$, so the class is no longer a one-parameter family; and read through the modulus it fails the area law at both ends of the spin range: for $a \ge 2(2M)^{2/3}$ the literal count is of order $M^{-1/3}$ times $A_{+}/4$ (Theorem \claimref{synthesis.kerr-ring-count-misses-area-law}), and for $0 < a \le \tfrac45\rho$, $\rho \le M/3$, no level set $|z| = \rho$ chosen independently of the spin, with any density, gives $A_{+}/4$ exactly at zero and at nonzero spin (Theorem \claimref{synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr}). The window between and the criteria that use the phase are not treated. A count at fixed proper distance from the Kerr horizon locus is a fixed multiple of the area by construction and tests nothing (Theorem \claimref{synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction}).
+
 ## technical
 Suppose the rule that places the boundary modes is algebraic and mass-independent: it sets some algebraic (pointwise) curvature scalar to a fixed value in Planck units. Criteria built from derivatives of the curvature are not covered: they involve $M$ and $r$ separately and select other, mass-dependent slices. For the Schwarzschild field on flat spacetime, in the interior's synchronous frame the curvature operator $\mathcal{R}(B)$ is diagonal on the six frame planes, with sectional curvatures exactly $2, -1, -1, -1, -1, 2$ times $M/r^{3}$, so every such scalar is a function of the Weyl eigenvalue $w = 2M/r^{3}$, and the rule picks a slice $r_c^{3} = 2M/\lambda$ for some constant $\lambda$. Postulate (C1) is $\lambda = 1$, the Kretschmann criterion $\lambda = 12^{-1/2}$, the unit-proper-time criterion $\lambda = 4/9$. The forced weights of the completion, the Kasner exponents $(-1/3, 2/3, 2/3)$, reproduce the same six curvatures as $p_i(p_i - 1)/\tau^{2}$ and $p_ip_j/\tau^{2}$, with $4/(9\tau^{2}) = 2M/r^{3}$, so these slices are the proper-time level sets of the weighted blow-up.
 
 If the mode density is invariant under the slice's isometries (Killing-time translations and rotations, which act transitively), it is a constant multiple $\nu$ of the induced volume: this is the form of (C2).
 
 On the family the slice volume per unit Killing time is exactly $8\pi M\lambda^{-1/2}\sqrt{1 - r_c/2M}$, so $dN/dt = 8\pi\nu\lambda^{-1/2}M$ at leading order. The threshold and the density enter only through $\kappa_s = \nu\lambda^{-1/2}$; the threshold alone shows up only in the correction $r_c/2M = \lambda^{-1/3}(2M)^{-2/3}$, about $10^{-25}$ for a solar mass. Power-law slices $r_c = cM^{\alpha}$ give a count linear in $M$ only at $\alpha = 1/3$. So the two placement postulates reduce to two hypotheses of form, which force the slice family and the uniform density, plus one calibration constant $\kappa_s$; the registered density prediction, $1/(16\pi\ln 2)$ in the capacity convention, is a prediction for $\kappa_s$, equal to $\nu$ only at $\lambda = 1$. The same reduction read on the exceptional set is filed alongside (synthesis.exceptional-boundary-measure-one-calibration), with constant $\nu' = \tfrac23\kappa_s$.
+
+The forcing is a statement about the Schwarzschild family. On Kerr the curvature scalars are not functions of one number, and the placements of this class read through the modulus of the curvature scale miss the area law at both ends of the spin range, fast rotation and slow rotation; a count placed at the horizon is a multiple of the area by construction.
 
 ## lay
 The series counts the quantum degrees of freedom of a black hole on a surface deep inside it, using two assumptions: where the surface is (where the strength of the gravitational field, its curvature, reaches the Planck value) and how densely the degrees of freedom sit on it (a fixed number per Planck-sized cell). This result shows how much of that is choice. If the rule for the surface uses only the strength of curvature at each point, read off without derivatives, it must pick a surface of one specific family, because inside a black hole every measure of curvature is a function of one number; and the same family is singled out by the stretching pattern the series' completion forces near the singularity. If the density treats every point of the surface alike, it must be uniform. What is left are two numbers, the curvature threshold and the density, and the count only ever sees one combination of them. So the two assumptions together carry one adjustable constant, which the area law then has to fix; it is not derived here.

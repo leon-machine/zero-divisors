@@ -26,7 +26,7 @@ derivations:
 - name: main
   proof: proof-main.tex
   uses:
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
   - singularity.causal-epoch-computed-exactly@4
 checked_by:
 - kind: legacy

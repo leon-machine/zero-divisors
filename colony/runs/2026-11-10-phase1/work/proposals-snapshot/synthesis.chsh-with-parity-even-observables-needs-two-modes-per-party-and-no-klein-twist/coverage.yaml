@@ -1,0 +1,13 @@
+functions:
+  check_even_observables_commute_without_twist_and_one_mode_has_only_the_parity:
+    kind: partial
+    clauses: ["(i)", "(ii)"]
+    omits: "three modes split one against two: every even blade of one side against every even blade of the other, the twisted products of pairs of generators, the self-adjoint and the even self-adjoint blades of one mode, one observable that is not even with its parity average, and three one-mode even configurations against a non-commuting even pair; the statements for every number of modes and every observable are the proof's"
+  check_two_modes_per_party_reach_square_eight_with_even_observables_and_even_states:
+    kind: partial
+    clauses: ["(iii)"]
+    omits: "the stated configuration of four modes, that it is a configuration of even blades with anticommuting pairs, its square, K, and the values and evenness of the functional at two rational r; positivity of the functional is the cited lemma's"
+  check_twisted_one_mode_split_exceeds_two_only_through_odd_observables:
+    kind: partial
+    clauses: ["(iv)", "(v)"]
+    omits: "the stated configuration and state of two modes, the four correlations, the value 14/5 at one rational pair of directions, the pair state written out, the value at amplitudes (3/5, 4/5) against the stated bound, the parity and parity average of the observables, the averaged value, and the untwisted element with its self-adjoint part of square three on that state; the statement for every state and every point of the circle is the proof's"

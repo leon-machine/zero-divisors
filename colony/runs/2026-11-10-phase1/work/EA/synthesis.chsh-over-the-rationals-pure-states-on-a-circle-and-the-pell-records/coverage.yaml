@@ -1,0 +1,13 @@
+functions:
+  check_quarter_turned_chsh_elements_anticommute_and_values_lie_in_a_disc:
+    kind: partial
+    clauses: ["(i)", "(ii)"]
+    omits: "the relations of I, C and the quarter-turned element as identities of explicit elements, the square of a combination at one rational pair, the dimension 4 of the corner from all sixteen blades with the stated basis, and the disc inequality on five rational states with the largest squared radius met pinned at 2304/289; the inequality for every state and the square for every pair are the proof's"
+  check_pure_states_of_the_sector_are_rational_points_of_the_circle_of_square_radius_eight:
+    kind: sampled
+    clauses: ["(ii)", "(iii)"]
+    omits: "nine rational parameters u and the point at infinity: purity on all sixteen blades, the sector, the values against the closed form, the circle, the form in the corner basis, the turned directions and the equality of values with the fixed state, the parity statement on the sample, the identity with the stored pair state, and four cases of the idempotent criterion; the classification of all self-adjoint idempotents of the corner, the bijection and the parity statement for every point are the proof's"
+  check_denominator_law_and_the_pell_records:
+    kind: partial
+    clauses: ["(iv)", "(v)"]
+    omits: "the law and its equality cases for every fraction of denominator up to 400, the congruence refinements, the recursion, the descent step, the legs and the rational bracket for all solutions with denominator up to 10^12, and the first four records as values of pure states; all denominators and the completeness of the sequence are the proof's"

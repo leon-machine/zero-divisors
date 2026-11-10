@@ -1,0 +1,33 @@
+functions:
+  check_square_of_the_chsh_element_and_the_rational_certificate:
+    kind: sampled
+    clauses: ["(i)", "(ii)"]
+    omits: "the two identities on all 625 quadruples from five rational directions of each party in two modes, and on three configurations of three modes in which one anticommutator is 1 + p_2 and not a scalar; the identities for every configuration are the proof's (an expansion using only the squares and the commutation between the parties)"
+  check_scalar_part_is_positive_and_every_sample_state_obeys_the_bound:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the blade inverse on all sixteen blades, the sum of squares on one element, the anti-automorphism on one product, and for three settings and six rational states the equality of the value of C^2 with 8 minus half the three certificate values, their signs and both inequalities of the clause, with the largest squared value met pinned at 78400/9801; the bound for every state is the proof's; the strictness over the rationals and the reality of the sample states are the proof's and are not checked"
+  check_blade_configurations_give_square_four_plus_four_k_and_states_of_value_eight_r:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "two blade configurations, in signatures (2,2) and (3,1): the relations of the lemma, and for four rational r with 8 r^2 <= 1 the normalisation, the values 8r and 8, self-adjointness of the defining element and non-negativity on nine sample elements, with one negative value at r = 3/8; the lemma for every blade configuration and positivity on all elements are the proof's"
+  check_functional_violating_positivity_reaches_four:
+    kind: partial
+    clauses: ["(v)"]
+    omits: "at the twisted blade configuration of two modes: normalisation, reality on all sixteen blades, the value 4, the value t^2 - 8t + 4 on (C - t)^2 at seven t, and the four correlations; other blade configurations are the proof's"
+  check_square_one_element_that_is_not_self_adjoint_exceeds_four:
+    kind: exact
+    clauses: ["(vi)"]
+    omits: "nothing of the example: the element, its square, its adjoint, the commutation, the state, the value 17/4, the partner of the boosted frame with its square and anticommutation, and the value -9/4 are computed; that the boosted generators define an adjoint fixing A is the proof's"
+  check_klein_twisted_directions_commute_and_the_square_is_four_plus_four_wedges_k:
+    kind: partial
+    clauses: ["(vii)"]
+    omits: "the adjoint and square of K, the anticommutation of the untwisted directions and the failure of e_1 e_2 to be an observable, the parity of the directions and one parity average, and the formula for the square and the scalar anticommutator on the 625 quadruples of five rational directions; the bilinearity that extends the formula to all directions, the list of observables of a mode and the inequality are the proof's"
+  check_saturating_state_is_a_pure_state_over_the_field_with_root_two:
+    kind: partial
+    clauses: ["(viii)"]
+    omits: "with coefficients a + b sqrt 2 as exact pairs: P idempotent and self-adjoint, C P = 2 sqrt 2 P, scalar part 1/4, value 2 sqrt 2, the rank-one identity on all sixteen blades, the projections onto the blades of each mode, and the commutation with the total parity; uniqueness is the proof's"
+  check_square_eight_on_a_state_with_nonzero_anticommutator:
+    kind: sampled
+    clauses: ["(ix)"]
+    omits: "the three-mode observables, their commutation, the anticommutator 1 - p_3, the square 4 + 4 K' P_+, the certificate on this configuration, and for four rational r the normalisation, the values 8r, 8 and 0 and non-negativity on sixteen sample elements; positivity on all elements is the proof's"

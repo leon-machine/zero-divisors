@@ -23,7 +23,7 @@ about:
 derivations:
 - name: main
   uses:
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.residue-from-mode-entropy@4
   - synthesis.quarter-from-temperature@1

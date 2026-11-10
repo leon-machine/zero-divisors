@@ -33,7 +33,7 @@ derivations:
   - scrambling.area-law-test@5
   - scrambling.clock-inventory-boundary-modes@6
   - scrambling.imported-modes-modular-inventory@5
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
 checked_by:
 - kind: legacy
   script: verify_T08.py

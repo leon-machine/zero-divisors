@@ -59,7 +59,9 @@ conventions of notation and of the imaginary units that the texts assume.
 - **Same names.** The series reuses short names: (S) is T12's slot statistics
   and T14c's version carried to every tower; (U) is T14's equal rank-one
   eigenvalues and T14c's transposition rule (and the rate model's global
-  purity in T05); (R) and (P) also recur; (R$_\Lambda$) is (R) transplanted to the cosmological horizon (`synthesis.r-lambda-regularity-cosmological-horizon`). `get_claim` lists a postulate's
+  purity in T05); (R) and (P) also recur: (P) is the univalence premise of T05 (`singularity.p-univalence`) and, in the
+  entanglement results, positivity of values (`synthesis.premise-positivity-of-values`, which is not a
+  foundation postulate); (R$_\Lambda$) is (R) transplanted to the cosmological horizon (`synthesis.r-lambda-regularity-cosmological-horizon`). `get_claim` lists a postulate's
   `namesakes`. Read the statement, not the letter.
   P1, P2 are T14's single frozen point and indifference
   (`dark-matter.p1-single-frozen-point`, `dark-matter.p2-indifference`); (P1), (P2) in the

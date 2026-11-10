@@ -1,7 +1,7 @@
 ---
 id: pred.boundary-mode-density
 kind: prediction
-version: 2
+version: 3
 title: One boundary mode per Bekenstein-Mukhanov area quantum
 status: live
 subject: entropy
@@ -20,6 +20,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T08, deposited version
+- name: Claude Fable 5.2
+  role: 'maintainer pass on Leon''s decisions, a dated observation: the Kerr entropy neither meets nor probes the kill condition'
+  version: 3
+  source: maintainer pass of 2026-11-10
 review: typed
 kill_condition:
   threshold: A derivation of the calibration residue from the boundary modes returning any other value, which refutes
@@ -40,11 +44,20 @@ observations:
     the boundary modes themselves.'
   verdict: pending
   source: T17 stance table, row 6
+- date: 2026-11
+  dataset: Internal (the Kerr entropy)
+  result: 'Internal: the Kerr entropy neither meets nor probes the kill condition. Placed at fixed proper distance from the horizon locus (a hypothesis, not adopted) the count is a fixed multiple of the horizon area for every spin, because the surface gravity cancels between rate and period, so once the product of density and distance is set on Schwarzschild the comparison with A_+/4 cannot fail. The literal cutoff placement fails the area law at both ends of the spin range (slow rotation, for level sets of the modulus of the curvature scale; and a >= 2(2M)^{2/3}), which bears on the placement premise (C1) and not on the density. Neither is a derivation of the calibration residue from the boundary modes.'
+  verdict: pending
+  source: 'synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction; synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr; synthesis.kerr-ring-count-misses-area-law; Leon''s decision of 10 November 2026'
 locators:
   paper: T08
   number: T17 stance 6
   label: tab:stances
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 2 -> 3. A dated internal observation is added at Leon''s decision of 10 November 2026 (last in the list, so the first entry is unchanged): the Kerr entropy neither meets nor probes the kill condition, since a horizon placement cannot fail and the literal cutoff placement fails at both ends of the spin range. Statement, kill condition and basis are unchanged.'
   env: table row
   source: T17 tab:stances
   typing:
