@@ -71,7 +71,7 @@ def anti(x, y):
 # ------------------------------------------------------------------ (1)
 def check_sum_and_difference_of_two_observables_anticommute():
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("tower.commuting-copies")
     # the three parties commute pairwise (nested twists) and each party's two blades anticommute
     for (x, z) in ((XA, ZA), (XB, ZB), (XD, ZD)):
         assert is_observable(x) and is_observable(z) and anti(x, z)
@@ -123,7 +123,8 @@ def sample_states():
 def check_two_chsh_values_sharing_a_party_have_squares_summing_to_at_most_eight():
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
     premise("synthesis.division-gives-the-rationals")
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
+    premise("tower.commuting-copies")
     rhos, ghz = sample_states()
     for rho in rhos:
         assert GA.eq(dagger(rho), rho) and s0(rho) > 0
@@ -144,18 +145,30 @@ def check_two_chsh_values_sharing_a_party_have_squares_summing_to_at_most_eight(
     CAB, CAD = chsh(XA, ZA, XB, XB), chsh(XA, ZA, XD, XD)
     assert (value(ghz, CAB), value(ghz, CAD)) == (F(2), F(2))
     assert value(ghz, CAB) ** 2 + value(ghz, CAD) ** 2 == F(8)
-    # near the corner: the pair state at u = -1/2 has value 14/5 with B and leaves at most 4/25 for D
-    near = rhos[5]
-    CAB = chsh(XA, ZA, XB, ZB)
-    assert value(near, CAB) == F(14, 5) and F(8) - F(14, 5) ** 2 == F(4, 25)
+    # a state entangled across all three parties, both values nonzero: y ghz y^dagger, y = (1 + I_B/5)(1 - I_D/4)
+    IB, ID = mul(XB, ZB), mul(XD, ZD)
+    y = mul(GA.add(ONE, GA.scal(F(1, 5), IB)), GA.add(ONE, GA.scal(F(-1, 4), ID)))
+    tri = mul(y, ghz, dagger(y))
+    vals = (value(tri, CAB), value(tri, CAD))
+    assert vals == (F(24, 13), F(30, 17)) and vals[0] ** 2 + vals[1] ** 2 == F(318564, 48841) < F(8)
+    # the pure state of modes 1, 2 with value 14/5 at the blade settings, times (1 + p_3)/2
+    yp = GA.add(ONE, GA.scal(F(-1, 2), IB))
+    rho0 = GA.scal(F(1, 4), mul(GA.add(ONE, mul(XA, XB)), GA.sub(ONE, mul(ZA, ZB))))
+    rab = GA.scal(F(4, 5), mul(yp, rho0, dagger(yp)))
+    assert GA.eq(mul(rab, rab), rab) and GA.eq(dagger(rab), rab)
+    near = mul(rab, GA.scal(F(1, 2), GA.add(ONE, PAR[2])))
+    assert GA.eq(mul(near, near), near) and GA.eq(dagger(near), near)
+    assert value(near, chsh(XA, ZA, XB, ZB)) == F(14, 5) and F(8) - F(14, 5) ** 2 == F(4, 25)
+    assert value(rab, XA) == F(0) and value(rab, ZA) == F(0)
+    # for this product instance every value with party D is 0: a trivial sample of the bound 4/25
     for d1, d2 in product(PTS, repeat=2):
-        CAD = chsh(XA, ZA, direction(d1, XD, ZD), direction(d2, XD, ZD))
-        assert value(near, CAD) ** 2 <= F(4, 25)
+        assert value(near, chsh(XA, ZA, direction(d1, XD, ZD), direction(d2, XD, ZD))) == F(0)
 
 
 # ------------------------------------------------------------------ (3)
 def check_commuting_directions_give_square_four_and_values_two():
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     # one party's directions commute (equal or opposite): C^2 = 4 whatever the other party does
     for b1, b2 in product(PTS, repeat=2):
         for sgn in (F(1), F(-1)):
@@ -180,8 +193,11 @@ def check_commuting_directions_give_square_four_and_values_two():
 
 
 # ------------------------------------------------------------------ (4)
+AMPS = ((F(3, 5), F(4, 5)), (F(20, 29), F(21, 29)), (F(5, 13), F(12, 13)), (F(1), F(0)), (F(0), F(1)))
+
+
 def check_pair_state_value_and_what_it_leaves_a_third_party():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     c, s = F(3, 5), F(4, 5)
     r = c * c - s * s
     v = [GA.scal(F(1, 2), GA.add(E[k], FF[k])) for k in range(M3)]
@@ -193,6 +209,12 @@ def check_pair_state_value_and_what_it_leaves_a_third_party():
     T = [[value(pair, mul(a, b)) for b in (XB, ZB)] for a in (XA, ZA)]
     assert T == [[F(24, 25), F(0)], [F(0), F(1)]]
     # each correlation is alpha + beta r + gamma cs; three weight pairs with independent (1, r, cs) fix the form
+    # the pair state is idempotent and self-adjoint at five rational points of the conic r^2 + 4 (cs)^2 = 1
+    for cc, ss in AMPS:
+        st = GA.add(GA.scal(F(1, 4), mul(GA.add(ONE, mul(PAR[0], PAR[1])), GA.add(ONE, GA.scal(cc * cc - ss * ss, PAR[0])))),
+                    GA.scal(cc * ss, GA.add(mul(w[0], w[1]), mul(v[1], v[0]))))
+        assert GA.eq(mul(st, st), st) and GA.eq(dagger(st), st) and s0(st) == F(1, 4)
+    assert len({(cc * cc - ss * ss, cc * ss) for cc, ss in AMPS}) == 5
     rows = []
     for cc, ss in ((F(3, 5), F(4, 5)), (F(20, 29), F(21, 29)), (F(5, 13), F(12, 13))):
         st = GA.add(GA.scal(F(1, 4), mul(GA.add(ONE, mul(PAR[0], PAR[1])), GA.add(ONE, GA.scal(cc * cc - ss * ss, PAR[0])))),

@@ -7,7 +7,7 @@ mode 2); C the CHSH element, K = e_1 f_2, I = B1 B2, Cq = C I the quarter-turned
 (1) Cq is the CHSH element of (A2, -A1, B1, B2); C and Cq anticommute and have the same square 4(1 + K); the
     corner of the sector K = 1 is spanned by four independent elements; sample states have values in the disc.
 (2) The states rho_u = (1 + uI) rho_0 (1 + uI)^dagger / (1 + u^2): pure, in the sector, with values
-    (2(c - s), -2(c + s)) on the circle X^2 + Y^2 = 8, equal to the values of rho_0 on directions turned by the
+    (2(c_u - s_u), -2(c_u + s_u)) on the circle X^2 + Y^2 = 8, equal to the values of rho_0 on directions turned by the
     rational rotor R_u; rho_u = (1 + K)/4 + (X C + Y Cq)/16; parity.
 (3) The denominator law 8 Q^2 - P^2 >= 4 for all fractions with Q up to a bound, equality exactly on the Pell
     sequence, the recursion, the records and the rational bracket of the distance to the bound.
@@ -77,6 +77,7 @@ def rho_of(u):
 
 
 def circle_point(u):
+    # the rotor components (c_u, s_u)
     u = F(u)
     return (1 - u * u) / (1 + u * u), 2 * u / (1 + u * u)
 
@@ -98,7 +99,7 @@ US = [F(0), F(-1, 2), F(-2, 5), F(-5, 12), F(1, 3), F(1), F(7, 4), F(-3), F(2, 9
 
 # ------------------------------------------------------------------ (1)
 def check_quarter_turned_chsh_elements_anticommute_and_values_lie_in_a_disc():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
     assert GA.eq(CQ, chsh(A2, GA.neg(A1), B1, B2))
     assert GA.eq(mul(IB, IB), GA.scal(F(-1), ONE)) and GA.eq(dagger(IB), GA.scal(F(-1), IB))
@@ -131,7 +132,7 @@ def check_quarter_turned_chsh_elements_anticommute_and_values_lie_in_a_disc():
 # ------------------------------------------------------------------ (2)
 def check_pure_states_of_the_sector_are_rational_points_of_the_circle_of_square_radius_eight():
     premise("synthesis.the-sign-is-the-rotor-at-infinity")
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     premise("synthesis.division-gives-the-rationals")
     assert is_pure(RHO0) and GA.eq(mul(K, RHO0), RHO0) and GA.commutes(GAMMA, RHO0, SQ)
     assert (value(RHO0, C), value(RHO0, CQ)) == (F(2), F(-2))
@@ -186,6 +187,7 @@ def pell_pairs(limit):
 
 def check_denominator_law_and_the_pell_records():
     premise("synthesis.division-gives-the-rationals")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     equal = []
     for q in range(1, QMAX + 1):
         top = isqrt(8 * q * q)
@@ -200,6 +202,19 @@ def check_denominator_law_and_the_pell_records():
                 assert gap >= 7
             if p % 4 == 0:
                 assert gap >= 8
+    # values of pure states of the sector: fractions P/Q in lowest terms with 8 Q^2 - P^2 a perfect square;
+    # their running maxima by increasing denominator are the Pell values in this range (computed)
+    best, running = F(0), []
+    for q in range(1, QMAX + 1):
+        for p in range(isqrt(8 * q * q), 0, -1):
+            if gcd(p, q) == 1 and isqrt(8 * q * q - p * p) ** 2 == 8 * q * q - p * p:
+                if F(p, q) > best:
+                    best = F(p, q)
+                    running.append((p, q))
+                break
+    assert running == [(2, 1), (14, 5), (82, 29), (478, 169)]
+    # the Pell values are not the running maxima of all state values: 280/99 exceeds 82/29 below denominator 169
+    assert F(82, 29) < F(280, 99) and F(280, 99) ** 2 < F(8) and F(8) * F(35, 99) ** 2 <= F(1)
     pairs = pell_pairs(QMAX)
     assert pairs == [(1, 1), (7, 5), (41, 29), (239, 169)]
     assert equal == [(2 * x, q) for x, q in pairs]

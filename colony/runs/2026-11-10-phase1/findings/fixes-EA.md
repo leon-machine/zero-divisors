@@ -53,4 +53,54 @@ Also changed: the positivity proof of (iv) corrected in transcription to y = Pi 
 form); clause (viii) no longer cites the mode-split theorem for the reduction (it only states the two projections).
 NOT done / to watch at the gate: the mutation test (W413) on the three new check functions has not been run by me.
 
+# fixes-EA, step 2: the rationals and three-party proposals (after the base was stored at version 1)
+Both fixed in place in proposals/<id>/; pre-fix copies in work/EA/aside/*-before-fixround.*. Only runcheck was run:
+rationals 3 of 3 PASS, three-party 4 of 4 PASS. Both now cite the base @1 (uses edge + claimref) and state (P)
+verbatim as in the base at formal level, "Under (P)" in the one-liner, one sentence in technical and lay; the C2
+sentence is in both formal levels; the mode-split edge is removed from both.
+
+## synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records
+Title: "CHSH over the rationals at fixed settings: a circle of pure states and a Pell sequence".
+1 ("records"): APPLIED. The word is dropped. Clause (v) is headed "the values that meet the denominator law with
+  equality, a Pell sequence"; it says the S_n are NOT the running maxima of all state values (280/99 > 82/29 at
+  denominator 99 < 169, checked), and adds, labelled computed, that among pure-state values of the sector the running
+  maxima are exactly 2, 14/5, 82/29, 478/169 for denominators up to 400 (my check; the referee's range was 1200).
+  Lay sentence replaced by the referee's wording. Index of the sequence renamed n (k is the field in the base).
+2 (C4): APPLIED. Rotor components are (c_u, s_u) everywhere (formal and proof); S_n = 2(c_u - s_u) with s_u < 0 is
+  said once; rho_infinity is "the stored pair state with r = 0 and amplitude product -1/2", written out; the note
+  says the parity result's 2(z + x) is the same number for the mirror state.
+3 (C1): APPLIED, including the lay sentence (one arrangement of measurements; assumes (P)).
+4 (scope): APPLIED: "at fixed settings" in the title, "at these settings" in clauses (iv), (v), technical, one-liner.
+5 (not decided, in technical): APPLIED.
+6 (C2, C3, completion sentence): APPLIED. The configuration is cited from the base clauses (iv), (vii), (viii); no
+  twist edge is needed; the pair-state identity is an explicit identity of elements; "no step of the proof uses
+  real coefficients".
+7 (cite the base for the single bound; keep the disc): APPLIED. The preliminaries and the copy of the identity are
+  replaced by a citation; clause (i) keeps the disc.
+8 ("(reading)"): APPLIED.
+9: nothing to do.
+
+## synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two
+Title: "Three-party trade-off of CHSH values under positivity (P), and the values 2 and 4".
+1 (same settings): APPLIED in the formal preamble, clauses (ii) and (v), technical, lay and one-liner.
+2 (the 14/5 state): APPLIED. Written out as (4/5) y' rho_0 y'^dagger with rho_0 = (1/4)(1 + e1.e2p1)(1 - p1p2),
+  y' = 1 - (1/2) e2p1p2; said not to be the pair state of (v); "times any state of mode 3" replaced by "for every
+  state with value 14/5, for instance this one times (1 + p3)/2".
+3 (C4): APPLIED: "amplitudes" in clause (v); (x, z) for directions.
+4 (vacuous loop): APPLIED. The loop now asserts the values are exactly 0 and coverage.yaml calls it a trivial
+  sample and no evidence for the bound; a state entangled across all three parties is added with pinned values
+  (24/13, 30/17), sum of squares 318564/48841.
+5 (horizon remark): APPLIED. Labelled "Remark (horizon), not a result" in the note with its three supports (stored
+  pair-state reading, same settings, parity-odd elements) and "empty under parity superselection"; the technical
+  sentence carries the label.
+6 (Toner-Verstraete): APPLIED: cited as checked (quant-ph/0611001, Theorem 1, arbitrary dimension, same
+  measurements for A, tight on the circle; here only (2, 2) over Q).
+7 (clause (iii) wording; C^2 = 4 as a citation): APPLIED, citing base clauses (iii), (v), (vi). The single-pair
+  bound "taken alone" is dropped from clause (ii) and its proof.
+8 (C2, C3): APPLIED. tower.commuting-copies@5 pinned for the two twists, with the lines proved in place; the pair
+  state of (v) is written out and its idempotency proved by a degree argument (a polynomial of degree at most 2 in
+  (r, cs) vanishing at five points of the conic r^2 + 4(cs)^2 = 1), with the five points in the check.
+9: nothing to do.
+Not run by me: check4, validate_draft, the mutation test on the changed check functions.
+
 check4: pending (orchestrator)

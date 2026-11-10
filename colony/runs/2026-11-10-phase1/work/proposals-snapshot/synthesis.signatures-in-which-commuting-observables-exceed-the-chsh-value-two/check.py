@@ -4,12 +4,11 @@ Cl(p,q) on the blades of the generators (p of square +1 first, then q of square 
 The dagger is the linear extension of the inverse of a blade: reverse times the product of the squares.
 An observable is x with dagger(x) = x and x x = 1. C = A1 B1 + A1 B2 + A2 B1 - A2 B2 with [Ai, Bj] = 0.
 
-(1) the dagger, the positive form and the identity C^2 = 4 - [A1,A2][B1,B2] on observables that are not blades;
-(2) the fourteen excluded signatures: the self-adjoint blades are 1, a central J (odd cases) and an anticommuting
-    frame (times J), with independent pairwise products, which is all the proof of clause (ii) uses;
-(3) every other signature of four, five or six directions carries a configuration of blades with C^2 = 4 + 4K,
+(1) the fourteen excluded signatures: the self-adjoint blades are 1, a central J (odd cases) and an anticommuting
+    frame (times J), with independent pairwise products, which is all the proof of clause (i) uses;
+(2) every other signature of four, five or six directions carries a configuration of blades with C^2 = 4 + 4K,
     and the functionals <(1 + K)(1 + rC) x>_0 have value 8r on C and 8 on C^2;
-(4) the excluded list is the list of matrix size at most two in the stored classification.
+(3) the excluded list is the list of matrix size at most two in the stored classification.
 """
 from fractions import Fraction as F
 from itertools import combinations
@@ -65,39 +64,8 @@ def is_central(b, sq):
     return all(GA.commutes(bl(b), GA.gen(i), sq) for i in range(len(sq)))
 
 
-def check_dagger_is_blade_inverse_and_the_chsh_square_identity():
-    premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
-    premise("synthesis.blade-square-signs-f2-quadratic-form")
-    for sq in (GA.sig(3, 1), GA.sig(2, 2), GA.sig(4, 0), GA.sig(1, 3)):
-        n = len(sq)
-        for k in range(n + 1):
-            for b in combinations(range(n), k):
-                assert prod(sq, bl(b), dagger(bl(b), sq)) == ONE
-    sq = GA.sig(3, 1)
-    x = GA.add(GA.scal(F(2), bl((0,))), GA.scal(F(-3), bl((1, 3))), GA.scal(F(5), bl((0, 1, 2, 3))), GA.sc(F(7)))
-    assert s0(prod(sq, x, dagger(x, sq))) == 4 + 9 + 25 + 49
-    y = GA.add(bl((2,)), GA.scal(F(4), bl((0, 3))))
-    assert dagger(prod(sq, x, y), sq) == prod(sq, dagger(y, sq), dagger(x, sq))
-    # observables that are not blades, in Cl(3,1): A in the plane of e0, e1; B in the plane of the commuting pair
-    a1 = GA.add(GA.scal(F(3, 5), bl((0,))), GA.scal(F(4, 5), bl((1,))))
-    a2 = GA.add(GA.scal(F(5, 13), bl((0,))), GA.scal(F(-12, 13), bl((1,))))
-    b1 = GA.add(GA.scal(F(8, 17), bl((2, 3))), GA.scal(F(15, 17), bl((0, 1, 3))))
-    b2 = GA.add(GA.scal(F(20, 29), bl((2, 3))), GA.scal(F(21, 29), bl((0, 1, 3))))
-    for o in (a1, a2, b1, b2):
-        assert dagger(o, sq) == o and prod(sq, o, o) == ONE
-    for a in (a1, a2):
-        for b in (b1, b2):
-            assert GA.commutes(a, b, sq)
-    c = chsh(sq, a1, a2, b1, b2)
-    assert dagger(c, sq) == c
-    rhs = GA.sub(GA.sc(F(4)), prod(sq, comm(a1, a2, sq), comm(b1, b2, sq)))
-    assert prod(sq, c, c) == rhs
-    assert not GA.is_zero(prod(sq, comm(a1, a2, sq), comm(b1, b2, sq)))
-    return True
-
-
 def frame_data(p, q):
-    """(has central J, frame size) and the frame test used by the proof of clause (ii)."""
+    """(has central J, frame size) and the frame test used by the proof of clause (i)."""
     sq = GA.sig(p, q)
     herm = self_adjoint_blades(sq)
     for b in herm:
@@ -164,6 +132,7 @@ def check_excluded_signatures_have_only_an_anticommuting_frame_of_observables():
 
 
 def check_remaining_signatures_carry_blades_with_chsh_square_four_plus_four_k():
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
     premise("synthesis.blade-square-signs-f2-quadratic-form")
     table = {
@@ -198,21 +167,10 @@ def check_remaining_signatures_carry_blades_with_chsh_square_four_plus_four_k():
         c2 = prod(sq, c, c)
         assert c2 == GA.add(GA.sc(F(4)), GA.scal(F(4), k)), (p, q)
         assert prod(sq, c2, c) == GA.scal(F(8), c)
-        for r in (F(1, 3), F(-7, 20), F(239, 676)):
-            assert 8 * r * r <= 1
-            rho = prod(sq, GA.add(ONE, k), GA.add(ONE, GA.scal(r, c)))
-            assert dagger(rho, sq) == rho
-            assert s0(rho) == 1 and s0(prod(sq, rho, c)) == 8 * r and s0(prod(sq, rho, c2)) == 8
-            assert (8 * r) ** 2 < 8
-            for t in (F(1, 2), F(-3, 4), F(5, 2)):
-                x = GA.add(GA.add(ONE, k), GA.scal(t, c), a1)
-                assert s0(prod(sq, rho, x, dagger(x, sq))) >= 0
-        # outside 8 r^2 <= 1 the functional is not positive
-        r = F(3, 8)
-        assert 8 * r * r > 1
+        # one value of the stored functionals, as a consistency test of the citation
+        r = F(1, 3)
         rho = prod(sq, GA.add(ONE, k), GA.add(ONE, GA.scal(r, c)))
-        x = GA.sub(GA.scal(F(3), ONE), c)
-        assert s0(prod(sq, rho, x, dagger(x, sq))) == 9 - 18 + 8
+        assert s0(rho) == 1 and s0(prod(sq, rho, c)) == 8 * r and s0(prod(sq, rho, c2)) == 8
     return True
 
 

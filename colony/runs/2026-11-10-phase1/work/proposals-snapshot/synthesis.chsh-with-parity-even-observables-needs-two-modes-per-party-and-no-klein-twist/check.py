@@ -7,7 +7,7 @@ An observable is self-adjoint of square one; it is even if it commutes with Gamm
 (1) even elements of disjoint mode sets commute with no twist, the twist does nothing to them, and the even
     observables of one mode are 1 and p only, so a one-mode party gives C^2 = 4;
 (2) two modes per party: even observables with C^2 = 4 + 4K and even states with values 8r;
-(3) one mode per party with the Klein twist: values 2(c + s) on the even pair state, but through observables
+(3) one mode per party with the Klein twist: value 2(z + x) on the equal-weight pair state, but through observables
     that anticommute with the parity and are erased by the parity average; without the twist the odd
     observables anticommute and their product has value 0 in every state.
 """
@@ -68,7 +68,7 @@ def parity_average(x, gam, sq):
 
 
 def check_even_observables_commute_without_twist_and_one_mode_has_only_the_parity():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("tower.commuting-copies")
     premise("singularity.descent-parity-average")
     sq, e, f, p, gam = modes(3)
     # party A = mode 0, party B = modes 1, 2
@@ -104,7 +104,7 @@ def check_even_observables_commute_without_twist_and_one_mode_has_only_the_parit
 
 
 def check_two_modes_per_party_reach_square_eight_with_even_observables_and_even_states():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     sq, e, f, p, gam = modes(4)
     a1, a2 = p[0], prod(sq, e[0], f[1])
     b1, b2 = p[2], prod(sq, e[2], f[3])
@@ -128,7 +128,8 @@ def check_two_modes_per_party_reach_square_eight_with_even_observables_and_even_
 
 
 def check_twisted_one_mode_split_exceeds_two_only_through_odd_observables():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
+    premise("tower.commuting-copies")
     premise("singularity.descent-parity-average")
     sq, e, f, p, gam = modes(2)
     tw = prod(sq, e[1], p[0])
@@ -147,20 +148,30 @@ def check_twisted_one_mode_split_exceeds_two_only_through_odd_observables():
     rho = GA.add(GA.scal(F(1, 4), GA.add(ONE, prod(sq, p[0], p[1]))),
                  GA.scal(F(1, 2), GA.add(prod(sq, w[0], w[1]), prod(sq, v[1], v[0]))))
     assert dagger(rho, sq) == rho and prod(sq, rho, rho) == rho and GA.commutes(rho, gam, sq)
+    assert rho == GA.scal(F(1, 4), GA.add(ONE, prod(sq, p[0], p[1]), GA.neg(prod(sq, e[0], f[1])), GA.neg(prod(sq, f[0], e[1]))))
     val = lambda x: 4 * s0(prod(sq, rho, x))
     assert val(ONE) == 1
     assert [val(prod(sq, a, b)) for a in (p[0], e[0]) for b in (p[1], tw)] == [1, 0, 0, 1]
-    for (cc, ss, expect) in ((F(3, 5), F(4, 5), F(14, 5)), (F(20, 29), F(21, 29), F(82, 29)),
-                             (F(119, 169), F(120, 169), F(478, 169))):
-        assert cc * cc + ss * ss == 1
-        bp = GA.add(GA.scal(cc, p[1]), GA.scal(ss, tw))
-        bm = GA.sub(GA.scal(cc, p[1]), GA.scal(ss, tw))
-        assert is_obs(bp, sq) and is_obs(bm, sq)
-        c = chsh(sq, p[0], e[0], bp, bm)
-        assert val(c) == expect == 2 * (cc + ss) and 4 < expect * expect < 8
-        # after the parity average of the observables the square of the CHSH element is 4
-        ca = chsh(sq, p[0], parity_average(e[0], gam, sq), parity_average(bp, gam, sq), parity_average(bm, gam, sq))
-        assert val(ca) == 2 * cc and val(ca) <= 2
+    xx, zz, expect = F(4, 5), F(3, 5), F(14, 5)
+    assert xx * xx + zz * zz == 1
+    bp = GA.add(GA.scal(zz, p[1]), GA.scal(xx, tw))
+    bm = GA.sub(GA.scal(zz, p[1]), GA.scal(xx, tw))
+    assert is_obs(bp, sq) and is_obs(bm, sq)
+    c = chsh(sq, p[0], e[0], bp, bm)
+    assert val(c) == expect == 2 * (zz + xx) and 4 < expect * expect < 8
+    # after the parity average of the observables the value is 2 z
+    ca = chsh(sq, p[0], parity_average(e[0], gam, sq), parity_average(bp, gam, sq), parity_average(bm, gam, sq))
+    assert ca == GA.scal(2 * zz, prod(sq, p[0], p[1])) and val(ca) == 2 * zz <= 2
+    # the pair state with amplitudes (c, s) = (3/5, 4/5): value 2 (z + 2 c s x), at most 2 sqrt(1 + 4 c^2 s^2)
+    ca_, sa_ = F(3, 5), F(4, 5)
+    rr = ca_ * ca_ - sa_ * sa_
+    rho2 = GA.add(GA.scal(F(1, 4), prod(sq, GA.add(ONE, prod(sq, p[0], p[1])), GA.add(ONE, GA.scal(rr, p[0])))),
+                  GA.scal(ca_ * sa_, GA.add(prod(sq, w[0], w[1]), prod(sq, v[1], v[0]))))
+    assert dagger(rho2, sq) == rho2 and prod(sq, rho2, rho2) == rho2 and 4 * s0(rho2) == 1
+    val2 = lambda x: 4 * s0(prod(sq, rho2, x))
+    assert val2(prod(sq, e[0], tw)) == 2 * ca_ * sa_ == F(24, 25) and val2(prod(sq, p[0], p[1])) == 1
+    assert val2(c) == 2 * (zz + 2 * ca_ * sa_ * xx) == F(342, 125)
+    assert val2(c) ** 2 <= 4 * (1 + 4 * ca_ * ca_ * sa_ * sa_)
     # without the twist: e_1 and e_2 anticommute, their product is anti-self-adjoint, and has value 0 in a state
     g = prod(sq, e[0], e[1])
     assert GA.anticommutes(e[0], e[1], sq) and dagger(g, sq) == GA.neg(g) and val(g) == 0

@@ -1,9 +1,5 @@
 functions:
   check_box_functional_has_value_four_and_fails_positivity_only_across_settings:
-    kind: complete
-    clauses: ["(i)", "(ii)"]
-    omits: "nothing of clause (i): the functional, its values on the observables and their products, all sixteen joint probabilities with the marginals, and the value on (C - t)^2 for t = 0..8; for clause (ii) the two positivity conditions are evaluated on the box functional and on three states, and the implication itself is the proof's two lines"
-  check_square_eight_on_a_state_with_nonzero_anticommutator:
     kind: partial
-    clauses: ["(iii)"]
-    omits: "the stated three-mode configuration, its anticommutator, the square of the CHSH element, the projector and the values of the functional at two rational r; positivity of the functional for all elements is the proof's"
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "complete for the values of the functional, all sixteen joint probabilities with the marginals, the value on (C - t)^2 for t = 0..8, the element A1(B1+B2) - 2 and the inertia of the form on the sixteen blades; non-negativity inside a setting pair is sampled on one element per pair and is otherwise the proof's; for clause (iii) the two conditions are evaluated on the box functional and on three states, and the implication is the proof's two lines"

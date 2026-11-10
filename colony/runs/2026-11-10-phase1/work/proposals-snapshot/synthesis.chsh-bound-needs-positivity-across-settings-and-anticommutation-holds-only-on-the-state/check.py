@@ -3,11 +3,12 @@
 Cl(l,l) of modes: e_k (square +1, index 2k), f_k (square -1, index 2k+1), p_k = f_k e_k. The dagger sends a blade
 to its inverse. Twisted one-mode configuration A1 = p_1, A2 = e_1, B1 = p_2, B2 = e_2 p_1 (integer blades).
 
-(1) the box functional <(1 + C) x>_0: value 4 on C, non-negative no-signalling probabilities at every setting
-    pair, and negative on (C - t)(C - t)^dagger; positivity on C - t and 1 - K alone gives the bound 8;
-(2) a configuration with C^2 = 8 on a block and A1 A2 + A2 A1 = 1 - p_3, not zero.
+The box functional <(1 + C) x>_0: value 4 on C, non-negative no-signalling probabilities at every setting pair,
+non-negative inside each setting pair, negative on (C - t)(C - t)^dagger and on (A1(B1+B2) - 2)^2, inertia
+(12, 4, 0); positivity on C - t and 1 - K suffices for the bound 8.
 """
 from fractions import Fraction as F
+from itertools import combinations
 
 import GA
 from tp_premise import premise
@@ -64,7 +65,8 @@ def is_obs(x, sq):
 
 def check_box_functional_has_value_four_and_fails_positivity_only_across_settings():
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("tower.commuting-copies")
+    premise("synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate")
     sq, e, f, p = modes(2)
     a = (p[0], e[0])
     b = (p[1], prod(sq, e[1], p[0]))
@@ -100,6 +102,20 @@ def check_box_functional_has_value_four_and_fails_positivity_only_across_setting
     assert vals == [4, -3, -8, -11, -12, -11, -8, -3, 4]
     y = GA.sub(ONE, k)
     assert lam(prod(sq, y, dagger(y, sq))) == 2
+    # an element using two setting pairs with a shared setting
+    h = prod(sq, a[0], GA.add(b[0], b[1]))
+    hm = GA.sub(h, GA.sc(F(2)))
+    assert dagger(h, sq) == h and prod(sq, h, h) == GA.sc(F(2)) and lam(prod(sq, hm, dagger(hm, sq))) == -2
+    # non-negative inside each setting pair: x = sum of x_ab E_ab
+    for i in range(2):
+        for j in range(2):
+            x = GA.add(GA.sc(F(3)), GA.scal(F(-5), a[i]), GA.scal(F(2), b[j]), GA.scal(F(7), prod(sq, a[i], b[j])))
+            assert lam(prod(sq, x, dagger(x, sq))) >= 0
+    # inertia of the form lam(x y^dagger) on the sixteen blades
+    blades = [bb for n in range(5) for bb in combinations(range(4), n)]
+    gram = [[lam(prod(sq, {s: F(1)}, dagger({t: F(1)}, sq))) for t in blades] for s in blades]
+    assert all(gram[i][j] == gram[j][i] for i in range(16) for j in range(16))
+    assert GA.congruence_signature(gram) == (12, 4, 0)
     # the tracial state and a state with value above 2 satisfy both positivity conditions
     for r in (F(0), F(1, 3), F(239, 676)):
         rho = prod(sq, GA.add(ONE, k), GA.add(ONE, GA.scal(r, c)))
@@ -109,35 +125,4 @@ def check_box_functional_has_value_four_and_fails_positivity_only_across_setting
             x = GA.sub(c, GA.sc(t))
             assert phi(prod(sq, x, x)) == 8 - 16 * r * t + t * t >= 0
         assert phi(prod(sq, y, y)) == 0
-    return True
-
-
-def check_square_eight_on_a_state_with_nonzero_anticommutator():
-    premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
-    sq, e, f, p = modes(3)
-    plus = GA.scal(F(1, 2), GA.add(ONE, p[2]))
-    minus = GA.scal(F(1, 2), GA.sub(ONE, p[2]))
-    a1 = p[0]
-    a2 = GA.add(prod(sq, e[0], plus), prod(sq, p[0], minus))
-    b1, b2 = p[1], prod(sq, e[1], p[0])
-    for o in (a1, a2, b1, b2):
-        assert is_obs(o, sq)
-    for a in (a1, a2):
-        for b in (b1, b2):
-            assert GA.commutes(a, b, sq)
-    assert acomm(a1, a2, sq) == GA.sub(ONE, p[2]) == GA.scal(F(2), minus)
-    assert not GA.is_zero(acomm(a1, a2, sq)) and GA.anticommutes(b1, b2, sq)
-    c = chsh(sq, a1, a2, b1, b2)
-    k = GA.neg(prod(sq, p[0], e[0], b1, b2))
-    c2 = prod(sq, c, c)
-    assert c2 == GA.add(GA.sc(F(4)), GA.scal(F(4), prod(sq, k, plus)))
-    proj = prod(sq, GA.add(ONE, k), GA.add(ONE, p[2]))
-    assert prod(sq, proj, proj) == GA.scal(F(4), proj) and prod(sq, proj, c2) == GA.scal(F(8), proj)
-    for r in (F(1, 3), F(239, 676)):
-        rho = prod(sq, proj, GA.add(ONE, GA.scal(r, c)))
-        phi = lambda z: s0(prod(sq, rho, z))
-        assert dagger(rho, sq) == rho and phi(ONE) == 1 and phi(c2) == 8 and phi(c) == 8 * r
-        ac = acomm(a1, a2, sq)
-        assert phi(prod(sq, ac, ac)) == 0
     return True
