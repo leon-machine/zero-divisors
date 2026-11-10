@@ -10,7 +10,7 @@ functions:
   check_twist_averages_reach_the_continuum_values:
     kind: sampled
     clauses: ["(iv): M-point twist averages of the entropy at r = 1 for M = 1, 2, 4, 8", "(iv): energy and variance averages at M = 8", "(iii), (iv): sum of B_2 over the twists is B_2(1/2)/M; integral of B_2 is 0"]
-    omits: "the averages are computed as S_{1/2}(M)/M; the integral identity (Tonelli) and the values pi r/6, pi r/12 of the density integrals are the proof's (dual form from the imported Fact and a Riemann-sum bound); the B_2 identity is exact for M = 1, 2, 3, 4, 8"
+    omits: "the averages are computed as S_{1/2}(M)/M; the integral identity (Tonelli) and the values pi r/6, pi r/12 of the density integrals are the proof's (dual form from the imported Fact and a Riemann-sum bound); the B_2 identity is exact for M = 1, 2, 3, 4, 8 at twist 1/2 and at three other (M, twist) pairs"
   check_entropy_across_the_twist_circle:
     kind: exact
     clauses: ["(v)"]

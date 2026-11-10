@@ -13,7 +13,7 @@ functions:
     omits: "interval values; the sign for every r > 0 and the remainder bound for every r >= 1 are the proof's; the Riemann-sum identification of the limit with the density integral is not checked"
   check_energy_variance_against_the_continuum:
     kind: sampled
-    clauses: ["(iv): v(1) in (0.79821, 0.79822), v(1) - pi/6 in (0.2746, 0.2747)", "(iv): dual form at r = 1, 2", "(iv): v(2) - pi/3 in (0.1000, 0.1002)"]
+    clauses: ["(iv): v(1) in (0.79821, 0.79822), v(1) - pi/6 in (0.2746, 0.2747)", "(iv): dual form at r = 1, 2", "(iv): v(2) - pi/3 in (0.1000, 0.1002)", "(iv): v(1/2) - pi/12 < 0 < v(5/8) - 5 pi/48"]
     omits: "interval values; positivity of the dual terms for every r >= 1 is the proof's; the closed form pi^4/(24 Gamma(3/4)^8) is not checked and not claimed"
   check_residue_if_the_continuum_value_were_counted:
     kind: exact

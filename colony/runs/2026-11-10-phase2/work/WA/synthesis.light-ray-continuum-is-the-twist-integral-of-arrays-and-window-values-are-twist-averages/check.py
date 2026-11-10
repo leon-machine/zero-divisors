@@ -118,6 +118,7 @@ def inside(a, lo, hi):
 def half(d, r):
     """Intervals of (sum lg, sum en, sum var) over the modes x = 2 pi (k + d)/r, k >= 0, d > 0."""
     d, r = F(d), F(r)
+    assert r <= 8        # the tail constant below needs mode spacing 2 pi/r above ln 2
     key = (d, r)
     if key not in _C:
         tot = [[F(0), F(0)], [F(0), F(0)], [F(0), F(0)]]
@@ -185,7 +186,7 @@ def check_frequencies_split_into_twisted_ladders():
     J3 = GA.mul(J2, J, SQ)
     ok = ok and GA.eq(J2, GA.sc(-1)) and GA.eq(J3, GA.neg(J)) and GA.eq(GA.mul(J3, J3, SQ), GA.sc(-1))
     ok = ok and GA.eq(GA.mul(J2, J2, SQ), GA.sc(1)) and not GA.eq(J, GA.sc(-1))
-    GA.check("(i) frequencies split uniquely as k + delta; antiperiodic ladder of M r periods = M twisted "
+    GA.check("(i), (iii) frequencies split uniquely as k + delta; antiperiodic ladder of M r periods = M twisted "
              "ladders of r periods (M = 1, 2, 3, 5); one-window flow J^j on twist j/4", ok)
     return ok
 
@@ -203,7 +204,7 @@ def check_long_window_is_a_product_of_twisted_arrays():
     ok = ok and same(mid[0], iscale(F(1, 2), ln2_bounds()))
     ok = ok and inside(quarter[0], F(51375, 10 ** 5), F(51376, 10 ** 5))
     ok = ok and inside(sixth[0], F(6114, 10 ** 4), F(6115, 10 ** 4))
-    GA.check("(ii) S, e and v of the antiperiodic array on 2 (3) periods are the sums over the twists "
+    GA.check("(iii) S, e and v of the antiperiodic array on 2 (3) periods are the sums over the twists "
              "1/4, 3/4 (1/6, 1/2, 5/6) on one period, within 10^-30; S_{1/4}(1) = 0.51375...", ok)
     return ok
 
@@ -229,8 +230,10 @@ def check_twist_averages_reach_the_continuum_values():
     # sum_j B_2((2 j + 1)/(2 M)) = B_2(1/2)/M, and the integral of B_2 over the twist is 0
     for M in (1, 2, 3, 4, 8):
         ok = ok and sum(bern2(F(2 * j + 1, 2 * M)) for j in range(M)) == bern2(F(1, 2)) / M
+    for M, dlt in ((2, F(1, 3)), (3, F(1, 4)), (5, F(2, 7))):
+        ok = ok and sum(bern2((j + dlt) / M) for j in range(M)) == bern2(dlt) / M
     ok = ok and bern2(F(1, 2)) == F(-1, 12) and F(1, 3) - F(1, 2) + F(1, 6) == 0
-    GA.check("(iii) M-point twist averages of the entropy at r = 1 are pi/6 - 0.177, - 0.0098, - 2.0e-5, "
+    GA.check("(iv) M-point twist averages of the entropy at r = 1 are pi/6 - 0.177, - 0.0098, - 2.0e-5, "
              "- 7.3e-11 (M = 1, 2, 4, 8); sea: sum of B_2 over the twists is B_2(1/2)/M, integral 0", ok)
     return ok
 
@@ -238,6 +241,7 @@ def check_twist_averages_reach_the_continuum_values():
 def check_entropy_across_the_twist_circle():
     premise("synthesis.half-integer-weight-array-carries-half-ln2")
     premise("synthesis.residue-from-mode-entropy")
+    premise("synthesis.q-splits-maximum-entropy-affine-weights")
     p6 = pi_times(F(1, 6))
     s0, s24, s25, s50 = (twisted(d, 1)[0] for d in (0, F(6, 25), F(1, 4), F(1, 2)))
     ok = inside(s0, F(72039, 10 ** 5), F(72040, 10 ** 5))
@@ -246,5 +250,5 @@ def check_entropy_across_the_twist_circle():
     ok = ok and inside(isub(s24, p6), F(18, 10 ** 4), F(19, 10 ** 4))
     ok = ok and inside(isub(s0, p6), F(1967, 10 ** 4), F(1968, 10 ** 4))
     ok = ok and inside(isub(s50, p6), F(-1771, 10 ** 4), F(-1770, 10 ** 4))
-    GA.check("(iv) at r = 1: S_{1/2} = 0.3466 < S_{1/4} = 0.5138 < pi/6 = 0.5236 < S_{6/25} < S_0 = 0.7204", ok)
+    GA.check("(v) at r = 1: S_{1/2} = 0.3466 < S_{1/4} = 0.5138 < pi/6 = 0.5236 < S_{6/25} < S_0 = 0.7204", ok)
     return ok

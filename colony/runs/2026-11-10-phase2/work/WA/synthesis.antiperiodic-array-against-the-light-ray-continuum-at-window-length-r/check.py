@@ -97,6 +97,7 @@ def mode(m):
 def array(r):
     """Intervals of (sum lg, sum en, sum var) over the modes x = 2 pi (k + 1/2)/r, k >= 0 (half the array)."""
     r = F(r)
+    assert r <= 8        # the tail constant below needs mode spacing 2 pi/r above ln 2
     if r not in _C:
         tot = [[F(0), F(0)], [F(0), F(0)], [F(0), F(0)]]
         k = 0
@@ -250,6 +251,7 @@ def check_entropy_difference_as_a_function_of_window_length():
 
 def check_energy_variance_against_the_continuum():
     premise("synthesis.counted-unit-energy-at-half-offset")
+    premise("synthesis.q-splits-maximum-entropy-affine-weights")
     v1 = iscale(2, array(1)[2])
     ok = inside(v1, F(79821, 10 ** 5), F(79822, 10 ** 5))
     ok = ok and inside(isub(v1, pi_times(F(1, 6))), F(2746, 10 ** 4), F(2747, 10 ** 4))
@@ -259,6 +261,10 @@ def check_energy_variance_against_the_continuum():
         dual = iadd(pi_times(F(r, 6)), iscale(2, isub(a[2], iscale(2, a[1]))))
         ok = ok and same(iscale(2, array(r)[2]), dual)
     ok = ok and inside(isub(iscale(2, array(2)[2]), pi_times(F(2, 6))), F(1000, 10 ** 4), F(1002, 10 ** 4))
+    # short windows: the difference is negative at r = 1/2 and positive at r = 5/8, so it vanishes between
+    vh = isub(iscale(2, array(F(1, 2))[2]), pi_times(F(1, 12)))
+    v58 = isub(iscale(2, array(F(5, 8))[2]), pi_times(F(5, 48)))
+    ok = ok and inside(vh, F(-1150, 10 ** 4), F(-1148, 10 ** 4)) and v58[0] > 0
     GA.check("(iv) beta^2 Var(E) per array at r = 1 in (0.79821, 0.79822), 0.2746 above pi/6; "
              "dual form at r = 1, 2; 0.100 above pi/3 at r = 2", ok)
     return ok
@@ -267,6 +273,7 @@ def check_energy_variance_against_the_continuum():
 def check_residue_if_the_continuum_value_were_counted():
     premise("synthesis.residue-from-mode-entropy")
     premise("synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping")
+    premise("synthesis.de-sitter-mode-count")
     pl, pu = pi_bounds()
     l2 = ln2_bounds()
     # residue = 1/(4 <s>) per counted unit; a unit of two arrays carries ln 2, of two components pi/3
