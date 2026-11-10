@@ -31663,6 +31663,65 @@
 }
 ]
 },
+"synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
+"failed": false,
+"findings": [],
+"key": "282d64045d8e0714",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_self_duality_of_the_partition_function",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.half-integer-weight-array-carries-half-ln2",
+"synthesis.imported-theta-function-identities"
+]
+},
+{
+"derivation": null,
+"func": "check_energy_matches_only_at_the_fixed_point",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.counted-unit-energy-at-half-offset",
+"synthesis.null-ordering-of-counted-units-is-zeta-symmetric"
+]
+},
+{
+"derivation": null,
+"func": "check_entropy_difference_as_a_function_of_window_length",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.boundary-mode-thermal-entropy",
+"synthesis.half-integer-weight-array-carries-half-ln2"
+]
+},
+{
+"derivation": null,
+"func": "check_energy_variance_against_the_continuum",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.counted-unit-energy-at-half-offset",
+"synthesis.q-splits-maximum-entropy-affine-weights"
+]
+},
+{
+"derivation": null,
+"func": "check_residue_if_the_continuum_value_were_counted",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.de-sitter-mode-count",
+"synthesis.residue-from-mode-entropy",
+"synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping"
+]
+}
+]
+},
 "synthesis.array-ln2-is-zero-mode-doublet-one-tower": {
 "failed": false,
 "findings": [],
