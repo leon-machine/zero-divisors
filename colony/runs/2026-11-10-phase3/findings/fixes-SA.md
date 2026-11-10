@@ -50,3 +50,15 @@ The row citing the Kasner scalar-sector result (SB's proposal) is not added; it 
 
 ## Rebuttals
 None.
+
+## Step 2 (after acceptance of the Kasner scalar-sector result)
+- Added the row the referee asked for to clause (iv): the scalar sector at the isotropic point of the scalar disk,
+  (f, kappa, P) = (0, 0, 1/3), order 0 by clause (ii) of
+  synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation, local index in [2, 3]
+  for the comoving curvature perturbation by its clauses (iii), (iv), under its hypothesis of the stored adiabatic
+  vacuum with a normalisation independent of k. Quoted, not re-proved.
+- uses edge @1; claimref in formal and proof; premise() call and an assertion of the row in
+  check_ledger_of_kasner_rows_from_residue_weights; coverage.yaml clause added; technical level and the "Not
+  covered" sentence aligned (the conversion is no longer wholly uncovered: this row is the curvature perturbation
+  at that one point).
+- runcheck: 5 of 5 pass. check4 and validate: pending (orchestrator).

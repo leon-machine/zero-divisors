@@ -35065,6 +35065,43 @@
 }
 ]
 },
+"synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse": {
+"failed": false,
+"findings": [],
+"key": "b511847c73e868ca",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_invariant_local_terms_of_dimension_two_for_two_vector_slots",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products",
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion"
+]
+},
+{
+"derivation": null,
+"func": "check_divergence_of_the_field_strength_is_laplacian_minus_gradient_divergence_plus_ricci",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion"
+]
+},
+{
+"derivation": null,
+"func": "check_ward_identity_leaves_one_constant_times_the_divergence_of_the_field_strength",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+}
+]
+},
 "synthesis.cutoff-count-is-not-a-local-density-on-sds": {
 "failed": false,
 "findings": [],
@@ -46881,6 +46918,73 @@
 "touched": [
 "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
 "tower.commuting-copies"
+]
+}
+]
+},
+"synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
+"failed": false,
+"findings": [],
+"key": "6653c13313870d42",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_order_of_the_mode_equation_by_exact_frobenius_series",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-bessel-reduction-and-small-argument-hankel-forms",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_power_law_threshold_two_thirds_and_the_kasner_trace",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.imported-wands-duality-of-perturbation-spectra",
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_ledger_of_kasner_rows_from_residue_weights",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-datum-kasner-wall",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling",
+"synthesis.kasner-hidden-scale-coupled-scalars-stay-blue",
+"synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue",
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall",
+"synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation",
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point"
+]
+},
+{
+"derivation": null,
+"func": "check_de_sitter_row_in_the_same_equation",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.weight-polynomial-two-series",
+"synthesis.frozen-phase-spectrum-not-red",
+"synthesis.frozen-point-geometry-reads-descent-as-vacuum",
+"synthesis.imported-planck-2018-lcdm-parameters"
+]
+},
+{
+"derivation": null,
+"func": "check_dust_with_cosmological_constant_scaling_and_running",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-planck-2018-lcdm-parameters"
 ]
 }
 ]

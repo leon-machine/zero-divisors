@@ -1,0 +1,35 @@
+functions:
+  check_order_of_the_mode_equation_by_exact_frobenius_series:
+    kind: sampled
+    clauses:
+    - "(i) the Frobenius series of order nu = sqrt(f^2 + 4 kappa)/(2|1 - P|) solves (E) term by term, both branches, at eight rational (f, kappa, P) including P > 1 and the de Sitter values; a shifted order fails at the lowest term"
+    - "(i) red exactly when f^2 + 4 kappa > 9 (1 - P)^2 on the samples; conformal coupling at the isotropic point gives order 1/2"
+    omits: "the general reduction is the change of variables in the proof; the k-independent normalisation and the index 3 - 2 nu are the stored theorem's, not recomputed; seven terms of each series"
+  check_power_law_threshold_two_thirds_and_the_kasner_trace:
+    kind: sampled
+    clauses:
+    - "(ii) factorisation of D - 9 q^2 for d = 3, 4, 5 and the threshold p > 2/3 on a grid of 120 rational p in [-1, 4]; agreement with Wands' order and invariance under his map"
+    - "(ii) window centres 40351/60351 and 20351/351, the three-sigma ends on both branches, the fluid form 12 w/(1 + 3 w) and the centre -0.0029"
+    - "(iii) unit trace with equal exponents gives order 0 for d = 3, 4, 5; (vi) orders 0, 1/2, 3/2 of the stiff, radiation and dust stages"
+    omits: "the factorisation is a polynomial identity of degree two, fixed by the grid; the exit direction is in the proof"
+  check_ledger_of_kasner_rows_from_residue_weights:
+    kind: sampled
+    clauses:
+    - "(iv) exponents read as residue weights in Cl(1,4), unit trace and sum of squares on 21 points of the segment, vacuum ends only at p = 0 and 1/2"
+    - "(iv) hidden-scale rows never red, margin (1 + 3p)(5 - 9p); Kaluza-Klein potential red exactly for p > 5/11 with f^2 - 9 q^2 = (1 + 5p)(11p - 5); field strength index at least 1; at the vacuum end p = 1/2 the potential has index -1 and the field strength +1"
+    - "(iv) largest 4 nu^2 over the twelve stored couplings and three weights is 7; the fitted window of xi recomputed, no stored value inside"
+    - "(iv) scalar-sector row at the isotropic point: (f, kappa, P) = (0, 0, 1/3), unit trace, order 0, not red"
+    omits: "the margins are polynomial identities of degree two, fixed by the grid; the list of twelve couplings is the stored theorem's"
+  check_de_sitter_row_in_the_same_equation:
+    kind: sampled
+    clauses:
+    - "(v) with f = -3, P = 0, kappa = -m^2/H^2 and the dictionary, nu^2 = (w + 3/2)^2, at most 9/4 on 49 weights of [-3, 0] with equality at the ends only; index -2w"
+    - "(v) the measured index needs w = 351/20000 and m^2/H^2 = -21183201/400000000"
+    omits: "the reading of the Klein-Gordon equation in conformal time is in the proof"
+  check_dust_with_cosmological_constant_scaling_and_running:
+    kind: sampled
+    clauses:
+    - "(vi) the invariant monomials form the line spanned by (2, 1, -6); invariance of the Hubble rate and of k/a at two rational samples; the density ratio at exit is x/3"
+    - "(vi) alpha + 6 N = -36 x^2 (G'^2 - G'' G)/G^2 for three quadratic G at x = 10^-3, 10^-6, 10^-9; alpha/N tends to -6; a red tilt has positive running; 0.2106 at the measured index; control with G'(0) = 0 gives ratio -12"
+    omits: "that the spectrum is a function of x alone rests on the stated hypothesis on the state; differentiability of G is a hypothesis; G is sampled as a quadratic"
+untouched_premises: {}
