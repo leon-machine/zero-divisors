@@ -12,7 +12,11 @@ self-adjoint element of square one; a state is x -> <rho x>_0 / <rho>_0 with rho
     not, and C^2 = 4 + 4 (a1 ^ a2)(b1 ^ b2) e_1 f_2.
 (4) Over Q(sqrt 2) (pairs of rational elements): the idempotent P = (1 + K)/4 + sqrt 2 C/8, C P = 2 sqrt 2 P,
     P x P = 4 <P x>_0 P on all sixteen blades.
-(5) A square-one element that is not self-adjoint has value above 4 on a state.
+(5) A square-one element that is not self-adjoint has value above 4 on a state; it is a generator of a boosted frame.
+(6) Blade configurations in signatures (2,2) and (3,1): C^2 = 4 + 4K, K C = C, C^3 = 8C, and the functionals
+    <(1 + K)(1 + rC) .>_0 with values 8r, non-negative on samples for 8 r^2 <= 1 and negative somewhere at r = 3/8.
+(7) The functional <(1 + C) .>_0: normalised, real, value 4 on C, value t^2 - 8t + 4 on (C - t)^2.
+(8) Three modes: observables with anticommutator 1 - p_3 and states with value 8 on C^2.
 """
 from fractions import Fraction as F
 from functools import reduce
@@ -175,6 +179,10 @@ def check_scalar_part_is_positive_and_every_sample_state_obeys_the_bound():
             assert all(t >= 0 for t in parts)
             assert v2 == F(8) - F(1, 2) * sum(parts)
             assert v * v <= v2 <= F(8)
+            four = GA.scal(F(4), ONE)
+            wa = value(sq, rho, GA.sub(four, mul(sq, SA, SA)))
+            wb = value(sq, rho, GA.sub(four, mul(sq, SB, SB)))
+            assert (v2 - F(4)) ** 2 <= wa * wb
             worst = max(worst, v * v)
     # the largest squared value met on these samples, pinned
     assert worst == F(78400, 9801) and F(8) - worst == F(8, 9801)
@@ -182,7 +190,7 @@ def check_scalar_part_is_positive_and_every_sample_state_obeys_the_bound():
 
 # ------------------------------------------------------------------ (3)
 def check_klein_twisted_directions_commute_and_the_square_is_four_plus_four_wedges_k():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("tower.commuting-copies")
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
     premise("singularity.descent-parity-average")
     sq, e, f, par, E2 = two_mode_settings()
@@ -231,7 +239,7 @@ def r2_eq(x, y):
 
 
 def check_saturating_state_is_a_pure_state_over_the_field_with_root_two():
-    premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
+    premise("tower.commuting-copies")
     premise("synthesis.division-gives-the-rationals")
     sq, e, f, par, E2 = two_mode_settings()
     K = mul(sq, e[0], f[1])
@@ -276,6 +284,127 @@ def check_square_one_element_that_is_not_self_adjoint_exceeds_four():
     assert GA.eq(mul(sq, rho, rho), rho) and GA.eq(dagger(rho), rho)
     C = chsh(sq, A, A, par[1], par[1])
     assert value(sq, rho, C) == F(17, 4) and F(17, 4) > F(4)
+    # A is the first generator of a boosted orthonormal frame: its partner has square -1 and anticommutes with it;
+    # for the adjoint of that frame A is fixed, and the functional has value -9/4 on (1 - A)^2
+    Fb = lin(F(15, 8), e[0], F(17, 8), f[0])
+    assert GA.eq(mul(sq, Fb, Fb), GA.scal(F(-1), ONE)) and GA.anticommutes(A, Fb, sq)
+    assert GA.anticommutes(A, e[1], sq) and GA.anticommutes(Fb, f[1], sq)
+    oneA = GA.sub(ONE, A)
+    assert value(sq, rho, mul(sq, oneA, oneA)) == F(-9, 4)
     # the identity for the square still holds: C^2 = 4, so the value of C^2 is 4 while the value of C is 17/4
     assert GA.eq(mul(sq, C, C), GA.scal(F(4), ONE))
     assert value(sq, rho, C) ** 2 > value(sq, rho, mul(sq, C, C))
+
+
+# ------------------------------------------------------------------ (6)
+def sample_elements(sq, gens):
+    g = gens
+    out = [ONE, g[0], GA.add(ONE, g[1]), GA.add(g[0], mul(sq, g[1], g[2])),
+           GA.add(GA.scal(F(2), ONE), mul(sq, g[0], g[2]), GA.scal(F(-1, 3), g[3])),
+           GA.add(g[3], GA.scal(F(5, 2), mul(sq, g[0], g[1], g[2])), ONE),
+           GA.add(mul(sq, g[1], g[3]), GA.scal(F(3), mul(sq, g[0], g[3])), GA.scal(F(-2), g[2]))]
+    return out
+
+
+def blade_lemma_holds(sq, A1, A2, B1, B2, gens, dag):
+    """The relations of the blade lemma and the functionals of value 8r, on one blade configuration."""
+    ok = all(GA.eq(dag(x), x) and GA.eq(mul(sq, x, x), ONE) for x in (A1, A2, B1, B2))
+    ok = ok and GA.anticommutes(A1, A2, sq) and GA.anticommutes(B1, B2, sq)
+    ok = ok and all(GA.commutes(a, b, sq) for a in (A1, A2) for b in (B1, B2))
+    C = chsh(sq, A1, A2, B1, B2)
+    K = GA.neg(mul(sq, A1, A2, B1, B2))
+    ok = ok and len(K) == 1 and () not in K and GA.eq(dag(K), K) and GA.eq(mul(sq, K, K), ONE)
+    ok = ok and GA.eq(mul(sq, C, C), GA.add(GA.scal(F(4), ONE), GA.scal(F(4), K)))
+    ok = ok and GA.eq(mul(sq, K, C), C) and GA.eq(mul(sq, C, K), C) and GA.eq(mul(sq, C, C, C), GA.scal(F(8), C))
+    ok = ok and s0(C) == F(0) and s0(K) == F(0)
+    xs = sample_elements(sq, gens)
+    xs = xs + [GA.sub(C, GA.scal(F(3), ONE)), GA.add(C, GA.scal(F(3), ONE))]
+    values = []
+    for r in (F(0), F(1, 4), F(-7, 20), F(35, 99)):
+        rho = mul(sq, GA.add(ONE, K), GA.add(ONE, GA.scal(r, C)))
+        ok = ok and F(8) * r * r <= F(1) and GA.eq(dag(rho), rho) and s0(rho) == F(1)
+        ok = ok and s0(mul(sq, rho, C)) == F(8) * r and s0(mul(sq, rho, C, C)) == F(8)
+        ok = ok and all(s0(mul(sq, rho, x, dag(x))) >= 0 for x in xs)
+        values.append(s0(mul(sq, rho, C)))
+    # r = 3/8 has 8 r^2 = 9/8 > 1: negative on (C - 3)(C - 3)^dagger
+    bad = mul(sq, GA.add(ONE, K), GA.add(ONE, GA.scal(F(3, 8), C)))
+    y = GA.sub(C, GA.scal(F(3), ONE))
+    ok = ok and s0(mul(sq, bad, y, dag(y))) == F(-1)
+    return ok, values
+
+
+def check_blade_configurations_give_square_four_plus_four_k_and_states_of_value_eight_r():
+    premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
+    premise("synthesis.division-gives-the-rationals")
+    # signature (2,2), generators e_1, f_1, e_2, f_2: the twisted configuration
+    sq, e, f, par, E2 = two_mode_settings()
+    ok, values = blade_lemma_holds(sq, e[0], par[0], E2, par[1], [e[0], f[0], e[1], f[1]], dagger)
+    assert ok and values == [F(0), F(2), F(-14, 5), F(280, 99)]
+    # signature (3,1): A = (e_1, e_2), B = (e_3 e_4, e_1 e_2 e_4), e_4 of square -1; the adjoint negates e_4
+    sq31 = (1, -1, 1, 1)
+    g = [GA.gen(0), GA.gen(2), GA.gen(3), GA.gen(1)]
+    B1 = mul(sq31, g[2], g[3])
+    B2 = mul(sq31, g[0], g[1], g[3])
+    def dagger31(x):
+        r = GA.reverse(x)
+        return {b: (cf if sum(1 for i in b if sq31[i] == -1) % 2 == 0 else -cf) for b, cf in r.items()}
+
+    assert all(GA.eq(mul(sq31, dagger31({b: F(1)}), {b: F(1)}), ONE) for b in GA.all_blades(len(sq31)))
+    ok, values = blade_lemma_holds(sq31, g[0], g[1], B1, B2, g, dagger31)
+    assert ok and values == [F(0), F(2), F(-14, 5), F(280, 99)]
+
+
+# ------------------------------------------------------------------ (7)
+TS = (F(0), F(1), F(2), F(4), F(7), F(8), F(1, 2))
+
+
+def check_functional_violating_positivity_reaches_four():
+    premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
+    sq, e, f, par, E2 = two_mode_settings()
+    C = chsh(sq, e[0], par[0], E2, par[1])
+    lam_el = GA.add(ONE, C)
+    lam = lambda x: s0(mul(sq, lam_el, x))
+    assert lam(ONE) == F(1) and lam(C) == F(4) and GA.eq(dagger(lam_el), lam_el)
+    blades = [{b: F(1)} for b in GA.all_blades(2 * NMODES_TWO)]
+    assert all(lam(dagger(b)) == lam(b) for b in blades)
+    for t in TS:
+        y = GA.sub(C, GA.scal(t, ONE))
+        assert lam(mul(sq, y, dagger(y))) == t * t - F(8) * t + F(4)
+    y = GA.sub(C, ONE)
+    assert lam(mul(sq, y, dagger(y))) == F(-3)
+    # each product A_i B_j has value 1, 1, 1, -1: the four correlations are extremal
+    vals = [lam(mul(sq, a, b)) for a in (e[0], par[0]) for b in (E2, par[1])]
+    assert vals == [F(1), F(1), F(1), F(-1)]
+
+
+# ------------------------------------------------------------------ (8)
+def check_square_eight_on_a_state_with_nonzero_anticommutator():
+    premise("tower.commuting-copies")
+    premise("synthesis.division-gives-the-rationals")
+    sq, e, f, par = setup(NMODES_THREE)
+    Pp = GA.scal(F(1, 2), GA.add(ONE, par[2]))
+    Pm = GA.scal(F(1, 2), GA.sub(ONE, par[2]))
+    A1 = par[0]
+    A2 = GA.add(mul(sq, e[0], Pp), mul(sq, par[0], Pm))
+    B1, B2 = par[1], mul(sq, e[1], par[0])
+    assert all(is_observable(sq, x) for x in (A1, A2, B1, B2))
+    assert all(GA.commutes(a, b, sq) for a in (A1, A2) for b in (B1, B2))
+    SA = acomm(sq, A1, A2)
+    assert GA.eq(SA, GA.sub(ONE, par[2])) and not GA.is_zero(SA)
+    Kp = GA.neg(mul(sq, par[0], e[0], par[1], e[1], par[0]))
+    assert GA.eq(dagger(Kp), Kp) and GA.eq(mul(sq, Kp, Kp), ONE) and len(Kp) == 1
+    C = chsh(sq, A1, A2, B1, B2)
+    C2 = mul(sq, C, C)
+    assert GA.eq(C2, GA.add(GA.scal(F(4), ONE), GA.scal(F(4), mul(sq, Kp, Pp))))
+    assert certificate_holds(sq, A1, A2, B1, B2)
+    xs = sample_elements(sq, [e[0], f[0], e[1], f[2]]) + sample_elements(sq, [e[2], f[1], par[0], e[0]])
+    xs = xs + [GA.sub(C, GA.scal(F(3), ONE)), GA.add(A2, e[2])]
+    base = mul(sq, GA.add(ONE, Kp), GA.add(ONE, par[2]))
+    values = []
+    for r in (F(0), F(1, 4), F(-7, 20), F(35, 99)):
+        rho = mul(sq, base, GA.add(ONE, GA.scal(r, C)))
+        assert GA.eq(dagger(rho), rho) and s0(rho) == F(1) and F(8) * r * r <= F(1)
+        assert s0(mul(sq, rho, C2)) == F(8) and s0(mul(sq, rho, SA, SA)) == F(0)
+        assert all(s0(mul(sq, rho, x, dagger(x))) >= 0 for x in xs)
+        values.append(s0(mul(sq, rho, C)))
+    assert values == [F(0), F(2), F(-14, 5), F(280, 99)]
