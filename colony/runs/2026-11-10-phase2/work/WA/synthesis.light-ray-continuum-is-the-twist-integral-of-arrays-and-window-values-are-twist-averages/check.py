@@ -210,7 +210,7 @@ def check_long_window_is_a_product_of_twisted_arrays():
 
 
 def check_twist_averages_reach_the_continuum_values():
-    premise("synthesis.imported-theta-function-identities")
+    premise("synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r")
     premise("synthesis.null-ordering-of-counted-units-is-zeta-symmetric")
     pl, pu = pi_bounds()
     ok = True

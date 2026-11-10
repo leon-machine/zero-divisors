@@ -61,3 +61,21 @@ bounds, intermediate values by continuity, extremality not proved; Remark argued
   premise() call. The twist title is exactly 90 characters.
 - Maintainer note relayed from R3 (outside these proposals): the window reading's "What it is for (i)" and refutation
   condition (b) should carry "at spacing kappa" if the sibling free-spacing result is accepted.
+
+## Step 2 (twist-integral proposal; the base is stored at version 1)
+check4: pending (orchestrator). runcheck 4/4 pass.
+- uses: synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r@1 added;
+  synthesis.imported-theta-function-identities@2 removed (no longer used directly; it is reached through the base).
+  The check's premise() call in check_twist_averages_reach_the_continuum_values now touches the base.
+- (iv): the duplicated dual-form derivation is deleted from the proof; the entropy and variance density integrals are
+  cited from the base (iii), (iv); the energy integral is one Riemann-sum line from the base's (ii); the M-point values
+  are cited as Delta(M)/M of the base (iii). Heading, technical, lay, one-liner and note now say "given the stored
+  base comparison (which rests on the imported theta identities)". I did not take R3's alternative of dropping the
+  dependence by calling the Fermi integral elementary: that would need zeta(2), which is not stored.
+- The free-spacing proposal is named only in the extraction note as an intended citation (plain text).
+Final labels (twist): (i) proved, elementary (array is a fibre, not a Killing-invariant subsystem; non-invariant
+subalgebras carry the same occupations for any twist and select none); (ii) classical, boundary form computed;
+(iii) proved, elementary (product decomposition for every M, twist and r; the (Q) array = A(1/4, 1/2) x A(3/4, 1/2));
+(iv) averaging identity proved; values given the stored base (hence the imported theta identities), boost ordering;
+(v) certified bounds, intermediate values by continuity, extremality not proved; Remark argued; independence from
+(Q), (N+), the window reading argued at clause level.
