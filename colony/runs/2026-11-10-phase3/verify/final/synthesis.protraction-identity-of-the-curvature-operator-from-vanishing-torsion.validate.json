@@ -8,20 +8,6 @@
  "replaces_existing": false,
  "findings": [
   {
-   "code": "W215",
-   "severity": "warning",
-   "entity": "synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion",
-   "message": "proof main never cites premise(s) obj.synthesis.gtg-flat-spacetime-gauge-fields",
-   "fix": "name each with \\claimref where it is used (seed/CITE_PASS.md)"
-  },
-  {
-   "code": "W209",
-   "severity": "warning",
-   "entity": "synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion",
-   "message": "uses -> obj.synthesis.gtg-flat-spacetime-gauge-fields: an object belongs in 'about'",
-   "fix": ""
-  },
-  {
    "code": "I305",
    "severity": "info",
    "entity": "store",
