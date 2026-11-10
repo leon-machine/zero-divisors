@@ -48718,6 +48718,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.composition-cycles-counting-needs-addition": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal, proof and drafting",
+    null
+   ]
+  ],
+  "hash": "1634f06e91536c23",
+  "ledger": null,
+  "parts": {
+   "checks": "20c4160880368c2f",
+   "proofs": "6df19c6c1f4b4d42",
+   "rest": "d3b65c89b700e77b",
+   "statement": "6a79aed3f28bf7e5"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd": {
   "assumes": [],
   "credit": [
@@ -60455,6 +60480,31 @@
    "proofs": "7828e16f417ec224",
    "rest": "d3b65c89b700e77b",
    "statement": "8fa7793d674171f2"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.the-sign-is-the-rotor-at-infinity": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "proposal, proof and drafting",
+    null
+   ]
+  ],
+  "hash": "1561a6740c0ee43b",
+  "ledger": null,
+  "parts": {
+   "checks": "67a361fe0733d537",
+   "proofs": "495a5c7f952570e8",
+   "rest": "d3b65c89b700e77b",
+   "statement": "935e9d736e0c24ce"
   },
   "status": "proved",
   "version": 1
