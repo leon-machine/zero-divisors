@@ -8,3 +8,7 @@
 7. The gauge parameter is fixed at one by clause K1 of the Krein premise for every statement about the Sakharov coefficient B; the curvature-coupling no-go stands with that premise named, and the gauge-parameter zeros in the generation-number result are read the same way (not admissible).
 8. op.order-four-anomaly-and-sixteen: restate around the pseudoscalar of the ten Majoranas, record its first two items as answered negatively (argued), do not import the mod-16 statement; open only for a reading without the Majorana term.
 9. Accepted individually after OVERSTATED verdicts and restatement: the curvature-coupling result and the curved-field kernel result.
+10. Curvature coupling of the rung doublets: the stored reading is tree level, xi = 0; the Sakharov zero at three generations is a property of the attachment modules only, not of the content, and is noted as such.
+11. op.dark-tower-running: close it (settled as not posed for the odd towers; the coefficient table is the record).
+12. Add the assumes edge to sheaf.tameness on the two new lens-wall rung-count results.
+13. The random-state column of the eviction comparisons is the parity sector (the GA split), with the abstract tensor-product value kept beside it as the comparison (follows from decisions 4 and 5).
