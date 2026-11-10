@@ -47181,18 +47181,23 @@
     "Claude Opus 5.5",
     "pin to the slot-module result moved to its version 2 after the clause split; notation declaration",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope sentence: the cancellation is a property of the attachment modules, not of the content, whose rung doublets carry curvature coupling zero at tree level",
+    4
    ]
   ],
-  "hash": "3b3f98709533e360",
+  "hash": "4995e22d450f7b8c",
   "ledger": null,
   "parts": {
    "checks": "4e2d26d86f96c4f4",
    "proofs": "ad60c790bdfda175",
    "rest": "d3b65c89b700e77b",
-   "statement": "5ff77fb989b1dfa6"
+   "statement": "9fa64616130058bb"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.attachment-transport-is-flat-only-where-weyl-vanishes": {
   "assumes": [],
@@ -47846,18 +47851,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (iv) restated: under clause (K1) of the Krein premise the gauge parameter is one, so the zeros reached by moving it are not admissible; the stored tree-level reading of the doublets' curvature coupling recorded",
+    2
    ]
   ],
-  "hash": "4eef3fe4148a0938",
+  "hash": "b45f51d6f0593cfe",
   "ledger": null,
   "parts": {
-   "checks": "e59d2058550f1451",
-   "proofs": "d8c370ebb96eabf4",
+   "checks": "9ff3388e5d8df898",
+   "proofs": "0cc99a1b7e968ffa",
    "rest": "d3b65c89b700e77b",
-   "statement": "2749c07ba17063a3"
+   "statement": "e8a8e19cb9f75cd9"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.capacity-per-mode-independent-of-helicity": {
   "assumes": [],
@@ -49308,6 +49318,33 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five": {
+  "assumes": [
+   "sheaf.tameness@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f01175273eb5e47c",
+  "ledger": null,
+  "parts": {
+   "checks": "4507fb259fec1261",
+   "proofs": "38e098d281f24e1d",
+   "rest": "d3b65c89b700e77b",
+   "statement": "a97554f5b9ae5d03"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.density-modes-bosonise-only-along-one-null-direction": {
   "assumes": [],
   "credit": [
@@ -49899,18 +49936,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the complex field named by its unit)",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (i) restated on a parity sector (the sector deficit and its bounds first, the abstract tensor-product value kept beside it; the lower bound (m-1)/(2n) fails on a sector at m = 2), with its proof and a check",
+    5
    ]
   ],
-  "hash": "c761f5b3fdb157ec",
+  "hash": "41c1bb4ea9620a29",
   "ledger": null,
   "parts": {
-   "checks": "75a58d73995379f7",
-   "proofs": "359dac1d15aebf1d",
+   "checks": "23a87aa1c1f23ad1",
+   "proofs": "92540a45eac18f6c",
    "rest": "140c56aacffd4fed",
-   "statement": "2cea795574b56f41"
+   "statement": "23991f54c6ac8ee0"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.eviction-keeps-one-of-catalan-many-replica-saddles": {
   "assumes": [],
@@ -49929,18 +49971,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary units resolved by the unit principle (U1 to U6)",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clause (iii) for even states on the mode split of the Clifford algebra (one parity sector)",
+    4
    ]
   ],
-  "hash": "36e75d62cbdd4446",
+  "hash": "c81d53f2bc2b8acf",
   "ledger": null,
   "parts": {
-   "checks": "82a2b4a8c0d0ad9f",
-   "proofs": "fca79bfe4609651a",
+   "checks": "c82fd89d73f4ccd2",
+   "proofs": "52ab4f4bb9025e0c",
    "rest": "d3b65c89b700e77b",
-   "statement": "d9ae8949419f7c0c"
+   "statement": "006bf32b18b79654"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.eviction-keeps-one-replica-saddle": {
   "assumes": [],
@@ -49959,18 +50006,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the complex field named by its unit)",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement on the mode split of the Clifford algebra; random-state column on a parity sector",
+    4
    ]
   ],
-  "hash": "ceed52fbd520c87e",
+  "hash": "5ea0dab5f25cd274",
   "ledger": null,
   "parts": {
-   "checks": "98c5420cffe5ccc9",
-   "proofs": "bd84be102c21c257",
+   "checks": "ca4c40f5e6821e62",
+   "proofs": "8670b7921a353b19",
    "rest": "d3b65c89b700e77b",
-   "statement": "dc39f5c356e2cd5c"
+   "statement": "5afdfba3ba05b08c"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves": {
   "assumes": [],
@@ -50201,6 +50253,56 @@
   },
   "status": "proved",
   "version": 6
+ },
+ "synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "5788c1ee43ab87f3",
+  "ledger": null,
+  "parts": {
+   "checks": "68edb8cd04b347aa",
+   "proofs": "5e677e8158bb106d",
+   "rest": "d3b65c89b700e77b",
+   "statement": "cc96187812210c64"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "6f27b94cb316f171",
+  "ledger": null,
+  "parts": {
+   "checks": "df5fb5348969d8c0",
+   "proofs": "1eb07c18acbc2beb",
+   "rest": "d3b65c89b700e77b",
+   "statement": "286873003c2a9929"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.finite-range-descent-deposit-cannot-seed-cmb": {
   "assumes": [],
@@ -51955,18 +52057,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "new clause (vi): the scaling-degree rules (SD1) to (SD4)",
+    2
    ]
   ],
-  "hash": "bbda2a9219d8b04b",
+  "hash": "d57fc7aba38da7e3",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
-   "rest": "bb9473bbc8ae842f",
-   "statement": "776e76433ed0bec8"
+   "rest": "a32dbc7d76691457",
+   "statement": "6dc5e61d636518a7"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors": {
   "assumes": [],
@@ -52313,36 +52420,6 @@
   "status": "imported",
   "version": 1
  },
- "synthesis.imported-haar-average-purity": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "direction",
-    null
-   ],
-   [
-    "Claude Opus 5.5",
-    "proposal and drafting",
-    null
-   ],
-   [
-    "Claude Opus 5.5",
-    "GA rewrite (the complex field named by its unit)",
-    2
-   ]
-  ],
-  "hash": "244e3007e398c17e",
-  "ledger": null,
-  "parts": {
-   "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "452a8ccba3724f6e",
-   "statement": "c829a77f527fde9e"
-  },
-  "status": "imported",
-  "version": 2
- },
  "synthesis.imported-haar-moments-of-random-pure-state": {
   "assumes": [],
   "credit": [
@@ -52360,18 +52437,23 @@
     "Claude Opus 5.5",
     "GA rewrite (the complex field named by its unit)",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "the n = 2 value (mean purity) stated in the Fact itself, with Lubkin 1978 as its source, on retirement of the separate mean-purity Fact",
+    3
    ]
   ],
-  "hash": "01977b852335c931",
+  "hash": "5fda3f56aae5a100",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
-   "rest": "4d96cd30b3e72f38",
-   "statement": "428a4955ae30ea4d"
+   "rest": "437da507d68cd862",
+   "statement": "2a5514c2b35dfabf"
   },
   "status": "imported",
-  "version": 2
+  "version": 3
  },
  "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport": {
   "assumes": [],
@@ -52959,6 +53041,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "79fafa45e849fd61",
    "statement": "d19b59f4516795e2"
+  },
+  "status": "imported",
+  "version": 1
+ },
+ "synthesis.imported-local-covariance-with-scaling-of-time-ordered-products": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "8bab21d4ce900775",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "75dc34bac73a3383",
+   "statement": "1908a09ba44a62bd"
   },
   "status": "imported",
   "version": 1
@@ -53989,6 +54096,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "6c7afdb8721fb497",
    "statement": "71c7984159bf9e16"
+  },
+  "status": "imported",
+  "version": 1
+ },
+ "synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "bc579696a7f5b7bd",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "28c20514044712ef",
+   "statement": "8f65d96e711ba353"
   },
   "status": "imported",
   "version": 1
@@ -56200,6 +56332,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7790b1b2b98a5c30",
+  "ledger": null,
+  "parts": {
+   "checks": "f39f515440c67335",
+   "proofs": "a2089220679a386e",
+   "rest": "d3b65c89b700e77b",
+   "statement": "aae9f627c50dcad3"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard": {
   "assumes": [],
   "credit": [
@@ -56447,6 +56604,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a99cfcc0f60e23fa",
+  "ledger": null,
+  "parts": {
+   "checks": "a4241d6be152972f",
+   "proofs": "2c20e1ebc1da2dd9",
+   "rest": "d3b65c89b700e77b",
+   "statement": "33f19596f78db220"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i": {
   "assumes": [],
   "credit": [
@@ -56662,6 +56844,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0b74ce24dc87bb91",
+  "ledger": null,
+  "parts": {
+   "checks": "b3bda1604a8e24e3",
+   "proofs": "18fbdaebad7d117e",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2001c3df86e2ecf1"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
   "assumes": [],
   "credit": [
@@ -56683,6 +56890,33 @@
    "proofs": "e4d9156c5dfbe8b5",
    "rest": "d3b65c89b700e77b",
    "statement": "6d1667579a74e0a5"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
+  "assumes": [
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "39fe68517e28d749",
+  "ledger": null,
+  "parts": {
+   "checks": "3f16989ab9365e9a",
+   "proofs": "9a1b4a17cfc888b7",
+   "rest": "d3b65c89b700e77b",
+   "statement": "1daaced8620c0d70"
   },
   "status": "proved",
   "version": 1
@@ -57342,6 +57576,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "182cbf9cfb60ea11",
+  "ledger": null,
+  "parts": {
+   "checks": "002d844793d7e053",
+   "proofs": "71b5676bb9635922",
+   "rest": "d3b65c89b700e77b",
+   "statement": "4acb9348985fd3d1"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.oriented-causal-towers-mirror-pair-every-window": {
   "assumes": [],
@@ -58226,6 +58485,31 @@
    "proofs": "93947eea3b47e2d6",
    "rest": "d3b65c89b700e77b",
    "statement": "5e605e142aa15d0e"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "ed4e595364f2d9ee",
+  "ledger": null,
+  "parts": {
+   "checks": "dc97424cabd52ed4",
+   "proofs": "7957fe8b01441511",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ed57bce2c7a57e19"
   },
   "status": "proved",
   "version": 1
@@ -60240,6 +60524,33 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side": {
+  "assumes": [
+   "sheaf.tameness@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "26d95603dbce9cbb",
+  "ledger": null,
+  "parts": {
+   "checks": "9ab354ef7b9b0b64",
+   "proofs": "143889562a0c8238",
+   "rest": "8428bc93cb263500",
+   "statement": "d4717a3f37842e50"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.three-twistor-composites-massive": {
   "assumes": [],
   "credit": [
@@ -61127,6 +61438,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "6a0669fc34790966",
+  "ledger": null,
+  "parts": {
+   "checks": "fe33ea3534f5339f",
+   "proofs": "8e142d7edb89744d",
+   "rest": "36880587349d3e5c",
+   "statement": "5a292ee23c0c37c8"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.wall-class-one-rung-obstruction": {
   "assumes": [

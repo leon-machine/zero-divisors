@@ -1,0 +1,13 @@
+functions:
+  check_spin_weights_are_the_same_in_three_four_and_five_dimensions:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "one generic rational bivector in each of the six algebras: vector weight -4, and on a left ideal A P of 2 n_c real dimensions the weight -n_c/2, the trace computed as the trace of y -> x y P; that the weights hold for every bivector is the proof (both sides are quadratic forms in F, the vector one by antisymmetry and the spinor one because blades of grade four are traceless on the ideal)"
+  check_rule_gives_d_minus_26_over_6_and_a_logarithm_only_in_four_dimensions:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the stored values at d = 4; (d - 26)/6 and its sign for d = 2..29; n_c/3 for n_c = 1..8; the powers (4 - d)/2 of the proper time and the mass dimension 4 - d; the heat-kernel expansion and the determinant weights are the cited Fact, not recomputed"
+  check_table_by_tower_on_the_stored_content:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "the table entries from the stored hypercharges and colour dimensions, with C_2 = 3 and T = 1/2 as stored; the four-dimensional reading and the number 8/203; clause (iv) is otherwise a reading of stored statements and is not computed"

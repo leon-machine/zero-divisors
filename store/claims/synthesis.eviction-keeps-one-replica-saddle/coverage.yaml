@@ -15,3 +15,7 @@ functions:
     kind: sampled
     clauses: ["(iv)"]
     omits: "ratios 2 and 2m^2/(m^2 + 1) at m = 2, 4, 8 (computed) and 16 (formula); off-crossing ratio 1 + 2^{-d} along the stage sequence; the logarithmic forms are the proof's"
+  check_mode_split_and_parity_sector_column:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "the twist on three modes with one mode on the first side; one pure state of two modes that is not even; two pair states on four modes at c^2 = 9/25 and 25/169, their product, the window as a product of marginals, equal moments on both sides, and the zero-weight state after one eviction; the two swap traces on a parity sector counted for six pairs (m, n) and the crossing ratio at m = 2, 4, 8, 16; the general statements are the proof's"

@@ -1,0 +1,25 @@
+functions:
+  check_group_is_finite_and_transitive_on_classes_and_commuting_pairs:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "Cl(1,3), Cl(3,1), Cl(6,0), Cl(7,1): the pseudoscalar squares to -1 and commutes with the units; each generator acts as the signed transvection; one orbit on nonzero classes and one on ordered commuting pairs; the count of commuting pairs with a given product; group orders 24, 24, 11520 (the order in Cl(7,1) is not computed); transitivity for every N is the proof's transvection argument"
+  check_two_identities_of_a_state:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "a blade state and one generic rational state in each of Cl(1,3), Cl(3,1), Cl(6,0); the identities for every state are the proof's two coefficient comparisons"
+  check_moments_to_order_three_equal_the_invariant_ones:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "full group averages in Cl(1,3) and Cl(6,0) on a blade state and a generic rational state: all first and second moments, and third moments on every ordered pair with its product class and on three further families of triples (not all 3375 triples in Cl(6,0)); each value is also computed from the permutation formula of the imported Fact; the statement for every N and every triple is the proof"
+  check_mean_purity_of_a_matrix_factor_is_the_imported_value:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "the closed forms for m, n powers of two up to 64; the group average of the purity of one two-dimensional factor in Cl(6,0) on a generic state; the identification of P_W with the purity of the reduced state is the proof's"
+  check_generators_are_rotors_only_for_bivector_blades:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "Cl(6,0), Cl(7,1), Cl(10,0): the grades of the blades k, R R~ = 2 for grades two and six and 2k for grade four, and the class orbits of the bivector generators alone (15; 7, 21, 35; 45, 210); that blades of grade above two are not versors is the proof's remark, not computed"
+  check_invariant_mixtures_and_the_parity_sector_corollary:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "the closed form of the corollary for d_A, d_B up to 64; group means of the purity of one mode in Cl(1,3) (2/3) and of one and two modes in Cl(6,0) (3/5) on a blade state and a generic state; the second moment of one mixture of two orbits; invariance of the moments for every invariant measure is the proof's one-line argument"

@@ -1,0 +1,27 @@
+functions:
+  check_transport_rotors_cancel_from_the_leading_kernel:
+    kind: sampled
+    clauses: ["(i) < a (s R) b (s' R~) >_0 = -(2 (a.s)(b^.s) - (a.b^) Q(s)) with s' = -R~ s R, for four exact rotors, six vectors s and sixteen pairs a, b", "(i) the mass cross terms have no scalar part and the mass-mass trace is a.b^", "(i) the flat trace of the stored result on the frame vectors", "(i) control: the identity fails without the transport of the tangent"]
+    omits: "the identity for all rotors and vectors is the proof's two-line algebra (R R~ = 1); the samples are a control"
+  check_contraction_of_the_field_strength_is_the_ricci_vector:
+    kind: sampled
+    clauses: ["(ii) gamma^mu Riem(e_mu ^ xi) vanishes for curvature operators of type D, a rotated copy and a sum of three, on six vectors", "(ii) for a Ricci-type operator plus a Weyl-type one the contraction is the Ricci vector of the Ricci part with no trivector", "(ii) control: a map violating the protraction identity leaves a trivector"]
+    omits: "the general statement is the protraction identity and the definition of Weyl type; the samples exhibit it on explicit operators"
+  check_first_order_derivative_of_the_transport_rotor:
+    kind: sampled
+    clauses: ["(ii) the gauge Omega(a)(z) = -(1/2) Riem(z ^ a) has field strength -Riem, the stored sign; the gauge of opposite sign has +Riem", "(ii) the transport rotor of the stored Taylor datum is 1 + (1/4) Riem(ybar ^ d) and a.D R = +(1/4) Riem(a ^ d), independent of ybar, on three operators (one de Sitter) and 36 point pairs", "(ii) D R = +(1/4) Ric(d)"]
+    omits: "the identity is linear in the operator and polynomial of degree one in y, y', a; the proof gives it in general; the Taylor datum for the rotor is the cited theorem's (computed there)"
+  check_first_order_part_of_the_derivative_of_the_leading_coefficient:
+    kind: sampled
+    clauses: ["(ii) D U = +(1/12) Ric(xi) at first order with Delta^{1/2} = 1 - (1/12) xi . Ric(xi)", "(ii) zero for the two Weyl-type operators, nonzero with a Ricci part", "(ii) de Sitter, Riem(B) = (L/3) B for L = 3, 1, -6: Ric(xi) = L xi and D U = (L/12) xi; the opposite relative sign gives -(5/12) L xi and is rejected"]
+    omits: "the second-order coefficient of the Van Vleck determinant is the cited theorem's Taylor datum (there cited from memory)"
+  check_tidal_map_of_a_weyl_type_operator:
+    kind: sampled
+    clauses: ["(iii) the tidal map of the three Weyl-type samples has zero trace and nonzero trace of its square on the sample vectors"]
+    omits: "the coefficient 1/180 of the Van Vleck determinant on a vacuum field is cited, not computed"
+  check_degrees_of_the_terms_of_the_kernel:
+    kind: partial
+    clauses: ["(iii) the degrees 3, 2, 1, 0, 1 of the terms of the parametrix and 6, 5 (absent), 4, 3, 2 of the products", "(iv) omega = 2 for the leading part and 15 derivatives of delta of order at most 2"]
+    omits: "the scaling-degree rules are an imported Fact and clauses (iii), (iv) are argued; the function is bookkeeping of them"
+untouched_premises:
+  synthesis.imported-local-covariance-with-scaling-of-time-ordered-products: "cited in clause (iv) for the reduction of the freedom to constants, which is argued; no check computes with it"

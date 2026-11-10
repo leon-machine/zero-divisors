@@ -52,6 +52,10 @@ lineage:
   - synthesis.wall-rung-count-is-height-of-dying-line-class
   - synthesis.lens-space-wall-rung-count-sees-the-integral-twist
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept: two later results sharpen the rung count on the quarter-turn lens walls. synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side: three rungs fail on every side from dimension five, so k >= 4 there (dimension five given the spin class). synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five, with synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components: on the definite side of the walls with cross-section L^5(4), k = 5 (an explicit five-component odd map; no four-component one, given the imported Fact synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation and the stated cellular background). The lower bounds of this result (at least three rungs in dimension seven, growing without limit with the dimension) are consistent with them; in dimensions five and seven the later bound is the stronger one. Statement, proof and check unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-09
     date: '2026-11-09'

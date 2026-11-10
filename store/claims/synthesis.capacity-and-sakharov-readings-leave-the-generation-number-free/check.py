@@ -185,8 +185,13 @@ def check_sakharov_coefficient_has_zeros_at_every_generation_number():
     for g in GENERATIONS:
         GA.check("the coefficient vanishes at alpha*(n_g) with conformal scalars",
                  quadratic(g, N_RUNG_COMPONENTS, sixth, alpha_star[g]) == 0)
-    GA.check("alpha* is an admissible gauge parameter exactly for n_g <= 3",
+    GA.check("alpha* is positive exactly for n_g <= 3 (arithmetic; under clause K1 the gauge parameter is one)",
              [g for g in GENERATIONS if alpha_star[g] > 0] == [1, 2, 3])
+    GA.check("alpha* equals one, the value clause K1 fixes, at three generations only",
+             [g for g in GENERATIONS if alpha_star[g] == 1] == [3])
+    GA.check("at gauge parameter one and the tree-level coupling zero: 16 n_g - 40, never zero, 8 at three",
+             all(quadratic(g, N_RUNG_COMPONENTS, 0, 1) == 16 * g - 40 != 0 for g in range(1, 200))
+             and quadratic(3, N_RUNG_COMPONENTS, 0, 1) == 8)
     GA.check("with fifteen components per generation the conformal Feynman-gauge coefficient never vanishes",
              all(quadratic(g, 8, sixth, 1, per_gen=15) != 0 for g in range(1, 200)))
     GA.check("with fifteen components the coefficient at three generations is -3 minimal-scalar units", quadratic(3, 8, sixth, 1, per_gen=15) == -3)

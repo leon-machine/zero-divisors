@@ -52,7 +52,7 @@ derivations:
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off@3
   - synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport@5
   - synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field@6
-  - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
+  - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@2
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
@@ -77,6 +77,10 @@ lineage:
   - synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off
   - synthesis.hadamard-scaling-limit-premise
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept: clause (v) stays argued. Its first half (the one-loop kernel on a gravitational field has the flat degree of divergence and the flat leading coefficient) is now supported, for the trace form of the Dirac Hadamard parametrix on a torsion-free field, by synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four: the transport rotors cancel exactly from the leading kernel, and the first-order correction is Ricci only, zero on a vacuum field; its degree count and its extension count are themselves argued, so that result supports the clause and does not prove it. The inputs the clause cites from memory are now stored as imports: the scaling-degree rules as clause (vi) of synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products (version 2), and the second half (the further ambiguities are local terms of matching dimension) as synthesis.imported-local-covariance-with-scaling-of-time-ordered-products. No uses edge is added and the pin to the Epstein-Glaser Fact is not moved here; the Ward identity on the gravitational field is not established anywhere in the store.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

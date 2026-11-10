@@ -7,6 +7,10 @@ functions:
     kind: sampled
     clauses: ["(ii)", "(iii)"]
     omits: "(ii): s(0) = ln 2 and the deficit sum (ln 2 - h_k) = 0 are computed for windows of 1 to 5 members; (iii): the identity Pinsker bound = (1/2) tanh^2(x_*/2) and the window threshold 2/tanh^2(x_*/2) are computed at four sample values of e^{x_*}, and the (Q) weights x = 2 pi|k| are bounded rigorously (e^{2 pi} > 500, 1/2 nat per member, two members exceed 1 nat); the 'not covered' regimes are not tested"
+  check_sector_deficit_bounds:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "exact rational arithmetic with the ln 2 enclosure, for m = 2^w <= n = 2^r with w <= 5 and r <= w + 3 only: the closed form against the block decomposition (weight term plus Page's average on a block), the rational difference from the abstract value and its bounds, the sector deficit's bounds, the comparison with (m-1)/(2n) (above for m >= 4, below at m = 2) and the crossing interval (2/5, 1/2) from m = 4; the Beta law of the block weight and its independence of the blocks are the proof's background and are not computed; that even pure states lie in a sector is the mode-split result's, not tested here"
 judge:
   by: fix-round-2026-10-23
   date: '2026-10-23'

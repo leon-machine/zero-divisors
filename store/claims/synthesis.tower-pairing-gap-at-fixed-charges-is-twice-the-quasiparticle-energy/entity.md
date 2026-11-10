@@ -47,6 +47,10 @@ lineage:
   - field-theory.composite-scalars-mean-field-level
   - synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept: in the vocabulary of synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac, clause (iii) is a statement about a self pair term. The mean-field mass Delta of the paired array, to which it relates the gap G n_b = 2 sqrt(K^2 + Delta^2), is G times the condensate of the pair term of the two modes of one array, which is of the self kind (it carries charge under L and none under N_a - N_c). That result also records that the pair terms have vanishing compression on every sector of fixed (N_a, N_c), the setting of clauses (i), (ii), and that nothing stored identifies the paired array with the neutral singlet or G with a scale. Statement, proof and check unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

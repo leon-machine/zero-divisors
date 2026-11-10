@@ -26,7 +26,7 @@ derivations:
   - synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays@5
   - standard-model.connection-forced@5
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
-  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
+  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@4
   - synthesis.null-ordering-of-counted-units-is-zeta-symmetric@4
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
