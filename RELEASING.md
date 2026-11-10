@@ -29,8 +29,11 @@ taken when enough has been merged to be worth a new version.
 3. Draft the release notes: `python -m tp release-notes vX.Y.Z`. It writes `releases/vX.Y.Z.md`,
    listing the results added, the corrections and restatements (each with the defect it fixed and
    who made it), other revisions, the results retired and everyone credited for the first time,
-   all compared with the previous release. Add a line or two on the main changes where the comment
-   says, then `python -m tp.site` and commit both. The site shows every file in `releases/` on its
+   all compared with the previous release. The same command adds every person credited in the
+   store, other than the creators, to `contributors` in `.zenodo.json` (type Researcher, with the
+   ORCID iD from their credit entry), leaving AI models out and keeping the entries already there;
+   it prints the names it added, so check them. Add a line or two on the main changes where the
+   comment says, then `python -m tp.site` and commit the notes, `.zenodo.json` and the site. The site shows every file in `releases/` on its
    Release notes page (from the Physics Graph menu).
 4. On GitHub, Releases, Draft a new release: the tag from step 2, on `main`; paste the notes file
    (without its first line) as the description, and optionally Generate release notes below it for

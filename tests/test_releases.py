@@ -1,4 +1,5 @@
 """Release notes say what changed between releases (tp/releases.py)."""
+import json
 import os
 import shutil
 import tempfile
@@ -61,6 +62,41 @@ class ReleaseNotesTest(unittest.TestCase):
         md = releases.notes("v1.0.0", "2026-11-10", load_store(self.root))
         self.assertIn("The first release of the Physics Graph", md)
         self.assertNotIn("## Results added", md)
+
+    def test_zenodo_contributors(self):
+        self.edit("claims", "fx.boost.sigma", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: Leon Butler\n  role: idea\n"
+                  "- name: Ada Lovelace\n  role: correction\n  version: 2\n  orcid: 0000-0002-1825-0097\n"
+                  "- name: Claude Opus 5.5\n  role: drafting\n  version: 2\n"
+                  "- name: GPT-5\n  role: drafting\n"
+                  "- name: Claude Shannon\n  role: review\n  kind: person\n"
+                  "- name: Ludwig van Beethoven\n  role: review\n")
+        path = os.path.join(self.tmp, ".zenodo.json")
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump({"title": "t", "creators": [{"name": "Butler, Leon"}],
+                       "contributors": [{"name": "Noether, Emmy", "type": "Other"}]}, fh)
+        st = load_store(self.root)
+        added = releases.update_zenodo(self.tmp, st)
+        self.assertEqual(added, ["Lovelace, Ada", "Shannon, Claude", "Ludwig van Beethoven"])
+        with open(path, encoding="utf-8") as fh:
+            meta = json.load(fh)
+        self.assertEqual(meta["title"], "t")
+        self.assertEqual(meta["contributors"], [
+            {"name": "Noether, Emmy", "type": "Other"},
+            {"name": "Lovelace, Ada", "type": "Researcher", "orcid": "0000-0002-1825-0097"},
+            {"name": "Shannon, Claude", "type": "Researcher"},
+            {"name": "Ludwig van Beethoven", "type": "Researcher"}])
+        self.assertEqual(releases.update_zenodo(self.tmp, st), [])
+        self.assertIsNone(releases.update_zenodo(os.path.join(self.tmp, "nowhere"), st))
+
+    def test_is_model(self):
+        for n in ("Claude Opus 5.5", "Claude Fable 5", "Claude (model not recorded)", "GPT-5",
+                  "o3", "Gemini 3 Pro", "DeepSeek-R1", "Grok 4"):
+            self.assertTrue(releases.is_model({"name": n}), n)
+        for n in ("Ada Lovelace", "Claude Monet", "Grokhov Petr", "Olga Ivanova"):
+            self.assertFalse(releases.is_model({"name": n}), n)
+        self.assertFalse(releases.is_model({"name": "Claude Opus", "kind": "person"}))
+        self.assertTrue(releases.is_model({"name": "Sage", "kind": "ai"}))
 
     def test_tag_order(self):
         self.assertGreater(releases.tag_key("v1.10.0"), releases.tag_key("v1.9.3"))

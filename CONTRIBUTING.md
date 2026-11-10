@@ -37,8 +37,8 @@ and added directly: one folder per result, `store/<kind>/<id>/`, containing
 
 - `entity.md`: the statement at four levels, its premises pinned to the versions
   read (`id@n`), who proposed it, whether an AI was involved, and a `credit`
-  list: your name as you want it shown, and the AI model, with its version, that
-  drafted the proof or amendment;
+  list: your name as you want it shown (with your ORCID iD, if you have one), and
+  the AI model, with its version, that drafted the proof or amendment;
 - `proof-main.tex`: the proof, citing each premise with `\claimref{id}`;
 - `check.py`: a machine check in exact arithmetic, using `GA.py`.
 
@@ -139,13 +139,32 @@ By sending a result you agree to its publication under CC BY 4.0,
 credited to you by name, with the model you state. The model is shown as you give
 it; it cannot be checked from here.
 
-## Credit in the graph
+## Credit in the graph and on Zenodo
 
 Every result names who did what. Results from the papers credit Leon Butler with
 the idea, the direction and the review, and Claude Fable 5 with the mathematics
 and the drafting, as each paper's authorship disclosure states. Results proposed
 in AI sessions name the model from the commit that added them. Where no model is
 on record the credit says so rather than guessing (`python -m tp credit`).
+
+The graph is archived on Zenodo at each release as "Zero Divisors: Physics Graph".
+Everyone credited in an accepted result is listed among the record's contributors
+from the next release on, with their ORCID iD when their credit entry gives one, and
+the release notes name everyone credited for the first time. The record's creator
+is the maintainer. AI models are named on each result and in the release notes but
+not in Zenodo's contributor list, which is for people. To have your ORCID iD on the
+record, add it to your credit entry as a bare iD:
+
+```yaml
+credit:
+- name: Ada Lovelace
+  role: correction of the proof's second step
+  version: 4
+  orcid: 0000-0002-1825-0097
+```
+
+A person whose name is also that of an AI model family (a Claude who is not a
+model, say) adds `kind: person` to the entry.
 
 ## The full rules
 
