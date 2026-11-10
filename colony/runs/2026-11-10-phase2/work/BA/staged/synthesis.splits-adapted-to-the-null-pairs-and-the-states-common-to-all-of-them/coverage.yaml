@@ -1,0 +1,18 @@
+functions:
+  check_adapted_frames_and_the_stored_boosted_frame:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "orthonormality of the adapted frames for the twelve matrices used (one, two and three modes), the frame at t = 4 with its unchanged parity, and the two adjoints on the generators; the correspondence with positive forms for all splits is the proof's"
+  check_number_parity_and_sector_projectors_are_self_adjoint_for_every_adapted_split:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "for two and three modes and the splits used: the number element computed from the adapted null pairs equals N, and N, the total parity and the sector projectors (idempotent, summing to 1, scalar parts binomial over 2^l) are fixed by each adjoint; all splits and all l are the proof's"
+  check_functionals_real_for_all_adapted_splits_are_functions_of_the_number:
+    kind: complete
+    clauses: ["(iii)"]
+    omits: "for l = 1, 2, 3 the solution space of the reality conditions for the finite sets of splits used is computed in full and equals the span of the l + 1 power functionals; this bounds the functionals real for all adapted splits from above, and the proof supplies the lower bound and the step from l = 2 to every l"
+  check_pair_state_depends_on_the_split_and_common_states_stay_at_two:
+    kind: partial
+    clauses: ["(iv)"]
+    omits: "one stored pair state (c = 3/5, s = 4/5) and one second split: the two values 12/25 and 48/25; for a basis of the common functionals of two modes, the vanishing on u, on the odd elements used and the value (7/5) times that of the total parity on one CHSH element; general directions are the proof's"
+untouched_premises: {}
