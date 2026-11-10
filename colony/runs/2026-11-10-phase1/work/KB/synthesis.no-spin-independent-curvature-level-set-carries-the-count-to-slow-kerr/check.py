@@ -9,6 +9,10 @@ Level set |z| = rho of the curvature scale on the sheet r > 0, in the regime a <
   every quantity is rational.
   (1) Gram determinant of (d_t, d_u + R' d_r, d_phi) equals rho^2 B(u),
       B = R (2M - R) - a^2 - (1 - u^2) a^4 u^2 / R^2, also for the flow d_t + Omega d_phi.
+      Also the general lemma det h = -Sigma (Delta + (1 - u^2) R'^2) at one point with a slope off the level
+      set, and (check_determinant_in_the_store_product) one point in Cl(1,3) through GA.py in the store's product,
+      where the Gram determinant is +Sigma (Delta + (1 - u^2) R'^2). These are consistency checks: the identity is
+      proved in the text.
   (2) regime: r_- <= a^2/M < 3 rho/5 <= R <= rho < M, and (1 - delta) R (2M - rho) <= B <= R (2M - rho) with
       delta = (5/2) a^2/(rho (2M - rho)); B > 0 (spacelike).
   (3) the elementary bounds behind G(eps) = (1/2) int_{-1}^{1} (1 - eps u^2)^{1/4} du:
@@ -18,7 +22,7 @@ Level set |z| = rho of the curvature scale on the sheet r > 0, in the regime a <
       rho^3 = 2M; N/(A_+/4) = 2 nu V'/sqrt(M^2 - a^2); (1 - eps/12)^2 < 1 - a^2/M^2 in the regime.
 """
 from fractions import Fraction as F
-import GA  # noqa: F401  (house rule; the computation is rational arithmetic on metric components)
+import GA
 from tp_premise import premise
 
 
@@ -103,10 +107,55 @@ def check_level_set_determinant():
             assert det(gram(g, [[F(1), F(0), F(0), F(1, 13)], Tu, Tf])) == d    # any flow d_t + Omega d_phi
             seen += 1
     assert seen == 25
+    # the general lemma at a slope that is not the level set's: det h = -Sigma (Delta + (1 - u^2) R'^2)
+    M, a, r, u, Rp = F(7), F(3), F(4), F(3, 5), F(-5, 11)
+    S, D = r * r + a * a * u * u, r * r - 2 * M * r + a * a
+    g = metric(M, a, r, u)
+    Tu = [F(0), Rp, F(1), F(0)]
+    assert det(gram(g, [[F(1), F(0), F(0), F(0)], Tu, [F(0), F(0), F(0), F(1)]])) == -S * (D + (1 - u * u) * Rp * Rp)
     # one value written out: M = 32, a = 2, rho = 4, (c, s) = (24/25, 7/25): R = 96/25, u = 14/25
     M, a, rho = HOLES[0]
     R, u = F(96, 25), F(14, 25)
     assert bracket(M, a, rho, R, u) == F(272137, 1200)
+    return True
+
+
+def check_determinant_in_the_store_product():
+    """One exact point in Cl(1,3) through GA.py, signature (+,-,-,-): hb^{-1}(b) = b - H (b.k) k on the Cartesian
+    frame of the flat background at phi = 0; the Gram determinant is +Sigma (Delta + (1 - u^2) R'^2) there."""
+    premise("interior.imported-kerr-schild-form-kerr-gauge")
+    SQ = GA.sig(1, 3)
+
+    def vec(cs):
+        return GA.add(*[GA.scal(F(x), GA.gen(i)) for i, x in enumerate(cs)])
+
+    def dot(x, y):
+        return GA.dot(x, y, SQ)
+
+    M, a, r, u = F(7), F(3), F(4), F(3, 5)
+    sq, st = F(5), F(4, 5)                                       # sqrt(r^2 + a^2), sin theta
+    assert sq * sq == r * r + a * a and st * st == 1 - u * u
+    S, P, D = r * r + a * a * u * u, r * r + a * a, r * r - 2 * M * r + a * a
+    H = M * r / S
+    # coordinate vectors of the oblate chart: x = sqrt(P) sin(theta) cos(phi), y = sqrt(P) sin(theta) sin(phi), z = r u
+    dt = vec([1, 0, 0, 0])
+    dr = vec([0, r / sq * st, 0, u])
+    du = vec([0, -sq * u / st, 0, r])
+    dp = vec([0, 0, sq * st, 0])
+    k = GA.add(dt, GA.neg(dr), GA.scal(a / P, dp))
+    assert dot(k, k) == 0                                        # Q(k) = 0
+    hinv = lambda b: GA.sub(b, GA.scal(H * dot(b, k), k))
+
+    def gram_det(vs):
+        w = [hinv(v) for v in vs]
+        return det([[dot(x, y) for y in w] for x in w])
+
+    Rp = -a * a * u / r                                          # the level set's slope at this point: -27/20
+    d = gram_det([dt, GA.add(du, GA.scal(Rp, dr)), dp])
+    assert d == S * (D + (1 - u * u) * Rp * Rp)
+    assert d == -S * (r * (2 * M - r) - a * a - (1 - u * u) * a ** 4 * u * u / (r * r))   # -rho^2 B, rho^2 = Sigma
+    assert d == F(-8968726, 15625)
+    assert gram_det([GA.add(dt, GA.scal(F(2, 7), dp)), GA.add(du, GA.scal(Rp, dr)), dp]) == d
     return True
 
 
@@ -139,7 +188,6 @@ def check_regime_and_bracket_bounds():
 
 
 def check_quarter_power_bounds():
-    premise("interior.complex-scale-inverse-cube-killing-spinor")
     # (1 - x/4)^4 - (1 - x) = (3/8) x^2 - (1/16) x^3 + (1/256) x^4, nonnegative on [0, 1]
     p = [F(1), F(-1, 4)]
     p4 = pmul(pmul(p, p), pmul(p, p))

@@ -1,8 +1,12 @@
 functions:
   check_level_set_determinant:
     kind: sampled
-    clauses: ["(2): det h = rho^2 B(u), also for the flow d_t + Omega d_phi"]
-    omits: "five holes (three on the Planck level set rho^3 = 2M, one off it, one with rational horizon radii) and five Pythagorean points each, 25 exact Gram determinants computed from the Kerr-Schild components entered from the statement; one Omega; the identity is proved in the text through the Boyer-Lindquist block form, which the check does not use; one value of B written out"
+    clauses: ["(2): det h = -Sigma (Delta + (1 - u^2) R'^2), and rho^2 B(u) on the level set, also for the flow d_t + Omega d_phi"]
+    omits: "sampled, consistency check of the identity proved in the text (cofactor rule in the Kerr-Schild gauge): five holes (three on the Planck level set rho^3 = 2M, one off it, one with rational horizon radii) and five Pythagorean points each, 25 exact Gram determinants from the Kerr-Schild components entered from the statement; one Omega; one point of the general lemma with a slope off the level set; the agreement with the stored tube determinant after the change of variable; one value of B written out"
+  check_determinant_in_the_store_product:
+    kind: sampled
+    clauses: ["(2): in the store's product the Gram determinant is +Sigma (Delta + (1 - u^2) R'^2)"]
+    omits: "one exact point (M = 7, a = 3, r = 4, u = 3/5, the level set's slope there) computed in Cl(1,3) through GA.py from hb^{-1}(b) = b - H (b.k) k on the Cartesian frame of the flat background, with Q(k) = 0 checked and one Omega; a consistency check of the sign against the stored convention, not a proof; the point is not in the regime of items 1, 3 and 4, which the identity does not need"
   check_regime_and_bracket_bounds:
     kind: sampled
     clauses: ["(1): r_- <= a^2/M < 3 rho/5 <= R <= rho < M", "(2): (1 - delta) R (2M - rho) <= B <= R (2M - rho), B > 0"]
