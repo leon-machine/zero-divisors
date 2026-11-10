@@ -47,3 +47,20 @@ says "the bracket stated in the proof of" that Proposition. The base proposal ca
 Sibling references are not citations yet (step 2). My findings file's link 1 (the triality lead) is superseded by
 (a) in its strong form: the identification with rung four's VECTORS fails equivariantly, as the referee computed; what
 remains true is that F_3 is the even half of F_4 as a module of the three-pair spin group (signature (4,4) computed).
+
+## Step 2 (base stored at version 1)
+runcheck: 3/3 PASS. check4: pending (orchestrator). validate: pending (orchestrator).
+- Uses edge synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent@1 added; claimrefs
+  to its clauses (i), (ii), (v) in formal (iv), (v), technical and proof; premise() call in
+  check_counts_at_three_and_the_two_iterations. The "sibling result" sentence in the note is now a citation.
+- Repeat of base (i) dropped: clause (v) is retitled "A second rule for a next level", names the first rule by
+  citation with its stored counts in one sentence, and proves only the second rule. The check no longer recomputes
+  3, 8, 256, 2^256 or the 1e77 bracket.
+- Bracket comparison: kept only this rule's own terms (2^127 and 2^(2^127 - 1)), "given" the bracket and the
+  registered-units rider quoted from base (v). The pins on standard-model.trichotomy-what-kind-number,
+  synthesis.de-sitter-mode-count and the two-arrays result are removed with their premise() calls, since the base
+  carries them. My step 1 rebuttal on the bracket's source is thereby moot for this proposal.
+- The two fours kept apart at formal (iv), technical and note: mine is a Witt index; the base's (ii) is the pair
+  count after one ascent; they agree as numbers at k = 3 only.
+- Derivation now: tower.fock-module-one-qubit-per-rung@6, tower.witt-index-quantum-capacity@5,
+  std-algebra.chevalley-pairing@1, std-algebra.fock-representation@1, and the base @1.
