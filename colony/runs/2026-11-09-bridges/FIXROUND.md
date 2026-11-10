@@ -74,3 +74,18 @@ Fixers run only runcheck. Write findings/fixes-<name>.md ending "check4: pending
     the two readings marked argued).
   - Mass terms as pair terms (C1B): fixes 1-6 (title scope and no "only"; "among the six listed charges"; the gap
     theorem's clause (iii) and the softened sentences; cross-reference to the order-four sibling by name).
+- From verify/R3.md (all four SOUND WITH FIXES):
+  - No odd map (C3A): fixes 1-5 (the attribution sentence for (S); the corrected comparison with the three theories;
+    the product identity for orders 8, 12, 16 in the check; the secondary-source wording with volume and pages; the
+    note on the inherited Atiyah-Hirzebruch dependence). Leon has decided to import (S) as one Fact (maintainer pass):
+    keep it an in-statement hypothesis, worded exactly as fix 1 says, so the Fact can be written to fit.
+  - Mode split (C3B): fixes 1-9 (the sector mean entropy is the two-block case of Bianchi et al. equation (45): remove
+    it from "new here"; the parity average is the total-parity form, a definition here, the stored theorem being
+    single-mode; Delta's size; name descent-lift.imported-fermionic-operations-are-even-reduced; conditional inputs at
+    every level; "at version 3" in the fate table). Direction ruling: keep the two eviction entities self-contained and
+    this entity citing them. The sector lemma's home is the finite-averages sibling (it will be accepted): keep the
+    short lemma inline for now and say in the extraction note that it is cut to a citation after acceptance.
+  - Two corrected eviction entities (C3B): fixes as numbered (total-parity wording; stale notes "(through version 3;
+    removed at version 4)"; amendments text, including for the Catalan entity the second sentence recording that the
+    stored upper bound was verified, not proved; the check docstring). "At Leon's request" is now accurate: Leon
+    confirmed on 9 November (DECISIONS item 5); cite that.
