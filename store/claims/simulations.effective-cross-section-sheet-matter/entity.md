@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   assumes:
-  - dark-matter.r3-one-cell-per-unshared-direction@1
+  - dark-matter.r3-one-cell-per-unshared-direction@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

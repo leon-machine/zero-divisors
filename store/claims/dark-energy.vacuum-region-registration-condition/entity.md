@@ -24,7 +24,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-frozen-point-geometry@7
   assumes:
-  - synthesis.field-space-premise-parallel-frozen-point@1
+  - synthesis.field-space-premise-parallel-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -30,7 +30,7 @@ derivations:
   - odd-extensions.two-towers-one-curved-universe@6
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - dark-matter.flag-bit-exists-exactly-tower-dimension@3
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-tower-matter.mirrors-temperature-p2@7
   proof: proof-main.tex
 checked_by:

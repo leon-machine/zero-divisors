@@ -26,7 +26,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1
   - synthesis.imported-lovelock-cartan-four-forms-and-holst-term@1

@@ -29,18 +29,18 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@8
   - dark-matter.imported-derived-generation-flag@6
   - dark-matter.imported-inputs-standard-model-chain@6
   - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.mode-counts-two-modules-which-one@6
-  - dark-matter.population-count-one-share-half-percent@6
+  - dark-matter.population-count-one-share-half-percent@7
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.stored-asymmetry-charge-not-number@10
   - standard-model.hyp-s-slot-statistics@10
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   - dark-matter.p2-indifference@2
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex

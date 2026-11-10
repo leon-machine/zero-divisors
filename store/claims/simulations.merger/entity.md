@@ -70,12 +70,12 @@ derivations:
   - simulations.imported-unit-ball-rule-family@4
   - simulations.imported-mirror@6
   assumes:
-  - simulations.s1-one-species-per-tower@2
-  - simulations.s2-sheet-fluid@2
-  - simulations.s3-mirror-cluster@1
-  - simulations.s4-our-matter@1
-  - simulations.s5-halos@1
-  - simulations.c-odd-towers-collisionless@2
+  - simulations.s1-one-species-per-tower@3
+  - simulations.s2-sheet-fluid@3
+  - simulations.s3-mirror-cluster@2
+  - simulations.s4-our-matter@2
+  - simulations.s5-halos@2
+  - simulations.c-odd-towers-collisionless@3
   note: 'Simulation output at observation level: the runs are set up under Premises S1 to S5, and reading
     (C) under Premise C, with the composition of the imported unit-ball rule and the mirror; no proof
     text, since the result is computed, not proved.'

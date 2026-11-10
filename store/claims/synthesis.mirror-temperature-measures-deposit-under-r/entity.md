@@ -26,7 +26,7 @@ derivations:
   - dark-matter.stored-asymmetry-charge-not-number@10
   - dark-tower-matter.mirrors-composition@3
   - dark-matter.open-channels-their-costs@6
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex

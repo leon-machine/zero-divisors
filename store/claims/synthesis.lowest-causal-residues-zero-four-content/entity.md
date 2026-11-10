@@ -25,9 +25,9 @@ derivations:
   - dark-tower-matter.constituents-field@2
   - dark-matter.imported-eight-towers-mod-8-clock@4
   - dark-matter.towers-are-residues-single-clock-filter@5
-  - dark-matter.unit-ball-rule@5
+  - dark-matter.unit-ball-rule@6
   assumes:
-  - dark-tower-matter.h1-momentum@1
+  - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
 about:
 - obj.dark-tower-matter.ideals-fields-momentum

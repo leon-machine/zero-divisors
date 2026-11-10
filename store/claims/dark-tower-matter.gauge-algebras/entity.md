@@ -27,9 +27,9 @@ derivations:
   - dark-tower-matter.third-pairs-unit-five-dimensions@5
   - dark-tower-matter.where-mass-begins@2
   assumes:
-  - dark-tower-matter.u-transposition-rule@2
+  - dark-tower-matter.u-transposition-rule@3
   - dark-tower-matter.h2-identification@1
-  - dark-tower-matter.h1-momentum@1
+  - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -27,7 +27,7 @@ derivations:
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.five-dimensional-content@5
   - dark-tower-matter.three-dimensional-phases@4
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-tower-matter.r1-has-no-mechanism-odd-towers@3
   - dark-tower-matter.five-dimensional-towers@4

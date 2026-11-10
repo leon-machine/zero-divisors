@@ -21,10 +21,10 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.unit-ball-rule@5
-  - dark-matter.total-function-thickness@5
-  - dark-matter.democracy-de-sitter-radius-unit-ball@4
-  - dark-matter.population-count-one-share-half-percent@6
+  - dark-matter.unit-ball-rule@6
+  - dark-matter.total-function-thickness@6
+  - dark-matter.democracy-de-sitter-radius-unit-ball@5
+  - dark-matter.population-count-one-share-half-percent@7
   - dark-matter.mirror-share-one-how-fragile@7
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:

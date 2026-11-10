@@ -33,7 +33,7 @@ derivations:
   - one-relation.imported-indifference-instrument@4
   - one-relation.measure-indifference-borns-rule-located@4
   - standard-model.trichotomy-what-kind-number@12
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@8
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - standard-model.hyp-s-slot-statistics@10
   assumes:

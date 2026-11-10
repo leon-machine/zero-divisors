@@ -40,7 +40,7 @@ derivations:
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-matter.which-towers-can-carry-arrow@6
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   - dark-matter.p2-indifference@2
   - dark-matter.p3-nearest-dimension-representatives@3
   - synthesis.common-ceiling-coupling-premise@1

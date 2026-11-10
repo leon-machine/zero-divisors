@@ -26,7 +26,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.imported-eight-towers-mod-8-clock@4
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.open-channels-their-costs@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4

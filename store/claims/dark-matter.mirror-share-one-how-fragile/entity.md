@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-matter.ceiling-valued-inherited-success@5
   assumes:

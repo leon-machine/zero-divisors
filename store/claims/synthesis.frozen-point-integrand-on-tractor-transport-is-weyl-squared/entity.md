@@ -42,7 +42,7 @@ derivations:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - synthesis.imported-gtg-dictionary@2
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
   - synthesis.imported-miskovic-olea-identity@3
   - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale@4
   - synthesis.promoted-norm-weyl-clock-flat-weight@7

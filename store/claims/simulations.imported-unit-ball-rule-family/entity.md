@@ -22,12 +22,12 @@ derivations:
 - name: main
   uses:
   - dark-matter.reduced-response-gravity-needs-supporting-stress@3
-  - dark-matter.total-function-thickness@5
-  - dark-matter.unit-ball-rule@5
+  - dark-matter.total-function-thickness@6
+  - dark-matter.unit-ball-rule@6
   assumes:
   - dark-matter.r1-equal-mass-per-quantum@1
   - dark-matter.r2-one-quantum-per-unit-ball@3
-  - dark-matter.r3-one-cell-per-unshared-direction@1
+  - dark-matter.r3-one-cell-per-unshared-direction@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

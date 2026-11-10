@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.stored-asymmetry-charge-not-number@10
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

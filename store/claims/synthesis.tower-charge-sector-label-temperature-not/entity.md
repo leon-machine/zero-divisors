@@ -41,7 +41,7 @@ derivations:
   - dark-matter.stored-asymmetry-charge-not-number@10
   - synthesis.cold-mirror-needs-non-equilibrium-descent@3
   - synthesis.mirror-asymmetry-route-one@4
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   proof: proof-main.tex
 checked_by:

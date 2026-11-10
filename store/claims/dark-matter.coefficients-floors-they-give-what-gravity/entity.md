@@ -21,8 +21,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.imported-massless-graviton-production-rate@2
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.imported-massless-graviton-production-rate@3
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.open-channels-their-costs@6
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   proof: proof-main.tex

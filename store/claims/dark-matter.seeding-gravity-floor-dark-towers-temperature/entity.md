@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.ceiling-valued-inherited-success@5
-  - dark-matter.imported-massless-graviton-production-rate@2
+  - dark-matter.imported-massless-graviton-production-rate@3
   - dark-matter.superselected-hence-dark-exactly-stable@5
   proof: proof-main.tex
 checked_by:
