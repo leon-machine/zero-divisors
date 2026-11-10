@@ -1,0 +1,1755 @@
+{
+"hits": {
+"angle.imported-singularity-papers-state-selection": [
+"N\\^\\{?-?\\d"
+],
+"dark-energy.under-action-written-norm-parameter-laws": [
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\sqrt\\{3/\\\\Lambda\\}"
+],
+"dark-energy.variable-exponents-residue-pointwise-corrections-are": [
+"N\\^\\{?-?\\d"
+],
+"dark-energy.wall-counterterm": [
+"N\\^\\{?-?\\d"
+],
+"dark-matter.reduced-response-gravity-needs-supporting-stress": [
+"N\\^\\{?-?\\d"
+],
+"dark-matter.stored-asymmetry-charge-not-number": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\pi\\s*N\\^"
+],
+"descent-lift.pairing-creator-under-transport-algorithm": [
+"N\\^\\{?-?\\d"
+],
+"families.absolute-scale-clean-negative-result": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{2/3\\}",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M"
+],
+"families.why-kinematic-attacks-had-fail": [
+"N\\^\\{2/3\\}",
+"N\\^\\{?-?\\d"
+],
+"interior.imported-schwarzschild-curvature-spectrum": [
+"N\\^\\{?-?\\d"
+],
+"interior.kasner-form-interior": [
+"N\\^\\{?-?\\d"
+],
+"neutrino.mixing-none-leading-order": [
+"N\\^\\{?-?\\d"
+],
+"neutrino.rank-one-seesaw-ordering-sum-double": [
+"N\\^\\{?-?\\d"
+],
+"note.dark-energy.setting-machine-verification": [
+"N\\^\\{?-?\\d"
+],
+"note.dark-matter.halo-built-collisionless-sheets-cold-dark": [
+"N\\^\\{?-?\\d"
+],
+"note.families.setting-machine-verification": [
+"N\\^\\{?-?\\d"
+],
+"note.mass.setting-machine-verification": [
+"N\\^\\{?-?\\d"
+],
+"note.mass.what-nullity-fixes": [
+"N\\^\\{?-?\\d"
+],
+"note.one-relation.where-exhaustiveness-first-fails-4-quadric": [
+"N\\^\\{?-?\\d"
+],
+"note.primer.setting-notation-glance": [
+"N\\^\\{?-?\\d"
+],
+"note.primer.setting-rotors-how-algebra-moves-things": [
+"N\\^\\{?-?\\d"
+],
+"note.primer.setting-signature-arrival-null-vectors": [
+"N\\^\\{?-?\\d"
+],
+"note.programme.setting-machine-verification": [
+"10\\^\\{12[02]\\}",
+"G\\s*\\\\Lambda",
+"N\\^\\{?-?\\d"
+],
+"note.programme.setting-measure-two-numbers-one-bit": [
+"10\\^\\{12[02]\\}",
+"10\\^\\{6[01]\\}",
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"note.programme.setting-series-paper-paper-2": [
+"N\\^\\{?-?\\d",
+"v\\s*/\\s*H"
+],
+"note.rungs.setting-fallback-s-tier-c-premise": [
+"N\\^\\{?-?\\d"
+],
+"note.scrambling.setting-contribution": [
+"N\\^\\{?-?\\d"
+],
+"note.scrambling.setting-introduction": [
+"N\\^\\{?-?\\d"
+],
+"note.simulations.setting-confinement-scale-drops-out": [
+"N\\^\\{?-?\\d"
+],
+"note.simulations.setting-gravity": [
+"N\\^\\{?-?\\d"
+],
+"note.singularity.setting-eviction-theorem-falling-branch-without-3": [
+"N\\^\\{?-?\\d"
+],
+"note.singularity.setting-machine-verification": [
+"N\\^\\{?-?\\d"
+],
+"note.singularity.setting-model": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.abstract": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M"
+],
+"note.standard-model.sensitivity-one-loop-decides-nothing-about": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-contribution": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-introduction": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\pi\\s*N\\^"
+],
+"note.standard-model.setting-machine-verification": [
+"10\\^\\{12[02]\\}",
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-one-number": [
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-partner-sector-quantified": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-prior-art": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.setting-successor-problems": [
+"N\\^\\{?-?\\d",
+"v\\s*/\\s*H"
+],
+"note.standard-model.setting-weak-angle-pati-salam-route": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.what-chain-decides-what-it-leaves": [
+"N\\^\\{?-?\\d"
+],
+"note.standard-model.what-section-settles-route-series-takes": [
+"N\\^\\{?-?\\d"
+],
+"note.state-selection.setting-machine-verification": [
+"N\\^\\{?-?\\d"
+],
+"note.synthesis.what-n-is-counted": [
+"10\\^\\{12[02]\\}",
+"10\\^\\{6[01]\\}",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\pi\\s*N\\^"
+],
+"note.transport.setting-completion-conformal-model": [
+"N\\^\\{?-?\\d"
+],
+"note.transport.setting-completion-conformal-model-2": [
+"N\\^\\{?-?\\d"
+],
+"note.transport.setting-symmetry-action-equivariance": [
+"N\\^\\{?-?\\d"
+],
+"odd-extensions.imported-frozen-point-degenerate-algebras": [
+"N\\^\\{?-?\\d"
+],
+"pairing.imported-schwarzschild-connection-curvature": [
+"N\\^\\{?-?\\d"
+],
+"programme.n-parameter-of-the-laws": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"quantity.weak-mixing-angle-mz": [
+"N\\^\\{?-?\\d"
+],
+"rungs.imported-results-t12-used-registration": [
+"N\\^\\{?-?\\d"
+],
+"scrambling.clock-inventory-boundary-modes": [
+"N\\^\\{?-?\\d"
+],
+"scrambling.per-slice-verification-two-failed-aggregations": [
+"N\\^\\{?-?\\d"
+],
+"scrambling.slice-volume-exactly-per-unit-killing": [
+"N\\^\\{?-?\\d"
+],
+"sheaf.weighted-limit": [
+"N\\^\\{?-?\\d"
+],
+"simulations.imported-low-energy-scattering-two-dimensions": [
+"N\\^\\{?-?\\d"
+],
+"singularity.imported-induced-geometry-interior-slice": [
+"N\\^\\{?-?\\d"
+],
+"singularity.imported-interior-collar-kasner-form": [
+"N\\^\\{?-?\\d"
+],
+"singularity.transport-schwarzschild-fibre": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.dating-descent": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"standard-model.imported-one-loop-running-trace-ratio": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.imported-two-loop-gauge-coefficients": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.largeness-number-universes-boundary-modes": [
+"10\\^\\{12[02]\\}",
+"10\\^\\{6[01]\\}",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"standard-model.one-number-explain": [
+"10\\^\\{6[01]\\}",
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M"
+],
+"standard-model.spectrum-run": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.supersymmetric-row-two-loops": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.trichotomy-what-kind-number": [
+"10\\^\\{12[02]\\}",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\ln N",
+"\\\\log_\\{?2\\}?\\s*N",
+"\\\\pi\\s*N\\^",
+"v\\s*/\\s*H"
+],
+"standard-model.weak-angle-over-derived-generation": [
+"N\\^\\{?-?\\d"
+],
+"standard-model.what": [
+"10\\^\\{12[02]\\}",
+"10\\^\\{6[01]\\}",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"standard-model.why-large": [
+"10\\^\\{12[02]\\}",
+"10\\^\\{6[01]\\}",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"std-algebra.complexification-is-the-odd-extension": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.c-loc-entropy-clause-curvature-independent-density": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.complex-neutrino-stages-keep-the-solar-sum-rule": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion": [
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.d-term-level-free-at-fixed-n": [
+"10\\^\\{6[01]\\}",
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.de-sitter-entropy-pi-n-squared": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.de-sitter-mode-count": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.density-modes-bosonise-only-along-one-null-direction": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.diagonal-kasner-momentum-constraint": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.einstein-route-makes-n-initial-data": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\sqrt\\{3/\\\\Lambda\\}",
+"v\\s*/\\s*H"
+],
+"synthesis.euler-term-horizon-entropy-shift": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum": [
+"N\\^\\{?-?\\d",
+"\\\\sqrt\\{N\\}"
+],
+"synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.frozen-point-geometry-reads-descent-as-vacuum": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-fritzsch-texture-cabibbo-formula": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-jacobi-triple-product": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-nufit-6-oscillation-parameter-ranges": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-theta-function-identities": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-two-doublet-top-to-charged-higgs-width-ratio": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.imported-whitney-product-formula-and-projective-space": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.incidence-vacua-thermofield-real-capacity": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.kasner-curvature-wall-is-negative-weight-helicity": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.kerr-ring-count-misses-area-law": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.kerr-ring-double-cover-data": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.killing-clock-weights-binary-residue": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.loc-independent-of-clausius-and-killing-data": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons": [
+"G\\s*\\\\Lambda",
+"N\\^\\{?-?\\d"
+],
+"synthesis.majorana-scale-free-on-pati-salam-route": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.nilpotent-steps-derivative-exponential-and-boost": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation": [
+"N\\^\\{1/2\\}",
+"N\\^\\{?-?\\d"
+],
+"synthesis.number-diagonal-dynamics-spreads-nothing": [
+"N\\^\\{?-?\\d",
+"\\\\ln N"
+],
+"synthesis.number-n-registered-free-input": [
+"10\\^\\{6[01]\\}",
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.principality-is-genericity": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.promoted-norm-one-global-pair": [
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"\\\\sqrt\\{3/\\\\Lambda\\}"
+],
+"synthesis.promoted-norm-weyl-clock-flat-weight": [
+"G\\s*\\\\Lambda",
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.residue-common-weight-particle-hole": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.residue-from-mode-entropy": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.rung-field-charged-scalar-sum-rule": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.rung-unit-second-free-number": [
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.sds-clausius-fixes-area-constant": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.series-family-structures-give-no-lopsided-second-stage": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.series-wald-entropy-changes-without-flux-on-local-horizons": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.smallness-monomials-exact-hierarchy-casimir": [
+"G\\s*\\\\Lambda",
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\^\\{?-?\\d"
+],
+"synthesis.solar-angle-light-plane-sum-rule": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.theta23-at-s3-s2-direction": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.tower-charge-sector-label-temperature-not": [
+"N\\^\\{?-?\\d",
+"\\\\pi\\s*N\\^"
+],
+"synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev": [
+"N\\^\\{?-?\\d"
+],
+"synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient": [
+"N\\^\\{?-?\\d"
+],
+"transport.group-null-rotations": [
+"N\\^\\{?-?\\d"
+],
+"transport.no-go-level-elements": [
+"N\\^\\{?-?\\d"
+],
+"note.dark-energy.setting-contribution": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M"
+],
+"note.dark-energy.setting-what-kind-number-norm-fourth": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M"
+],
+"standard-model.imported-frozen-point-dictionary": [
+"10\\^\\{6[01]\\}",
+"M_\\{?P\\}?\\s*/\\s*H"
+],
+"standard-model.what-derived-what-not": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.majorana-element-is-null-blade-no-frozen-point-condition": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.majorana-scale-free-input": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.rung-field-on-the-lift-locus": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"synthesis.rung-unit-transverse-to-norm": [
+"M_\\{?P\\}?\\s*/\\s*H",
+"N\\s*=\\s*M",
+"v\\s*/\\s*H"
+],
+"correspondence.spinor-identification": [
+"G\\s*\\\\Lambda"
+],
+"lepton.imported-duality-pair-system": [
+"G\\s*\\\\Lambda"
+],
+"note.correspondence.isomorphism-witt-pair": [
+"G\\s*\\\\Lambda"
+],
+"note.correspondence.setting-what-proved-what-imported-what": [
+"G\\s*\\\\Lambda"
+],
+"note.simulations.setting-cooling": [
+"G\\s*\\\\Lambda"
+],
+"one-relation.third-constant-conversion-constant-between-charts": [
+"G\\s*\\\\Lambda"
+],
+"rungs.imported-spinor-identification-witt-data-line": [
+"G\\s*\\\\Lambda"
+],
+"standard-model.chirality-two-halves-spinor-module-conjugation": [
+"G\\s*\\\\Lambda"
+],
+"standard-model.hyp-s-slot-statistics": [
+"G\\s*\\\\Lambda"
+],
+"standard-model.imported-cauchy-decomposition-exterior-power": [
+"G\\s*\\\\Lambda"
+],
+"standard-model.imported-fock-model-twistor-space": [
+"G\\s*\\\\Lambda"
+],
+"standard-model.slot-module-hypothesis": [
+"G\\s*\\\\Lambda"
+],
+"std-algebra.complex-clifford-algebra": [
+"G\\s*\\\\Lambda"
+],
+"std-algebra.fock-representation": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.cpt-closure-forces-slot-module-and-chirality": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.slot-parity-decides-hypothesis-s": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.twisted-wall-induction-conserves-dying-line-class": [
+"G\\s*\\\\Lambda"
+],
+"synthesis.majorana-scale-not-carried-by-rung-frame-boost": [
+"v\\s*/\\s*H"
+],
+"neutrino.seesaw-what-gauge-invariance-proves-what": [
+"\\\\sqrt\\{3/\\\\Lambda\\}"
+],
+"odd-extensions.two-readings-which-which": [
+"\\\\sqrt\\{3/\\\\Lambda\\}"
+],
+"synthesis.de-sitter-static-boost-frozen-point": [
+"\\\\sqrt\\{3/\\\\Lambda\\}"
+],
+"note.decisions.two-boost-flows": [
+"\\\\ln N"
+],
+"scrambling.spreading-law-chaos-bound-saturated": [
+"\\\\ln N"
+],
+"singularity.l-boundary-mode-locality": [
+"\\\\ln N"
+],
+"synthesis.adiabatic-deposit-modulation-is-a-time-shift": [
+"\\\\ln N"
+],
+"synthesis.affine-cell-boost-spreads-without-scrambling": [
+"\\\\ln N"
+],
+"synthesis.boost-evolution-on-generators-is-one-unitary-group": [
+"\\\\ln N"
+],
+"synthesis.boundary-mode-thermal-entropy": [
+"\\\\ln N"
+],
+"synthesis.phase-flow-is-time-rotor-flow-kms-continuation": [
+"\\\\ln N"
+],
+"field-theory.how-close-tower-comes-ccr": [
+"\\\\sqrt\\{N\\}"
+]
+},
+"meta": [
+{
+"id": "angle.imported-singularity-papers-state-selection",
+"title": "Imported: the singularity paper's state selection",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "correspondence.spinor-identification",
+"title": "The spinor identification",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "dark-energy.under-action-written-norm-parameter-laws",
+"title": "Under the action as written, the norm is a parameter of the laws",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "dark-energy.variable-exponents-residue-pointwise-corrections-are",
+"title": "Variable exponents: the residue is pointwise, the corrections are subleading",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "dark-energy.wall-counterterm",
+"title": "The wall counterterm",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "dark-matter.reduced-response-gravity-needs-supporting-stress",
+"title": "A reduced response to gravity needs a supporting stress; the sheets move",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "dark-matter.stored-asymmetry-charge-not-number",
+"title": "The stored asymmetry is a charge, not a number",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "descent-lift.pairing-creator-under-transport-algorithm",
+"title": "The pairing creator under the transport algorithm",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "families.absolute-scale-clean-negative-result",
+"title": "The absolute scale: a clean negative result",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "families.why-kinematic-attacks-had-fail",
+"title": "Why the kinematic attacks had to fail",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "field-theory.how-close-tower-comes-ccr",
+"title": "How close the tower comes to the CCR",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "interior.imported-schwarzschild-curvature-spectrum",
+"title": "Imported: the Schwarzschild curvature spectrum",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "interior.kasner-form-interior",
+"title": "Kasner form of the interior",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "lepton.imported-duality-pair-system",
+"title": "Imported: duality in the pair system",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "neutrino.mixing-none-leading-order",
+"title": "Mixing: none at leading order",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "neutrino.rank-one-seesaw-ordering-sum-double",
+"title": "The rank-one seesaw: ordering, sum, and the double-beta values",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "neutrino.seesaw-what-gauge-invariance-proves-what",
+"title": "The seesaw: what gauge invariance proves, and what is assumed",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "note.correspondence.isomorphism-witt-pair",
+"title": "The isomorphism on the Witt pair",
+"kind": "note",
+"status": "example"
+},
+{
+"id": "note.correspondence.setting-what-proved-what-imported-what",
+"title": "What is proved, what is imported, what is conjectured",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.dark-energy.setting-contribution",
+"title": "Contribution",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.dark-energy.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.dark-energy.setting-what-kind-number-norm-fourth",
+"title": "What kind of number the norm is: the fourth alternative",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.dark-matter.halo-built-collisionless-sheets-cold-dark",
+"title": "A halo built from collisionless sheets is a cold-dark-matter halo",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.decisions.two-boost-flows",
+"title": "The two boost flows",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.families.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.mass.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.mass.what-nullity-fixes",
+"title": "What nullity fixes",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.one-relation.where-exhaustiveness-first-fails-4-quadric",
+"title": "Where exhaustiveness first fails: the $\\nu = 4$ quadric",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.primer.setting-notation-glance",
+"title": "Notation at a glance",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.primer.setting-rotors-how-algebra-moves-things",
+"title": "Rotors: how the algebra moves things",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.primer.setting-signature-arrival-null-vectors",
+"title": "Signature, and the arrival of null vectors",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.programme.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.programme.setting-measure-two-numbers-one-bit",
+"title": "The measure: two numbers and one bit",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.programme.setting-series-paper-paper-2",
+"title": "The series, paper by paper",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.rungs.setting-fallback-s-tier-c-premise",
+"title": "The fallback: (S) as a Tier C premise",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.scrambling.setting-contribution",
+"title": "Contribution",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.scrambling.setting-introduction",
+"title": "Introduction",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.simulations.setting-confinement-scale-drops-out",
+"title": "The confinement scale drops out",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.simulations.setting-cooling",
+"title": "Cooling",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.simulations.setting-gravity",
+"title": "Gravity",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.singularity.setting-eviction-theorem-falling-branch-without-3",
+"title": "The eviction theorem: the falling branch without typicality",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.singularity.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.singularity.setting-model",
+"title": "The model",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.abstract",
+"title": "Abstract",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.sensitivity-one-loop-decides-nothing-about",
+"title": "Sensitivity: one loop cannot decide the supersymmetric content",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.standard-model.setting-contribution",
+"title": "Contribution",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-introduction",
+"title": "Introduction",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-one-number",
+"title": "The one number",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-partner-sector-quantified",
+"title": "The partner sector quantified",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-prior-art",
+"title": "Prior art",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-successor-problems",
+"title": "Successor problems",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.setting-weak-angle-pati-salam-route",
+"title": "The weak angle on the Pati-Salam route",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.standard-model.what-chain-decides-what-it-leaves",
+"title": "what the chain decides, and what it leaves",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.standard-model.what-section-settles-route-series-takes",
+"title": "what the section settles, and the route the series takes",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.state-selection.setting-machine-verification",
+"title": "Machine verification",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.synthesis.what-n-is-counted",
+"title": "What N is, counted",
+"kind": "note",
+"status": "remark"
+},
+{
+"id": "note.transport.setting-completion-conformal-model",
+"title": "The completion: the conformal model",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.transport.setting-completion-conformal-model-2",
+"title": "The completion: the conformal model",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "note.transport.setting-symmetry-action-equivariance",
+"title": "The symmetry action, and equivariance",
+"kind": "note",
+"status": "setting"
+},
+{
+"id": "odd-extensions.imported-frozen-point-degenerate-algebras",
+"title": "Imported: the frozen point at $\\Lambda = 0$, and the degenerate algebras",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "odd-extensions.two-readings-which-which",
+"title": "The two readings, and which is which",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "one-relation.third-constant-conversion-constant-between-charts",
+"title": "The third constant is the conversion constant between the charts",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "pairing.imported-schwarzschild-connection-curvature",
+"title": "Imported: the Schwarzschild connection and curvature",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "programme.n-parameter-of-the-laws",
+"title": "The number N: a law under the action as written, initial data once promoted",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "quantity.weak-mixing-angle-mz",
+"title": "The weak mixing angle at the Z mass",
+"kind": "quantity",
+"status": "measured"
+},
+{
+"id": "rungs.imported-results-t12-used-registration",
+"title": "Imported: results of T12 used in the registration",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "rungs.imported-spinor-identification-witt-data-line",
+"title": "Imported: the spinor identification, the Witt data, and the line at infinity",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "scrambling.clock-inventory-boundary-modes",
+"title": "The clock inventory of the boundary modes",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "scrambling.per-slice-verification-two-failed-aggregations",
+"title": "The per-slice verification, and the two failed aggregations",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "scrambling.slice-volume-exactly-per-unit-killing",
+"title": "The slice volume is exactly $8\\pi M$ per unit Killing time, at leading order in $r_c/2M$",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "scrambling.spreading-law-chaos-bound-saturated",
+"title": "The spreading law, and the chaos bound met, not saturated",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "sheaf.weighted-limit",
+"title": "The weighted limit",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "simulations.imported-low-energy-scattering-two-dimensions",
+"title": "Imported: low-energy scattering in two dimensions",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "singularity.imported-induced-geometry-interior-slice",
+"title": "Imported: the induced geometry of an interior slice",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "singularity.imported-interior-collar-kasner-form",
+"title": "Imported: the interior collar in Kasner form",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "singularity.l-boundary-mode-locality",
+"title": "(L$_E$): boundary-mode locality, as descent covariance on finite windows",
+"kind": "claim",
+"status": "postulate"
+},
+{
+"id": "singularity.transport-schwarzschild-fibre",
+"title": "The transport, on the Schwarzschild fibre",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.chirality-two-halves-spinor-module-conjugation",
+"title": "Chirality: the two halves of the spinor module, and conjugation as duality",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.dating-descent",
+"title": "Dating the descent",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "standard-model.hyp-s-slot-statistics",
+"title": "Hypothesis (S): slot statistics, derived from the slot-module hypothesis",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.imported-cauchy-decomposition-exterior-power",
+"title": "Imported: the Cauchy decomposition of an exterior power",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "standard-model.imported-fock-model-twistor-space",
+"title": "Imported: the Fock model of the conformal spinor space",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.imported-frozen-point-dictionary",
+"title": "Imported: the frozen point and the dictionary",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.imported-one-loop-running-trace-ratio",
+"title": "Imported: one-loop running, and the trace ratio of a simple unifying group",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "standard-model.imported-two-loop-gauge-coefficients",
+"title": "Imported: the two-loop gauge coefficients",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "standard-model.largeness-number-universes-boundary-modes",
+"title": "The largeness of $N$ is the size of the universe's boundary mode space",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "standard-model.one-number-explain",
+"title": "One number to explain",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "standard-model.slot-module-hypothesis",
+"title": "The slot-module hypothesis behind (S)",
+"kind": "claim",
+"status": "postulate"
+},
+{
+"id": "standard-model.spectrum-run",
+"title": "The spectrum run",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.supersymmetric-row-two-loops",
+"title": "The supersymmetric row at two loops",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.trichotomy-what-kind-number",
+"title": "The trichotomy: what kind of number $N$ is",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.weak-angle-over-derived-generation",
+"title": "The weak angle over the derived generation",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.what",
+"title": "What $N$ is",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "standard-model.what-derived-what-not",
+"title": "What is derived and what is not",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "standard-model.why-large",
+"title": "Why $N$ is large",
+"kind": "claim",
+"status": "conjectured"
+},
+{
+"id": "std-algebra.complex-clifford-algebra",
+"title": "The complex Clifford algebra, its classification modulo 2, its Fock model and its pairing",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "std-algebra.complexification-is-the-odd-extension",
+"title": "Complexification is the odd extension",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "std-algebra.fock-representation",
+"title": "The Fock representation, and the Fock space as a minimal left ideal",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+"title": "A finite subgroup of colour shares the strong-coupling expansion to link degree three",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.adiabatic-deposit-modulation-is-a-time-shift",
+"title": "A deposit modulation is adiabatic only as a local time shift",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.affine-cell-boost-spreads-without-scrambling",
+"title": "The boost spreads affine cells without scrambling",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.boost-evolution-on-generators-is-one-unitary-group",
+"title": "Boost evolution on horizon generators is one unitary dilation group",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.boundary-mode-thermal-entropy",
+"title": "The thermal entropy of one boundary mode, and its maximum at zero weight",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.c-loc-entropy-clause-curvature-independent-density",
+"title": "A curvature-independent horizon entropy density is one constant, 1/4",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase",
+"title": "Cabibbo angle from one-type quark stages selects a near quarter-turn phase",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit",
+"title": "Central limit of tower fluctuation states for product block states, with the kernel unit",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors",
+"title": "The Koide circulant as charged-lepton matrix against the global fit",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet",
+"title": "Late-time Hawking state from the ground state on the ingoing sheet",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.complex-neutrino-stages-keep-the-solar-sum-rule",
+"title": "Complex neutrino stages keep the solar sum rule",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion",
+"title": "A constant D-term level fixes the weak scale under promotion",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.cpt-closure-forces-slot-module-and-chirality",
+"title": "CPT closure forces the slot module; anomaly freedom, the chirality",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.d-term-level-free-at-fixed-n",
+"title": "The D-term level is free at fixed N on the stored relations",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.de-sitter-entropy-pi-n-squared",
+"title": "The cosmological horizon's entropy is pi N^2",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.de-sitter-mode-count",
+"title": "The cosmological horizon's mode count under the black hole's rule",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.de-sitter-static-boost-frozen-point",
+"title": "The cosmological horizon's boost is the frozen point's time translation",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.density-modes-bosonise-only-along-one-null-direction",
+"title": "Window density forms are strip differences; total densities of uniform seas carry none",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.diagonal-kasner-momentum-constraint",
+"title": "The momentum constraints of the diagonal variable-exponent class",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.einstein-route-makes-n-initial-data",
+"title": "On the Clausius route, N is initial data without promotion",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.euler-term-horizon-entropy-shift",
+"title": "The Euler term shifts horizon entropy by a topological constant",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum",
+"title": "Fluctuation forms of the tower and density-wave bosons of the null vacuum",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x",
+"title": "The frozen-point action as BF transport broken on $I \\wedge X$",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.frozen-point-geometry-reads-descent-as-vacuum",
+"title": "Under (F), the frozen point reads the descent deposit as vacuum",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional",
+"title": "Odd-parity gravity channels, l >= 2, are 2D at the static-frame horizon; even one way",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition",
+"title": "Under (EW), (U) is a charged-fermion condition, unmet at diagonal order",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.imported-fritzsch-texture-cabibbo-formula",
+"title": "Imported: the Fritzsch-texture Cabibbo formula (Fritzsch and Xing 1999)",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+"title": "Imported: the Hadamard parametrix of the squared Dirac operator",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-jacobi-triple-product",
+"title": "Imported: the Jacobi triple product identity",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-local-covariance-with-scaling-of-time-ordered-products",
+"title": "Imported: local covariance with scaling of time-ordered products (Hollands-Wald)",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-nufit-6-oscillation-parameter-ranges",
+"title": "Imported: NuFIT 6.0 oscillation parameter ranges (Esteban et al. 2024)",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-theta-function-identities",
+"title": "Imported: the Jacobi theta and Dedekind eta identities",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-two-doublet-top-to-charged-higgs-width-ratio",
+"title": "Imported: the two-doublet width ratio of top to charged Higgs at tree level",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.imported-whitney-product-formula-and-projective-space",
+"title": "Imported: the Whitney product formula and the classes of projective space",
+"kind": "claim",
+"status": "imported"
+},
+{
+"id": "synthesis.incidence-vacua-thermofield-real-capacity",
+"title": "No incidence vacuum is real; incidence lines as thermofield doubles",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space",
+"title": "The joint Clifford clause (f) is a Klein convention on the composite space",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.kasner-curvature-wall-is-negative-weight-helicity",
+"title": "The Kasner curvature wall is the negative-weight helicity",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue",
+"title": "Matter at a Kasner wall: Maxwell bounces, only stiff matter moves the residue",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.kerr-ring-count-misses-area-law",
+"title": "For Kerr the literal curvature-cutoff count misses the area law",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.kerr-ring-double-cover-data",
+"title": "The Kerr data on the double cover of the ring",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.killing-clock-weights-binary-residue",
+"title": "Killing-clock weights make the residue binary",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations",
+"title": "Ladder states are locally the product state but fluctuate as boson number states",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+"title": "The linear rung field adds a neutral normal pair to the scalon sum",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.loc-independent-of-clausius-and-killing-data",
+"title": "(Loc) is independent of Clausius and the Killing data",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons",
+"title": "MacDowell-Mansouri as the reduction of five-dimensional Chern-Simons",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.majorana-element-is-null-blade-no-frozen-point-condition",
+"title": "The Majorana element is a null blade; no frozen-point condition fixes its scale",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.majorana-scale-free-input",
+"title": "Premise: the Majorana scale is a free input",
+"kind": "claim",
+"status": "postulate"
+},
+{
+"id": "synthesis.majorana-scale-free-on-pati-salam-route",
+"title": "The Majorana scale is free on the Pati-Salam route",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.majorana-scale-not-carried-by-rung-frame-boost",
+"title": "The rung-frame boost does not carry the Majorana scale",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.nilpotent-steps-derivative-exponential-and-boost",
+"title": "Nilpotent steps: dual-number derivative, nilpotent exponential and nilpotent boost",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.null-vacuum-singularity-under-reparametrisation-and-dilation",
+"title": "Null-vacuum singularity under reparametrisation and dilation",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.number-diagonal-dynamics-spreads-nothing",
+"title": "Number-diagonal dynamics has no exponential operator spreading",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.number-n-registered-free-input",
+"title": "Premise (N): the large number N is a registered free input",
+"kind": "claim",
+"status": "postulate"
+},
+{
+"id": "synthesis.phase-flow-is-time-rotor-flow-kms-continuation",
+"title": "The phase flow is the time evolution; the rotor flow is its KMS continuation",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.principality-is-genericity",
+"title": "Principality is genericity, not symmetry",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.promoted-norm-one-global-pair",
+"title": "The promoted norm as the one global pair of the reduction",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.promoted-norm-weyl-clock-flat-weight",
+"title": "The promoted norm's clock: Weyl square in vacuum, Euler excess with matter",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.residue-common-weight-particle-hole",
+"title": "The registered residue is particle-hole invariance",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.residue-from-mode-entropy",
+"title": "The calibration residue re-expressed as a reciprocal mode entropy",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.restricted-dirac-hadamard-parametrix-on-a-null-hypersurface-is-the-null-vacuum-plus-a-bounded-kernel",
+"title": "Dirac parametrix on a null hypersurface: the null vacuum plus a bounded kernel",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.rung-field-charged-pair-decouples-from-fermions-under-conjugate-reading",
+"title": "The charged pair decouples from fermions under the per-sector reading",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.rung-field-charged-scalar-sum-rule",
+"title": "A tree-level sum rule for the rung field's charged pair",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
+"title": "The rung field's D-term action and tree masses on the lift locus",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.rung-field-on-the-lift-locus",
+"title": "The rung field on the null-lift locus",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.rung-unit-second-free-number",
+"title": "The weak scale as a second free number beside $N$",
+"kind": "claim",
+"status": "postulate"
+},
+{
+"id": "synthesis.rung-unit-transverse-to-norm",
+"title": "A change of rung unit is transverse to the norm",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.sds-clausius-fixes-area-constant",
+"title": "Clausius on Schwarzschild-de Sitter fixes the area constant",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.series-family-structures-give-no-lopsided-second-stage",
+"title": "The series' family structures give no lopsided second stage",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.series-wald-entropy-changes-without-flux-on-local-horizons",
+"title": "Wald entropy changes without flux on local horizons, against (Loc)",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+"title": "Slot module: the faces are separate composites, generation number free",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.slot-parity-decides-hypothesis-s",
+"title": "Slot parity decides Hypothesis (S)",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.smallness-monomials-exact-hierarchy-casimir",
+"title": "The smallness problems as exact monomials in $N$",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.solar-angle-light-plane-sum-rule",
+"title": "The solar angle at the S3 to S2 direction needs a lopsided second stage",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.taub-nut-cauchy-horizon-is-taub-point-with-complex-residue",
+"title": "The Taub-NUT Cauchy horizon as a Taub point with complex residue",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping",
+"title": "The residue requires two arrays per unit on average and fixes no grouping",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.theta23-at-s3-s2-direction",
+"title": "Near-maximal theta-23 at the S3 to S2 direction needs the far root and opposite signs",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.tower-charge-sector-label-temperature-not",
+"title": "The tower charge is a sector label; the temperature is not",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev",
+"title": "Rung-field transmutation needs a charged pair near 450 GeV, now excluded",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.twisted-wall-induction-conserves-dying-line-class",
+"title": "The twisted wall induction carries the dying line's class to every shadow wall",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient",
+"title": "Two-loop QED in the spacetime algebra gives the second beta coefficient",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "transport.group-null-rotations",
+"title": "The group of null rotations",
+"kind": "claim",
+"status": "proved"
+},
+{
+"id": "transport.no-go-level-elements",
+"title": "No-go at the level of elements",
+"kind": "claim",
+"status": "proved"
+}
+]
+}
