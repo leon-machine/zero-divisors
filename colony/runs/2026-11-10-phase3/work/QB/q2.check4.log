@@ -1,0 +1,8 @@
+I405  synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse
+      synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products is declared and untouched, as expected: coverage.yaml: cited in clause (iii) for the form of the difference of two extensions (derivatives of delta of order at most 2); a statement about distributions, nothing to compute
+I405  synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse
+      synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four is declared and untouched, as expected: coverage.yaml: its clause (iv) supplies the hypothesis that the degree of divergence is 2 and the hypothesis (PI); both are hypotheses here and no check computes with the kernel
+
+synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse: 0 error(s), 2 other finding(s); check result: pass
+synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse ok= True ['W215']
+done

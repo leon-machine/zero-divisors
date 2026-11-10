@@ -1,0 +1,16 @@
+functions:
+  check_invariant_local_terms_of_dimension_two_for_two_vector_slots:
+    kind: exact
+    clauses: ["(i) invariants of three vector slots 0, of four 4 (2 symmetric and 2 antisymmetric in the derivative pair), of two 1", "(i) invariant bilinear forms linear in a map of bivectors: 6, 3 on symmetric maps, 2 under the protraction identity, 0 on Weyl type", "(i) a.M(b) and (a.b) M independent on a map of Ricci type"]
+    omits: "exact ranks under three generators of the Lorentz algebra of Cl(1,3); that the coefficients are invariant tensors of this kind is the imported Fact's form and the proof's reading of it, not computed"
+  check_divergence_of_the_field_strength_is_laplacian_minus_gradient_divergence_plus_ricci:
+    kind: sampled
+    clauses: ["(ii) D.(D ^ A) = Lap A - D(D.A) + calR(A) on one torsion-free polynomial field and one generic vector field; the opposite sign of the Ricci term fails", "(ii) D ^ D chi = 0 without torsion and not with it"]
+    omits: "one field at one point; the identity for every torsion-free field is the proof's"
+  check_ward_identity_leaves_one_constant_times_the_divergence_of_the_field_strength:
+    kind: complete
+    clauses: ["(ii) the conditions K(D chi) = 0 on one torsion-free field, two scalars and two masses have rank 4 with solutions the multiples of (1, -1, 0, 0, 1)"]
+    omits: "complete as an upper bound (conditions from one field are necessary for constants common to all fields); that the solution is transverse on every field is the proof's"
+untouched_premises:
+  synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products: "cited in clause (iii) for the form of the difference of two extensions (derivatives of delta of order at most 2); a statement about distributions, nothing to compute"
+  synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four: "its clause (iv) supplies the hypothesis that the degree of divergence is 2 and the hypothesis (PI); both are hypotheses here and no check computes with the kernel"
