@@ -54,3 +54,16 @@ After acceptance of the protraction identity: uses edge to it @1 (clause (iii): 
 contraction and the Ricci symmetry, now in (iii) for every dimension), claimref in the formal and in the proof of
 (i) and (ii), "Hypothesis (PI)" removed from formal, one-liner and proof; premise() call added in the two check
 functions that rely on it.
+
+## Step 2 (after acceptance of the protraction identity at version 1)
+Curved-field proposal only. check4: pending (orchestrator).
+- uses: synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion@1 added.
+- Formal: "Hypothesis (PI)" replaced by a citation of its clause (iii) (the identity and the Ricci symmetry), with a
+  note that the stored curved-field theorem still carries it as a hypothesis; clause (i) heading and count reworded;
+  no "(PI)" remains at any level. One-liner: the identity is no longer listed among the givens. Technical: named
+  as a stored theorem. Proof: both uses ((i), the count; (ii), Ricci symmetry) cite clause (iii) by claimref.
+- Note: hypothesis sentence replaced; the "sibling, intended citation" sentence removed.
+- Check: premise() on the identity added in check_invariant_local_terms_of_dimension_two_for_two_vector_slots
+  (the count 2) and in check_divergence_of_the_field_strength_is_laplacian_minus_gradient_divergence_plus_ricci
+  (Ricci symmetry on the torsion-free field). Coverage: the untouched-premise reason no longer mentions (PI).
+- runcheck: 3 of 3 pass.

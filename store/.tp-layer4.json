@@ -47866,6 +47866,59 @@
 }
 ]
 },
+"synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation": {
+"failed": false,
+"findings": [],
+"key": "7706e467290a4ee6",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_background_point",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall"
+]
+},
+{
+"derivation": null,
+"func": "check_three_operators_force_lapse_and_shift",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_flat_gauge_solution_is_the_spectator_equation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_order_zero_and_curvature_perturbation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_clifford_frame_and_residue",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall"
+]
+}
+]
+},
 "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch": {
 "failed": false,
 "findings": [],
