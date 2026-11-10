@@ -1,0 +1,27 @@
+functions:
+  check_background_point:
+    kind: exact
+    clauses:
+    - "setting: both five-dimensional isotropic vacuum points reduce to (1/3,1/3,1/3) with c^2 = 2/3; the background Ricci tensor equals the scalar's source; control exponent 1/2 fails; epsilon = 3"
+  check_three_operators_force_lapse_and_shift:
+    kind: exact
+    clauses:
+    - "(i) the three linear operators of the lapse, the shift and the scalar, component by component"
+    - "(i) the time-space component forces f = u; the transverse diagonal component forces the shift, with the opposite sign failing"
+  check_flat_gauge_solution_is_the_spectator_equation:
+    kind: exact
+    clauses:
+    - "(i) with the forced lapse and shift only the (0,0) and (1,1) components survive, each a multiple of the spectator operator; all ten vanish modulo the equation"
+    - "(i) controls: friction 2, the opposite shift, and f = 2u fail"
+  check_order_zero_and_curvature_perturbation:
+    kind: sampled
+    clauses:
+    - "(ii) the operator on s^n is Bessel's of order 0 for six exponents n; control order 1/2 fails"
+    - "(iii) zeta = u/3 and z^2/a^2 = 6 in units 8 pi G = 1"
+    omits: "(iii) the invariance of zeta under changes of time is the two-line argument of the proof; (iv) the spectrum is the stored clause, not recomputed"
+  check_clifford_frame_and_residue:
+    kind: sampled
+    clauses:
+    - "setting: the stated field in Cl(1,3) has first-order derived metric 2F on (0,0) and B on (0,1), at one rational sample"
+    - "setting: B_w^2 = 1/3 and the completed residue in Cl(1,4) is a unit boost for c^2 = 2/3"
+untouched_premises: {}

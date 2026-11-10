@@ -1,0 +1,22 @@
+functions:
+  check_total_depends_on_mass_times_number_only:
+    kind: sampled
+    clauses:
+    - "(i) R1 and R2 give 4/3, 1, 8/(3 pi) and (11 pi + 16)/(3 pi) as identities in pi"
+    - "(i) two rescaled fillings violate R1 and R2, keep mass per unit ball and every share; rescaling the mass alone moves the total to 1 + 64/15 + 116/(3 pi) and 5/6 + 74/27 + 80/(21 pi)"
+    omits: "the statement for all rescalings is the proof's (the shares are functions of the products); two rescalings are sampled"
+  check_sphere_law_is_the_ball_law_and_fixes_the_unit:
+    kind: sampled
+    clauses:
+    - "(ii) |S^(D+1)| = 2 pi V_D for D = 0 to 8 from two separate recursions; sphere shares equal ball shares at D = 2, 3, 4"
+    - "(ii) total masses on the sphere equal at ell = d and in ratio (ell/d)^(D+1) otherwise, in the normalisation L = d, for three pairs (ell, d)"
+    omits: "the reading of mass per unit sphere measure as spatial density over a common length is the stated reading, not checked; the identity for all D is the proof's induction"
+  check_mirror_term_is_obtained_twice:
+    kind: partial
+    clauses:
+    - "(iii) share one at D = 3 under (E); with the stored 199/200 the total drops by exactly 1/200; both totals within 0.065 of 0.1200/0.02237; closed form in (5.36431, 5.36433)"
+    omits: "the population count's derivation of the mirror share and the disjointness of the two premise sets are the stored result and the audit of clause (v), not recomputed"
+  check_each_remaining_premise_moves_the_total:
+    kind: exact
+    clauses:
+    - "(iv) thicknesses (2, 1) and (1, 2), cubic cells (exactly 5), one tower moved from D = 2 to D = 4: values as identities in pi and distances from the record by rational bounds on pi"
