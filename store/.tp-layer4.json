@@ -45447,6 +45447,56 @@
 }
 ]
 },
+"synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects": {
+"failed": false,
+"findings": [],
+"key": "e83659ba873ea2d3",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_self_adjoint_blades_and_the_order_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_an_effect_relation_forces_the_born_weight_on_one_mode",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional",
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_parity_average_keeps_the_cone_and_adds_no_positivity",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product",
+"synthesis.univalence-even-extension-split"
+]
+},
+{
+"derivation": null,
+"func": "check_even_atom_sees_the_products_of_odd_directions",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate"
+]
+}
+]
+},
 "synthesis.pre-descent-contracting-kasner-stage-premise": {
 "failed": false,
 "findings": [],
