@@ -48,7 +48,12 @@ lineage:
   - synthesis.window-reading-array-killing-energy
   - synthesis.positive-null-energy-gives-r-premises
   - synthesis.half-integer-weight-array-carries-half-ln2
+  - synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1. The intended citation of the free-spacing result left in the note is now a named comparison with a lineage entry; it is not a uses edge, since that result cites clause (iii) of this one.'
   open_problem: op.residue-killing-weights
   note: >-
     Attack item 4 of op.residue-killing-weights asks for a construction of the arrays out of the continuum modes
@@ -64,8 +69,10 @@ extraction:
     the continuum; the values pi r/6, pi r/12 in (iv) and the M-point values are those of the stored base comparison
     (the antiperiodic array against the continuum at window length r), cited for its clauses (ii) to (iv), and so
     hold given the imported theta identities on which the base rests; the dual-form derivation is not repeated.
-    Intended citation, not yet a stored result: the sibling free-spacing result of this run (its half-arrays are
-    clause (iii) here). Clause (ii) is the classical description of the self-adjoint
+    Named for comparison and recorded in lineage, not a premise:
+    synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter, which cites clause (iii)
+    here for its half-arrays and shows that at half a thermal period the fibres one quarter and three quarters pass
+    both energy equalities. Clause (ii) is the classical description of the self-adjoint
     realisations of a first-order operator on an interval (J. von Neumann's extension theory; M. Reed and B.
     Simon, Methods of Modern Mathematical Physics II, section X.1; cited from memory), with the boundary-form
     computation given. The remark on restriction is argued and uses, from memory, the criterion of R. Powers and

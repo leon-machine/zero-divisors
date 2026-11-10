@@ -47,6 +47,10 @@ lineage:
   - synthesis.window-reading-array-killing-energy
   - synthesis.null-ordering-of-counted-units-is-zeta-symmetric
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1. The question left in the note, whether an assumes edge to (Q) is needed, is decided: none, the clauses of (Q) being hypotheses of clause (iv) and (Q) being in the cone through the null-ordering result.'
   open_problem: op.residue-killing-weights
   note: >-
     Attack item 4 of op.residue-killing-weights (which object's entropy the count compares with A/4), adversarial
@@ -63,8 +67,9 @@ extraction:
     assumed at clause level (argued, not audited over the cone): the two tests are stated as equalities of numbers,
     as clauses (i) to (iii) of the null-ordering result are, but the cone through that result contains (Q), (N+),
     J3 and the window reading. (Q) is named for the wording of its parity and particle-hole
-    clauses only, which enter clause (iv) as explicitly stated hypotheses; no edge to (Q) is declared, and whether
-    an assumes edge should be added is a maintainer decision. The comparison at twist one half for every window length is cited from
+    clauses only, which enter clause (iv) as explicitly stated hypotheses; no assumes edge to (Q) is declared
+    (maintainer decision of 10 November 2026): the clauses are hypotheses of clause (iv) and not premises of the
+    result, and (Q) is in the cone already through the null-ordering result. The comparison at twist one half for every window length is cited from
     synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r (ii), and the product of the
     stored array into its two halves, with their values, from
     synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages (iii);

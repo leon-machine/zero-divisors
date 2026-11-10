@@ -40,9 +40,16 @@ checked_by:
 lineage:
   motivated_by:
   - synthesis.premise-positivity-of-values
-  - one-relation.imported-envariance-born-rule
   - one-relation.measure-indifference-borns-rule-located
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Version kept at 1 (lineage and notes only). The lineage entry for the imported envariance Fact, retired
+      on 10 November 2026, is dropped; the stored Born account stays in lineage. The citations of the stored
+      results on the Born weights under (P) (definition of an atom) and on weights on effects (size 2) are
+      uses edges with claimrefs, as stored. No assumes edge to (P): nothing here is under it.
   open_problem: op.positivity-of-values
   note: >-
     Placement in the series' algebra of the Kochen-Specker theorem, asked for by the question which statements

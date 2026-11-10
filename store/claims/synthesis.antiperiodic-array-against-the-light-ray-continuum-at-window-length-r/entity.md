@@ -51,7 +51,13 @@ lineage:
   - synthesis.window-reading-array-killing-energy
   - synthesis.null-ordering-of-counted-units-is-zeta-symmetric
   - synthesis.counted-unit-energy-at-half-offset
+  - synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages
+  - synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version kept at 1. The intended citations of the twist-integral and free-spacing results left in the note are now named comparisons with lineage entries; they are not uses edges, since nothing of them is used in a proof step and both cite this entity.'
   open_problem: op.residue-killing-weights
   note: >-
     Attack item 4 of op.residue-killing-weights (which object's entropy the count compares with A/4): the exact
@@ -79,8 +85,12 @@ extraction:
     of the variance at r = 1, pi^4/(24 Gamma(3/4)^8), follows from Jacobi's derivative formulas and the
     lemniscatic value of theta_3, neither of which is in the stored Fact; it agrees with the bounds of (iv) to
     twelve digits in floating point and is not claimed. Transport-absent: nothing here uses the transport
-    structure. The temperature form (array fixed, temperature varied: the energies agree only at zero and at the Hawking temperature) and the Clausius-integral form of the entropy deficit are included, in (ii) and (iii). All statements are at twist one half; with the spacing and twist left free the energy equalities hold at further points (the sibling result of this run). Intended citation for the sibling results of the same topic: this entity is the base statement of
-    the array-against-continuum comparison.
+    structure. The temperature form (array fixed, temperature varied: the energies agree only at zero and at the Hawking temperature) and the Clausius-integral form of the entropy deficit are included, in (ii) and (iii). All statements are at twist one half; with the spacing and twist left free the energy equalities hold at further points
+    (synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter, clause (ii)), and the
+    array is the twist one half fibre of the continuum's decomposition by the one-window flow
+    (synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages, clause
+    (i)). Both are named for comparison and recorded in lineage, not as premises: nothing of them is used in a
+    proof step here, and both cite this entity as the base statement of the array-against-continuum comparison.
 ---
 
 ## formal

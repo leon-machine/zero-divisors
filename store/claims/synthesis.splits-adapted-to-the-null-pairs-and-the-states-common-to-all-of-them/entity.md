@@ -29,7 +29,7 @@ derivations:
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1
   assumes:
-  - synthesis.premise-positivity-of-values@1
+  - synthesis.premise-positivity-of-values@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -46,7 +46,21 @@ lineage:
   motivated_by:
   - dark-matter.premise-flag-as-datum
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time
+  - synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables
+  - synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Version kept at 1 (notes and lineage only). Cross-references recorded as comparisons: the value at most
+      2 with one mode per party has three stored sufficient conditions, which are consistent: states common to
+      all adapted splits (clause (iv) here), parity-homogeneous settings with even states (synthesis.records-
+      keep-even-states-even-only-for-parity-homogeneous-observables, clause (iii)) and averaged directions
+      (clause (vii) of the stored CHSH bound); the formula for the average of the CHSH element is in
+      synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects, clause (v). Premise
+      (P), from its version 2, cites clause (i) here for the statement that the stored null pairs as vectors
+      fix the split.
   open_problem: op.positivity-of-values
   note: >-
     The second attack item of op.positivity-of-values: whether the datum that defines the modes fixes the

@@ -2270,7 +2270,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side)"
+  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side); the six results on positivity and the Born rule accepted 10 November and Leon's decision 4 of that day (the stored Born account rests on (P) and sharpness in place of the imported envariance argument)"
   statement: >-
     Premise (P), positivity of values (\claimref{synthesis.premise-positivity-of-values}), says that values are
     given by a state: a $k$-linear $\omega$ on the Clifford algebra $\Cl_{k}(p,q)$ over an ordered field with
@@ -2286,8 +2286,9 @@
     the algebra of the foundation and the quantum bound: the identity for the square of the CHSH element is a
     theorem of the algebra, the bound $2\sqrt{2}$ on its value is not, and without positivity the value $4$
     occurs. So whether the series derives the quantum limit on correlations, or assumes it in the form of (P),
-    turns on this problem. The same premise is where a Born rule would enter: the store's Born rule is an
-    imported argument, and (P) with a sharpness condition may replace it.
+    turns on this problem. The same premise is where the Born rule enters: from 10 November the store's Born
+    account rests on (P) with a sharpness condition, in place of an imported argument, so a derivation of (P) or
+    of sharpness is what a derivation of the Born rule in the series now requires.
   known: >-
     Six results hold given (P) (10 November). The base
     (\claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}): for two
@@ -2315,8 +2316,9 @@
     counter-model: on the algebra of two modes the functional $\lambda(x) = \langle(1 + C)x\rangle_{0}$ is
     linear, normalised and real, gives a probability table with no signalling at each of the four pairs of
     settings (the Popescu-Rohrlich box), and has $\lambda(C) = 4$; the form $\lambda(xy^{\dagger})$ has inertia
-    $(12, 4, 0)$, and $\lambda$ is negative only on elements that combine different pairs of settings, never
-    inside one pair. So the algebra with linearity, normalisation and reality does not imply (P). This is a
+    $(12, 4, 0)$, and $\lambda$ is negative only on elements that combine different pairs among those four,
+    never inside one of them (one such element is a joint outcome of a pair of local directions outside the
+    four; see the paragraph of 10 November below). So the algebra with linearity, normalisation and reality does not imply (P). This is a
     functional on one algebra; it is not a model of the store's whole premise set, so the independence of (P)
     from the other premises is not proved. Stored states, elements $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of
     unit trace, satisfy (P); the premise extends that definition from elements to functionals. The split: in
@@ -2327,17 +2329,66 @@
     parity-even observables one mode per party never exceeds $2$ and two modes per party reach every value
     $8r$ with $8r^{2} \le 1$, with no twist; with parity-odd elements allowed, one mode against the
     Klein-twisted other mode exceeds $2$, and the parity average of the descent sends those odd elements to
-    zero. Neither setting is singled out. The Born rule in the store is the imported envariance argument
-    (\claimref{one-relation.imported-envariance-born-rule}).
+    zero. Neither setting is singled out.
+
+    (10 November, the results on positivity and the Born rule.) Settled, all given (P) where states are spoken
+    of. Weights under (P) and sharpness: in every $\Cl_{k}(p,q)$ over an ordered field, a state sharp on an atom
+    (a self-adjoint idempotent whose corner has only its own multiples as self-adjoint elements; atoms exist in
+    every signature) is that atom's scalar-part functional, so its weights are ratios of squared norms, in $k$,
+    with no fine-graining and no continuity; each clause of (P) and the atom condition are needed
+    (\claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional};
+    proved). The stored Born account (\claimref{one-relation.measure-indifference-borns-rule-located}, version
+    4) now rests on this in place of the imported envariance argument, which is retired and named as prior art
+    (Zurek); it is not a derivation of the Born rule: the non-contextuality assumption is relocated into (P),
+    sharpness is assumed, physical states are not shown to be sharp, and the account covers finite algebras and
+    projectors of the algebra only. What (P) says: over $\Q$ and Archimedean ordered fields it is equivalent to
+    non-negative, normalised weights on effects that add whenever the sum is an effect, also across effects that
+    do not commute; that this is the stored residual postulate (weights exist and add) is a reading, argued
+    (\claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects}). The parity
+    average creates no positivity: it keeps the cone of hermitian squares, and a functional invariant under it
+    satisfies (P) only if it is already non-negative on the fixed positive elements; the mode-wise average
+    reduces (P) to finitely many non-negative weights, the total-parity average does not (same result, clause
+    (iv)). No two-valued weights: on the atoms with rational coefficients of two modes no assignment of $0$ and
+    $1$ with one $1$ in each context exists (eighteen atoms in nine contexts, exhaustive), while the even
+    subalgebra of two modes admits one
+    (\claimref{synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them}; no
+    premise about values is used). Local weights do not fix (P): with one twisted mode per party, non-negative
+    weights at all pairs of local directions already give the CHSH bound, the box functional has the weight
+    $-\tfrac{1}{10}$ at a pair outside its four, and a one-parameter family of functionals with the same values
+    on all products of local observables satisfies (P) at one parameter only
+    (\claimref{synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values}); the premise's
+    sentence on what the counter-model shows is restated accordingly (version 2). The split: in the mode
+    algebras the stored null pairs as vectors fix it; the two isotropic subspaces fix it only up to a positive
+    definite form on one of them, and the states common to all such splits are the mixtures of the sector
+    projectors of the number element
+    (\claimref{synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them}). The
+    observables: the sector average $x \mapsto \tfrac12(x + axa)$ of an observable $a$ keeps every even state
+    even exactly when $a$ is even or odd; with one mode per party, parity-homogeneous settings give even states
+    at most $2$ (\claimref{synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables}).
+    That the sector average describes a record is a reading, not a theorem; it is recorded side by side with the
+    stored theorem that stationary states of an even flow are even when no odd resonance occurs
+    (\claimref{synthesis.univalence-from-even-stationary-dynamics}), which under the reading that recorded means
+    stationary gives a stronger conclusion (even only) in another realisation. Still open: a derivation of (P),
+    or of sharpness on an atom, from the measurement premises; which observables are physical; what fixes the
+    null pairs within their isotropic subspaces; and whether non-negative additive weights on the rational
+    projectors of size four are linear (a statement of Gleason type over $\Q$), which is undecided.
   attack:
     - >-
       Derive (P) from the series' structure, for instance from the record-chain account of measurement
       together with a derived Born rule; or prove it independent of the full premise set. The independence
       proof needs more than the counter-model, which is a functional on one algebra and not a model of the
       whole store: it needs an assignment of values that satisfies every other stored premise and violates
-      positivity.
+      positivity. Narrowed (10 November): the descent does not supply (P) (the parity average creates no
+      positivity, \claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects}, clause (iv)), and premises that speak only of the values of products of
+      local observables cannot supply it on two modes (\claimref{synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values}, clause (iv); that the stored recording
+      premises are of that kind is argued). What remains: a derivation of (P), or of sharpness on an atom,
+      from the measurement premises, or the independence proof.
     - >-
-      Decide which stored premise supplies the split of the generators into squares $+1$ and $-1$ that defines
+      Answered in part (10 November; \claimref{synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them}): in the mode algebras the stored null pairs as vectors
+      fix the split, and the two isotropic subspaces they span fix it only up to a positive definite form; that
+      the flag cannot supply that form, and that the observer's tube point may, are observations, not proved.
+      What remains: what fixes the pairs within their subspaces, and the other indefinite signatures. The item
+      as posed: decide which stored premise supplies the split of the generators into squares $+1$ and $-1$ that defines
       the adjoint in indefinite signature. The flag as datum
       (\claimref{dark-matter.premise-flag-as-datum}) is the candidate: test whether its datum fixes the split
       that defines the modes, or only part of it, and what (P) becomes under a change of flag.
@@ -2347,13 +2398,25 @@
       realisation uses parity-odd elements, which the parity average of the descent erases. A stored premise
       that selects one setting, or a result that both describe one physical situation, would settle it; the
       univalence premise (\claimref{singularity.p-univalence}) restricts states, not observables, and its
-      bearing is to be worked out.
+      bearing is to be worked out. Bearing worked out in part (10 November): a restriction to even states
+      together with the parity average does not reduce one setting to the other (\claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects}, clause (v));
+      if univalence is asked to hold after the sector average of an observable as well as before, the
+      observable is even or odd (\claimref{synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables}), which is a reading of recording and not a theorem about it,
+      recorded side by side with the stationary-implies-even theorem (\claimref{synthesis.univalence-from-even-stationary-dynamics}). Which observables are
+      physical stays open.
     - >-
-      Obtain the Born weights from (P) and sharpness on a primitive idempotent, in place of the imported
+      Done (10 November; \claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional}): for every atom of every $\Cl_{k}(p,q)$ and every state sharp on it;
+      the stored Born account cites it in place of the imported envariance argument (Leon's decision 4), which
+      relocates the non-contextuality assumption into (P) and is not a derivation of the Born rule. Not done:
+      that physical states are sharp. The item as posed: obtain the Born weights from (P) and sharpness on a
+      primitive idempotent, in place of the imported
       envariance argument. In the base this is done for one state: normalisation, positivity and the sharp
       value $2\sqrt{2}$ of $C$ fix the functional on self-adjoint elements as $4\langle Px\rangle_{0}$, $P$ the saturating idempotent, and
-      reality fixes it on all elements (clause (viii)); its reading as a Born rule is argued. The general statement, for every primitive
-      idempotent and every state sharp on it, is open, as is its relation to the envariance argument.
+      reality fixes it on all elements (clause (viii)); its reading as a Born rule is argued.
+    - >-
+      Decide whether non-negative additive weights on the projectors with rational coefficients of two modes
+      (size four over $\Q$) are restrictions of linear functionals, a statement of Gleason type; two-valued
+      weights are excluded there (\claimref{synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them}), linearity is undecided.
     - >-
       Decide whether the pure-state values of the sector that meet the denominator law with equality are the
       running maxima among pure-state values for every denominator. Computed: for denominators up to $400$ in
@@ -2362,16 +2425,17 @@
   success: >-
     (P) derived from the series' structure, or shown independent of the full premise set; with the split that
     defines the adjoint traced to a stored premise (or shown to be a further datum), and the status of
-    parity-odd elements as observables decided.
+    parity-odd elements as observables decided. A derivation of sharpness on an atom for physical states would
+    settle the Born-rule part given (P).
   entities:
     - synthesis.premise-positivity-of-values
     - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate
-    - synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state
-    - synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist
-    - synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two
-    - synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records
-    - synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two
-    - dark-matter.premise-flag-as-datum
+    - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional
+    - synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects
+    - synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them
+    - synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values
+    - synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables
+    - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them
   added: "2026-11-10"
 
 # ---------------------------------------------------------------- completion
@@ -2944,7 +3008,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November; the 9 November results and Leon's decisions; the scope of the window reading, Leon's decision of 10 November"
+  source: "T08, successor problem (1); T17, open direction 4; BUILD_REPORT, the calibration residue (22 October); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, the null-ordering result and the adopted window reading, 31 October; the chirality-channel, spinning-hole and outside-count routes, 1 November; the 9 November results and Leon's decisions; the scope of the window reading, Leon's decision of 10 November; the three window results and Leon's decisions of 10 November (version 3 of the window reading, attack item 4 closed)"
   statement: >-
     Under Premise (Q) version 3, weights $\kappa(k + \tfrac12)$, one s-wave
     array carries exactly $\tfrac12\ln 2$ at the Hawking temperature, so under
@@ -2952,7 +3016,7 @@
     holds exactly when the counted unit is two arrays. The counted content is
     proved: the Weyl components per light ray, sixteen per generation, eight
     registered units. Given the adopted window reading the half offset is
-    singled out by (N$_{+}$). What remains a decision is the count unit:
+    singled out by (N$_{+}$), at the spacing $\kappa$ of (Q). What remains a decision is the count unit:
     derive, from the structure of the boundary modes and without assuming the
     area law, that the registered unit is two arrays, or show which unit the
     residue requires.
@@ -3056,7 +3120,21 @@
     and the continuum's entropy rate times the window, $\pi/6$ per complex component, are different objects,
     and the reading does not equate them (scope sentence, version 2 of
     \claimref{synthesis.window-reading-array-killing-energy}). Which object's entropy the count compares with
-    $A/4$ is attack item 4.
+    $A/4$ was attack item 4, closed the same day (next paragraph).
+
+    (10 November, the window results.) Settled by Leon's decision: the count compares the array's own Gibbs
+    entropy with $A/4$, and attack item 4 is closed. At twist one half the energy equalities hold only at a
+    window of one thermal period, and the array's entropy lies below the continuum's rate times the window at
+    every window length
+    (\claimref{synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r}). The array is the twist one half
+    fibre of the continuum, not a Killing-invariant subsystem, and the continuum's $\pi/6$ is the twist average
+    of the arrays' entropies, in the boost ordering
+    (\claimref{synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages}). With the
+    spacing left free the energy equalities admit also the half-arrays and an array at twist one third, so the
+    half offset is singled out at the spacing $\kappa$, and the antiperiodic condition and the spacing are inputs
+    of (Q) (\claimref{synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter}; version 3 of
+    \claimref{synthesis.window-reading-array-killing-energy}). The counterfactual residue $3/(4\pi)$ per unit of two
+    components is recorded and not adopted. None of this derives the count unit.
   attack:
     - >-
       Derive the count unit from the boundary-mode structure: show that a
@@ -3080,29 +3158,33 @@
       successor problem (4)) to replace the two naive rules refuted in
       \claimref{scrambling.per-slice-verification-two-failed-aggregations}.
     - >-
-      Decide which object's entropy the count compares with $A/4$: the array's own Gibbs entropy,
-      $\tfrac12\ln 2$ per array, which is what the count uses, or an entropy constructed from the continuum
-      modes of the light ray, with which the window reading identifies the array for mean energy only
-      (\claimref{synthesis.window-reading-array-killing-energy}). Evidence (computed, 10 November; not a stored
-      result). The array is a chiral complex fermion on a circle of Killing time of length $L = 2\pi/\kappa$
-      with the antiperiodic condition, at $L = \beta$. In the symmetric ordering its $\ln Z$ at ratio
-      $x = L/\beta$ is the continuum's extensive value $\pi x/12$ plus a correction from the dual channel,
-      and it is invariant under $x \to 1/x$; the energy is its derivative in $\beta$, which vanishes at the
-      self-dual point $x = 1$ whatever the correction is. So the energy match of
-      \claimref{synthesis.null-ordering-of-counted-units-is-zeta-symmetric} is a fixed-point identity at
-      window length equal to the thermal period, not extensivity. The entropy at that point is $\ln Z$ itself,
-      $\tfrac12\ln 2$, against $\pi/6$ for the continuum's rate times the window: the difference is of order
-      one at one thermal length ($-0.177$), $-0.020$ at two and below $10^{-4}$ at four, so the array has the
-      continuum's thermodynamics only for windows of many thermal lengths, and the stored window is one. The
-      variance of the energy differs as well ($\beta^{2}$ times it is about $0.798$ per array, against $\pi/6$
-      per component). The continuum has no density matrix on a window (the store's entropy statements for it
-      are differences), so $\pi/6$ is a rate times a length and not the entropy of a state on a window. What
-      would decide: a construction of the arrays out of the continuum modes of a light ray, as refutation
-      condition (a) of the window reading asks for energy, and the entropy of the constructed object. If the
-      counted object were the continuum per unit Killing time, the light rays per Planck area per period would
-      change from $1/(2c\ln 2)$ to $3/(2\pi c)$ and the capacity convention would no longer apply. The
-      Clausius route uses entropy differences only, which both objects satisfy; only the count uses the
-      absolute value.
+      Closed by Leon's decision of 10 November (\claimref{synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r},
+      \claimref{synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages},
+      \claimref{synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter}). The item asked which object's entropy the count compares with $A/4$: the array's own Gibbs entropy
+      or an entropy constructed from the continuum modes of the light ray. The count compares the array's own
+      Gibbs entropy, $\tfrac12\ln 2$ per array, with $A/4$; the continuum's entropy never enters the count.
+      What the three results establish. At twist one half the array and the continuum agree in mean energy
+      only at a window of one thermal period, the fixed point of a duality of the array's partition function,
+      not by extensivity; the array's entropy lies below the continuum's rate times the window at every window
+      length ($-0.177$ at one thermal period, $-0.0197$ at two, below $10^{-4}$ at four), and the variance of
+      the energy differs too. The array is the twist one half fibre of the continuum under the one-window
+      flow, not a Killing-invariant subsystem; subalgebras that are not invariant can carry the occupations of
+      any twist and select none; and the continuum's $\pi/6$ per window is the uniform average over all
+      twists, in the boost ordering, of arrays that fail the energy equalities except on a null set, a rate
+      times a length and not the entropy of a state on a window. With the spacing left free the two energy
+      equalities admit also the two halves of the stored array and an array at twist one third. So the
+      construction the item asked for exists as a fibre and selects nothing: the antiperiodic condition and the
+      spacing are inputs of (Q), not derived (version 3 of
+      \claimref{synthesis.window-reading-array-killing-energy}). Recorded and NOT adopted: the counterfactual residue
+      obtained if the continuum's $\pi/6$ per component per modular period were counted in place of the
+      array's $\tfrac12\ln 2$ under the area-law hypothesis, $3/(4\pi)$ per unit of two components
+      ($3/(2\pi)$ per component), against the registered $1/(4\ln 2)$; it is conditional arithmetic, clause
+      (v) of \claimref{synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r}, not a
+      derivation of the residue, and that counting the continuum's entropy is no extension of an identification
+      of energies is argued there. It does not meet the kill condition of \claimref{pred.boundary-mode-density},
+      which asks for a derivation of the residue from the boundary modes. The Clausius route uses entropy
+      differences only, which both objects satisfy; only the count uses the absolute value. The problem itself
+      stays open: the count unit is not derived.
   success: >-
     A derivation from the series' structure that the registered unit is two
     arrays, returning $\kappa_c = 1/(4\ln 2)$ without the area law, settles the
@@ -3127,7 +3209,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "BUILD_REPORT, the calibration residue (22 October); synthesis.residue-from-mode-entropy, clause (v); maintainer decision of 23 October (temperature clause read before the crossing); the counted-unit energy result, 26 October; the null-ordering result and the adopted window reading, 31 October; the 9 November results and Leon's decisions"
+  source: "BUILD_REPORT, the calibration residue (22 October); synthesis.residue-from-mode-entropy, clause (v); maintainer decision of 23 October (temperature clause read before the crossing); the counted-unit energy result, 26 October; the null-ordering result and the adopted window reading, 31 October; the 9 November results and Leon's decisions; the three window results and version 3 of the window reading, 10 November"
   statement: >-
     For a mode of positive weight $\beta\omega n < s(x)$, so if the counted
     modes carry the entropy $A/4$ their Killing excitation energy satisfies
@@ -3207,6 +3289,20 @@
     so under J3 the integer-weight channels are still read as currents of the arrays. By Leon's decision of 9
     November the condition is recorded as a test, not a premise. The value $78$ above is a reading, not a
     stored result. The conclusion $3 \mid n_{g}$ has prior art by anomaly routes (cited in both results).
+
+    (10 November, the window results.) What they settle for the energy. The equalities behind the window
+    reading hold at a window of exactly one thermal period and at the spacing $\kappa$: at twist one half the
+    sea, the thermal energy above it and the symmetric-ordered thermal energy match the continuum's values only
+    at that length, and at spacing $\kappa$ only at the Hawking temperature
+    (\claimref{synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r}); with the spacing left free the
+    same equalities are passed also by the half-arrays and by an array at twist one third
+    (\claimref{synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter}). The array is the twist one half
+    fibre of the light ray's continuum, not a Killing-invariant subsystem
+    (\claimref{synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages}). So the
+    statement that the counted units carry zero mean Killing energy and the label all of $M$ stands as before,
+    given the reading, at the spacing of (Q) and at the Hawking temperature, and is not extended to other window
+    lengths or temperatures (version 3 of \claimref{synthesis.window-reading-array-killing-energy}). The label's energy
+    function is untouched.
   attack:
     - >-
       Derive the label's energy function $\mu(m)$ from the series rather than

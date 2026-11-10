@@ -31,7 +31,7 @@ derivations:
   - synthesis.univalence-even-extension-split@3
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1
   assumes:
-  - synthesis.premise-positivity-of-values@1
+  - synthesis.premise-positivity-of-values@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -47,9 +47,24 @@ checked_by:
 lineage:
   motivated_by:
   - one-relation.measure-indifference-borns-rule-located
-  - one-relation.imported-envariance-born-rule
   - singularity.p-univalence
+  - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them
+  - synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values
+  - synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Version kept at 1 (citations and notes only). The three sentences that named results of the same session
+      as intended citations now name the stored results; all three use this result, so they are comparisons
+      recorded in lineage and not premises: synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-
+      even-subalgebra-admits-them (projector-only weights), synthesis.local-weights-give-the-chsh-bound-and-
+      do-not-fix-positivity-of-values (the two-mode instance of the two averages), synthesis.records-keep-
+      even-states-even-only-for-parity-homogeneous-observables (parity-homogeneous directions). The lineage
+      entry for the retired imported envariance Fact is dropped; the envariance argument is named in the text
+      as prior art of the stored Born account, which from its version 4 cites clause (ii) here for the reading
+      of its residual postulate.
   open_problem: op.positivity-of-values
   note: >-
     The first and third attack items of op.positivity-of-values, constructive side: what (P) is equivalent
@@ -67,12 +82,12 @@ extraction:
     add), namely non-negative normalised weights on all effects that add whenever the sum is an effect.
     That this is the right reading of the residual postulate is argued, not proved: the stored postulate
     is informal, and its weak reading (additivity for projectors of one commuting family) does not give
-    (P) when atoms come in complementary pairs (Gleason's theorem excludes dimension two; the sibling
-    result of this run on weights on projectors is the intended citation, and clause (iii) here is one
+    (P) when atoms come in complementary pairs (Gleason's theorem excludes dimension two; the stored result
+    on weights on projectors, synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them, treats that case for two modes, and clause (iii) here is one
     instance used only to show an effect relation at work). (2) The parity average of the descent maps
     positive elements to positive elements and creates no positivity, so "the descent is a conditional
     expectation" gives (P) only for functionals already positive on even elements; under the univalence
-    premise (singularity.p-univalence) (P) is a statement about the even subalgebra. A sibling result of this run treats the mode-wise and total parity averages on two modes with the box functional and is the intended citation for that instance; clause (iv) here is the general lemma. The case of parity-homogeneous directions in clause (v) (at most 2) is treated with records in another sibling result of this run, the intended citation for that case. Atoms, sharp states and their uniqueness are those of the stored base synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional, cited in clauses (iii) and (v) and not re-proved. (3) Univalence and
+    premise (singularity.p-univalence) (P) is a statement about the even subalgebra. The stored result synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values treats the mode-wise and total parity averages on two modes with the box functional (its clause (v), which cites clause (iv) here, the general lemma). The case of parity-homogeneous directions in clause (v) (at most 2) is treated with the sector average of an observable in synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables (its clause (iii)). Atoms, sharp states and their uniqueness are those of the stored base synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional, cited in clauses (iii) and (v) and not re-proved. (3) Univalence and
     the parity average act on states and on single elements; they do not remove the correlations of
     parity-odd elements, so they do not decide between the two stored settings for observables. The
     independence statement that these clauses support is limited: positivity is independent of linearity,
@@ -98,7 +113,7 @@ E_{\Gamma}(C) = Xu + Z\Gamma, \qquad u^{\dagger} = u, \quad u^{2} = 1, \quad u\G
 \]
 while the CHSH element of the averaged directions $E_{\Gamma}(a_{i}) = z_{i}p_{1}$, $E_{\Gamma}(b_{j}) = z'_{j}p_{2}$ is $Z\Gamma$: the average is not multiplicative, $E_{\Gamma}(a_{i}b_{j}) \ne E_{\Gamma}(a_{i})E_{\Gamma}(b_{j})$ when $x_{i}x'_{j} \ne 0$. For every state $\omega$ with $\omega \circ E_{\Gamma} = \omega$ (an even state): $\omega(C) = X\omega(u) + Z\omega(\Gamma)$ and $|\omega(C)| \le |X| + |Z|$, with equality on the four even projectors $\tfrac14(1 \pm u)(1 \pm \Gamma)$ for suitable signs (atoms in the sense of Theorem \claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional}, clause (i), the blades $u$, $\Gamma$ being a maximal independent commuting set), and $(|X| + |Z|)^{2} \le 8$. At $a_{1} = e_{1}$, $a_{2} = p_{1}$, $b_{1} = \tfrac35 e_{2}p_{1} + \tfrac45 p_{2}$, $b_{2} = \tfrac45 e_{2}p_{1} - \tfrac35 p_{2}$: $X = Z = \tfrac75$, the even state of $\tfrac14(1 + u)(1 + \Gamma)$ has $\omega(C) = \tfrac{14}{5} > 2$, and the averaged directions give at most $\tfrac75$. The value above $2$ uses directions of mixed parity ($b_{1}$, $b_{2}$ have an odd and an even part); when every direction is even or odd ($x_{i}z_{i} = 0$ and $x'_{j}z'_{j} = 0$) one checks from the formula that $|X| + |Z| \le 2$. So a restriction to even states (Premise \claimref{singularity.p-univalence}, which is not assumed here) together with the parity average does not reduce the setting with parity-odd directions to the setting with parity-even observables; only a restriction on which elements are observables would.
 \end{enumerate}
-\emph{Scope.} Clause (ii) does not derive (P); it says what (P) is equivalent to, and over $\Q$ it is close to a restatement: non-negativity on effects is the positivity clause and additivity is linearity. Its content is the reading of the stored residual postulate (weights exist and add) as additivity over all effects; that reading is argued, effects that are not projectors are not outcomes of the stored record account, and additivity over effects that do not commute is the non-contextuality assumption again. So the content of the imported envariance argument is relocated into (P), not reduced. The equivalent statement is strong: additivity is asked of all effects, including sums of effects that do not commute, which no single measurement realises. Clause (iv) is about one algebra and the positivity clause; it does not show that (P) is independent of the series' other premises.
+\emph{Scope.} Clause (ii) does not derive (P); it says what (P) is equivalent to, and over $\Q$ it is close to a restatement: non-negativity on effects is the positivity clause and additivity is linearity. Its content is the reading of the stored residual postulate (weights exist and add) as additivity over all effects; that reading is argued, effects that are not projectors are not outcomes of the stored record account, and additivity over effects that do not commute is the non-contextuality assumption again. So the content of the envariance argument (Zurek; prior art of the stored Born account) is relocated into (P), not reduced. The equivalent statement is strong: additivity is asked of all effects, including sums of effects that do not commute, which no single measurement realises. Clause (iv) is about one algebra and the positivity clause; it does not show that (P) is independent of the series' other premises.
 
 ## technical
 Premise (P), positivity of values, is assumed in the series and not derived. This result says what it is equivalent to and what the descent does for it, in every Clifford algebra $\Cl_{k}(p,q)$ over the rationals or an Archimedean ordered field, with the blade inverse as adjoint. Call an element an effect if it and its complement to $1$ are combinations, with non-negative coefficients, of elements $xx^{\dagger}$; projectors are effects, and so are their multiples by numbers between $0$ and $1$. Then the states of (P) are exactly the assignments of non-negative numbers to effects that give $1$ the value $1$ and add whenever a sum of two effects is an effect. Over the rationals additivity alone already gives linearity, with no continuity argument; non-negativity then is the positivity clause. So, given this reading, (P) is the statement that weights exist on all effects, are non-negative and add; it is a strong form of the residual postulate that the stored Born account isolates, and it is strong because it asks additivity also of effects that do not commute. A relation among effects of one mode shows the mechanism: it forces the weight $\tfrac{9}{10}$ where a function that is additive only on complementary projectors can give $\tfrac{189}{250}$.

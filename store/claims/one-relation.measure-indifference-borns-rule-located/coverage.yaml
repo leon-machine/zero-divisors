@@ -13,12 +13,21 @@ functions:
   check_fine_graining_returns_squared_norms:
     kind: sampled
     clauses:
-    - '"rational weights follow by fine-graining into equal-norm constituents"'
-    omits: three Pythagorean-rational states; additivity of weights is assumed (the residual postulate), the permutation step and the continuity step are not tested
+    - '"On rational instances the fine-graining count, given additivity, returns the numbers that (c) gives without it"'
+    omits: three Pythagorean-rational states; additivity of weights is assumed; this is the prior-art route, kept as a comparison, and the permutation and continuity steps of that route are not tested
+  check_squared_norm_of_the_split_is_the_dirac_density:
+    kind: sampled
+    clauses: ["(b)", "Scope (4)"]
+    omits: "the adjoint as gamma_0 x~ gamma_0 on all sixteen blades and the maximality of {gamma_0} are exhaustive; the equality of the squared norm with J . gamma_0, the half for the ideal element, and the equality of the atoms of psi and psi gamma_2 gamma_3 with different spin vectors are computed on four sample even spinors; the general identities are the proof's; that spin projectors act through right multiplication is argued and not tested"
+  check_sharp_state_weights_are_squared_norm_ratios:
+    kind: partial
+    clauses: ["(c)"]
+    omits: "the value of the atom's scalar-part functional on a projector equals the squared-norm ratio for three one-particle elements of two modes with the two number projectors and for one sample spinor of Cl(1,3) with three projectors; that a state of (P) sharp on the atom is this functional is the cited theorem (its Cauchy-Schwarz step) and is not recomputed; (P) and sharpness are assumed and cannot be tested"
 untouched_premises:
-  one-relation.imported-envariance-born-rule: "the imported fine-graining and continuity steps; the check exhibits fine-graining on rational instances without reading the Fact"
+  synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects: "cited for the equivalence of (P) with additive non-negative weights on effects, the reading of the residual postulate; no check here computes with effects"
+  synthesis.premise-positivity-of-values: "the premise under which clause (c) holds; an assumption about values, not computable"
 judge:
-  by: coverage-judge-2026-10-23
-  date: '2026-10-23'
+  by: maintainer-2026-11-10
+  date: '2026-11-10'
   verdict: agrees
-  note: the computable parts are tested at samples and the docstring says the identification with occupation weight and the residual postulate are not computable
+  note: "version 4: the statement was narrowed to what the checks and the cited theorem cover; the two new functions test clause (b) and the formula of clause (c) on samples, and the docstring says that (P), sharpness and the uniqueness step are not computed. The earlier verdict (coverage-judge-2026-10-23, agrees) was on version 2."

@@ -14,3 +14,11 @@ First round (10 November, while the referees read).
    functional) takes the place of one-relation.imported-envariance-born-rule in the measurement account, with the
    relocation of the non-contextuality assumption into (P) stated. Not to be called a derivation of the Born rule.
    Subject to the referee's verdict on the base result.
+
+Second round (10 November, during the maintainer pass).
+
+5. Window reading: restrict "in every state" to "at the sea and at the Hawking state".
+6. Trichotomy ("qubits, one per rung") and the largeness observation ("its boundary modes number pi N^2/ln 2"):
+   qualify both in plain text (registered units, not rungs), no citation edge.
+7. refuted.the-number-n-is-a-mystery-of-largeness: return to open. The id keeps its prefix.
+8. note.programme.setting-seventeen-refutations: leave the table as a transcript and add one pointer line.

@@ -26,6 +26,8 @@ derivations:
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
   - singularity.descent-parity-average@5
   - synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects@1
+  assumes:
+  - synthesis.premise-positivity-of-values@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -40,10 +42,22 @@ lineage:
   motivated_by:
   - singularity.p-univalence
   - one-relation.recorded-sectors-superselected-premise
-  - synthesis.premise-positivity-of-values
   - synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist
   - synthesis.univalence-from-even-stationary-dynamics
+  - synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Version kept at 1 (an assumes edge, lineage and notes only). The assumes edge to synthesis.premise-
+      positivity-of-values, which the review asked for and only a maintainer may add, is added at the
+      premise's current version 2: clauses (i), (ii)(1), (iii), (iv) and (v) are statements about states of
+      (P); the premise leaves lineage, the proof names it in a first line, and the coverage record lists it as
+      untouched (an assumption about values, not computable). The third sufficient condition for the value at
+      most 2 with one mode per party, states common to all splits adapted to the isotropic subspaces, is the
+      stored result synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them, clause
+      (iv), recorded in lineage as a comparison. The statement and the checks are unchanged.
   open_problem: op.positivity-of-values
   note: >-
     Bears on the attack item of op.positivity-of-values that asks whether elements odd under the total parity
@@ -61,16 +75,15 @@ extraction:
     parity. The stored statement that the parity average of the directions gives at most $2$ averages the
     observables; this result keeps the observables and constrains them through the records. The condition is
     the classical one that a superselection rule restricts measurements to those compatible with the charge
-    (Wick, Wightman and Wigner 1952; from memory). Premises used, assumes edge for the maintainer: synthesis.premise-positivity-of-values@1. Clauses (i),
-    (ii)(1), (iii), (iv) and (v) are statements about states of (P); the edge is not in this proposal because
-    assumes edges are maintainer-only, and the referee asks for it. The stored theorem
+    (Wick, Wightman and Wigner 1952; from memory). Premise assumed: synthesis.premise-positivity-of-values (assumes edge added by the maintainer pass of
+    10 November 2026). Clauses (i), (ii)(1), (iii), (iv) and (v) are statements about states of (P). The stored theorem
     synthesis.univalence-from-even-stationary-dynamics (version 5) is cited in a remark as another route to a
     restriction on recorded observables, with a different reading and a stronger conclusion (even only). The
     example of clause (iv) is that of the stored result on weights on effects, clause (v), which is cited for the
     average of the CHSH element and the value; only the record computation is kept here. The stationary theorem
     is a comparison only and is a lineage entry, not a premise. A third sufficient condition for the value at
-    most $2$ with one mode per party, states common to all splits adapted to the isotropic subspaces, is a
-    result of the same session not cited here.
+    most $2$ with one mode per party, states common to all splits adapted to the isotropic subspaces, is
+    the stored result synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them, clause (iv), a comparison recorded in lineage.
 ---
 
 ## formal
