@@ -184,6 +184,7 @@ def check_scalar_part_is_positive_and_every_sample_state_obeys_the_bound():
 def check_klein_twisted_directions_commute_and_the_square_is_four_plus_four_wedges_k():
     premise("synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product")
     premise("synthesis.signed-directions-and-the-integer-clifford-algebra")
+    premise("singularity.descent-parity-average")
     sq, e, f, par, E2 = two_mode_settings()
     K = mul(sq, e[0], f[1])
     assert GA.eq(dagger(K), K) and GA.eq(mul(sq, K, K), ONE)
@@ -194,6 +195,13 @@ def check_klein_twisted_directions_commute_and_the_square_is_four_plus_four_wedg
     # f_k is not self-adjoint: the self-adjoint part of a mode is spanned by 1, e_k, p_k
     assert GA.eq(dagger(f[0]), GA.scal(F(-1), f[0])) and is_observable(sq, par[0]) and is_observable(sq, e[0])
     assert GA.anticommutes(e[0], par[0], sq) and GA.anticommutes(E2, par[1], sq)
+    # parity: the total parity anticommutes with e_1 and e_2 p_1 and commutes with p_1, p_2, so the parity
+    # average of a direction keeps only its p-component
+    G = mul(sq, par[0], par[1])
+    assert GA.anticommutes(G, e[0], sq) and GA.anticommutes(G, E2, sq)
+    assert GA.commutes(G, par[0], sq) and GA.commutes(G, par[1], sq)
+    d = lin(F(3, 5), E2, F(4, 5), par[1])
+    assert GA.eq(GA.scal(F(1, 2), GA.add(d, mul(sq, G, d, G))), GA.scal(F(4, 5), par[1]))
     count = 0
     for a1, a2, b1, b2 in product(PTS, repeat=4):
         A1, A2 = lin(a1[0], e[0], a1[1], par[0]), lin(a2[0], e[0], a2[1], par[0])
