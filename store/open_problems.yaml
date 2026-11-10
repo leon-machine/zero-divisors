@@ -863,7 +863,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The field-theory results of 16 October (second quantisation with i = I4, the elementary photon, tree-level exchange) and the review of what a quantum field theory still needs, 1 November; the one-loop, regulator and unit results and Leon's decisions (the Krein-form premise, the unit's placement on massive lines), 1 November; the two-loop, LSZ, regulator-free, triangle-anomaly and chiral-loop results and Leon's decisions (the extension, dimensional-regularisation and anomaly imports, the floor no-go merged into the floor-regulator result, the chiral-loop convention), 2 November; the curved-field kernel result accepted 10 November, with the scaling-degree rules and local covariance with scaling imported by Leon's decision of 9 November"
+  source: "The field-theory results of 16 October (second quantisation with i = I4, the elementary photon, tree-level exchange) and the review of what a quantum field theory still needs, 1 November; the one-loop, regulator and unit results and Leon's decisions (the Krein-form premise, the unit's placement on massive lines), 1 November; the two-loop, LSZ, regulator-free, triangle-anomaly and chiral-loop results and Leon's decisions (the extension, dimensional-regularisation and anomaly imports, the floor no-go merged into the floor-regulator result, the chiral-loop convention), 2 November; the curved-field kernel result accepted 10 November, with the scaling-degree rules and local covariance with scaling imported by Leon's decision of 9 November; the protraction-identity, curved-field freedom and Euclidean one-loop self-energy and vertex results accepted 10 November, with Leon's decisions of that day (the Krein edge on the last, the sourcing of the local-covariance Fact, the scope note)"
   statement: >-
     The series has free fermion and photon fields with $i = I_{4}$
     (\claimref{field-theory.second-quantisation},
@@ -974,25 +974,61 @@
     stated hypotheses (the identity is stored under no name and is to be derived in the algebra core from
     vanishing torsion); and a state's current two-point function in place of the parametrix trace. Clause (v) of
     the stored vacuum-polarisation result stays argued.
+
+    (10 November, second entry.) Three further results and a scope note. (a) The protraction identity is
+    derived from vanishing torsion, with the classical formula for the cyclic trivector on a field with torsion
+    and two examples showing that the converse fails (\claimref{synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion});
+    the curved-field kernel result (version 2) now cites it, so it is no longer a hypothesis, and the hypothesis
+    on the field is vanishing torsion, not the identity. (b) Given the imported local covariance with scaling
+    (version 2 of the Fact: its sources treat a real scalar field; the Dirac-field literature was read at the
+    level of the abstracts) and the degree of divergence $2$, two local covariant extensions of the vacuum
+    polarisation on a torsion-free field differ by five constants, with no Weyl term, and two transverse ones by
+    $Z_{3}$ alone, multiplying $D\cdot(D\wedge A)$
+    (\claimref{synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse}).
+    The existence of a transverse local covariant extension on a gravitational field is not proved, so clause
+    (iv) of the kernel result and clause (v) of the flat result stay argued, restated to say exactly this. The
+    first Hadamard transport equation is not needed for the reduction: it enters one coefficient at degree four
+    only. What remains of the curved-field clause: existence (the Ward identity on the field), the argued degree
+    counting, a state's kernel in place of the parametrix trace, and the case with torsion. (c) Self-energy and
+    vertex: on the Euclidean section at one loop a pair of extensions obeying the Ward-Takahashi identity is
+    exhibited, the self-energy cut off on a ball and the vertex on a cylinder of the same length, the identity
+    being built in by that choice ($c_{V} = -c_{2}$ in the stored constants)
+    (\claimref{synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length},
+    under the Krein-form premise for the reading of the kernels). This supports the imported existence and does
+    not discharge it: the import concerns the time-ordered products in signature $(1,3)$ at every order, the
+    cylinder has no counterpart there, and no continuation of a three-point kernel from the Euclidean section is
+    stored. $F_{2}(0)$ and the on-shell conditions are not treated without regulator fields, so the Pauli-Villars
+    clause of the Krein premise is not retired. (d) The floors: the stored no-go excludes them as a covariant
+    regulator; it does not exclude them as a cut-off whose limit is shown to be covariant. (e) Scope of the whole
+    problem: the stored theory is perturbative, for matter and gauge fields on a classical gravitational field,
+    and neither a continuum interacting theory nor a cut-off theory with emergent covariance is claimed
+    (\claimref{note.synthesis.scope-of-the-quantum-field-theory-perturbative-on-a-classical-field}).
   attack:
-    - "Extension of distributions beyond one loop: the two-loop vacuum polarisation by extension, whose sharp test is beta1 = 4 (scheme independent for one coupling), and the one-loop self-energy and vertex by extension, after which the Pauli-Villars clause of the Krein premise could be retired."
-    - "Existence of Ward-preserving extensions inside the store: prove, for the self-energy and vertex, the four-photon and the three-current kernels, that a covariant extension obeying the Ward identities exists (now imported from the causal approach), using the computed difference spaces."
-    - "The native regulator: the floors are excluded for every weighting; test the lattice of the descent, or record extension of distributions (which needs no regulator) as the series' scheme, and carry its curved-field clause (argued: the Hadamard scaling degree gives the flat counting) to a proof. Started 10 November on the leading parametrix trace of a torsion-free field (the rotors cancel exactly; the first order is Ricci only; the degree and extension counts are argued). What remains: the Ward identity on the curved field, the reduction of the 15 local terms per index pair to a constant using the imported local covariance with scaling, the first Hadamard transport equation, and a state's kernel in place of the parametrix."
+    - "Extension of distributions beyond one loop: the two-loop vacuum polarisation by extension, whose sharp test is beta1 = 4 (scheme independent for one coupling), and the one-loop self-energy and vertex by extension, after which the Pauli-Villars clause of the Krein premise could be retired. Done 10 November for the self-energy and vertex at one loop on the Euclidean section only (a pair obeying the Ward-Takahashi identity exhibited; the import supported, not discharged). What remains of this item: the two-loop vacuum polarisation by extension; the continuation of the vertex kernel from the Euclidean section to the time-ordered product in signature (1,3); F_2(0) and the on-shell conditions with no regulator field, before the Pauli-Villars clause could be retired."
+    - "Existence of Ward-preserving extensions inside the store: prove, for the self-energy and vertex, the four-photon and the three-current kernels, that a covariant extension obeying the Ward identities exists (now imported from the causal approach), using the computed difference spaces. Supported, not discharged, on 10 November for the self-energy and vertex at one loop on the Euclidean section; the four-photon and three-current kernels, higher orders and signature (1,3) are untouched."
+    - "The native regulator: the floors are excluded as a covariant regulator (no weighting of them keeps a boost), not as a cut-off whose limit is shown to be covariant; test the lattice of the descent, or record extension of distributions (which needs no regulator) as the series' scheme, and carry its curved-field clause (argued: the Hadamard scaling degree gives the flat counting) to a proof. Started 10 November on the leading parametrix trace of a torsion-free field (the rotors cancel exactly; the first order is Ricci only; the degree and extension counts are argued). The reduction is done conditionally (10 November, second entry): given the imported local covariance, five constants, and Z_3 alone between two transverse extensions. What remains: the existence of a transverse local covariant extension (the Ward identity on the curved field), the argued degree counting, and a state's kernel in place of the parametrix; the first Hadamard transport equation is needed only for one coefficient at degree four."
     - "Chiral loops beyond the abelian factor: the non-abelian BMHV counterterms and the fermion self-energy and vertex counterterms with the right unit; the full one-loop e+e- cross section (vertex, box and soft-photon emission)."
     - "Whether the Krein-form premise can be derived or avoided: its one-particle form is restated as the trace form of Clifford conjugation; the content left is that the unphysical modes are quantised with the indefinite form."
     - >-
-      Derive the protraction identity of the curvature operator, $\partial_{a}\wedge\mathcal{R}(a\wedge b) = 0$,
-      in the algebra core from vanishing torsion (the first Bianchi identity of a torsion-free field). It is a
-      stated hypothesis of the curved-field kernel result
-      (\claimref{synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four})
-      and is stored under no name; the nearest stored text names it as a condition defining the Weyl maps and
-      does not derive it.
+      Done 10 November: the protraction identity of the curvature operator,
+      $\partial_{a}\wedge\mathcal{R}(a\wedge b) = 0$, is derived from vanishing torsion
+      (\claimref{synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion}),
+      and the curved-field kernel result cites it. The item asked for it in the algebra core; it is stored as a
+      result on gravitational fields, with a line in the plan of the core.
+    - >-
+      The torsion case. The definition of the gravitational field lets a Dirac source produce torsion, and the
+      curved-field loop results are stated for vanishing torsion. With torsion the protraction identity fails by
+      the exact formula of clause (ii) of the stored theorem, and the count of local terms changes: on symmetric
+      maps without the identity there are three invariants in place of two, on all maps six (computed in the
+      freedom result). Either state these results on torsion-free fields by a standing hypothesis and say where
+      a spin source breaks it, or redo the count of the local terms and the transversality condition with the
+      torsion as a further local covariant field. Not started.
   success: >-
     Renormalisation at two loops in a scheme native to the series (extension
     of distributions or a covariant regulator built from its objects), with the
     existence of Ward-preserving extensions proved in the store, or a no-go
     naming the missing input.
-  entities: [synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants, synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient, synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity, synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms, synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation, synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.one-loop-qed-in-the-spacetime-algebra, synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four, synthesis.imported-local-covariance-with-scaling-of-time-ordered-products]
+  entities: [synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants, synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient, synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity, synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms, synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation, synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.one-loop-qed-in-the-spacetime-algebra, synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four, synthesis.imported-local-covariance-with-scaling-of-time-ordered-products, synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion, synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse, synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length, note.synthesis.scope-of-the-quantum-field-theory-perturbative-on-a-classical-field]
   added: 2026-11-01
 
 - id: op.qft-non-abelian-gauge-fields
@@ -4110,6 +4146,83 @@
     - standard-model.majorana-element
   added: "2026-11-09"
 
+- id: op.strong-cp
+  title: 'The strong CP angle'
+  area: standard-model
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "The gap review of 10 November and Leon's decision of 10 November to register the question"
+  statement: >-
+    The colour gauge field admits a term proportional to the characteristic four-form of its field strength
+    (the trace of its square), with an
+    angle $\theta$ as coefficient, and the physical angle is $\theta$ shifted by the phase of the determinant of
+    the quark mass matrices. The neutron dipole bound quoted in the store puts it below about $10^{-10}$ today.
+    The store holds no result on why. Decide whether the series fixes the physical angle, at zero or at any other
+    value, or record it as a free input with a refutation condition.
+  why: >-
+    It is a number of the Standard Model that the series neither derives nor registers. The premise register
+    counts the series' continuous inputs ($N$, the D-term level, the asymmetry $\epsilon$, the down-type
+    weight), and an angle that must be small to ten decimal places and is not in the register is an uncounted
+    input. The series also has structure that bears on it and has not been asked: a real geometric vacuum, a
+    flag that is its one CP-violating datum, and a mirror tower related to this one by the reversal.
+  known: >-
+    What the graph holds on the angle itself: nothing. No stored result states the angle, the phase of the quark
+    mass determinant, or a symmetry or field that would set either. The angle enters the store once, and only as
+    a candidate source of the matter asymmetry: a pre-descent $\theta$-term integrates a characteristic class of
+    even degree, so the odd-dimensional towers carry no continuous $\theta$, and at the P3 representatives a
+    $\theta$-term exists exactly where a flag bit does; in this tower a constant angle of order one at the
+    descent, one that does not relax before it acts, is excluded as the source of the asymmetry by the neutron
+    dipole bound cited there (through a hadronic matrix element with its own uncertainty)
+    (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii), with the refuted claim
+    \claimref{refuted.a-pre-descent-term-sources-the-matter-asymmetry}). That clause says what it does not
+    exclude and does not claim: an angle that relaxes or rolls. It also records that the mirror's angle equals
+    ours only by the common ceiling coupling along the reversal orbit, a premise of its own
+    (\claimref{dark-matter.mirror-tower-copy-one}(iv)), the copy being of the functional and not of its
+    coefficient. Neighbouring structure, none of it a statement about the angle: the CPT-covariance premise
+    leaves every action functional and its parameters invariant and is assumed, not checked, for the gauge and
+    matter sectors (\claimref{dark-matter.premise-cpt-covariance}); the real-breaking assumption makes the lepton
+    matrices real in the vacuum's basis and gives a trivial leptonic Dirac phase
+    (\claimref{neutrino.real-breaking-assumption}), and nothing stored extends it to the quark matrices: the one stored quark-stage result needs a relative
+    phase near a quarter turn, selected from the data
+    (\claimref{synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase}); the characteristic forms the series uses are imported
+    (\claimref{synthesis.imported-chern-weil-and-chern-simons-forms}).
+  attack:
+    - >-
+      First computation: write the colour $\theta$-term in the store's language (the characteristic four-form of the
+      colour field strength, \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}) and compute its
+      behaviour under the flag reversal and under the CPT conjugation of
+      \claimref{dark-matter.premise-cpt-covariance}. If the reversal that relates this tower to the mirror sends
+      $\theta$ to $-\theta$, state exactly which premise would then force $\theta = 0$ in each tower or only
+      relate the two angles.
+    - >-
+      The mass phase: decide whether the stored quark mass structure (the rung vectors and family matrices of
+      the Standard-Model and families results) fixes the phase of the determinant of the quark mass matrices, in
+      particular whether a real vacuum with one flavour-independent flag gives a real determinant together with
+      the quark-stage phase the store selects from the data. A real determinant with a vanishing bare angle would be a result; a real
+      determinant alone is half of one.
+    - >-
+      The relaxing angle left open by the fifteenth refutation: decide whether any stored field couples to the
+      colour characteristic four-form with a shift symmetry. If none does, say so as a stored statement (a search is
+      argued, not proved).
+    - >-
+      If none of the three fixes the angle, register it: a postulate in the format of the other registered free
+      inputs, with the neutron dipole bound as an imported Fact checked at source, and a refutation condition.
+  success: >-
+    A stored result that fixes the physical angle from the series' premises, with the quark mass phase included,
+    and survives the neutron dipole bound; or a proof that the series' structures leave it free, followed by its
+    registration as a free input with a refutation condition. A statement about the bare angle alone, without
+    the mass phase, does not settle it.
+  entities:
+    - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+    - refuted.a-pre-descent-term-sources-the-matter-asymmetry
+    - dark-matter.mirror-tower-copy-one
+    - dark-matter.premise-cpt-covariance
+    - neutrino.real-breaking-assumption
+    - synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
+    - synthesis.imported-chern-weil-and-chern-simons-forms
+  added: '2026-11-10'
+
 - id: op.non-gaussian-completion
   title: 'The non-Gaussian completion: the 207 from caused structure'
   area: generations
@@ -4433,7 +4546,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T14, successor problem (7); the dark-matter results and maintainer decisions of 26 October; the findings of 31 October; the 9 November results and Leon's decisions"
+  source: "T14, successor problem (7); the dark-matter results and maintainer decisions of 26 October; the findings of 31 October; the 9 November results and Leon's decisions; the premise audit and Leon's decisions of 10 November"
   statement: >-
     The unit-ball rule turns on R3, one cell radius of the unseen direction on
     one side, and R2 and R3 are deposit clauses, set at the descent. Find a
@@ -4529,6 +4642,18 @@
     no confinement scale and no correlation length for an odd tower, so it does not decide the candidate of
     attack item 2, the deposit's own correlation length; op.dark-tower-running, registered partly for such a
     scale, is settled in the negative.
+    (10 November, premises of the total.) R3's unit of thickness is each tower's own cell radius
+    (\claimref{dark-matter.r3-one-cell-per-unshared-direction}, version 2), so R2 also supplies R3's unit and enters
+    the total twice. The reduction of R1 and R2 to equal mass per unit ball
+    (\claimref{synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball}) holds only in the
+    fixed-common-length reading, which is not adopted; under the adopted reading the same refilling moves the
+    total (to about $7.06$ in that result's example). Two conditions of the closed form that were held as text are
+    registered as premises: the single-ideal clause that empties residues $0$ and $4$
+    (\claimref{dark-matter.single-ideal-at-residues-zero-and-four}) and the population of the odd towers
+    (\claimref{dark-matter.odd-towers-populated}), the second inferred from the number it helps fit. On the stored
+    edges the closed form's past cone now holds R1, R2, R3, P1, P2, P3 and these two; the democracy premise D
+    belongs to the de Sitter reading, which cannot be held with R1 and R2 at more than one quantum per de Sitter
+    ball (argued), and is not among them. The total remains a fit of two shares against one measured number.
   attack:
     - >-
       Done on the orbit reading of licensing (9 November;
@@ -4567,6 +4692,9 @@
     - synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
     - synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
     - synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio
+    - synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball
+    - dark-matter.single-ideal-at-residues-zero-and-four
+    - dark-matter.odd-towers-populated
   added: "2026-10-22"
 
 - id: op.odd-towers
@@ -4708,6 +4836,119 @@
     - dark-tower-matter.five-dimensional-content
     - synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio
   added: "2026-10-22"
+
+- id: op.graviton-rate-as-classical-field-process
+  title: "The imported graviton-exchange production rate as a process of the classical gauge field"
+  area: dark-matter
+  kind: research
+  difficulty: substantial
+  status: open
+  source: "Leon's decisions of 10 November 2026 (the graviton does not exist in the series; flag the imported rate now and derive it later; the position stated in the conventions); the search of the store for the word made the same day"
+  statement: >-
+    The store imports the rate $R(T) = \alpha\,T^{8}/\bar{M}_{P}^{4}$ at which the Standard-Model plasma
+    produces a species that couples to it through gravity alone
+    (\claimref{dark-matter.imported-massless-graviton-production-rate}). In its source the rate is computed
+    from the exchange of a quantum of a spin-2 field. The series holds no such quantum: gravity is the
+    classical gauge field of Gauge Theory Gravity (conventions, section ``Gravity and the graviton''). Derive
+    the rate as a process of the classical gauge field sourced by matter, with its temperature law and its
+    coefficients for scalar, fermion and vector species, or show that it vanishes; and say in either case
+    what the results that use the imported rate become.
+  why: >-
+    The imported rate sets the temperature floor of the dark towers under gravity alone. Two live predictions
+    and 28 stored results rest on it, and since 10 November 2026 it is flagged as a process the series does
+    not hold. Until the rate is derived inside the series or shown to vanish, those results hold
+    conditionally on an input from outside it.
+  known: >-
+    (10 November.) Decision of that day: flag now, derive later; no prediction is changed. The Fact carries
+    the flag at every level (version 3), and the conventions state the position on the gravitational field.
+    What rests on the Fact, computed as its future cone on 10 November 2026 (30 entities). The two live
+    predictions \claimref{pred.no-dark-radiation} and \claimref{pred.no-indirect-dark-signals}, each with a
+    sentence pointing here. Its four direct users:
+    \claimref{dark-matter.coefficients-floors-they-give-what-gravity},
+    \claimref{dark-matter.seeding-gravity-floor-dark-towers-temperature},
+    \claimref{synthesis.seeding-remainder-excludes-perturbative-pati-salam},
+    \claimref{synthesis.untuned-fit-caps-lightest-heavy-neutrino}. Through them:
+    \claimref{dark-matter.mirror-share-assembled},
+    \claimref{dark-matter.radiation-audit-what-theorem-closes-what},
+    \claimref{dark-matter.stored-asymmetry-charge-not-number},
+    \claimref{dark-tower-matter.mirrors-composition}, \claimref{dark-tower-matter.mirrors-temperature-p2},
+    \claimref{simulations.halo-shapes}, \claimref{simulations.imported-mirror},
+    \claimref{simulations.merger}, \claimref{synthesis.adiabatic-deposit-modulation-is-a-time-shift},
+    \claimref{synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r},
+    \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent},
+    \claimref{synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent},
+    \claimref{synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window},
+    \claimref{synthesis.indifference-is-curie-plus-single-valuedness},
+    \claimref{synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level},
+    \claimref{synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages},
+    \claimref{synthesis.mirror-asymmetry-route-one},
+    \claimref{synthesis.mirror-temperature-measures-deposit-under-r},
+    \claimref{synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3},
+    \claimref{synthesis.pati-salam-chain-defects-cannot-source-spectrum},
+    \claimref{synthesis.pati-salam-monopoles-bound-descent-history},
+    \claimref{synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping},
+    \claimref{synthesis.tower-charge-sector-label-temperature-not},
+    \claimref{synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter}. Not in
+    its future cone: the fitted total of the dark-matter ratio (\claimref{dark-matter.unit-ball-rule},
+    \claimref{dark-matter.total-function-thickness},
+    \claimref{dark-matter.population-count-one-share-half-percent}), so the ratio does not depend on the
+    rate.
+
+    A second place where a process of a quantised gravitational field is counted, not through this Fact: the
+    baseline of the dimmed evaporation burst, ``this tower plus gravitons'', in
+    \claimref{synthesis.dimmed-burst-time-rescaled-copy} and \claimref{pred.dimmed-evaporation-bursts}, where
+    emission into the helicity-2 channels of the gravitational field enters through the term $g$ of $D = (2 +
+    g + o)/(1 + g)$. At $g = 0$ the factor is $D = 2 + o$, at least $2$ for every $o$, and the stored
+    condition that the odd towers emit at least as much as the gravitational sector drops out. The prediction
+    carries a sentence pointing here and is unchanged.
+
+    What the store holds towards a derivation. In the Newtonian limit the source of gravity is an operator
+    built from commuting conserved numbers, and the operator source, unlike the mean-field source, gives an
+    interaction between the branches of two bodies (\claimref{field-theory.operator-newtonian-coupling}; the
+    registered phase of \claimref{pred.gravity-entangles-standard-phase}). Nothing stored extends that
+    operator source beyond the static limit, and nothing stored computes a production rate from it. Not
+    examined: whether that reading reproduces the $T^{8}/\bar{M}_{P}^{4}$ law as a process between matter and
+    matter with no quantum of the field.
+
+    The full list of the 51 stored entities that use the word graviton, in seven groups (kinematics, channel
+    counts, counting readings, processes and rates, ontology readings, polarisation counts and linear modes,
+    prior art), is \claimref{note.synthesis.where-stored-text-names-a-graviton}; none of them is edited. The
+    groups that the three readings of the conventions do not cover are the processes and rates (this
+    problem), the ontology readings, and one result that gives linear modes of the gravitational field a
+    vacuum state.
+  attack:
+    - >-
+      First computation: the operator source beyond the static limit. Replace the Newtonian potential of the
+      stored operator coupling by the Green function of the linearised field equations of Gauge Theory
+      Gravity, joining the stress tensor of this tower's plasma to the stress tensor of the produced species,
+      with no state of the gravitational field carrying a quantum. Compute the rate of pair production of a
+      scalar from a thermal plasma at temperature $T$ and compare with the imported scalar coefficient
+      $3997\pi^{3}/663552000$. State which Green function the series' classical field supplies (retarded,
+      symmetric or the Feynman one of the source), since the imported value is computed with the last.
+    - >-
+      The mean-field alternative: source the classical field by the expectation value of the plasma's stress
+      tensor. The stored Newtonian result says the mean-field source gives no interaction between branches;
+      test whether it gives any production of a second tower's matter beyond that of the homogeneous
+      expanding field, and with what temperature law. If the answer is none or a different law, say so and go
+      to the next item.
+    - >-
+      If the rate vanishes or changes: recompute the gravity floor of the dark towers' temperature and follow
+      it through the four direct users, then through the two predictions; record which of the 30 dependants
+      change in content and which only lose a premise.
+    - >-
+      The burst baseline: decide from the result whether emission into the helicity-2 channels of the
+      classical field by an evaporating hole is kept ($g > 0$) or dropped ($g = 0$, $D = 2 + o$), and restate
+      the dimmed-burst result accordingly. No change before that.
+    - >-
+      Work through the note's groups (e) and (f): for each entity say whether its statement survives with the
+      classical field alone, in the three readings of the conventions, or needs restating.
+  success: >-
+    The rate derived in the series as a process of the classical gauge field sourced by matter, with its
+    temperature law and coefficients compared with the imported ones; or a proof that it vanishes, with the
+    temperature floor and the two predictions restated. In either case the flag on the imported Fact is
+    replaced by a citation of the result.
+  entities: [dark-matter.imported-massless-graviton-production-rate, dark-matter.seeding-gravity-floor-dark-towers-temperature, dark-matter.coefficients-floors-they-give-what-gravity, pred.no-dark-radiation, pred.no-indirect-dark-signals, pred.dimmed-evaporation-bursts, field-theory.operator-newtonian-coupling, note.synthesis.where-stored-text-names-a-graviton]
+  added: 2026-11-10
 
 - id: op.window-p3
   title: "The window: derive each tower's dimension and retire P3"
@@ -4956,13 +5197,95 @@
     - synthesis.adiabatic-deposit-modulation-is-a-time-shift
   added: '2026-10-22'
 
+- id: op.matter-asymmetry-origin
+  title: 'The matter asymmetry: generated by a stored dynamics, or provably not'
+  area: dark-matter
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "T14 (the asymmetry stance) and T15 (leptogenesis suppressed); the register of the asymmetry, 1 November; the gap review of 10 November and Leon's decision of 10 November to register the question"
+  statement: >-
+    The series does not generate its matter asymmetry: the asymmetry per mode $\epsilon$ is a registered free
+    input, inherited as initial data of the descent, with its value taken from the measured baryon density.
+    Decide whether any dynamics the store holds could generate it, in which case the premise is refuted by its
+    own condition, or prove that none can, so that the inheritance is a theorem about the stored content and not
+    only a stance.
+  why: >-
+    $\epsilon$ is one of the two unexplained numbers of the descent, with $N$, and the dark-to-baryon count
+    rests on its equality across this tower and the mirror. The stance is refuted by any in-framework
+    calculation that produces $\epsilon$ dynamically, and the store holds dynamics that are the textbook
+    generators of an asymmetry; they are suppressed by premises, not excluded by theorems. Until every stored
+    channel is either shown to vanish or bounded below the measured value, the premise's refutation condition is
+    untested on the series' own content.
+  known: >-
+    The stance and its registration: the framework inherits its asymmetry; the Sakharov conditions are for
+    generating one from a symmetric state and are not needed for initial data; the value is not derived and not
+    classified (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(i), (iv)), and it is a
+    registered free input, refuted if produced dynamically by an in-framework calculation, if computed from the
+    transport structure or another premise, or if shown to be a function of another registered number
+    (\claimref{synthesis.matter-asymmetry-registered-free-input}). It is a charge of the descent, not a thermal
+    number (\claimref{dark-matter.stored-asymmetry-charge-not-number}(i)). Channels the store has examined. (a)
+    Production after the descent through gravity from the visible plasma gives $1.8$ to $2.7 \times 10^{-15}$
+    mirror quanta per unit entropy at the ceiling reheating against the $8.7 \times 10^{-11}$ baryons per unit
+    entropy required, more than four orders too few; black holes are a sink of the charge, not a source
+    (\claimref{dark-matter.stored-asymmetry-charge-not-number}(ii)); the rate used there is an imported one. (b)
+    A constant pre-descent $\theta$-angle is excluded as the source by the neutron dipole bound, and the odd
+    towers carry no continuous $\theta$; an angle that relaxes or rolls is not excluded and not claimed
+    (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii)). (c) The heavy neutrinos of the
+    stored seesaw are the textbook mechanism, and had it operated it would have generated the asymmetry in this
+    tower alone. It is suppressed in three steps of different strength: the decay asymmetries vanish at leading
+    order by the democratic alignment (proved at leading order); the washout and the resonant degenerate pair
+    are avoided by Premise (R), that the descent reheats below the lower heavy scale (a premise;
+    \claimref{neutrino.r-descent-reheats-below-lower-heavy}); and the non-thermal injection by descent-populated
+    heavy states, of order $\delta^{2}\sin\varphi$ from one state and of order $\sin\varphi$ from the pair,
+    vanishes under the real-breaking assumption (a postulate; \claimref{neutrino.real-breaking-assumption})
+    (\claimref{neutrino.leptogenesis-suppressed-alignment-reheating-premise-new}). So the stored content does
+    contain a dynamics that generates an asymmetry when either premise fails, and the pair's asymmetry depends
+    on its split and widths, which are not computed. What is not stored: an enumeration of the baryon-number or
+    lepton-number violating channels of the stored chain with a bound on each, a statement on anomalous
+    electroweak processes after the descent, and any proof that the list (a) to (c) is complete.
+  attack:
+    - >-
+      First computation: the split and widths of the degenerate heavy pair after the breaking, and from them the
+      non-thermal injection as a function of the relative phase $\varphi$ and the descent's population of the
+      heavy states. State the bound on $\varphi$ that keeps the injection below the measured asymmetry; if the
+      bound is not met without the real-breaking assumption, record that the inheritance rests on that
+      assumption.
+    - >-
+      Enumerate the channels: every interaction of the stored chain that violates baryon or lepton number (the
+      slot-pair proton channel of \claimref{standard-model.proton-decay-only-through-slot-pair}, the Majorana
+      terms, anomalous electroweak processes) and for each either a proof that it produces no net asymmetry from
+      the descent's state or a bound. Say what the descent's state is assumed to be for the purpose.
+    - >-
+      The no-go: prove from stated premises (CPT covariance, the flag as the one CP-violating datum, Premise
+      (R), real breaking) that no stored dynamics after the descent changes the charge per unit entropy, and
+      name which premises the proof uses, so that the inheritance becomes a theorem conditional on them. A proof
+      that needs the real-breaking assumption is still a result.
+    - >-
+      The relaxing angle: decide whether a stored field makes the $\theta$-angle of the fifteenth refutation
+      relax, with op.strong-cp; if one does, compute the asymmetry it sources.
+  success: >-
+    Either a stored calculation in which a dynamics of the series produces the asymmetry, with a value to set
+    against the measured baryon density (this refutes the premise as registered and replaces it), or a proof,
+    with its premises named, that no stored dynamics after the descent can generate or erase it. A list of
+    examined channels without a completeness argument is progress, not a settlement.
+  entities:
+    - synthesis.matter-asymmetry-registered-free-input
+    - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+    - dark-matter.stored-asymmetry-charge-not-number
+    - neutrino.leptogenesis-suppressed-alignment-reheating-premise-new
+    - neutrino.r-descent-reheats-below-lower-heavy
+    - neutrino.real-breaking-assumption
+    - refuted.a-pre-descent-term-sources-the-matter-asymmetry
+  added: '2026-11-10'
+
 - id: op.descent-state-and-spectrum
   title: 'The state of the descent and the primordial spectrum'
   area: programme
   kind: research
   difficulty: frontier
   status: reformulated
-  source: 'T07, successor problem (5); T16, successor problem (5); T17, open directions 5 and 10; maintainer decisions of 23 and 26 October; the results of 31 October; the results and Leon''s decisions of 1 November, including the premise question answered for the coupling and the pre-descent Kasner stage postulated; the deposit-state results and Leon''s decision of 1 November recording the spectrum as the deposit''s infrared datum'
+  source: 'T07, successor problem (5); T16, successor problem (5); T17, open directions 5 and 10; maintainer decisions of 23 and 26 October; the results of 31 October; the results and Leon''s decisions of 1 November, including the premise question answered for the coupling and the pre-descent Kasner stage postulated; the deposit-state results and Leon''s decision of 1 November recording the spectrum as the deposit''s infrared datum; the criterion, ledger and Kasner scalar-sector results and Leon''s decision of 10 November keeping no mechanism'
   statement: >-
     As stored, the series has no mechanism for the measured primordial spectrum. With the descent at the
     origin and no inflationary stage, no mode at or below the pivot scale leaves the Hubble length after the
@@ -5119,7 +5442,53 @@
     fermionic deposit cannot carry the spectrum (occupations at most one, and the shot term below $10^{-77}$ at the
     pivot for a thermal-density deposit), so band data that carry it would have to be bosonic. This locates the
     spectrum among the deposit's free data; it is not a mechanism, and the series still records no mechanism for
-    the measured spectrum.
+    the measured spectrum. Results and Leon's decision of 10 November: the position is kept, no mechanism; the
+    spectrum stays free initial data, the deposit's infrared datum, and no premise is adopted for it. What was
+    examined. (a) The criterion: every stored mode equation on the primordial spectrum has one form, with
+    friction excess $f$, curvature or mass term $\kappa$ and axis exponent $P$, and its exited spectrum is red
+    exactly when $f^{2} + 4\kappa > 9(1 - P)^{2}$; on isotropic power laws that is $p > \tfrac23$, which the unit
+    trace of the cited Kasner walls excludes for a minimally coupled field, so a red index there must come from
+    the field's own weight or coupling (\claimref{synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources}(i)-(iii)). (b) The ledger: the cross modes,
+    the hidden-scale weights, the Kaluza-Klein vector, the twelve tree-level curvature couplings, the weights of
+    the frozen phase and the stages of the descended phase, each with its closed margin (clauses (iv)-(vi)
+    there). Item (vi) above is now computed, not argued: on a contracting power law read as a fluid of pressure
+    ratio $w$ the index is $12w/(1 + 3w)$, and the measured centre is $w = -0.0029$. (c) The Kasner scalar
+    sector: at the isotropic point of the scalar disk the wall's own scalar, with the lapse and shift it forces,
+    obeys the spectator equation of order $0$, and under the hypothesis of the stored adiabatic vacuum with a
+    normalisation independent of $k$ the comoving curvature perturbation has a local index in $[2, 3]$
+    (\claimref{synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation}). So at that one point the stored blue index is the index of the curvature
+    perturbation and not a property of a spectator or of the time slicing; the conversion left uncovered in (iii)
+    above is closed there and nowhere else (anisotropic points of the disk are open). (d) Examined and not
+    candidates (argued; none has a stored mode equation on a slice): the frozen point's moduli, its norm and
+    point at infinity, which have no local mode and under the promotion one global pair supported at $k = 0$
+    (\claimref{dark-energy.point-infinity-has-no-physical-fluctuation},
+    \claimref{synthesis.promoted-norm-one-global-pair}, \claimref{synthesis.frozen-phase-spectrum-not-red}(iv));
+    the towers' pair channel, stored as one shell with no spatial mode, which if promoted to a field has a
+    shift symmetry forbidding both a mass and a curvature coupling and is then the minimally coupled row or the
+    de Sitter row at weight $0$; the towers' density-wave bosons on a null generator, for which no map from the
+    generator to a slice is stored and uncorrelated generators give a blue index on a slice; and the horizon
+    arrays and the de Sitter mode count, independent fermion modes whose contribution is the white shot noise of
+    (i) above with the amplitude shortfall of (vii). These four are not to be reopened without a new stored
+    structure. The corrected statement: no stored mode equation gives an index within three standard deviations
+    of the measured one on three observed axes alike without a number chosen for that purpose. It is not true
+    that none is red: the Kaluza-Klein transverse potential at the vacuum end $p = \tfrac12$, a point the
+    store's own fields reach, has index $-1$ with no chosen number, far too red, while its field strength there
+    has index $+1$. Status of the survey: argued. It is a pattern search of the formal levels with reading, not
+    an audit of every derivation, and five stored results on the index are outside the ledger because they are
+    not mode equations of that form: the thermal reading with an area-law heat capacity
+    (\claimref{synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window}), the sudden descent
+    (\claimref{synthesis.sudden-descent-feature-not-tilt}), the band data of a Hadamard deposit
+    (\claimref{synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands}), the local
+    conversion of a Gaussian field (\claimref{synthesis.local-conversion-cannot-redden-a-gaussian-spectator})
+    and the joint condition on one curvature coupling
+    (\claimref{synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt}). The rule
+    for a future match (argued): the parameter-free rows already tried number about two dozen, with indices
+    spread over an interval more than a hundred times wider than the three-sigma window, and the store already holds
+    several one-parameter families that reach the window with certainty (the curvature coupling, the exponent of
+    the Kaluza-Klein potential, the temperature exponent of the thermal reading, the pressure ratio of the dual
+    contraction, the exit epoch of a dust contraction with the constant); so a match of the index alone by one
+    more stored structure carries no evidential weight. A future index match counts only with a second number,
+    the amplitude or the running, obtained from the same structure with no further chosen number.
   attack:
     - >-
       Test whether a red or non-Gaussian modulator of the deposit can carry an occupation law $n_{k} \propto
@@ -5156,5 +5525,5 @@
     - synthesis.kasner-approach-gives-horizon-exit-and-index-three
     - synthesis.hadamard-condition-leaves-the-deposit-spectrum-free-on-bounded-bands
     - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
-    - synthesis.local-conversion-cannot-redden-a-gaussian-spectator
+    - synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources
   added: '2026-10-22'

@@ -21,13 +21,13 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.type-residue-what-each-tower-can@5
   - tower.commuting-copies@5
   - tower.fock-module-one-qubit-per-rung@6
   - tower.witt-index-quantum-capacity@5
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   - dark-matter.p2-indifference@2
   proof: proof-main.tex
 checked_by:

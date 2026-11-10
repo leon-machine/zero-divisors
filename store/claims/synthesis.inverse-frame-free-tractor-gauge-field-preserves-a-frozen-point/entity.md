@@ -28,7 +28,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.walls-free-sector@6
   - dark-energy.frozen-point-datum-kasner-wall@8
-  - synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation@2
+  - synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation@3
   - synthesis.imported-holonomy-reductions-of-cartan-geometries@1
   proof: proof-main.tex
 checked_by:

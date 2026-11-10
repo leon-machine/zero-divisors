@@ -23,6 +23,9 @@ functions:
     kind: exact
     clauses: ["(v)"]
     omits: "that the three-dimensional fraction self-interacts at composite strength is imported and not computed"
+untouched_premises:
+  dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the check sums two towers of each odd dimension as an input"
+  dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; no term for them is computed"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

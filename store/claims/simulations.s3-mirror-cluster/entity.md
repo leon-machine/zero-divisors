@@ -1,8 +1,8 @@
 ---
 id: simulations.s3-mirror-cluster
 kind: claim
-version: 1
-title: 'S3: the mirror in a cluster'
+version: 2
+title: 'S3: the mirror in a cluster (model specification)'
 status: postulate
 region: simulations
 subject: dark-matter
@@ -19,6 +19,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14b, deposited version
+- name: Claude Fable 5.2
+  role: 'typed as model specification; the window of xi on which the helium composition is the stored estimate stated'
+  version: 2
+  source: maintainer pass of 2026-11-10
 review: typed
 locators:
   paper: T14b
@@ -26,6 +30,10 @@ locators:
   label: prem:S3
   line: 138
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 1 -> 2. Leon''s decision 10 of 10 November 2026: the six simulation premises (C, S1 to S5) are typed as model specification. The store has no entity type for a model specification, and an object cannot be the target of an assumes edge, so the entity keeps kind claim and status postulate (the assumes edges of simulations.halo-shapes and simulations.merger stand) and is marked in its title and at every level. S3 now states its window of xi (the stored composition estimate dark-tower-matter.mirrors-composition gives helium only there).'
   typing:
     by: ai-typing-pass
     note: Postulate; no edges.
@@ -46,11 +54,15 @@ extraction:
 ## formal
 Mirror matter in a cluster is a fully ionised helium plasma, $\gamma = 5/3$, cooling by bremsstrahlung alone (below about $10^{6}$ K He$^{+}$ line cooling would in reality dominate, so settling would come sooner; Cost K3). Gas that cools below about $7 \times 10^{4}$ K becomes collisionless (the settled phase). There is no mirror star formation and no feedback.
 
+\emph{Type: model specification.} This is a clause of the specification of the numerical model of the cluster simulations (Premises S1 to S5 and C), not a hypothesis of the series about nature; it is kept with the premises so that the two simulation results show it among their conditions. Its window: the helium composition is the stored decimal estimate's only for a mirror temperature ratio $\xi = T'/T$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ (Computation \claimref{dark-tower-matter.mirrors-composition}); at the gravitational floor that estimate gives a neutron-rich mirror and towards the $\Neff$ cap a hydrogen-rich one, and outside the window S3 is not the stored composition. Nothing stored fixes $\xi$.
+
 ## technical
 A modelling premise: mirror matter in a cluster is a fully ionised helium plasma with $\gamma = 5/3$, cooling by bremsstrahlung alone. Gas that cools below about $7 \times 10^{4}$ K becomes collisionless (the settled phase), and there is no mirror star formation and no feedback. Below about $10^{6}$ K, He$^{+}$ line cooling would in reality dominate and bring settling sooner, a cost the model records.
 
+Type: model specification. S3 holds on the window of the mirror's temperature ratio where the stored estimate gives a helium mirror, $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$; outside it the stored composition is neutron-rich (at the floor) or hydrogen-rich (towards the cap), and nothing stored fixes $\xi$.
+
 ## lay
-In the cluster simulations the mirror matter is a hot, fully ionised helium gas that loses heat only through the simplest radiation process. Gas that cools enough is treated as settled and no longer collides. The model has no mirror stars, so nothing heats the gas back up.
+In the cluster simulations the mirror matter is a hot, fully ionised helium gas that loses heat only through the simplest radiation process. Gas that cools enough is treated as settled and no longer collides. The model has no mirror stars, so nothing heats the gas back up. It is part of the set-up of a computer model, not a claim of the theory about nature. The helium composition is what the series' own estimate gives only if the mirror world's temperature lies in a certain range, which nothing in the series fixes.
 
 ## one-liner
-Mirror matter in clusters is modelled as a $\gamma = 5/3$ helium plasma cooling by bremsstrahlung, becoming collisionless below about $7 \times 10^{4}$ K, with no star formation and no feedback.
+Model specification, valid on the window $\xi \approx 3 \times 10^{-3}$ to $2 \times 10^{-2}$ of the mirror's temperature ratio: mirror matter in clusters is modelled as a $\gamma = 5/3$ helium plasma cooling by bremsstrahlung, becoming collisionless below about $7 \times 10^{4}$ K, with no star formation and no feedback.

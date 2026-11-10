@@ -2348,7 +2348,7 @@
 ""
 ]
 ],
-"key": "f58cf1c99d51230e",
+"key": "487c0104e3a5b8ec",
 "result": "pass",
 "runs": [
 {
@@ -2532,14 +2532,14 @@
 "dark-matter.d-democracy-total-mass": {
 "failed": false,
 "findings": [],
-"key": "63f5875a486374d0",
+"key": "045477e191dfabc6",
 "result": "none",
 "runs": []
 },
 "dark-matter.democracy-de-sitter-radius-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "3fe3e1078e867f8a",
+"key": "fbe308a7db7186b0",
 "result": "pass",
 "runs": [
 {
@@ -2919,7 +2919,7 @@
 "dark-matter.imported-massless-graviton-production-rate": {
 "failed": false,
 "findings": [],
-"key": "02952ee9c38e8d8f",
+"key": "a4062f8f25324b91",
 "result": "none",
 "runs": []
 },
@@ -2940,7 +2940,7 @@
 "dark-matter.mirror-share-assembled": {
 "failed": false,
 "findings": [],
-"key": "0c188eeea58f8079",
+"key": "a6d61ffc758fd657",
 "result": "pass",
 "runs": [
 {
@@ -3024,7 +3024,7 @@
 ""
 ]
 ],
-"key": "d1c37639a479ed47",
+"key": "d7afb9be8d0d01d9",
 "result": "pass",
 "runs": [
 {
@@ -3175,6 +3175,13 @@
 }
 ]
 },
+"dark-matter.odd-towers-populated": {
+"failed": false,
+"findings": [],
+"key": "e895b14b388c8684",
+"result": "none",
+"runs": []
+},
 "dark-matter.open-channels-their-costs": {
 "failed": false,
 "findings": [
@@ -3265,7 +3272,7 @@
 "dark-matter.p1-single-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "9370168069af639a",
+"key": "62dddee0c3855736",
 "result": "none",
 "runs": []
 },
@@ -3280,13 +3287,6 @@
 "failed": false,
 "findings": [],
 "key": "2a1bf8c4320b31eb",
-"result": "none",
-"runs": []
-},
-"dark-matter.p4-democracy-asymmetry-over-oriented-towers": {
-"failed": false,
-"findings": [],
-"key": "6371a6205f9a9a70",
 "result": "none",
 "runs": []
 },
@@ -3348,7 +3348,7 @@
 ""
 ]
 ],
-"key": "c9ff36995c16ab9c",
+"key": "1a6e2c45b335af8b",
 "result": "pass",
 "runs": [
 {
@@ -3449,7 +3449,7 @@
 "dark-matter.r3-one-cell-per-unshared-direction": {
 "failed": false,
 "findings": [],
-"key": "0e8931bdf74f66fd",
+"key": "d1e06641989cbf37",
 "result": "none",
 "runs": []
 },
@@ -3463,7 +3463,7 @@
 ""
 ]
 ],
-"key": "11b14264e23cf7ea",
+"key": "2ca8070cf0bad112",
 "result": "pass",
 "runs": [
 {
@@ -3642,6 +3642,13 @@
 }
 ]
 },
+"dark-matter.single-ideal-at-residues-zero-and-four": {
+"failed": false,
+"findings": [],
+"key": "d9e0bdff32ddeb70",
+"result": "none",
+"runs": []
+},
 "dark-matter.sourcing-rule-forced-not-chosen": {
 "failed": false,
 "findings": [],
@@ -3674,7 +3681,7 @@
 "dark-matter.status-rule": {
 "failed": false,
 "findings": [],
-"key": "a1357a58b29db3ee",
+"key": "2672c5faea9ca78d",
 "result": "none",
 "runs": []
 },
@@ -3688,7 +3695,7 @@
 ""
 ]
 ],
-"key": "15cff18151622b64",
+"key": "721bd68d449ae140",
 "result": "pass",
 "runs": [
 {
@@ -3804,7 +3811,7 @@
 "dark-matter.total-function-thickness": {
 "failed": false,
 "findings": [],
-"key": "abfd373a8e2de471",
+"key": "9c6600e71b654ba4",
 "result": "pass",
 "runs": [
 {
@@ -4004,7 +4011,7 @@
 "dark-matter.two-roots-are-chord-arc-quarter": {
 "failed": false,
 "findings": [],
-"key": "846860504b1cec2a",
+"key": "3e4fd447fc7c9ebd",
 "result": "pass",
 "runs": [
 {
@@ -4088,7 +4095,7 @@
 "dark-matter.unit-ball-rule": {
 "failed": false,
 "findings": [],
-"key": "0538d1c85f1af969",
+"key": "99af65271df769d2",
 "result": "pass",
 "runs": [
 {
@@ -4128,7 +4135,7 @@
 "dark-matter.which-towers-are-populated": {
 "failed": false,
 "findings": [],
-"key": "f1d6aa0b15492efb",
+"key": "fd5759e7b17abead",
 "result": "none",
 "runs": []
 },
@@ -4409,7 +4416,7 @@
 "dark-tower-matter.h1-momentum": {
 "failed": false,
 "findings": [],
-"key": "ea8d191f18aee908",
+"key": "3c370776abce683e",
 "result": "none",
 "runs": []
 },
@@ -4539,7 +4546,7 @@
 ""
 ]
 ],
-"key": "ab607a3e993607a4",
+"key": "c16ddcee279b8db4",
 "result": "pass",
 "runs": [
 {
@@ -4659,7 +4666,7 @@
 "dark-tower-matter.mirrors-composition": {
 "failed": false,
 "findings": [],
-"key": "1c01fad3f5f70a55",
+"key": "6c5ad48e372791f6",
 "result": "pass",
 "runs": [
 {
@@ -4683,7 +4690,7 @@
 ""
 ]
 ],
-"key": "d99662d922afadc2",
+"key": "eae30916edf9e92f",
 "result": "pass",
 "runs": [
 {
@@ -4751,7 +4758,7 @@
 "dark-tower-matter.population": {
 "failed": false,
 "findings": [],
-"key": "ad507819105f2c69",
+"key": "27a6e51a74a0f92c",
 "result": "proof-only",
 "runs": []
 },
@@ -4765,7 +4772,7 @@
 ""
 ]
 ],
-"key": "1a07614a9b3e706d",
+"key": "74e8a1abea8dff8c",
 "result": "pass",
 "runs": [
 {
@@ -4916,7 +4923,7 @@
 ""
 ]
 ],
-"key": "520bb0a50e2d2fbe",
+"key": "94eedb2fb72ca688",
 "result": "pass",
 "runs": [
 {
@@ -5103,7 +5110,7 @@
 "dark-tower-matter.u-transposition-rule": {
 "failed": false,
 "findings": [],
-"key": "bb867faeec86bc9e",
+"key": "268c52b3bb93d53b",
 "result": "none",
 "runs": []
 },
@@ -10277,7 +10284,7 @@
 ""
 ]
 ],
-"key": "d1459de5dea32a01",
+"key": "4de5caa16639079e",
 "result": "pass",
 "runs": [
 {
@@ -10326,7 +10333,7 @@
 "neutrino.imported-ceiling-under-hypothesis-u-arrow": {
 "failed": false,
 "findings": [],
-"key": "7dddad9a3c8afc61",
+"key": "9a1d9e9936b861fe",
 "result": "pass",
 "runs": [
 {
@@ -10524,7 +10531,7 @@
 ""
 ]
 ],
-"key": "73995083cd704b69",
+"key": "4264c1cec1895c9c",
 "result": "pass",
 "runs": [
 {
@@ -11339,7 +11346,7 @@
 "note.dark-matter.setting-dark-matter-ratio-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "a75c9bb8f5d0e3f8",
+"key": "037bd6bb5b4354b3",
 "result": "none",
 "runs": []
 },
@@ -15851,10 +15858,24 @@
 "result": "none",
 "runs": []
 },
+"note.synthesis.scope-of-the-quantum-field-theory-perturbative-on-a-classical-field": {
+"failed": false,
+"findings": [],
+"key": "8820fffa5c826aa3",
+"result": "none",
+"runs": []
+},
 "note.synthesis.what-n-is-counted": {
 "failed": false,
 "findings": [],
 "key": "d8387d92e3a724d1",
+"result": "none",
+"runs": []
+},
+"note.synthesis.where-stored-text-names-a-graviton": {
+"failed": false,
+"findings": [],
+"key": "8fbb4e569bdf4065",
 "result": "none",
 "runs": []
 },
@@ -18118,7 +18139,7 @@
 "one-relation.arrow-frequency-are-one-bit-level": {
 "failed": false,
 "findings": [],
-"key": "c6120419bdf9f06c",
+"key": "8bca20ed2839c705",
 "result": "pass",
 "runs": [
 {
@@ -18149,7 +18170,7 @@
 "one-relation.character-experience-three-record-chain-theorems": {
 "failed": false,
 "findings": [],
-"key": "595ff96ad80189f4",
+"key": "844652401a0f674f",
 "result": "proof-only",
 "runs": []
 },
@@ -18297,7 +18318,7 @@
 "one-relation.imported-flag-arrow-superselection": {
 "failed": false,
 "findings": [],
-"key": "971792958b649483",
+"key": "4c552fa698ce5e5e",
 "result": "pass",
 "runs": [
 {
@@ -18649,7 +18670,7 @@
 "one-relation.record-chain-votes-measurement-without-collapse": {
 "failed": false,
 "findings": [],
-"key": "4244c4e4bc7ae3b5",
+"key": "ca6c49c70d73cc95",
 "result": "proof-only",
 "runs": []
 },
@@ -18677,7 +18698,7 @@
 ""
 ]
 ],
-"key": "1fd76056aa5c958f",
+"key": "eadb66712abde9b7",
 "result": "pass",
 "runs": [
 {
@@ -19593,7 +19614,7 @@
 "pred.dark-energy-w-minus-one": {
 "failed": false,
 "findings": [],
-"key": "1b04dbd53604ce6f",
+"key": "e69edbb95df3b628",
 "result": "none",
 "runs": []
 },
@@ -19607,35 +19628,35 @@
 "pred.dimmed-evaporation-bursts": {
 "failed": false,
 "findings": [],
-"key": "d13c89e62cb4a0ce",
+"key": "6922a11c6f86abbf",
 "result": "none",
 "runs": []
 },
 "pred.gravity-entangles-standard-phase": {
 "failed": false,
 "findings": [],
-"key": "301b839c48136253",
+"key": "2b7924445cfb30b5",
 "result": "none",
 "runs": []
 },
 "pred.leptonic-cp-trivial": {
 "failed": false,
 "findings": [],
-"key": "f8f98c98f3252951",
+"key": "98d67ad6cdbf3c9a",
 "result": "none",
 "runs": []
 },
 "pred.neutrino-mass-sum-floor": {
 "failed": false,
 "findings": [],
-"key": "c93302daee428552",
+"key": "6dab7be5ffc76c43",
 "result": "none",
 "runs": []
 },
 "pred.no-dark-radiation": {
 "failed": false,
 "findings": [],
-"key": "0c36c7542b211e2b",
+"key": "4ab94869d787c2ed",
 "result": "none",
 "runs": []
 },
@@ -19649,7 +19670,7 @@
 "pred.no-indirect-dark-signals": {
 "failed": false,
 "findings": [],
-"key": "a0b0f8150db288bb",
+"key": "b701fa6cbc63522f",
 "result": "none",
 "runs": []
 },
@@ -19663,7 +19684,7 @@
 "pred.no-objective-collapse": {
 "failed": false,
 "findings": [],
-"key": "8f0cf78a17690412",
+"key": "aa5946b03b2e7682",
 "result": "none",
 "runs": []
 },
@@ -24005,7 +24026,7 @@
 "simulations.c-odd-towers-collisionless": {
 "failed": false,
 "findings": [],
-"key": "4851952c3e0764ee",
+"key": "8677fb7473e3eb5f",
 "result": "none",
 "runs": []
 },
@@ -24138,7 +24159,7 @@
 "simulations.halo-shapes": {
 "failed": false,
 "findings": [],
-"key": "5587f13d1cdd19cc",
+"key": "443dc4e5b403cdbc",
 "result": "none",
 "runs": []
 },
@@ -24173,7 +24194,7 @@
 "simulations.imported-mirror": {
 "failed": false,
 "findings": [],
-"key": "b86a893ab96b495f",
+"key": "2115a00491cfd67d",
 "result": "pass",
 "runs": [
 {
@@ -24219,7 +24240,7 @@
 "simulations.imported-unit-ball-rule-family": {
 "failed": false,
 "findings": [],
-"key": "fa18b8d364b4f6c7",
+"key": "23e5268b86698b6a",
 "result": "pass",
 "runs": [
 {
@@ -24257,7 +24278,7 @@
 "simulations.merger": {
 "failed": false,
 "findings": [],
-"key": "ded2d2887a0b676d",
+"key": "46a96845b0d32c62",
 "result": "none",
 "runs": []
 },
@@ -24271,35 +24292,35 @@
 "simulations.s1-one-species-per-tower": {
 "failed": false,
 "findings": [],
-"key": "d65170004e97e9ca",
+"key": "b30d093c5f8ed121",
 "result": "none",
 "runs": []
 },
 "simulations.s2-sheet-fluid": {
 "failed": false,
 "findings": [],
-"key": "adf2ecc6abe7e1bb",
+"key": "f4c625261bea04e9",
 "result": "none",
 "runs": []
 },
 "simulations.s3-mirror-cluster": {
 "failed": false,
 "findings": [],
-"key": "1b39a9faa9d7d7e5",
+"key": "cc18ee604e57b987",
 "result": "none",
 "runs": []
 },
 "simulations.s4-our-matter": {
 "failed": false,
 "findings": [],
-"key": "110e9608cbd612f4",
+"key": "a11d6ae6319dfa17",
 "result": "none",
 "runs": []
 },
 "simulations.s5-halos": {
 "failed": false,
 "findings": [],
-"key": "4bea07d93e4ab436",
+"key": "5ed628fa0e5010fd",
 "result": "none",
 "runs": []
 },
@@ -31558,7 +31579,7 @@
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
-"key": "ee3fa32662d778ab",
+"key": "55852125f2535461",
 "result": "pass",
 "runs": [
 {
@@ -31678,7 +31699,7 @@
 "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
 "failed": false,
 "findings": [],
-"key": "282d64045d8e0714",
+"key": "9e3a31abe16dee30",
 "result": "pass",
 "runs": [
 {
@@ -31837,7 +31858,7 @@
 "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations": {
 "failed": false,
 "findings": [],
-"key": "7b82cb17120be09e",
+"key": "8bc9c1819eb8866d",
 "result": "pass",
 "runs": [
 {
@@ -32899,7 +32920,7 @@
 "synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free": {
 "failed": false,
 "findings": [],
-"key": "519ca2a0af6ed52a",
+"key": "4fcf97ee819c0102",
 "result": "pass",
 "runs": [
 {
@@ -33587,7 +33608,7 @@
 "synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period": {
 "failed": false,
 "findings": [],
-"key": "ebad5ca7fc3f8423",
+"key": "35256281f35612bc",
 "result": "pass",
 "runs": [
 {
@@ -33848,7 +33869,7 @@
 "synthesis.cold-mirror-needs-non-equilibrium-descent": {
 "failed": false,
 "findings": [],
-"key": "015aecac437593f2",
+"key": "0b64427084f6bfcd",
 "result": "pass",
 "runs": [
 {
@@ -34625,6 +34646,68 @@
 }
 ]
 },
+"synthesis.constituent-momentum-is-the-unique-spin-covariant-quadratic-vector-on-the-spinor-ideal": {
+"failed": false,
+"findings": [],
+"key": "93cc79b3c7c121e6",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_one_spin_covariant_quadratic_vector_in_each_causal_tower",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+},
+{
+"derivation": null,
+"func": "check_vector_projection_is_vacuous_in_three_and_four_dimensions_and_not_in_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+},
+{
+"derivation": null,
+"func": "check_five_dimensional_mass_is_the_square_of_the_dropped_central_part",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_invariant_quadratic_scalars_none_in_three_and_four_dimensions_one_in_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_two_constituents_admit_cross_terms_so_additivity_is_not_forced",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_cross_block_has_the_dimension_of_the_field_so_two_constituents_give_three_four_six",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+}
+]
+},
 "synthesis.continuum-completion-premise": {
 "failed": false,
 "findings": [],
@@ -34948,7 +35031,7 @@
 "synthesis.curvature-only-tractor-actions-are-macdowell-mansouri": {
 "failed": false,
 "findings": [],
-"key": "65f624a4d7a61e34",
+"key": "5a3781390cbdd2d2",
 "result": "pass",
 "runs": [
 {
@@ -34999,6 +35082,43 @@
 "touched": [
 "dark-energy.frozen-point-makes-stelle-west-vector",
 "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection"
+]
+}
+]
+},
+"synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse": {
+"failed": false,
+"findings": [],
+"key": "a0509f88e26cb65e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_invariant_local_terms_of_dimension_two_for_two_vector_slots",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products",
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion"
+]
+},
+{
+"derivation": null,
+"func": "check_divergence_of_the_field_strength_is_laplacian_minus_gradient_divergence_plus_ricci",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion"
+]
+},
+{
+"derivation": null,
+"func": "check_ward_identity_leaves_one_constant_times_the_divergence_of_the_field_strength",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
 ]
 }
 ]
@@ -35061,7 +35181,7 @@
 "synthesis.d-term-level-free-at-fixed-n": {
 "failed": false,
 "findings": [],
-"key": "e46076c6e97fe680",
+"key": "2eb06c9934189681",
 "result": "pass",
 "runs": [
 {
@@ -35084,6 +35204,53 @@
 "synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion",
 "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
 "synthesis.smallness-monomials-exact-hierarchy-casimir"
+]
+}
+]
+},
+"synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
+"failed": false,
+"findings": [],
+"key": "4f031c244855c249",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_total_depends_on_mass_times_number_only",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.projection-every-towers-content-dilutes-ones",
+"dark-matter.unit-ball-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_sphere_law_is_the_ball_law_and_fixes_the_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.democracy-de-sitter-radius-unit-ball"
+]
+},
+{
+"derivation": null,
+"func": "check_mirror_term_is_obtained_twice",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.mirror-share-one-how-fragile",
+"dark-matter.population-count-one-share-half-percent",
+"dark-matter.unit-ball-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_each_remaining_premise_moves_the_total",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.total-function-thickness"
 ]
 }
 ]
@@ -35852,7 +36019,7 @@
 "synthesis.duality-complex-structure-does-not-reach-the-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "35ad0bfd77949bef",
+"key": "029abb46dd523e20",
 "result": "pass",
 "runs": [
 {
@@ -36713,7 +36880,7 @@
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
-"key": "994de92d20d86d7d",
+"key": "fe4ebc687d68fee0",
 "result": "pass",
 "runs": [
 {
@@ -36990,7 +37157,7 @@
 "synthesis.field-space-premise-parallel-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "e9f0fe17e05dddf6",
+"key": "0e3b50647c5cead6",
 "result": "none",
 "runs": []
 },
@@ -37099,7 +37266,7 @@
 "synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio": {
 "failed": false,
 "findings": [],
-"key": "7be9d69bd0e90b51",
+"key": "db5026085a3de832",
 "result": "pass",
 "runs": [
 {
@@ -37580,7 +37747,7 @@
 "synthesis.frozen-point-action-is-bf-transport-broken-by-the-blade-i-wedge-x": {
 "failed": false,
 "findings": [],
-"key": "1ac75372047ee0e5",
+"key": "2302dca32b0eecb4",
 "result": "pass",
 "runs": [
 {
@@ -37794,7 +37961,7 @@
 "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
 "failed": false,
 "findings": [],
-"key": "f38cf65068eaf384",
+"key": "a2381d465da719c4",
 "result": "pass",
 "runs": [
 {
@@ -37900,7 +38067,7 @@
 "synthesis.frozen-point-integrand-gives-einstein-only-with-the-symmetric-slot-frozen": {
 "failed": false,
 "findings": [],
-"key": "df552dc2d14936da",
+"key": "aefd0da282c3ed01",
 "result": "pass",
 "runs": [
 {
@@ -37951,7 +38118,7 @@
 "synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared": {
 "failed": false,
 "findings": [],
-"key": "6413330b5b7145e1",
+"key": "839006f9c048b52e",
 "result": "pass",
 "runs": [
 {
@@ -38061,7 +38228,7 @@
 "synthesis.frozen-point-reduces-the-connection-only-when-infinitely-stiff": {
 "failed": false,
 "findings": [],
-"key": "b394e2d5e59555fa",
+"key": "82982cedbc60c33e",
 "result": "pass",
 "runs": [
 {
@@ -38227,7 +38394,7 @@
 "synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band": {
 "failed": false,
 "findings": [],
-"key": "a6d3b0373e396d12",
+"key": "1b8b4be867d592fc",
 "result": "pass",
 "runs": [
 {
@@ -39620,7 +39787,7 @@
 "synthesis.imported-local-covariance-with-scaling-of-time-ordered-products": {
 "failed": false,
 "findings": [],
-"key": "8481e4e30a331fe6",
+"key": "71370c818abc8ae6",
 "result": "none",
 "runs": []
 },
@@ -40068,7 +40235,7 @@
 "synthesis.indifference-is-curie-plus-single-valuedness": {
 "failed": false,
 "findings": [],
-"key": "90a84f5d5068bec5",
+"key": "776073d0c86f22ff",
 "result": "pass",
 "runs": [
 {
@@ -40326,7 +40493,7 @@
 "synthesis.invariant-forms-on-spinor-ideal-factor-through-reversion": {
 "failed": false,
 "findings": [],
-"key": "92eb72b2267c4f72",
+"key": "28c0c352e32c6434",
 "result": "pass",
 "runs": [
 {
@@ -40363,7 +40530,7 @@
 "synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
 "failed": false,
 "findings": [],
-"key": "039668e9f49ab530",
+"key": "badbaaed840b5aae",
 "result": "pass",
 "runs": [
 {
@@ -40402,7 +40569,7 @@
 "synthesis.inverse-frame-free-tractor-gauge-field-preserves-a-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "956056c62bf75f93",
+"key": "fd6bc3211309bbb2",
 "result": "pass",
 "runs": [
 {
@@ -40467,7 +40634,7 @@
 "synthesis.inverse-problem-for-the-clausius-route": {
 "failed": false,
 "findings": [],
-"key": "71d635017f5aadf4",
+"key": "8840b6d11809fdca",
 "result": "pass",
 "runs": [
 {
@@ -40617,7 +40784,7 @@
 "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
 "failed": false,
 "findings": [],
-"key": "47bc344c0c18ee1d",
+"key": "d8992977da5df42a",
 "result": "pass",
 "runs": [
 {
@@ -40684,7 +40851,7 @@
 "synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
 "failed": false,
 "findings": [],
-"key": "87571f2cece6b0ab",
+"key": "f55d706051d9ef70",
 "result": "pass",
 "runs": [
 {
@@ -40808,7 +40975,7 @@
 "synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching": {
 "failed": false,
 "findings": [],
-"key": "506959bce58fa3f8",
+"key": "7c537a2eced68414",
 "result": "pass",
 "runs": [
 {
@@ -40845,7 +41012,7 @@
 "synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points": {
 "failed": false,
 "findings": [],
-"key": "720b4c7eeefd0c60",
+"key": "deaf1d7e6180b706",
 "result": "pass",
 "runs": [
 {
@@ -40891,7 +41058,7 @@
 "synthesis.kasner-hidden-scale-coupled-scalars-stay-blue": {
 "failed": false,
 "findings": [],
-"key": "a1e1431e99610d22",
+"key": "fdfec9902224f784",
 "result": "pass",
 "runs": [
 {
@@ -41674,7 +41841,7 @@
 "synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike": {
 "failed": false,
 "findings": [],
-"key": "95db263051ad0e9f",
+"key": "41a830e33ff6685b",
 "result": "pass",
 "runs": [
 {
@@ -42027,7 +42194,7 @@
 "synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
 "failed": false,
 "findings": [],
-"key": "5dd48c268fd7f2cc",
+"key": "798042b12097c8e5",
 "result": "pass",
 "runs": [
 {
@@ -42076,7 +42243,7 @@
 "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
 "failed": false,
 "findings": [],
-"key": "09f1a4cfb3d1a441",
+"key": "a990aea1f21a5503",
 "result": "pass",
 "runs": [
 {
@@ -42202,7 +42369,7 @@
 "synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content": {
 "failed": false,
 "findings": [],
-"key": "d16c9f98835f1ed7",
+"key": "4bb1375f568f162c",
 "result": "pass",
 "runs": [
 {
@@ -42618,7 +42785,7 @@
 "synthesis.lowest-causal-residues-zero-four-content": {
 "failed": false,
 "findings": [],
-"key": "5df498210448c206",
+"key": "512709620189d497",
 "result": "pass",
 "runs": [
 {
@@ -42640,7 +42807,7 @@
 "synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons": {
 "failed": false,
 "findings": [],
-"key": "414b35c81079a1a1",
+"key": "159a068de70eff5d",
 "result": "pass",
 "runs": [
 {
@@ -42694,7 +42861,7 @@
 "synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part": {
 "failed": false,
 "findings": [],
-"key": "737660d33b37b287",
+"key": "36305f790f4dcd62",
 "result": "pass",
 "runs": [
 {
@@ -43095,7 +43262,7 @@
 "synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac": {
 "failed": false,
 "findings": [],
-"key": "e4ae770619a08338",
+"key": "1abe2699ca0990b7",
 "result": "pass",
 "runs": [
 {
@@ -43264,7 +43431,7 @@
 "synthesis.matter-asymmetry-registered-free-input": {
 "failed": false,
 "findings": [],
-"key": "dfd0f00a2687d174",
+"key": "ca45bc827b84bf51",
 "result": "none",
 "runs": []
 },
@@ -43318,7 +43485,7 @@
 "synthesis.mirror-asymmetry-route-one": {
 "failed": false,
 "findings": [],
-"key": "cde286039f4a7bda",
+"key": "4f5d7350002836d4",
 "result": "pass",
 "runs": [
 {
@@ -43364,7 +43531,7 @@
 "synthesis.mirror-temperature-measures-deposit-under-r": {
 "failed": false,
 "findings": [],
-"key": "78bbb30234b0152d",
+"key": "3334054aa41ecf6e",
 "result": "pass",
 "runs": [
 {
@@ -43769,7 +43936,7 @@
 "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
 "failed": false,
 "findings": [],
-"key": "363ab77740de1f3b",
+"key": "3cb8691b85e81d98",
 "result": "pass",
 "runs": [
 {
@@ -43817,7 +43984,7 @@
 "synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
 "failed": false,
 "findings": [],
-"key": "2a90b6405983ffd2",
+"key": "122f1be62b7b98e2",
 "result": "pass",
 "runs": [
 {
@@ -44049,6 +44216,81 @@
 "touched": [
 "dark-energy.variable-exponents-residue-pointwise-corrections-are",
 "synthesis.diagonal-kasner-momentum-constraint"
+]
+}
+]
+},
+"synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates": {
+"failed": false,
+"findings": [],
+"key": "e817a374a187b537",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_field_strength_torsion_and_einstein_map_of_the_isotropic_field",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west"
+]
+},
+{
+"derivation": null,
+"func": "check_frozen_point_density_on_the_isotropic_field_is_the_reduced_lagrangian",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-makes-stelle-west-vector",
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west"
+]
+},
+{
+"derivation": null,
+"func": "check_euler_lagrange_expressions_of_the_reduced_lagrangian",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_elimination_gives_the_stored_clock_density",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_dust_solution_tracks_the_density_and_decelerates",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight",
+"synthesis.stelle-west-norm-is-no-local-output"
+]
+},
+{
+"derivation": null,
+"func": "check_radiation_has_no_solution_and_barotropic_value",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_vacuum_leaves_the_norm_a_free_function",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+"synthesis.stelle-west-norm-is-no-local-output"
 ]
 }
 ]
@@ -44348,7 +44590,7 @@
 "synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations": {
 "failed": false,
 "findings": [],
-"key": "259bbb7ddcc4756e",
+"key": "6ca473d8da503635",
 "result": "pass",
 "runs": [
 {
@@ -44401,7 +44643,7 @@
 "synthesis.number-n-registered-free-input": {
 "failed": false,
 "findings": [],
-"key": "2d0e2e6098d82c7f",
+"key": "381279fcce975b02",
 "result": "none",
 "runs": []
 },
@@ -44568,10 +44810,67 @@
 }
 ]
 },
+"synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length": {
+"failed": false,
+"findings": [],
+"key": "2c0000c4f834e26f",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_kernels_in_the_euclidean_algebra_and_their_gauge_dependence",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.coupled-system-tree-level",
+"field-theory.second-quantisation",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+},
+{
+"derivation": null,
+"func": "check_identities_off_the_origin",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation",
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products"
+]
+},
+{
+"derivation": null,
+"func": "check_cut_off_extensions_against_the_logarithmic_forms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+},
+{
+"derivation": null,
+"func": "check_product_of_the_extended_self_energy_with_a_coordinate",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products"
+]
+},
+{
+"derivation": null,
+"func": "check_ward_matching_of_subtractions_and_scale_coefficients",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+}
+]
+},
 "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants": {
 "failed": false,
 "findings": [],
-"key": "025903f2c2609ab4",
+"key": "e97ea9b93ebb2556",
 "result": "pass",
 "runs": [
 {
@@ -44666,7 +44965,7 @@
 "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays": {
 "failed": false,
 "findings": [],
-"key": "59f05ccf3a4ec365",
+"key": "0127281266372d16",
 "result": "pass",
 "runs": [
 {
@@ -45049,7 +45348,7 @@
 "synthesis.parallel-frozen-point-on-matter-regions-is-the-field-space-premise": {
 "failed": false,
 "findings": [],
-"key": "fbe6333373a09342",
+"key": "e47da5fbc8955240",
 "result": "pass",
 "runs": [
 {
@@ -45168,7 +45467,7 @@
 "synthesis.pati-salam-monopoles-bound-descent-history": {
 "failed": false,
 "findings": [],
-"key": "4b674b3f98298b10",
+"key": "1eac902fca69dc2f",
 "result": "pass",
 "runs": [
 {
@@ -45996,6 +46295,42 @@
 }
 ]
 },
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion": {
+"failed": false,
+"findings": [],
+"key": "dd9e674196511aae",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_cyclic_trivector_determines_the_protraction_for_every_bivector_map",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_cyclic_trivector_is_the_covariant_curl_of_the_torsion",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_protraction_vanishes_on_torsion_free_fields",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_kernel_of_the_protraction_is_the_space_of_algebraic_curvature_maps",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.q-splits-maximum-entropy-affine-weights": {
 "failed": false,
 "findings": [],
@@ -46608,6 +46943,73 @@
 }
 ]
 },
+"synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
+"failed": false,
+"findings": [],
+"key": "2d5fafd0999ea9fe",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_order_of_the_mode_equation_by_exact_frobenius_series",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-bessel-reduction-and-small-argument-hankel-forms",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_power_law_threshold_two_thirds_and_the_kasner_trace",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.imported-wands-duality-of-perturbation-spectra",
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_ledger_of_kasner_rows_from_residue_weights",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-datum-kasner-wall",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling",
+"synthesis.kasner-hidden-scale-coupled-scalars-stay-blue",
+"synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue",
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall",
+"synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation",
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point"
+]
+},
+{
+"derivation": null,
+"func": "check_de_sitter_row_in_the_same_equation",
+"ok": true,
+"quantities": [],
+"touched": [
+"mass.weight-polynomial-two-series",
+"synthesis.frozen-phase-spectrum-not-red",
+"synthesis.frozen-point-geometry-reads-descent-as-vacuum",
+"synthesis.imported-planck-2018-lcdm-parameters"
+]
+},
+{
+"derivation": null,
+"func": "check_dust_with_cosmological_constant_scaling_and_running",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-planck-2018-lcdm-parameters"
+]
+}
+]
+},
 "synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns": {
 "failed": false,
 "findings": [],
@@ -46884,7 +47286,7 @@
 "synthesis.reversion-pairing-vanishes-residues-zero-four": {
 "failed": false,
 "findings": [],
-"key": "ea83acff5788f455",
+"key": "8b29d7b97e581551",
 "result": "pass",
 "runs": [
 {
@@ -47589,6 +47991,59 @@
 }
 ]
 },
+"synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation": {
+"failed": false,
+"findings": [],
+"key": "70a359e9873e1ea7",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_background_point",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall"
+]
+},
+{
+"derivation": null,
+"func": "check_three_operators_force_lapse_and_shift",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_flat_gauge_solution_is_the_spectator_equation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_order_zero_and_curvature_perturbation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.kasner-approach-gives-horizon-exit-and-index-three"
+]
+},
+{
+"derivation": null,
+"func": "check_clifford_frame_and_residue",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall"
+]
+}
+]
+},
 "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch": {
 "failed": false,
 "findings": [],
@@ -47765,7 +48220,7 @@
 "synthesis.seeding-remainder-excludes-perturbative-pati-salam": {
 "failed": false,
 "findings": [],
-"key": "ba0c68c7e09be00a",
+"key": "0e9e636e063bda99",
 "result": "pass",
 "runs": [
 {
@@ -47848,7 +48303,7 @@
 "synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off": {
 "failed": false,
 "findings": [],
-"key": "f491f1f20270cac0",
+"key": "07fd8ddc971494ff",
 "result": "pass",
 "runs": [
 {
@@ -48172,7 +48627,7 @@
 "synthesis.slot-module-light-ray-arrays-are-weyl-components": {
 "failed": false,
 "findings": [],
-"key": "0db1a6433971e044",
+"key": "a36c928700351f44",
 "result": "pass",
 "runs": [
 {
@@ -48529,7 +48984,7 @@
 "synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split": {
 "failed": false,
 "findings": [],
-"key": "9348b4cde3f92b65",
+"key": "8b079e4ba5932a92",
 "result": "pass",
 "runs": [
 {
@@ -49124,7 +49579,7 @@
 "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": {
 "failed": false,
 "findings": [],
-"key": "149dac9100610c8e",
+"key": "291d82a5909b59da",
 "result": "pass",
 "runs": [
 {
@@ -49426,7 +49881,7 @@
 "synthesis.tower-charge-sector-label-temperature-not": {
 "failed": false,
 "findings": [],
-"key": "dc55a369c88d011a",
+"key": "1bd1c6af47e99178",
 "result": "pass",
 "runs": [
 {
@@ -49828,7 +50283,7 @@
 "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
 "failed": false,
 "findings": [],
-"key": "9c3ce604f87d211f",
+"key": "a98cacb787194a08",
 "result": "pass",
 "runs": [
 {
@@ -50513,7 +50968,7 @@
 "synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands": {
 "failed": false,
 "findings": [],
-"key": "ac27b45278d4028d",
+"key": "b010d0fd8bf24d3d",
 "result": "pass",
 "runs": [
 {
@@ -50841,7 +51296,7 @@
 "synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four": {
 "failed": false,
 "findings": [],
-"key": "a4ff54aa733f5f73",
+"key": "f635b9953988133c",
 "result": "pass",
 "runs": [
 {
@@ -50861,7 +51316,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field"
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion"
 ]
 },
 {
@@ -51342,7 +51798,7 @@
 "synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy": {
 "failed": false,
 "findings": [],
-"key": "d5243ec7e49c258d",
+"key": "1a95166b424c1752",
 "result": "pass",
 "runs": [
 {
@@ -51390,7 +51846,7 @@
 "synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
 "failed": false,
 "findings": [],
-"key": "f14ca4e83de4583b",
+"key": "7f735fb8b5f8f781",
 "result": "pass",
 "runs": [
 {

@@ -31,7 +31,7 @@ derivations:
   - dark-energy.lift-inherits-no-go-steps-itemised@2
   - dark-energy.conclusion-does-not-depend-ontology-level@1
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

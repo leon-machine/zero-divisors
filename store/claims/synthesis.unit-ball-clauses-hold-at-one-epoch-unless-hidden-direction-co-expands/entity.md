@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-matter.projection-every-towers-content-dilutes-ones@3
-  - dark-matter.unit-ball-rule@5
+  - dark-matter.unit-ball-rule@6
   - dark-matter.thickness-not-gravitational-quantity@5
   - dark-matter.imported-inverse-square-law-short-range@1
   proof: proof-main.tex

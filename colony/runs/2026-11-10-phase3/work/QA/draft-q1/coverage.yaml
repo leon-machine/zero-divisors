@@ -1,0 +1,31 @@
+functions:
+  check_kernels_in_the_euclidean_algebra_and_their_gauge_dependence:
+    kind: sampled
+    clauses:
+    - '(i) sum_ab g_a w g_b D(g_a, g_b) = -2 xi w/(4 pi^2 s) and sum_ab g_a g_b D(g_a, g_b) = (3 + xi)/(4 pi^2 s) in Cl(4,0), at four rational vectors and four rational gauge parameters (Landau and Feynman among them)'
+    - '(i) the coefficients -xi/4 and (3 + xi)/16 in units e^2 pi^-4; the degrees of divergence 1 and 0 by additivity; the sphere average of w_nu w is g_nu s/4'
+    omits: 'the identities for every vector and gauge parameter are the two-line proof (g^a w g_a = -2w, w w w = Q(w) w, linear in xi); the scaling degree at most 3 of the remainder and local integrability on the partial diagonals are the proof''s'
+  check_identities_off_the_origin:
+    kind: exact
+    clauses:
+    - '(ii) the massless propagator is monogenic off the origin with unit flux; dslash(w_nu S0) = g_nu S0 off the origin (scalar and bivector parts) for each nu'
+    - '(v) w/s^3 = (1/16) dslash box(L/s), 1/s^2 = -(1/4) box(L/s), box(1/s) = 0, the traceless part (w_a w_nu - delta s/4)/s^3 = (d_a d_nu - delta box/4)(1/(8 s)), and box(w_nu L/s) = 2 d_nu((L + 1)/s), as identities of finite sums of polynomials times s^a L^k'
+    omits: 'the convolution identity of (ii) itself (its proof is the uniqueness of the decaying solution); the massive propagator'
+  check_cut_off_extensions_against_the_logarithmic_forms:
+    kind: sampled
+    clauses:
+    - '(v) [1/s^2] cut off at radius 1 equals -(1/4) box(L/s) + pi^2 delta; [w/s^3] with first-order subtraction equals (1/16) dslash box(L/s) - (3 pi^2/8) dslash delta; [w_nu w_a/s^3] equals the traceless homogeneous part plus (delta/4)[1/s^2]: exact pairings with two polynomial bump functions on the unit ball, all index values'
+    - '(v) box(1/s) = -4 pi^2 delta; the scales ln M^2 = 1 and 3/2 and their difference 1/2'
+    omits: 'two test functions, not all; the identities for every test function follow because each side differs from the other by a local term of fixed form (one constant each), so one test function with a nonzero value or gradient at the origin fixes the constant: this step is the proof''s'
+  check_product_of_the_extended_self_energy_with_a_coordinate:
+    kind: sampled
+    clauses:
+    - '(v) w_nu times (1/16) d_a box(ln(M^2 s)/s) equals the zero-transfer vertex form exactly at ln(M^2/M''^2) = 1/2 and not at 0: exact pairings, two test functions, all sixteen index pairs (an independent route to the 1/2: no cut-off enters)'
+    omits: 'as above, the passage from two test functions to all'
+  check_ward_matching_of_subtractions_and_scale_coefficients:
+    kind: exact
+    clauses:
+    - '(iii) for a polynomial f on R^8 the gradient of f in t at the origin equals the gradient at the origin of F(w) = f(w, 0) - f(0, w), and F(0) = 0'
+    - '(iv) scale derivatives xi e^2/(8 pi^2) dslash delta and -xi e^2/(8 pi^2) n delta delta, from the shell integral and again from the logarithmic form'
+    omits: 'clause (iii) itself is the proof (Fubini and integration by parts in t); no eight-dimensional integral is computed in the check; the mass term''s scale derivative is arithmetic in the proof'
+untouched_premises: {}

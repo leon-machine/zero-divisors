@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.total-function-thickness@5
+  - dark-matter.total-function-thickness@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.stored-asymmetry-charge-not-number@10
   - dark-matter.parallel-boundary-mode-spaces-one-wall@5

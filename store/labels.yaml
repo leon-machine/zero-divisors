@@ -6889,7 +6889,7 @@ T14:prem:R3:
   kind: theorem
   number: '7.4'
 T14:prem:democracy:
-  entity: dark-matter.p4-democracy-asymmetry-over-oriented-towers
+  entity: dark-matter.mirror-tower-copy-one
   kind: theorem
   number: '2.4'
 T14:prem:indiff:

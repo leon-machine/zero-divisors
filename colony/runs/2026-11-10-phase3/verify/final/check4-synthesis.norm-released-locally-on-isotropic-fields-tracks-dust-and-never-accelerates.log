@@ -1,0 +1,12 @@
+I405  synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+      dark-energy.imported-henneaux-teitelboim-promotion is declared and untouched, as expected: coverage.yaml: imported Fact cited in the recalled clause (vii)
+I405  synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+      dark-energy.vacuum-region-registration-condition is declared and untouched, as expected: coverage.yaml: cited in clause (vii) for the stress-energy of a constant Lambda with p = -rho
+I405  synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+      synthesis.frozen-phase-spectrum-not-red is declared and untouched, as expected: coverage.yaml: cited in the argued reading for its clause (iv), the promoted norm as no scale-dependent source; not restated and no computation of it is used
+I405  synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+      synthesis.promoted-norm-one-global-pair is declared and untouched, as expected: coverage.yaml: cited for the equation d lambda = 0 in the recalled clause (vii); no computation of it is used
+I405  synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates
+      synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands is declared and untouched, as expected: coverage.yaml: named in the argued reading as the one stored structure with a late-time equation of state different from -1; no computation of it is used
+
+synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates: 0 error(s), 5 other finding(s); check result: pass

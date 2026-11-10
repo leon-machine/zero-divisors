@@ -42,7 +42,7 @@ derivations:
   - dark-energy.frozen-point-makes-stelle-west-vector@7
   - dark-energy.imported-macdowell-mansouri-theorem-stelle-west@4
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
   - rule2.rule-2-kaluza-klein-algebra@7
   - synthesis.imported-five-dimensional-chern-simons-gravity@1
   - synthesis.imported-chern-weil-and-chern-simons-forms@1

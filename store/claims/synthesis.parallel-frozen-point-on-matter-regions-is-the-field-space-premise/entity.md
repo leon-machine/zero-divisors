@@ -33,7 +33,7 @@ derivations:
   uses:
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection@1
   - synthesis.curvature-only-tractor-actions-are-macdowell-mansouri@3
-  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@4
+  - synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part@5
   - interior.scale-tractor-leaves-cone@8
   - interior.imported-tractor-connection@3
   - dark-energy.imported-frozen-point-geometry@7

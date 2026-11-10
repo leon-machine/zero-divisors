@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.parallel-boundary-mode-spaces-one-wall@5
   - hawking.greybody-inheritance-under-interface-premise@6
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -30,6 +30,10 @@ locators:
   label: obs:merger
   line: 445
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'No version change (note only). Leon''s decision 10 of 10 November 2026: the six premises S1 to S5 and C assumed here are model specification, and S2 and C are the premises of the two exclusive readings (W) and (C): this result lists both because it reports both readings, and does not hold them together. The pins to the six premises are left for the pin review (each is raised by one).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -66,12 +70,12 @@ derivations:
   - simulations.imported-unit-ball-rule-family@4
   - simulations.imported-mirror@6
   assumes:
-  - simulations.s1-one-species-per-tower@2
-  - simulations.s2-sheet-fluid@2
-  - simulations.s3-mirror-cluster@1
-  - simulations.s4-our-matter@1
-  - simulations.s5-halos@1
-  - simulations.c-odd-towers-collisionless@2
+  - simulations.s1-one-species-per-tower@3
+  - simulations.s2-sheet-fluid@3
+  - simulations.s3-mirror-cluster@2
+  - simulations.s4-our-matter@2
+  - simulations.s5-halos@2
+  - simulations.c-odd-towers-collisionless@3
   note: 'Simulation output at observation level: the runs are set up under Premises S1 to S5, and reading
     (C) under Premise C, with the composition of the imported unit-ball rule and the mirror; no proof
     text, since the result is computed, not proved.'

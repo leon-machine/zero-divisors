@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: legacy

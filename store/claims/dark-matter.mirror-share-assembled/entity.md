@@ -1,7 +1,7 @@
 ---
 id: dark-matter.mirror-share-assembled
 kind: claim
-version: 8
+version: 9
 title: The mirror share, assembled
 status: proved
 region: dark-matter
@@ -21,22 +21,26 @@ credit:
   role: 'maintainer pass, mass ratio restated onto the common-ceiling-coupling premise at Leon''s decisions'
   version: 8
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Fable 5.2
+  role: 'wording after the retirement of Premise P4: the equal asymmetry is cited from the copy theorem''s clause (v) with its premises'
+  version: 9
+  source: maintainer pass of 2026-11-10
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
+  - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@8
   - dark-matter.imported-derived-generation-flag@6
   - dark-matter.imported-inputs-standard-model-chain@6
   - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.mode-counts-two-modules-which-one@6
-  - dark-matter.population-count-one-share-half-percent@6
+  - dark-matter.population-count-one-share-half-percent@7
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.stored-asymmetry-charge-not-number@10
   - standard-model.hyp-s-slot-statistics@10
   assumes:
-  - dark-matter.p1-single-frozen-point@1
+  - dark-matter.p1-single-frozen-point@2
   - dark-matter.p2-indifference@2
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex
@@ -53,6 +57,10 @@ locators:
   label: thm:share
   line: 474
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 8 -> 9. Leon''s decision 10 of 10 November 2026: Premise P4 is retired as a postulate. The formal opening no longer cites it by reference and clause (iii) cites clause (v) of dark-matter.mirror-tower-copy-one with the premises that clause now states; no edge changes here (P4 was not assumed), values unchanged. Pins left for the pin review.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -129,7 +137,7 @@ payload:
 ---
 
 ## formal
-Under Premises \claimref{dark-matter.p1-single-frozen-point}, \claimref{dark-matter.p2-indifference} and \claimref{synthesis.common-ceiling-coupling-premise} (Premise \claimref{dark-matter.p4-democracy-asymmetry-over-oriented-towers} being discharged for the mirror, clause (iii)), the Standard-Model paper's Hypothesis (S) as carried in Fact \claimref{dark-matter.imported-derived-generation-flag}, and the input list of Fact \claimref{dark-matter.imported-inputs-standard-model-chain}, the mirror tower contributes exactly one visible share:
+Under Premises \claimref{dark-matter.p1-single-frozen-point}, \claimref{dark-matter.p2-indifference} and \claimref{synthesis.common-ceiling-coupling-premise} (the former Premise P4, democracy of the asymmetry, retired as a postulate, being a theorem for the mirror, clause (iii)), the Standard-Model paper's Hypothesis (S) as carried in Fact \claimref{dark-matter.imported-derived-generation-flag}, and the input list of Fact \claimref{dark-matter.imported-inputs-standard-model-chain}, the mirror tower contributes exactly one visible share:
 \[
 f_{2} \;=\; \underbrace{\frac{\epsilon_{2}}{\epsilon_{6}}}_{\text{P2}}\cdot\;\underbrace{\frac{n_{2}}{n_{6}}}_{\text{derived}}\;\cdot\;\underbrace{\frac{m_{2}}{m_{6}}}_{\text{derived, given the common ceiling coupling}} \;=\; 1\cdot 1\cdot 1 \;=\; 1, \qquad \Omega_{\mathrm{mirror}} \;=\; \Omega_{b},
 \]
@@ -137,7 +145,7 @@ exactly on the proton-only branch and to half a percent on the burning branch (P
 \begin{enumerate}
 \item[(i)] \emph{(The mode ratio: derived, on no premise of this paper.)} $n_{2} = n_{6}$, the same state space.
 \item[(ii)] \emph{(The mass ratio: derived, given the common ceiling coupling.)} $m_{2} = m_{6}$ up to the two sectors' composition, the common ceiling and coupling being Premise \claimref{synthesis.common-ceiling-coupling-premise} along the reversal orbit (Premise \claimref{dark-matter.p2-indifference}, scoped to sector labels, does not reach a coupling).
-\item[(iii)] \emph{(The asymmetry ratio: premised on P2.)} $\epsilon_{2} = \epsilon_{6}$ by the audit along the same orbit (P1's orientation clause a weaker second route); P4 is discharged for the mirror, not assumed.
+\item[(iii)] \emph{(The asymmetry ratio: premised on P2.)} $\epsilon_{2} = \epsilon_{6}$ by the audit along the same orbit (P1's orientation clause a weaker second route), under the premises Theorem \claimref{dark-matter.mirror-tower-copy-one}(v) states for it (the common $N$ of P1 and the charge reading of the stored asymmetry); the former P4 is that clause on the mirror and is not assumed.
 \item[(iv)] \emph{(No temperature in it.)} The share is one anywhere in the interval of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(iii).
 \end{enumerate}
 

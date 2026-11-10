@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.fits-record-level@6
   - standard-model.chain@8
-  - dark-matter.imported-massless-graviton-production-rate@2
+  - dark-matter.imported-massless-graviton-production-rate@3
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex

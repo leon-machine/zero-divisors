@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.total-function-thickness@5
+  - dark-matter.total-function-thickness@6
   proof: proof-main.tex
 checked_by:
 - kind: proof

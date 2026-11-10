@@ -24,8 +24,8 @@ derivations:
   - dark-tower-matter.gauge-algebras@5
   - dark-tower-matter.five-dimensional-content@5
   assumes:
-  - dark-tower-matter.u-transposition-rule@2
-  - dark-matter.r3-one-cell-per-unshared-direction@1
+  - dark-tower-matter.u-transposition-rule@3
+  - dark-matter.r3-one-cell-per-unshared-direction@2
   proof: proof-main.tex
 checked_by:
 - kind: proof

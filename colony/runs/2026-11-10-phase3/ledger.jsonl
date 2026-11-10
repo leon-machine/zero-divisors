@@ -1,0 +1,4 @@
+{"t": 1794333366.6817114, "problem": "dark energy exposure (pred.dark-energy-w-minus-one)", "tokens": 950000, "outcome": "negative", "proposal": "synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates", "verdict": "OVERSTATED"}
+{"t": 1794333366.7117825, "problem": "op.descent-state-and-spectrum", "tokens": 1250000, "outcome": "negative", "proposal": "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources", "verdict": "OVERSTATED"}
+{"t": 1794333366.7409568, "problem": "op.thickness-deposit-rule", "tokens": 1500000, "outcome": "proved-partial", "proposal": "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball", "verdict": "OVERSTATED"}
+{"t": 1794333366.7761924, "problem": "op.qft-loops-and-renormalisation", "tokens": 1700000, "outcome": "proved-partial", "proposal": "synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion", "verdict": "SOUND WITH FIXES"}

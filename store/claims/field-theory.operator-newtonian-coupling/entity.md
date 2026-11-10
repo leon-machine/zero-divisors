@@ -73,7 +73,7 @@ extraction:
     cited:
     - field-theory.conserved-numbers-mass-block
 supports:
-- pred.gravity-entangles-standard-phase@1
+- pred.gravity-entangles-standard-phase@2
 - pred.no-gravitational-settling@1
 ---
 

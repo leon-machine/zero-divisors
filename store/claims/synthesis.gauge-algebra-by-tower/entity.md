@@ -35,11 +35,11 @@ derivations:
   - dark-tower-matter.mirror-algebra@4
   assumes:
   - dark-tower-matter.h2-identification@1
-  - dark-tower-matter.u-transposition-rule@2
-  - dark-tower-matter.h1-momentum@1
+  - dark-tower-matter.u-transposition-rule@3
+  - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
 supports:
-- dark-matter.mirror-tower-copy-one@9
+- dark-matter.mirror-tower-copy-one@10
 checked_by:
 - kind: check
   ref: check.py::test_gauge_algebra_by_tower

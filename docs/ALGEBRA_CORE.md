@@ -235,6 +235,7 @@ claims in a band outside, and a path-to-core highlight on click. Notes off the m
    core results.
 5. `tp lock` after review; I305 notes 54 stored documents depend on changed entities and may need
    regenerating.
+6. (2026-11-10) Outside the core's scope (GTG), recorded here because results cite it as algebra: the protraction identity of the curvature operator of a torsion-free field, `d_a ^ R(a ^ b) = 0` (the first Bianchi identity; the converse fails), is `synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion`.
 
 ### Page revision (2026-10-27, after Leon's review)
 

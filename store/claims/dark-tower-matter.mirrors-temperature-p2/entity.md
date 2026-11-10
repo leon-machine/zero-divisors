@@ -29,7 +29,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.stored-asymmetry-charge-not-number@10
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   proof: proof-main.tex

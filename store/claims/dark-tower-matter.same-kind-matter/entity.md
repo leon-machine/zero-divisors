@@ -29,7 +29,7 @@ derivations:
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.where-mass-begins@2
   assumes:
-  - dark-tower-matter.u-transposition-rule@2
+  - dark-tower-matter.u-transposition-rule@3
   - dark-tower-matter.h2-identification@1
   proof: proof-main.tex
 checked_by:

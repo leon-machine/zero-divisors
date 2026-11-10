@@ -1,7 +1,7 @@
 ---
 id: synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part
 kind: claim
-version: 4
+version: 5
 title: 'The MacDowell-Mansouri principle fixes the trace-free part'
 status: proved
 region: synthesis
@@ -37,6 +37,10 @@ credit:
   role: 'formal setting restated at Leon''s second-round decisions: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, right on both branches'
   version: 4
   source: maintainer pass 2026-11-07 (decisions, second round)
+- name: Claude Fable 5.2
+  role: 'assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text'
+  version: 5
+  source: maintainer pass of 2026-11-10
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -51,6 +55,8 @@ derivations:
   - synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale@4
   - synthesis.imported-gtg-dictionary@2
   - synthesis.imported-einstein-cartan-matter-coupling@1
+  assumes:
+  - synthesis.field-space-premise-parallel-frozen-point@2
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -76,6 +82,10 @@ lineage:
   - synthesis.einstein-equations-from-c-loc-and-clausius
   - synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 4 -> 5, at Leon''s decision of 2026-11-10: assumes edge added to the field-space premise (FS), synthesis.field-space-premise-parallel-frozen-point. The statement takes as its field space the whole pair (hb, Omega) with Q(I) = Lambda/3 fixed, which is the field space of (FS), and clause (iv) states the field equations with matter on it; the edge records that, so the cone of (FS) shows what a refutation of the premise would take. One sentence added to the Reading and the proof; clauses (i) to (iv) and the checks are unchanged (the premise is recorded as untouched in coverage.yaml).'
   maintainer_pass_decisions_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -137,7 +147,7 @@ E_{a} := \epsilon_{abcd}\,e^{b}\wedge F^{cd} = 2\,\big(\mathcal{G}(e_{a}) + \Lam
 \]
 which is the content of $\nabla_{a}I' = 4\pi G\,(0, T^{\circ}_{ab}, \tfrac{1}{12}\nabla_{a}\tau)$ with $\rho_{I'} = J/4$ in Theorem \claimref{synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale}(4). In vacuum $\Sch = \tfrac{\Lambda}{6}g$, the Schouten slot of the Stelle-West Cartan connection, so the scale tractor $I'$ is parallel: the own-ray incidence of the infinity vacua (Theorem \claimref{synthesis.einstein-condition-is-infinity-vacuum-incidence}) is the vacuum case of the field equations of $S_{\mathrm{MM}} + S_{m}$, and with matter the stored derivative of the scale tractor is a law, because $T$ is given by $S_{m}$ independently of the vacuum field.
 \end{enumerate}
-\emph{Reading.} $S_{\mathrm{MM}}$ is a dynamical principle for the whole gauge field, not for the scale within a fixed conformal class: its field space is every pair $(\hb, \Omega)$, its field equations are second-order equations with an independently given source, and its zero set is not the parallel-tractor condition, so it is not a rewording of that condition. It is imported (MacDowell-Mansouri, Stelle-West), and the series supplies only its frozen-point presentation, in which the frozen point enters as the constant prefactor $1/Q(I) = 3/\Lambda$; adopting it is adopting Einstein's equations as a variational premise. So it answers the question of a principle for the whole gauge field only given that imported action principle: transport-absent, and a principle derived from the series' objects, from which the incidence would follow rather than being assumed in variational form, remains open. The Stelle-West field $V$ here is a variable of the action ($Q(V) = -3/\Lambda$, $\ip{V}{I} = 0$), not a selected point. Compared with the Clausius route of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius}, the two principles give the same field equations (the Euler term of $S_{\mathrm{MM}}$ is topological in four dimensions), with $\Lambda$ a parameter of the functional here and an integration constant there, and they differ in the entropy: the Wald entropy of $S_{\mathrm{MM}}$ on a local edge carries the Euler density $-\tfrac{3}{4\Lambda}$ times the Cartan curvature of the edge plane, which the clause (Loc) excludes (Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}). The statements hold for $\Lambda \neq 0$; at $\Lambda = 0$ the curvature-squared presentation has a pole and the functional is the Einstein-Cartan limit of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}, with the same frame equation at $\Lambda = 0$. With spinning matter the torsion equation of the Fact is sourced by the spin density and its contact term enters $T$; the trace-free count of (ii) is unchanged.
+\emph{Reading.} $S_{\mathrm{MM}}$ is a dynamical principle for the whole gauge field, not for the scale within a fixed conformal class: its field space is every pair $(\hb, \Omega)$, its field equations are second-order equations with an independently given source, and its zero set is not the parallel-tractor condition, so it is not a rewording of that condition. It is imported (MacDowell-Mansouri, Stelle-West), and the series supplies only its frozen-point presentation, in which the frozen point enters as the constant prefactor $1/Q(I) = 3/\Lambda$; adopting it is adopting Einstein's equations as a variational premise. So it answers the question of a principle for the whole gauge field only given that imported action principle: transport-absent, and a principle derived from the series' objects, from which the incidence would follow rather than being assumed in variational form, remains open. The field space of the statement, every pair $(\hb, \Omega)$ with $Q(I) = \Lambda/3$ fixed, is that of Premise (FS) (\claimref{synthesis.field-space-premise-parallel-frozen-point}), which this result assumes: clauses (i) to (iii) are identities of the functional on that field space, and clause (iv) gives the field equations with matter of the series' gravitational action only with (FS); without the premise the same integrand is the Weyl square, as that premise records. The Stelle-West field $V$ here is a variable of the action ($Q(V) = -3/\Lambda$, $\ip{V}{I} = 0$), not a selected point. Compared with the Clausius route of Theorem \claimref{synthesis.einstein-equations-from-c-loc-and-clausius}, the two principles give the same field equations (the Euler term of $S_{\mathrm{MM}}$ is topological in four dimensions), with $\Lambda$ a parameter of the functional here and an integration constant there, and they differ in the entropy: the Wald entropy of $S_{\mathrm{MM}}$ on a local edge carries the Euler density $-\tfrac{3}{4\Lambda}$ times the Cartan curvature of the edge plane, which the clause (Loc) excludes (Theorem \claimref{synthesis.series-wald-entropy-changes-without-flux-on-local-horizons}). The statements hold for $\Lambda \neq 0$; at $\Lambda = 0$ the curvature-squared presentation has a pole and the functional is the Einstein-Cartan limit of Theorem \claimref{dark-energy.frozen-point-makes-stelle-west-vector}, with the same frame equation at $\Lambda = 0$. With spinning matter the torsion equation of the Fact is sourced by the spin density and its contact term enters $T$; the trace-free count of (ii) is unchanged.
 
 ## technical
 The open problem asks for a principle of the series for the whole gravitational gauge field, not for the scale inside a fixed conformal class, whose field equations fix the trace-free part of the curvature, so that the Einstein condition (the own-ray incidence of the infinity vacua, equivalently a parallel scale tractor) follows rather than being restated. Given an imported action principle, the store already contains one, in the dark-energy part of the series: the MacDowell-Mansouri functional (MacDowell-Mansouri, Stelle-West), the square of the de Sitter curvature seen from the frozen point, with the Stelle-West vector built from the frozen point and the canonical tractor. It varies $\hb$ and $\Omega$ together.

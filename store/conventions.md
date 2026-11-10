@@ -400,6 +400,13 @@ Known limits of these conventions (recorded findings, not settled):
   "Beyond one flat chart", naming the global ingredient; they carry the entry
   `beyond one flat chart: <ingredient>` under `extraction.flags`.
 
+## Gravity and the graviton
+
+Gravity in this series is the classical gauge field of Gauge Theory Gravity. The series holds no quantum of that
+field: the graviton does not exist here. Where stored text says graviton it names a helicity-2 channel of the
+classical field, a counting convention, or prior art; no stored result is to be read as resting on a quantised
+gravitational field, and results that import such a process are flagged.
+
 ## Working with the store
 
 - Start broad: `list_subjects`, `list_tags`, then `trail(subject)` for the

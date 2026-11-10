@@ -1,0 +1,93 @@
+[
+ {
+  "id": "dark-energy.vacuum-region-registration-condition",
+  "title": "$w = -1$ on the vacuum region; the registration, and its condition",
+  "kind": "claim",
+  "status": "proved",
+  "effective_status": "proved",
+  "subject": "dark-energy",
+  "programme": "transport-papers",
+  "tags": [
+   "live-prediction",
+   "frozen-point",
+   "cosmological-constant"
+  ],
+  "one_liner": "On the Einstein region the frozen point's norm is constant, giving $w = -1$; conditionally on the gravitational connection keeping the frozen point parallel on matter-filled regions in the physical scale (Premise (FS)), $w = -1$ at every epoch, a registration that a confirmed $w\\neq -1$ would refute; on that field space $w = -1$ is the $\\Lambda$CDM equation of state, not independent evidence for (FS).",
+  "evidence": "pass",
+  "holds_given": [
+   "scrambling.indifference-structural-premise-series",
+   "sheaf.tameness",
+   "synthesis.field-space-premise-parallel-frozen-point"
+  ],
+  "rests_on_foundation": [
+   "synthesis.continuum-completion-premise",
+   "synthesis.premise-minimal-non-commutativity",
+   "synthesis.premise-superposition-over-the-integers",
+   "synthesis.premise-the-bit"
+  ],
+  "past_cone_size": 105,
+  "future_cone_size": 1,
+  "future_cone_size_without_restatements": 1,
+  "used_by": 1,
+  "source": {
+   "paper": "T10",
+   "number": "Prop 4.2",
+   "label": "prop:w",
+   "line": 808
+  },
+  "restates": [],
+  "restated_by": [],
+  "refuted_by": [],
+  "rests_on": [
+   "dark-energy.frozen-point-makes-stelle-west-vector",
+   "dark-energy.imported-frozen-point-geometry",
+   "synthesis.field-space-premise-parallel-frozen-point"
+  ],
+  "used_by_ids": [
+   "pred.dark-energy-w-minus-one"
+  ]
+ },
+ {
+  "id": "pred.dark-energy-w-minus-one",
+  "title": "Dark energy cannot evolve: w = -1",
+  "kind": "prediction",
+  "status": "live",
+  "effective_status": "live",
+  "subject": "dark-energy",
+  "programme": "transport-papers",
+  "tags": [
+   "live-prediction",
+   "cosmological-constant"
+  ],
+  "one_liner": "Under its one registered condition, the field-space premise (FS) (the gravitational connection keeps the frozen point parallel in the physical scale), the framework predicts that dark energy has $w = -1$ exactly at every epoch, with no evolution; on that field space this is the $\\Lambda$CDM equation of state, not independent evidence for (FS).",
+  "evidence": "none",
+  "holds_given": [
+   "scrambling.indifference-structural-premise-series",
+   "sheaf.tameness",
+   "synthesis.field-space-premise-parallel-frozen-point"
+  ],
+  "rests_on_foundation": [
+   "synthesis.continuum-completion-premise",
+   "synthesis.premise-minimal-non-commutativity",
+   "synthesis.premise-superposition-over-the-integers",
+   "synthesis.premise-the-bit"
+  ],
+  "past_cone_size": 106,
+  "future_cone_size": 0,
+  "future_cone_size_without_restatements": 0,
+  "used_by": 0,
+  "source": {
+   "paper": "T10",
+   "number": "T17 stance 2",
+   "label": "tab:stances"
+  },
+  "basis_status": "proved",
+  "restates": [],
+  "restated_by": [],
+  "refuted_by": [],
+  "rests_on": [
+   "dark-energy.vacuum-region-registration-condition"
+  ],
+  "used_by_ids": []
+ }
+]

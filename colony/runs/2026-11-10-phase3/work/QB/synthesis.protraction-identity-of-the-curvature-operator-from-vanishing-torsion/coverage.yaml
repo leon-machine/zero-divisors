@@ -1,0 +1,17 @@
+functions:
+  check_cyclic_trivector_determines_the_protraction_for_every_bivector_map:
+    kind: complete
+    clauses: ["(i) C(c) = 2 P(c) - c . E, d_c ^ C(c) = -2 E and P(c) = C(c)/2 - c . (d_e ^ C(e))/4 on all 36 basis maps and 4 frame vectors of Cl(1,3) and of signature (2,2)", "(i) the same on 12 basis maps in signature (1,4)"]
+    omits: "complete in four dimensions (both signatures) by linearity in the map and in c; in five dimensions a sample; other dimensions are the proof's (the grade count 4 of a four-vector does not depend on the dimension)"
+  check_cyclic_trivector_is_the_covariant_curl_of_the_torsion:
+    kind: sampled
+    clauses: ["(ii) C(g^mu)/2 = D ^ Theta^mu - Theta^nu ^ D_nu g^mu on one polynomial field with torsion in Cl(1,3) and one in signature (1,2)", "(ii) control: with torsion the cyclic trivector and the protraction are not zero"]
+    omits: "two fields; the identity for every field is the proof's (Leibniz rule and the commutator of clause (c) of the definition)"
+  check_protraction_vanishes_on_torsion_free_fields:
+    kind: sampled
+    clauses: ["(iii) P(c) = 0, C(c) = 0, the cyclic vector identity and d_a calR(a ^ c) = calR(c) on four polynomial coframes with Omega solved from the torsion equation (two in Cl(1,3), one in (1,2), one in (2,2)) and on the library's Schwarzschild and de Sitter fields", "(iii) anchors of the store's sign: de Sitter scalar curvature 12 H^2, Schwarzschild radial eigenvalue 2M/r^3"]
+    omits: "six fields at one rational point each; the statement for every torsion-free field is the proof's"
+  check_kernel_of_the_protraction_is_the_space_of_algebraic_curvature_maps:
+    kind: exact
+    clauses: ["(iv) rank of the protraction map 3, 16, 16, 50 and kernel dimension 6, 20, 20, 50 in signatures (1,2), (1,3), (2,2), (1,4)", "(iv) the kernel lies in the symmetric maps; the symmetric maps exceed it by 0, 1, 1, 5 dimensions", "(iv) B -> I B is symmetric and has protraction -3 I c in Cl(1,3)", "(i) in Cl(1,3) the cyclic vector identity and the protraction identity have the same solution space (ranks 16, joint rank 16)"]
+    omits: "dimensions three, four and five only; the general dimension count is classical and cited"

@@ -2,7 +2,7 @@ functions:
   check_asymmetric_share_is_the_mirror_alone:
     kind: complete
     clauses: ["(i) the asymmetric dark matter is the mirror tower's alone; residues 0 and 4 sterile", "half a percent on the burning branch"]
-    omits: "f_2 = 1 is the mirror theorem's (P4 and the copy) and is not recomputed; the half-percent bracket is the mean-mass ratio in (0.994, 0.996)"
+    omits: "f_2 = 1 is the mirror theorem's (its clauses (iii) and (v)) and is not recomputed; the half-percent bracket is the mean-mass ratio in (0.994, 0.996)"
   check_observed_ratio_and_uncertainty:
     kind: exact
     clauses: ["(i) Omega_c/Omega_b = 5.364 +- 0.065"]
@@ -23,7 +23,6 @@ untouched_premises:
   dark-matter.superselected-hence-dark-exactly-stable: "the symmetric relic argument in (ii) is qualitative"
   dark-matter.p1-single-frozen-point: "premise with no computable content here"
   dark-matter.p2-indifference: "premise with no computable content here"
-  dark-matter.p4-democracy-asymmetry-over-oriented-towers: "premise, discharged for the mirror elsewhere; not recomputed"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

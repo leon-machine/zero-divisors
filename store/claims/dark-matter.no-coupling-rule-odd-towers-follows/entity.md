@@ -33,7 +33,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.residue-soldered-invariant-not-algebraic-one@5
   assumes:
   - dark-matter.p2-indifference@2

@@ -43,6 +43,10 @@ locators:
   label: prop:ordering
   line: 896
 extraction:
+  maintainer_pass_2026_11_10_protraction:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept. The check of this result imposes the first Bianchi identity d_a ^ W(a ^ b) = 0 as one of the linear conditions that define an algebraic Weyl map. Since 10 November 2026 the identity is a stored theorem for the curvature operator of a torsion-free gravitational field, synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion (clause (iii); clause (iv) computes that the maps obeying it form the 20-dimensional space of algebraic curvature maps in four dimensions). Here the identity is a defining condition on a linear map, not a property derived for a field, so no premise is replaced and no uses edge is added; the citation says where the condition comes from when the map is the Weyl part of the curvature operator of a torsion-free field.'
   maintainer_pass_2:
     by: maintainer-2026-10-24
     date: '2026-10-24'

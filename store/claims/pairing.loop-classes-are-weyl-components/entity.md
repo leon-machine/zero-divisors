@@ -56,6 +56,10 @@ locators:
   label: lem:weylclasses
   line: 360
 extraction:
+  maintainer_pass_2026_11_10_protraction:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept. The proof cites the pair symmetry of the Weyl map as that of the Riemann tensor read through the imported dictionary, and names it a consequence of the first Bianchi identity. Since 10 November 2026 the identity is derived in the store for a torsion-free gravitational field, synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion (clause (iii)), and its clause (iv) computes the pair symmetry of every map obeying the identity in dimensions three, four and five (the general dimension is cited there, not proved). The proof here is unchanged and still runs through the dictionary Fact; no uses edge is added.'
   maintainer_pass_gtg_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

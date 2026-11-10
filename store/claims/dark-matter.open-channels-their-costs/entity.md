@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@9
+  - dark-matter.mirror-tower-copy-one@10
   - dark-matter.superselected-hence-dark-exactly-stable@5
   proof: proof-main.tex
 checked_by:

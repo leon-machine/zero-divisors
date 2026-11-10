@@ -1894,7 +1894,7 @@
  },
  "dark-energy.vacuum-region-registration-condition": {
   "assumes": [
-   "synthesis.field-space-premise-parallel-frozen-point@1"
+   "synthesis.field-space-premise-parallel-frozen-point@2"
   ],
   "credit": [
    [
@@ -2025,9 +2025,7 @@
   "version": 6
  },
  "dark-matter.asymmetry-arrow-counted-fifteenth-refutation": {
-  "assumes": [
-   "dark-matter.p4-democracy-asymmetry-over-oriented-towers@1"
-  ],
+  "assumes": [],
   "credit": [
    [
     "Leon Butler",
@@ -2048,18 +2046,23 @@
     "Claude Opus 5.5",
     "extraction note recording Leon's confirmation of the theta-angle reading (second-round decisions)",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "Premise P4 retired: the assumes edge removed, the common value cited from the copy theorem's clause (v)",
+    8
    ]
   ],
-  "hash": "6b7249df45ff2e3b",
+  "hash": "483890c913595750",
   "ledger": null,
   "parts": {
    "checks": "d6bff59f1b9b2b8f",
-   "proofs": "23bdd056579c3a7d",
+   "proofs": "b396205e920d293d",
    "rest": "d3b65c89b700e77b",
-   "statement": "a6901d58ad374906"
+   "statement": "ec81a53607e92a95"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "dark-matter.ceiling-valued-inherited-success": {
   "assumes": [
@@ -2153,23 +2156,30 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "note on where D belongs: the de Sitter reading, not counted with R1 to R3; joint consequence with R1 and R2; exposure of w = -1",
+    2
    ]
   ],
-  "hash": "56cd30ef4ded270f",
+  "hash": "68ef302d31540fc5",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "43aafb8782816f73"
+   "statement": "b56dfdb9d0fb65a2"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-matter.democracy-de-sitter-radius-unit-ball": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@1",
-   "dark-matter.r3-one-cell-per-unshared-direction@1"
+   "dark-matter.d-democracy-total-mass@2",
+   "dark-matter.odd-towers-populated@1",
+   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
    [
@@ -2181,18 +2191,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the two registered conditions assumed; note on R3's unit in the de Sitter reading",
+    5
    ]
   ],
-  "hash": "b8222396855853b7",
+  "hash": "e3323a3aa1af7056",
   "ledger": null,
   "parts": {
    "checks": "c5446f0924f9534c",
-   "proofs": "a4a65260a2632472",
+   "proofs": "aa01767cc24d889d",
    "rest": "d3b65c89b700e77b",
-   "statement": "1733a77686cadf19"
+   "statement": "cbf0a44ba0a254b2"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "dark-matter.direction-nesting-adds-algebra": {
   "assumes": [],
@@ -2428,7 +2443,7 @@
  },
  "dark-matter.imported-gravity-only-coupling": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1"
+   "dark-matter.p1-single-frozen-point@2"
   ],
   "credit": [
    [
@@ -2585,18 +2600,23 @@
     "Claude Opus 5.5",
     "maintainer pass, reduced Planck mass letter at Leon's decisions",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "flag at every level: the Fact imports a process of a quantised gravitational field, which the series does not hold; rate and coefficients unchanged",
+    3
    ]
   ],
-  "hash": "a59bf47cf1bbb785",
+  "hash": "a744d6faf5b06702",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "62a7178711b85d30",
-   "statement": "48119040098ba5ce"
+   "statement": "0db94693f84deb53"
   },
   "status": "imported",
-  "version": 2
+  "version": 3
  },
  "dark-matter.imported-schwinger-discharge-charged-hole": {
   "assumes": [],
@@ -2655,7 +2675,7 @@
  },
  "dark-matter.mirror-share-assembled": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p2-indifference@2",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
@@ -2674,18 +2694,23 @@
     "Claude Opus 5.5",
     "maintainer pass, mass ratio restated onto the common-ceiling-coupling premise at Leon's decisions",
     8
+   ],
+   [
+    "Claude Fable 5.2",
+    "wording after the retirement of Premise P4: the equal asymmetry is cited from the copy theorem's clause (v) with its premises",
+    9
    ]
   ],
-  "hash": "faee35b83185fdd2",
+  "hash": "f908b6247b2458f6",
   "ledger": null,
   "parts": {
    "checks": "6da68b821dc60e8e",
-   "proofs": "4ffb3d836984a7e9",
+   "proofs": "6b79037b3fb190c7",
    "rest": "d3b65c89b700e77b",
-   "statement": "561bfe3b1cdfd2c1"
+   "statement": "f3ad95e1588c833d"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "dark-matter.mirror-share-one-how-fragile": {
   "assumes": [
@@ -2721,7 +2746,7 @@
  },
  "dark-matter.mirror-tower-copy-one": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p2-indifference@2",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
@@ -2745,22 +2770,27 @@
     "Claude Opus 5.5",
     "maintainer pass, restatement of (iv) onto the common-ceiling-coupling premise and the T14c caveat at Leon's decisions",
     9
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (v) given its stated premises (common N of P1, the charge reading), Premise P4 retired as a postulate in its favour",
+    10
    ]
   ],
-  "hash": "4d5802500f124fa9",
+  "hash": "29fd6e1e81c311d2",
   "ledger": null,
   "parts": {
    "checks": "c199048d69935583",
-   "proofs": "00dfeae5135a24e2",
+   "proofs": "c8b4e4f8e6680d5e",
    "rest": "d3b65c89b700e77b",
-   "statement": "c7425ded8c9fea07"
+   "statement": "b61ddad570025687"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "dark-matter.mode-counts-two-modules-which-one": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p2-indifference@2"
   ],
   "credit": [
@@ -2853,6 +2883,31 @@
   "status": "proved",
   "version": 6
  },
+ "dark-matter.odd-towers-populated": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    1
+   ]
+  ],
+  "hash": "21557a25de80819f",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "1024b33453da4665"
+  },
+  "status": "postulate",
+  "version": 1
+ },
  "dark-matter.open-channels-their-costs": {
   "assumes": [],
   "credit": [
@@ -2928,18 +2983,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "split into its three clauses (metric, orientation, common N) within the entity, with the status of each",
+    2
    ]
   ],
-  "hash": "9ffb14e81376f9a3",
+  "hash": "6ea1160334d8d1ac",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "2db093b5242b0934",
-   "statement": "b7ac0220ec964577"
+   "statement": "ff858bf52dbdfd63"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-matter.p2-indifference": {
   "assumes": [],
@@ -2996,31 +3056,6 @@
   "status": "postulate",
   "version": 3
  },
- "dark-matter.p4-democracy-asymmetry-over-oriented-towers": {
-  "assumes": [],
-  "credit": [
-   [
-    "Leon Butler",
-    "idea, direction and review",
-    null
-   ],
-   [
-    "Claude Fable 5",
-    "mathematics and drafting",
-    null
-   ]
-  ],
-  "hash": "e13d4e3343b3a615",
-  "ledger": null,
-  "parts": {
-   "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
-   "rest": "5b63229ea6eed232",
-   "statement": "1ef047739ececcde"
-  },
-  "status": "postulate",
-  "version": 1
- },
  "dark-matter.p5-boundary-modes-hold-entropy-not": {
   "assumes": [],
   "credit": [
@@ -3048,7 +3083,7 @@
  },
  "dark-matter.parallel-boundary-mode-spaces-one-wall": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p5-boundary-modes-hold-entropy-not@1",
    "singularity.rate-models-kinematic-inputs-l-u@2"
   ],
@@ -3077,10 +3112,9 @@
  },
  "dark-matter.population-count-one-share-half-percent": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p2-indifference@2",
    "dark-matter.p3-nearest-dimension-representatives@3",
-   "dark-matter.p4-democracy-asymmetry-over-oriented-towers@1",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
   "credit": [
@@ -3103,18 +3137,23 @@
     "Claude Opus 5.5",
     "pin review, the scope clause (iii) now cites the established facts of the no-coupling-rule proposition, where it quoted its old conclusion",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "Premise P4 retired: the assumes edge removed, the equal asymmetry of the mirror cited from the copy theorem's clause (v)",
+    7
    ]
   ],
-  "hash": "f6de79527adfb2e4",
+  "hash": "c525f825187cba57",
   "ledger": null,
   "parts": {
    "checks": "14780d1b322a10fb",
-   "proofs": "27a2bbb139fc3e3c",
+   "proofs": "5163cd50956ea48e",
    "rest": "d3b65c89b700e77b",
-   "statement": "e58fa4f144f2863d"
+   "statement": "672252eaa35bfae0"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-matter.premise-cpt-covariance": {
   "assumes": [],
@@ -3193,7 +3232,7 @@
  },
  "dark-matter.projection-every-towers-content-dilutes-ones": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1"
+   "dark-matter.p1-single-frozen-point@2"
   ],
   "credit": [
    [
@@ -3285,18 +3324,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the unit of thickness stated: each tower's own cell radius, so R2 also supplies R3's unit",
+    2
    ]
   ],
-  "hash": "058198b50d1d226a",
+  "hash": "39f0c673d4f18752",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "8cb3bd1d7c846c86"
+   "statement": "22647f4662efd5e5"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-matter.radiation-audit-what-theorem-closes-what": {
   "assumes": [],
@@ -3413,6 +3457,31 @@
   "status": "proved",
   "version": 4
  },
+ "dark-matter.single-ideal-at-residues-zero-and-four": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    1
+   ]
+  ],
+  "hash": "51d861bc826b5d4f",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "b12ddf8e1897005b"
+  },
+  "status": "postulate",
+  "version": 1
+ },
  "dark-matter.sourcing-rule-forced-not-chosen": {
   "assumes": [],
   "credit": [
@@ -3455,22 +3524,27 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "notes: the two conditions of the relation now registered premises; the de Sitter and unit-ball readings recorded as alternatives",
+    5
    ]
   ],
-  "hash": "493c06923001f2c0",
+  "hash": "85823d220794af4b",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "6266218764750178"
+   "statement": "ed0f4f164496f207"
   },
   "status": "conjectured",
-  "version": 4
+  "version": 5
  },
  "dark-matter.stored-asymmetry-charge-not-number": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1",
+   "dark-matter.p1-single-frozen-point@2",
    "dark-matter.p5-boundary-modes-hold-entropy-not@1"
   ],
   "credit": [
@@ -3513,7 +3587,7 @@
  },
  "dark-matter.superselected-hence-dark-exactly-stable": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1"
+   "dark-matter.p1-single-frozen-point@2"
   ],
   "credit": [
    [
@@ -3565,9 +3639,11 @@
  },
  "dark-matter.total-function-thickness": {
   "assumes": [
+   "dark-matter.odd-towers-populated@1",
    "dark-matter.p2-indifference@2",
    "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@3"
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
+   "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
    [
@@ -3579,18 +3655,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the two registered conditions (single-ideal clause, population of the odd towers) assumed; the unit of the thickness named",
+    6
    ]
   ],
-  "hash": "24f931088673560a",
+  "hash": "e6031eb6ad576bad",
   "ledger": null,
   "parts": {
    "checks": "af9644b1b80f2c43",
-   "proofs": "ff74b63d7968b18c",
+   "proofs": "d2ad3f12d85a0c5a",
    "rest": "d3b65c89b700e77b",
-   "statement": "420f5b7e6ca9ddf4"
+   "statement": "a38310c1243f7049"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.towers-are-residues-single-clock-filter": {
   "assumes": [
@@ -3652,7 +3733,7 @@
  },
  "dark-matter.two-reductions": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@1"
+   "dark-matter.d-democracy-total-mass@2"
   ],
   "credit": [
    [
@@ -3729,9 +3810,11 @@
  },
  "dark-matter.unit-ball-rule": {
   "assumes": [
+   "dark-matter.odd-towers-populated@1",
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@1"
+   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
    [
@@ -3743,18 +3826,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the two registered conditions (single-ideal clause, population of the odd towers) assumed; the sourcing lemma used; statement of what the total rests on",
+    6
    ]
   ],
-  "hash": "5b6b1b152042b026",
+  "hash": "0160d6c59f9a3023",
   "ledger": null,
   "parts": {
    "checks": "8dc7b0c910fc08f2",
-   "proofs": "8d6b2e50cd63faaf",
+   "proofs": "b801eb969d094bd9",
    "rest": "d3b65c89b700e77b",
-   "statement": "80a30074a2d7838d"
+   "statement": "bebbb1ceaf6c4901"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.which-towers-are-populated": {
   "assumes": [],
@@ -3768,18 +3856,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "note: the inference registered as a premise of the total",
+    2
    ]
   ],
-  "hash": "d73280c7bcc54821",
+  "hash": "cb4ed0497ac7b353",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "902877f6a207183b"
+   "statement": "2735552c07cc58cd"
   },
   "status": "conjectured",
-  "version": 1
+  "version": 2
  },
  "dark-matter.which-towers-can-carry-arrow": {
   "assumes": [],
@@ -3920,8 +4013,8 @@
  },
  "dark-tower-matter.five-dimensional-towers": {
   "assumes": [
-   "dark-matter.r3-one-cell-per-unshared-direction@1",
-   "dark-tower-matter.u-transposition-rule@2"
+   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
    [
@@ -3948,9 +4041,9 @@
  },
  "dark-tower-matter.gauge-algebras": {
   "assumes": [
-   "dark-tower-matter.h1-momentum@1",
+   "dark-tower-matter.h1-momentum@2",
    "dark-tower-matter.h2-identification@1",
-   "dark-tower-matter.u-transposition-rule@2"
+   "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
    [
@@ -3987,18 +4080,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "note pointing to the uniqueness of the constituent momentum: the formula is forced up to a real factor, H1 weakened and not retired",
+    2
    ]
   ],
-  "hash": "12d4f48061eeea91",
+  "hash": "81bcbb84b4501e44",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "35929ef3e212d250",
-   "statement": "71aabd8e46b65a47"
+   "statement": "19678b2cca35cb42"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-tower-matter.h2-identification": {
   "assumes": [],
@@ -4156,7 +4254,7 @@
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@1"
+   "dark-matter.r3-one-cell-per-unshared-direction@2"
   ],
   "credit": [
    [
@@ -4426,7 +4524,7 @@
  "dark-tower-matter.same-kind-matter": {
   "assumes": [
    "dark-tower-matter.h2-identification@1",
-   "dark-tower-matter.u-transposition-rule@2"
+   "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
    [
@@ -4630,18 +4728,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "marked as a definition at every level (the entity and its edges kept)",
+    3
    ]
   ],
-  "hash": "dc751741e0eb06fe",
+  "hash": "31a3507ca3cec106",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "35929ef3e212d250",
-   "statement": "7f7cf6d6e6f5824b"
+   "statement": "0b0acda204a29668"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-tower-matter.where-mass-begins": {
   "assumes": [],
@@ -11797,18 +11900,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "marked note on what the total rests on",
+    2
    ]
   ],
-  "hash": "833ac26859d0744e",
+  "hash": "46ed22cb9685a9a0",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "9f7a0560f2d0cbde",
-   "statement": "6ba087c42cccb780"
+   "statement": "b09794e6ec3b27ba"
   },
   "status": "setting",
-  "version": 1
+  "version": 2
  },
  "note.dark-matter.setting-dark-stable-counted": {
   "assumes": [],
@@ -28345,6 +28453,31 @@
   "status": "remark",
   "version": 2
  },
+ "note.synthesis.scope-of-the-quantum-field-theory-perturbative-on-a-classical-field": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and the decision to record this note",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "65a39c0ac3a67f74",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "850064cb81f3bd9b",
+   "statement": "9a5bbaf7dbe2cd33"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.what-n-is-counted": {
   "assumes": [],
   "credit": [
@@ -28366,6 +28499,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "29baffad70a9a222",
    "statement": "7be59af59ce0f0ed"
+  },
+  "status": "remark",
+  "version": 1
+ },
+ "note.synthesis.where-stored-text-names-a-graviton": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and the decision to record this list",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "search and drafting",
+    null
+   ]
+  ],
+  "hash": "e7d740820ad2aa56",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "42e5f8df7faa7dc8",
+   "statement": "71872fa0bd865d35"
   },
   "status": "remark",
   "version": 1
@@ -32957,7 +33115,7 @@
  },
  "odd-extensions.belongs-tower": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@1"
+   "dark-matter.p1-single-frozen-point@2"
   ],
   "credit": [
    [
@@ -35216,18 +35374,23 @@
     "Claude Opus 5.5",
     "consistency pass, label of the cited result corrected",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "kill condition registered as a region with its significance rule; no-fallback note; observation row",
+    5
    ]
   ],
-  "hash": "ca9ba781d4ca0e73",
+  "hash": "2c88529fd4d81483",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "3087bd13b7efa934",
-   "rest": "5b0f2c69ce91299f",
-   "statement": "30657216dfc9deae"
+   "rest": "4505d699c18ea70e",
+   "statement": "1af239099c899913"
   },
   "status": "live",
-  "version": 4
+  "version": 5
  },
  "pred.dark-matter-direct-detection-null": {
   "assumes": [],
@@ -35266,18 +35429,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer to the open problem on processes of a quantised gravitational field; prediction unchanged",
+    6
    ]
   ],
-  "hash": "5718fa89a5fe629d",
+  "hash": "77cd37b37f345439",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "0a2cd801e31551a1",
    "rest": "dff0f3327d9593e2",
-   "statement": "a2135d7c14bb5cad"
+   "statement": "171806649e216b93"
   },
   "status": "live",
-  "version": 5
+  "version": 6
  },
  "pred.gravity-entangles-standard-phase": {
   "assumes": [],
@@ -35291,18 +35459,23 @@
     "Claude (model not recorded)",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope sentence: the prediction is about the phase only, with no claim about a mediator or a quantised gravitational field; observation row",
+    2
    ]
   ],
-  "hash": "34063fe08c394f8f",
+  "hash": "9e287519cc799aa0",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "8ce288cee17c88d1",
-   "statement": "e25f9e6f573ddd72"
+   "statement": "3955eeca3fa657a8"
   },
   "status": "live",
-  "version": 1
+  "version": 2
  },
  "pred.leptonic-cp-trivial": {
   "assumes": [
@@ -35350,18 +35523,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "kill condition names the cosmological model in which the bound is read (w = -1, the series' own); note on the opposite exposure of the two cosmological predictions",
+    3
    ]
   ],
-  "hash": "555521c90aab487f",
+  "hash": "250a8a70f549a95d",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "40e807f64f8bdb11",
-   "rest": "cc83cd7d3741040e",
-   "statement": "1b1bae9662f350a9"
+   "rest": "feb4d65823b446aa",
+   "statement": "74c62e8f4b24e42f"
   },
   "status": "live",
-  "version": 2
+  "version": 3
  },
  "pred.no-dark-radiation": {
   "assumes": [],
@@ -35380,18 +35558,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the cold-mirror exception stated at P2's version-1 reach, with P2 as scoped leaving xi free",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer to the open problem on the imported graviton-exchange rate; prediction unchanged",
+    4
    ]
   ],
-  "hash": "c429275f13d09497",
+  "hash": "c3cb7f5910b797f9",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "810492be45b734c1",
    "rest": "826b6ad9b83750df",
-   "statement": "06ea2bc7529c764c"
+   "statement": "7147dd358a0a4563"
   },
   "status": "live",
-  "version": 3
+  "version": 4
  },
  "pred.no-gravitational-settling": {
   "assumes": [],
@@ -35435,18 +35618,23 @@
     "Claude Opus 5.5",
     "consistency pass, the asymmetric-relic clause restricted to the mirror",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer to the open problem on the imported graviton-exchange rate; prediction unchanged",
+    5
    ]
   ],
-  "hash": "41575f72f52d3d18",
+  "hash": "11dd5fc56cd8db00",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "3d61f57632b0fda6",
    "rest": "af0251fe95f29d5e",
-   "statement": "d351b314eef79bdd"
+   "statement": "9c19a21bdbd0a75b"
   },
   "status": "live",
-  "version": 4
+  "version": 5
  },
  "pred.no-neutrinoless-double-beta": {
   "assumes": [
@@ -40249,18 +40437,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification; C and S2 recorded as premises of the exclusive readings (C) and (W)",
+    3
    ]
   ],
-  "hash": "142bc5ad739c04b4",
+  "hash": "79c54e7fcb955522",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "229837c4e05c1445"
+   "statement": "67ab22d2a1657155"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "simulations.cluster-bound-two-dimensions": {
   "assumes": [
@@ -40322,7 +40515,7 @@
  },
  "simulations.effective-cross-section-sheet-matter": {
   "assumes": [
-   "dark-matter.r3-one-cell-per-unshared-direction@1"
+   "dark-matter.r3-one-cell-per-unshared-direction@2"
   ],
   "credit": [
    [
@@ -40349,12 +40542,12 @@
  },
  "simulations.halo-shapes": {
   "assumes": [
-   "simulations.c-odd-towers-collisionless@2",
-   "simulations.s1-one-species-per-tower@2",
-   "simulations.s2-sheet-fluid@2",
-   "simulations.s3-mirror-cluster@1",
-   "simulations.s4-our-matter@1",
-   "simulations.s5-halos@1"
+   "simulations.c-odd-towers-collisionless@3",
+   "simulations.s1-one-species-per-tower@3",
+   "simulations.s2-sheet-fluid@3",
+   "simulations.s3-mirror-cluster@2",
+   "simulations.s4-our-matter@2",
+   "simulations.s5-halos@2"
   ],
   "credit": [
    [
@@ -40513,7 +40706,7 @@
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@1"
+   "dark-matter.r3-one-cell-per-unshared-direction@2"
   ],
   "credit": [
    [
@@ -40540,12 +40733,12 @@
  },
  "simulations.merger": {
   "assumes": [
-   "simulations.c-odd-towers-collisionless@2",
-   "simulations.s1-one-species-per-tower@2",
-   "simulations.s2-sheet-fluid@2",
-   "simulations.s3-mirror-cluster@1",
-   "simulations.s4-our-matter@1",
-   "simulations.s5-halos@1"
+   "simulations.c-odd-towers-collisionless@3",
+   "simulations.s1-one-species-per-tower@3",
+   "simulations.s2-sheet-fluid@3",
+   "simulations.s3-mirror-cluster@2",
+   "simulations.s4-our-matter@2",
+   "simulations.s5-halos@2"
   ],
   "credit": [
    [
@@ -40607,18 +40800,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification; the second clause cited as a stored theorem",
+    3
    ]
   ],
-  "hash": "939b0807dffd16f7",
+  "hash": "a17e4cb67ed34922",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "932f0f56289de777"
+   "statement": "a41ebd7ea0ce383c"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "simulations.s2-sheet-fluid": {
   "assumes": [],
@@ -40632,18 +40830,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification; S2 and C recorded as premises of the exclusive readings (W) and (C)",
+    3
    ]
   ],
-  "hash": "f7fec85199bdc7bc",
+  "hash": "e09279bbdf73a6f2",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "a41eeb53ac1ab7a1"
+   "statement": "b82944a646a831ec"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "simulations.s3-mirror-cluster": {
   "assumes": [],
@@ -40657,18 +40860,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification; the window of xi on which the helium composition is the stored estimate stated",
+    2
    ]
   ],
-  "hash": "612e3600e4d0ed5b",
+  "hash": "3b9669b51350e4d3",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "e9154056f72d6de3"
+   "statement": "e7c7d23a880c5f0c"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "simulations.s4-our-matter": {
   "assumes": [],
@@ -40682,18 +40890,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification",
+    2
    ]
   ],
-  "hash": "4d69e553fe9603c8",
+  "hash": "2db7f1299e0556c0",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "6bddaa323734b3f3"
+   "statement": "a0b31abe6daa14ce"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "simulations.s5-halos": {
   "assumes": [],
@@ -40707,18 +40920,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "typed as model specification",
+    2
    ]
   ],
-  "hash": "d4e5a8fe7527e21f",
+  "hash": "0d4ac4194e651367",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "7eb700407ecc3685"
+   "statement": "74fe41cc87bb97ad"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "singularity.area-law-test": {
   "assumes": [
@@ -47520,7 +47738,7 @@
  },
  "synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free": {
   "assumes": [
-   "dark-tower-matter.u-transposition-rule@2"
+   "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
    [
@@ -48337,7 +48555,9 @@
   "version": 3
  },
  "synthesis.clausius-on-the-action-shell-ties-entropy-density-to-period": {
-  "assumes": [],
+  "assumes": [
+   "synthesis.field-space-premise-parallel-frozen-point@2"
+  ],
   "credit": [
    [
     "Leon Butler",
@@ -48348,18 +48568,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text",
+    2
    ]
   ],
-  "hash": "e3873f9c1819ef21",
+  "hash": "0982bb264f67f191",
   "ledger": null,
   "parts": {
    "checks": "b866961f4413ab9c",
-   "proofs": "56ca8e38ef3a3fd9",
+   "proofs": "a0bcd3601c325923",
    "rest": "36880587349d3e5c",
    "statement": "5007c26c6c19c32f"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.clausius-route-newton-constant-is-residue": {
   "assumes": [],
@@ -49005,6 +49230,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.constituent-momentum-is-the-unique-spin-covariant-quadratic-vector-on-the-spinor-ideal": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "057a8c81c86c7ec4",
+  "ledger": null,
+  "parts": {
+   "checks": "3a96b6dfd2d05172",
+   "proofs": "264a8ba77d82ce89",
+   "rest": "6a0d4959093a994c",
+   "statement": "18081a4e269a5679"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.continuum-completion-premise": {
   "assumes": [],
   "credit": [
@@ -49287,6 +49537,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.curved-field-vacuum-polarisation-freedom-is-five-local-covariant-constants-of-which-one-is-transverse": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "54d52bd4a19650e8",
+  "ledger": null,
+  "parts": {
+   "checks": "e46e5104fbbbb837",
+   "proofs": "609dc1820ad9ae8e",
+   "rest": "36880587349d3e5c",
+   "statement": "6e0925eba80165d5"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.cutoff-count-is-not-a-local-density-on-sds": {
   "assumes": [],
   "credit": [
@@ -49333,6 +49608,35 @@
    "proofs": "b8dba5208d9741a3",
    "rest": "d3b65c89b700e77b",
    "statement": "47ccfa525bdc9f60"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
+  "assumes": [
+   "dark-matter.odd-towers-populated@1",
+   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.single-ideal-at-residues-zero-and-four@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "9af7f752ee68cbdd",
+  "ledger": null,
+  "parts": {
+   "checks": "8abf002e9563fc2a",
+   "proofs": "ee5e0b51ad78337d",
+   "rest": "d3b65c89b700e77b",
+   "statement": "3b31b8694ac18503"
   },
   "status": "proved",
   "version": 1
@@ -50458,18 +50762,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "refutation clause (a) worded as the registered rule of the w = -1 prediction, with the no-fallback sentence",
+    2
    ]
   ],
-  "hash": "5463a61d57c42915",
+  "hash": "293b65a79ca0a0c1",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "bac6642d19709165",
-   "statement": "b21468043bb0db31"
+   "statement": "af6d6d6dcdcf7ee3"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.field-strength-cancels-from-the-leading-null-singularity-of-hadamard-dirac-states-on-null-hypersurfaces": {
   "assumes": [],
@@ -50842,7 +51151,9 @@
   "version": 1
  },
  "synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation": {
-  "assumes": [],
+  "assumes": [
+   "synthesis.field-space-premise-parallel-frozen-point@2"
+  ],
   "credit": [
    [
     "Leon Butler",
@@ -50853,18 +51164,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text",
+    3
    ]
   ],
-  "hash": "40a3339790d16ef1",
+  "hash": "92789355e8f69885",
   "ledger": null,
   "parts": {
    "checks": "c22893509a7c00fd",
-   "proofs": "189442366af6592d",
+   "proofs": "f002d3a53f8fcf3b",
    "rest": "36880587349d3e5c",
-   "statement": "5fe2d7498f38ce4f"
+   "statement": "dfe5082b69ecc8b7"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.frozen-point-geometry-reads-descent-as-vacuum": {
   "assumes": [],
@@ -50913,18 +51229,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "wording of the torsion hypothesis: vanishing torsion and the first Bianchi identity are no longer written as one condition",
+    3
    ]
   ],
-  "hash": "cff134ca2be9ec72",
+  "hash": "e6b73d4bef7c6d6b",
   "ledger": null,
   "parts": {
    "checks": "38b8276492794e95",
-   "proofs": "2e006f8d951adee2",
+   "proofs": "76320f3f5fda655a",
    "rest": "36880587349d3e5c",
-   "statement": "98161f5c095c29e8"
+   "statement": "7997068acb4a5d2c"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.frozen-point-integrand-on-tractor-transport-is-weyl-squared": {
   "assumes": [],
@@ -51063,9 +51384,9 @@
  },
  "synthesis.gauge-algebra-by-tower": {
   "assumes": [
-   "dark-tower-matter.h1-momentum@1",
+   "dark-tower-matter.h1-momentum@2",
    "dark-tower-matter.h2-identification@1",
-   "dark-tower-matter.u-transposition-rule@2"
+   "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
    [
@@ -53314,18 +53635,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "sourcing corrected after a web check: scalar-field scope stated in the clauses, the regularity requirement worded as the source has it, the Dirac-field literature added at the level verified",
+    2
    ]
   ],
-  "hash": "8bab21d4ce900775",
+  "hash": "b3e62c8908718d65",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
-   "rest": "75dc34bac73a3383",
-   "statement": "1908a09ba44a62bd"
+   "rest": "fc7f6692b52742e2",
+   "statement": "c877391f43d369ca"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-local-quasi-equivalence-of-hadamard-states": {
   "assumes": [],
@@ -55161,18 +55487,23 @@
     "Claude Opus 5.5",
     "notation pass, imaginary unit written as the geometric-algebra pseudoscalar",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer from the not-covered sentence to the scalar-sector result at the isotropic point",
+    4
    ]
   ],
-  "hash": "d20db6612ce8cd4a",
+  "hash": "e94c097cbff57206",
   "ledger": null,
   "parts": {
    "checks": "6279afcec76759dd",
    "proofs": "5f6b27223375d0ef",
    "rest": "d3b65c89b700e77b",
-   "statement": "a57733116c3b9a82"
+   "statement": "780d149eb09367e5"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
   "assumes": [],
@@ -55196,18 +55527,23 @@
     "Claude Opus 5.5",
     "GA rewrite (scalar wave equation in GTG)",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "pointer from the not-covered sentence to the scalar-sector result at the isotropic point",
+    5
    ]
   ],
-  "hash": "2deece151f9c280d",
+  "hash": "ba97da57753d41cf",
   "ledger": null,
   "parts": {
    "checks": "df3aa8923d68d1cd",
    "proofs": "1a7ff41ce84940c7",
    "rest": "d3b65c89b700e77b",
-   "statement": "8189fd996ef3e9a1"
+   "statement": "512b4270a0bc820f"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.kasner-curvature-wall-is-negative-weight-helicity": {
   "assumes": [],
@@ -56297,7 +56633,7 @@
  },
  "synthesis.lowest-causal-residues-zero-four-content": {
   "assumes": [
-   "dark-tower-matter.h1-momentum@1"
+   "dark-tower-matter.h1-momentum@2"
   ],
   "credit": [
    [
@@ -56368,7 +56704,9 @@
   "version": 4
  },
  "synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part": {
-  "assumes": [],
+  "assumes": [
+   "synthesis.field-space-premise-parallel-frozen-point@2"
+  ],
   "credit": [
    [
     "Leon Butler",
@@ -56404,18 +56742,23 @@
     "Claude Opus 5.5",
     "formal setting restated at Leon's second-round decisions: A(a) = Omega(a) - (Lambda/3) hb^-1(a) ^ V, right on both branches",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "assumes edge to the field-space premise (FS), whose field space the statement takes; the dependence stated in the text",
+    5
    ]
   ],
-  "hash": "162f74fb2398bf4b",
+  "hash": "232426e80230d4fb",
   "ledger": null,
   "parts": {
    "checks": "fee4cf6519fdc5f8",
-   "proofs": "e37f016ce80a7fef",
+   "proofs": "53c9a60b55ff36d6",
    "rest": "36880587349d3e5c",
-   "statement": "59eee3a34298b2d7"
+   "statement": "99bcea4067933bd0"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.majorana-element-is-null-blade-no-frozen-point-condition": {
   "assumes": [],
@@ -56796,18 +57139,23 @@
     "Claude Opus 5.5",
     "maintainer pass, citation type corrected at Leon's decisions",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "wording after the retirement of Premise P4; the copy theorem's use of the registered stance recorded",
+    3
    ]
   ],
-  "hash": "87807bf6aaa639ab",
+  "hash": "a7794b9674c5a94d",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "f38c5dffd30e1ebd"
+   "statement": "75e6a80904d8a024"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state": {
   "assumes": [],
@@ -57378,6 +57726,31 @@
   "status": "proved",
   "version": 5
  },
+ "synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "be4bbf8d73ab0eee",
+  "ledger": null,
+  "parts": {
+   "checks": "841d0fe6959a123c",
+   "proofs": "8e34b88980cc6d47",
+   "rest": "36880587349d3e5c",
+   "statement": "59845072e4892ef9"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state": {
   "assumes": [],
   "credit": [
@@ -57612,18 +57985,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "last refutation clause worded as the registered rule of the w = -1 prediction, with the no-fallback sentence",
+    2
    ]
   ],
-  "hash": "48fcc019c3ab24e1",
+  "hash": "0b0a04284b785ade",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "6602487ba0978896",
-   "statement": "54b17497d04a48ce"
+   "statement": "cba9cb68ade13bdd"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint": {
   "assumes": [],
@@ -57739,6 +58117,33 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length": {
+  "assumes": [
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "dfc8632bc18684c1",
+  "ledger": null,
+  "parts": {
+   "checks": "465e6f65ebbf8cd8",
+   "proofs": "8596bf8cfab8ecef",
+   "rest": "33009deb10105397",
+   "statement": "aab5ecd37b3c2ce7"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants": {
   "assumes": [
    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
@@ -57763,18 +58168,23 @@
     "Claude Opus 5.5",
     "maintainer pass, duplicated clause dropped with a pointer at Leon's decisions",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clause (v) to what later stored results give on a gravitational field, and of the existence sentence of clause (iii) to record the Euclidean one-loop pair",
+    5
    ]
   ],
-  "hash": "ded9dcc6c26d0c0f",
+  "hash": "443778b957216d7e",
   "ledger": null,
   "parts": {
    "checks": "ef44daeb2c3790bf",
-   "proofs": "ab4bab2dd5a493f0",
+   "proofs": "5573cc412ec5fa56",
    "rest": "17e9fd84147a91e6",
-   "statement": "a265dfaf46134cda"
+   "statement": "c3cc4b88bee516f3"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.one-type-second-stages-are-twins": {
   "assumes": [],
@@ -58855,6 +59265,31 @@
   "status": "proved",
   "version": 7
  },
+ "synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "fe90b8269c644219",
+  "ledger": null,
+  "parts": {
+   "checks": "f014ddc6ebb6038d",
+   "proofs": "804263c2709777fb",
+   "rest": "36880587349d3e5c",
+   "statement": "2cddec26bd9f51df"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.q-splits-maximum-entropy-affine-weights": {
   "assumes": [],
   "credit": [
@@ -59310,6 +59745,31 @@
    "proofs": "b128affeaba7667a",
    "rest": "d3b65c89b700e77b",
    "statement": "c620a78eb23e146b"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "090fcf53003c4bc1",
+  "ledger": null,
+  "parts": {
+   "checks": "12cd72816a0011ec",
+   "proofs": "a1b79e08727bcb43",
+   "rest": "d3b65c89b700e77b",
+   "statement": "dd9970c2f4486aae"
   },
   "status": "proved",
   "version": 1
@@ -60006,6 +60466,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "47fdb879a185a173",
+  "ledger": null,
+  "parts": {
+   "checks": "c5c8199ec89e6599",
+   "proofs": "e7436351afe917b1",
+   "rest": "36880587349d3e5c",
+   "statement": "970f0470a8809cf4"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.scale-free-rung-potentials-need-the-flat-physical-branch": {
   "assumes": [],
@@ -62078,18 +62563,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: the protraction identity cited as a stored theorem in place of a hypothesis; clause (iv) restated to what is proved about the difference of two transverse extensions",
+    2
    ]
   ],
-  "hash": "6a0669fc34790966",
+  "hash": "77e5ba37ac189a22",
   "ledger": null,
   "parts": {
-   "checks": "fe33ea3534f5339f",
-   "proofs": "8e142d7edb89744d",
+   "checks": "bd34e6b9febe0ae1",
+   "proofs": "efda89ffd9e0ba60",
    "rest": "36880587349d3e5c",
-   "statement": "5a292ee23c0c37c8"
+   "statement": "244c03e5504a9ef6"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.wall-class-one-rung-obstruction": {
   "assumes": [
