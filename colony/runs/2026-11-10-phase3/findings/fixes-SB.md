@@ -45,3 +45,11 @@ normalisation independent of k: local index in [2, 3]. The row for the base: sca
 ## Findings file
 The remark on tensor ratios in findings/attack-SB.md (R1 remark, R5 item 4) is a prior-art comparison only and is
 not in the proposal.
+
+## After the central gate (W215)
+validate: W215, the proof never cited synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+(its only proof citation, the cross-mode sentence of (iv), was removed under the tensor-mode rule). Fix: the premise
+is kept in uses and cited by \claimref in the "Setting and signs" paragraph of proof-main.tex, at the step that
+uses it: the component reading of the field equations on the derived metric, in which its clause (i) computes the
+linearised equation on the same backgrounds. The premise() call and coverage are unchanged. runcheck: five
+functions pass. check4 and validate: pending (orchestrator).

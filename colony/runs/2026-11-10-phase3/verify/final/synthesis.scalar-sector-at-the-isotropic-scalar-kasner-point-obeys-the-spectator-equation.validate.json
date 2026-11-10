@@ -8,6 +8,13 @@
  "replaces_existing": false,
  "findings": [
   {
+   "code": "W215",
+   "severity": "warning",
+   "entity": "synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation",
+   "message": "proof main never cites premise(s) synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling",
+   "fix": "name each with \\claimref where it is used (seed/CITE_PASS.md)"
+  },
+  {
    "code": "I305",
    "severity": "info",
    "entity": "store",

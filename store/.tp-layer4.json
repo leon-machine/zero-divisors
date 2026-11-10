@@ -34625,6 +34625,68 @@
 }
 ]
 },
+"synthesis.constituent-momentum-is-the-unique-spin-covariant-quadratic-vector-on-the-spinor-ideal": {
+"failed": false,
+"findings": [],
+"key": "93cc79b3c7c121e6",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_one_spin_covariant_quadratic_vector_in_each_causal_tower",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+},
+{
+"derivation": null,
+"func": "check_vector_projection_is_vacuous_in_three_and_four_dimensions_and_not_in_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+},
+{
+"derivation": null,
+"func": "check_five_dimensional_mass_is_the_square_of_the_dropped_central_part",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_invariant_quadratic_scalars_none_in_three_and_four_dimensions_one_in_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_two_constituents_admit_cross_terms_so_additivity_is_not_forced",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.where-mass-begins"
+]
+},
+{
+"derivation": null,
+"func": "check_cross_block_has_the_dimension_of_the_field_so_two_constituents_give_three_four_six",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.constituents-field"
+]
+}
+]
+},
 "synthesis.continuum-completion-premise": {
 "failed": false,
 "findings": [],
@@ -35084,6 +35146,53 @@
 "synthesis.constant-d-term-level-fixes-weak-scale-against-planck-under-promotion",
 "synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus",
 "synthesis.smallness-monomials-exact-hierarchy-casimir"
+]
+}
+]
+},
+"synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
+"failed": false,
+"findings": [],
+"key": "1f248cb98768b139",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_total_depends_on_mass_times_number_only",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.projection-every-towers-content-dilutes-ones",
+"dark-matter.unit-ball-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_sphere_law_is_the_ball_law_and_fixes_the_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.democracy-de-sitter-radius-unit-ball"
+]
+},
+{
+"derivation": null,
+"func": "check_mirror_term_is_obtained_twice",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.mirror-share-one-how-fragile",
+"dark-matter.population-count-one-share-half-percent",
+"dark-matter.unit-ball-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_each_remaining_premise_moves_the_total",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.total-function-thickness"
 ]
 }
 ]
@@ -44053,6 +44162,81 @@
 }
 ]
 },
+"synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates": {
+"failed": false,
+"findings": [],
+"key": "10b220ff06b7c7fc",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_field_strength_torsion_and_einstein_map_of_the_isotropic_field",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west"
+]
+},
+{
+"derivation": null,
+"func": "check_frozen_point_density_on_the_isotropic_field_is_the_reduced_lagrangian",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.frozen-point-makes-stelle-west-vector",
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west"
+]
+},
+{
+"derivation": null,
+"func": "check_euler_lagrange_expressions_of_the_reduced_lagrangian",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_elimination_gives_the_stored_clock_density",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_dust_solution_tracks_the_density_and_decelerates",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight",
+"synthesis.stelle-west-norm-is-no-local-output"
+]
+},
+{
+"derivation": null,
+"func": "check_radiation_has_no_solution_and_barotropic_value",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.promoted-norm-weyl-clock-flat-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_vacuum_leaves_the_norm_a_free_function",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-energy.imported-macdowell-mansouri-theorem-stelle-west",
+"synthesis.stelle-west-norm-is-no-local-output"
+]
+}
+]
+},
 "synthesis.normality-on-the-closed-generator-gives-the-vacuum-folium-not-the-ground-state": {
 "failed": false,
 "findings": [],
@@ -44564,6 +44748,63 @@
 "standard-model.gauge-algebra-minimal-massive-composite",
 "standard-model.hypercharge-global-form-pair-counting-consistency",
 "standard-model.imported-one-loop-running-trace-ratio"
+]
+}
+]
+},
+"synthesis.one-loop-self-energy-and-vertex-extend-with-the-ward-identity-holding-at-a-common-cut-off-length": {
+"failed": false,
+"findings": [],
+"key": "eaabd05f98379bfa",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_kernels_in_the_euclidean_algebra_and_their_gauge_dependence",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.coupled-system-tree-level",
+"field-theory.second-quantisation",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+},
+{
+"derivation": null,
+"func": "check_identities_off_the_origin",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation",
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products"
+]
+},
+{
+"derivation": null,
+"func": "check_cut_off_extensions_against_the_logarithmic_forms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+},
+{
+"derivation": null,
+"func": "check_product_of_the_extended_self_energy_with_a_coordinate",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products"
+]
+},
+{
+"derivation": null,
+"func": "check_ward_matching_of_subtractions_and_scale_coefficients",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
 ]
 }
 ]
@@ -45993,6 +46234,42 @@
 "dark-energy.frozen-point-datum-kasner-wall",
 "dark-energy.imported-henneaux-teitelboim-promotion"
 ]
+}
+]
+},
+"synthesis.protraction-identity-of-the-curvature-operator-from-vanishing-torsion": {
+"failed": false,
+"findings": [],
+"key": "dd9e674196511aae",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_cyclic_trivector_determines_the_protraction_for_every_bivector_map",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_cyclic_trivector_is_the_covariant_curl_of_the_torsion",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_protraction_vanishes_on_torsion_free_fields",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_kernel_of_the_protraction_is_the_space_of_algebraic_curvature_maps",
+"ok": true,
+"quantities": [],
+"touched": []
 }
 ]
 },

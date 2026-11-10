@@ -1,0 +1,35 @@
+functions:
+  check_field_strength_torsion_and_einstein_map_of_the_isotropic_field:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "four jets and three rates; the identities are polynomial in the jet variables with the basis-blade products exact, so the samples confirm the two-line algebra of the proof; the Einstein map is contracted with the reciprocal frame in the algebra"
+  check_frozen_point_density_on_the_isotropic_field_is_the_reduced_lagrangian:
+    kind: sampled
+    clauses: ["(ii): the density and the two forms of L"]
+    omits: "four jets; the factor 24 and the expansion; the proof's counting of orderings gives the general statement"
+  check_euler_lagrange_expressions_of_the_reduced_lagrangian:
+    kind: sampled
+    clauses: ["(ii): the four Euler-Lagrange expressions of L"]
+    omits: "exact dual-number derivatives at four jets and three rates; the reduction of the full field equations to the family (covariance) and the matter terms under (Mat) are proof only"
+  check_elimination_gives_the_stored_clock_density:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "sixteen points of a degree-two polynomial identity in three variables; the stored display is used as cited, not recomputed from the Euler density; the extension to torsion and a varying norm at four jets, with the source read off the frame equation of the algebra's Einstein map; that the equation is the clock density set to zero is definitional and not counted as a check"
+  check_dust_solution_tracks_the_density_and_decelerates:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "three rational points of the solution curve with exact derivatives of the closed form; uniqueness of the solution is the proof's; the power 2/3 in proper time is not checked beyond the deceleration parameter"
+  check_radiation_has_no_solution_and_barotropic_value:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "four densities, four jets, four equations of state for the value of Lambda; the one-fluid closed form at s = 1 only, four equations of state, three amplitudes, two lapses, with exact derivatives of the closed form; uniqueness is the proof's; mixtures are not treated"
+  check_vacuum_leaves_the_norm_a_free_function:
+    kind: sampled
+    clauses: ["(vi)"]
+    omits: "four samples with u a rational square and arbitrary rate of u; existence of s for every u(t) is the proof's"
+untouched_premises:
+  synthesis.promoted-norm-one-global-pair: "cited for the equation d lambda = 0 in the recalled clause (vii); no computation of it is used"
+  dark-energy.imported-henneaux-teitelboim-promotion: "imported Fact cited in the recalled clause (vii)"
+  dark-energy.vacuum-region-registration-condition: "cited in clause (vii) for the stress-energy of a constant Lambda with p = -rho"
+  synthesis.frozen-phase-spectrum-not-red: "cited in the argued reading for its clause (iv), the promoted norm as no scale-dependent source; not restated and no computation of it is used"
+  synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands: "named in the argued reading as the one stored structure with a late-time equation of state different from -1; no computation of it is used"
