@@ -36,6 +36,20 @@ SAMPLE_VECTORS = ((F(2), F(-1), F(0), F(3), F(3, 5), F(4, 5)), (F(0), F(1), F(-2
 # sample elements of the even subalgebra of Cl(3,0): scalar part and three bivector parts
 SAMPLE_EVEN = ((F(1), F(2), F(-1), F(3)), (F(2), F(0), F(1), F(-1)), (F(0), F(1), F(1), F(1)), (F(3), F(-2), F(0), F(1, 2)))
 
+COCYCLE_DEG = 4           # degree in which the cocycle condition on a cochain of degree 3 lives
+ALL_DIMS = 9              # dimensions 0 .. 8 of the product S^5 x S^3
+SQUARE_DEG = 5            # degree of the cup-one square of a class of degree 3
+SQUARE_GENS = 8           # orbits of cells of dimension 4 in the product (base S^5)
+SMALL_BASE_REPS = 4       # orbits of cells of dimension 5 when the base is S^3
+E2D1 = (2, 0, 1, 0)       # the orbit e_2 (x) d_1
+# order: (terms of Delta_1(e_5), terms of Delta_1(e_2))
+FACTOR_ORDERS = {6: (7, 6), 8: (9, 8), 12: (13, 12), 16: (17, 16)}
+# order: (value of theta on e_2 (x) d_1, obstructed, support of the square)
+BUNDLE_ORDERS = {4: (-1, True, ((4, 0, 1, 0), (4, 0, 1, 1))), 8: (-2, False, ()),
+                 12: (-3, True, ((4, 0, 1, 0), (4, 0, 1, 1))), 16: (-4, False, ())}
+# orders that are 2 modulo 4: denominator of the value -m/4
+HALF_ODD_ORDERS = {2: 2, 6: 2}
+TRIVIAL_FIBRE_COCYCLE = (((0, 0, 3, 0), F(1)),)
 
 # ---------------------------------------------------------------- one factor: the stored complex for a group Z_m
 def bd(k, a, m):
@@ -494,33 +508,46 @@ def check_chain_level_section_exists():
 
 def check_controls_other_orders_and_trivial_action():
     premise(STORED)
-    # the factor identity for the other orders used
-    for m in (6, 8, 12, 16):
+    # the factor identity for the other orders used, with the number of terms of Delta_1(e_5) and Delta_1(e_2)
+    for m, (terms5, terms2) in FACTOR_ORDERS.items():
         for k in range(BASE_TOP + 1):
             assert homotopy_defect(k, m, lambda j: delta1(j, m)) == set() and carried(delta1(k, m), k, m)
+        assert len(delta1(BASE_TOP, m)) == terms5 == m + 1 and len(delta1(ANTI, m)) == terms2 == m
     verdict = {}
-    for m in (4, 8, 12, 16):
+    for m, (coefficient, obstructed, support) in BUNDLE_ORDERS.items():
         M = Bundle(m)
         th = M.theta()
-        assert integral(th) and all(v == 0 for v in M.coboundary(th, DEG + 1).values())
+        assert integral(th) and all(v == 0 for v in M.coboundary(th, COCYCLE_DEG).values())
+        assert th[E2D1] == coefficient and coefficient * QUARTER == -m     # the value -m/4 forced on e_2 (x) d_1
+        assert sum(len(M.reps(n)) for n in range(ALL_DIMS)) == ORBITS
+        for n in range(ALL_DIMS):          # the product identity of (2) for this order
+            for cell in M.reps(n):
+                assert M.defect(cell) == set()
         square = M.cup_one_square(th)
-        cob = M.coboundaries2(2 * DEG - 1)
+        cob = M.coboundaries2(SQUARE_DEG)
+        assert len(cob) == len(M.reps(COCYCLE_DEG)) == SQUARE_GENS
         assert in_span(square, cob) != in_span(square ^ M.pullback_top(), cob)
         verdict[m] = not in_span(square, cob)
+        assert sorted(square) == list(support)             # the square as a cochain: on e_4 (x) T^b d_1 or nowhere
+        assert verdict[m] == obstructed == (coefficient % ANTI == 1) == (m % (2 * QUARTER) == QUARTER)
     assert verdict == {4: True, 8: False, 12: True, 16: False}       # obstructed exactly for order 4 modulo 8
     # orders 2 and 6: the cocycle equations force an even value on the fibre (the cochain theta is not integral)
-    for m in (2, 6):
+    for m, denominator in HALF_ODD_ORDERS.items():
         M = Bundle(m)
         assert not integral(M.theta())
-        assert all(v == 0 for v in M.coboundary(M.theta(), DEG + 1).values())
+        assert M.theta()[E2D1].denominator == denominator and m % QUARTER == denominator
+        assert all(v == 0 for v in M.coboundary(M.theta(), COCYCLE_DEG).values())
     # trivial action on the fibre (the product L x S^3, which has sections): the fibre cocycle 1 on e_0 (x) d_3
-    # and e_0 (x) T d_3 ... has square a coboundary
+    # has square a coboundary; with the antipodal action the same cochain is not a cocycle
     M = Bundle(QUARTER, act=0)
-    th = {(0, 0, 3, 0): F(1)}
-    assert all(v == 0 for v in M.coboundary(th, DEG + 1).values())
-    assert in_span(M.cup_one_square(th), M.coboundaries2(2 * DEG - 1))
-    assert not in_span(M.pullback_top(), M.coboundaries2(2 * DEG - 1))
+    th = dict(TRIVIAL_FIBRE_COCYCLE)
+    assert all(v == 0 for v in M.coboundary(th, COCYCLE_DEG).values())
+    assert sum(abs(v) for v in Bundle(QUARTER).coboundary(th, COCYCLE_DEG).values()) == ANTI
+    assert in_span(M.cup_one_square(th), M.coboundaries2(SQUARE_DEG))
+    assert not in_span(M.pullback_top(), M.coboundaries2(SQUARE_DEG))
     # base S^3 (the lens space L^3(4), stored count three): p^*(eps_5) does not exist and the square is zero
     M = Bundle(QUARTER, top=3)
-    assert all(v == 0 for v in M.coboundary(M.theta(), DEG + 1).values())
-    assert in_span(M.cup_one_square(M.theta()), M.coboundaries2(2 * DEG - 1))
+    assert len(M.reps(SQUARE_DEG)) == SMALL_BASE_REPS and all(cell[0] >= ANTI for cell in M.reps(SQUARE_DEG))
+    assert all(v == 0 for v in M.coboundary(M.theta(), COCYCLE_DEG).values())
+    assert M.cup_one_square(M.theta()) == set()
+    assert in_span(M.cup_one_square(M.theta()), M.coboundaries2(SQUARE_DEG))

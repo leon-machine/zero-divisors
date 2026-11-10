@@ -220,6 +220,9 @@ def sector_moment(n, d, perms):
 
 
 def check_parity_sector_moments_keep_the_catalan_limit():
+    """Partial: the sector trace count is enumerated at three cases only (n = 2 with d = 2, 4; n = 3 with
+    d = 2); the count for every n is the proof's argument over F_2. The genus form, the Catalan limit and the
+    bounds are evaluated for n = 2..6, d = 2..32."""
     premise("synthesis.imported-haar-moments-of-random-pure-state")
     premise("tower.commuting-copies")
     premise("synthesis.eviction-keeps-one-replica-saddle")

@@ -22,3 +22,12 @@ runcheck: 8 of 8 functions PASS after the fixes.
 For the maintainer: the stored "holds given" for this entity will list the Atiyah-Hirzebruch import; see fix 5.
 
 check4: pending (orchestrator)
+
+Addendum (central gate W413 on check_controls_other_orders_and_trivial_action): tightened without removing any
+assertion. Pinned per order from module-level tables: m + 1 and m terms of Delta_1(e_5), Delta_1(e_2); theta = -m/4 on
+e_2 (x) d_1; 48 orbits; 8 generators of the coboundary space; the square as a cochain; verdict == (m = 4 mod 8) ==
+(coefficient odd). Orders 2, 6: denominator 2 of -m/4. Trivial action: the same cochain is not a cocycle under the
+antipodal action (defect pinned). Base S^3: 4 orbits in degree 5, square zero as a cochain. runcheck 8 of 8 PASS;
+check4 (one authorised run): exit 0, 0 errors, 0 other findings.
+
+check4: pending (orchestrator)
