@@ -924,6 +924,7 @@ def main(build="build", site="site", store="store", template="universe.template.
             "releases": _releases.published(lab),
             "unreleased": _releases.unreleased(lab, store, st),
             "site_url": _site_url(st.config),
+            "mcp_url": str(st.config.get("mcp_url") or ""),
             "preview_url": str(st.config.get("preview_url") or "")}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
     tpl = open(os.path.join(site, template), encoding="utf-8").read()
@@ -933,6 +934,10 @@ def main(build="build", site="site", store="store", template="universe.template.
     path = os.path.join(site, out)
     open(path, "w", encoding="utf-8").write(html)
     _share_pages(site, nodes, _site_url(st.config))
+    # pages that need no JavaScript, for AI agents and search engines (tp/static_pages.py)
+    from . import static_pages
+    from .mcp_server import Lab
+    static_pages.write(site, Lab(store), _site_url(st.config), str(st.config.get("mcp_url") or ""))
     _singularity(site, nodes, store, _site_url(st.config))
     _publish_list(site)
     return path

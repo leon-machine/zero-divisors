@@ -8,7 +8,7 @@ published site, until it has been read and merged.
 
 Python 3.11 or later, from a clone of this repository:
 
-    pip install pyyaml jsonschema          # scikit-learn too, for meaning-based search
+    pip install -r requirements.txt        # PyYAML, jsonschema, scikit-learn
 
 Claude Code:
 
@@ -125,7 +125,8 @@ credit:
 2. Add your result folder (or edit an existing one) under `store/`. Commit only
    result folders: not `build/`, `site/`, `store/.tp-lock.json` or
    `store/.tp-layer4.json`, which the maintainer updates when merging.
-3. Run `python -m tp check --store store --keep-going` on your copy.
+3. Run your result's checks with `python -m tp check-one <id> --store store`, then the
+   whole store's with `python -m tp check --store store --keep-going`.
 4. Open a pull request against `main` and fill in the checklist.
 
 The same checks then run on GitHub: the unit tests and validator layers 1 to 6,

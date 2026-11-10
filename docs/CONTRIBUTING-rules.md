@@ -36,7 +36,7 @@ a `proposals/<id>/` folder can be moved into `store/claims/` for it unchanged.
 
 Python 3.11 or later, from the repository folder:
 
-    pip install pyyaml jsonschema          # scikit-learn too, for meaning-based search
+    pip install -r requirements.txt        # PyYAML, jsonschema, scikit-learn
 
 Claude Code:
 

@@ -1,15 +1,46 @@
-# Transport Lab
+# Zero Divisors: Physics Graph
 
-A store of granular, verified claims covering the whole Transport Papers
-series (T0 to T17, T14a, T14b, T14c, the companion notes and the field-theory
-note "One Complex Unit"), organised by subject
-rather than by paper. Documents, the map, the prediction scoreboard, the
-refutation record and the lab notebook are all generated from it. The papers
-on Zenodo stay the frozen published record; this store is the living one.
-The design document is "Transport Lab: Knowledge Store Design".
-A result is in the graph only once it is in store/, with its proof and checks.
-Releases are archived on Zenodo as "Zero Divisors: Physics Graph"; RELEASING.md says how a release
-is made (merging a pull request is not a release).
+An open, machine-checkable graph of the results of the Transport Papers, a research
+programme that reads general relativity and quantum theory through the zero divisors of
+Clifford algebras. Each result is one entry: its statement at four levels (formal,
+technical, plain words, one line), its proof, the results it rests on (pinned to the
+versions used), an exact machine check, and a record of who did what. Everything is
+written in geometric algebra.
+
+The papers themselves are on Zenodo, in the
+[Transport Papers community](https://zenodo.org/communities/transport-papers), and remain
+the version of record; this repository is the living store. Releases are archived on
+Zenodo as "Zero Divisors: Physics Graph" (RELEASING.md). Nothing here has been through
+journal peer review yet: the point of making it open is that anyone, with their AI, can
+read it, check it and try to break it.
+
+## Read it with an AI
+
+1. **On the web, with nothing to install**: point an AI that can browse at the site's
+   `llms.txt`, which lists the conventions, every subject as one file in dependency
+   order, and a page for every result. A hosted, read-only MCP endpoint is planned
+   (docs/HOSTING.md); once it is up, its address goes on the site's Explore with AI page.
+2. **On your own computer**, which you need to check drafts or contribute:
+
+       git clone https://github.com/leon-machine/phys-graph
+       cd phys-graph
+       pip install -r requirements.txt          # Python 3.11 or later
+       claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"
+
+   CONTRIBUTING.md has the set-up for other clients. Whatever the client, ask the AI to
+   call `conventions` first.
+
+To run one result's machine checks: `python -m tp check-one <id> --store store`.
+
+## Contribute
+
+Corrections, sharper checks and new results come in as pull requests; nothing enters
+`main` until the maintainer has reviewed it, and every accepted result credits you by
+name (and the AI model that drafted it). CONTRIBUTING.md says how, and
+`docs/example-contribution/` is a complete worked example. The open problems are on the
+site and through the MCP tools `list_open_problems` and `get_open_problem`.
+
+Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
 
 ## Layout
 
@@ -34,9 +65,10 @@ is made (merging a pull request is not a release).
     recipes/            document recipes
     documents/<doc>/    stored documents: blocks, manifest, rendered .tex/.md,
                         audit, overrides, changelog, versions/vN snapshots, redlines
-    proposals/          drafts submitted through the MCP server, awaiting `tp accept`
+    proposals/          the maintainer's local review queue (`--maintainer` MCP mode, `tp accept`)
     build/              graph.json, store.sqlite, report.md (generated)
-    site/               page templates and the built site (transport_lab.html)
+    site/               page templates and the built site (transport_lab.html), with the
+                        pages that need no JavaScript (results/, subjects/, llms.txt)
     seed/               extraction inputs and reports, typing and prose instructions
 
 ## Commands (run from this folder)
@@ -50,7 +82,9 @@ is made (merging a pull request is not a release).
     python -m tp audit  falling-in --store store
     python -m tp accept PROPOSAL_ID --store store            (after review; then tp lock)
     python -m tp.site                                  build site/transport_lab.html
+    python -m tp check-one ID --store store             run one result's machine checks
     python -m tp.mcp_server --store store              MCP server over stdio
+    python -m tp.mcp_http --store store [--port 8080]   read-only MCP server over HTTP (docs/HOSTING.md)
     python -m tp.gate   recipes/falling-in.yaml ../G00_transport_papers_guide.tex
     python -m tp.gate3  recipes/t02-regenerated.yaml seed/GATE3_T02.md
     python -m tp.references --suite .. --store store   rebuild the reference registry
@@ -70,9 +104,10 @@ the start of its name, for runs whose checks carry no paper labels.
 
 ## The site
 
-`site/transport_lab.html` is one self-contained page.
+`site/transport_lab.html` is one self-contained page, with two guided introductions
+(The Transport Principle, The Singularity) and the Physics Graph:
 
-- **Universe**: every result as a point in a 3D ball, placed so that each sits
+- **The graph**: every result as a point in a 3D ball, placed so that each sits
   next to what it rests on and what rests on it (see `tp/layout.py` for the
   mathematics and its measured quality). Colour is the subject, in five hue
   families. Choose a category to light it up and walk its guided trail;
@@ -83,6 +118,15 @@ the start of its name, for runs whose checks carry no paper labels.
 - **Documents**: the generated documents, readable in the page.
 - **The record**: predictions with their kill conditions, the refutations,
   and the lab notebook.
+
+- **Open problems** and **Release notes**.
+- **Explore with AI**: how to connect an AI, and how contributions are checked.
+
+Beside it, `tp.site` writes pages that need no JavaScript, for AI agents that read the
+web and for search engines (tp/static_pages.py): `results/<id>.html` for every result,
+`results/index.html`, `subjects/<subject>.md` (a whole subject in dependency order),
+`conventions.md`, `open-problems.md`, `llms.txt`, and, once `site_url` is set,
+`sitemap.xml` and `robots.txt`. They are not kept in git; the public host serves them.
 
 The arrangement never depends on the papers: they are optional collections.
 Trails are stored documents (`recipes/trail-<subject>.yaml`) with
@@ -101,8 +145,14 @@ has reviewed it.
 Tools: conventions, notation, list_programmes, list_subjects, find_text,
 list_papers, list_entities, get_claims, list_tags, list_open_problems,
 get_open_problem, search_claims, get_claim, cone, neighbourhood, get_proof,
-trail, digest, validate_draft, propose_claim, list_proposals, generate_doc,
-regenerate_doc.
+trail, digest, validate_draft, generate_doc, regenerate_doc. Prompts: tour,
+explain-result, audit-result, attack-open-problem.
+
+Modes: the default offers all of these; `--read-only` (and the HTTP server,
+`tp.mcp_http`) offers the reading tools and prompts only; `--maintainer` adds
+the old local proposal queue, `propose_claim` and `list_proposals`. Text
+results (conventions, digest) come back as text, the rest as compact JSON, and
+`get_claim` gives each result's `check_command`.
 For an AI reading the store, `digest` returns a whole subject in dependency
 order with statements, premises and proofs; `neighbourhood` and `trail` are
 the quick ways to move around it.
@@ -110,10 +160,11 @@ the quick ways to move around it.
 - A draft is validated against a temporary copy of the store (layers 1, 2, 3
   and 5). Every finding the draft introduces is reported, including ones it
   causes on other entities. Evidence checks (layer 4) never run over MCP,
-  because they execute code; they run when a maintainer reviews the proposal.
-- `propose_claim` writes the draft to `proposals/<id>/` and nothing else; it
-  enters the store only when a maintainer runs `tp accept`. Ids and proof file
-  names are checked before anything touches the disk.
+  because they execute code; `tp check-one` runs them locally, and the pull
+  request's checks run them again.
+- `propose_claim` (maintainer mode only) writes the draft to `proposals/<id>/`
+  and nothing else; it enters the store only when a maintainer runs `tp accept`.
+  Ids and proof file names are checked before anything touches the disk.
 - `generate_doc` and `regenerate_doc` write only generated documents under
   `documents/` (and the recipe under `recipes/`), never the store.
 

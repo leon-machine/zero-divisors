@@ -8,6 +8,7 @@
   python -m tp credit [--store store] [--dry-run]       fill in who did what, and which model
   python -m tp release-notes vX.Y.Z [--store store]     draft releases/vX.Y.Z.md
   python -m tp ga-report [--store store]                entities written outside geometric algebra, undeclared
+  python -m tp check-one ID [--store store]             run one result's machine checks
 """
 import argparse
 import os
@@ -34,6 +35,7 @@ EXTENSIONS = {
     "sign": "edit", "trust": "trust",
     "lint": "lint", "context": "context", "checkruns": "checkruns", "quantity": "quantity",
     "mutants": "mutants", "credit": "credit", "release-notes": "releases", "ga-report": "galang",
+    "check-one": "checkone",
 }
 
 
