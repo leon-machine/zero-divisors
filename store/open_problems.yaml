@@ -1407,7 +1407,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November; the 9 November results and Leon's decisions"
+  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November; the 9 November results and Leon's decisions; the capacity and induced-gravity result and Leon's decisions of 9 November (second pass)"
   statement: >-
     The field theory takes three generations, one Higgs doublet and
     spin-statistics (imported via the Jost point,
@@ -1488,20 +1488,126 @@
     under the stored premises; the value $78$ quoted in op.counted-mode-energy is a reading, not a stored
     result. The conclusion $3 \mid n_{g}$ has prior art by anomaly routes (J. Wang's framing-anomaly count;
     the mod-9 Dai-Freed anomaly of baryon triality of I. Garcia-Etxebarria and M. Montero).
+
+    (9 November, second pass.) Two further leads on three generations are closed negatively
+    (\claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}). The
+    capacity lead (each massless helicity channel on a light ray registered by an array of its own, so
+    $2n_{V} + n_{s} + 2\epsilon \le 16n_{g}$): pair currents of the light-ray arrays have helicity $0$ or
+    $\pm 1$, never $\pm 2$, and only the helicity-zero ones are canonical, so the rule cannot be met for
+    helicity $1$ or $2$ at any $n_{g}$; as arithmetic the inequality gives $n_{g} \ge 3$ only when twelve
+    vectors, both doublets and the graviton are counted ($34$ against $32$). The induced-gravity lead (the
+    vanishing of the quadratic Sakharov coefficient at three generations): the zero moves with the scalars'
+    curvature coupling $\xi_{R}$ (a zero at every $n_{g}$), with the gauge parameter and with the graviton
+    (counted by the stored helicity rule it sits at four generations), and the quartic coefficient of the same
+    sum vanishes on the recorded content at $n_{g} = 1$. Neither rule is required by the stored results cited
+    there; the independence is argued, with two of the twenty-four postulates of the joint cone audited (the
+    slot-module premise and anomaly freedom). By Leon's decision joint J3 now records (version 3) that its
+    identification of channels with current bosons of the arrays is not one array tower per helicity channel,
+    so the capacity inequality is a reading and not a consequence of J3, and $n_{g}$ stays free. The one
+    conjunction of the candidate rules that gives three is the recurrence test in the currents reading with
+    asymptotic freedom of weak isospin, neither of which is a premise.
   attack:
     - >-
       Three generations: the number is free under the slot-module premise; find a premise or dynamics of the series
       that fixes it (for example the slot su(3) of the maximal composite acting on the generation labels as a family
-      symmetry), or prove that none does. The light-ray recurrence test (9 November) gives $3 \mid n_{g}$ under J3's
+      symmetry), or prove that none does by a two-model argument over the full joint cone of postulates (the stored
+      independence audits only the slot-module premise and anomaly freedom). The light-ray recurrence test
+      (9 November) gives $3 \mid n_{g}$ under J3's
       reading and is recorded as a test, not a premise; it does not choose three over six or nine
-      (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}).
+      (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}). The capacity
+      and induced-gravity leads are closed negatively (9 November, second pass,
+      \claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}).
     - "Spin and statistics beyond perturbation theory: derive Kuckert's modular P1CT symmetry (the modular conjugations of the wedge algebras acting on the local algebras as the wedge reflections) from a premise the series holds, or record it as one; the charged sectors localised in hypercones."
     - "The doublet count: decide whether the null-lift constraint is a hard constraint and the Higgs exactly the rung unit; on the branch with a level, whether the second doublet is needed at all, and whether a light multi-species composite would change n_h."
   success: >-
     A derivation of one structural input in the field theory, or an
     independence proof.
-  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content]
+  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content, synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free]
   added: 2026-11-01
+
+- id: op.curvature-coupling-across-subjects
+  title: "The scalars' curvature coupling: one datum under three results, or three fields"
+  area: quantum-fields
+  kind: research
+  difficulty: substantial
+  status: open
+  source: "The capacity and induced-gravity result and the cross-subject review of 9 November; Leon's decision of 9 November to register the question"
+  statement: >-
+    The curvature coupling $\xi_{R}$ of a scalar field enters three stored
+    results in three subjects and is fixed by none: the induced quadratic
+    (Sakharov) coefficient, $B = 16n_{g} - 48 + N_{S}(1 - 6\xi_{R})$ minimal-scalar
+    units for twelve vectors in the Feynman gauge, $N_{S}$ real scalar
+    components and $n_{g}$ generations; the fit of the primordial tilt on a
+    Kasner approach, which needs $\xi_{R}$ in a narrow window near $1.5$; and
+    the doublets of the rung field, whose coupling is recorded as an open
+    datum. Decide whether these are one value of one field's coupling or the
+    couplings of three different fields, and in the first case whether any
+    value serves all three uses.
+  why: >-
+    Each use, read alone, treats $\xi_{R}$ as free. If it is one datum, the
+    uses constrain each other and at least one of the stored readings (the
+    cancellation at three generations, the fitted tilt, a positive induced
+    Newton coupling) has to give way; if they are different fields, the
+    store should say which scalar each result is about.
+  known: >-
+    Stored weights: one per Weyl field, $1 - 6\xi_{R}$ per real scalar and
+    $\alpha - 5$ per gauge vector under the heat-kernel cut-off, $-4$ at the
+    Gupta-Bleuler value $\alpha = 1$
+    (\claimref{synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off},
+    \claimref{synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike}).
+    With the eight real components of the two doublets
+    (\claimref{synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum})
+    the coefficient vanishes at $\xi_{R} = \tfrac16 + \tfrac{n_{g} - 3}{3}$:
+    at three generations exactly at conformal coupling, at two for
+    $\xi_{R} = -\tfrac16$, at four for $\xi_{R} = \tfrac12$
+    (\claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}).
+    The stored cancellation at three generations is stated for conformal
+    scalars, a property of the attachment modules and not of the rung
+    field's action
+    (\claimref{synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations}),
+    and the stored matching of the induced coupling to Newton's constant
+    needs $B > 0$. The red tilt on a Kasner approach is reached by a
+    curvature-coupled scalar only for $\xi_{R} \in [1.5225, 1.5481]$, a
+    fitted value
+    (\claimref{synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling});
+    at tree level the stored actions give $\xi_{R} = 0$, or $-w/6$ from the
+    mass-weight dictionary, and do not reach the window
+    (\claimref{synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point}).
+    Arithmetic on the stored formulas, not a stored result: if the tilt's
+    scalar were the doublets at the fitted coupling, $B$ at three generations
+    would be about $-65$ to $-66$, and the zero of $B$ would sit between
+    seven and eight generations, at no integer. No stored result identifies
+    the scalar of the tilt fit with the rung field, and none derives
+    $\xi_{R}$ for the rung field.
+  attack:
+    - >-
+      Say which field each result is about: whether the curvature-coupled
+      scalar of the Kasner tilt fit can be the rung field's doublets (its
+      weights and its place before the descent), or is necessarily another
+      scalar; if another, the three uses are independent and the problem
+      reduces to the doublets' open datum.
+    - >-
+      If one field: evaluate the induced coefficient and its sign over the
+      tilt window on the stored content, in both cut-offs and with the gauge
+      parameter free, and state which of the stored readings survive.
+    - >-
+      Look for a series datum that fixes $\xi_{R}$ for the rung field (the
+      conformal coupling of the attachment, the tree-level value $0$ of the
+      stored actions, or its running), and for the gauge on which the
+      quadratic coefficient depends.
+  success: >-
+    A statement, proved from stored premises, of whether the three uses
+    concern one coupling or several, with the admissible values in the first
+    case; or a derivation of $\xi_{R}$ for the rung field.
+  entities:
+    - synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off
+    - synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike
+    - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations
+    - synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free
+    - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
+    - synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
+    - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
+  added: "2026-11-09"
 
 - id: op.deposit-state-is-hadamard
   title: Is the descent's deposited state Hadamard, and does it carry to Weyl-curved fields
@@ -1707,7 +1813,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions"
+  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions; the lens-space cohomology result, the imported Atiyah-Hirzebruch filtration and Leon's decisions of 9 November (second pass)"
   statement: >-
     The invariant of tame walls is $W(\Sigma) = (w(\Sigma), w_{1}(\mathcal
     L))$, and the number $k(\Sigma)$ of adjoined hyperbolic planes (rungs) a
@@ -1811,18 +1917,52 @@
     $e(\mathcal L)$, nor shows that $W(\Sigma)$, $\beta x$ and the signature leave it undetermined. By Leon's
     decision of 9 November the lens-space inputs are to be derived in the store, not imported; until then both
     results keep them as hypotheses, flagged at every level.
+
+    (9 November, second pass.) Most of the lens-space inputs are now derived in the store, on a stated
+    background of cellular cohomology and obstruction theory: from the equivariant cell structure of the sphere
+    under the quarter turn and an explicit diagonal approximation, the integral and mod-2 cohomology rings of
+    $L^{2n+1}(4)$ with $x^{2} = 0$ computed directly, the integral Bockstein $\beta x = 2y$, the vanishing of the
+    Bockstein of $\mathbb{Z}_{2} \to \mathbb{Z}_{4} \to \mathbb{Z}_{2}$, the Euler classes $\pm y$ and $\pm 2y$
+    of the quarter-turn and half-turn plane bundles and the stable tangent class $T\Sigma \oplus \R \cong
+    (n+1)\eta$; and, given the Atiyah-Hirzebruch filtration of complex K-theory, which by Leon's decision is
+    imported as one general Fact (\claimref{synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory}, cited from
+    memory), the K-ring $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$, with the order of $1 - \chi^{2}$ equal to
+    $2^{\lfloor (n+1)/2 \rfloor}$ for $n \le 14$ (computed)
+    (\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure}).
+    Not derived: the spin class $q_{1}$ (by decision not imported) and the lambda-operations of K-theory. Both
+    lens-space wall results now cite that theorem (version 2 of each): the two-rung result is conditional on
+    $q_{1}$ alone among the classical inputs, and the K-theory result on the lambda-operations, its use of
+    $Sq^{1}$ being replaced by the direct $x^{2} = 0$. A search for a wall on which the rung count is not
+    determined found none (argued, not filed): among lens spaces, their products with tori and projectivised
+    flat bundles, every pair with the same $x$, $\beta x$, $(\beta x)^{2}$ and $q_{1}$ and different bounds on
+    $k$ is separated by a cup power of a class $a$ with $2a = \beta x$; for instance $L^{31}(4)$ against
+    $L^{7}(4) \times T^{24}$, with $k \ge 8$ against $k \le 6$ by the stored bounds, is separated by $a^{4}$,
+    since classes pulled back from the smaller lens space keep $y^{4} = 0$. Conjectured on the lens family
+    only: $k$ depends on $(\Sigma, x)$ through the height of $a$ (there the order of $1 - \chi^{2}$ is a
+    function of $\mathrm{ht}(y) = n + 1$). So as numerical data ($\mathrm{ht}(x)$, the order of $\beta x$,
+    $(\beta x)^{2}$) the stored results already show that $k$ is not determined, while no counterexample to
+    determination by the integral ring data is in sight; the success clause is sharpened accordingly (Leon's
+    decision). On a definite side the exact count is an equivariant index (argued from the stored clauses
+    $k = e(\mathcal L)$ and the subbundle criterion): a line subbundle of the trivial bundle of rank $k$ is a
+    $\mathbb{Z}_{2}$-equivariant map from the double cover of the wall defined by $x$ to $S^{k-1}$ with the
+    antipodal action, so $k$ is one plus the least $j$ for which such a map to $S^{j}$ exists.
   attack:
     - >-
-      Answered in the negative (9 November), given the lens-space inputs
-      cited from memory: on lens-space walls $k(\Sigma) >
-      \mathrm{ht}(w_{1}\mathcal L)$ on indefinite sides from dimension five
+      Answered in the negative (9 November) on lens-space walls, given the
+      spin class $q_{1}$ or the lambda-operations of K-theory, the
+      cohomology rings and the K-ring being now stored
+      (\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure}):
+      $k(\Sigma) > \mathrm{ht}(w_{1}\mathcal L)$ on indefinite sides from
+      dimension five
       (\claimref{synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial}),
       with unbounded excess
       (\claimref{synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height}).
       What remains of the item is the exact rung count on such walls,
-      between those lower bounds and $e(\mathcal L)$, and the integral datum
-      that decides it, or a wall on which $W(\Sigma)$, $\beta x$ and the
-      signature do not determine it.
+      between those lower bounds and $e(\mathcal L)$, and the ring datum
+      that decides it: $k$ as a function of the ring data of a class $a$
+      with $2a = \beta x$ (conjectured on the lens family: through the
+      height of $a$), or a pair of walls with isomorphic data and different
+      $k$.
     - >-
       File the table for $\dim\Sigma \le 3$: import the classification of
       bundles of rank at least three over three-complexes by $(w_{1}, w_{2})$
@@ -1836,20 +1976,40 @@
       the Clifford sheaf's jump is $(-2 \bmod 8, 0, w_{1}(\mathcal L)^{2})$,
       importing Donovan and Karoubi's description as a Fact.
     - >-
-      Derive the lens-space cohomology rings, $q_{1}$ and the K-ring in the
-      store (Leon's decision of 9 November: derive, not import): the integral
-      and mod-2 cohomology rings of $L^{2n+1}(4)$ and $T\Sigma \oplus \R$,
-      the spin class $q_{1}$ with $2q_{1} = p_{1}$ and $p_{1} = e^{2}$ for
-      oriented plane bundles, the complex K-ring
-      $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$ with its
-      lambda-operations, and $Sq^{1} = 0$ on classes that lift to
-      $\mathbb{Z}_{4}$; the two lens-space wall results of 9 November take
-      them as hypotheses.
+      Derive what remains of the lens-space inputs (restated 9 November,
+      second pass): the spin class $q_{1}$ generating
+      $H^{4}(B\mathrm{Spin}; \mathbb{Z})$, natural and stable, with
+      $2q_{1} = p_{1}$ and $p_{1} = e^{2}$ for oriented plane bundles (not
+      imported, by Leon's decision; the two-rung result is conditional on
+      it), and the lambda-operations of complex K-theory (the K-theory
+      result is conditional on them). The cohomology rings, the Bockstein,
+      the stable tangent class and, given the imported Atiyah-Hirzebruch
+      filtration, the K-ring are derived
+      (\claimref{synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure});
+      the cellular background of that derivation (cellular cohomology, the
+      comparison theorem, obstruction classes) stays a stated hypothesis.
+    - >-
+      On a definite side, compute the exact rung count as an equivariant
+      (Borsuk-Ulam) index: $k = 1 +$ the least $j$ with a
+      $\mathbb{Z}_{2}$-equivariant map from the double cover of the wall
+      defined by $x$ to $S^{j}$ with the antipodal action (argued, see
+      above). For $L^{2m+1}(4)$ the double cover is real projective space
+      with the involution induced by the quarter turn; the stored data are
+      $k = 3$ on $L(4,1)$ and $3 \le k \le 6$ on $L^{5}(4)$ (the lower
+      bound given $q_{1}$). First computation: the primary obstruction to
+      an equivariant map into $S^{2}$, a class in the twisted integral
+      $H^{3}$ of $L^{5}(4)$, in the cellular model of the cohomology
+      result; where it vanishes, the next obstruction. Whether the count
+      is periodic in $m$ is part of the question; the literature on the
+      level of projective spaces (Pfister and Stolz) is cited from memory
+      and not checked.
   success: >-
     The exact rung count $k(\Sigma)$ of every tame wall of dimension at least
-    four in terms of $W(\Sigma)$, the integral class $\beta w_{1}(\mathcal L)$
-    and the physical side's signature, or a wall on which it is not determined
-    by them.
+    four as a function of the ring data of the wall: the integral cohomology
+    ring with $x = w_{1}(\mathcal L)$ and, where $x^{2} = 0$, a class $a$
+    with $2a = \beta x$ (defined up to 2-torsion), together with the
+    physical side's signature; or a pair of walls with isomorphic data and
+    different $k$.
   entities:
     - sheaf.wall-class
     - transport.obstructions-are-moved-never-destroyed
@@ -1861,6 +2021,8 @@
     - synthesis.imported-stiefel-connectivity-and-grassmannian-classification
     - synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial
     - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height
+    - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure
+    - synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -2357,7 +2519,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October; the 9 November results and Leon's decisions"
+  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October; the 9 November results and Leon's decisions; the spin-2 horizon-channel result and Leon's decisions of 9 November (second pass)"
   statement: >-
     Under Premise (Q) version 3 one registered boundary mode carries two
     s-wave arrays. With the count taken per light ray (decision of 26
@@ -2439,16 +2601,50 @@
     (version 2): the current-boson identification and the partial-wave lift stay premise for every massless
     field, and the channel-reduction clause is assumed for spin $2$ only, the graviton's channels; for spins
     $0$, $\tfrac12$ and $1$ it follows from the result.
+
+    (9 November, second pass.) Spin $2$, odd parity, is derived for $\ell \ge 2$ in the static frame by
+    linearising the gauge field of Gauge Theory Gravity about the stored Schwarzschild field: on a channel of
+    real nonzero frequency the odd-parity linearised vacuum equations in the Regge-Wheeler gauge are equivalent
+    to the two-dimensional Regge-Wheeler equation, whose potential is $1 - 2M/r$ times a function regular and
+    positive at the horizon, value $(\ell(\ell+1) - 3)/(4M^{2})$ there, so the channel is a two-dimensional
+    mode at the horizon with the rate $e^{2\kappa r_{*}}$ of the scalar and Maxwell channels (the first-order
+    identity rests on an exact grid of cases and a degree bound that is argued). Even parity is reached one
+    way: the Zerilli equation lies in the span of the linearised vacuum equations and their first derivatives
+    (computed at sample points); the converse, that the Zerilli function carries the whole even-parity channel,
+    and the tensor-harmonic facts (completeness, reachability of the gauge) are cited from memory. One
+    superpotential gives both potentials and a first-order operator that carries odd-parity solutions to
+    even-parity ones on every oscillating channel, its kernel being non-oscillating; the even potential over
+    $1 - 2M/r$ is $(4\lambda^{2} + 4\lambda + 3)/(4M^{2}(2\lambda + 3))$ at the horizon, $\lambda =
+    (\ell - 1)(\ell + 2)/2$
+    (\claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}).
+    There is no radiative channel at $\ell = 0, 1$. By Leon's decisions J3
+    (\claimref{hawking.joint-j3-s-wave-reduction}) is narrowed again (version 3): the channel-reduction clause
+    stays premise for the even-parity channels of spin $2$ only; the current boson is worded as each
+    partial-wave channel, $\ell \ge |s|$, since a field of helicity $s$ has no partial wave below $|s|$; and
+    the identification of channels with current bosons of the arrays is recorded as not one array tower per
+    helicity channel. Scope, for every spin: that a channel is free at the horizon is a statement in the
+    static (Killing) frame and its null coordinates; in Kruskal-type coordinates the coupling at the horizon
+    is nonzero (stated in both horizon-channel results), while the reduction of each channel to a field in
+    two dimensions does not depend on the frame.
   attack:
     - >-
-      Spin $2$: derive the Regge-Wheeler and Zerilli reductions of the
-      linearised gravitational field at the horizon in the same setting (the
-      reductions for spins $0$, $\tfrac12$ and $1$ are derived, 9 November,
-      \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}),
-      which would take the channel-reduction clause out of J3, leaving its
-      current-boson identification and partial-wave lift as premise; and derive the harmonic-analysis inputs that result cites from
-      memory (completeness of spherical and spinor harmonics, the
-      exact/co-exact split of one-forms on $S^{2}$).
+      Spin $2$, what remains (restated 9 November, second pass; the
+      odd-parity reduction is derived,
+      \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional},
+      and the reductions for spins $0$, $\tfrac12$ and $1$,
+      \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}):
+      the even-parity converse, that every solution of the Zerilli equation
+      in an oscillating channel is the master function of a vacuum solution,
+      with the implication proved identically and not only at sample points,
+      which would take the channel-reduction clause out of J3; the
+      harmonic-analysis inputs cited from memory (completeness of tensor
+      harmonics and reachability of the Regge-Wheeler gauge for spin $2$,
+      completeness of spherical and spinor harmonics and the exact/co-exact
+      split of one-forms on $S^{2}$ for the lower spins) and a proof of the
+      degree bound of the odd-parity identity; the cases $\ell = 0, 1$
+      (changes of mass, spin and gauge); and the statement in charts
+      regular across the horizon. The current-boson identification and the
+      partial-wave lift stay premise.
     - >-
       Derive the partial-wave identification from the fuzzy sphere of the
       counting programme, shared with T08 and T10.
@@ -2464,6 +2660,7 @@
     - synthesis.half-integer-weight-array-carries-half-ln2
     - singularity.q-joint-quasi-freeness-s-wave
     - synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional
+    - synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional
   added: "2026-10-22"
 
 - id: op.residue-killing-weights
@@ -3340,6 +3537,86 @@
   - synthesis.d-term-level-free-at-fixed-n
   added: '2026-10-22'
 
+- id: op.order-four-anomaly-and-sixteen
+  title: "An order-four symmetry of the slot module and sixteen components per generation"
+  area: standard-model
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "The cross-subject review of 9 November (the Klein twist of the modular-conjugation results against the neutral-singlet bit); Leon's decision of 9 November to register the question"
+  statement: >-
+    Is there an order-four symmetry of the slot module
+    (\claimref{standard-model.slot-module-hypothesis}) whose square is the
+    grading and which the descent preserves? If there is, does consistency
+    of the fermion content on walls with cross-section $\mathbb{RP}^{5}$
+    force sixteen Weyl components per generation, the neutral singlet
+    included, and exclude fifteen?
+  why: >-
+    The neutral-singlet bit, sixteen components per generation against
+    fifteen, is not decided by the gauge quantum numbers, CPT, anomaly
+    freedom, the generation clause or the light-ray count
+    (op.hypothesis-s). A global anomaly of an order-four symmetry would be
+    a condition of a different kind, and it would tie the standard-model
+    content to the wall theory, two subjects that share almost no edge.
+  known: >-
+    Stored: the twist by the unit $I_{4}$ that enters the geometric modular
+    conjugations is an order-four element whose square is the grading
+    (\claimref{synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics},
+    \claimref{synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state}),
+    and the slot Majoranas of the slot-module premise are Klein-twisted. The
+    bit is decided only by a gauge stage that leaves $\uu(5)$
+    (\claimref{synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5}),
+    and the light-ray count has sixteen arrays per generation for either
+    singlet choice, a fifteen-component generation leaving half a registered
+    unit (\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}).
+    On a real projective wall with tautological dying line the rung count is
+    $n + 1$, the mod-2 height
+    (\claimref{synthesis.wall-rung-count-is-height-of-dying-line-class}).
+    From the literature, cited from memory and not in the store: a
+    $\mathbb{Z}_{4}$ symmetry whose square is fermion parity has an anomaly
+    valued modulo $16$ on Weyl fields of odd charge, the bordism group of
+    five-manifolds with that structure being $\mathbb{Z}_{16}$, generated by
+    $\mathbb{RP}^{5}$ (Garcia-Etxebarria and Montero; Hsieh; Tachikawa and
+    Yonekura). The store has no entity on bordism groups, the eta invariant
+    or an index theorem of this kind. Argued, not computed in the store: the
+    fixed-point contribution of the one nontrivial deck element on
+    $\mathbb{RP}^{5}$ is $\tfrac12 \cdot 2^{-3} = \tfrac{1}{16}$ per Weyl
+    field, which is where the sixteen would come from; and the lens space
+    $L^{5}(4)$ is not the relevant wall, since the rotor lift of the quarter
+    turn in three planes has fourth power $-1$, an order-eight structure. No
+    stored result says that the store's order-four element acts on the slot
+    module with odd charge on all sixteen components, or that the descent
+    preserves it.
+  attack:
+    - >-
+      Compute the charges of the sixteen components of the slot module under
+      the store's order-four element (all odd or not), and decide whether it
+      is a symmetry of the slot-module premise and commutes with the chain's
+      gauge algebra.
+    - >-
+      Decide whether the descent preserves that symmetry, or breaks it to
+      the grading.
+    - >-
+      The anomaly itself: either import the index theorem behind the
+      modulo-16 statement as a Fact (a decision for the maintainer), or
+      derive the fixed-point count on $\mathbb{RP}^{5}$ in the store, and
+      state what a wall with cross-section $\mathbb{RP}^{5}$ requires of the
+      fermion content.
+  success: >-
+    A proof that an order-four symmetry with square the grading acts on the
+    slot module and survives the descent, together with a stored or imported
+    statement that its anomaly on $\mathbb{RP}^{5}$ walls vanishes exactly
+    for sixteen components per generation; or a proof that no such symmetry
+    exists, or that it does not constrain the content.
+  entities:
+    - standard-model.slot-module-hypothesis
+    - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
+    - synthesis.slot-module-light-ray-arrays-are-weyl-components
+    - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
+    - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state
+    - synthesis.wall-rung-count-is-height-of-dying-line-class
+  added: "2026-11-09"
+
 - id: op.non-gaussian-completion
   title: 'The non-Gaussian completion: the 207 from caused structure'
   area: generations
@@ -4169,6 +4446,77 @@
     - synthesis.pati-salam-chain-defects-cannot-source-spectrum
     - synthesis.adiabatic-deposit-modulation-is-a-time-shift
   added: '2026-10-22'
+
+- id: op.dark-tower-running
+  title: "Running and confinement of the dark towers' gauge algebras"
+  area: dark-matter
+  kind: research
+  difficulty: tractable
+  status: open
+  source: "The cross-subject review of 9 November (the one-loop running coefficients have no edge to the dark towers); Leon's decision of 9 November to register the question"
+  statement: >-
+    The store derives the one-loop running coefficients of the visible
+    gauge algebra from spin traces, and derives a gauge algebra for each
+    dark tower with its matter content, but has never applied the one to the
+    other. For each dark tower, decide whether its gauge algebra is
+    asymptotically free on its stored content and whether it confines, and
+    what scale, relative to the visible sector's, follows from equal
+    couplings at the descent.
+  why: >-
+    Whether a tower's matter is free, bound or confined decides what its
+    dark matter is made of, and a confinement scale would be a correlation
+    length for the deposit; the coupling rule and the emission coefficient
+    of the odd towers (op.odd-towers) and the thickness rule
+    (op.thickness-deposit-rule) both lack such a scale.
+  known: >-
+    The one-loop weights $\tfrac13$, $\tfrac23$, $-\tfrac{11}{3}$ per real
+    scalar, Weyl field and vector are derived in the spacetime algebra, in
+    four dimensions and in a covariant gauge under the indefinite-form
+    premise, with the generation and doublet counts as inputs
+    (\claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces});
+    no dark-matter result uses them. The towers' algebras, under the tower
+    premises stated there: $\su(2) \oplus \su(3) \oplus \uu(1)$ in the mirror
+    tower, $\so(2) \oplus \so(2)$ in the three-dimensional towers and
+    $\uu(3) = \su(3) \oplus \uu(1)$ in the five-dimensional ones
+    (\claimref{synthesis.gauge-algebra-by-tower}). Content: the
+    three-dimensional towers carry two species, each charged under one
+    abelian factor, with no chirality and gauge-invariant Dirac masses, two
+    copies of single-flavour electrodynamics in $2 + 1$ dimensions
+    (\claimref{dark-tower-matter.three-dimensional-content}); the
+    five-dimensional towers carry, under (S), four vector-like Dirac species
+    with hypercharges $\tfrac23$, $-\tfrac13$, $-1$, $0$, and without (S)
+    one colour triplet (\claimref{dark-tower-matter.five-dimensional-content}).
+    Not known: whether the towers' gauge fields are dynamical in the store's
+    reading, and what running means in three and five dimensions, where the
+    gauge coupling carries a dimension and the four-dimensional coefficients
+    do not apply as they stand.
+  attack:
+    - >-
+      Settle the setting first: whether each tower's gauge field is
+      dynamical, and in which dimension its coupling runs (the tower's own,
+      or four after the descent). If the fields are not dynamical, record
+      that and close the problem.
+    - >-
+      The mirror tower, which is four-dimensional: apply the stored
+      coefficients to its content and compare its running with the visible
+      sector's at equal coupling at the descent.
+    - >-
+      The odd towers: the sign of the one-loop coefficient of each factor on
+      the stored content, with the dimensional analysis proper to three and
+      five dimensions; confinement or its absence per tower (abelian factors
+      in three dimensions, the colour factor in five), and the ratio of any
+      confinement scale to the visible one.
+  success: >-
+    For each dark tower, a proved statement of whether its gauge algebra is
+    asymptotically free and confining on its stored content, with the scale
+    ratio to the visible sector where one exists; or a proof that the
+    question is empty because the tower's gauge field is not dynamical.
+  entities:
+    - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
+    - synthesis.gauge-algebra-by-tower
+    - dark-tower-matter.three-dimensional-content
+    - dark-tower-matter.five-dimensional-content
+  added: "2026-11-09"
 
 - id: op.descent-state-and-spectrum
   title: 'The state of the descent and the primordial spectrum'

@@ -32,7 +32,7 @@ derivations:
 - name: main
   uses:
   - synthesis.stationary-horizon-state-is-its-own-edge-scaling-limit@6
-  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@4
+  - synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature@5
   - synthesis.counted-unit-energy-at-half-offset@3
   - synthesis.imported-theta-function-identities@2
   - synthesis.hole-mass-is-ground-energy-label@3

@@ -6,7 +6,7 @@ functions:
   check_k_ring_order_of_dying_line_on_lens_spaces:
     kind: complete
     clauses: ["(2) the order of 1 - chi^2 in Z[chi]/(chi^4 - 1, (chi - 1)^{n+1}) is 2^{floor((n+1)/2)} for n = 1..8, with lattice index 4^n", "(2) 2(1 - chi^2) vanishes at n = 1 (the stored L(4,1) case) and not at n = 3 (L^7(4)): k >= 3 there", "control: chi - 1 has order 2^n on RP^{2n+1}"]
-    omits: "the identification of the ring with K(L^{2n+1}(4)) is hypothesis (L2) of the statement, cited from memory"
+    omits: "the identification of the ring with K(L^{2n+1}(4)) is (L2) of the statement, clause (6) of the stored cohomology theorem (given the imported filtration)"
   check_gaussian_bound_on_powers:
     kind: complete
     clauses: ["(2) chi -> I = e1e2 kills chi^4 - 1 and sends 1 - chi^2 to 2 = I pi^2, pi = I - 1", "(2) 2^j has pi-adic valuation 2j for j = 1..4"]
@@ -15,3 +15,5 @@ functions:
     kind: sampled
     clauses: ["(3) B = e2e3 is an isometry of H^r with B^2 = -1 (r = 2, 3)", "(3) f(q) = e3e1 q is a unit tangent field with f(Bq) = -B f(q): its span is the twisted line", "(3) the cometric is single valued, degenerates to first order along f at t = 0, and has signature (2n+1, 1) or (2n+2, 0) on the physical side"]
     omits: "checked at sampled rational points for L^7(4) and L^11(4); general odd n and the descent to the quotient are the proof's"
+untouched_premises:
+  synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure: "supplies the K-ring of the lens spaces (L2) and x^2 = 0, which the proof cites; the checks compute in the presented ring and do not call it"

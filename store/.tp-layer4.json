@@ -7757,7 +7757,7 @@
 "hawking.helicity-lift-joints-itemised": {
 "failed": false,
 "findings": [],
-"key": "eed6744e53295e6a",
+"key": "8eef410851bf435c",
 "result": "pass",
 "runs": [
 {
@@ -8137,7 +8137,7 @@
 "hawking.joint-j3-s-wave-reduction": {
 "failed": false,
 "findings": [],
-"key": "e3b1344bd5cbf7a9",
+"key": "05569651de3dba85",
 "result": "none",
 "runs": []
 },
@@ -31666,7 +31666,7 @@
 "synthesis.array-ln2-is-zero-mode-doublet-one-tower": {
 "failed": false,
 "findings": [],
-"key": "2a60967360cda56b",
+"key": "653ac1d4d57a230a",
 "result": "pass",
 "runs": [
 {
@@ -32778,6 +32778,58 @@
 }
 ]
 },
+"synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free": {
+"failed": false,
+"findings": [],
+"key": "ad1ddcaf0194c750",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_pair_currents_have_helicity_at_most_one_and_only_helicity_zero_is_canonical",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.array-ln2-is-zero-mode-doublet-one-tower",
+"synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins",
+"synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays"
+]
+},
+{
+"derivation": null,
+"func": "check_capacity_inequality_passes_two_generations_on_recorded_contents",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.helicity-lift-joints-itemised",
+"standard-model.connection-forced",
+"synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+"synthesis.slot-module-light-ray-arrays-are-weyl-components"
+]
+},
+{
+"derivation": null,
+"func": "check_sakharov_coefficient_has_zeros_at_every_generation_number",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations",
+"synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike",
+"synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off"
+]
+},
+{
+"derivation": null,
+"func": "check_the_pin_is_recurrence_with_asymptotic_freedom_and_the_tally_of_rules",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content",
+"synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free"
+]
+}
+]
+},
 "synthesis.capacity-per-mode-independent-of-helicity": {
 "failed": false,
 "findings": [],
@@ -33435,6 +33487,63 @@
 }
 ]
 },
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure": {
+"failed": false,
+"findings": [],
+"key": "9be2efdfde388609",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_quarter_turn_in_the_algebra",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_cell_complex",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_diagonal_approximation_is_a_chain_map",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_four_group_ring_identities",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_cup_products_and_bocksteins",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_euler_class_sections",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_presented_ring_orders",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.cold-mirror-needs-non-equilibrium-descent": {
 "failed": false,
 "findings": [],
@@ -33494,7 +33603,7 @@
 "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
 "failed": false,
 "findings": [],
-"key": "9014668e438821c6",
+"key": "ca1274ddbb0de340",
 "result": "pass",
 "runs": [
 {
@@ -33563,7 +33672,7 @@
 "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
 "failed": false,
 "findings": [],
-"key": "f80be0b3ac925a11",
+"key": "7abfa5e46e7a6aa4",
 "result": "pass",
 "runs": [
 {
@@ -38311,7 +38420,7 @@
 "synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional": {
 "failed": false,
 "findings": [],
-"key": "4d370005d0cd3a31",
+"key": "68cf4eaed6d3837b",
 "result": "pass",
 "runs": [
 {
@@ -38357,6 +38466,60 @@
 "quantities": [],
 "touched": [
 "pairing.imported-schwarzschild-connection-curvature"
+]
+}
+]
+},
+"synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional": {
+"failed": false,
+"findings": [],
+"key": "ff1bae4803883c00",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_odd_parity_linearised_ricci",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_regge_wheeler_reduction",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_superpotential_and_intertwiner",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_even_parity_zerilli_in_span",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_horizon_values",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature",
+"synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional"
 ]
 }
 ]
@@ -38443,6 +38606,13 @@
 "failed": false,
 "findings": [],
 "key": "b9b0ca2007ad4393",
+"result": "none",
+"runs": []
+},
+"synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory": {
+"failed": false,
+"findings": [],
+"key": "e8fc05526ef1b72a",
 "result": "none",
 "runs": []
 },
@@ -41065,7 +41235,7 @@
 "synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height": {
 "failed": false,
 "findings": [],
-"key": "e3c6e66f2a89dc0e",
+"key": "8878b5e7306bc831",
 "result": "pass",
 "runs": [
 {
@@ -48493,7 +48663,7 @@
 "synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial": {
 "failed": false,
 "findings": [],
-"key": "51ac3c5ede21aa1a",
+"key": "e4cbf58d6a866e45",
 "result": "pass",
 "runs": [
 {

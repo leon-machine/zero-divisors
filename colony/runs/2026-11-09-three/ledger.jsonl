@@ -1,0 +1,3 @@
+{"t": 1794259285.2156918, "problem": "op.wall-class-invariant", "tokens": 290000, "outcome": "proved-partial", "proposal": "synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure", "verdict": "SOUND WITH FIXES"}
+{"t": 1794259285.239565, "problem": "op.helicity-per-boundary-mode", "tokens": 290000, "outcome": "proved-partial", "proposal": "synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional", "verdict": "SOUND WITH FIXES"}
+{"t": 1794259285.2632496, "problem": "op.qft-structural-inputs", "tokens": 250000, "outcome": "negative", "proposal": "synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free", "verdict": "SOUND WITH FIXES"}

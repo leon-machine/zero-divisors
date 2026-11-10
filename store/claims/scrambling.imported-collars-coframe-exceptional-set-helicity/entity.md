@@ -25,7 +25,7 @@ about:
 derivations:
 - name: main
   uses:
-  - hawking.helicity-lift-joints-itemised@6
+  - hawking.helicity-lift-joints-itemised@7
   - hawking.homogeneity-ordering-shift@6
   - hawking.imported-penrose-transform@3
   - interior.interior-connection-exactly@8

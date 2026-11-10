@@ -6692,7 +6692,7 @@
  },
  "hawking.helicity-lift-joints-itemised": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@2"
+   "hawking.joint-j3-s-wave-reduction@3"
   ],
   "credit": [
    [
@@ -6709,18 +6709,23 @@
     "Claude Opus 5.5",
     "restatement of Joint J3 to the narrowed premise, channel reduction assumed for spin 2 only",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of Joint J3 to the premise as narrowed again, channel reduction assumed for even-parity spin 2 only, the reduction worded per partial-wave channel",
+    7
    ]
   ],
-  "hash": "2dc7f36122b0cb6c",
+  "hash": "817cfbb0836ad9bf",
   "ledger": null,
   "parts": {
    "checks": "969842d81cbde4d8",
-   "proofs": "b47c23d88780d0e0",
+   "proofs": "b3b01267d12fbf83",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "eb85223bcb7dbbe6"
+   "statement": "b23f2f39881daf41"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "hawking.homogeneity-ordering-shift": {
   "assumes": [],
@@ -7169,18 +7174,23 @@
     "Claude Opus 5.5",
     "restatement of the premise, the channel-reduction clause narrowed to spin 2 since spins 0, 1/2 and 1 are derived",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the premise, the channel-reduction clause narrowed to even-parity spin 2, the reduction worded per partial-wave channel, and the identification recorded as not injective",
+    3
    ]
   ],
-  "hash": "6f95ef28b0759ce8",
+  "hash": "d5c84bdd03e83cdc",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "788fddfc9659d22b"
+   "statement": "8897b3ba37b9da21"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "hawking.kms-restricts-invariant-subalgebras": {
   "assumes": [],
@@ -47086,18 +47096,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the weights kappa k labelled as version 2 of premise (Q)",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "wording of the reference to Joint J3 aligned with its version 3, partial-wave channels in place of the s-wave of a field",
+    6
    ]
   ],
-  "hash": "779881c49d042ccf",
+  "hash": "f0cc6831806a3eb6",
   "ledger": null,
   "parts": {
    "checks": "ef7b4a0de5240f43",
    "proofs": "d73798a6e93130ea",
    "rest": "140c56aacffd4fed",
-   "statement": "b2454d7bb0d32fa8"
+   "statement": "68412a987c2c56e0"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.attachment-conformal-energy-is-generated-by-z": {
   "assumes": [],
@@ -47819,6 +47834,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "4eef3fe4148a0938",
+  "ledger": null,
+  "parts": {
+   "checks": "e59d2058550f1451",
+   "proofs": "d8c370ebb96eabf4",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2749c07ba17063a3"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.capacity-per-mode-independent-of-helicity": {
   "assumes": [],
   "credit": [
@@ -48194,6 +48234,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "2506c240e3e0f5b2",
+  "ledger": null,
+  "parts": {
+   "checks": "cf599bcd311fa231",
+   "proofs": "b1a95a285b5d37e6",
+   "rest": "d3b65c89b700e77b",
+   "statement": "252020c59ddbdd67"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.cold-mirror-needs-non-equilibrium-descent": {
   "assumes": [],
   "credit": [
@@ -48231,7 +48296,7 @@
  },
  "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@2"
+   "hawking.joint-j3-s-wave-reduction@3"
   ],
   "credit": [
    [
@@ -48258,22 +48323,27 @@
     "Claude Opus 5.5",
     "note on the channel-reduction step, derived for spins 0, 1/2 and 1 and assumed through J3 only for spin 2",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "note on the channel-reduction step updated, derived also for odd-parity spin 2 and assumed through J3 only for even-parity spin 2",
+    5
    ]
   ],
-  "hash": "82b7ef31e2e7cd4d",
+  "hash": "eafcf01722790fa0",
   "ledger": null,
   "parts": {
    "checks": "a1be04ca3a6a1861",
-   "proofs": "d8ae046f30fca80c",
+   "proofs": "c5a5b545af24f552",
    "rest": "5ef59c08a022541a",
-   "statement": "1deb7aa805549ffa"
+   "statement": "2fbdf61ff8cae3ed"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@2"
+   "hawking.joint-j3-s-wave-reduction@3"
   ],
   "credit": [
    [
@@ -48320,18 +48390,23 @@
     "Claude Opus 5.5",
     "note on the channel-reduction step, derived for spins 0, 1/2 and 1 and assumed through J3 only for spin 2",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "note on the channel-reduction step updated, derived also for odd-parity spin 2 and assumed through J3 only for even-parity spin 2",
+    6
    ]
   ],
-  "hash": "17fa0c98a7479a4e",
+  "hash": "3dc34f4772dbfb90",
   "ledger": null,
   "parts": {
    "checks": "700ba285a0b8c914",
-   "proofs": "ea4d51233541549d",
+   "proofs": "3908feb3edb16142",
    "rest": "5ef59c08a022541a",
-   "statement": "6963c70ede992266"
+   "statement": "943bfc309e62ef97"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.collar-isotropy-selects-t-boost": {
   "assumes": [],
@@ -51138,15 +51213,45 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope sentence, the vanishing of the potentials at the horizon is a statement in the static (Killing) frame, with the nonzero coupling in Kruskal-type coordinates; reference to J3 aligned with its version 3",
+    2
    ]
   ],
-  "hash": "bb85badfeda62d29",
+  "hash": "523499400ddd46b1",
   "ledger": null,
   "parts": {
    "checks": "d4b86a70c19c99be",
-   "proofs": "b59cdb4cc35eecb0",
+   "proofs": "ae64ab54f064e8b4",
    "rest": "36880587349d3e5c",
-   "statement": "6719b95dab2f056e"
+   "statement": "f79c21657b5e085f"
+  },
+  "status": "proved",
+  "version": 2
+ },
+ "synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "65d1535fd8c3f53f",
+  "ledger": null,
+  "parts": {
+   "checks": "631accaefbb6543f",
+   "proofs": "25a9d83276bd39a0",
+   "rest": "36880587349d3e5c",
+   "statement": "824f5dd9bf82b7ae"
   },
   "status": "proved",
   "version": 1
@@ -51267,6 +51372,31 @@
   },
   "status": "imported",
   "version": 3
+ },
+ "synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "a072a671f3bbe24b",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "7ca91ba268a8cbf6",
+   "statement": "4840c3b793e1356e"
+  },
+  "status": "imported",
+  "version": 1
  },
  "synthesis.imported-atlas-charged-higgs-top-decay-tau-nu-limits": {
   "assumes": [],
@@ -55308,18 +55438,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement, the K-ring hypothesis (L2) and the Steenrod-square hypothesis (L3) replaced by citations of the stored cohomology theorem, the result left conditional on the lambda-operations (L1)",
+    2
    ]
   ],
-  "hash": "b9b2fbfcd951bf17",
+  "hash": "bb4d1aaa4b904f6e",
   "ledger": null,
   "parts": {
    "checks": "64b53cec5e92350d",
-   "proofs": "1891f9bbb4560ec2",
+   "proofs": "7e1575b0abb2c045",
    "rest": "8428bc93cb263500",
-   "statement": "a177cf0d20e00054"
+   "statement": "23275b1f16d532c0"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.light-cone-koide-is-quarter-turn": {
   "assumes": [],
@@ -60688,18 +60823,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement, the lens-space hypotheses (L1) and (L3) replaced by citations of the stored cohomology theorem, the result left conditional on the spin class (L2)",
+    2
    ]
   ],
-  "hash": "28043518f87c0d4f",
+  "hash": "62f780bf9bdba9ae",
   "ledger": null,
   "parts": {
    "checks": "fc80a10dcc43c0f5",
-   "proofs": "a36cf800667de28a",
+   "proofs": "14d7493abdd0314e",
    "rest": "8428bc93cb263500",
-   "statement": "dfeaa5a35baa951b"
+   "statement": "4668edf8c77b9378"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.two-species-floor-pairing-has-a-gapped-doublet-pair-mode-that-closes-where-it-condenses": {
   "assumes": [],

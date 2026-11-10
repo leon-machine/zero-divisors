@@ -1,0 +1,20 @@
+functions:
+  check_odd_parity_linearised_ricci:
+    kind: exact
+    clauses: ["(1) the grid: for each of the twelve basis jets of (h0, h1), each of the two basis data of (S, S'), three polar angles with distinct cotangents and L = 7/2, 6, every component of the first-order Ricci vectors equals the closed form as an identity of rational functions of sqrt f (144 cases, 84 nonzero components)", "(1) controls: two rational points with generic jets and L = 6, 12, 7/2; identity in tan(theta/2) at two radii; a doubled prefactor fails", "(1) the background is torsion-free and vacuum", "(1) symmetry of the first-order Ricci tensor"]
+    omits: "the degree bound in cot(theta) and the homogeneity in M, which turn the grid into the general identity, are the proof's (the bound is argued)"
+  check_regge_wheeler_reduction:
+    kind: sampled
+    clauses: ["(2) the Regge-Wheeler operator on Q = f h1 / r equals (f/r)(E_r + d_r(f E_theta) - 2 f E_theta / r) for generic jets", "(2) d_t E_t = -f d_r E_r - 2 f E_r / r - (L - 2) f E_theta / r^2", "(2) a potential differing by f/r^2 fails", "(2) reconstruction: h1 = r Q / f, d_t h0 = f d_r(r Q) gives E_theta = 0 and E_r = (r/f) RW[Q]"]
+    omits: "the identities are proved in general in the proof; the check runs them on jets at two points"
+  check_superpotential_and_intertwiner:
+    kind: exact
+    clauses: ["(4) W^2 - d_{r*}W - c^2 = V_o and W^2 + d_{r*}W - c^2 = V_e as rational functions of r, for M = 1, 9/8, 2/3 and L = 6, 12, 20, 7/2", "(4) W = c at the horizon", "(4) (D + W)(d_t^2 - D^2 + V_o) = (d_t^2 - D^2 + V_e)(D + W) on a generic jet", "(4) (D - W)(D + W) = -(-D^2 + V_o + c^2)"]
+  check_even_parity_zerilli_in_span:
+    kind: sampled
+    clauses: ["(3) the Zerilli expression of the Zerilli-Moncrief function lies in the span of the first-order Ricci components and their first t- and r-derivatives (rank 18 either way), at two points with L = 6 and L = 7/2", "(3) with lambda + 1 in the potential the rank rises to 19"]
+    omits: "the coefficients of the combination are not exhibited; the converse reconstruction is the cited fact (C3)"
+  check_horizon_values:
+    kind: exact
+    clauses: ["(5) f(2M) = 0 and f'(2M) = 2 kappa", "(5) V_o/f = (L - 3)/(4 M^2) and V_e/f = (4 lambda^2 + 4 lambda + 3)/(4 M^2 (2 lambda + 3)) at r = 2M, positive, for L = 6, 12, 20, 30"]
+    omits: "f = C e^{2 kappa r*} is taken from the premise's clause (4)"
