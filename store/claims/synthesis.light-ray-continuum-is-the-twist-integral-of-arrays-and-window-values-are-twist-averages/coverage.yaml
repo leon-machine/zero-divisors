@@ -1,0 +1,17 @@
+functions:
+  check_frequencies_split_into_twisted_ladders:
+    kind: sampled
+    clauses: ["(i): every frequency is k + delta uniquely", "(iii): the ladder of A(1/2, M r) is the union of the ladders of A((2j+1)/(2M), r)", "(i), (iii): the one-window phase on twists j/4 as powers of J"]
+    omits: "seven rational frequencies; the set identity on finite ranges for M = 1, 2, 3, 5 and r = 1, 3/2, exact; J^2 = -1, J^3 = -J, (J^3)^2 = -1, J^4 = 1 in Cl(1,3) through GA.py for the twists 1/2, 3/4, and 0; unitarity of U and the absence of eigenvectors are the proof's"
+  check_long_window_is_a_product_of_twisted_arrays:
+    kind: sampled
+    clauses: ["(iii): S, e, v of A(1/2, 2) are twice those of A(1/4, 1)", "(iii): those of A(1/2, 3) are those of A(1/2, 1) plus twice those of A(1/6, 1)", "(v): S_{1/4}(1), S_{1/6}(1)"]
+    omits: "M = 2 and M = 3 at r = 1, each quantity to 10^-30 by rational interval arithmetic computed independently on the two sides; the statement for every M, delta and r is the proof's (a bijection of modes)"
+  check_twist_averages_reach_the_continuum_values:
+    kind: sampled
+    clauses: ["(iv): M-point twist averages of the entropy at r = 1 for M = 1, 2, 4, 8", "(iv): energy and variance averages at M = 8", "(iii), (iv): sum of B_2 over the twists is B_2(1/2)/M; integral of B_2 is 0"]
+    omits: "the averages are computed as S_{1/2}(M)/M; the integral identity (Tonelli) and the values pi r/6, pi r/12 of the density integrals are the proof's (the stored base comparison and a Riemann-sum bound for the energy); the B_2 identity is exact for M = 1, 2, 3, 4, 8 at twist 1/2 and at three other (M, twist) pairs"
+  check_entropy_across_the_twist_circle:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "certified intervals for S at the twists 0, 6/25, 1/4, 1/2 and for pi/6; that S is extremal at the twists 1/2 and 0 over the whole circle is not checked and not claimed; the crossing point is only bracketed"

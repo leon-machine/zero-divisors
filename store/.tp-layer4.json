@@ -41912,6 +41912,55 @@
 }
 ]
 },
+"synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
+"failed": false,
+"findings": [],
+"key": "5dd48c268fd7f2cc",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_frequencies_split_into_twisted_ladders",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state-continuum",
+"synthesis.positive-null-energy-gives-r-premises"
+]
+},
+{
+"derivation": null,
+"func": "check_long_window_is_a_product_of_twisted_arrays",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.boundary-mode-thermal-entropy",
+"synthesis.half-integer-weight-array-carries-half-ln2"
+]
+},
+{
+"derivation": null,
+"func": "check_twist_averages_reach_the_continuum_values",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r",
+"synthesis.null-ordering-of-counted-units-is-zeta-symmetric"
+]
+},
+{
+"derivation": null,
+"func": "check_entropy_across_the_twist_circle",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.half-integer-weight-array-carries-half-ln2",
+"synthesis.q-splits-maximum-entropy-affine-weights",
+"synthesis.residue-from-mode-entropy"
+]
+}
+]
+},
 "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
 "failed": false,
 "findings": [],

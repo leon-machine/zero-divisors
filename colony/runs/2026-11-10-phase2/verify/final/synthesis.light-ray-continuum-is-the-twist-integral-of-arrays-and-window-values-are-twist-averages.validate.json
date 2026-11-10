@@ -11,14 +11,14 @@
    "code": "I213",
    "severity": "info",
    "entity": "synthesis.q-splits-maximum-entropy-affine-weights",
-   "message": "only 23% of its 13 logical neighbours share its subject; most are in 'entropy'",
+   "message": "only 21% of its 14 logical neighbours share its subject; most are in 'entropy'",
    "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
   },
   {
    "code": "I305",
    "severity": "info",
    "entity": "store",
-   "message": "this change touches 2 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "message": "this change touches 3 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
    "fix": ""
   }
  ],
