@@ -1,0 +1,26 @@
+functions:
+  check_ground_test_is_a_conic:
+    kind: exact
+    clauses:
+    - (i)
+    omits: the polynomial identity on a 4 x 3 rational grid exceeding its degrees; the three points and their mirrors;
+      the zeta-regularised sea energy itself is the cited stored clause, not recomputed
+  check_thermal_test_holds_at_three_points:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: rigorous rational enclosures of width below 10^-12 at the three points and five controls (fourteen terms per
+      tower plus a tail bound); exact equality rests on the eta-quotient argument of the proof
+  check_entropies_at_the_three_points:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: rigorous rational enclosures of the entropy sums; the continuum rate pi/6 enters only as the bound
+      pi/6 > 0.5235
+  check_parity_clause_leaves_the_half_array_and_its_two_halves:
+    kind: partial
+    clauses:
+    - (iv)
+    omits: the Pell form and its solutions for m up to 400; the failure bound at the solutions m = 7, 26, 97, 362 and
+      its monotonicity step (the proof covers all m >= 7); a direct enclosure at m = 7
+untouched_premises: {}

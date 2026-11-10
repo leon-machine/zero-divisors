@@ -171,7 +171,7 @@ def check_entropies_at_the_three_points():
 
 
 def check_parity_clause_leaves_the_half_array_and_its_two_halves():
-    premise("singularity.q-joint-quasi-freeness-s-wave")
+    premise("synthesis.null-ordering-of-counted-units-is-zeta-symmetric")   # the ground test (sea energy, window value)
     # parity clause: 2 pi (k + delta)/r an odd multiple of pi for every k: 1/r = m an integer, delta = (j + 1/2)/m
     sols = []
     for m in range(1, 401):

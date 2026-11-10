@@ -1,0 +1,14 @@
+functions:
+  check_eighteen_atoms_in_nine_contexts_admit_no_two_valued_weight:
+    kind: complete
+    clauses: ["(i)"]
+    omits: "all 18 atoms, all 9 contexts, all 2^18 assignments"
+  check_square_of_nine_blades_has_no_multiplicative_sign_assignment:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "the nine blades, the six commuting triples and their products"
+  check_even_subalgebra_of_two_modes_has_a_two_valued_weight:
+    kind: partial
+    clauses: ["(iii)"]
+    omits: "the dimension of the corner and its basis are complete; the classification of the self-adjoint idempotents of the corner and the additivity of the weight are the proof's, sampled on five pairs of opposite points"
+untouched_premises: {}

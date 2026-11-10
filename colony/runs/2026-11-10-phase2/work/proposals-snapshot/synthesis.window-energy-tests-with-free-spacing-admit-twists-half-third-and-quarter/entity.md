@@ -25,7 +25,6 @@ derivations:
   - synthesis.counted-unit-energy-at-half-offset@3
   - synthesis.half-integer-weight-array-carries-half-ln2@5
   - synthesis.imported-theta-function-identities@2
-  - singularity.q-joint-quasi-freeness-s-wave@3
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -53,9 +52,9 @@ extraction:
     kappa and twist one half. It is not dead: two further arrays pass both tests. The result does not contradict
     the stored uniqueness of the half offset, which is stated at spacing kappa; it says which clause of (Q) does the
     selecting. The window reading is not assumed: the two tests are stated as equalities of numbers, as clauses
-    (i) to (iii) of the null-ordering result are. (Q) is cited for the wording of its parity and particle-hole
-    clauses only, which enter as stated hypotheses of clause (iv); whether that citation should be an assumes edge
-    is a maintainer decision. Intended citation for the comparison at twist one half as a function of the window
+    (i) to (iii) of the null-ordering result are. (Q) is named for the wording of its parity and particle-hole
+    clauses only, which enter clause (iv) as explicitly stated hypotheses; no edge to (Q) is declared, and whether
+    an assumes edge should be added is a maintainer decision. Intended citation for the comparison at twist one half as a function of the window
     length (closed forms on the square torus, the entropy difference from the continuum at each window length):
     the base statement filed in the same run by the constructive side, not re-proved here. Exhaustiveness of the
     three points without the parity clause is computed (a floating scan along the conic), not proved, and is
