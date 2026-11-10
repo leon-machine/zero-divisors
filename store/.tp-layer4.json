@@ -34167,6 +34167,57 @@
 }
 ]
 },
+"synthesis.composition-cycles-counting-needs-addition": {
+"failed": false,
+"findings": [],
+"key": "eedfeabd7039a463",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_the_bit_counts_modulo_two",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_every_signed_configuration_has_order_dividing_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_powers_of_a_direction_cycle",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_sums_of_the_unit_are_an_injective_copy_of_the_integers",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_no_product_of_signed_configurations_counts",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+}
+]
+},
 "synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd": {
 "failed": false,
 "findings": [],
@@ -48235,6 +48286,64 @@
 "synthesis.de-sitter-entropy-pi-n-squared",
 "synthesis.slot-module-light-ray-arrays-are-weyl-components"
 ]
+}
+]
+},
+"synthesis.the-sign-is-the-rotor-at-infinity": {
+"failed": false,
+"findings": [],
+"key": "0c506dc7807ef3f9",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_rational_rotors_are_rotors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals"
+]
+},
+{
+"derivation": null,
+"func": "check_composition_is_tangent_addition_with_infinity",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals"
+]
+},
+{
+"derivation": null,
+"func": "check_bijection_onto_the_rational_rotor_circle",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals"
+]
+},
+{
+"derivation": null,
+"func": "check_the_full_turn_is_the_sign_and_fixes_vectors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.division-gives-the-rationals"
+]
+},
+{
+"derivation": null,
+"func": "check_speed_and_half_circle",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_length_brackets_pi",
+"ok": true,
+"quantities": [],
+"touched": []
 }
 ]
 },
