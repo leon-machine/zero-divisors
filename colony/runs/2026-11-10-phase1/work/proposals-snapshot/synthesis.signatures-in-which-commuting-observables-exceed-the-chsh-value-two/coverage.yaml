@@ -1,0 +1,17 @@
+functions:
+  check_dagger_is_blade_inverse_and_the_chsh_square_identity:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "the blade inverse on every blade of four signatures of four directions, the positive form and the anti-automorphism on one sample, and the identity on one configuration of observables that are not blades in signature (3,1); the identity for every configuration is the proof's (a two-line expansion)"
+  check_excluded_signatures_have_only_an_anticommuting_frame_of_observables:
+    kind: complete
+    clauses: ["(ii)"]
+    omits: "nothing of the enumeration: for each of the fourteen signatures the self-adjoint blades, the central pseudoscalar, the anticommuting frame, its size and the independence of the pairwise products; the passage from the frame to all observables and configurations is the proof's, with one sample of it in signature (4,0)"
+  check_remaining_signatures_carry_blades_with_chsh_square_four_plus_four_k:
+    kind: partial
+    clauses: ["(iii)"]
+    omits: "the thirteen signatures of four to six directions: the listed blades, the square, K, the cube, the values of the functionals at three rational r, positivity on nine sample elements each, and one element of negative value at r = 3/8; seven or more directions by restriction to six generators, and positivity for all elements, are the proof's"
+  check_excluded_list_is_matrix_size_at_most_two_in_the_classification:
+    kind: complete
+    clauses: ["(iv)"]
+    omits: "the matrix size from the stored table for all signatures of one to eight directions against the list; nine or more directions by the dimension count in the proof"
