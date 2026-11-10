@@ -18,3 +18,13 @@ Second round (10 November, while the referees read).
 5. Dark-matter ratio: register both unregistered conditions of the closed form as postulate entities (the
    single-ideal clause; the population of the odd towers, with the statement that it is inferred from the number it
    helps fit).
+
+Third round (10 November).
+
+6. The imported massless-graviton production rate and its dependants (31 entities, pred.no-dark-radiation,
+   pred.no-indirect-dark-signals, the dimmed-burst baseline): flag now, derive later. Mark the Fact and its dependants
+   as resting on a process the series does not hold, and open a problem: derive the rate as radiation of the classical
+   gauge field sourced by matter, or show it vanishes. No prediction is changed in this run.
+7. State the series' position on the graviton once, in store/conventions.md: gravity is the classical gauge field of
+   Gauge Theory Gravity; "graviton" in stored text names a helicity-2 channel or prior art, not a quantum of the
+   field. Draft for Leon's wording.
