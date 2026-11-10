@@ -25,3 +25,18 @@ Things the orchestrator's gate may flag:
 
 Maintainer note passed on from R3 (outside the proposal): the window reading's "What it is for (i)" and refutation
 condition (b) should carry "at spacing kappa" if this result is accepted.
+
+## Step 2 (sibling citations, after the two window results were stored at version 1)
+- `uses` gains synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r@1 and
+  synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages@1; both are
+  cited by claimref in formal (ii), (iii) and in the proof, and touched by premise() in
+  check_thermal_test_holds_at_three_points.
+- Removed as duplicated: the proof's own derivation at twist 1/2 (theta_3/eta under tau -> -1/tau), now base (ii);
+  the derivation at twist 1/4 (the square relation Phi_{1/4}^2 = theta_3/eta at tau/2) and the sentence giving the
+  half-arrays' weights, now twist-integral (iii); the two corresponding formulas in formal (ii). The entropy
+  (1/4) ln 2 at twist 1/4 is cited from twist-integral (iii).
+- Kept as this result's own: the conic, the twist 1/3 eta-quotient argument and its lemma, the entropy bounds at
+  twist 1/3, the Pell argument, the two remarks. The check's numerical enclosures at twists 1/2 and 1/4 are kept as
+  consistency checks of the cited values.
+- Extraction note: the "intended citation" sentences replaced by the two citations.
+runcheck: 5/5 pass. check4: pending (orchestrator). validate: pending (orchestrator).

@@ -1,6 +1,0 @@
-I405  synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent
-      std-algebra.existence-uniqueness is declared and untouched, as expected: coverage.yaml: cited in (iii) for the universal property; nothing to compute
-I405  synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent
-      tower.answers-iteration-question is declared and untouched, as expected: coverage.yaml: cited in (iii) for one rung per wall; nothing to compute
-
-synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent: 0 error(s), 2 other finding(s); check result: pass
