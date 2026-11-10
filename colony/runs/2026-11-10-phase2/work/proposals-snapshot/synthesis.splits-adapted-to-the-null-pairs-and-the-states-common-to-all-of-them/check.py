@@ -233,4 +233,7 @@ def check_pair_state_depends_on_the_split_and_common_states_stay_at_two():
     for kv in ker:
         om = lambda y: sum(kv[i] * y.get(b, F(0)) for i, b in enumerate(blades))
         assert om(u) == 0 and om(e[0]) == 0 and om(twist) == 0 and om(prod(sq, e[0], p[1])) == 0
-        assert om(prod(sq, e[0], twist)) == 0 and om(prod(sq, p[0], p[1])) == om(gamma)
+        b1 = lin((F(3, 5), twist), (F(4, 5), p[1]))
+        b2 = lin((F(4, 5), twist), (F(-3, 5), p[1]))
+        chsh = clean(GA.add(prod(sq, e[0], b1), prod(sq, e[0], b2), prod(sq, p[0], b1), GA.neg(prod(sq, p[0], b2))))
+        assert om(prod(sq, e[0], twist)) == 0 and om(chsh) == F(7, 5) * om(gamma)
