@@ -10,7 +10,7 @@ functions:
   check_sakharov_coefficient_has_zeros_at_every_generation_number:
     kind: exact
     clauses: ["(iv)"]
-    omits: "the stored values 0, 8, -12 and the stored form at three generations; the zeros in xi_R at alpha = 1 and in alpha at xi_R = 1/6 for n_g = 1..5; fifteen components for n_g < 200; the helicity rule with and without the graviton's states; the quartic balance; the weights themselves are the cited results, not recomputed"
+    omits: "the stored values 0, 8, -12 and the stored form at three generations; the zeros in xi_R at alpha = 1 and in alpha at xi_R = 1/6 for n_g = 1..5 (the latter as arithmetic: positive for n_g <= 3, equal to one at n_g = 3 only); 16 n_g - 40 at alpha = 1, xi_R = 0 for n_g < 200; that clause (K1) fixes alpha = 1 is the premise's, not computed; fifteen components for n_g < 200; the helicity rule with and without the graviton's states; the quartic balance; the weights themselves are the cited results, not recomputed"
   check_the_pin_is_recurrence_with_asymptotic_freedom_and_the_tally_of_rules:
     kind: exact
     clauses: ["(v)"]

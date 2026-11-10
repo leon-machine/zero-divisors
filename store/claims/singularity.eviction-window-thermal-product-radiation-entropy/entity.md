@@ -43,6 +43,10 @@ locators:
   label: thm:eviction
   line: 2263
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Wording only, version kept (decision 13 of 9 November 2026): the technical level now says how the tensor product of clause (1) is read on the modes. The pairs are even states of fermionic modes, and for even states the tensor product of the marginals is the product, in the Clifford algebra of the modes, of commuting even elements, with no twist (synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product, clause (v), which reads the pairs of this theorem as its pair states and finds all four clauses unchanged). The formal statement, the proofs and the check are untouched.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -91,6 +95,8 @@ S_R(t) \;=\; S_L(t) \;=\; \sum_{k \in W(t)} h_k \qquad \text{exactly.}
 Under the rate-model inputs (L), (U), (C), (I) and (L$_E$), with number-diagonal window dynamics, free radiation quanta that never return, and the no-attic property, let $W(t)$ be the set of pairs whose window half is still in the window and $C(t) = |W(t)|\ln 2$. Then the window state is the product of its members' thermal marginals, and $S_R(t) = S_L(t) = \sum_{k \in W(t)} h_k$ exactly.
 
 Consequently $S_R \leq \min(\Sth, C)$ with $S_R = 0$ at complete evaporation; $S_R = \Sth$ exactly before any eviction; and $S_R = C - \sum_{k \in W(t)}(\ln 2 - h_k)$, with $S_R = C$ exactly when every window member is maximally entangled.
+
+The tensor product of clause (1) is read on the modes as follows. The pairs are even states of fermionic modes, and for even states the tensor product of the marginals is the product, in the Clifford algebra of the modes, of commuting even elements: the window state is $\prod_{k \in W(t)}\tfrac12(1 + r_{k}p_{k})$, $p_{k}$ the parity of mode $k$ and $r_{k} = c_{k}^{2} - s_{k}^{2}$, with no twist, and the radiation has the same nonzero spectrum (Theorem \claimref{synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product}(iv), (v)). The four clauses hold unchanged in that reading.
 
 ## lay
 In the framework's rate model, on its stated postulates (two sectors, global purity, a fixed window capacity, fresh thermal injection and boundary-mode locality), with internal dynamics that only changes phases and emitted quanta that never return, a black hole emits quanta that are each entangled with a partner mode kept inside, and partners are later pushed out as the hole shrinks. This result shows the inside state is always a simple product of thermal pieces, so the radiation's entropy is just the sum of the entropies of the partners still inside. That gives a rising branch, a ceiling set by the shrinking capacity, and zero entropy at the end.

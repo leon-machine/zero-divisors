@@ -42,6 +42,10 @@ locators:
   label: thm:pagecurve
   line: 2225
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Wording only, version kept (decision 13 of 9 November 2026): the technical level now says how the product of radiation and partner-mode space is read on the modes. For the even states used, the tensor product of marginals is the product of commuting even elements of the Clifford algebra of the modes, and a typical even state is drawn from a parity sector, on which the mean entropy differs from Page''s value only below the order this Fact states (synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product, clauses (iv), (v), (vii)). The formal statement, the proof and the check are untouched.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -111,6 +115,8 @@ up to subleading corrections: rising along Hawking's curve, turning over at the 
 Assume the ascended description is globally pure, that at each stage the joint state on radiation and partner modes is Page-typical, and the inputs of the eviction theorem. With $\Sth(t)$ the thermal accumulation of the emitted radiation and $C(t) = N_{\mathrm{6a}}(M(t))\ln 2 \approx \SBH(M(t))$ the boundary-mode capacity, the radiation entropy is $S_{\mathrm{rad}}(t) = \min(\Sth(t), C(t))$ up to subleading corrections.
 
 The capacity arm is the Schmidt bound for a pure bipartite state, the thermal arm comes from the eviction theorem and needs boundary-mode locality, and saturation for typical states is imported from Page's theorem on the average entropy of a subsystem.
+
+On the modes, the product of radiation and partner-mode space is the mode split of the Clifford algebra. For the even states used, the tensor product of marginals is the product of commuting even elements, the Schmidt statement (equal nonzero spectra of the two sides) holds for every pure even state, and a typical even state is drawn from a parity sector, not from an abstract tensor product; there the mean entropy exceeds Page's value by a rational amount of order $1/(mn)$, below the order at which this statement is made (Theorem \claimref{synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product}(iv), (v), (vii)). The statement is unchanged.
 
 ## lay
 The Page curve describes how the entropy of a black hole's radiation should behave if no information is lost: it rises, turns over at about half the initial entropy, and falls back to zero. This entry assembles that curve in the framework, up to small corrections, using the count of modes at the singularity as the black hole's capacity. It assumes that the full description stays pure, that the joint state of radiation and partner modes is typical in Page's sense, and that the inputs of the eviction theorem hold. The key step, that typical states reach the largest allowed entropy, is taken from Page's result rather than proved here.

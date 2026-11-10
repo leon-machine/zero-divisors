@@ -809,7 +809,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The field-theory results of 16 October (second quantisation with i = I4, the elementary photon, tree-level exchange) and the review of what a quantum field theory still needs, 1 November; the one-loop, regulator and unit results and Leon's decisions (the Krein-form premise, the unit's placement on massive lines), 1 November; the two-loop, LSZ, regulator-free, triangle-anomaly and chiral-loop results and Leon's decisions (the extension, dimensional-regularisation and anomaly imports, the floor no-go merged into the floor-regulator result, the chiral-loop convention), 2 November"
+  source: "The field-theory results of 16 October (second quantisation with i = I4, the elementary photon, tree-level exchange) and the review of what a quantum field theory still needs, 1 November; the one-loop, regulator and unit results and Leon's decisions (the Krein-form premise, the unit's placement on massive lines), 1 November; the two-loop, LSZ, regulator-free, triangle-anomaly and chiral-loop results and Leon's decisions (the extension, dimensional-regularisation and anomaly imports, the floor no-go merged into the floor-regulator result, the chiral-loop convention), 2 November; the curved-field kernel result accepted 10 November, with the scaling-degree rules and local covariance with scaling imported by Leon's decision of 9 November"
   statement: >-
     The series has free fermion and photon fields with $i = I_{4}$
     (\claimref{field-theory.second-quantisation},
@@ -897,18 +897,48 @@
     of Clifford conjugation, minus the metric: restated in the store, not
     derived
     (\claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}).
+
+    (10 November.) Attack item 3, the curved-field clause: first steps
+    (\claimref{synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four}).
+    Scope: one loop, the trace form of the Dirac Hadamard parametrix on a torsion-free gravitational field, in
+    the normal coordinates of one point with the other index transported along the geodesic. The transport
+    rotors cancel exactly from the leading kernel, which is the flat one in the tangent $D\sigma$ times the Van
+    Vleck determinant (proved). At first order $D_{x}U = +\tfrac{1}{12}\mathcal{R}(\xi)R$, with
+    $\mathcal{R}(\xi)$ the Ricci vector, which is zero on a vacuum field whatever the Weyl part (proved given
+    the stored Taylor data and the protraction identity). The Weyl part of the curvature operator enters from
+    degree three down, and squared at degree two through the Van Vleck determinant. Argued, not proved: the
+    degree counting (degree six with the flat leading part, nothing at five, mass and Ricci terms at four) and
+    the extension count (degree of divergence $2$, the flat value), on the scaling-degree rules that are now
+    clause (vi) of the imported extension Fact
+    (\claimref{synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products},
+    version 2). For each fixed point the freedom is $15$ local terms per index pair, with coefficients that are
+    functions of the point unless local covariance with scaling is used; that principle is now an imported Fact
+    (\claimref{synthesis.imported-local-covariance-with-scaling-of-time-ordered-products}, Hollands and Wald,
+    cited from memory and sourced for a scalar field), by Leon's decision of 9 November. What remains of the
+    clause: the Ward identity (transversality) on the curved field; the reduction of the freedom to the constant
+    $Z_{3}$ using the new Fact; the first Hadamard transport equation and the protraction identity, which stay
+    stated hypotheses (the identity is stored under no name and is to be derived in the algebra core from
+    vanishing torsion); and a state's current two-point function in place of the parametrix trace. Clause (v) of
+    the stored vacuum-polarisation result stays argued.
   attack:
     - "Extension of distributions beyond one loop: the two-loop vacuum polarisation by extension, whose sharp test is beta1 = 4 (scheme independent for one coupling), and the one-loop self-energy and vertex by extension, after which the Pauli-Villars clause of the Krein premise could be retired."
     - "Existence of Ward-preserving extensions inside the store: prove, for the self-energy and vertex, the four-photon and the three-current kernels, that a covariant extension obeying the Ward identities exists (now imported from the causal approach), using the computed difference spaces."
-    - "The native regulator: the floors are excluded for every weighting; test the lattice of the descent, or record extension of distributions (which needs no regulator) as the series' scheme, and carry its curved-field clause (argued: the Hadamard scaling degree gives the flat counting) to a proof."
+    - "The native regulator: the floors are excluded for every weighting; test the lattice of the descent, or record extension of distributions (which needs no regulator) as the series' scheme, and carry its curved-field clause (argued: the Hadamard scaling degree gives the flat counting) to a proof. Started 10 November on the leading parametrix trace of a torsion-free field (the rotors cancel exactly; the first order is Ricci only; the degree and extension counts are argued). What remains: the Ward identity on the curved field, the reduction of the 15 local terms per index pair to a constant using the imported local covariance with scaling, the first Hadamard transport equation, and a state's kernel in place of the parametrix."
     - "Chiral loops beyond the abelian factor: the non-abelian BMHV counterterms and the fermion self-energy and vertex counterterms with the right unit; the full one-loop e+e- cross section (vertex, box and soft-photon emission)."
     - "Whether the Krein-form premise can be derived or avoided: its one-particle form is restated as the trace form of Clifford conjugation; the content left is that the unphysical modes are quantised with the indefinite form."
+    - >-
+      Derive the protraction identity of the curvature operator, $\partial_{a}\wedge\mathcal{R}(a\wedge b) = 0$,
+      in the algebra core from vanishing torsion (the first Bianchi identity of a torsion-free field). It is a
+      stated hypothesis of the curved-field kernel result
+      (\claimref{synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four})
+      and is stored under no name; the nearest stored text names it as a condition defining the Weyl maps and
+      does not derive it.
   success: >-
     Renormalisation at two loops in a scheme native to the series (extension
     of distributions or a covariant regulator built from its objects), with the
     existence of Ward-preserving extensions proved in the store, or a no-go
     naming the missing input.
-  entities: [synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants, synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient, synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity, synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms, synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation, synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.one-loop-qed-in-the-spacetime-algebra]
+  entities: [synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants, synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient, synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity, synthesis.chiral-abelian-loops-with-i4-as-the-bmhv-gamma5-need-finite-symmetry-restoring-counterterms, synthesis.triangle-anomaly-in-the-spacetime-algebra-is-the-pseudoscalar-part-of-the-field-square-and-cancels-per-generation, synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off, synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, synthesis.one-loop-qed-in-the-spacetime-algebra, synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four, synthesis.imported-local-covariance-with-scaling-of-time-ordered-products]
   added: 2026-11-01
 
 - id: op.qft-non-abelian-gauge-fields
@@ -1407,7 +1437,7 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November; the 9 November results and Leon's decisions; the capacity and induced-gravity result and Leon's decisions of 9 November (second pass)"
+  source: "The premise ledger and the review of what a quantum field theory still needs, 1 November; the locality, modular-period and faces results and Leon's decisions on spin and statistics, the doublet count and the face identification, 1 November; the causal spin-statistics, wedge-reflection, generation-number and doublet-count results and Leon's decisions of 2 November; the 9 November results and Leon's decisions; the capacity and induced-gravity result and Leon's decisions of 9 November (second pass); the mass-term and order-four results accepted 10 November and Leon's decision of 9 November on the gauge parameter"
   statement: >-
     The field theory takes three generations, one Higgs doublet and
     spin-statistics (imported via the Jost point,
@@ -1506,6 +1536,21 @@
     so the capacity inequality is a reading and not a consequence of J3, and $n_{g}$ stays free. The one
     conjunction of the candidate rules that gives three is the recurrence test in the currents reading with
     asymptotic freedom of weak isospin, neither of which is a premise.
+
+    (10 November.) Three further items. The number-current lead is closed: on four tower modes every mass term,
+    Dirac or Majorana, is a pair term that commutes with the grading, and the one-window and two-window tests
+    use only the count of arrays and the grading, so the verdict $3 \mid n_{g}$ is unchanged by Majorana terms
+    (argued, from the stored statement of the test)
+    (\claimref{synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac}).
+    The order-four element with one odd charge on all sixteen components is the pseudoscalar of the ten Majorana
+    generators, the classical generator of the centre of $\Spin(10)$; the Majorana element breaks it to the
+    grading, and no condition on the content is derived from it
+    (\claimref{synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element}; see
+    op.order-four-anomaly-and-sixteen). Under clause (K1) of the Krein premise the gauge parameter is one
+    (Leon's decision of 9 November), so the zeros of the induced quadratic coefficient obtained by moving the
+    gauge parameter are not admissible; the conclusion that the induced-gravity lead leaves $n_{g}$ free is
+    unchanged, the zero still moving with the scalars' curvature coupling and with the graviton
+    (\claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}, version 2).
   attack:
     - >-
       Three generations: the number is free under the slot-module premise; find a premise or dynamics of the series
@@ -1517,12 +1562,14 @@
       (\claimref{synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays}). The capacity
       and induced-gravity leads are closed negatively (9 November, second pass,
       \claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}).
+      The number-current lead is closed as well (10 November): the verdict of
+      the recurrence test is unchanged by Majorana terms (argued).
     - "Spin and statistics beyond perturbation theory: derive Kuckert's modular P1CT symmetry (the modular conjugations of the wedge algebras acting on the local algebras as the wedge reflections) from a premise the series holds, or record it as one; the charged sectors localised in hypercones."
     - "The doublet count: decide whether the null-lift constraint is a hard constraint and the Higgs exactly the rung unit; on the branch with a level, whether the second doublet is needed at all, and whether a light multi-species composite would change n_h."
   success: >-
     A derivation of one structural input in the field theory, or an
     independence proof.
-  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content, synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free]
+  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content, synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free, synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac, synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element]
   added: 2026-11-01
 
 - id: op.curvature-coupling-across-subjects
@@ -1530,19 +1577,18 @@
   area: quantum-fields
   kind: research
   difficulty: substantial
-  status: open
-  source: "The capacity and induced-gravity result and the cross-subject review of 9 November; Leon's decision of 9 November to register the question"
+  status: reformulated
+  source: "The capacity and induced-gravity result and the cross-subject review of 9 November; Leon's decision of 9 November to register the question; the curvature-coupling result accepted 10 November and Leon's decisions of 9 November (the gauge parameter fixed at one by clause K1 of the Krein premise; the tree-level value 0 as the stored reading for the rung doublets)"
   statement: >-
-    The curvature coupling $\xi_{R}$ of a scalar field enters three stored
-    results in three subjects and is fixed by none: the induced quadratic
-    (Sakharov) coefficient, $B = 16n_{g} - 48 + N_{S}(1 - 6\xi_{R})$ minimal-scalar
-    units for twelve vectors in the Feynman gauge, $N_{S}$ real scalar
-    components and $n_{g}$ generations; the fit of the primordial tilt on a
-    Kasner approach, which needs $\xi_{R}$ in a narrow window near $1.5$; and
-    the doublets of the rung field, whose coupling is recorded as an open
-    datum. Decide whether these are one value of one field's coupling or the
-    couplings of three different fields, and in the first case whether any
-    value serves all three uses.
+    The curvature coupling $\xi_{R}$ of a scalar field enters three stored results in three subjects: the
+    induced quadratic (Sakharov) coefficient, $B = 16n_{g} - 48 + N_{S}(1 - 6\xi_{R})$ minimal-scalar units for
+    twelve vectors in the Feynman gauge, $N_{S}$ real scalar components and $n_{g}$ generations; the fit of the
+    primordial tilt on a Kasner approach, which needs $\xi_{R}$ in a narrow window near $1.5$; and the doublets
+    of the rung field. Restated 10 November: these are three objects and not one datum. The attachment's
+    helicity-zero module has $\xi_{R} = \tfrac16$, forced by its spectrum; the rung field's doublets have the
+    tree-level value $\xi_{R} = 0$, the stored reading; the scalar of the tilt fit is no stored field. What
+    remains: identify the scalar of the tilt fit among the series' fields, or show that no stored field can be
+    it; and the doublets' coupling beyond tree level.
   why: >-
     Each use, read alone, treats $\xi_{R}$ as free. If it is one datum, the
     uses constrain each other and at least one of the stored readings (the
@@ -1579,26 +1625,51 @@
     seven and eight generations, at no integer. No stored result identifies
     the scalar of the tilt fit with the rung field, and none derives
     $\xi_{R}$ for the rung field.
+
+    (10 November.) The three appearances are three objects
+    (\claimref{synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt}). The
+    attachment's helicity-zero module has $\xi_{R} = \tfrac16$ forced by its spectrum on the three-sphere
+    (classical; proved given the two stored spectra), so the cancellation at three generations is a property of
+    the attachment modules and not of the content. The rung field's doublets have $\xi_{R} = 0$ at tree level,
+    and by Leon's decision of 9 November that is the stored reading of their coupling, so on the content $B = 8$
+    at gauge parameter one (now stated in
+    \claimref{synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations},
+    version 4). The scalar of the tilt fit is no stored field. The gauge parameter is one: by Leon's decision it
+    is fixed by clause (K1) of the Krein premise for every statement about $B$
+    (\claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}), and the zeros of $B$ in
+    the gauge parameter are not admissible
+    (\claimref{synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free}, version 2). At gauge
+    parameter one no single coupling of the doublets gives the Sakharov zero and the measured tilt: a vanishing
+    coefficient with $n_{h}$ doublets gives the index $3 - \sqrt{1 + 4(n_{g} - 3)/n_{h}}$, which meets the
+    three-sigma window at no integer $n_{g}$ for $n_{h} \le 13$, and over the tilt window the coefficient is
+    negative, which excludes the matching to Newton's constant. Outside the premise, with the gauge parameter
+    free under the heat-kernel cut-off, the zero and the tilt are met together at $\alpha = \tfrac13 +
+    4\xi_{R}$, between $6.42$ and $6.53$; this is recorded as the counter-statement. The two figures given above
+    as arithmetic not yet stored are confirmed on review: at three generations $B$ lies between $-66.31$ and
+    $-65.08$ over the tilt window, and the zero of $B$ sits at $7.07$ to $7.14$ generations, at no integer. That
+    the three stored statements are about different fields is a reading of their texts (argued).
   attack:
     - >-
-      Say which field each result is about: whether the curvature-coupled
-      scalar of the Kasner tilt fit can be the rung field's doublets (its
-      weights and its place before the descent), or is necessarily another
-      scalar; if another, the three uses are independent and the problem
-      reduces to the doublets' open datum.
+      Answered in part (10 November;
+      \claimref{synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt}): the three
+      uses are three objects, and at gauge parameter one the reading of them as one coupling of the doublets is
+      excluded. What remains of the item: identify the curvature-coupled scalar of the Kasner tilt fit (its
+      weights and its place before the descent) among the series' fields, or show that no stored field can be
+      it.
     - >-
-      If one field: evaluate the induced coefficient and its sign over the
-      tilt window on the stored content, in both cut-offs and with the gauge
-      parameter free, and state which of the stored readings survive.
+      Done (10 November): the induced coefficient over the tilt window on the stored content is between $-66.31$
+      and $-65.08$ at gauge parameter one; with the gauge parameter free under the heat-kernel cut-off the zero
+      and the tilt are met together at a gauge parameter between $6.42$ and $6.53$, a case outside the Krein
+      premise. The stored readings that survive: the cancellation at three generations as a property of the
+      attachment modules, and $B = 8$ on the content.
     - >-
-      Look for a series datum that fixes $\xi_{R}$ for the rung field (the
-      conformal coupling of the attachment, the tree-level value $0$ of the
-      stored actions, or its running), and for the gauge on which the
-      quadratic coefficient depends.
+      Answered in part (10 November): the conformal coupling is forced on the attachment's module only; the
+      tree-level value $0$ is the stored reading for the rung field's doublets; the gauge is fixed at parameter
+      one by clause (K1). What remains: the doublets' coupling beyond tree level and its running (the one-loop
+      form, a multiple of the departure from the conformal value, is cited from memory and not derived).
   success: >-
-    A statement, proved from stored premises, of whether the three uses
-    concern one coupling or several, with the admissible values in the first
-    case; or a derivation of $\xi_{R}$ for the rung field.
+    An identification, from stored premises, of the scalar of the tilt fit, or a proof that no stored field can
+    be it; or a derivation of the curvature coupling of the rung field's doublets beyond tree level.
   entities:
     - synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off
     - synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike
@@ -1607,6 +1678,8 @@
     - synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling
     - synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point
     - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
+    - synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt
+    - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
   added: "2026-11-09"
 
 - id: op.deposit-state-is-hadamard
@@ -1813,7 +1886,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions; the lens-space cohomology result, the imported Atiyah-Hirzebruch filtration and Leon's decisions of 9 November (second pass)"
+  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions; the lens-space cohomology result, the imported Atiyah-Hirzebruch filtration and Leon's decisions of 9 November (second pass); the lens-wall rung-count results accepted 10 November (three rungs, the definite side of the L^5(4) walls, the cup-one computation), the imported Steenrod Fact and the tameness edges, by Leon's decisions of 9 November"
   statement: >-
     The invariant of tame walls is $W(\Sigma) = (w(\Sigma), w_{1}(\mathcal
     L))$, and the number $k(\Sigma)$ of adjoined hyperbolic planes (rungs) a
@@ -1946,6 +2019,38 @@
     $k = e(\mathcal L)$ and the subbundle criterion): a line subbundle of the trivial bundle of rank $k$ is a
     $\mathbb{Z}_{2}$-equivariant map from the double cover of the wall defined by $x$ to $S^{k-1}$ with the
     antipodal action, so $k$ is one plus the least $j$ for which such a map to $S^{j}$ exists.
+
+    (10 November.) Three rungs fail on every side of the quarter-turn lens walls from dimension five. A
+    three-rung completion gives a plane bundle $N$ with $w_{1}(N) = x$, and where $H^{2}(\Sigma; \Z^{x}) = 0$ it
+    forces $\mathcal L \oplus \mathcal L$ to be stably trivial, as two rungs do; on $L^{2n+1}(4)$ the twisted
+    group vanishes (computed in the stored cell model, on the stored cellular background extended by local
+    coefficients, an extension stated there and not stored) and the doubled line is not stably trivial, by the
+    stored K-ring for $n \ge 3$ and, in dimension five, given the spin class $q_{1}$. So $k(\Sigma) \ge 4$ for
+    $n \ge 2$ with any physical signature, the physical types $(1, 2n+1)$ included
+    (\claimref{synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side}). On the
+    $L^{5}(4)$ walls an explicit map into five components that is odd under the quarter turn, written in
+    $\Cl(6,0)$, gives $e(\mathcal L) \le 5$, so $4 \le k \le 5$ on every side (the lower bound given $q_{1}$);
+    blocks of such maps give $e(\mathcal L) \le \lceil 3(n+1)/2 \rceil$ on $L^{2n+1}(4)$
+    (\claimref{synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five}). On the
+    definite side of the $L^{5}(4)$ walls $k = 5$: there is no four-component map odd under the quarter turn, by
+    an exact cup-one computation in the stored cell model (on the sphere bundle whose sections are the odd maps,
+    the cup-one square of the fibre class is the pull-back of the top class $xu^{2}$, which no section allows),
+    given Steenrod's theorem that the cup-one square is a natural operation, imported as one Fact by Leon's
+    decision of 9 November
+    (\claimref{synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation}, cited from memory,
+    primary texts not read), and the stated cellular backgrounds
+    (\claimref{synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components}). The definite-side
+    result keeps a second route to the same lower bound, through Steenrod squares, Chern classes and Thom
+    spaces, conditional on those and not stored; nothing rests on it. On $L^{7}(4)$: $4 \le k \le 6$ on every
+    side and $5 \le k \le 6$ on the definite side; the value $6$ there is prior art (Stolz 1989, the level of
+    real projective spaces), known here from secondary sources only, not derived and not imported. The
+    equivariant-index attack item is done as a reduction (proved): on a definite side $k$ is the least number of
+    components of a map of the sphere that changes sign under the quarter turn. The same computation for the
+    group of order eight finds no obstruction, and from the orders four and eight only it is conjectured that
+    the secondary obstruction to four rungs on general walls is $x \cup \rho(a)^{2}$ for a class $a$ with $2a =
+    \beta x$, $\rho$ the reduction modulo $2$. These bounds replace the stored window $3 \le k \le 6$ on
+    $L^{5}(4)$ and $L^{7}(4)$. Both new rung-count results carry the tameness premise as an assumes edge (Leon's
+    decision of 9 November).
   attack:
     - >-
       Answered in the negative (9 November) on lens-space walls, given the
@@ -1962,7 +2067,9 @@
       that decides it: $k$ as a function of the ring data of a class $a$
       with $2a = \beta x$ (conjectured on the lens family: through the
       height of $a$), or a pair of walls with isomorphic data and different
-      $k$.
+      $k$. (10 November: on the quarter-turn lens walls the lower bound is
+      four from dimension five, in dimension five given $q_{1}$,
+      \claimref{synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side}.)
     - >-
       File the table for $\dim\Sigma \le 3$: import the classification of
       bundles of rank at least three over three-complexes by $(w_{1}, w_{2})$
@@ -1989,20 +2096,18 @@
       the cellular background of that derivation (cellular cohomology, the
       comparison theorem, obstruction classes) stays a stated hypothesis.
     - >-
-      On a definite side, compute the exact rung count as an equivariant
-      (Borsuk-Ulam) index: $k = 1 +$ the least $j$ with a
-      $\mathbb{Z}_{2}$-equivariant map from the double cover of the wall
-      defined by $x$ to $S^{j}$ with the antipodal action (argued, see
-      above). For $L^{2m+1}(4)$ the double cover is real projective space
-      with the involution induced by the quarter turn; the stored data are
-      $k = 3$ on $L(4,1)$ and $3 \le k \le 6$ on $L^{5}(4)$ (the lower
-      bound given $q_{1}$). First computation: the primary obstruction to
-      an equivariant map into $S^{2}$, a class in the twisted integral
-      $H^{3}$ of $L^{5}(4)$, in the cellular model of the cohomology
-      result; where it vanishes, the next obstruction. Whether the count
-      is periodic in $m$ is part of the question; the literature on the
-      level of projective spaces (Pfister and Stolz) is cited from memory
-      and not checked.
+      Done as a reduction (10 November): on a definite side the exact rung count is the least number of
+      components of a map of the sphere that changes sign under the quarter turn (proved,
+      \claimref{synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five}, clause
+      (1)), and on the $L^{5}(4)$ walls it is $5$ (the explicit five-component map; no four-component map, given
+      the imported Steenrod Fact,
+      \claimref{synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components}). What remains: the
+      indefinite sides of the $L^{5}(4)$ walls, where $k$ is $4$ or $5$ (whether four rungs suffice is an
+      unstable question about a bundle of rank three, which $w_{1}$ does not fix); the $L^{7}(4)$ walls, $4 \le
+      k \le 6$, on the definite side $5$ or $6$ ($6$ by Stolz 1989 as prior art, not derived), where a
+      computation in the stored cell model needs a cup-two product; the conjectured secondary obstruction $x
+      \cup \rho(a)^{2}$ for $2a = \beta x$ on general walls; and the rung count as a function of the ring data
+      in general.
   success: >-
     The exact rung count $k(\Sigma)$ of every tame wall of dimension at least
     four as a function of the ring data of the wall: the integral cohomology
@@ -2023,6 +2128,10 @@
     - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height
     - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure
     - synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory
+    - synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side
+    - synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five
+    - synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components
+    - synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -2949,7 +3058,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T05, Rem 11.2 and its conclusion; the Renyi-2 comparison and the replica-wormhole Fact, 26 October; the Catalan result, 31 October"
+  source: "T05, Rem 11.2 and its conclusion; the Renyi-2 comparison and the replica-wormhole Fact, 26 October; the Catalan result, 31 October; the mode-split, parity-sector and finite-average results accepted 10 November and Leon's decisions of 9 November (the split in the algebra, the parity sector as the random-state column, the retirement of the mean-purity import)"
   statement: >-
     In the quantum-extremal-surface derivations the falling branch of the Page
     curve comes from an interior island computed by the exterior semiclassical
@@ -2982,8 +3091,9 @@
     capacity bound $n\ln 2$, against the two-saddle value $2^{-j} + 2^{-n}$
     (the replica-wormhole purity on the reading $e^{S_{0}} = 2^{n}$, an
     identification, not derived) and the Haar average
-    $(2^{j} + 2^{n})/(2^{j + n} + 1)$ (Fact
-    \claimref{synthesis.imported-haar-average-purity}); so term by term the
+    $(2^{j} + 2^{n})/(2^{j + n} + 1)$ (derived at these dimensions, which are powers of two, as a finite average:
+    \claimref{synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three}, clause (v); for general dimensions the classical value of Lubkin
+    is the $n = 2$ case of Fact \claimref{synthesis.imported-haar-moments-of-random-pure-state}); so term by term the
     rising branch is the disconnected saddle and the falling branch the
     replica wormhole, and eviction keeps the dominant saddle where the replica
     computation adds both, exactly $\ln 2$ of Renyi-2 entropy above it at the
@@ -3002,6 +3112,38 @@
     at zero weight) plays the role of the eviction radiation's capacity of
     entanglement, which replica-wormhole computations find peaked at the Page
     time; the magnitudes are not compared.
+
+    (10 November.) The split in the algebra. By Leon's decision of 9 November the tensor product of the eviction
+    comparisons is replaced by the split inside the Clifford algebra of the modes: a subsystem is the
+    sub-Clifford algebra of its modes, reduction is the projection onto its blades, and the relation to the
+    tensor product is the Klein twist of the stored commuting copies. For even states the two splits give the
+    same reduced states, and every eviction-side statement is unchanged
+    (\claimref{synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product}). The
+    random-state column is now the parity sector, in which the even states lie, with the value for an abstract
+    tensor product kept beside it: mean purity $(m + n)/(mn + 2)$ against $(m + n)/(mn + 1)$; at every Renyi
+    index a permutation of genus $g$ carries the weight $4^{g}$, with the Catalan limit and the gap $\ln
+    C_{n}/(n - 1)$ unchanged; the sector mean entropy exceeds Page's value by a rational amount between
+    $1/(2mn)$ and $1/(2mn) + 1/(2n^{2})$, and is the two-block case of a published formula for random states on
+    a direct sum of tensor products (Bianchi, Hackl, Kieburg, Rigol and Vidmar), rederived here from Page's
+    Fact. The leading term of every eviction comparison is unchanged: $\ln 2$ in Renyi-2 at the crossing, the
+    term below it becoming $\ln(1 + 2m^{-2})$ in place of $\ln(1 + m^{-2})$, and half a nat in von Neumann
+    entropy; the stored lower bound $(m - 1)/(2n)$ on the Page deficit holds on a sector for $m \ge 4$ and fails
+    at $m = 2$, and the deficit theorem now states the sector bounds (version 4 of
+    \claimref{synthesis.eviction-keeps-one-replica-saddle} and of
+    \claimref{synthesis.eviction-keeps-one-of-catalan-many-replica-saddles}; version 5 of
+    \claimref{synthesis.eviction-deficit-against-page-deficit}). The finite quarter-turn averages: the group
+    generated by the quarter turns about the blades of square $-1$ of an even subalgebra whose pseudoscalar has
+    square $-1$ averages every state to the moments of every invariant measure to order three and no further, a
+    state design of order exactly three, so the Haar moments to order three are derived at dimensions that are
+    powers of two
+    (\claimref{synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three});
+    averages over the stabiliser-family states agree with the Haar values at orders two and three and exceed
+    them at order four, with crossing coefficients $2, 5, 16, 67$ against the Catalan numbers, and their mean
+    entropy is not Page's
+    (\claimref{synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector}).
+    So the imported mean-purity Fact is retired in favour of the derived second moment (at powers of two; for
+    general dimensions the classical value is the $n = 2$ case of the all-moment Fact), while the all-moment
+    import and Page's average stay. The comparison at nonzero weight is not touched and remains open.
   attack:
     - >-
       Compute the Renyi comparison at nonzero weight: the island side needs
@@ -3029,7 +3171,10 @@
     - singularity.eviction-window-thermal-product-radiation-entropy
     - synthesis.eviction-deficit-against-page-deficit
     - singularity.imported-page-average-entropy-subsystem
-    - synthesis.imported-haar-average-purity
+    - synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three
+    - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
+    - synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector
+    - synthesis.imported-haar-moments-of-random-pure-state
   added: '2026-10-22'
 
 # ---------------------------------------------------------------- dark energy
@@ -3297,7 +3442,8 @@
   difficulty: substantial
   status: partial
   source: T12, successor problems (3) and (8); T13, successor problem (6); T11, successor problem (3); T17, open direction
-    10; the 9 November results and Leon's decisions
+    10; the 9 November results and Leon's decisions; the mass-term
+    and order-four results accepted 10 November
   statement: 'The Georgi-Jarlskog term is one grade-five element whose three factors are all present in the series, yet
     neither the family structure, nor the frozen point and its lifts, nor the bracket and its composites reach it. Derive
     the coupling of the rung vector to the pair-sector $\mathfrak u(1)$ current that would, or, on the registered Pati-Salam
@@ -3345,7 +3491,22 @@
     item is done, and the second family''s factor $3$ is an input of the record. Unlike the Majorana scaling
     $f \mapsto \lambda f$, $w \mapsto w/\lambda$ above, the scaling of $w_{d}$ alone moves $w_{d}f$.
     The weight is registered as a free input of the series by Leon''s decision of 9 November
-    (\claimref{synthesis.down-type-126-weight-registered-free-input}).'
+    (\claimref{synthesis.down-type-126-weight-registered-free-input}).
+
+    (10 November.) Mass terms in the mode language
+    (\claimref{synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac}).
+    On four tower modes, two arrays, every mass term is a pair term. Among the charges of the block the Majorana
+    (self) term differs from the Dirac (cross) term by its charge $2$ under the number that is opposite on the
+    two arrays, the mode-level image of $[B - L, T] = -2T$, and by rank (the self term alone gives mass to two
+    of the four modes, the cross term to all four); an automorphism of the mode algebra turns the block into
+    number-conserving hopping, so the difference is a choice of charge and not a property of the block. The
+    bilinear block has the seesaw quadratic exactly, with one-quantum energies $\sqrt{K^{2} + x^{2}}$, $x^{2} -
+    Mx - m^{2} = 0$, for every $K$. The stored pairing gap is not identified with the Majorana scale: an
+    explicit mass term has vanishing compression on the fixed-charge sectors of the gap theorem, whose clause
+    (iii) concerns the mean-field mass of the paired array. Premise (M) is untouched: nothing here produces the
+    Majorana term or its scale. Seen from the sixteen components, the Majorana element is odd under the
+    pseudoscalar of the ten Majorana generators, with no compensation by the Standard Model group
+    (\claimref{synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element}).'
   attack:
   - Fix the weight of the $(15,1,1)$ projection of $TT^{\dagger}$ relative to the rung vector's $10$ term from one potential
     along the Majorana element, or from Pati-Salam invariance allowing one coupling per component (argued, not checked);
@@ -3369,6 +3530,8 @@
   - synthesis.residual-s2-decouples-first-family-from-ckm-and-pmns
   - standard-model.majorana-element
   - synthesis.georgi-jarlskog-weight-free-on-the-stored-relations
+  - synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac
+  - synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element
   added: '2026-10-22'
 
 - id: op.rung-unit
@@ -3542,15 +3705,18 @@
   area: standard-model
   kind: research
   difficulty: frontier
-  status: open
-  source: "The cross-subject review of 9 November (the Klein twist of the modular-conjugation results against the neutral-singlet bit); Leon's decision of 9 November to register the question"
+  status: reformulated
+  source: "The cross-subject review of 9 November (the Klein twist of the modular-conjugation results against the neutral-singlet bit); Leon's decision of 9 November to register the question; the order-four and mass-term results accepted 10 November and Leon's decision of 9 November (restate around the pseudoscalar of the ten Majoranas; the modulo-16 statement not imported)"
   statement: >-
-    Is there an order-four symmetry of the slot module
-    (\claimref{standard-model.slot-module-hypothesis}) whose square is the
-    grading and which the descent preserves? If there is, does consistency
-    of the fermion content on walls with cross-section $\mathbb{RP}^{5}$
-    force sixteen Weyl components per generation, the neutral singlet
-    included, and exclude fifteen?
+    Restated 10 November. The order-four element of the slot module
+    (\claimref{standard-model.slot-module-hypothesis}) whose square is the grading and which acts with one odd
+    charge on all sixteen components is the pseudoscalar of the ten Majorana generators, $\omega = -I(-1)^{N}$,
+    the classical generator of the centre of $\Spin(10)$; the Klein twist of the modular-conjugation results is
+    not a candidate. In the stored chain $\omega$ is at no stage an unbroken symmetry that is not a gauge
+    transformation, because the Majorana element breaks it to the grading. What stays open is posed only on a
+    reading without the Majorana term, where $\omega$ modulo the Standard Model group is unbroken: does
+    consistency of the fermion content on walls with cross-section $\mathbb{RP}^{5}$ then force sixteen Weyl
+    components per generation, the neutral singlet included, and exclude fifteen?
   why: >-
     The neutral-singlet bit, sixteen components per generation against
     fifteen, is not decided by the gauge quantum numbers, CPT, anomaly
@@ -3587,27 +3753,49 @@
     stored result says that the store's order-four element acts on the slot
     module with odd charge on all sixteen components, or that the descent
     preserves it.
+
+    (10 November.) Restated around the pseudoscalar, by Leon's decision of 9 November
+    (\claimref{synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element}). The Klein twist
+    is not a candidate: it is a polynomial in the grading, exists for every content and, for two or more modes,
+    assigns no charge to the generators (proved). The element with one odd charge on all sixteen components is
+    the pseudoscalar of the ten Majorana generators, $\omega = \gamma_{1}\cdots\gamma_{10} = -I(-1)^{N}$,
+    $\omega^{2} = -1$: it acts by $-I$ on the sixteen, commutes with the gauge algebra of every stage of the
+    chain and lies in the Pati-Salam group (proved). It is the classical generator of the centre of $\Spin(10)$,
+    the $\Z_{4}$ inside $U(1)_{X}$ with $X = 5(B - L) - 4Y$; that identification is prior art. The first two
+    attack items are answered in the negative (argued, on proved algebra): every mass form on the sixteen
+    anticommutes with $\omega$; Dirac terms keep it only modulo the Standard Model group; the Majorana element
+    is invariant under that group, so nothing compensates and it breaks $\omega$ to the grading. So in the
+    stored chain there is no stage at which $\omega$ is an unbroken symmetry that is not a gauge transformation.
+    The modulo-16 statement of the literature is not imported (Leon's decision), and no stored result derives a
+    condition on the content from $\omega$. As arithmetic only: fifteen against sixteen components is separated
+    by parity alone, the signed count of an order-four element that commutes with the Standard Model algebra
+    being odd on fifteen components for every choice of signs. The question stays open only on a reading without
+    the Majorana term, where $\omega$ modulo the Standard Model group is unbroken and is not a gauge
+    transformation of the Standard Model stage; the stored premise is that the term is realised. The same
+    structure in the mode language of the towers, where the charge that separates the Majorana from the Dirac
+    term is the mode-level image of $B - L$:
+    \claimref{synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac}.
   attack:
     - >-
-      Compute the charges of the sixteen components of the slot module under
-      the store's order-four element (all odd or not), and decide whether it
-      is a symmetry of the slot-module premise and commutes with the chain's
-      gauge algebra.
+      Answered in the negative (10 November;
+      \claimref{synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element}): the order-four
+      element of the modular conjugations, the Klein twist, assigns no charge to the generators and exists for
+      every content; the element with odd charge on all sixteen components is the pseudoscalar $\omega$ of the
+      ten Majorana generators, which commutes with the chain's gauge algebra.
     - >-
-      Decide whether the descent preserves that symmetry, or breaks it to
-      the grading.
+      Answered in the negative (10 November, argued): the Majorana element breaks $\omega$ to the grading, and
+      Dirac terms keep it only modulo the Standard Model group, so no stage of the stored chain has it as an
+      unbroken symmetry that is not a gauge transformation.
     - >-
-      The anomaly itself: either import the index theorem behind the
-      modulo-16 statement as a Fact (a decision for the maintainer), or
-      derive the fixed-point count on $\mathbb{RP}^{5}$ in the store, and
-      state what a wall with cross-section $\mathbb{RP}^{5}$ requires of the
-      fermion content.
+      The anomaly itself, on a reading without the Majorana term only. The modulo-16 statement is not imported
+      (Leon's decision of 9 November). Derive the fixed-point count on $\mathbb{RP}^{5}$ in the store and state
+      what a wall with cross-section $\mathbb{RP}^{5}$ requires of the fermion content, or show that a reading
+      without the Majorana term is excluded by a stored premise.
   success: >-
-    A proof that an order-four symmetry with square the grading acts on the
-    slot module and survives the descent, together with a stored or imported
-    statement that its anomaly on $\mathbb{RP}^{5}$ walls vanishes exactly
-    for sixteen components per generation; or a proof that no such symmetry
-    exists, or that it does not constrain the content.
+    On a reading without the Majorana term, a stored statement that the anomaly of $\omega$ on $\mathbb{RP}^{5}$
+    walls vanishes exactly for sixteen components per generation, or a proof that it does not constrain the
+    content, or a proof that the reading is excluded. With the Majorana term the question is answered in the
+    negative (argued).
   entities:
     - standard-model.slot-module-hypothesis
     - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
@@ -3615,6 +3803,9 @@
     - synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics
     - synthesis.geometric-modular-conjugations-on-a-generator-give-the-null-ground-state
     - synthesis.wall-rung-count-is-height-of-dying-line-class
+    - synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element
+    - synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac
+    - standard-model.majorana-element
   added: "2026-11-09"
 
 - id: op.non-gaussian-completion
@@ -4030,6 +4221,12 @@
     to the asymmetry $\epsilon$ rather than being removed, and $5.364$ remains a fit. The five-dimensional
     towers' window is the relation's other recorded input
     (\claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}).
+
+    (10 November.) The coefficient table of the dark towers
+    (\claimref{synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio}) gives
+    no confinement scale and no correlation length for an odd tower, so it does not decide the candidate of
+    attack item 2, the deposit's own correlation length; op.dark-tower-running, registered partly for such a
+    scale, is settled in the negative.
   attack:
     - >-
       Done on the orbit reading of licensing (9 November;
@@ -4067,6 +4264,7 @@
     - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands
     - synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst
     - synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
+    - synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio
   added: "2026-10-22"
 
 - id: op.odd-towers
@@ -4160,6 +4358,14 @@
     at the representatives P3 gives; the five-dimensional towers' dimension is not fixed by the descent's
     other premises, while Premise U fixes the three-dimensional ones
     (\claimref{synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free}).
+
+    (10 November.) The field-strength heat-kernel coefficients of the stored spin-trace rule on the odd towers'
+    content are tabulated ($\tfrac23$ per abelian factor in dimension three; $-\tfrac{55}{6}$ for colour and
+    $\tfrac{32}{9}$ for the abelian factor in dimension five under (S)); they are running coefficients in four
+    dimensions only, and they decide neither the coupling rule of attack item 2 nor a scale for the emission
+    coefficient of item 3
+    (\claimref{synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio};
+    op.dark-tower-running is settled on that record).
   attack:
     - >-
       Done (marked 9 November): the Fock ideals, fields, mass onset and
@@ -4198,6 +4404,7 @@
     - dark-tower-matter.where-mass-begins
     - dark-tower-matter.three-dimensional-content
     - dark-tower-matter.five-dimensional-content
+    - synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio
   added: "2026-10-22"
 
 - id: op.window-p3
@@ -4446,77 +4653,6 @@
     - synthesis.pati-salam-chain-defects-cannot-source-spectrum
     - synthesis.adiabatic-deposit-modulation-is-a-time-shift
   added: '2026-10-22'
-
-- id: op.dark-tower-running
-  title: "Running and confinement of the dark towers' gauge algebras"
-  area: dark-matter
-  kind: research
-  difficulty: tractable
-  status: open
-  source: "The cross-subject review of 9 November (the one-loop running coefficients have no edge to the dark towers); Leon's decision of 9 November to register the question"
-  statement: >-
-    The store derives the one-loop running coefficients of the visible
-    gauge algebra from spin traces, and derives a gauge algebra for each
-    dark tower with its matter content, but has never applied the one to the
-    other. For each dark tower, decide whether its gauge algebra is
-    asymptotically free on its stored content and whether it confines, and
-    what scale, relative to the visible sector's, follows from equal
-    couplings at the descent.
-  why: >-
-    Whether a tower's matter is free, bound or confined decides what its
-    dark matter is made of, and a confinement scale would be a correlation
-    length for the deposit; the coupling rule and the emission coefficient
-    of the odd towers (op.odd-towers) and the thickness rule
-    (op.thickness-deposit-rule) both lack such a scale.
-  known: >-
-    The one-loop weights $\tfrac13$, $\tfrac23$, $-\tfrac{11}{3}$ per real
-    scalar, Weyl field and vector are derived in the spacetime algebra, in
-    four dimensions and in a covariant gauge under the indefinite-form
-    premise, with the generation and doublet counts as inputs
-    (\claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces});
-    no dark-matter result uses them. The towers' algebras, under the tower
-    premises stated there: $\su(2) \oplus \su(3) \oplus \uu(1)$ in the mirror
-    tower, $\so(2) \oplus \so(2)$ in the three-dimensional towers and
-    $\uu(3) = \su(3) \oplus \uu(1)$ in the five-dimensional ones
-    (\claimref{synthesis.gauge-algebra-by-tower}). Content: the
-    three-dimensional towers carry two species, each charged under one
-    abelian factor, with no chirality and gauge-invariant Dirac masses, two
-    copies of single-flavour electrodynamics in $2 + 1$ dimensions
-    (\claimref{dark-tower-matter.three-dimensional-content}); the
-    five-dimensional towers carry, under (S), four vector-like Dirac species
-    with hypercharges $\tfrac23$, $-\tfrac13$, $-1$, $0$, and without (S)
-    one colour triplet (\claimref{dark-tower-matter.five-dimensional-content}).
-    Not known: whether the towers' gauge fields are dynamical in the store's
-    reading, and what running means in three and five dimensions, where the
-    gauge coupling carries a dimension and the four-dimensional coefficients
-    do not apply as they stand.
-  attack:
-    - >-
-      Settle the setting first: whether each tower's gauge field is
-      dynamical, and in which dimension its coupling runs (the tower's own,
-      or four after the descent). If the fields are not dynamical, record
-      that and close the problem.
-    - >-
-      The mirror tower, which is four-dimensional: apply the stored
-      coefficients to its content and compare its running with the visible
-      sector's at equal coupling at the descent.
-    - >-
-      The odd towers: the sign of the one-loop coefficient of each factor on
-      the stored content, with the dimensional analysis proper to three and
-      five dimensions; confinement or its absence per tower (abelian factors
-      in three dimensions, the colour factor in five), and the ratio of any
-      confinement scale to the visible one.
-  success: >-
-    For each dark tower, a proved statement of whether its gauge algebra is
-    asymptotically free and confining on its stored content, with the scale
-    ratio to the visible sector where one exists; or a proof that the
-    question is empty because the tower's gauge field is not dynamical.
-  entities:
-    - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
-    - synthesis.gauge-algebra-by-tower
-    - dark-tower-matter.three-dimensional-content
-    - dark-tower-matter.five-dimensional-content
-  added: "2026-11-09"
 
 - id: op.descent-state-and-spectrum
   title: 'The state of the descent and the primordial spectrum'

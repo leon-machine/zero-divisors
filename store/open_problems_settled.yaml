@@ -1766,3 +1766,96 @@
   entities:
     - synthesis.frozen-point-datum-is-h
   added: '2026-11-08'
+- id: op.dark-tower-running
+  title: "Running and confinement of the dark towers' gauge algebras"
+  area: dark-matter
+  kind: research
+  difficulty: tractable
+  status: settled
+  source: "The cross-subject review of 9 November (the one-loop running coefficients have no edge to the dark towers); Leon's decision of 9 November to register the question; settled 10 November by Leon's decision of 9 November, on the dark-tower coefficient table accepted that day"
+  statement: >-
+    The store derives the one-loop running coefficients of the visible
+    gauge algebra from spin traces, and derives a gauge algebra for each
+    dark tower with its matter content, but has never applied the one to the
+    other. For each dark tower, decide whether its gauge algebra is
+    asymptotically free on its stored content and whether it confines, and
+    what scale, relative to the visible sector's, follows from equal
+    couplings at the descent.
+  why: >-
+    Whether a tower's matter is free, bound or confined decides what its
+    dark matter is made of, and a confinement scale would be a correlation
+    length for the deposit; the coupling rule and the emission coefficient
+    of the odd towers (op.odd-towers) and the thickness rule
+    (op.thickness-deposit-rule) both lack such a scale.
+  known: >-
+    The one-loop weights $\tfrac13$, $\tfrac23$, $-\tfrac{11}{3}$ per real
+    scalar, Weyl field and vector are derived in the spacetime algebra, in
+    four dimensions and in a covariant gauge under the indefinite-form
+    premise, with the generation and doublet counts as inputs
+    (\claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces});
+    no dark-matter result uses them. The towers' algebras, under the tower
+    premises stated there: $\su(2) \oplus \su(3) \oplus \uu(1)$ in the mirror
+    tower, $\so(2) \oplus \so(2)$ in the three-dimensional towers and
+    $\uu(3) = \su(3) \oplus \uu(1)$ in the five-dimensional ones
+    (\claimref{synthesis.gauge-algebra-by-tower}). Content: the
+    three-dimensional towers carry two species, each charged under one
+    abelian factor, with no chirality and gauge-invariant Dirac masses, two
+    copies of single-flavour electrodynamics in $2 + 1$ dimensions
+    (\claimref{dark-tower-matter.three-dimensional-content}); the
+    five-dimensional towers carry, under (S), four vector-like Dirac species
+    with hypercharges $\tfrac23$, $-\tfrac13$, $-1$, $0$, and without (S)
+    one colour triplet (\claimref{dark-tower-matter.five-dimensional-content}).
+    Not known: whether the towers' gauge fields are dynamical in the store's
+    reading, and what running means in three and five dimensions, where the
+    gauge coupling carries a dimension and the four-dimensional coefficients
+    do not apply as they stand.
+
+    (10 November.) Settled in the negative, by Leon's decision of 9 November: the question is not posed for the
+    odd towers, and the coefficient table is the record
+    (\claimref{synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio}). The
+    stored spin-trace rule has the same spin weights in the towers' algebras of dimension three, four and five,
+    giving the field-strength heat-kernel coefficient $(d - 26)/6$ for a vector with its ghosts and $n_{c}/3$
+    for a spinor of $n_{c}$ components: $\tfrac23$ per abelian factor in the three-dimensional towers, and
+    $-\tfrac{55}{6}$ (colour) and $\tfrac{32}{9}$ (abelian) in the five-dimensional ones under (S),
+    $-\tfrac{59}{6}$ and $\tfrac{16}{9}$ without. These multiply a logarithm of the cut-off in four dimensions
+    only; in three and five dimensions they are heat-kernel numbers with no regulator-independent meaning as
+    running coefficients, the squared coupling having mass dimension $4 - d$. In three dimensions confinement is
+    decided by the effective Chern-Simons level and not by the sign of the coefficient
+    (\claimref{dark-tower-matter.three-dimensional-phases}); in five dimensions nothing confines
+    (\claimref{dark-tower-matter.r1-has-no-mechanism-odd-towers},
+    \claimref{dark-tower-matter.five-dimensional-towers}). A scale ratio to the visible sector would need three
+    inputs that no stored statement supplies: a common dimensionless coupling, a common scale at which it is
+    set, and massless content (\claimref{dark-matter.no-coupling-rule-odd-towers-follows}). The mirror tower,
+    which is four-dimensional, has the visible coefficients and the scale ratio $1$ under the common-ceiling
+    premise (\claimref{dark-matter.mirror-tower-copy-one}). The statement about no scale ratio is argued,
+    consistent with the stored obstructions; each tower's gauge field is read as dynamical in its own dimension,
+    a reading recorded in the result and not a stored premise.
+  attack:
+    - >-
+      Closed (10 November): each tower's gauge field is read as dynamical in its own dimension, and in
+      dimensions three and five the coupling carries a dimension, so the coefficients are heat-kernel numbers
+      and not running coefficients; the problem is closed on that record.
+    - >-
+      Answered by a stored result: the mirror tower's coefficients and scale are the visible ones, ratio $1$,
+      under the common-ceiling premise (\claimref{dark-matter.mirror-tower-copy-one}).
+    - >-
+      Answered in the negative (10 November;
+      \claimref{synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio}): the
+      coefficients on the stored content are tabulated; confinement in three dimensions is decided by the
+      effective Chern-Simons level, nothing confines in five, and no scale ratio follows without three inputs
+      the store does not hold.
+  success: >-
+    For each dark tower, a proved statement of whether its gauge algebra is
+    asymptotically free and confining on its stored content, with the scale
+    ratio to the visible sector where one exists; or a proof that the
+    question is empty because the tower's gauge field is not dynamical.
+  entities:
+    - synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces
+    - synthesis.gauge-algebra-by-tower
+    - dark-tower-matter.three-dimensional-content
+    - dark-tower-matter.five-dimensional-content
+    - synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio
+    - dark-matter.no-coupling-rule-odd-towers-follows
+    - dark-tower-matter.r1-has-no-mechanism-odd-towers
+    - dark-tower-matter.five-dimensional-towers
+  added: "2026-11-09"

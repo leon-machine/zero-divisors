@@ -31766,7 +31766,7 @@
 "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations": {
 "failed": false,
 "findings": [],
-"key": "a2ea250072321435",
+"key": "7b82cb17120be09e",
 "result": "pass",
 "runs": [
 {
@@ -32781,7 +32781,7 @@
 "synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free": {
 "failed": false,
 "findings": [],
-"key": "ad1ddcaf0194c750",
+"key": "519ca2a0af6ed52a",
 "result": "pass",
 "runs": [
 {
@@ -35075,6 +35075,70 @@
 }
 ]
 },
+"synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five": {
+"failed": false,
+"findings": [],
+"key": "122ae6b6dfd58ed4",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_explicit_map_into_five_dimensions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_twisted_cochain_complex",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_squaring_operation_on_the_thom_space",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_square_of_the_second_chern_class",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_chern_character_lattice",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_upper_bounds_by_blocks",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure",
+"synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial",
+"synthesis.wall-rung-count-is-height-of-dying-line-class"
+]
+}
+]
+},
 "synthesis.density-modes-bosonise-only-along-one-null-direction": {
 "failed": false,
 "findings": [],
@@ -36036,7 +36100,7 @@
 "synthesis.eviction-deficit-against-page-deficit": {
 "failed": false,
 "findings": [],
-"key": "9015bc7652072597",
+"key": "62fd7e45273fc9a4",
 "result": "pass",
 "runs": [
 {
@@ -36060,13 +36124,22 @@
 "synthesis.boundary-mode-thermal-entropy",
 "synthesis.imported-pinsker-inequality"
 ]
+},
+{
+"derivation": null,
+"func": "check_sector_deficit_bounds",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.imported-page-average-entropy-subsystem"
+]
 }
 ]
 },
 "synthesis.eviction-keeps-one-of-catalan-many-replica-saddles": {
 "failed": false,
 "findings": [],
-"key": "aab0ecc6cc7e1571",
+"key": "7a348e1414fe5b6e",
 "result": "pass",
 "runs": [
 {
@@ -36086,7 +36159,6 @@
 "quantities": [],
 "touched": [
 "singularity.imported-page-average-entropy-subsystem",
-"synthesis.imported-haar-average-purity",
 "synthesis.imported-haar-moments-of-random-pure-state"
 ]
 },
@@ -36109,13 +36181,25 @@
 "singularity.imported-page-average-entropy-subsystem",
 "synthesis.eviction-deficit-against-page-deficit"
 ]
+},
+{
+"derivation": null,
+"func": "check_parity_sector_moments_keep_the_catalan_limit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.eviction-keeps-one-replica-saddle",
+"synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector",
+"synthesis.imported-haar-moments-of-random-pure-state",
+"tower.commuting-copies"
+]
 }
 ]
 },
 "synthesis.eviction-keeps-one-replica-saddle": {
 "failed": false,
 "findings": [],
-"key": "d9f0bc373d86c075",
+"key": "7fcdbbf4e0e64659",
 "result": "pass",
 "runs": [
 {
@@ -36155,6 +36239,17 @@
 "touched": [
 "singularity.eviction-window-thermal-product-radiation-entropy",
 "singularity.imported-page-average-entropy-subsystem"
+]
+},
+{
+"derivation": null,
+"func": "check_mode_split_and_parity_sector_column",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"singularity.eviction-window-thermal-product-radiation-entropy",
+"tower.commuting-copies"
 ]
 }
 ]
@@ -36584,6 +36679,107 @@
 "touched": [
 "synthesis.bulk-hadamard-states-restrict-to-the-generator-condition-on-flat-null-planes",
 "synthesis.imported-gtg-dictionary"
+]
+}
+]
+},
+"synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio": {
+"failed": false,
+"findings": [],
+"key": "7be9d69bd0e90b51",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_spin_weights_are_the_same_in_three_four_and_five_dimensions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+]
+},
+{
+"derivation": null,
+"func": "check_rule_gives_d_minus_26_over_6_and_a_logarithm_only_in_four_dimensions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-heat-kernel-coefficients-and-background-field-gauge",
+"synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+]
+},
+{
+"derivation": null,
+"func": "check_table_by_tower_on_the_stored_content",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.mirror-tower-copy-one",
+"dark-matter.no-coupling-rule-odd-towers-follows",
+"dark-tower-matter.five-dimensional-content",
+"dark-tower-matter.five-dimensional-towers",
+"dark-tower-matter.r1-has-no-mechanism-odd-towers",
+"dark-tower-matter.three-dimensional-content",
+"dark-tower-matter.three-dimensional-phases",
+"synthesis.gauge-algebra-by-tower",
+"synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces"
+]
+}
+]
+},
+"synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector": {
+"failed": false,
+"findings": [],
+"key": "33ae2a8a9412aa82",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_sixty_two_mode_states_give_four_fifths_seven_tenths_and_thirteen_twentieths",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-haar-moments-of-random-pure-state",
+"synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_rank_count_and_moments_agree_with_haar_at_two_and_three_and_never_at_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-haar-moments-of-random-pure-state",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_parity_sector_moments_are_the_sector_values_not_the_imported_ones",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-haar-moments-of-random-pure-state",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_bivector_quarter_turns_alone_fail_first_at_eight_directions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_mean_entropy_of_the_finite_average_is_not_the_page_value",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.imported-page-average-entropy-subsystem"
 ]
 }
 ]
@@ -38759,7 +38955,7 @@
 "synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products": {
 "failed": false,
 "findings": [],
-"key": "3665b746237705b9",
+"key": "374a1e24485700d5",
 "result": "none",
 "runs": []
 },
@@ -38854,17 +39050,10 @@
 "result": "none",
 "runs": []
 },
-"synthesis.imported-haar-average-purity": {
-"failed": false,
-"findings": [],
-"key": "fe7223283dfe61a1",
-"result": "none",
-"runs": []
-},
 "synthesis.imported-haar-moments-of-random-pure-state": {
 "failed": false,
 "findings": [],
-"key": "c83b29923680282f",
+"key": "1cbfa3797e73b5d9",
 "result": "none",
 "runs": []
 },
@@ -39012,6 +39201,13 @@
 "failed": false,
 "findings": [],
 "key": "04f0ea3f425c13db",
+"result": "none",
+"runs": []
+},
+"synthesis.imported-local-covariance-with-scaling-of-time-ordered-products": {
+"failed": false,
+"findings": [],
+"key": "8481e4e30a331fe6",
 "result": "none",
 "runs": []
 },
@@ -39285,6 +39481,13 @@
 "failed": false,
 "findings": [],
 "key": "11b46cf6438f473e",
+"result": "none",
+"runs": []
+},
+"synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation": {
+"failed": false,
+"findings": [],
+"key": "e030ab08eef7a69a",
 "result": "none",
 "runs": []
 },
@@ -42345,6 +42548,54 @@
 }
 ]
 },
+"synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac": {
+"failed": false,
+"findings": [],
+"key": "e4ae770619a08338",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_one_mode_has_no_pair_term_and_all_mass_terms_are_pair_terms",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.composite-scalars-mean-field-level",
+"field-theory.imported-tower-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_charges_of_the_cross_and_self_pair_terms",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.majorana-element",
+"synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content",
+"synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy"
+]
+},
+{
+"derivation": null,
+"func": "check_flip_of_the_second_modes_turns_the_block_into_hopping",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.composite-scalars-mean-field-level",
+"standard-model.majorana-element"
+]
+},
+{
+"derivation": null,
+"func": "check_block_spectrum_is_the_quadratic_with_sum_M_and_product_minus_m_squared",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.composite-scalars-mean-field-level"
+]
+}
+]
+},
 "synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard": {
 "failed": false,
 "findings": [],
@@ -42589,6 +42840,69 @@
 }
 ]
 },
+"synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product": {
+"failed": false,
+"findings": [],
+"key": "9616e0ac7cb2469b",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_parity_twist_gives_commuting_copies_and_the_projection_is_the_partial_trace",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.blade-square-signs-f2-quadratic-form",
+"synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space",
+"tower.commuting-copies",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_even_pure_states_have_equal_moments_on_both_sides_and_a_non_even_one_does_not",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.descent-parity-average",
+"tower.commuting-copies"
+]
+},
+{
+"derivation": null,
+"func": "check_eviction_states_are_even_products_with_the_stored_purities",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.eviction-window-thermal-product-radiation-entropy",
+"synthesis.eviction-keeps-one-of-catalan-many-replica-saddles",
+"synthesis.eviction-keeps-one-replica-saddle"
+]
+},
+{
+"derivation": null,
+"func": "check_sector_renyi_moments_keep_the_catalan_limit_and_weight_genus_by_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.eviction-keeps-one-of-catalan-many-replica-saddles",
+"synthesis.eviction-keeps-one-replica-saddle",
+"synthesis.imported-haar-moments-of-random-pure-state"
+]
+},
+{
+"derivation": null,
+"func": "check_sector_mean_entropy_exceeds_the_imported_value_by_a_rational_amount",
+"ok": true,
+"quantities": [],
+"touched": [
+"singularity.assembled-page-curve-up-typicality",
+"singularity.imported-page-average-entropy-subsystem",
+"synthesis.eviction-deficit-against-page-deficit"
+]
+}
+]
+},
 "synthesis.modular-data-on-a-generator-fix-neither-the-translation-lift-nor-the-sign-of-i": {
 "failed": false,
 "findings": [],
@@ -42828,6 +43142,86 @@
 }
 ]
 },
+"synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components": {
+"failed": false,
+"findings": [],
+"key": "998300f56c69eb99",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_quarter_turn_rotor_and_quaternion_fibre",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_product_cell_complex",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_higher_diagonal_on_the_factors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_higher_diagonal_on_the_product",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_fibre_class_is_an_integral_cocycle",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_cup_one_square_is_the_top_class",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_chain_level_section_exists",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_controls_other_orders_and_trivial_action",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+}
+]
+},
 "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
 "failed": false,
 "findings": [],
@@ -42872,6 +43266,49 @@
 "dark-matter.no-coupling-rule-odd-towers-follows",
 "dark-matter.parallel-boundary-mode-spaces-one-wall",
 "dark-matter.stored-asymmetry-charge-not-number"
+]
+}
+]
+},
+"synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
+"failed": false,
+"findings": [],
+"key": "2a90b6405983ffd2",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_attachment_scalar_spectrum_is_the_conformal_one_only",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations",
+"synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike",
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point"
+]
+},
+{
+"derivation": null,
+"func": "check_induced_coefficient_is_negative_over_the_tilt_window",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling",
+"synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike",
+"synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+"synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off"
+]
+},
+{
+"derivation": null,
+"func": "check_no_generation_number_has_zero_coefficient_and_the_measured_tilt",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free",
+"synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling",
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point"
 ]
 }
 ]
@@ -43789,6 +44226,70 @@
 "touched": [
 "families.imported-face-valued-bracket-quantum-numbers",
 "families.source-term-linear-tilt-mass-functional"
+]
+}
+]
+},
+"synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element": {
+"failed": false,
+"findings": [],
+"key": "2e6b814f8f929e1c",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_klein_twist_is_a_polynomial_in_the_grading",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics"
+]
+},
+{
+"derivation": null,
+"func": "check_pseudoscalar_of_the_ten_generators",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are"
+]
+},
+{
+"derivation": null,
+"func": "check_pseudoscalar_is_the_unit_times_the_chirality",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.majorana-element"
+]
+},
+{
+"derivation": null,
+"func": "check_majorana_element_is_odd_under_the_pseudoscalar",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.majorana-element",
+"synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5"
+]
+},
+{
+"derivation": null,
+"func": "check_dirac_terms_keep_the_pseudoscalar_modulo_the_gauge_group",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are",
+"standard-model.majorana-element"
+]
+},
+{
+"derivation": null,
+"func": "check_signed_dimension_sums_for_fifteen_and_sixteen",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.majorana-element"
 ]
 }
 ]
@@ -44864,6 +45365,69 @@
 "singularity.plane-rate",
 "singularity.r-regularity-fixed-locus",
 "singularity.rate-discharge-hypothesis-iii"
+]
+}
+]
+},
+"synthesis.quarter-turn-rotors-of-the-even-subalgebra-form-a-state-design-of-order-three": {
+"failed": false,
+"findings": [],
+"key": "999b3112d6075e87",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_group_is_finite_and_transitive_on_classes_and_commuting_pairs",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_two_identities_of_a_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_moments_to_order_three_equal_the_invariant_ones",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-haar-moments-of-random-pure-state",
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_mean_purity_of_a_matrix_factor_is_the_imported_value",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-haar-moments-of-random-pure-state"
+]
+},
+{
+"derivation": null,
+"func": "check_generators_are_rotors_only_for_bivector_blades",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_invariant_mixtures_and_the_parity_sector_corollary",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra"
 ]
 }
 ]
@@ -47745,6 +48309,71 @@
 }
 ]
 },
+"synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side": {
+"failed": false,
+"findings": [],
+"key": "7e4efe2ff1603d11",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_dying_line_has_sign_holonomy",
+"ok": true,
+"quantities": [],
+"touched": [
+"sheaf.imported-real-line-bundles",
+"synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial"
+]
+},
+{
+"derivation": null,
+"func": "check_twisted_cochain_complex_of_lens_spaces",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_whitney_class_of_the_rank_two_complement",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-whitney-product-formula-and-projective-space",
+"synthesis.wall-rung-count-is-height-of-dying-line-class"
+]
+},
+{
+"derivation": null,
+"func": "check_doubled_line_in_the_k_ring",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure",
+"synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height"
+]
+},
+{
+"derivation": null,
+"func": "check_gaussian_image_for_every_dimension",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure"
+]
+},
+{
+"derivation": null,
+"func": "check_spin_class_in_dimension_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial"
+]
+}
+]
+},
 "synthesis.three-twistor-composites-massive": {
 "failed": false,
 "findings": [],
@@ -49175,6 +49804,72 @@
 "touched": [
 "interior.imported-tractor-connection",
 "synthesis.einstein-condition-is-infinity-vacuum-incidence"
+]
+}
+]
+},
+"synthesis.vacuum-polarisation-kernel-on-a-gravitational-field-has-the-flat-leading-part-and-no-weyl-term-of-degree-four": {
+"failed": false,
+"findings": [],
+"key": "a4ff54aa733f5f73",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_transport_rotors_cancel_from_the_leading_kernel",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+"synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
+]
+},
+{
+"derivation": null,
+"func": "check_contraction_of_the_field_strength_is_the_ricci_vector",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field"
+]
+},
+{
+"derivation": null,
+"func": "check_first_order_derivative_of_the_transport_rotor",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field"
+]
+},
+{
+"derivation": null,
+"func": "check_first_order_part_of_the_derivative_of_the_leading_coefficient",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field",
+"synthesis.imported-hadamard-parametrix-of-the-squared-dirac-operator-leads-with-van-vleck-root-times-spin-transport"
+]
+},
+{
+"derivation": null,
+"func": "check_tidal_map_of_a_weyl_type_operator",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.hadamard-dirac-states-scale-to-the-flat-massless-vacuum-at-every-point-of-a-gravitational-field"
+]
+},
+{
+"derivation": null,
+"func": "check_degrees_of_the_terms_of_the_kernel",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products",
+"synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants"
 ]
 }
 ]

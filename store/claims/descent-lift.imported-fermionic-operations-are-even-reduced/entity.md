@@ -34,6 +34,10 @@ locators:
   label: fact:even
   line: 163
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Note only, version kept: for mode algebras the content of this Fact (the reduced state is the restriction to the subsystem''s algebra; it agrees with the partial trace when the complement''s states are even; products with an even factor exist) is now derived in the algebra, and sharpened, in synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product, clauses (i), (iii), (iv), (v): the reduction to one side is a partial trace of the twisted tensor split for every state, and the other reduction differs exactly on listed odd blades. This Fact is not retired: it is stated for a general fermionic system with the univalence rule, and its first sentence (the implementable unitaries are the even ones) is not part of that result. Whether its dependants cite the derived result in its place is left open.'
   env: fact
   context_refs:
   - descent-lift.imported-descent-modes-univalence-supplied-class

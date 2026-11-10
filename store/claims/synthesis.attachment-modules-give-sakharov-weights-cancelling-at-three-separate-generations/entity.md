@@ -1,7 +1,7 @@
 ---
 id: synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations
 kind: claim
-version: 3
+version: 4
 title: 'Sakharov weights on the attachment cancel at three separate generations'
 status: proved
 region: synthesis
@@ -21,6 +21,10 @@ credit:
   role: pin to the slot-module result moved to its version 2 after the clause split; notation declaration
   version: 3
   source: maintainer pass 2026-11-07
+- name: Claude Fable 5.2
+  role: 'scope sentence: the cancellation is a property of the attachment modules, not of the content, whose rung doublets carry curvature coupling zero at tree level'
+  version: 4
+  source: maintainer pass of 2026-11-10
 review: draft
 derivations:
 - name: main
@@ -50,6 +54,10 @@ lineage:
   - families.three-generations-faces-maximal-composite
   - synthesis.einstein-equations-from-c-loc-and-clausius
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 3 -> 4, by decisions 7 and 10 of 9 November 2026: a scope paragraph after the Reading, with matching sentences at the technical and lay levels, says which object the cancellation at three generations is about. It is a property of the attachment modules, whose helicity-zero module has the conformal spectrum and so the coupling 1/6; it is not a statement about the series'' content, whose rung doublets carry the coupling zero at tree level (the stored reading), giving B = 8 on the content at gauge parameter one. Clauses (i) to (v), the proof and the checks are unchanged.'
   maintainer_pass_unit_rulings_close:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -93,6 +101,8 @@ Let the attachment's helicity-$s$ module (Proposition \claimref{field-theory.twi
 \end{enumerate}
 \emph{Reading (argued).} On the Einstein static field of radius $r$ with physical cut-off $\Lambda_{c} = L/r$ the regulated energy is $r^{-1}E(\Lambda_{c}r)$, with orders $\Lambda_{c}^{4}r^{3}$ (the volume), $\Lambda_{c}^{2}r$ and $r^{-1}$; $\Lambda_{c}^{3}r^{2}$ and $\Lambda_{c}$ match no local invariant. If the regulated effective action is local and covariant, the $\Lambda_{c}^{2}r$ order is the induced Einstein-Hilbert term; on this one field it cannot be told apart from frame-dependent terms such as the integral of the spatial curvature. Under that hypothesis, with three separate generations including right-handed neutrinos, conformally coupled scalars and a smooth cut-off, this regulator would induce no Newton coupling at leading order, and Sakharov's route on this vacuum does not supply $G$. Transport-absent in mechanism; the attachment makes the dictionary convenient.
 
+\emph{Scope (which object the cancellation is about; decision of 9 November 2026).} The cancellation at three generations is a property of the attachment modules: the scalars of (ii) and (iv) are the attachment's helicity-zero modules, whose spectrum $k = n + 1$ with multiplicity $k^{2}$ is that of the conformally coupled scalar on the Einstein static field, so their curvature coupling is $\xi = \tfrac16$ by the spectrum and is not a free datum of these modules. It is not a statement about the series' content. The rung doublets of the content carry $\xi = 0$ at tree level (the rung field's D-term action, \claimref{synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point}(ii)), which is the stored reading of their curvature coupling; with it the induced coefficient of the content is $B = 8$ minimal-scalar units at gauge parameter one (\claimref{synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike}(iv)), the value the gauge parameter has under clause (K1) of Premise \claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}, and it does not vanish. The Reading above is therefore about the vacuum of the attachment modules with conformal scalars, not about the recorded content with its doublets.
+
 ## technical
 Take the attachment's helicity-$s$ modules: energies $k = |s| + 1 + n$ with multiplicity $k^{2} - s^{2}$. Their conformal-energy character has polar part $2t^{-3} - s^{2}t^{-1}$. On the Einstein static field of unit radius this reproduces the standard one-loop curvature coefficients $a_{1}$: zero for a conformally coupled scalar, $-R/6$ for a Weyl fermion, $-2R/3$ for a gauge vector counted by its physical helicities. These are the Sakharov weights $N_{0}(1 - 6\xi) + N_{1/2} - 4N_{1}$ at $\xi = 1/6$, recomputed here with the Lichnerowicz term in geometric algebra.
 
@@ -102,8 +112,10 @@ A sharp cut-off at a floor adds $L^{3}$ and $L$ terms whose coefficients depend 
 
 Reading, argued: if the regulated action is local and covariant, the $L^{2}$ order is the induced Einstein-Hilbert term, and under the stated content this cut-off would induce no Newton coupling at leading order. Transport-absent in mechanism.
 
+Scope: the cancellation belongs to the attachment modules, whose scalar module is conformally coupled by its spectrum. The doublets of the series' content have curvature coupling zero at tree level, the stored reading, and with it the content's coefficient is $8$ minimal-scalar units at gauge parameter one, not zero.
+
 ## lay
-Sakharov suggested that gravity's strength might not be fundamental but induced by the quantum jitter of all the matter and force fields, the way a medium's stiffness comes from its atoms. This result tries that idea with the series' own particle states and a natural cut-off, the series' levels read as an energy limit. That cut-off only makes sense where the gravitational field has no tidal (Weyl) part, and it singles out one frame. Each kind of particle adds to the induced strength of gravity in proportion to the square of its spin, with force carriers and matter particles pulling in opposite directions. These weights are the standard ones, and the series' states reproduce them. With twelve force carriers and three separate families of sixteen matter states each, right-handed neutrinos included, the two cancel exactly. This is the standard count for the Standard Model with right-handed neutrinos, noticed in another form by Boyle and Turok. So under this cut-off the series' matter would induce no gravitational strength at leading order, if the leading term is read as gravity's, which is argued rather than proved. A sharp cut-off at the levels would also produce terms that no local law of gravity contains.
+Sakharov suggested that gravity's strength might not be fundamental but induced by the quantum jitter of all the matter and force fields, the way a medium's stiffness comes from its atoms. This result tries that idea with the series' own particle states and a natural cut-off, the series' levels read as an energy limit. That cut-off only makes sense where the gravitational field has no tidal (Weyl) part, and it singles out one frame. Each kind of particle adds to the induced strength of gravity in proportion to the square of its spin, with force carriers and matter particles pulling in opposite directions. These weights are the standard ones, and the series' states reproduce them. With twelve force carriers and three separate families of sixteen matter states each, right-handed neutrinos included, the two cancel exactly. This is the standard count for the Standard Model with right-handed neutrinos, noticed in another form by Boyle and Turok. So under this cut-off these states would induce no gravitational strength at leading order, if the leading term is read as gravity's, which is argued rather than proved. The cancellation is a property of these idealised states, in which the spinless ones are coupled to curvature in the one way their energy levels allow; the series' actual Higgs-type fields are, at the level at which the series fixes them, not coupled to curvature at all, and with them the total does not cancel. A sharp cut-off at the levels would also produce terms that no local law of gravity contains.
 
 ## one-liner
 On the attachment's helicity modules, the $L^{2}$ coefficient of the zero-point energy under a smooth cut-off on conformal energy (frame-dependent, defined on Weyl-flat fields) is $-(N_{V} - N_{W}/4)$ times one moment of the cut-off, the standard Sakharov weights; with $N_{V} = 12$, sixteen Weyl fields (right-handed neutrino included) in each of $N_{g}$ separate generations and conformal scalars it vanishes exactly at $N_{g} = 3$, which read on the Einstein static field is the induced Einstein-Hilbert coefficient if the regulated action is local and covariant (argued); a sharp floor cut-off adds non-local terms.
