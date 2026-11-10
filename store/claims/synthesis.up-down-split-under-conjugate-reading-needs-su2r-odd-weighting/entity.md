@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.invariant-pairing-five-modes@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.generation-ten-under-pati-salam@7
   - standard-model.automorphisms-preserve-slot-pair-split-are@7

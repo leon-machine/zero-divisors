@@ -28,7 +28,7 @@ derivations:
   - dark-matter.mirror-share-one-how-fragile@7
   - dark-matter.mirror-tower-copy-one@9
   - dark-matter.radiation-audit-what-theorem-closes-what@8
-  - dark-matter.stored-asymmetry-charge-not-number@9
+  - dark-matter.stored-asymmetry-charge-not-number@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

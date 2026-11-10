@@ -32,7 +32,7 @@ derivations:
   - standard-model.moment-map-grip-mass-are-insensitive@4
   - standard-model.under-s-bracket-direction-charged-not@7
   - standard-model.under-s-frozen-points-split-inverse@7
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

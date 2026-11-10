@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

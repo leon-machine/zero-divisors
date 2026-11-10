@@ -31,7 +31,7 @@ derivations:
   - standard-model.trichotomy-what-kind-number@11
   - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@7
   - dark-matter.orientation-arrow-seventeenth-refutation@10
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - one-relation.recording-irreversible-stated-so-it-can@1
   - dark-matter.premise-cpt-covariance@3

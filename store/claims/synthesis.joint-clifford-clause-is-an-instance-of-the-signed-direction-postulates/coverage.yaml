@@ -1,0 +1,27 @@
+functions:
+  check_majoranas_form_a_group_of_signed_directions:
+    kind: complete
+    clauses:
+    - "(i), (v) the ten twisted Majoranas with -1: closure of order 2048, -1 central, all distinct pairs anticommuting, squares alternating, 1023 nonempty blades traceless, 1024 blades distinct up to sign; the untwisted family has commuting pairs"
+    omits: "none"
+  check_car_is_equivalent_to_the_direction_relations:
+    kind: complete
+    clauses:
+    - "(i) the modes recovered from the directions are the Fock operators, adjoint to each other, and satisfy the 50 CAR relations"
+    omits: "the converse direction for arbitrary operators is the linear-algebra identity of the proof"
+  check_adjoint_is_the_group_inverse_and_the_invariant_form_is_unique:
+    kind: complete
+    clauses:
+    - "(iii) transpose equals group inverse on all 2048 elements; commutant of the ten Majoranas in M_32(Q) one-dimensional, of nine two-dimensional"
+    omits: "none"
+  check_untwisted_directions_generate_the_same_group:
+    kind: complete
+    clauses:
+    - "(iv) the untwisted family generates the same set of 2048 operators with the same squares; all 24 slot-pair pairs commute; the pair parity is +-1 times the product of the six pair Majoranas"
+    omits: "none"
+  check_signature_gauss_sum:
+    kind: complete
+    clauses:
+    - "(ii) operator blade squares equal GA blade squares for (1, -1, ...) on all 1024 blades; Gauss sum 32; GA Gauss sums 32 for (10,0) and -32 for (0,10)"
+    omits: "none"
+untouched_premises: {}

@@ -25,7 +25,7 @@ derivations:
   - dark-tower-matter.three-dimensional-phases@4
   - simulations.cluster-bound-two-dimensions@4
   assumes:
-  - dark-matter.r2-one-quantum-per-unit-ball@2
+  - dark-matter.r2-one-quantum-per-unit-ball@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

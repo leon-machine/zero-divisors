@@ -1,0 +1,20 @@
+functions:
+  check_two_frames_are_vacua_with_the_same_dimensionless_spectrum:
+    kind: sampled
+    clauses:
+    - "(i) xi(lambda) = m (g^2 + g'^2 + 8 kappa)/g'^2 gives a critical point on L at c_lambda, on the boundary, lower than four neighbouring frames, xi/m > 1"
+    - "(i) Hessian on L: m_h^2 = M_Z^2 + 4 kappa N, charged pair M_W^2 + 4 kappa N, dimensionless spectrum 413/360, 46/45, 2/9, 25/72 in both frames"
+    omits: "two frames and one choice of (g, g', kappa, H); the general formula is proved in the text from the stored clause (4)"
+  check_the_two_models_differ_in_xi_g_at_equal_n:
+    kind: sampled
+    clauses:
+    - "(ii) equal N = 10 (N^2 = 1/(G H^2), G Lambda = 3 N^-2); N* = 41/9, 313/25; xi G = 826/2025, 10738/9375; (v/M_P)^2 = 41/450, 313/1250"
+    - "(ii) at N = 10^61, frames 10^-44 H and 2 10^-44 H: on the boundary, (v/H)^2 > 10^87, ratio of (v/M_P)^2 between 3 and 5 equal to the N-ratio"
+    - "(iii) G v^2 N^2 = (v/H)^2 and (m_h/M_P)^2 N^2 = m_h^2/H^2 in both models; boundary V_D has no H and V = V_D + kappa N^2"
+    omits: "the induced-gravity matching, the Fayet-Iliopoulos placement and the premise list of (iii) are argued in the text, not computed"
+untouched_premises:
+  standard-model.trichotomy-what-kind-number: "cited in (iii) for what the kinematic rescaling relates; nothing to compute"
+  families.why-kinematic-attacks-had-fail: "cited in (iii) for the reading of m/M_P under the rescaling; nothing to compute"
+  synthesis.einstein-route-makes-n-initial-data: "cited in (iii) for the register's branch; nothing to compute"
+  synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off: "cited in (iii); the matching through a free cut-off is argued from the stored formula"
+  synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors: "cited in (iii); the level's placement on the hypercharge is the stored action's, not recomputed"

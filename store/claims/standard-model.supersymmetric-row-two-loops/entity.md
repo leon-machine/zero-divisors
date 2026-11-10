@@ -23,7 +23,7 @@ derivations:
 - name: main
   uses:
   - standard-model.imported-two-loop-gauge-coefficients@1
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 - name: standard-route
   uses:

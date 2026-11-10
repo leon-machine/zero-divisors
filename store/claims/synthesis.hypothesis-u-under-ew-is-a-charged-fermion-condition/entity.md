@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.neutrino-dirac-matrix-charged-fermions@6
   - standard-model.fits-record-level@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - standard-model.premise-ew-equal-weight@1
   proof: proof-main.tex

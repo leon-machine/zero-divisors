@@ -21,7 +21,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
   proof: proof-main.tex

@@ -36,7 +36,7 @@ derivations:
   - synthesis.rung-field-on-the-lift-locus@5
   - synthesis.rung-unit-is-frame-boost@3
   assumes:
-  - synthesis.rung-unit-second-free-number@3
+  - synthesis.rung-unit-second-free-number@4
   proof: proof-main.tex
 checked_by:
 - kind: check

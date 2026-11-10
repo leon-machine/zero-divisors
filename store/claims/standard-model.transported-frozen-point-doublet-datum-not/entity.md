@@ -28,7 +28,7 @@ derivations:
   - standard-model.imported-grip-area-casimir-form@5
   - standard-model.imported-tower-commuting-copies-fock-module@6
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

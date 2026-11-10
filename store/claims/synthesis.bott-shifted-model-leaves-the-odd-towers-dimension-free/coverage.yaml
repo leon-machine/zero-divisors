@@ -1,0 +1,42 @@
+functions:
+  check_bott_shift_splits_off_a_real_matrix_factor:
+    kind: complete
+    clauses:
+    - "(i) for the four odd representatives: w8^2 = 1, the a_i = e_i w8 obey the relations of Cl(s), are fixed by reversion and commute with the eight added generators, and the volume of A has the square of the pseudoscalar of Cl(s)"
+    omits: "none"
+  check_tensor_split_is_an_isomorphism:
+    kind: sampled
+    clauses:
+    - "(i) the products a_S g_T are 2^(n+8) distinct blades up to sign, for (2,1) -> (10,1) and (4,1) -> (12,1)"
+    omits: "the mirror representatives (1,2) and (1,4), which differ only in the signs of the squares and are covered by the proof"
+  check_eight_of_one_sign_is_real_sixteen_by_sixteen:
+    kind: complete
+    clauses:
+    - "(i) Cl(8,0) and Cl(0,8): f = prod (1 + h)/2 is an idempotent with f~ = f, 16 terms, scalar part 1/16, f x f in R f on all 256 blades, nonzero for exactly 16"
+    omits: "the identification B = Mat(16, R), which is the imported classification with this primitive idempotent"
+  check_type_data_invariant_and_pair_count_not:
+    kind: complete
+    clauses:
+    - "(i) residue, causality, reversal commuting with beta, n mod 4, odd n, pseudoscalar square, central pseudoscalar of the shifted algebra, the sign carrying the single time; the pair count floor((n+2)/2) not invariant (2, 2, 3, 3 to 6, 6, 7, 7); (ii) residues 2 and 6 equal in both models and of dimension 0 mod 4"
+    omits: "none"
+  check_descent_premises_hold_in_both_models:
+    kind: complete
+    clauses:
+    - "(ii) both models: residues 1, 2, 3, 5, 6, 7 represented, each by a causal signature of that residue, closed under reversal, generators anticommuting with their sign bits, this world (1,3) and mirror (3,1), odd representatives of odd dimension; the models differ exactly at residues 3 and 5"
+    omits: "the premises that mention no signature, covered by the proof"
+  check_unit_ball_ratio_differs_between_models:
+    kind: complete
+    clauses:
+    - "(v) the ratio in M_L lies in (5.36, 5.37) and in M_8 in (9.9, 10.0), its shifted part 1920/pi^5; the shares 4/3, 8/(3 pi), 160/pi^4, 960/pi^5 as closed forms bracketed by 333/106 < pi < 355/113"
+    omits: "none"
+  check_w_admits_m_l_and_not_m_8:
+    kind: complete
+    clauses:
+    - "(iv) (W) admits every representative of M_L and neither shifted representative of M_8; up to dimension 16 the only admitted causal member of each odd residue is the lowest"
+    omits: "none"
+  check_premise_u_admits_the_shift_only_at_residues_three_and_five:
+    kind: complete
+    clauses:
+    - "(iii) over every causal member of residues 1, 7, 3, 5 up to dimension 21: real Witt index of the conformal space 2 (GA Gram matrix), field by residue reproducing the stored table and constant along each residue, U3 admitting only (2,1) and (1,2) at residues 1, 7 and all five members at 3, 5, (12,1) and (1,12) among them; the conformal pseudoscalar at (1,10) central, of square -1 and odd grade"
+    - "(ii) U3 at (12,1) and (1,12)"
+    omits: "dimensions above 21, covered by the argument that the pair count exceeds 2 for n > 3"

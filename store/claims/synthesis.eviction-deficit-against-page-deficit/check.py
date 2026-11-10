@@ -7,6 +7,9 @@ Taylor partial sum (all terms positive) and 2 pi > 157/25.
 (i)   Page's average entropy <S> = H_{mn} - H_n - (m-1)/(2n) (imported) for m = 2^w <= n = 2^r:
       the deficit ln m - <S> lies strictly between (m-1)/(2n) and (m-1)/(2n) + (m-1)/(mn+1),
       so it is positive at every stage, below 1 nat, and above 2/5 at the crossing m = n >= 4;
+      On a parity sector the mean entropy is sum_{k=n/2+1}^{mn/2} 1/k - (m-2)/(2n) (the weight term plus Page's
+      average on a block); its deficit lies between (m-2)/(2n) + 2(m-1)/(2mn+m+1) and m/(2n) - 1/(mn) < 1/2,
+      is above (m-1)/(2n) for m >= 4 and below it at m = 2, and differs from the abstract deficit by a rational;
 (ii)  zero weight: occupation 1/2 has zero Pinsker bound, mode entropy s(0) = ln 2 (computed, in units of
       ln 2) and hence zero deficit sum (ln 2 - h_k) for windows of 1 to 5 members;
 (iii) general weights: with E = e^{x_*} at four sample values, the Pinsker bound per member equals
@@ -51,6 +54,42 @@ def check_page_deficit_bounds():
             if r == w and w >= 2:
                 assert d_lo > F(2, 5)
     return True
+
+
+def sector_mean(m, n):
+    """Mean entropy of the m-dimensional side on a parity sector of C^m x C^n, m <= n powers of two."""
+    return harmonic(n // 2, m * n // 2) - F(m - 2, 2 * n)
+
+
+def check_sector_deficit_bounds():
+    premise("singularity.imported-page-average-entropy-subsystem")
+    lo2, hi2 = ln2_bounds(60)
+    ok = sector_mean(2, 2) == F(1, 2) and sector_mean(2, 4) == F(7, 12) and sector_mean(4, 4) == F(271, 280)
+    ok = ok and sector_mean(4, 4) - (harmonic(4, 16) - F(3, 8)) == F(6553, 144144)
+    for w in range(1, 6):
+        m = 2 ** w
+        for r in range(w, w + 4):
+            n = 2 ** r
+            page = harmonic(n, m * n) - F(m - 1, 2 * n)
+            sec = sector_mean(m, n)
+            # block decomposition: the weight term plus Page's average on a block of dimensions m/2, n/2
+            block = harmonic(n // 2, m * n // 4) - F(m // 2 - 1, n) if m > 2 else F(0)
+            ok = ok and sec == harmonic(m * n // 4, m * n // 2) + block
+            # the rational difference from the abstract value and its bounds
+            diff = sec - page
+            ok = ok and F(1, 2 * m * n) < diff < F(1, 2 * (m * n + 1)) + F(1, 2 * n * (n + 1))
+            # the sector deficit ln m - sec, enclosed through the enclosure of ln 2
+            d_lo, d_hi = w * lo2 - sec, w * hi2 - sec
+            ok = ok and F(m - 2, 2 * n) + F(2 * (m - 1), 2 * m * n + m + 1) < d_lo
+            ok = ok and d_hi < F(m, 2 * n) - F(1, m * n) < F(1, 2)
+            old_bound = F(m - 1, 2 * n)
+            ok = ok and (d_lo > old_bound if m >= 4 else d_hi < old_bound)
+            if r == w and w >= 2:
+                ok = ok and F(2, 5) < d_lo and d_hi < F(1, 2)
+    GA.check("sector mean entropy 1/2, 7/12, 271/280; block decomposition; rational difference from the abstract "
+             "value within its bounds; sector deficit within its bounds, below 1/2, above (m-1)/(2n) for m >= 4 "
+             "and below it at m = 2; in (2/5, 1/2) at the crossing from m = 4", ok)
+    return ok
 
 
 def exp_lower(x, terms):
@@ -105,4 +144,4 @@ def check_eviction_deficits():
 
 
 if __name__ == "__main__":
-    print(check_page_deficit_bounds(), check_eviction_deficits())
+    print(check_page_deficit_bounds(), check_eviction_deficits(), check_sector_deficit_bounds())

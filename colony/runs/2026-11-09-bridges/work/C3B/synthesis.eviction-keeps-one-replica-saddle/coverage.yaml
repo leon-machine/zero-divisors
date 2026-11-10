@@ -1,0 +1,21 @@
+functions:
+  check_member_purity_in_pauli_algebra:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "2<rho^2>_0 in Cl(3,0) equals (1 + r^2)/2 = c^4 + s^4 at c^2 = 1/2, 2/3, 5/7; multiplicativity on one threefold Kronecker product; the Schmidt equality tr rho_R^2 = tr rho_L^2 is not computed here (it is in (ii))"
+  check_eviction_purity_is_one_saddle:
+    kind: sampled
+    clauses: ["(ii)"]
+    omits: "explicit integer state vectors for 1 <= j <= 6, 0 <= w <= j, exact partial trace, purity 2^{-w}; one stage sequence with n_cap = 6 - j; the general j, n_cap is the proof's argument"
+  check_haar_purity_against_two_saddles:
+    kind: sampled
+    clauses: ["(iii)"]
+    omits: "the second-moment formula (1 + F)/(D(D + 1)) is Schur's lemma, cited, not computed; the swap traces are counted exactly for six (m, n) pairs and compared with a table of exact values and with (m + n)/(mn + 1), the planar two-saddle value and the one-saddle value"
+  check_crossing_ratios:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "ratios 2 and 2m^2/(m^2 + 1) at m = 2, 4, 8 (computed) and 16 (formula); off-crossing ratio 1 + 2^{-d} along the stage sequence; the logarithmic forms are the proof's"
+  check_mode_split_and_parity_sector_column:
+    kind: sampled
+    clauses: ["(i)", "(ii)", "(iii)", "(iv)"]
+    omits: "the twist on three modes with one mode on the first side; one pure state of two modes that is not even; two pair states on four modes at c^2 = 9/25 and 25/169, their product, the window as a product of marginals, equal moments on both sides, and the zero-weight state after one eviction; the two swap traces on a parity sector counted for six pairs (m, n) and the crossing ratio at m = 2, 4, 8, 16; the general statements are the proof's"

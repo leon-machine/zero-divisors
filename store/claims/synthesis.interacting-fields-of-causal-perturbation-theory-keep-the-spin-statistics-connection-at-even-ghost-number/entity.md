@@ -48,7 +48,7 @@ derivations:
   - field-theory.imported-tower-limit@3
   - synthesis.one-loop-qed-in-the-spacetime-algebra@5
   - synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts@4
-  - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@1
+  - synthesis.imported-epstein-glaser-extension-theorem-and-ward-preserving-time-ordered-products@2
   assumes:
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex

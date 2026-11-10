@@ -34,7 +34,7 @@ derivations:
   - standard-model.one-vev-vector-relations-breaking-pattern@7
   - standard-model.yukawa-pattern-two-rung-module@6
   - standard-model.invariant-pairing-five-modes@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - synthesis.rung-field-level-needed-off-balance-and-not-right-invariant@5
   - synthesis.imported-left-right-bidoublet-two-yukawa-couplings@3
   proof: proof-main.tex

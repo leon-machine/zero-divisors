@@ -1,0 +1,32 @@
+DIRECT PREMISES:
+  [uses] synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves pinned@1 current@1 status=proved
+  [uses] std-algebra.witt-basis-car pinned@1 current@1 status=proved
+  [uses] synthesis.null-ordering-of-counted-units-is-zeta-symmetric pinned@4 current@4 status=proved
+  [uses] synthesis.counted-unit-energy-at-half-offset pinned@3 current@3 status=proved
+  [uses] synthesis.slot-module-light-ray-arrays-are-weyl-components pinned@3 current@3 status=proved
+  [uses] synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays pinned@5 current@5 status=proved
+  [uses] synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators pinned@1 current@1 status=proved
+CLAIMREFS NOT IN uses/assumes: ['singularity.q-joint-quasi-freeness-s-wave', 'synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free', 'synthesis.window-reading-array-killing-energy']
+PAST CONE SIZE (union): 304
+POSTULATES IN CONE:
+  dark-matter.p2-indifference @2 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components', 'synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  dark-matter.p3-nearest-dimension-representatives @2 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components', 'synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  dark-matter.r1-equal-mass-per-quantum @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.r2-one-quantum-per-unit-ball @2 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-matter.r3-one-cell-per-unshared-direction @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  dark-tower-matter.h1-momentum @1 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components']
+  hawking.joint-j3-s-wave-reduction @1 via ['synthesis.null-ordering-of-counted-units-is-zeta-symmetric']
+  scrambling.indifference-structural-premise-series @2 via ['synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  singularity.p-univalence @2 via ['synthesis.counted-unit-energy-at-half-offset', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays', 'synthesis.null-ordering-of-counted-units-is-zeta-symmetric']
+  singularity.q-joint-quasi-freeness-s-wave @3 via ['(direct)', 'synthesis.counted-unit-energy-at-half-offset', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays']
+  singularity.r-regularity-fixed-locus @4 via ['synthesis.counted-unit-energy-at-half-offset', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays', 'synthesis.null-ordering-of-counted-units-is-zeta-symmetric']
+  standard-model.slot-module-hypothesis @4 via ['synthesis.slot-module-light-ray-arrays-are-weyl-components', 'synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  synthesis.continuum-completion-premise @2 FOUNDATION via ['std-algebra.witt-basis-car', 'synthesis.counted-unit-energy-at-half-offset', 'synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves']
+  synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields @3 via ['synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  synthesis.n-plus-null-ground-state @12 via ['synthesis.null-ordering-of-counted-units-is-zeta-symmetric']
+  synthesis.premise-minimal-non-commutativity @2 FOUNDATION via ['std-algebra.witt-basis-car', 'synthesis.counted-unit-energy-at-half-offset', 'synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves']
+  synthesis.premise-superposition-over-the-integers @2 FOUNDATION via ['std-algebra.witt-basis-car', 'synthesis.counted-unit-energy-at-half-offset', 'synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves']
+  synthesis.premise-the-bit @2 FOUNDATION via ['std-algebra.witt-basis-car', 'synthesis.counted-unit-energy-at-half-offset', 'synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves']
+  synthesis.r-lambda-regularity-cosmological-horizon @5 via ['synthesis.counted-unit-energy-at-half-offset', 'synthesis.light-ray-good-part-of-a-spinor-is-two-chirality-arrays', 'synthesis.null-ordering-of-counted-units-is-zeta-symmetric']
+  synthesis.rung-unit-second-free-number @3 via ['synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free']
+  synthesis.window-reading-array-killing-energy @1 via ['(direct)', 'synthesis.null-ordering-of-counted-units-is-zeta-symmetric']

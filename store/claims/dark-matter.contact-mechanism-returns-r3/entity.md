@@ -26,7 +26,7 @@ derivations:
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
   - dark-matter.r1-equal-mass-per-quantum@1
-  - dark-matter.r2-one-quantum-per-unit-ball@2
+  - dark-matter.r2-one-quantum-per-unit-ball@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

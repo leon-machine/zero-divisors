@@ -24,7 +24,7 @@ derivations:
   - standard-model.imported-cauchy-decomposition-exterior-power@1
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.quarks-leptons-two-level-fermion-content@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: legacy

@@ -1,0 +1,23 @@
+functions:
+  check_parity_twist_gives_commuting_copies_and_the_projection_is_the_partial_trace:
+    kind: partial
+    clauses: ["(i)", "(ii)", "(iii)"]
+    omits: "one against one, one against two and two against one modes only: the null pairs and the parity p = f e, the square of the parity blade, the commutation, squares and mutual anticommutation of the twisted generators, the bijection of products of blades onto the blades, which of them lie in Cl(A) and in Cl(B), and the count of blades with the twist's commutation signs; the statements for every number of modes, the conditional-expectation properties and positivity are the proof's"
+  check_even_pure_states_have_equal_moments_on_both_sides_and_a_non_even_one_does_not:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "one even pure state of three modes at two splits (moments two to four, evenness of the reductions, invariance under the parity average), one pure state of three modes that is not even, and the closed two-mode example with its factorisation; the general equality is the proof's (Schmidt decomposition in the twisted split)"
+  check_eviction_states_are_even_products_with_the_stored_purities:
+    kind: sampled
+    clauses: ["(v)"]
+    omits: "four modes: two pair states at c^2 = 9/25 and 25/169 against the Fock construction, their product, evenness, the window as product of marginals, equal moments on both sides, and at zero weight the flat spectrum before and after one eviction; general products and windows are the proof's"
+  check_sector_renyi_moments_keep_the_catalan_limit_and_weight_genus_by_four:
+    kind: partial
+    clauses: ["(vi)"]
+    omits: "the trace count of the lemma by enumeration at six small cases; the index-two values and inequalities for dimensions 2 to 32; the genus form of the crossing coefficient, the counts N_0, N_1 and the three-sided bound for n = 2..6 and d = 2..32; the formula for every n, the limit and the lower bound are the proof's; the two upper comparisons are not proved beyond the range"
+  check_sector_mean_entropy_exceeds_the_imported_value_by_a_rational_amount:
+    kind: partial
+    clauses: ["(vii)"]
+    omits: "the closed form against the block form (harmonic weight plus the imported value on a block), the rational difference and its bounds, and the deficit bounds with a rational bracket of ln 2, for dimensions 2 to 64; the Beta moments at m = 2 against the formula of (vi); the law of the block weight and the independence of the blocks are the proof's, from the Gaussian form of the invariant measure (background)"
+untouched_premises:
+  synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector: "its clause (iv) is the sector formula cited in clause (vi); the check here recomputes the count behind it by enumeration and does not call it"

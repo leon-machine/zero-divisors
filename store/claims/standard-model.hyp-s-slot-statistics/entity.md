@@ -1,7 +1,7 @@
 ---
 id: standard-model.hyp-s-slot-statistics
 kind: claim
-version: 9
+version: 10
 title: 'Hypothesis (S): slot statistics, derived from the slot-module hypothesis'
 status: proved
 region: standard-model
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T12, deposited version
+- name: Claude Opus 5.5
+  role: note on clause (v) against the restated clause (f), the five-mode system taken with the Klein-twisted slot operators
+  version: 10
+  source: maintainer pass of 2026-11-09
 review: typed
 derivations:
 - name: main
@@ -27,7 +31,7 @@ derivations:
   - standard-model.imported-pair-systems-two-chirality-halves@5
   - standard-model.imported-fock-representation-clifford-algebra-bogoliubov@1
   assumes:
-  - standard-model.slot-module-hypothesis@4
+  - standard-model.slot-module-hypothesis@5
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -48,6 +52,10 @@ locators:
   label: ''
   line: 1092
 extraction:
+  maintainer_pass_2026_11_09:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Version 9 -> 10. Re-checked against standard-model.slot-module-hypothesis version 5 (clause (f) restated as an instance of (F2) and (F3), slots Klein-twisted): clause (v) and its proof hold as stated, but "the slot and pair operators satisfy the CAR" is true for the Klein-twisted slot operators, not for the untwisted a_i, which commute with the pairs (synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space (ii)). A note at the formal level and a parenthesis in the proof of (v) say so; the Pati-Salam step of the proof is unaffected, since the 21 split-preserving bivectors and the two-slot operator a1^dagger a2^dagger are the same in both conventions. Statement unchanged.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -89,6 +97,8 @@ extraction:
 \item[(v)] \emph{(One Clifford system.)} The slots are fermionic modes on the same footing as the pairs: the two slot modes and the three pair modes satisfy the canonical anticommutation relations as one system of five modes, so that, by Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov}, their Majorana combinations generate $\Cl(10)$ acting on $\Lambda^{\bullet}\C^{5}$, its spinor module, whose parity grading is that module's chirality.
 \end{enumerate}
 Clauses (ii) and (iv) are Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}(3) under the premise's generation clause and CPT halving, with no anomaly condition; (v) is the premise's clause (f), applied once (ii) has made the slot module fermionic; (iii) follows from anomaly freedom of the particle half, the consistency condition of Fact \claimref{standard-model.imported-anomaly-coefficients}, through Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}(4), together with the premise's requirement that the chirality commute with the Pati-Salam algebra, whose two-slot creation operator and its adjoint fix the neutral-singlet line; (i) compares (iii) with a tower grading. Anomaly freedom is used as that consistency condition, not as a clause of the premise.
+
+\emph{Note (the slot operators of (v)).} In clause (f) of the premise, version 5, the five-mode system is formed with the Klein-twisted slot operators $\tilde a_{i} = a_{i}(-1)^{k}$ (Theorem \claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space}); the untwisted $a_{i}$ commute with the pair operators. The slot modes of (v) and their Majoranas are those of the twisted operators. Nothing else here depends on the choice: the Pati-Salam bivectors, the grading and the two-slot operator $a^{\dagger}_{1}a^{\dagger}_{2} = \tilde a^{\dagger}_{1}\tilde a^{\dagger}_{2}$ are the same in both conventions.
 
 ## technical
 Hypothesis (S) was a premise of the Standard-Model paper: the two slots of a composite, the places its two conformal spinors occupy, are fermionic modes like its three pairs. It is now derived from the weaker slot-module hypothesis, which assumes the shape (a representation of the slot mixing $U(2)$, graded by slot number, tensored with one system of three pair modes), the hypercharge from the centre, slot states built from a unique empty state by one doublet of slot creation operators, and a chirality that splits the states into a left-handed half and its CPT conjugate and, once the slots are fermionic, commutes with the Pati-Salam algebra of the series' chain. CPT closure then forces the fermionic slot module with exclusion. Anomaly freedom of the particle content, the standard consistency condition, fixes the chirality as the parity of the total mode number except on the two neutral singlets, the empty and the full five-mode state; the Pati-Salam algebra contains the operator that creates both slots at once, and commuting with it and its adjoint puts the empty state in the particle half. Without anomaly freedom the pair-number parity would also commute with Pati-Salam.

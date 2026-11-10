@@ -24,7 +24,7 @@ derivations:
   - standard-model.automorphisms-preserve-slot-pair-split-are@7
   - standard-model.invariant-pairing-five-modes@5
   - standard-model.under-s-composites-state-space-spinor@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

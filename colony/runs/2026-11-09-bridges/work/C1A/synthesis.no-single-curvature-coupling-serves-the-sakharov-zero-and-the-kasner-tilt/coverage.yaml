@@ -1,0 +1,13 @@
+functions:
+  check_attachment_scalar_spectrum_is_the_conformal_one_only:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "levels l = 0..11: the dimension of harmonic polynomials in four variables is (l+1)^2, the attachment multiplicity at helicity 0 is the same, and l(l+2) + 6 xi = (l+1)^2 holds at xi = 1/6 and fails at 0, 1/2, 3/2 and the window ends; the two dictionary readings at w = -1; that the Laplace eigenvalue on harmonic polynomials of degree l is l(l+2) and that R = 6 are the cited spectra, not recomputed"
+  check_induced_coefficient_is_negative_over_the_tilt_window:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "B at 1/6, 0 and the two window ends; the zero in n_g and in alpha at the window ends; negativity at alpha = 0, 1, 3, 6 for both vector weights at the window ends (B is linear in xi and alpha, so the ends and the sign of the slopes decide the window); the weights themselves are the cited results"
+  check_no_generation_number_has_zero_coefficient_and_the_measured_tilt:
+    kind: exact
+    clauses: ["(iii)", "(iv)"]
+    omits: "the three-sigma window on the root and its square; all n_g < 200 and n_h <= 16 (for larger n_g at fixed n_h <= 13 the value 1 + 4(n_g - 3)/n_h exceeds the window, by monotonicity); the first hit (14, 32); the values at 3, 7, 8 generations; tree-level couplings 0, 1/6, 3/16, 1/2; the sign of B around 1/6; the index formula and the measured value are the cited results"

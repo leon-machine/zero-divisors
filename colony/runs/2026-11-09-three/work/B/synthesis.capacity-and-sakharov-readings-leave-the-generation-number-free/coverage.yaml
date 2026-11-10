@@ -1,0 +1,17 @@
+functions:
+  check_pair_currents_have_helicity_at_most_one_and_only_helicity_zero_is_canonical:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "on four channels with weights +1/2, +1/2, -1/2, -1/2 and entries in span{1, J}: every matrix unit has helicity w_a - w_b, the set of helicities is {-1, 0, 1}, helicity +-1 units and a general helicity-one block square to zero and are not normal; the single-array current has helicity 0; a unit commutes with every diagonal unit iff it is diagonal (2 to 4 channels); the bound n on commuting normal families for general matrices is the diagonalisation argument of the proof; that non-normal modes are not canonical is the cited clause"
+  check_capacity_inequality_passes_two_generations_on_recorded_contents:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "the loads 34, 32, 30, 8 and the least n_g meeting each; that the store holds no graviton field is read from the cited results, not computed"
+  check_sakharov_coefficient_has_zeros_at_every_generation_number:
+    kind: exact
+    clauses: ["(iv)"]
+    omits: "the stored values 0, 8, -12 and the stored form at three generations; the zeros in xi_R at alpha = 1 and in alpha at xi_R = 1/6 for n_g = 1..5; fifteen components for n_g < 200; the helicity rule with and without the graviton's states; the quartic balance; the weights themselves are the cited results, not recomputed"
+  check_the_pin_is_recurrence_with_asymptotic_freedom_and_the_tally_of_rules:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "b_2 < 0 exactly for n_g <= 5 at n_h = 1, 2 among n_g < 40; the conjunctions; the table of eleven variants and its tally; the choice of variants is the proof's, and the table is not a probability"

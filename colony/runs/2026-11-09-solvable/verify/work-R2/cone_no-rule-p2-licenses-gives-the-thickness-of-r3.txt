@@ -1,0 +1,31 @@
+DIRECT PREMISES:
+  [uses] dark-matter.total-function-thickness pinned@5 current@5 status=proved
+  [uses] dark-matter.projection-every-towers-content-dilutes-ones pinned@3 current@3 status=proved
+  [uses] dark-matter.stored-asymmetry-charge-not-number pinned@9 current@9 status=proved
+  [uses] dark-matter.parallel-boundary-mode-spaces-one-wall pinned@5 current@5 status=proved
+  [uses] dark-matter.no-coupling-rule-odd-towers-follows pinned@6 current@6 status=proved
+CLAIMREFS NOT IN uses/assumes: ['dark-matter.p2-indifference', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.r1-equal-mass-per-quantum', 'dark-matter.r2-one-quantum-per-unit-ball', 'dark-matter.r3-one-cell-per-unshared-direction']
+PAST CONE SIZE (union): 254
+POSTULATES IN CONE:
+  dark-matter.hyp-u-equal-rank-one-eigenvalues @3 via ['dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number', 'dark-matter.total-function-thickness']
+  dark-matter.p1-single-frozen-point @1 via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']
+  dark-matter.p2-indifference @2 via ['(direct)', 'dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall']
+  dark-matter.p3-nearest-dimension-representatives @2 via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']
+  dark-matter.p4-democracy-asymmetry-over-oriented-towers @1 via ['dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number', 'dark-matter.total-function-thickness']
+  dark-matter.p5-boundary-modes-hold-entropy-not @1 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.stored-asymmetry-charge-not-number']
+  dark-matter.r1-equal-mass-per-quantum @1 via ['(direct)', 'dark-matter.total-function-thickness']
+  dark-matter.r2-one-quantum-per-unit-ball @2 via ['(direct)', 'dark-matter.total-function-thickness']
+  dark-matter.r3-one-cell-per-unshared-direction @1 via ['(direct)']
+  hawking.premise-i-interface-identification @1 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.stored-asymmetry-charge-not-number']
+  scrambling.indifference-structural-premise-series @2 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number']
+  sheaf.tameness @1 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number']
+  singularity.p-univalence @2 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.stored-asymmetry-charge-not-number']
+  singularity.q-joint-quasi-freeness-s-wave @3 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number']
+  singularity.r-regularity-fixed-locus @4 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.stored-asymmetry-charge-not-number']
+  singularity.rate-models-kinematic-inputs-l-u @2 via ['dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.stored-asymmetry-charge-not-number']
+  standard-model.slot-module-hypothesis @4 via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number']
+  synthesis.common-ceiling-coupling-premise @1 via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.population-count-one-share-half-percent', 'dark-matter.stored-asymmetry-charge-not-number']
+  synthesis.continuum-completion-premise @2 FOUNDATION via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']
+  synthesis.premise-minimal-non-commutativity @2 FOUNDATION via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']
+  synthesis.premise-superposition-over-the-integers @2 FOUNDATION via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']
+  synthesis.premise-the-bit @2 FOUNDATION via ['dark-matter.no-coupling-rule-odd-towers-follows', 'dark-matter.parallel-boundary-mode-spaces-one-wall', 'dark-matter.population-count-one-share-half-percent']

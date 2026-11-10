@@ -24,7 +24,7 @@ derivations:
   - dark-matter.imported-eight-towers-mod-8-clock@4
   assumes:
   - dark-matter.p2-indifference@2
-  - dark-matter.p3-nearest-dimension-representatives@2
+  - dark-matter.p3-nearest-dimension-representatives@3
   proof: proof-main.tex
 checked_by:
 - kind: legacy

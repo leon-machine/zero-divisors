@@ -25,7 +25,7 @@ derivations:
   - families.imported-grade-three-direction-between-families@7
   - families.imported-tree-relations-family-no-go@6
   - standard-model.space-symmetric-doublet-mass-forms-two@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

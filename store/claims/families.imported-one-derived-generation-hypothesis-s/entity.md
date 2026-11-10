@@ -28,7 +28,7 @@ derivations:
   - standard-model.chirality-two-halves-spinor-module-conjugation@6
   - standard-model.hypercharge-global-form-pair-counting-consistency@5
   - standard-model.quarks-leptons-two-level-fermion-content@5
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: proof

@@ -1,0 +1,109 @@
+{
+ "front_matter": {
+  "id": "synthesis.mass-ordered-dressing-cannot-spoil-koide",
+  "kind": "claim",
+  "version": 1,
+  "title": "Mass-ordered dressing cannot turn Koide brackets into quark masses",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "generations",
+  "tags": [
+   "flavour-and-mixing",
+   "no-go",
+   "confronted-with-data"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "2026-10-24-all-open"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "role": "proposal and drafting",
+    "source": "Co-Authored-By trailer of the commit that added it"
+   }
+  ],
+  "review": "draft",
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "families.linear-conjecture-refuted-data@3"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "quantities": [
+   "quantity.down-quark-mass@1",
+   "quantity.strange-quark-mass@1",
+   "quantity.bottom-quark-mass@1",
+   "quantity.top-quark-mass@1"
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::check_flavour_blind_dressing_keeps_q"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_raising_lighter_masses_lowers_q"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_quark_quotients_exceed_two_thirds"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_required_heavy_to_light_ratio"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "lineage": {
+   "motivated_by": [
+    "families.selectivity-observation-level",
+    "families.koide-nullity-condition-one-member-invariant"
+   ]
+  },
+  "extraction": {
+   "open_problem": "op.gram-square-and-face-space",
+   "note": "Addresses the third part of the problem, the strong dressing that spoils the quark relation, adversarially. The selectivity account (families.selectivity-observation-level, conjectured) has leptons undressed and quarks strongly dressed, so that Koide could hold at bracket level for all three sectors while failing for physical quark masses. This result shows the strong dressing moves the quotient the wrong way. The quotient is homogeneous of degree zero, so a common factor does nothing; raising the lighter masses relative to the heaviest strictly lowers it (an exact lemma with a stated sufficient condition); and perturbative QCD dressing is of that kind (flavour-blind in MS-bar at a common scale; own-scale evaluation and the pole conversion enhance the lighter quarks), as is the constituent dressing, while the top decays before hadronising. Since the measured quotients exceed 2/3 in both quark sectors at every standard mass definition (0.731 to 0.889), the brackets exceed it by at least as much. A Koide bracket would need a dressing favouring the heavier quark by a factor of at least 1.88 (down, stored values) and 8.67 (up, own-scale values). The QCD facts (flavour-blind anomalous dimension, the sign of the scale and pole corrections, top decay before hadronisation) are argued from memory, not proved, as the title says; the u and c masses and the M_Z mass set (the 2008 running-mass table of Xing, Zhang and Zhou) are cited from memory; the down-sector and top values are the stored quantities. The exact content is the lemma and the certified numbers. Transport-absent (an inequality on the Koide quotient and standard QCD)."
+  }
+ },
+ "levels": {
+  "formal": "Let $Q(m) = \\sum_{k}m_{k}/(\\sum_{k}\\sqrt{m_{k}})^{2}$ for positive $m = (m_{1}, m_{2}, m_{3})$ with $m_{3}$ the largest, the quotient of Proposition \\claimref{families.linear-conjecture-refuted-data}, and call $m' = (D_{1}m_{1}, D_{2}m_{2}, D_{3}m_{3})$ a dressing of $m$ by the factors $D_{k} > 0$.\n\\begin{enumerate}\n\\item[(i)] \\emph{(Flavour-blind dressing.)} $Q(\\lambda m) = Q(m)$ for every $\\lambda > 0$.\n\\item[(ii)] \\emph{(Dressing that favours the lighter flavours.)} If $D_{1}, D_{2} \\ge D_{3}$ and $D_{j}m_{j} \\le D_{3}m_{3}/9$ for $j = 1, 2$, then $Q(m') \\le Q(m)$, with equality only when $D_{1} = D_{2} = D_{3}$. (With $s_{k} = \\sqrt{m_{k}}$, $S_{1} = \\sum s_{k}$, $S_{2} = \\sum s_{k}^{2}$: $\\partial Q/\\partial s_{j} = 2(S_{1}s_{j} - S_{2})/S_{1}^{3}$, negative whenever $3s_{j} \\le s_{3}$ and positive for $j = 3$.)\n\\item[(iii)] \\emph{(The quarks.)} At the stored values ($m_{d}$, $m_{s}$ at $2$ GeV, $m_{b}(m_{b})$, $m_{t}$ direct) and at further standard definitions, $Q > \\tfrac23$ in both quark sectors: down in $(0.731, 0.732)$ (stored) and $(0.745, 0.746)$ (running masses at $M_{Z}$); up in $(0.848, 0.849)$ ($m_{u}$ at $2$ GeV, $m_{c}(m_{c})$, $m_{t}$), $(0.831, 0.832)$ (charm pole mass) and $(0.888, 0.889)$ (at $M_{Z}$). So if the physical masses are a dressing of the kind in (i) or (ii) of brackets $m^{0}$, then $Q(m^{0}) \\ge Q(m) > \\tfrac23$: such a dressing cannot turn a Koide bracket ($Q = \\tfrac23$) into the measured quark masses.\n\\item[(iv)] \\emph{(What a Koide bracket would need.)} If $D_{3}/D_{j} \\le R$ for $j = 1, 2$ and $R\\,m_{j} \\le m_{3}/9$, then $Q(m^{0}) \\ge Q(Rm_{1}, Rm_{2}, m_{3})$, which exceeds $\\tfrac23$ for $R < R^{*}$ with $R^{*} \\in (1.88, 1.89)$ for the stored down sector, $(2.19, 2.20)$ for the down sector at $M_{Z}$, $(8.67, 8.68)$ for the up sector at own scales and $(17.5, 17.6)$ at $M_{Z}$. A Koide bracket needs a dressing that enhances the heaviest quark over a lighter one by at least $R^{*}$. Neither (ii) nor (iv) treats a dressing that raises the middle mass and lowers the lightest relative to the heaviest ($D_{2} > D_{3} > D_{1}$).\n\\end{enumerate}\nArgued, not proved (standard QCD, cited from memory and not stored): perturbative strong dressing is of the kind in (i) and (ii): the mass anomalous dimension in a mass-independent scheme is the same for every flavour, so running between common scales is a common factor, and evaluating each mass at its own scale or converting to the pole mass enhances the lighter quarks, by asymptotic freedom; constituent dressing, additive and of order $\\Lambda_{\\mathrm{QCD}}$, favours the lighter quarks too. On that reading these dressings can only lower the quark quotients, and the quarks' failure of the relation is not produced by them from Koide brackets.",
+  "technical": "The selectivity account explains why Koide holds for the charged leptons and not for the quarks: leptons are undressed, quark masses are dressed by the strong interaction. This result tests that account and finds the dressing pushes the wrong way. The Koide quotient does not change when all three masses are multiplied by one factor, and it strictly decreases when the lighter masses are raised relative to the heaviest (as long as they stay below a ninth of it). Perturbative strong dressing is of this kind, by standard QCD (argued here, not stored): in the standard scheme all quark masses run by the same factor between common scales, and quoting each mass at its own scale, or as a pole mass, makes the lighter quarks relatively heavier. So the strong dressing can only lower the quotient. The measured quark quotients are above $\\tfrac23$ in both sectors under every standard mass definition (between $0.731$ and $0.889$), so the undressed values would be further from Koide, not on it. A Koide relation at bracket level would need a dressing that favours the heaviest quark by a factor of at least $1.88$ in the down sector and $8.67$ in the up sector, which no known strong-interaction effect does.",
+  "lay": "A striking formula relates the masses of the electron, muon and tau, but it fails for the quarks. One proposed reason is that quarks feel the strong force, which changes their apparent masses, while leptons do not. This result checks the direction of that change. The formula's key number is unaffected when every mass is scaled by the same factor, and it goes down when the lighter particles get relatively heavier. The strong force does exactly that: it scales all quark masses alike, and where it differs it makes the lighter ones relatively heavier. So it can only move the quarks towards the formula from above, and the quarks sit above it already. The strong force cannot be what spoils the formula for quarks.",
+  "one-liner": "The Koide quotient is unchanged by a common dressing factor and strictly lowered by raising the lighter masses, so a strong dressing that is flavour-blind at a common scale and favours the lighter quarks at own scales, as pole masses or as constituent masses (argued from standard QCD) can only lower it; with the measured quark quotients above $\\tfrac23$ in both sectors (between $0.731$ and $0.889$), a Koide bracket would need a dressing favouring the heaviest quark by at least $1.88$ (down) and $8.67$ (up)."
+ },
+ "proofs": {
+  "main": "Write $s_{k} = \\sqrt{m_{k}}$, $S_{1} = \\sum_{k}s_{k}$, $S_{2} = \\sum_{k}s_{k}^{2}$, so $Q = S_{2}/S_{1}^{2}$, the quotient of Proposition \\claimref{families.linear-conjecture-refuted-data}.\n\n\\emph{(i)} $m \\mapsto \\lambda m$ sends $S_{2} \\mapsto \\lambda S_{2}$ and $S_{1} \\mapsto \\sqrt{\\lambda}S_{1}$, so $Q$ is unchanged. The check confirms it exactly on rational square coordinates and confirms that a factor on one mass alone changes $Q$.\n\n\\emph{(ii)} $\\partial Q/\\partial s_{j} = (2s_{j}S_{1}^{2} - 2S_{1}S_{2})/S_{1}^{4} = 2(S_{1}s_{j} - S_{2})/S_{1}^{3}$; the check compares it with exact difference quotients. By Cauchy-Schwarz $S_{1}^{2} \\le 3S_{2}$, and $S_{1} > s_{3}$, so $S_{2} \\ge S_{1}^{2}/3 > S_{1}s_{3}/3$; hence $3s_{j} \\le s_{3}$ gives $S_{1}s_{j} < S_{2}$ and $\\partial Q/\\partial s_{j} < 0$. For $j = 3$, $S_{2} = \\sum s_{k}^{2} < s_{3}S_{1}$ since $s_{k} < s_{3}$ for $k \\ne 3$ (or $\\le$ with a strict term), so $\\partial Q/\\partial s_{3} > 0$. By (i) take $D_{3} = 1$. Along $t \\mapsto (D_{1}^{t}m_{1}, D_{2}^{t}m_{2}, m_{3})$, $t \\in [0,1]$, each light root rises monotonically to $\\sqrt{D_{j}m_{j}} \\le s_{3}/3$, so the condition $3s_{j}(t) \\le s_{3}$ holds throughout and $dQ/dt = \\sum_{j=1,2}(\\tfrac12\\ln D_{j})\\,s_{j}(t)\\,\\partial Q/\\partial s_{j} \\le 0$, strictly unless $D_{1} = D_{2} = 1$. So $Q(m') \\le Q(m)$. The check also confirms it on a rational grid of factors.\n\n\\emph{(iii)} The values (GeV): down stored $m_{d} = 0.00470$, $m_{s} = 0.0935$ (at $2$ GeV), $m_{b} = 4.18$ ($m_{b}(m_{b})$), from the stored quantities; up $m_{t} = 172.57$ (stored, direct measurements). Cited from memory and flagged: $m_{u} = 0.00216$ (at $2$ GeV), $m_{c}(m_{c}) = 1.273$, the charm pole mass $1.67$, and the running masses at $M_{Z}$, $(m_{u}, m_{c}, m_{t}) = (0.00127, 0.619, 171.7)$ and $(m_{d}, m_{s}, m_{b}) = (0.00290, 0.055, 2.89)$ (the 2008 table of Xing, Zhang and Zhou, Phys. Rev. D 77 (2008) 113016, recalled, not checked against the source). With certified rational bounds on every square root (integer square roots at $10^{-12}$), $3\\sum m > 2(\\sum\\sqrt{m})^{2}$ holds in all five sets, with $Q \\in (0.731, 0.732)$, $(0.745, 0.746)$, $(0.848, 0.849)$, $(0.831, 0.832)$, $(0.888, 0.889)$. If $m = D m^{0}$ with $D$ of kind (i), $Q(m^{0}) = Q(m)$; of kind (ii), $Q(m^{0}) \\ge Q(m)$ by (ii) applied to $m^{0}$ (the hypothesis $D_{j}m^{0}_{j} \\le D_{3}m^{0}_{3}/9$ is $m_{j} \\le m_{3}/9$, true in every set). In both cases $Q(m^{0}) > \\tfrac23$.\n\n\\emph{(iv)} $m^{0}_{k} = m_{k}/D_{k}$; by (i) rescale so that $m^{0} = (\\rho_{1}m_{1}, \\rho_{2}m_{2}, m_{3})$ with $\\rho_{j} = D_{3}/D_{j} \\le R$. By (ii) (its derivative statement, applied with the light factors moved up to $R$; the condition $Rm_{j} \\le m_{3}/9$ is checked at the upper ends used) $Q(m^{0}) \\ge Q(Rm_{1}, Rm_{2}, m_{3})$, whatever the $\\rho_{j} \\in (0, R]$. The check certifies $Q(R_{\\mathrm{lo}}m_{1}, R_{\\mathrm{lo}}m_{2}, m_{3}) > \\tfrac23 > Q(R_{\\mathrm{hi}}m_{1}, R_{\\mathrm{hi}}m_{2}, m_{3})$ for the four stated brackets; $Q$ at the corner falls strictly with $R$, so $R^{*}$, its crossing of $\\tfrac23$, lies between them (computed: $1.889$, $2.197$, $8.675$, $17.56$: $\\sqrt{R^{*}}$ is the smaller root of $R(3p - 2a^{2}) - 4ab\\sqrt{R} + m_{3} = 0$ with $a = s_{1} + s_{2}$, $b = s_{3}$, $p = m_{1} + m_{2}$).\n\n\\emph{The strong dressing (argued; standard QCD cited from memory, not stored).} In the MS-bar scheme the quark mass anomalous dimension depends on $\\alpha_{s}$ and the number of active flavours but not on the flavour, and the decoupling at a heavy threshold rescales all lighter masses alike, so the running between two common scales is a factor of kind (i); this is why $Q$ at $M_{Z}$ is the bracket's $Q$ for any bracket defined at a common scale. Quoting each mass at its own scale $\\mu_{k}$ increasing with $m_{k}$ multiplies it by $m(\\mu_{k})/m(\\mu_{0})$, which decreases with $\\mu_{k}$ (asymptotic freedom), and the pole conversion $m_{\\mathrm{pole}} = \\bar m(\\bar m)(1 + \\tfrac{4}{3\\pi}\\alpha_{s}(\\bar m) + \\dots)$ has a positive correction decreasing with the mass: both favour the lighter quark, kind (ii) (the masses involved satisfy the ninth condition). Constituent dressing, of order $\\Lambda_{\\mathrm{QCD}}$ additive, favours the lighter quarks still more, and the top decays before it hadronises. So no strong dressing of these kinds can raise a Koide bracket to the measured quotients, and the selectivity account of Observation \\claimref{families.selectivity-observation-level}, as far as it attributes the quark failure to the strong dressing, is excluded unless a dressing favouring the heaviest quark by at least $R^{*}$ is exhibited.\n"
+ },
+ "notes": [],
+ "derived": {
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "families.linear-conjecture-refuted-data"
+  ],
+  "used_by": [],
+  "ledger": "essential",
+  "programme": "transport-papers",
+  "holds_given": [
+   "scrambling.indifference-structural-premise-series"
+  ],
+  "evidence": "pass",
+  "past_cone_size": 94,
+  "future_cone_size": 0
+ }
+}

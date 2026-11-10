@@ -1,7 +1,7 @@
 ---
 id: dark-matter.r2-one-quantum-per-unit-ball
 kind: claim
-version: 2
+version: 3
 title: 'R2: one quantum per unit ball'
 status: postulate
 region: dark-matter
@@ -18,6 +18,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T14, deposited version
+- name: Claude Opus 5.5
+  role: wording of the premise, the list of dimensions marked as P3's window
+  version: 3
+  source: maintainer pass of 2026-11-09
 review: typed
 locators:
   paper: T14
@@ -25,6 +29,10 @@ locators:
   label: prem:R2
   line: 788
 extraction:
+  maintainer_pass_2026_11_09:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Version 2 -> 3. Wording: the list of dimensions "(2, 3 or 4)" now reads "(under P3, 2, 3 or 4)" at the formal and technical levels, since the list is the window of dark-matter.p3-nearest-dimension-representatives and the rule itself is stated for a space of any dimension (the dimension-generic reading used by synthesis.bott-shifted-model-leaves-the-odd-towers-dimension-free). What the premise asserts under P3 is unchanged.'
   typing:
     by: ai-typing-pass
     note: 'Postulate: no edges to type; levels only.'
@@ -37,10 +45,10 @@ lineage:
 ---
 
 ## formal
-A populated tower whose space has $D$ dimensions ($2$, $3$ or $4$) holds one quantum per unit ball $\B^{D}$ of that space, in one unit of length common to all towers: every tower has the same Wigner-Seitz radius. The rule presupposes that all six towers are populated, which for the odd four is the inference of Observation \claimref{dark-matter.which-towers-are-populated}.
+A populated tower whose space has $D$ dimensions (under P3, \claimref{dark-matter.p3-nearest-dimension-representatives}, $2$, $3$ or $4$) holds one quantum per unit ball $\B^{D}$ of that space, in one unit of length common to all towers: every tower has the same Wigner-Seitz radius. The rule presupposes that all six towers are populated, which for the odd four is the inference of Observation \claimref{dark-matter.which-towers-are-populated}.
 
 ## technical
-A populated tower whose space has $D$ dimensions ($D = 2, 3, 4$) holds one quantum per unit ball $\mathrm{B}^{D}$ of that space, in one unit of length common to all towers, so every tower has the same Wigner-Seitz radius. The rule presupposes that all six towers are populated, which for the four odd towers is an inference from the observed remainder rather than a result.
+A populated tower whose space has $D$ dimensions (under P3, $D = 2, 3, 4$) holds one quantum per unit ball $\mathrm{B}^{D}$ of that space, in one unit of length common to all towers, so every tower has the same Wigner-Seitz radius. The rule presupposes that all six towers are populated, which for the four odd towers is an inference from the observed remainder rather than a result.
 
 ## lay
 This assumption says that in every hidden sector the particles are packed at the same typical spacing: one per ball of a fixed size, measured in that sector's own number of dimensions. It also takes for granted that every sector contains matter at all.

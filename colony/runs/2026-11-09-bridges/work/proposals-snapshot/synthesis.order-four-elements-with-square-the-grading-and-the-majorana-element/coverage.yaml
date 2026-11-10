@@ -1,0 +1,23 @@
+functions:
+  check_klein_twist_is_a_polynomial_in_the_grading:
+    kind: exact
+    clauses: ["(1) in Cl(4,1), two modes: V = p_+ - I p_-, V^2 = k, V V^{-1} = 1, V commutes with the six bivectors of the generators", "(1) Ad_V(e_1) = -I e_1 k is of grade two, outside the span of the generators over span{1, I}; Ad_V^2 is the grading automorphism"]
+    omits: "two modes only; the general statement is the proof's two-line computation"
+  check_pseudoscalar_of_the_ten_generators:
+    kind: exact
+    clauses: ["(2) omega^2 = -1 in Cl(10,0), omega anticommutes with the ten generators and commutes with the 45 bivectors", "(2) omega is the product of the five mode rotors e_{2j-1}e_{2j}, each of square -1"]
+  check_pseudoscalar_is_the_unit_times_the_chirality:
+    kind: exact
+    clauses: ["(2) omega = -I (-1)^N with N_j = v_j v_j^* the occupation numbers, and not +I (-1)^N", "(2) the projector of the empty state is annihilated by every v_j^*, is even, and omega acts on it by -I; on a one-mode state omega acts by +I"]
+  check_majorana_element_is_odd_under_the_pseudoscalar:
+    kind: exact
+    clauses: ["(3) T = v_1 ... v_5 has real and imaginary parts of pure grade five and omega T omega^{-1} = -T", "(3) [sum of the five mode bivectors, T] = +-10 I T, and every difference of two mode bivectors commutes with T"]
+    omits: "that a vev along T is the stored Majorana premise's term is the cited claim's statement, not checked here"
+  check_dirac_terms_keep_the_pseudoscalar_modulo_the_gauge_group:
+    kind: exact
+    clauses: ["(3) z = exp((pi/2)(e1e2 - e3e4)) is -1 on the four slot generators, +1 on the six pair generators, and commutes with T", "(3) omega z commutes with the slot generators and (omega z) T (omega z)^{-1} = -T", "(3) omega anticommutes with sample blades of grades one, three and five"]
+    omits: "that the grade-one mass forms are the slot vectors and that z differs from exp(-2 pi I Y) by a central element of su(3) are the proof's, from the stored dictionary and eigenvalues"
+  check_signed_dimension_sums_for_fifteen_and_sixteen:
+    kind: exact
+    clauses: ["(4) every signed sum of (6, 3, 3, 2, 1) is odd; signed sums of (6, 3, 3, 2, 1, 1) reach 16, -16 and 0", "(4) three fifteen-component generations give an odd total for every choice, two can cancel, and 15 n_g is divisible by 16 first at n_g = 16"]
+    omits: "that the anomaly of such an element is this sum modulo 16 is literature cited from memory and is not used as a premise"

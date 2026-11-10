@@ -109,11 +109,10 @@ def haar_moment(n, dA, dB):
 
 
 def check_haar_moments_tend_to_catalan():
-    premise("synthesis.imported-haar-average-purity")
     premise("synthesis.imported-haar-moments-of-random-pure-state")
     premise("singularity.imported-page-average-entropy-subsystem")
     for m, nn in [(2, 2), (2, 3), (3, 5), (4, 4), (2, 7)]:
-        assert haar_moment(2, m, nn) == F(m + nn, m * nn + 1)           # the stored Haar purity
+        assert haar_moment(2, m, nn) == F(m + nn, m * nn + 1)           # the index-two value
     for n in range(2, 6):
         eta = tuple((i + 1) % n for i in range(n))
         # numerator as a polynomial in d at dA = dB = d: coefficient list by power
@@ -196,7 +195,83 @@ def check_gap_family_interpolates_half_nat_to_ln4():
     return True
 
 
+# ---------------------------------------------------------------- version 4: a parity sector
+def sector_trace(d, s, tau):
+    """Number of n-tuples of sector basis states (a_i, b_i), parity(a_i) = parity(b_i), fixed when the a are
+    permuted by tau and the b by s: the trace of P_sigma (P_eta on A) on the n-th power of the sector."""
+    from itertools import product
+    n = len(s)
+    par = lambda x: bin(x).count("1") % 2
+    count = 0
+    for a in product(range(d), repeat=n):
+        if any(a[tau[i]] != a[i] for i in range(n)):
+            continue
+        for b in product(range(d), repeat=n):
+            if all(b[s[i]] == b[i] for i in range(n)) and all(par(a[i]) == par(b[i]) for i in range(n)):
+                count += 1
+    return count
+
+
+def sector_moment(n, d, perms):
+    den = F(1)
+    for l in range(n):
+        den *= F(d * d, 2) + l
+    return 2 * sum(F(d, 2) ** (cs + ct) for cs, ct in perms) / den
+
+
+def check_parity_sector_moments_keep_the_catalan_limit():
+    """Partial: the sector trace count is enumerated at three cases only (n = 2 with d = 2, 4; n = 3 with
+    d = 2); the count for every n is the proof's argument over F_2. The genus form, the Catalan limit and the
+    bounds are evaluated for n = 2..6, d = 2..32."""
+    premise("synthesis.imported-haar-moments-of-random-pure-state")
+    premise("tower.commuting-copies")
+    premise("synthesis.eviction-keeps-one-replica-saddle")
+    # the sector form of the moments is clause (iv) of the finite-averages result; the count below confirms it
+    premise("synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector")
+    # the twist behind the reduction: two modes, generators e (square +1), f (square -1); A = the first mode
+    sq = (1, -1, 1, -1)
+    p_a = mul(gen(1), gen(0), sq)                                    # the parity f e of the first mode
+    assert GA.eq(mul(p_a, p_a, sq), sc(F(1)))
+    for y in (gen(2), gen(3)):
+        t = mul(y, p_a, sq)
+        assert GA.eq(mul(t, t, sq), mul(y, y, sq))
+        assert all(GA.commutes(t, x, sq) and GA.anticommutes(y, x, sq) for x in (gen(0), gen(1)))
+    cyc = {}
+    for n in (2, 3, 4, 5, 6):
+        eta = tuple((i + 1) % n for i in range(n))
+        cyc[n] = []
+        for s in permutations(range(n)):
+            tau = compose(inverse(s), eta)
+            cyc[n].append((cycles(s), cycles(tau)))
+            if n <= 3:                                              # the trace count, by enumeration
+                for d in ((2, 4) if n == 2 else (2,)):
+                    assert sector_trace(d, s, tau) == 2 * F(d, 2) ** (cycles(s) + cycles(tau))
+    genus_one = {2: 0, 3: 1, 4: 10, 5: 70, 6: 420}
+    for n in (2, 3, 4, 5, 6):
+        ng = {}
+        for cs, ct in cyc[n]:
+            assert (n + 1 - cs - ct) % 2 == 0
+            g = (n + 1 - cs - ct) // 2
+            ng[g] = ng.get(g, 0) + 1
+        assert ng[0] == catalan(n) and ng.get(1, 0) == genus_one[n]
+        for d in (2, 4, 8, 16, 32):
+            u = F(1, d * d)
+            v = sector_moment(n, d, cyc[n])
+            den = F(1)
+            for l in range(n):
+                den *= 1 + 2 * l * u
+            assert v * d ** (n - 1) == sum(c * (4 * u) ** g for g, c in ng.items()) / den
+            assert F(1, d ** (n - 1)) < v < catalan(n) * F(1, d ** (n - 1))
+            if n <= 4 and d <= 8:
+                assert v < haar_moment(n, d, d)
+            if n == 2:
+                assert v == F(2 * d, d * d + 2)
+    assert sector_moment(3, 2, cyc[3]) == F(1, 2) and sector_moment(2, 4, cyc[2]) == F(4, 9)
+    return True
+
+
 if __name__ == "__main__":
     for fn in [check_planar_replica_saddles_are_catalan, check_haar_moments_tend_to_catalan,
-               check_eviction_keeps_one_saddle_every_index, check_gap_family_interpolates_half_nat_to_ln4]:
+               check_eviction_keeps_one_saddle_every_index, check_gap_family_interpolates_half_nat_to_ln4,
+               check_parity_sector_moments_keep_the_catalan_limit]:
         GA.check(fn.__name__, fn())

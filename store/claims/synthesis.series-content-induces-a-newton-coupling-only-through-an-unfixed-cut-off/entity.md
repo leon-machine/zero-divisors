@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.imported-sakharov-induced-gravity-coefficients@2
-  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@3
+  - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@4
   - standard-model.connection-forced@5
   - standard-model.chain@8
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5

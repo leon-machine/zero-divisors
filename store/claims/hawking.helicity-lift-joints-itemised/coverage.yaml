@@ -8,7 +8,7 @@ functions:
     clauses: ["J2"]
     omits: "all 35 monomials of degree <= 3 in four variables (hbar = 1); shows q(id) = -(Upsilon + 2) and that the normal-ordered sum has no offset; the u(1) identification with the conformal storey of Cl(2,4) and the claim that the helicity ladder is part of the ascended kinematics are not computed"
 untouched_premises:
-  hawking.imported-s-wave-bosonic-sector: "joint J3, the s-wave reduction, is a modelling joint with no computable content (the docstring says so)"
+  hawking.imported-s-wave-bosonic-sector: "joint J3, the partial-wave reduction, is a modelling joint with no computable content (the docstring says so)"
   hawking.joint-j3-s-wave-reduction: "assumed modelling joint J3; no computable content"
 judge:
   by: coverage-judge-2026-10-23

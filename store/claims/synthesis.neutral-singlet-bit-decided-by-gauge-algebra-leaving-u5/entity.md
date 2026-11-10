@@ -25,7 +25,7 @@ review: draft
 derivations:
 - name: main
   uses:
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   - synthesis.cpt-closure-forces-slot-module-and-chirality@1
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
   - standard-model.invariant-pairing-five-modes@5

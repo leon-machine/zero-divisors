@@ -1,0 +1,25 @@
+functions:
+  check_generators_form_the_electroweak_algebra_on_two_doublets:
+    kind: sampled
+    clauses: ["(i) rho is a representation of su(2) + u(1) by antisymmetric maps", "(i) no nonzero invariant vector of the two doublets"]
+    omits: "brackets and antisymmetry on two sample pairs (linearity covers the rest); s^2 = 0 from the representation property is in the proof"
+  check_potential_is_gauge_invariant:
+    kind: sampled
+    clauses: ["(ii) N_k, K, K' invariant under rational weak and hypercharge rotors", "(ii) K + K' = N1 N2", "(i) <grad V, rho(X) Phi> = 0"]
+    omits: "two sample pairs and Pythagorean rotors; the general invariance is the rotor argument of the proof"
+  check_free_brst_symmetry_needs_a_stationary_vacuum:
+    kind: sampled
+    clauses: ["(i) Hess V(v)(h, X v) + <grad V(v), X h> = 0", "(i) the obstruction is nonzero off a stationary point", "(iii) the gradient vanishes at the two vacua"]
+    omits: "two vacua, nine directions; the degree-two BRST identity is derived in the proof"
+  check_goldstone_rank_is_three_exactly_on_aligned_doublets:
+    kind: sampled
+    clauses: ["(ii) rank 0, 3, 4 with rank 3 exactly when K' = 0 and Phi != 0", "(ii) K + K' = N1 N2"]
+    omits: "all 3^8 pairs with entries in {-1, 0, 1}; general pairs by the stabiliser argument of the proof"
+  check_one_coupling_sign_decides_the_pattern:
+    kind: sampled
+    clauses: ["(iii) the decomposition of V_{-1,3/2} and its minimum -3/4 at an aligned pair", "(iii) V_{1,2} >= 0 and zero at a charge-breaking pair", "(iii) ranks and physical counts 27 + 5 and 28 + 4"]
+    omits: "the decompositions on three samples each; the global statement is the sum-of-squares argument of the proof"
+  check_lift_locus_rank_three_exactly_on_the_boundary:
+    kind: sampled
+    clauses: ["(iv) the dictionary: complex form and left e12", "(iv) on L, K = H^4, N1 N2 >= H^4, rank 3 exactly on the boundary"]
+    omits: "five points of L with H^2 = 1 and three dictionary samples"

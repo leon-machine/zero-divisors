@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - families.imported-decomposition-grade-dictionary@1
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

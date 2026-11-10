@@ -1,7 +1,7 @@
 ---
 id: synthesis.lens-space-wall-rung-count-sees-the-integral-twist
 kind: claim
-version: 5
+version: 6
 title: 'Lens-space wall: the rung count sees the integral twist'
 status: proved
 region: synthesis
@@ -29,6 +29,10 @@ credit:
   role: consistency pass, formal now cites the imported Stiefel and Grassmannian Fact its proof uses
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Opus 5.5
+  role: lay and technical scope, the indefinite-side reading limited to dimension three
+  version: 6
+  source: maintainer pass of 2026-11-09
 review: draft
 about:
 - obj.sheaf.collar-data-coupling
@@ -62,6 +66,10 @@ lineage:
   - sheaf.wall-class
   - synthesis.wall-rung-count-is-height-of-dying-line-class
 extraction:
+  maintainer_pass_2026_11_09:
+    by: maintainer-2026-11-09
+    date: '2026-11-09'
+    note: 'Version 5 -> 6. Wording: the lay sentence "on an indefinite side the simple twist class sets the price" is limited to dimension three, with a matching parenthesis at the technical level, since on lens-space walls of dimension five and more an indefinite side needs at least three rungs although the height is two (synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial). The formal statement, proof and check are unchanged.'
   maintainer_pass_consistency:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -103,10 +111,10 @@ Classical inputs, imported as Fact \claimref{synthesis.imported-stiefel-connecti
 ## technical
 The parent claim bounds the rung count of a tame wall between the height of the dying line's class and the least rank of a trivial bundle containing the dying line, and leaves the lens space $L(4,1)$ open: there the class squares to zero, so the lower bound is two, but the doubled dying line is not trivial, so the dying line does not sit in the trivial bundle of rank two that two rungs offer. The key is the adjoint map of rotors. On unit rotors of $\Cl(3,0)$, left multiplication by the half-turn rotor $e_2e_3$, whose square is $-1$, generates the $\mathbb{Z}_4$ with quotient $L(4,1)$, and the frame $R e_a \tilde R$ transforms by $\mathrm{diag}(1,-1,-1)$: its first row is a global section of the trivial line and its other two rows are sections of the dying line, so $\underline{\R} \oplus \shL \oplus \shL$ is trivial with an explicit frame.
 
-When the physical side is indefinite, the wall form takes the hyperbolic partner of the dying line and one further negative direction from the rungs, built with this frame; its negative bundle is then the negative part of the physical metric plus $\shL \oplus \shL$, which the frame identifies with the negative bundle of the standard form. A form with that negative bundle can be joined to the standard form through nondegenerate forms, by the connectivity of Stiefel manifolds, and that join is a two-rung completion. When the physical side is definite there is no direction to borrow: the necessity argument forces $\shL \oplus \shL$ trivial, which fails because an odd map from $S^3$ to the punctured plane would wind by half a turn per quarter turn of the fibre, so three rungs are needed and suffice, the dying line being the second row of the frame inside the trivial bundle of rank three. On a three-torus with the same mod-2 data the doubled dying line is trivial and two rungs suffice even with a definite side, so with a definite side the rung count separates walls the mod-2 classes do not; with an indefinite side it is the mod-2 height on both walls. All of this assumes the tame-wall setting of the parent claim.
+When the physical side is indefinite, the wall form takes the hyperbolic partner of the dying line and one further negative direction from the rungs, built with this frame; its negative bundle is then the negative part of the physical metric plus $\shL \oplus \shL$, which the frame identifies with the negative bundle of the standard form. A form with that negative bundle can be joined to the standard form through nondegenerate forms, by the connectivity of Stiefel manifolds, and that join is a two-rung completion. When the physical side is definite there is no direction to borrow: the necessity argument forces $\shL \oplus \shL$ trivial, which fails because an odd map from $S^3$ to the punctured plane would wind by half a turn per quarter turn of the fibre, so three rungs are needed and suffice, the dying line being the second row of the frame inside the trivial bundle of rank three. On a three-torus with the same mod-2 data the doubled dying line is trivial and two rungs suffice even with a definite side, so with a definite side the rung count separates walls the mod-2 classes do not; with an indefinite side it is the mod-2 height on both walls. That holds for these three-dimensional walls only: on the lens-space walls $L^{2m+1}(4)$, $m \geq 2$, an indefinite side needs at least three rungs although the height is two (\claimref{synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial}). All of this assumes the tame-wall setting of the parent claim.
 
 ## lay
-At a wall where the geometry changes signature, extra pairs of directions (rungs) can repair the degeneracy, and an earlier result bounded how many are needed by how the dying direction twists. The open test case was a wall shaped like the lens space $L(4,1)$, where the bounds were two and three. The answer depends on the side we live on. If that side has directions of both signs, as ordinary spacetime does, two rungs suffice: the repair borrows one direction of the opposite sign from the physical geometry and twists it together with the rungs, using the rotation of space by a half turn, whose spinor squares to minus one. If that side is definite there is nothing to borrow and three rungs are needed. A wall shaped like a three-torus with the same simple twist needs only two either way. So when the side we live on is indefinite, the price is set by the simple twist class alone; only when that side is definite is the price set by a finer property of the twist (whether the doubled dying direction can be untwisted, classically an integer-valued class) that the simple twist class does not record.
+At a wall where the geometry changes signature, extra pairs of directions (rungs) can repair the degeneracy, and an earlier result bounded how many are needed by how the dying direction twists. The open test case was a wall shaped like the lens space $L(4,1)$, where the bounds were two and three. The answer depends on the side we live on. If that side has directions of both signs, as ordinary spacetime does, two rungs suffice: the repair borrows one direction of the opposite sign from the physical geometry and twists it together with the rungs, using the rotation of space by a half turn, whose spinor squares to minus one. If that side is definite there is nothing to borrow and three rungs are needed. A wall shaped like a three-torus with the same simple twist needs only two either way. So for this three-dimensional wall, when the side we live on is indefinite, the price is set by the simple twist class alone, and only when that side is definite is it set by a finer property of the twist (whether the doubled dying direction can be untwisted, classically an integer-valued class) that the simple twist class does not record. On lens-shaped walls of five or more dimensions that fails: there even an indefinite side needs more rungs than the simple twist class suggests.
 
 ## one-liner
 Assuming the tameness hypotheses, a tame wall with cross-section $L(4,1)$ and twisted dying line needs exactly two rungs when the physical side is indefinite (the lower bound $\operatorname{ht}(w_1\shL)$ is attained, using the adjoint frame of the half-turn rotor) and exactly three when it is definite, while a three-torus wall with the same mod-2 data needs two in both cases.

@@ -1,0 +1,17 @@
+functions:
+  check_one_mode_has_no_pair_term_and_all_mass_terms_are_pair_terms:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "the relations of the four modes in Cl(4,4), nullity of one sample combination of annihilators, the six pair terms, and the stored one-array block's ad^2 = K^2 + mu^2 at one rational point; that every bilinear number-changing term is a combination of pair terms is the proof's"
+  check_charges_of_the_cross_and_self_pair_terms:
+    kind: exact
+    clauses: ["(ii)"]
+    omits: "the commutators of N, L, Na, Nc, Na - Nc and the grading with the cross and self pair terms, the charges of the stored one-array pair term, seven sample diagonal charges for the two-parameter family, and which charges the block commutes with on a grid of fifteen rational (K, m, M); the vanishing compression on a fixed-charge sector is the proof's one line; the comparison with the stored B - L charge is by form"
+  check_flip_of_the_second_modes_turns_the_block_into_hopping:
+    kind: exact
+    clauses: ["(iii)"]
+    omits: "the action of the flip on the modes, multiplicativity on one sample pair, the images of Na - Nc, S and L, and number conservation and self-adjointness of the flipped block on the grid; that an orthogonal map of generators induces an automorphism is standard"
+  check_block_spectrum_is_the_quadratic_with_sum_M_and_product_minus_m_squared:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "the quartic identity for ad_H on all eight mode operators at five rational (m, M), K = 0, its K != 0 form on fifteen (K, m, M), the ranks of the self and cross terms alone, and the root relations at (2, 3); the identity for all (m, M) is the proof's Cayley-Hamilton argument with the Pfaffian"

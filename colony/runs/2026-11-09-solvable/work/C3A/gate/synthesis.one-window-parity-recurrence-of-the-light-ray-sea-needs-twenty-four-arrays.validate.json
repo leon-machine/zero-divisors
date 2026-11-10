@@ -1,0 +1,40 @@
+{
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "std-algebra.witt-basis-car",
+   "message": "only 18% of its 17 logical neighbours share its subject; most are in 'clifford-structure'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays",
+   "message": "only 14% of its 7 logical neighbours share its subject; most are in 'entropy'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "synthesis.slot-module-light-ray-arrays-are-weyl-components",
+   "message": "only 14% of its 14 logical neighbours share its subject; most are in 'quantum-fields'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 1 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was stored but not run: evidence checks run when a maintainer reviews the proposal"
+}

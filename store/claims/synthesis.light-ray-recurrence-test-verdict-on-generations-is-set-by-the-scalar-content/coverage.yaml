@@ -1,0 +1,28 @@
+functions:
+  check_scalar_null_data_carries_no_potential:
+    kind: exact
+    clauses: ["(i)"]
+    omits: "Q(k) = Q(m) = 0 and <k, m> = 2 in Cl(1,3); on polynomial fields the identity div(f1 grad f2 - f2 grad f1) = f1 box f2 - f2 box f1, the cancellation of a symmetric potential term, the flux k.omega = f1 (k.grad) f2 - f2 (k.grad) f1 with k.grad = d_t + d_z, and box = (k.grad)(m.grad) - d_1^2 - d_2^2; control: the constant-time flux differs; the integration of the constraint along a generator and the reading of the flux as one real chiral boson are argued in the proof; the fermion and vector counts are the cited clauses, not recomputed"
+  check_content_count_and_gauge_vectors_drop_out:
+    kind: exact
+    clauses: ["(i)", "(ii)"]
+    omits: "the count c = 16 n_g + 2 n_V + n_s + 2 eps at the tabulated contents (78, 48, 72, 80, 24); the drop-out rule for every gauge dimension d < 40 and the so(10) contrast; J^2 = -1 (J = g1 g2 standing for the unit) and the quarter-turn phase of 24 arrays"
+  check_verdict_on_generations:
+    kind: complete
+    clauses: ["(iii)"]
+    omits: "both equivalences on the full period (n_g mod 3, n_h mod 6, eps) with two lifts, which is complete since c mod 24 depends only on these; the one-window rule and the graviton failure on 0 <= n_g, n_h < 40; the pass lists for n_g = 1..9 at n_h = 0, 1, 2; the phases J^10 = -1 and J^20 = 1 at c = 60, and 60 passing the sign-free form"
+  check_neutral_singlet_and_the_per_generation_count:
+    kind: sampled
+    clauses: ["(iv)"]
+    omits: "fifteen per generation for n_g <= 96; every f <= 48 against every n_g <= 96 for both tests; the modulus 3 exactly at f = 8, 16 mod 24; the general statement is the divisibility argument of the proof"
+  check_boson_fermion_balance_passes_every_generation_number:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "b = 2f gives c = 48 n_g and both tests for n_g < 40; N_S = 72 at N_g = 3, N_V = 12, c = 144; control: one scalar fewer fails; the identification of the cited quartic coefficient with b - 2f is read off the cited clause, not recomputed"
+  check_real_array_zero_point_and_the_j3_reading:
+    kind: exact
+    clauses: ["(vi)", "(i)"]
+    omits: "the finite part -B_2(a)/2 at a = 1, 1/2, 1/3, 2/5 by exact series inversion, zeta(-1) = -1/12, a real integer-weight array -kappa/24 and +kappa/48 at the half offset, the CAR value -kappa/24 at three kappas; J3's reading c = 16 n_g passing exactly n_g = 3, 6, 9 for n_g <= 9 under both tests; that the boson zero point is the null-ordered window value is part of the additive reading, not computed"
+untouched_premises:
+  singularity.q-joint-quasi-freeness-s-wave: "supplies the arrays of the sea; the checks count components and compute the phases directly"
+  synthesis.window-reading-array-killing-energy: "fixes the per-array constant -kappa/24 that the counting uses; the checks take it as given"

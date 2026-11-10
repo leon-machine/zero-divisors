@@ -1,0 +1,6 @@
+I405  synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side
+      sheaf.tameness is declared and untouched, as expected: coverage.yaml: the setting of the parent claim; no check computes with it
+I405  synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side
+      synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory is declared and untouched, as expected: coverage.yaml: enters only through clause (6) of the stored cohomology theorem
+
+synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side: 0 error(s), 2 other finding(s); check result: pass

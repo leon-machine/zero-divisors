@@ -46,6 +46,16 @@ lineage:
   - field-theory.composite-gauge-bosons-what-excluded
   - field-theory.fock-space-maxwell-modes
 extraction:
+  maintainer_pass_colour:
+    by: maintainer-2026-11-08
+    date: '2026-11-08'
+    note: >-
+      Note added at Leon's request (no change to statement, proof or check). The check's 24 Hurwitz units reproduce the
+      SU(2) Haar moments through degree 5, so the lattice gauge theory of the binary tetrahedral group shares every
+      strong-coupling term of this result with link degree at most 5, while a finite gauge group freezes at weak
+      coupling (argued, cited from memory). This is a sharper comparison than compact U(1): identical coefficients,
+      not only the same form. The colour analogue is
+      synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three.
   maintainer_pass:
     by: maintainer-2026-11-01
     date: '2026-11-01'

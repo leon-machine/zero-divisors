@@ -26,7 +26,7 @@ derivations:
   - dark-tower-matter.five-dimensional-towers@4
   - dark-tower-matter.imported-unit-ball-rule@4
   assumes:
-  - dark-matter.r2-one-quantum-per-unit-ball@2
+  - dark-matter.r2-one-quantum-per-unit-ball@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

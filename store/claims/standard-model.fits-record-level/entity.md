@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.imported-clebsch-structure-seesaw@1
   - standard-model.what-angle-asks-neutrino-sector@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - standard-model.premise-ew-equal-weight@1
   proof: proof-main.tex

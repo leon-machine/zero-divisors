@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.mirror-temperature-measures-deposit-under-r@1
-  - dark-matter.stored-asymmetry-charge-not-number@9
+  - dark-matter.stored-asymmetry-charge-not-number@10
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5

@@ -33,7 +33,7 @@ derivations:
   - standard-model.chirality-two-halves-spinor-module-conjugation@6
   - dark-energy.four-alternatives-are-exhaustive-three-are@2
   - synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation@4
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   assumes:
   - dark-matter.premise-cpt-covariance@3
   - dark-matter.premise-flag-as-datum@4

@@ -28,7 +28,7 @@ derivations:
   - synthesis.solar-angle-light-plane-sum-rule@1
   - standard-model.imported-clebsch-structure-seesaw@1
   - standard-model.neutrino-dirac-matrix-charged-fermions@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

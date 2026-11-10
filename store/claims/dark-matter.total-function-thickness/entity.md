@@ -26,7 +26,7 @@ derivations:
   assumes:
   - dark-matter.p2-indifference@2
   - dark-matter.r1-equal-mass-per-quantum@1
-  - dark-matter.r2-one-quantum-per-unit-ball@2
+  - dark-matter.r2-one-quantum-per-unit-ball@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

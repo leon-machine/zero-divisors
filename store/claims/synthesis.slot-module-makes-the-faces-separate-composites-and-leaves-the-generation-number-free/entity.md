@@ -29,7 +29,7 @@ derivations:
   - standard-model.gauge-algebra-minimal-massive-composite@4
   - synthesis.imported-witten-global-su2-anomaly@1
   assumes:
-  - standard-model.slot-module-hypothesis@4
+  - standard-model.slot-module-hypothesis@5
   - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3
   proof: proof-main.tex
 checked_by:

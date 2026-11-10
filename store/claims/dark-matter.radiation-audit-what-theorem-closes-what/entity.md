@@ -30,7 +30,7 @@ derivations:
   - dark-matter.open-channels-their-costs@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.stored-asymmetry-charge-not-number@9
+  - dark-matter.stored-asymmetry-charge-not-number@10
   - dark-matter.type-residue-what-each-tower-can@5
   - dark-matter.ceiling-valued-inherited-success@5
   proof: proof-main.tex

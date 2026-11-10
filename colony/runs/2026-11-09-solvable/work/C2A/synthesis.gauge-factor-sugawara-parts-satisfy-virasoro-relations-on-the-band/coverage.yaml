@@ -1,0 +1,38 @@
+functions:
+  check_band_operators_realise_the_tower_modes:
+    kind: sampled
+    clauses:
+    - "(v) the band realisation of D: the Clifford relations of the tower planes e = c* + c, f = c* - c (squares 1 and -1 from GA, anticommuting) on 1692 relations of a three-channel band around the sea; a zero mode and the energy counted from the sea"
+    omits: "other channels and deeper levels, where the sign rule is the same finite count"
+  check_band_energy_is_virasoro_at_sixteen_and_shifts_every_pair_current:
+    kind: sampled
+    clauses:
+    - "(ii) the band energy's Virasoro relations at c = 16 on four vectors and seven mode pairs up to |m| = 3; c = 15 and the weight k + n/2 fail"
+    - "(i) [L_n, j^{xy}_m] = -m j^{xy}_{m+n} for three channel pairs, five mode pairs, three vectors"
+    omits: "all modes, covered by the proof"
+  check_factor_parts_shift_their_own_currents_at_every_mode:
+    kind: sampled
+    clauses:
+    - "(i) [L^f_n, X_m] = -m X_{m+n} for the first basis current of each factor and 0 for the next factor's, five mode pairs with n != 0, two vectors; lambda = 3/2, 1, 0, 0; lambda + 1 fails for su(2)"
+    omits: "the other basis currents and all modes, covered by the proof"
+  check_factor_parts_satisfy_virasoro_relations:
+    kind: sampled
+    clauses:
+    - "(ii) Virasoro relations of su(3), su(2), Y, N with c = 32/7, 2, 1, 1 on three vectors and four mode pairs (two with m + n = 0); c + 1 and lambda + 1 fail for su(2)"
+    omits: "all modes and vectors, covered by the proof"
+  check_remainder_is_a_virasoro_algebra_at_fifty_two_sevenths_commuting_with_the_factors:
+    kind: sampled
+    clauses:
+    - "(iii) the remainder's Virasoro relations at c = 52/7 on four cases (c + 1 fails); its commutation with the first current of each factor and with each factor's modes; commutation of distinct factors' modes"
+    omits: "all modes and vectors, covered by the proof"
+  check_band_energy_is_so10_plus_number_at_every_mode:
+    kind: sampled
+    clauses:
+    - "(iv) L_n = L^so10_n + L^N_n for n = -2..2 on three vectors; lambda_so10 = 4, 45 traceless bilinears, c = 15; the 25 number-conserving bilinears alone fail"
+    omits: "|n| > 2, covered by the proof (Delta_0 = 0 and [Delta_0, Delta_n] = -n Delta_n)"
+  check_vacuum_norms_and_adjoints:
+    kind: exact
+    clauses:
+    - "(ii) L^f_n Omega = 0 for n = -1..2; level-two and level-three vacuum norms of the four factors and of the remainder equal (c/12)(m^3 - m); adjoint relations on sample vector pairs"
+    omits: "none"
+untouched_premises: {}

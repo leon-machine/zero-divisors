@@ -23,7 +23,7 @@ derivations:
   uses:
   - standard-model.ten-transported-ambient-space-doublets-are@2
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
-  - standard-model.hyp-s-slot-statistics@9
+  - standard-model.hyp-s-slot-statistics@10
   proof: proof-main.tex
 checked_by:
 - kind: check

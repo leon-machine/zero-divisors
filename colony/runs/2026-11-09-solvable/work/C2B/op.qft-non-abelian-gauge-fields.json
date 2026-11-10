@@ -1,0 +1,496 @@
+{
+ "problem": {
+  "id": "op.qft-non-abelian-gauge-fields",
+  "title": "The non-abelian gauge fields as quantum fields",
+  "area": "quantum-fields",
+  "kind": "research",
+  "difficulty": "frontier",
+  "status": "partial",
+  "source": "The review of what a quantum field theory still needs, 1 November; the BRST, running and lattice results and Leon's decision adopting the Krein-form premise, 1 November; the field-level BRST, quartet, Clifford-conjugation and Gribov results and Leon's decisions (the Neuberger, Fradkin-Shenker and Singer imports), 2 November; the colour-lattice results and Leon's decisions (no import of the strong-coupling clustering or of finite-group freezing; the colour item restated), 8 November",
+  "statement": "The gauge algebra of the minimal massive composite (\\claimref{synthesis.gauge-algebra-by-tower}, \\claimref{standard-model.gauge-algebra-minimal-massive-composite}) now has a nilpotent field-level BRST differential and, under clauses (K1) and (K2) of the Krein-form premise, free gluons and massive vectors with a positive physical space at every number of quanta. Quantise the interacting gluons and W and Z: the interacting BRST charge on the Krein space with positive physical space, the BRST transformation of the scalar sector with the breaking pattern derived rather than taken as input, and what the series says on confinement of colour.",
+  "why": "Two of the three Standard Model forces exist in the store as free fields and a perturbative device; their interacting quantum theory, and colour confinement, are not in the store.",
+  "known": "Composite charged massless gauge bosons are excluded (Weinberg-Witten) (\\claimref{field-theory.composite-gauge-bosons-what-excluded}). A nonzero self-adjoint BRST charge cannot exist on the store's positive forms; with the Gupta-Bleuler form and tower ghost pairs the free charge at a null momentum is nilpotent and self-adjoint (\\claimref{synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts}), and the indefinite form is a premise (\\claimref{synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields}); its one-particle form is the trace form of Clifford conjugation, minus the metric, which restates (K1) and does not derive it; the Fock space over it is the Feynman-gauge realisation, other covariant gauges being other state spaces (\\claimref{synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form}). Field-level BRST: on the gauge algebra $\\mathfrak{su}(2) \\oplus \\mathfrak{su}(3) \\oplus \\mathfrak{u}(1)$, realised by bivectors (isomorphic to the stored realisation), the differential $sA = \\nabla c + g[A, c]$, $sc = -\\tfrac{g}{2}[c, c]$ squares to zero on all fields and their derivatives, needs no inner product and no Krein form, the field strength transforms covariantly and the gauge-fixing term is exact; the Goldstone and doublet terms are not included (\\claimref{synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent}). Quartet positivity: under (K1) and (K2) the free BRST charge of the gluons (null momenta) and of the massive W and Z in the Feynman-'t Hooft gauge, with their Goldstone modes, has a contracting homotopy, so at every number of quanta its cohomology is the Fock space of the transverse polarisations and the Krein form is positive on it; with the two doublets' neutral vacuum as input the Goldstone map has rank three (nine massless, three massive vectors, five physical scalars, 27 positive physical modes); the statement is free and perturbative, the interacting one needs Kugo and Ojima's hypotheses (\\claimref{synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta}). Gribov copies: the Coulomb and Landau conditions of the weak factor have copies beyond perturbation theory (on the round three-sphere as a compactified spatial slice, and on the rotor lattice, where the copy has two negative Faddeev-Popov modes and the signed count is the Euler characteristic, zero); with Singer's and Neuberger's theorems (\\claimref{synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity}) the covariant BRST construction is perturbative only. Lattice route: with a frozen fundamental doublet the weak Wilson loop at $\\beta = 0$ is $c(\\kappa)^{P}$, a perimeter law, so with the series' two doublets (input) the strong-coupling area law of the weak factor (\\claimref{synthesis.weak-factor-rotor-lattice-strong-coupling-area-law}) is no confinement criterion (Fradkin-Shenker complementarity, imported); the gauge-invariant rotor lattice, which needs no gauge fixing, ghosts or indefinite form, is a non-perturbative route for the weak factor, proposed as a reading and adopted by no stored result (\\claimref{synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law}). Asymptotic freedom of both non-abelian factors under the Krein-form premise is in \\claimref{synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces}.\n(8 November.) On a finite window of a null generator the pair currents of the channels satisfy, exactly, the level-one $\\mathfrak{u}(n)$ current algebra (\\claimref{synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators}(i)), and the energy is quadratic in the currents with the central term (\\claimref{synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves}). With the sixteen Weyl components per generation per light ray (\\claimref{synthesis.slot-module-light-ray-arrays-are-weyl-components}) these are exact $\\mathfrak{u}(16)$ currents per light ray and generation: a one-dimensional current algebra along each generator, not the four-dimensional Yang-Mills field.\n(8 November, current algebra.) The Standard Model algebra acts on the sixteen channels of a light ray inside the $\\mathfrak{u}(16)$ pair currents, with no generator mixing the two chiralities, and $\\mathfrak{su}(3)$, $\\mathfrak{su}(2)$ and hypercharge are at level $4$ relative to the five-mode trace form (\\claimref{synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split}). One generation's energy along the light ray is exactly the $\\mathfrak{so}(10)$ Sugawara energy at level $4$ plus the number term on every window, $c = 15 + 1 = 16$ (\\claimref{synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy}); the Standard Model factors' parts leave a remainder of central value $52/7$, on localised vectors, with the Virasoro relations not derived. These currents see the linear (mixed gravitational) anomaly condition, $\\mathrm{tr}\\,Y = 0$, but no quadratic trace sees the cubic conditions: of the eight particle-antiparticle splittings with $\\mathrm{tr}\\,Y = 0$ only two are anomaly-free (\\claimref{synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation}). This is a current algebra along each generator, not the four-dimensional Yang-Mills field.\n(8 November, colour lattice.) Colour rotors are the rotors of the $e_{3}, \\dots, e_{8}$ block fixing a pure-spinor idempotent (one condition for $J$-commutation and unit determinant); the triplet character is $4(\\langle R\\rangle_{0} + \\langle R\\rangle_{6}) - 1$, so Wilson's weight is the scalar part of the plaquette rotor with $\\beta = 6/g^{2}$. On a finite lattice the centre $Z_{3}$ forces a flux chain on every surviving term: no rectangular fundamental loop has a term below order $A$, its leading term is $(\\beta/18)^{A}$; Polyakov lines vanish at every $\\beta$, a pair and a baryonic junction have leading terms $\\tfrac19(\\beta/18)^{N_{t}r}$ and $\\tfrac1{27}(\\beta/18)^{3N_{t}}$; the connected plaquette correlator has leading term $\\tfrac1{18}(\\beta/18)^{4t}$, a leading decay rate $4\\ln(18/\\beta)$ per time step at fixed $t$ (a gap uniform in $t$ is argued, not proved) (\\claimref{synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube}). A centreless finite subgroup of order $96$ has the Haar averages through link degree three and differs at degree four, so every strong-coupling term of link degree at most three is the same for it and for $SU(3)$, while a finite group freezes at weak coupling (argued): strong-coupling data decide neither confinement nor a continuum gap (\\claimref{synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three}). With colour triplets the fundamental loop has a perimeter law at infinite coupling (exactly for frozen triplets, at leading hopping order for Wilson quarks), as the weak factor with doublets (\\claimref{synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling}). No stored premise gives the gauge field a lattice spacing on flat spacetime, and no stored gap is a spectral gap of the four-dimensional gauge field. All of this is strong-coupling lattice physics in geometric-algebra form; it does not bear on the Yang-Mills existence and mass-gap problem, which lives in the weak-coupling continuum limit.",
+  "attack": [
+   "The interacting charge: the operator BRST charge of the interacting theory on the Krein space (renormalisation and the Slavnov-Taylor identities, for example in causal perturbation theory, where the local construction is imported for electrodynamics and Yang-Mills), and positivity of its physical space under Kugo and Ojima's hypotheses.",
+   "Higgs-sector BRST: the field-level differential with the Goldstone and doublet terms (s phi), and the breaking pattern derived from the series' scalar sector instead of the aligned vacuum taken as input.",
+   "Colour beyond strong coupling: the colour rotor lattice is stored at strong coupling only (centre bound, Polyakov lines, leading tube, string breaking with triplets at infinite coupling). Its continuum limit needs beta -> infinity (asymptotic freedom), which no stored result reaches. The series' colour sector has quark triplets, so its physical question is the one with quarks (string breaking, no Wilson-loop order parameter), as in QCD; pure-colour confinement and the mass gap of pure Yang-Mills (the Clay problem) are a different question and are not addressed.",
+   "The weak factor on the lattice: the phase structure of the rotor lattice with the two doublets beyond strong coupling, and its continuum limit.",
+   "The current algebra along generators: compute the embedding of the Standard Model gauge algebra in the exact $\\mathfrak{u}(16)$ channel currents per light ray, its level, and what the Sugawara form gives for its dynamics along a generator.",
+   "Derive the Virasoro relations of the gauge factors' Sugawara parts on the band domain, so that their central values ($32/7$, $2$, $1$, $1$ and the remainder $52/7$) are central charges in the full sense."
+  ],
+  "success": "Interacting non-abelian gauge fields with a consistent gauge fixing (or a gauge-invariant non-perturbative definition) and a positive physical space, with the scalar sector's BRST included, or a proof that the series cannot carry them.",
+  "entities": [
+   "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+   "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+   "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+   "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+   "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+   "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+   "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law",
+   "standard-model.gauge-algebra-minimal-massive-composite",
+   "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube",
+   "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+   "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling"
+  ],
+  "added": "2026-11-01"
+ },
+ "entities": [
+  {
+   "id": "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+   "title": "The BRST differential of the derived gauge fields is nilpotent",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "recovers-known-physics",
+    "rotors-and-stabilisers"
+   ],
+   "one_liner": "With the gauge algebra $\\mathfrak{su}(2) \\oplus \\mathfrak{su}(3) \\oplus \\mathfrak{u}(1)$ of the minimal massive composite realised up to isomorphism by bivectors of $\\Cl(9,0)$ ($\\mathfrak{su}(2)$ on $e_0, e_1, e_2$, $\\mathfrak{su}(3)$ in the $e_3, \\dots, e_8$ block commuting with a complex structure $J$, $\\mathfrak{u}(1)$ as $J/2$; hypercharge embedding not fixed), the BRST differential $sA = \\nabla c + g[A, c]$, $sc = -\\tfrac{g}{2}[c, c]$ squares to zero on all fields and derivatives for every $g$, fails without the Jacobi identity, the $\\tfrac12$ or the covariant term, transforms $F = \\nabla\\wedge A + \\tfrac{g}{2}[A\\wedge A]$ covariantly, and leaves $\\langle FF\\rangle_0 + s\\Psi$ invariant with the Faddeev-Popov operator $\\nabla\\cdot D$; standard, transport-absent.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 3,
+   "future_cone_size": 1,
+   "future_cone_size_without_restatements": 1,
+   "used_by": 1,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov"
+   ],
+   "used_by_ids": [
+    "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube"
+   ]
+  },
+  {
+   "id": "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+   "title": "Gluon and massive-vector BRST cohomology is positive at all numbers of quanta",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "car-algebra",
+    "representation-theory",
+    "recovers-known-physics"
+   ],
+   "one_liner": "Under clauses (K1) (Gupta-Bleuler form $-u\\cdot w$) and (K2) (ghost pairing $\\langle c, \\bar c\\rangle_K = 1$) of the Krein-form premise, the free BRST charge of the gluons (null $k$) and of the massive W and Z in the Feynman-'t Hooft gauge (Goldstone coefficient $\\beta^2 = Q(p)$ forced) has a one-particle homotopy $Q_1R_1 + R_1Q_1 = P_q$ whose second quantisation gives $Q_BR + RQ_B = N_q$, so at every number of quanta the cohomology is the positive Fock space of the transverse polarisations (two per gluon, three per massive vector; 27 per momentum for the gauge algebra broken by the two doublets, vacuum taken as input); perturbative; the interacting case needs Kugo and Ojima's asymptotic hypotheses; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [
+    "dark-matter.p2-indifference",
+    "dark-matter.p3-nearest-dimension-representatives",
+    "scrambling.indifference-structural-premise-series",
+    "sheaf.tameness",
+    "standard-model.slot-module-hypothesis",
+    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+    "synthesis.rung-unit-second-free-number"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 213,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "field-theory.imported-statistics-no-go-palatial-algebra",
+    "field-theory.imported-tower-limit",
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+    "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum",
+    "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+   "title": "Gribov copies in the weak factor and a perimeter law with doublets",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "rotors-and-stabilisers",
+    "no-go",
+    "finite-models",
+    "recovers-known-physics"
+   ],
+   "one_liner": "In the rotors of the weak factor, for the Coulomb condition on a round spatial three-sphere and the lattice Landau condition (not the series' covariant flat-space gauge, for which Gribov and Singer are imported): the identity rotor map gives a Coulomb-gauge copy of zero (none for an abelian field); a lattice Landau-gauge copy of the trivial field, with a U(1) analogue, has two non-abelian negative Faddeev-Popov modes; on two sites the signed count of copies is $1 - 1 = 0$, the Euler characteristic, as Neuberger's theorem gives in general; with a frozen fundamental doublet (the two doublets are input) the Wilson loop at $\\beta = 0$ is $c(\\kappa)^{P}$, $c = \\kappa/4 - \\kappa^{3}/96 + \\dots$, a perimeter law; BRST under the Krein premise is perturbative and the gauge-invariant lattice, a non-perturbative definition available for the weak factor, needs no Krein form; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 6,
+   "future_cone_size": 1,
+   "future_cone_size_without_restatements": 1,
+   "used_by": 1,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+    "synthesis.imported-singer-gauge-slice-neuberger-lattice-brst-and-fradkin-shenker-complementarity",
+    "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement",
+    "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law"
+   ],
+   "used_by_ids": [
+    "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling"
+   ]
+  },
+  {
+   "id": "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+   "title": "Clifford conjugation as twistor adjoint and the Gupta-Bleuler form",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "conformal-spinors",
+    "representation-theory",
+    "car-algebra",
+    "dictionaries"
+   ],
+   "one_liner": "Clifford conjugation, the twistor adjoint on the conformal spinors, has trace form $-a\\cdot b$ on vectors (as in every Clifford algebra); on polarisations this is the one-particle Gupta-Bleuler form of (K1), unique up to a real factor among Lorentz-invariant forms, with fundamental symmetry the second quantisation of $J$ and Fock space the Feynman-gauge realisation; restates, does not derive, (K1); (K2) to (K4) do not follow; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [
+    "sheaf.tameness"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 129,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "field-theory.fock-space-maxwell-modes",
+    "field-theory.imported-tower-limit",
+    "synthesis.positive-structure-is-twistor-form-at-imaginary-time"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+   "title": "Premise (KF): an indefinite Krein form for gauge fields",
+   "kind": "claim",
+   "status": "postulate",
+   "effective_status": "postulate",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "car-algebra",
+    "representation-theory",
+    "refutation"
+   ],
+   "one_liner": "Premise (KF): the series' gauge fields, ghosts and Pauli-Villars regulators carry one indefinite (Krein) inner product, the Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ on polarisations, with a nilpotent self-adjoint BRST charge whose ghost-number-zero cohomology is positive (quartet mechanism); assumed by one-loop electrodynamics, the running coefficients, the BRST result, the two-loop vacuum polarisation, the quartet positivity and further loop results; not derived (its one-particle form is restated as the trace form of Clifford conjugation), no native covariant regulator, and the Pauli-Villars clause not needed for the one-loop vacuum polarisation (note of 2 November 2026); refuted by negative-norm physical states or gauge-dependent physical amplitudes.",
+   "evidence": "none",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 0,
+   "future_cone_size": 13,
+   "future_cone_size_without_restatements": 13,
+   "used_by": 11,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [],
+   "used_by_ids": [
+    "synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+    "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+    "synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike",
+    "synthesis.one-loop-qed-in-the-spacetime-algebra",
+    "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+    "synthesis.one-loop-vacuum-polarisation-extends-without-a-regulator-and-ward-preserving-extensions-differ-only-by-the-renormalisation-constants",
+    "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+    "synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch",
+    "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+    "synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free",
+    "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient"
+   ]
+  },
+  {
+   "id": "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+   "title": "A self-adjoint BRST charge needs a Krein form; the tower supplies the ghosts",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "car-algebra",
+    "no-go",
+    "recovers-known-physics"
+   ],
+   "one_liner": "A nonzero self-adjoint (Kugo-Ojima) BRST charge cannot exist on the positive forms of the tower and the palatial polynomials; with the standard Gupta-Bleuler form $[a(u), a(w)^{\\dagger}] = -u\\cdot w$ and a tower ghost pair the charge at a null $k$ is nilpotent and self-adjoint with positive cohomology (dimensions $1, 2, 3, 4$ up to three quanta) whose one-particle space is $\\{f : kf = 0\\}$, and for $\\mathfrak{su}(2) \\oplus \\mathfrak{su}(3) \\oplus \\mathfrak{u}(1)$ the standard constraint charge on twelve tower ghost pairs squares to zero only with its cubic term; under the Krein-form premise this is the series' covariant gauge fixing at the free level; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [
+    "sheaf.tameness",
+    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields"
+   ],
+   "rests_on_foundation": [
+    "synthesis.continuum-completion-premise",
+    "synthesis.premise-minimal-non-commutativity",
+    "synthesis.premise-superposition-over-the-integers",
+    "synthesis.premise-the-bit"
+   ],
+   "past_cone_size": 138,
+   "future_cone_size": 2,
+   "future_cone_size_without_restatements": 2,
+   "used_by": 2,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "field-theory.fock-space-maxwell-modes",
+    "field-theory.imported-statistics-no-go-palatial-algebra",
+    "field-theory.imported-tower-limit",
+    "field-theory.path-integral-inside-tower",
+    "field-theory.twistor-attachment",
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-brst-kugo-ojima-strocchi-and-gribov",
+    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields",
+    "synthesis.positive-structure-is-twistor-form-at-imaginary-time"
+   ],
+   "used_by_ids": [
+    "synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number",
+    "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta"
+   ]
+  },
+  {
+   "id": "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law",
+   "title": "Rotor lattice for the weak factor: a strong-coupling area law",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "rotors-and-stabilisers",
+    "recovers-known-physics",
+    "finite-models"
+   ],
+   "one_liner": "In Wilson's lattice form (no gauge fixing, standard for compact groups), with rotor links of $\\Cl(3,0)$ for the derived $\\su(2)$ and Haar measure, gauge-variant averages vanish, the gluing rule is $\\int\\langle XU\\rangle_0\\langle\\widetilde{U}Y\\rangle_0 = \\tfrac14\\langle XY\\rangle_0$ and every rectangular Wilson loop has leading strong-coupling coefficient $(\\beta/4)^{A}$, as compact $U(1)$ has $(\\beta/2)^{A}$, so the lattice quantises the factor without gauge fixing but its area law says nothing about continuum confinement.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 3,
+   "future_cone_size": 3,
+   "future_cone_size_without_restatements": 3,
+   "used_by": 2,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+   ],
+   "used_by_ids": [
+    "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+    "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law"
+   ]
+  },
+  {
+   "id": "standard-model.gauge-algebra-minimal-massive-composite",
+   "title": "The gauge algebra of the minimal massive composite",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "standard-model",
+   "programme": "transport-papers",
+   "tags": [
+    "refutation",
+    "gauge-fields",
+    "recovers-known-physics",
+    "conformal-spinors"
+   ],
+   "one_liner": "The automorphism algebra of the minimal massive hierarchy $\\C^{2} \\otimes \\C^{3}$ is $\\su(2) \\oplus \\su(3) \\oplus \\uu(1)$, exactly the Standard Model's, while that of $\\C^{3} \\otimes \\C^{3}$ is seventeen-dimensional.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 1,
+   "future_cone_size": 267,
+   "future_cone_size_without_restatements": 241,
+   "used_by": 19,
+   "source": {
+    "paper": "T12",
+    "number": "Thm 4.1",
+    "label": "thm:algebra",
+    "line": 973
+   },
+   "restates": [],
+   "restated_by": [
+    "dark-tower-matter.imported-our-towers-chain",
+    "lepton.imported-automorphism-group-section-hypercharge-generator",
+    "rungs.imported-ladder-automorphism-group-no-lepton"
+   ],
+   "refuted_by": [],
+   "rests_on": [
+    "mass.mass-symplectic-area-two-twistor-formula"
+   ],
+   "used_by_ids": [
+    "dark-tower-matter.imported-our-towers-chain",
+    "lepton.imported-automorphism-group-section-hypercharge-generator",
+    "rungs.imported-ladder-automorphism-group-no-lepton",
+    "standard-model.connection-forced",
+    "standard-model.four-dimensions-forces-converse",
+    "standard-model.global-form-quotient-determined",
+    "standard-model.no-tower-but-one-contributes-towers",
+    "standard-model.trichotomy-what-kind-number",
+    "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+    "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube",
+    "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling",
+    "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+    "... 7 more"
+   ]
+  },
+  {
+   "id": "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube",
+   "title": "Colour rotor lattice: centre flux bounds, Polyakov and baryonic lines, the glueball tube",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "rotors-and-stabilisers",
+    "recovers-known-physics",
+    "finite-models"
+   ],
+   "one_liner": "On Wilson's lattice with colour rotors of the $e_3..e_8$ block (rotors fixing the pure-spinor idempotent $E$, so $\\det = 1$; character $4\\langle R\\rangle_{0+6} - 1$), the centre rotor forces a $\\Z_3$ flux sheet on every surviving term, so a rectangular fundamental loop has leading term $(\\beta/18)^{A}$ with nothing below, Polyakov lines vanish, a pair gives $\\tfrac19(\\beta/18)^{N_tr}$, a baryonic junction $\\tfrac1{27}(\\beta/18)^{3N_t}$, and the plaquette correlator $\\tfrac1{18}(\\beta/18)^{4t}$; finite-order lattice statements only, not touching the mass-gap problem.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 5,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+    "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+   "title": "A finite subgroup of colour shares the strong-coupling expansion to link degree three",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "rotors-and-stabilisers",
+    "finite-models",
+    "no-go",
+    "recovers-known-physics"
+   ],
+   "one_liner": "In the colour block of $\\Cl(9,0)$ the $J$-commuting signed permutations of $e_{3}, \\dots, e_{8}$ fixing the $J$-volume trivector form a finite subgroup of $SU(3)$ of order 96 with trivial centre (Schur) whose averages equal the Haar averages on every link polynomial of degree at most three (derived from invariant tensors) and differ in degree four (a centre-forbidden moment); so every strong-coupling term of link degree at most three is the same for both: the gluing factor $\\tfrac13$, the term $(\\beta/18)^{A}$ from a rectangle's own plaquettes ($\\beta = 6/g^{2}$; leading for $SU(3)$ by its centre, not shown leading for the finite group), the tube terms of plaquette correlators and the plaquette $\\beta/18 + \\beta^{2}/216$, while the plaquette differs first at $\\beta^{3}$ ($0$ against $\\tfrac1{972}$); the finite weight is gapped at the identity; as a reading, such terms do not distinguish $SU(3)$ from a group without centre that freezes at weak coupling; the mass-gap problem is not addressed; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 4,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement",
+    "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law"
+   ],
+   "used_by_ids": []
+  },
+  {
+   "id": "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling",
+   "title": "Colour triplets give the fundamental colour loop a perimeter law at infinite coupling",
+   "kind": "claim",
+   "status": "proved",
+   "effective_status": "proved",
+   "subject": "quantum-fields",
+   "programme": "transport-papers",
+   "tags": [
+    "gauge-fields",
+    "rotors-and-stabilisers",
+    "finite-models",
+    "no-go",
+    "recovers-known-physics"
+   ],
+   "one_liner": "At infinite colour coupling, with links the rotations of $e_{3}, \\dots, e_{8}$ commuting with $J$ and fixing the $J$-volume trivector: a frozen colour triplet gives every closed path of $P$ distinct links $\\langle\\chi(U_{C})\\rangle = c(\\kappa)^{P}/3$ exactly, $c = \\kappa/6 - \\kappa^{3}/288 + \\dots$, with a rank-one mean link (an unbroken $SU(2)$, unlike the weak doublet), and $n_{f}$ flavours of Wilson quarks give every rectangle the leading hopping term $(n_{f}/6)(2\\kappa)^{P}$ (spin trace $-2^{P-1}$ in $\\Cl(4,0)$); so at infinite coupling the fundamental loop has a perimeter law with colour triplets (exactly when frozen, at leading hopping order for quarks) and is no confinement criterion; the pure Yang-Mills mass gap is not addressed; transport-absent.",
+   "evidence": "pass",
+   "holds_given": [],
+   "rests_on_foundation": [],
+   "past_cone_size": 7,
+   "future_cone_size": 0,
+   "future_cone_size_without_restatements": 0,
+   "used_by": 0,
+   "source": {},
+   "restates": [],
+   "restated_by": [],
+   "refuted_by": [],
+   "rests_on": [
+    "standard-model.gauge-algebra-minimal-massive-composite",
+    "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement",
+    "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law"
+   ],
+   "used_by_ids": []
+  }
+ ],
+ "work_in_store": [
+  "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three",
+  "synthesis.clifford-conjugation-is-the-twistor-adjoint-and-its-trace-form-is-the-one-particle-gupta-bleuler-form",
+  "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube",
+  "synthesis.colour-triplets-give-the-fundamental-colour-loop-a-perimeter-law-at-strong-coupling",
+  "synthesis.field-level-brst-differential-of-the-derived-gauge-fields-is-nilpotent",
+  "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation",
+  "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law",
+  "synthesis.one-loop-running-coefficients-from-spacetime-algebra-spin-traces",
+  "synthesis.quartet-homotopy-makes-gluon-and-massive-vector-physical-states-positive-at-every-number-of-quanta",
+  "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts",
+  "synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split",
+  "synthesis.weak-factor-rotor-lattice-strong-coupling-area-law",
+  "synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy"
+ ]
+}
