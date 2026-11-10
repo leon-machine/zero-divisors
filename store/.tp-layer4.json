@@ -36698,6 +36698,67 @@
 }
 ]
 },
+"synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
+"failed": false,
+"findings": [],
+"key": "0ebf82d2c4afe5f6",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_three_pairs_have_eight_states_and_the_level_above_has_eight_pairs_and_256_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.fock-module-one-qubit-per-rung",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_one_ascent_from_three_pairs_gives_four_pairs_and_sixteen_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"one-relation.two-capacities-three-consequences",
+"tower.fock-module-one-qubit-per-rung",
+"tower.witt-index-quantum-capacity"
+]
+},
+{
+"derivation": null,
+"func": "check_non_vector_car_families_fill_the_level_and_a_non_split_floor_exceeds_its_witt_index",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.existence-uniqueness",
+"tower.commuting-copies",
+"tower.matrix-amplification-structural-properties"
+]
+},
+{
+"derivation": null,
+"func": "check_the_lift_of_the_ladder_to_the_level_above_is_lie_and_not_car",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.second-quantisation",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_the_quoted_horizon_bracket_lies_between_the_third_and_fourth_levels",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.trichotomy-what-kind-number",
+"synthesis.de-sitter-mode-count",
+"synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping"
+]
+}
+]
+},
 "synthesis.face-mass-form-unit-plus-gram": {
 "failed": false,
 "findings": [],
