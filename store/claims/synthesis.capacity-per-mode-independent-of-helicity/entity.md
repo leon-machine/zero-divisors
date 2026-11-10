@@ -24,7 +24,7 @@ derivations:
   - scrambling.pair-mode-qubit-one-object@5
   - synthesis.residue-from-mode-entropy@4
   - scrambling.residue-each-convention@4
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
   proof: proof-main.tex
 checked_by:
 - kind: check

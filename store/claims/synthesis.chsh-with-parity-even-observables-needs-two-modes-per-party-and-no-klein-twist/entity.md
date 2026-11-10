@@ -24,6 +24,8 @@ derivations:
   - tower.commuting-copies@5
   - singularity.descent-parity-average@5
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -39,6 +41,11 @@ lineage:
   - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
   - singularity.imported-univalence-superselection-rule
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the stored results it refers to by id. No statement changed; version kept at 1.
   note: >-
     Adversarial test of whether the Klein-twisted split is the right notion of two parties for a CHSH statement
     in the Clifford algebra of modes. Two settings are recorded side by side and neither is called the physical
@@ -47,8 +54,7 @@ extraction:
     count as observables. Then one mode against the Klein-twisted other mode exceeds $2$ (the realisation of the
     stored CHSH result, its clause (vii)). Kill condition registered before computing: a pair of non-commuting
     even self-adjoint elements of square one in one mode, or no even configuration of two modes per party with
-    $C^{2} = 4 + 4K$ (neither fired). Hypothesis (P) is stated in the formal level as a named hypothesis; it is to
-    become an assumes edge to the postulate the maintainer creates after acceptance. The identity, the bound and
+    $C^{2} = 4 + 4K$ (neither fired). Hypothesis (P) is stated in the formal level under its label; it is the stored premise synthesis.premise-positivity-of-values, which this result assumes. The identity, the bound and
     the blade lemma with its functionals are cited from the stored CHSH result (clauses (i), (iii), (iv)). Only
     the twist is used of the stored commuting-copies theorem; the pair state of clause (iv) is written out and
     verified in the proof, so the stored theorem on the mode split (where it is the pair state at equal weights,
@@ -61,14 +67,13 @@ extraction:
     mode subsystems under it are discussed by Banuls, Cirac and Wolf, Phys. Rev. A 76 (2007) 022311 and Friis, Lee
     and Bruschi, Phys. Rev. A 87 (2013) 022338 (these three from memory). The mathematics is classical; what is
     recorded is the statement in the series' algebra and its relation to the stored twist and parity average.
-    Transport-absent. A sequence of rational values on the twisted split belongs to a sibling result of the same
-    run (not used); one example, $\tfrac{14}{5}$, is kept here.
+    Transport-absent. A sequence of rational values on the twisted split is in synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records (not used); one example, $\tfrac{14}{5}$, is kept here.
 ---
 
 ## formal
 Let $k$ be $\Q$ or any ordered field and $\Cl_{k}(\ell,\ell)$ the algebra of $\ell$ modes: generators $e_{j}$, $f_{j}$ with $Q(e_{j}) = 1$, $Q(f_{j}) = -1$, mode parities $p_{j} = f_{j}e_{j}$, $\Gamma_{X} = \prod_{j \in X}p_{j}$ for a set $X$ of modes, total parity $\Gamma$. As in Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}, $\dagger$ is the linear extension of the inverse on blades (it fixes each $e_{j}$ and negates each $f_{j}$), an \emph{observable} is an $x$ with $x^{\dagger} = x$, $x^{2} = 1$, a \emph{configuration} is four observables with $A_{i}B_{j} = B_{j}A_{i}$, and $C = A_{1}(B_{1} + B_{2}) + A_{2}(B_{1} - B_{2})$. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split.
 
-\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(\ell,\ell) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived.
+\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(\ell,\ell) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived.
 
 (P) extends the stored definition of a state as an element $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of unit trace from elements to functionals. An element is \emph{even} if it commutes with $\Gamma$; a state is even if $\omega(\Gamma x\Gamma) = \omega(x)$. For disjoint sets of modes $A$, $B$ let $\Cl(A)$, $\Cl(B)$ be the subalgebras generated by their generators and $B'$ the copy of $\Cl(B)$ twisted by $\Gamma_{A}$ as in Theorem \claimref{tower.commuting-copies} (generators $y\Gamma_{A}$). Two settings are recorded side by side, and neither is singled out as the physical one: \emph{setting E}, in which a party's observables are even; \emph{setting O}, in which parity-odd elements also count as observables. Clauses (i) to (iii) are in setting E, clause (iv) is in setting O and compares, clause (v) is the untwisted split.
 \begin{enumerate}

@@ -11,3 +11,5 @@ functions:
     kind: complete
     clauses: ["(iii)"]
     omits: "the matrix size from the stored table for all signatures of one to eight directions against the list; nine or more directions by the dimension count in the proof"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "a premise about values, assumed and not computed: the checks compute with explicit elements and functionals and do not call the postulate"

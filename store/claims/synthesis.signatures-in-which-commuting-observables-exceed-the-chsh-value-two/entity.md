@@ -25,6 +25,8 @@ derivations:
   - synthesis.blade-square-signs-f2-quadratic-form@3
   - transport.classification-real-clifford-algebras@3
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -40,14 +42,17 @@ lineage:
   - synthesis.premise-minimal-non-commutativity
   - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the stored results it refers to by id. No statement changed; version kept at 1.
   note: >-
     Adversarial test of the plan to state the CHSH bound for two subsystems of one Clifford algebra: is a value
     above $2$ available in every algebra the foundation allows? It is not. The premise of minimal
     non-commutativity leaves the signature free, and the answer depends on it. Kill condition registered before
     computing: a commuting configuration with $[A_{1},A_{2}][B_{1},B_{2}] \ne 0$ in an excluded signature, or the
-    self-adjoint blades of an excluded signature not forming an anticommuting frame (neither fired). Hypothesis
-    (P) is stated in the formal level as a named hypothesis; it is to become an assumes edge to the postulate the
-    maintainer creates after acceptance. The identity, the bound under (P) and the blade lemma with its
+    self-adjoint blades of an excluded signature not forming an anticommuting frame (neither fired). Hypothesis (P) is stated in the formal level under its label; it is the stored premise synthesis.premise-positivity-of-values, which this result assumes. The identity, the bound under (P) and the blade lemma with its
     functionals are cited from the stored CHSH result (its clauses (i), (iii), (iv)) and are not reproved here;
     this result keeps the list, the frame proof, the table of configurations and the classification reading.
     Status of the content: classical mathematics. The list of clause (i) is the list of matrix size at most two in
@@ -62,7 +67,7 @@ extraction:
 ## formal
 Let $k$ be $\Q$ or any ordered field and $\Cl_{k}(p,q)$, $n = p + q \ge 1$, the Clifford algebra of Theorem \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra} with coefficients in $k$: generators $e_{1}, \dots, e_{n}$, the first $p$ of square $1$ and the rest of square $-1$ (the label $(p,q)$ follows the stored convention, $p$ generators of square $1$), blades $e_{S}$ a basis. As in Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}, $x \mapsto x^{\dagger}$ is the linear extension of the inverse on blades, an \emph{observable} is an $x$ with $x^{\dagger} = x$ and $x^{2} = 1$, a \emph{configuration} is four observables $A_{1}, A_{2}, B_{1}, B_{2}$ with $A_{i}B_{j} = B_{j}A_{i}$ for all $i, j$, and $C = A_{1}(B_{1} + B_{2}) + A_{2}(B_{1} - B_{2})$. No subsystem structure is assumed: the two parties are any two commuting pairs inside the one algebra. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. The list below does not depend on the frame: a change of frame is an automorphism carrying the configurations for one adjoint to the configurations for the other.
 
-\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived.
+\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived.
 
 (P) extends the stored definition of a state as an element $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of unit trace from elements to functionals.
 \begin{enumerate}

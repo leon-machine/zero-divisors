@@ -1,7 +1,7 @@
 ---
 id: synthesis.kerr-ring-count-misses-area-law
 kind: claim
-version: 6
+version: 7
 title: 'For Kerr the literal curvature-cutoff count misses the area law'
 status: proved
 region: synthesis
@@ -21,6 +21,14 @@ credit:
   role: 'GA rewrite (Kerr-Schild gauge field; unit named I_4)'
   version: 6
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Fable 5.2
+  role: 'correction of the closing sentence of item 4 on small spin, citing the slow-rotation result'
+  version: 7
+  source: maintainer pass of 2026-11-10
+amendments:
+- version: 7
+  kind: restatement
+  defect: 'The closing sentence of item 4 stated that for small spin, under the condition rho_c > r_-, the cutoff locus is a closed surface between the horizon loci, spacelike as in Schwarzschild. The condition is too weak: that description holds only for a < rho_c with sqrt(rho_c^2 - a^2) > r_-; for rho_c < a (still with rho_c > r_-) the locus reaches r = 0 at u = +-rho_c/a, passes through the disc and is of mixed character. Items 1 to 4, the proof and the checks are unaffected.'
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -30,7 +38,7 @@ derivations:
   - interior.imported-kerr-schild-form-kerr-gauge@2
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.kerr-ring-double-cover-data@3
-  - singularity.stretched-singularity-count@8
+  - singularity.stretched-singularity-count@9
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
   proof: proof-main.tex
@@ -53,6 +61,10 @@ lineage:
   - scrambling.mode-count
   - scrambling.area-law-test
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: 'Version 6 -> 7. The closing sentence of item 4 said that for small spin (rho_c > r_-) the cutoff locus is a closed surface between the horizon loci, spacelike as in Schwarzschild. That condition is too weak: the locus is a closed surface between the horizon loci only for a < rho_c with sqrt(rho_c^2 - a^2) > r_-, and for rho_c < a it reaches r = 0, passes through the disc and is of mixed character. The sentence is corrected and now cites synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr, which treats 0 < a <= 4 rho/5 and proves there what the extraction note below records as argued. Items 1 to 4 are otherwise unchanged; the proof and the check do not use the sentence.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -127,7 +139,7 @@ which at fixed $a/M \in (0, 1)$ tends to zero as $M^{-1/3}$; reaching $A_+/4$ wo
 \[
 \frac{N}{A_+/4} \;=\; \frac{\pi}{2}\,\frac{\rho_c^2\,(1 - \eta)}{\sqrt{M^2 - a^2}} \;=\; \frac{\pi}{2}\,\frac{(2M)^{2/3}(1 - \eta)}{\sqrt{M^2 - a^2}} ,
 \]
-against exactly $1$ for Schwarzschild, where $V' = 2\pi/\kappa = 8\pi M$. So the identity $V' = 2\pi/\kappa$ behind the Schwarzschild count (the stretched singularity keeping the horizon's clock) does not hold on Kerr in this regime, and the counting rule read literally on Kerr contradicts the Kerr entropy. For small spin ($\rho_c > r_-$) the locus is instead a closed surface between the horizons, spacelike as in Schwarzschild; that regime is not treated here.
+against exactly $1$ for Schwarzschild, where $V' = 2\pi/\kappa = 8\pi M$. So the identity $V' = 2\pi/\kappa$ behind the Schwarzschild count (the stretched singularity keeping the horizon's clock) does not hold on Kerr in this regime, and the counting rule read literally on Kerr contradicts the Kerr entropy. For smaller spin the locus is different, and it is not treated here. Only if $a < \rho_c$ and $\sqrt{\rho_c^{2} - a^{2}} > r_-$ is the locus a closed surface between the horizon loci, as in Schwarzschild; if $\rho_c < a$, which the condition $\rho_c > r_-$ allows, the locus reaches $r = 0$ at $u = \pm\rho_c/a$, passes through the disc, and is of mixed character. The small-spin end, $0 < a \le \tfrac45\rho_c$ with $M \ge 8$, where the locus is a closed spacelike surface between the horizon loci, is treated in Theorem \claimref{synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr}: there too the count does not give $A_+/4$ exactly at zero and at nonzero spin.
 \end{enumerate}
 
 \emph{Beyond one flat chart.} The $r < 0$ sheet of Kerr, reached through the disc bounded by the ring (the double cover on which items 1 to 4 place and count the tube), is global and is not carried by a single gravitational field $(\hb, \Omega)$ on flat spacetime; the statements above that hold on the invertible region are in GTG, and the $r < 0$ sheet is read on the manifold assembled from the derived metric's charts.

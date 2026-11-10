@@ -25,6 +25,8 @@ derivations:
   - synthesis.division-gives-the-rationals@2
   - tower.commuting-copies@5
   - singularity.descent-parity-average@5
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -51,15 +53,17 @@ lineage:
   - synthesis.premise-superposition-over-the-integers
   - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the related stored results by id. No statement changed; version kept at 1.
   note: >-
     The graph had no Bell, CHSH or Tsirelson result. This one states the CHSH bound inside the algebra that the
-    foundation postulates produce and says what it uses; it is the base statement that the other entanglement
-    results of the same run cite. Kill conditions registered before computing: the identity for the square or the
+    foundation postulates produce and says what it uses; it is the base statement that the other stored entanglement results cite. Kill conditions registered before computing: the identity for the square or the
     certificate failing on an exact instance; a state and self-adjoint commuting settings with squared value above
     8; the bound needing a positivity premise beyond the foundation and definitions (the first two did not fire;
-    the third did, in this sense: the bound needs Hypothesis (P)). Hypothesis (P) is stated in the formal level as
-    a named in-statement hypothesis; it has been adopted as a postulate of the series, with reality, and is to
-    become an assumes edge of this result once the postulate is stored. What is used besides (P): the integer
+    the third did, in this sense: the bound needs Hypothesis (P)). Hypothesis (P) is the stored premise synthesis.premise-positivity-of-values (adopted 10 November 2026, with reality, relative to the split of the generators that defines the modes); this result assumes it, and the label (P) is kept in the text. What is used besides (P): the integer
     algebra of the signed directions and its blades (the stored result on the group of signed directions, resting
     on the postulates of the bit, minimal non-commutativity and superposition); rational coefficients, for the
     factor one half and for directions that are not blades (the stored division result); the twist of the stored
@@ -71,14 +75,10 @@ extraction:
     of clause (viii) needs a square root of two and nothing else. Two settings are recorded side by side and
     neither is called the physical one: the one-mode Klein-twisted realisation of clauses (vii), (viii), whose
     directions are odd under the total parity, and parity-even observables with two modes for each party
-    (sibling result of the same run, not used here), to which clauses (i) to (iv) apply unchanged. Sibling
-    results of the same run, not used here: with rational or real coefficients a configuration of two commuting
+    (synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist, not used here), to which clauses (i) to (iv) apply unchanged. Related stored results, not used here: with rational or real coefficients a configuration of two commuting
     pairs inside one copy of the algebra with squared value above 4 exists in every signature except fourteen,
-    among them the algebra of space and the signature $(1,3)$ (this concerns two commuting pairs inside one copy
-    and says nothing against Bell violation for two systems each described by its own copy); the functional of
-    clause (v) as the Popescu-Rohrlich box with its probabilities; the attainment question over the rationals;
-    the three-party trade-off. Clause (iv) and clause (ix) were first drafted in those sibling results and are
-    stated here once. Status of the content: classical mathematics. The identity for the square is Landau's
+    among them the algebra of space and the signature $(1,3)$ (synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two; this concerns two commuting pairs inside one copy
+    and says nothing against Bell violation for two systems each described by its own copy); the functional of clause (v) as the Popescu-Rohrlich box with its probabilities (synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state); the attainment question over the rationals (synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records); the three-party trade-off (synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two). Clause (iv) and clause (ix) were first drafted in those results and are stated here once. Status of the content: classical mathematics. The identity for the square is Landau's
     (L. J. Landau, Phys. Lett. A 120 (1987) 54, cited from memory) and the bound is Tsirelson's (B. S. Cirel'son,
     Lett. Math. Phys. 4 (1980) 93, existence checked on the web). Checked on the web: the algebraic form of the
     bound for ordered star-rings is formalised in the Lean library mathlib (Algebra.Star.CHSH), by a
@@ -100,7 +100,7 @@ extraction:
 ## formal
 Let $k$ be $\Q$ or any ordered field, and $\Cl_{k}(p,q)$ the Clifford algebra of Theorem \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra} with coefficients in $k$ (Theorem \claimref{synthesis.division-gives-the-rationals}), with blades $e_{S}$, the images of the group $G$ of signed directions. Let $x \mapsto x^{\dagger}$ be the linear extension of the inverse of $G$, $e_{S}^{\dagger} = e_{S}^{-1}$. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. An \emph{observable} is an $x$ with $x^{\dagger} = x$ and $x^{2} = 1$.
 
-\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived.
+\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived.
 
 The functionals $\omega_{\rho}(x) = \langle\rho x\rangle_{0}/\langle\rho\rangle_{0}$, $\rho = \sum_{r}y_{r}y_{r}^{\dagger} \ne 0$, are states; (P) extends the stored definition of a state as an element $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of unit trace from elements to functionals. Let $A_{1}, A_{2}, B_{1}, B_{2}$ be observables with $A_{i}B_{j} = B_{j}A_{i}$ for all $i, j$ (a \emph{configuration}; any signature, and no subsystem structure is assumed in (i) to (v)), and
 \[

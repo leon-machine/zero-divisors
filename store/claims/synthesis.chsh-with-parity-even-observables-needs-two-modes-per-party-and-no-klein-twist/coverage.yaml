@@ -11,3 +11,5 @@ functions:
     kind: partial
     clauses: ["(iv)", "(v)"]
     omits: "the stated configuration and state of two modes, the four correlations, the value 14/5 at one rational pair of directions, the pair state written out, the value at amplitudes (3/5, 4/5) against the stated bound, the parity and parity average of the observables, the averaged value, and the untwisted element with its self-adjoint part of square three on that state; the statement for every state and every point of the circle is the proof's"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "a premise about values, assumed and not computed: the checks compute with explicit elements and functionals and do not call the postulate"

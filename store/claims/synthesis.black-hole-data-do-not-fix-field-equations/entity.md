@@ -44,7 +44,7 @@ derivations:
 - name: main
   uses:
   - synthesis.quarter-from-temperature@1
-  - scrambling.mode-count@2
+  - scrambling.mode-count@3
   - singularity.rate-discharge-hypothesis-iii@6
   - synthesis.imported-wald-noether-charge-entropy@3
   - synthesis.imported-gtg-dictionary@2

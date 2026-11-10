@@ -25,7 +25,7 @@ derivations:
 - name: main
   uses:
   - singularity.eviction-window-thermal-product-radiation-entropy@7
-  - singularity.stretched-singularity-count@8
+  - singularity.stretched-singularity-count@9
   - singularity.area-law-test@5
   - singularity.imported-page-average-entropy-subsystem@1
   proof: proof-main.tex

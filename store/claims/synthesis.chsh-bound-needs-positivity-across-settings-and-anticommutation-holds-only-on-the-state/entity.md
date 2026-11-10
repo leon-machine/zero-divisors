@@ -24,6 +24,8 @@ derivations:
   - synthesis.signed-directions-and-the-integer-clifford-algebra@2
   - tower.commuting-copies@5
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -35,21 +37,23 @@ lineage:
   - synthesis.premise-superposition-over-the-integers
   - one-relation.imported-envariance-born-rule
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the stored results it refers to by id. No statement changed; version kept at 1.
   note: >-
     Adversarial test of whether the CHSH bound on values follows from the algebra or needs a premise about
     values. A counter-model settles it: on the integer Clifford algebra, extended $\Q$-linearly, there is a
     normalised linear functional with $\lambda(x^{\dagger}) = \lambda(x)$ that assigns a non-negative,
     no-signalling probability table to every pair of settings and has CHSH value $4$. It is the Popescu-Rohrlich
-    box (S. Popescu and D. Rohrlich, Found. Phys. 24 (1994) 379; verified by the referee) written as a functional
+    box (S. Popescu and D. Rohrlich, Found. Phys. 24 (1994) 379; existence checked on the web) written as a functional
     on the algebra. The stored CHSH result has the functional, its value $4$ and its negative value at $t = 1$
     (clause (v)); what is recorded here is where the functional is non-negative (inside each setting pair), where
     it is negative (inertia $(12, 4, 0)$, with examples), and a pair of positivity conditions that suffices for
     the bound. What is proved: the algebra and linearity do not imply the bound. That no stored premise supplies
     positivity is argued, not audited over the whole store. The stored definition of a state (an element
-    $\rho = \sum x_{r}x_{r}^{\dagger}$ of unit trace) already has positivity built in, so the gap is between
-    functionals and stored states, and the maintainer decision is whether (P), or "values are given by stored
-    states", is adopted as a premise. Hypothesis (P) is named in the formal level; it is to become an assumes
-    edge to the postulate the maintainer creates after acceptance. The statement that anticommutation of a
+    $\rho = \sum x_{r}x_{r}^{\dagger}$ of unit trace) already has positivity built in, so the gap is between functionals and stored states. Decision of 10 November 2026: (P) is adopted as a premise, with reality, and is the stored entity synthesis.premise-positivity-of-values; this result assumes it for its statements about states (the counter-model, a functional that is not a state, needs no premise about values), and the label (P) is kept in the text. The statement that anticommutation of a
     party's observables holds only on the state, with its three-mode example, was first drafted here and is now
     clause (ix) of the stored CHSH result; it is not part of this result (the id keeps its original wording, as
     ids are not renamed). That maximal CHSH value fixes the observables only on the support of the state is the
@@ -62,7 +66,7 @@ extraction:
 ## formal
 Let $k$ be $\Q$ or an ordered field, and $\Cl_{k}(2,2)$ the algebra of two modes: generators $e_{j}$, $f_{j}$ with $Q(e_{j}) = 1$, $Q(f_{j}) = -1$, $p_{j} = f_{j}e_{j}$, the integer algebra $\Cl_{\Z}(2,2)$ of Theorem \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra} inside it. As in Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}, $\dagger$ is the linear extension of the inverse on blades, observables are self-adjoint elements of square $1$, and $C = A_{1}(B_{1} + B_{2}) + A_{2}(B_{1} - B_{2})$ for a configuration. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split.
 
-\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(2,2) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived.
+\emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(2,2) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived.
 
 (P) extends the stored definition of a state as an element $\rho = \sum_{r}x_{r}x_{r}^{\dagger}$ of unit trace from elements to functionals. Throughout, the configuration is the blade configuration $A_{1} = p_{1}$, $A_{2} = e_{1}$, $B_{1} = p_{2}$, $B_{2} = e_{2}p_{1}$ (mode $1$ against the copy of mode $2$ twisted as in Theorem \claimref{tower.commuting-copies}; integer blades, commuting across the pairs, anticommuting within), with $C^{2} = 4 + 4K$, $K = -A_{1}A_{2}B_{1}B_{2}$, by clause (iv) of Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}. Let $\lambda(x) = \langle(1 + C)x\rangle_{0}$, the functional of clause (v) of that theorem: integer-valued on $\Cl_{\Z}(2,2)$, extended $\Q$-linearly, with $\lambda(1) = 1$, $\lambda(x^{\dagger}) = \lambda(x)$, $\lambda(C) = 4$. The element $1 + C$ is self-adjoint of unit scalar part and is not a stored state: it is not a sum of elements $xx^{\dagger}$, by (ii).
 \begin{enumerate}

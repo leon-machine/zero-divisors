@@ -39,7 +39,7 @@ derivations:
   - synthesis.residue-from-mode-entropy@4
   - synthesis.positive-null-energy-gives-r-premises@9
   assumes:
-  - synthesis.window-reading-array-killing-energy@1
+  - synthesis.window-reading-array-killing-energy@2
   proof: proof-main.tex
 checked_by:
 - kind: check

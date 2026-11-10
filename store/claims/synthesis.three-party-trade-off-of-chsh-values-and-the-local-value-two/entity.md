@@ -25,6 +25,8 @@ derivations:
   - synthesis.division-gives-the-rationals@2
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
   - tower.commuting-copies@5
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -42,14 +44,18 @@ lineage:
   - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
   - singularity.eviction-window-thermal-product-radiation-entropy
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the stored results it refers to by id. No statement changed; version kept at 1.
   note: >-
     Companion to the stored CHSH bound: does the same anticommutation give a monogamy statement for three
     parties, and where do the values 2, $2\sqrt{2}$ and 4 sit? Kill condition registered before computing: an
     exact three-party state with the two squared CHSH values summing to more than 8 for self-adjoint commuting
     settings, or commuting directions on one side with squared value above 4 (neither fired). Everything is
-    under Hypothesis (P) of the stored bound, which has been adopted as a postulate and is to become an assumes
-    edge. Status: classical mathematics. The quadratic trade-off is the monogamy relation of Toner and
-    Verstraete (arXiv:quant-ph/0611001, Theorem 1, checked on the web in this run: for a state of arbitrary
+    under Hypothesis (P) of the stored bound, the stored premise synthesis.premise-positivity-of-values, which this result assumes. Status: classical mathematics. The quadratic trade-off is the monogamy relation of Toner and
+    Verstraete (arXiv:quant-ph/0611001, Theorem 1, checked on the web: for a state of arbitrary
     dimension, with the shared party's measurements the same in both expressions, and tight for all pairs of
     values on the circle). Here only the points $(2, 2)$ over the rationals and, by the stored bound,
     $(\pm 2\sqrt{2}, 0)$ with a square root of two are exhibited; whether the whole arc is reached by rational
@@ -75,7 +81,7 @@ extraction:
 ---
 
 ## formal
-Notation, hypotheses and clause numbers of Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate} (the base) are used: $k$ is $\Q$ or any ordered field, $\Cl_{k}(p,q)$ the Clifford algebra of Theorem \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra} with coefficients in $k$ (Theorem \claimref{synthesis.division-gives-the-rationals}), $\dagger$ the linear extension of the inverse on blades, an \emph{observable} an $x$ with $x^{\dagger} = x$, $x^{2} = 1$, and \emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. Let $A_{1}, A_{2}$; $B_{1}, B_{2}$; $D_{1}, D_{2}$ be observables such that elements of different pairs commute, and
+Notation, hypotheses and clause numbers of Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate} (the base) are used: $k$ is $\Q$ or any ordered field, $\Cl_{k}(p,q)$ the Clifford algebra of Theorem \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra} with coefficients in $k$ (Theorem \claimref{synthesis.division-gives-the-rationals}), $\dagger$ the linear extension of the inverse on blades, an \emph{observable} an $x$ with $x^{\dagger} = x$, $x^{2} = 1$, and \emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. Let $A_{1}, A_{2}$; $B_{1}, B_{2}$; $D_{1}, D_{2}$ be observables such that elements of different pairs commute, and
 \[
 C_{AB} = A_{1}(B_{1} + B_{2}) + A_{2}(B_{1} - B_{2}), \qquad C_{AD} = A_{1}(D_{1} + D_{2}) + A_{2}(D_{1} - D_{2}), \qquad A_{\pm} = A_{1} \pm A_{2} .
 \]

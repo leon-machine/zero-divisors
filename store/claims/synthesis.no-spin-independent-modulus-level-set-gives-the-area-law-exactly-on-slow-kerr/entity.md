@@ -26,9 +26,9 @@ derivations:
   - interior.imported-kerr-schild-form-kerr-gauge@2
   - interior.complex-scale-inverse-cube-killing-spinor@6
   - synthesis.imported-kerr-surface-gravity-entropy@2
-  - singularity.stretched-singularity-count@8
+  - singularity.stretched-singularity-count@9
   - scrambling.epoch-modular-period-two-unknowns-become@6
-  - synthesis.kerr-ring-count-misses-area-law@6
+  - synthesis.kerr-ring-count-misses-area-law@7
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -49,6 +49,11 @@ lineage:
   - synthesis.c1-c2-forms-forced-one-number
   - synthesis.cutoff-count-is-not-a-local-density-on-sds
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      The extraction note names the related stored result by its id in place of a placeholder sentence, and the lay level now names the condition (the counting rule is assumed), as the other levels do. No statement changed; version kept at 1.
   open_problem: op.kerr-ring
   note: >-
     Attack item 2 of op.kerr-ring, the regime the stored ring count leaves out (small spin, where the cutoff locus is
@@ -62,8 +67,7 @@ extraction:
     leading order in rho/2M. Inputs from the literature are those of the imported Kerr Fact (surface gravity, area,
     Bekenstein-Hawking entropy). The determinant lemma of clause (2) is stated for a general Killing-invariant surface r = R(u) and proved in the Kerr-Schild gauge alone (cofactor rule and the rank-one rule); it is the same expression as clause (2) of the stored ring count, which states it for rho <= a, and it is proved here directly, so the sampled determinant in the check is a consistency check. The bounds on the integral are elementary and are in the proof; the integral itself
     is not evaluated in closed form. Transport-absent: the computation uses the Kerr gauge field and the counting
-    premises, not the completion. Intended citation, filed in the same session and not cited here: the result that
-    the Schwarzschild count does not determine its restatement in horizon data.
+    premises, not the completion. Related stored result, not cited in the statement: synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction, whose clause (v) shows that the Schwarzschild count does not determine its restatement in horizon data (its three forms differ on Kerr), and which cites the determinant lemma of clause (2) here.
 ---
 
 ## formal
@@ -100,7 +104,7 @@ Its three-volume per unit Killing time is at most $1 - a^{2}/(12\rho^{2})$ times
 So, in this regime of slow rotation and for level sets of the modulus of the curvature scale with $\rho \le M/3$, no density and no level set chosen independently of the spin reproduce the Kerr entropy exactly at zero and at nonzero spin: the count depends on the spin through $a/\rho$ (and weakly through $\rho/M$), the area law through $a/M$. The equality refuted is exact; the Schwarzschild count itself meets the area law only at leading order. For $a/\rho$ bounded below the miss is of leading order in $1/M$, at least $\varepsilon/12$ in the limit; for $a/\rho \to 0$ the lower bound shows the count still agrees with $A_{+}/4$ at leading order. For the Planck level set $\rho_{c} = (2M)^{1/3}$ this holds for $M \ge 8$. With the stored result for $a \ge 2\rho_{c}^{2}$ the literal count misses the area law at both ends of the spin range; the window between is not treated.
 
 ## lay
-The series counts a black hole's quantum modes on an inner surface where the gravitational field strength reaches a fixed value, and for a non-rotating hole that count matches the hole's entropy. An earlier result showed the same rule fails for fast-spinning holes. This one treats very slow rotation, and any fixed value of the field strength, not only the Planck one: the counting surface is then a slightly flattened closed surface inside the hole, and its volume, hence the count, drops with spin on a far smaller scale of spin than the entropy does. So no version of the rule of the kind covered here (surfaces on which the size of the field strength is fixed, lying deep inside the hole, at spins small compared with the size of that surface) reproduces the entropy of rotating holes exactly, and the shortfall is a few per cent when the spin parameter is comparable to the surface's size, however large the hole. For still smaller spin the shortfall shrinks to nothing. Rules that use the direction as well as the size of the field strength, and a middle range of spins, are not covered.
+The series counts a black hole's quantum modes on an inner surface where the gravitational field strength reaches a fixed value, and for a non-rotating hole that count matches the hole's entropy. An earlier result showed the same rule fails for fast-spinning holes. This one treats very slow rotation, assuming the same counting rule, and any fixed value of the field strength, not only the Planck one: the counting surface is then a slightly flattened closed surface inside the hole, and its volume, hence the count, drops with spin on a far smaller scale of spin than the entropy does. So no version of the rule of the kind covered here (surfaces on which the size of the field strength is fixed, lying deep inside the hole, at spins small compared with the size of that surface) reproduces the entropy of rotating holes exactly, and the shortfall is a few per cent when the spin parameter is comparable to the surface's size, however large the hole. For still smaller spin the shortfall shrinks to nothing. Rules that use the direction as well as the size of the field strength, and a middle range of spins, are not covered.
 
 ## one-liner
 For Kerr with $0 < a \le \tfrac45\rho$, $\rho \le M/3$, the level set $|z| = \rho$ of the curvature scale's modulus has volume rate at most $1 - a^{2}/(12\rho^{2})$ times Schwarzschild's, and at least $(1 - \delta)(1 - a^{2}/(3\rho^{2}))$ times it, so no spin-independent density and level set of this kind give $A_{+}/4$ exactly at zero and nonzero spin; only modulus level sets with $\rho \le M/3$ are covered, the window $\tfrac45\rho_{c} < a < 2\rho_{c}^{2}$ is untreated, and for $a/\rho \to 0$ the count still agrees with $A_{+}/4$ at leading order.

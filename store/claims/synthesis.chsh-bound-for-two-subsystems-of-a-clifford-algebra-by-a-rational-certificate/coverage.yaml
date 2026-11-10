@@ -31,3 +31,5 @@ functions:
     kind: sampled
     clauses: ["(ix)"]
     omits: "the three-mode observables, their commutation, the anticommutator 1 - p_3, the square 4 + 4 K' P_+, the certificate on this configuration, and for four rational r the normalisation, the values 8r, 8 and 0 and non-negativity on sixteen sample elements; positivity on all elements is the proof's"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "a premise about values, assumed and not computed: the checks compute with explicit elements and functionals and do not call the postulate"

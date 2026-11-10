@@ -11,3 +11,5 @@ functions:
     kind: partial
     clauses: ["(iv)", "(v)"]
     omits: "the law and its equality cases for every fraction of denominator up to 400, the congruence refinements, the recursion, the descent step, the legs and the rational bracket for all solutions with denominator up to 10^12, the first four Pell values as values of pure states, the running maxima among pure-state values of the sector for denominators up to 400 (a computation, which is all the last sentence of (v) claims), and the comparison of 280/99 with 82/29; all denominators and the completeness of the sequence are the proof's"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "a premise about values, assumed and not computed: the checks compute with explicit elements and functionals and do not call the postulate"

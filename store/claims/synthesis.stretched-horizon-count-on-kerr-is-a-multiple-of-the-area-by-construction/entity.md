@@ -25,7 +25,7 @@ derivations:
   uses:
   - interior.imported-kerr-schild-form-kerr-gauge@2
   - synthesis.imported-kerr-surface-gravity-entropy@2
-  - singularity.stretched-singularity-count@8
+  - singularity.stretched-singularity-count@9
   - scrambling.epoch-modular-period-two-unknowns-become@6
   - synthesis.c-loc-is-a-second-placement-of-the-count@3
   - synthesis.exceptional-boundary-measure-one-calibration@2
@@ -48,6 +48,11 @@ lineage:
   - scrambling.mode-count
   - pred.boundary-mode-density
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Wording of the extraction note only (source checks described without naming who made them). Nothing else changed; version kept at 1.
   open_problem: op.kerr-ring
   note: >-
     Attack item 2 of op.kerr-ring (place the count on the horizon's modular data for the co-rotating Killing
@@ -61,7 +66,7 @@ extraction:
     and a count on a surface at fixed proper distance from a horizon is the geometry of the brick-wall and
     stretched-horizon constructions: G. 't Hooft, On the quantum structure of a black hole, Nucl. Phys. B 256
     (1985) 727-745; L. Susskind, L. Thorlacius and J. Uglum, The stretched horizon and black hole
-    complementarity, Phys. Rev. D 48 (1993) 3743 (both checked on the web by the referee). Direct prior art for
+    complementarity, Phys. Rev. D 48 (1993) 3743 (both checked on the web). Direct prior art for
     Kerr: M.-H. Lee and J. K. Kim, On the entropy of a quantum field in the rotating black holes,
     arXiv:hep-th/9603055, whose abstract states that with a proper-distance cutoff the brick-wall entropy of a
     rotating hole is proportional to the horizon area (abstract checked; journal reference not checked). So the
@@ -79,7 +84,7 @@ extraction:
     hypothesis, identified with the stored horizon placement, not adopted; (C1) is unchanged. The mass-form
     ratio M/s of clause (v) is the Kerr counterpart of the ratio M/(kappa_b r_b^2) of
     synthesis.cutoff-count-is-not-a-local-density-on-sds. The remainder coefficients of clause (iii) other than
-    c(0) and the limit 12 pi M rho_0 of clause (vi) are computed numerically (referee's table), not proved.
+    c(0) and the limit 12 pi M rho_0 of clause (vi) are computed numerically (the table in the proof), not proved.
     Transport-absent: Kerr geometry and the counting premises only.
 ---
 

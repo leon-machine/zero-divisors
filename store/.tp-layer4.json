@@ -14818,7 +14818,7 @@
 "note.singularity.monogamy-firewalls-small-corrections-theorem": {
 "failed": false,
 "findings": [],
-"key": "9c5a1acde099cbbb",
+"key": "c8daefdebe249a20",
 "result": "none",
 "runs": []
 },
@@ -21863,7 +21863,7 @@
 ""
 ]
 ],
-"key": "7c9d5ec1d634f5da",
+"key": "a74bb59d121d717b",
 "result": "pass",
 "runs": [
 {
@@ -24477,7 +24477,7 @@
 "singularity.c1-curvature-cutoff": {
 "failed": false,
 "findings": [],
-"key": "19405d0def6f0dc2",
+"key": "af594d9e940cdc97",
 "result": "none",
 "runs": []
 },
@@ -26544,7 +26544,7 @@
 ""
 ]
 ],
-"key": "02a7376a38c9d97d",
+"key": "f73d96556ce081c3",
 "result": "pass",
 "runs": [
 {
@@ -32614,7 +32614,7 @@
 "synthesis.c1-c2-forms-forced-one-number": {
 "failed": false,
 "findings": [],
-"key": "e48c813d8b59d6ad",
+"key": "5f3ec3d440d95166",
 "result": "pass",
 "runs": [
 {
@@ -33124,7 +33124,7 @@
 "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate": {
 "failed": false,
 "findings": [],
-"key": "bb4ddc42fd03a84b",
+"key": "e456e82329f1517e",
 "result": "pass",
 "runs": [
 {
@@ -33211,7 +33211,7 @@
 "synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state": {
 "failed": false,
 "findings": [],
-"key": "ea31e96d20aa6714",
+"key": "6283134601f33a71",
 "result": "pass",
 "runs": [
 {
@@ -33230,7 +33230,7 @@
 "synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records": {
 "failed": false,
 "findings": [],
-"key": "66dac3fe81af8671",
+"key": "266364db447c53dc",
 "result": "pass",
 "runs": [
 {
@@ -33269,7 +33269,7 @@
 "synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist": {
 "failed": false,
 "findings": [],
-"key": "3ea40a7b7881204b",
+"key": "1404c31969b25173",
 "result": "pass",
 "runs": [
 {
@@ -40992,7 +40992,7 @@
 "synthesis.kerr-ring-count-misses-area-law": {
 "failed": false,
 "findings": [],
-"key": "164d4aaa5a5ed8ad",
+"key": "1dffd787d1930306",
 "result": "pass",
 "runs": [
 {
@@ -45313,6 +45313,13 @@
 "result": "none",
 "runs": []
 },
+"synthesis.premise-positivity-of-values": {
+"failed": false,
+"findings": [],
+"key": "f61a61d46f2f9c55",
+"result": "none",
+"runs": []
+},
 "synthesis.premise-superposition-over-the-integers": {
 "failed": false,
 "findings": [],
@@ -47503,7 +47510,7 @@
 "synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two": {
 "failed": false,
 "findings": [],
-"key": "78decc3c9cce8d29",
+"key": "805632e3f3ca9664",
 "result": "pass",
 "runs": [
 {
@@ -48746,7 +48753,7 @@
 "synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two": {
 "failed": false,
 "findings": [],
-"key": "ec51b7972408d33d",
+"key": "774e2c16d0b0bd10",
 "result": "pass",
 "runs": [
 {
@@ -50843,7 +50850,7 @@
 "synthesis.window-reading-array-killing-energy": {
 "failed": false,
 "findings": [],
-"key": "14f3f6308dda9c23",
+"key": "83582aac43fde3e7",
 "result": "none",
 "runs": []
 },

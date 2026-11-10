@@ -24577,18 +24577,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "sentence naming the stored three-party trade-off as the inequality behind the use of monogamy, with its caveats",
+    2
    ]
   ],
-  "hash": "9819750aba40b700",
+  "hash": "9ce4bf9397053f32",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "423281c72952daf1",
-   "statement": "90cc23ae63030e94"
+   "statement": "8307f6cd83281ee6"
   },
   "status": "remark",
-  "version": 1
+  "version": 2
  },
  "note.singularity.setting-chain-transport-algorithm": {
   "assumes": [],
@@ -35184,6 +35189,11 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "maintainer pass on Leon's decisions, a dated observation: the Kerr entropy neither meets nor probes the kill condition",
+    3
    ]
   ],
   "hash": "1708f5d599b3f473",
@@ -35195,7 +35205,7 @@
    "statement": "4fc4a39ecb1d196c"
   },
   "status": "live",
-  "version": 2
+  "version": 3
  },
  "pred.dark-energy-w-minus-one": {
   "assumes": [],
@@ -38499,18 +38509,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note: the wording \"accrual rate nu/T_H\" is a Schwarzschild coincidence; on Kerr the three forms of the rate differ",
+    3
    ]
   ],
-  "hash": "6edda6afa7ea0a36",
+  "hash": "3d48d279c0a27797",
   "ledger": null,
   "parts": {
    "checks": "ab18aacefa76ca6c",
    "proofs": "655a0c4e10b6990b",
    "rest": "48cf2ea25cc88ee6",
-   "statement": "bec7a1233a69cd16"
+   "statement": "dc1aee54442eb4e5"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "scrambling.no-attic-route": {
   "assumes": [],
@@ -38539,7 +38554,7 @@
  },
  "scrambling.no-echo-prediction-registered": {
   "assumes": [
-   "singularity.c1-curvature-cutoff@4"
+   "singularity.c1-curvature-cutoff@5"
   ],
   "credit": [
    [
@@ -40710,7 +40725,7 @@
  },
  "singularity.area-law-test": {
   "assumes": [
-   "singularity.c1-curvature-cutoff@4",
+   "singularity.c1-curvature-cutoff@5",
    "singularity.c2-cell-density@4",
    "singularity.c3-counted-epoch@1"
   ],
@@ -40858,18 +40873,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note at Leon's decision of 10 November 2026: the class of placements called forced fails on Kerr at both ends of the spin range",
+    5
    ]
   ],
-  "hash": "af19c42e56e1d21e",
+  "hash": "fe2865cc0e5e500e",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "563ec95518833e53"
+   "statement": "189f67ca37dff749"
   },
   "status": "postulate",
-  "version": 4
+  "version": 5
  },
  "singularity.c2-cell-density": {
   "assumes": [],
@@ -42629,7 +42649,7 @@
  },
  "singularity.stretched-singularity-count": {
   "assumes": [
-   "singularity.c1-curvature-cutoff@4",
+   "singularity.c1-curvature-cutoff@5",
    "singularity.c2-cell-density@4"
   ],
   "credit": [
@@ -42647,18 +42667,23 @@
     "Claude Opus 5.5",
     "notation: d Omega written as the explicit area element",
     8
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note: \"keeps time with the horizon's own clock\" is a Schwarzschild coincidence; on Kerr the three forms of the rate differ",
+    9
    ]
   ],
-  "hash": "06d9d6c1cf1aa985",
+  "hash": "877acb37ab4fac55",
   "ledger": null,
   "parts": {
    "checks": "7625f99c4b699c78",
    "proofs": "5059694b849aee0d",
    "rest": "d3b65c89b700e77b",
-   "statement": "16c6cf5c8864929f"
+   "statement": "8aa875154547d82a"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "singularity.transport-schwarzschild-fibre": {
   "assumes": [],
@@ -47766,18 +47791,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note: the class of placements called forced is forced on the Schwarzschild family only and fails on Kerr at both ends of the spin range",
+    4
    ]
   ],
-  "hash": "ff2d853b7f066f54",
+  "hash": "a3c0b49c1818f8ea",
   "ledger": null,
   "parts": {
    "checks": "e409520eff6f7e57",
    "proofs": "fcf7d5c1c4ed23e8",
    "rest": "36880587349d3e5c",
-   "statement": "ad4f22d164cf6994"
+   "statement": "3cb05a8ec6d3f7af"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase": {
   "assumes": [],
@@ -48033,6 +48063,114 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "094a5e39977d255c",
+  "ledger": null,
+  "parts": {
+   "checks": "801c9f2e348a5206",
+   "proofs": "b73da5cde32b991a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "134c86a8ccfd3b05"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "9827b932974a59ff",
+  "ledger": null,
+  "parts": {
+   "checks": "deb6e479f8c99250",
+   "proofs": "6726e987a3b65487",
+   "rest": "d3b65c89b700e77b",
+   "statement": "9a03e0fdf60ca5db"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7cdd6c620f77ec45",
+  "ledger": null,
+  "parts": {
+   "checks": "bbcefd010be7aae0",
+   "proofs": "2d6bef5464bc0ba5",
+   "rest": "d3b65c89b700e77b",
+   "statement": "7805e782ef361427"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "150c63e739275026",
+  "ledger": null,
+  "parts": {
+   "checks": "c27b7bec970b254d",
+   "proofs": "238e340b1aba12dd",
+   "rest": "d3b65c89b700e77b",
+   "statement": "7cf0738219b35c64"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.circulant-charged-leptons-excluded-with-real-neutrino-sectors": {
   "assumes": [],
@@ -55229,18 +55367,23 @@
     "Claude Opus 5.5",
     "GA rewrite (Kerr-Schild gauge field; unit named I_4)",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "correction of the closing sentence of item 4 on small spin, citing the slow-rotation result",
+    7
    ]
   ],
-  "hash": "7645b522b663c9d6",
+  "hash": "17d32bb23081c37e",
   "ledger": null,
   "parts": {
    "checks": "0c0c91112400582f",
    "proofs": "7fbcebc00a07ee3a",
    "rest": "36880587349d3e5c",
-   "statement": "6a8148543072e97f"
+   "statement": "11bc71216797dbc7"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "synthesis.kerr-ring-double-cover-data": {
   "assumes": [],
@@ -55743,7 +55886,7 @@
  "synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content": {
   "assumes": [
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@1"
+   "synthesis.window-reading-array-killing-energy@2"
   ],
   "credit": [
    [
@@ -56946,6 +57089,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.no-spin-independent-modulus-level-set-gives-the-area-law-exactly-on-slow-kerr": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "f81237f4615d9451",
+  "ledger": null,
+  "parts": {
+   "checks": "af9365f7b021e5ec",
+   "proofs": "2f18d43813212d7b",
+   "rest": "36880587349d3e5c",
+   "statement": "e00d3067df651a96"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.non-abelian-gauge-fixing-has-gribov-copies-and-the-weak-rotor-lattice-with-doublets-has-a-perimeter-law": {
   "assumes": [],
   "credit": [
@@ -57068,7 +57236,7 @@
  },
  "synthesis.null-ordering-of-counted-units-is-zeta-symmetric": {
   "assumes": [
-   "synthesis.window-reading-array-killing-energy@1"
+   "synthesis.window-reading-array-killing-energy@2"
   ],
   "credit": [
    [
@@ -57422,7 +57590,7 @@
  "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays": {
   "assumes": [
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@1"
+   "synthesis.window-reading-array-killing-energy@2"
   ],
   "credit": [
    [
@@ -58245,6 +58413,31 @@
   },
   "status": "postulate",
   "version": 2
+ },
+ "synthesis.premise-positivity-of-values": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision (adoption of the premise, with reality, relative to the mode split)",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "1c9c510ee473f2f2",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "7304ecc66c0af127",
+   "statement": "a1ceebe727f4c92c"
+  },
+  "status": "postulate",
+  "version": 1
  },
  "synthesis.premise-superposition-over-the-integers": {
   "assumes": [],
@@ -59815,6 +60008,33 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "cda54376fcb83183",
+  "ledger": null,
+  "parts": {
+   "checks": "a7ebc2a1c22a40e0",
+   "proofs": "9164000ebb5a017a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ea85e4ae4e472a35"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.signed-directions-and-the-integer-clifford-algebra": {
   "assumes": [],
   "credit": [
@@ -60295,6 +60515,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d509a74a60490e4f",
+  "ledger": null,
+  "parts": {
+   "checks": "4c2d8a7373f2e53c",
+   "proofs": "f30ae2b96c0e3ec4",
+   "rest": "36880587349d3e5c",
+   "statement": "7a1b910855a610aa"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.sudden-descent-feature-not-tilt": {
   "assumes": [],
   "credit": [
@@ -60459,7 +60704,7 @@
   "assumes": [
    "singularity.c2-cell-density@4",
    "singularity.q-joint-quasi-freeness-s-wave@3",
-   "synthesis.window-reading-array-killing-energy@1"
+   "synthesis.window-reading-array-killing-energy@2"
   ],
   "credit": [
    [
@@ -60573,6 +60818,33 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@1"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "0161a7e91918e268",
+  "ledger": null,
+  "parts": {
+   "checks": "12427c1e4e89666f",
+   "proofs": "b5ffa5d0e11b8bad",
+   "rest": "d3b65c89b700e77b",
+   "statement": "e323561de5f13201"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side": {
   "assumes": [
@@ -61800,18 +62072,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope sentence at Leon's decision of 10 November 2026: the reading equates mean Killing energy only",
+    2
    ]
   ],
-  "hash": "24dc212331c14539",
+  "hash": "b39ac6977b624e28",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "394b08c472c97bfb",
-   "statement": "fd930ea1084de7c5"
+   "statement": "5d375728480efdac"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
   "assumes": [],

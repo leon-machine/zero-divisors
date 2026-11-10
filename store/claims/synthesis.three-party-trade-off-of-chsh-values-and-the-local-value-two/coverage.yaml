@@ -15,3 +15,5 @@ functions:
     kind: sampled
     clauses: ["(v)"]
     omits: "the written-out pair state idempotent and self-adjoint at five rational amplitude pairs (the five points the proof's degree argument needs), its four correlations at three amplitude pairs, and at amplitudes (3/5, 4/5), the value 402/145, the comparison with 4804/625, and the squared values of a third party on 50 settings against the bound 6596/21025; the formula for general weights and directions is the proof's"
+untouched_premises:
+  synthesis.premise-positivity-of-values: "a premise about values, assumed and not computed: the checks compute with explicit elements and functionals and do not call the postulate"

@@ -25,6 +25,8 @@ derivations:
   - synthesis.division-gives-the-rationals@2
   - synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1
   - synthesis.the-sign-is-the-rotor-at-infinity@1
+  assumes:
+  - synthesis.premise-positivity-of-values@1
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -41,18 +43,21 @@ lineage:
   - synthesis.division-gives-the-rationals
   - synthesis.continuum-completion-premise
 extraction:
+  maintainer_pass_2026_11_10:
+    by: maintainer-2026-11-10
+    date: '2026-11-10'
+    note: >-
+      Hypothesis (P) is now the stored premise synthesis.premise-positivity-of-values (Leon's decision of 10 November 2026): an assumes edge to it is added, the formal level and the proof cite it with the label (P) kept, and the note names the stored results it refers to by id. No statement changed; version kept at 1.
   note: >-
     Question: before the completion of the coefficients, with the integer and rational algebras only, is the
     value $2\sqrt{2}$ of the CHSH combination attained or only approached? Kill conditions registered before
     computing: (a) rational data attaining squared value 8 exactly; (b) a supremum over rational data strictly
-    below $2\sqrt{2}$. Neither fired. Everything here is under Hypothesis (P) of the stored CHSH bound, which has
-    been adopted as a postulate and is to become an assumes edge, and at one arrangement of measurements: the
+    below $2\sqrt{2}$. Neither fired. Everything here is under Hypothesis (P) of the stored CHSH bound, the stored premise synthesis.premise-positivity-of-values, which this result assumes, and at one arrangement of measurements: the
     one-mode Klein-twisted realisation with parity-odd directions (the other recorded setting, parity-even
     observables with two modes for each party, is not treated here; the circle and the denominator law are
     properties of the corner algebra of a blade configuration and should carry over, which is not done). That
     $2\sqrt{2}$ is not a value over the rationals, and that every rational of the open interval is a value, are
-    clauses (iii) and (iv) of the stored bound; so the supremum needs no approximation sequence. A sibling result
-    of the same run (on parity-even observables, not used here) records the value $2(z + x)$ of the stored
+    clauses (iii) and (iv) of the stored bound; so the supremum needs no approximation sequence. The stored result on parity-even observables (synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist, not used here) records the value $2(z + x)$ of the stored
     equal-weight pair state for party $B$'s directions $zp_{2} \pm x\,e_{2}p_{1}$, which is the same number as
     $2(c_{u} - s_{u})$ here for the mirror-image state. What this result adds is the structure of the approach:
     the pure states of the sector form the rational points of a circle of square radius 8 in the plane of two
@@ -70,7 +75,7 @@ extraction:
 ---
 
 ## formal
-Notation, hypotheses and clause numbers of Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate} (the base) are used: the adjoint $\dagger$ (the linear extension of the inverse on blades), observables, and \emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is assumed, not derived. Here $k = \Q$ and the algebra is $\Cl_{\Q}(2,2)$ (Theorems \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}, \claimref{synthesis.division-gives-the-rationals}) with generators $e_{1}, f_{1}, e_{2}, f_{2}$, $Q(e_{j}) = 1$, $Q(f_{j}) = -1$, parities $p_{j} = f_{j}e_{j}$. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. A \emph{pure state} is $\omega_{\rho}(x) = 4\langle\rho x\rangle_{0}$ for a self-adjoint idempotent $\rho$ with $\rho x\rho = 4\langle\rho x\rangle_{0}\rho$ for all $x$. \emph{The settings} are those of clauses (vii), (viii) of the base, the one-mode Klein-twisted realisation with parity-odd directions:
+Notation, hypotheses and clause numbers of Theorem \claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate} (the base) are used: the adjoint $\dagger$ (the linear extension of the inverse on blades), observables, and \emph{Hypothesis (P), positivity of values:} values are given by a \emph{state}, a $k$-linear $\omega : \Cl_{k}(p,q) \to k$ with $\omega(1) = 1$, $\omega(xx^{\dagger}) \ge 0$ and $\omega(x^{\dagger}) = \omega(x)$ for all $x$; (P) is Premise \claimref{synthesis.premise-positivity-of-values}, assumed, not derived. Here $k = \Q$ and the algebra is $\Cl_{\Q}(2,2)$ (Theorems \claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}, \claimref{synthesis.division-gives-the-rationals}) with generators $e_{1}, f_{1}, e_{2}, f_{2}$, $Q(e_{j}) = 1$, $Q(f_{j}) = -1$, parities $p_{j} = f_{j}e_{j}$. The adjoint is defined by the chosen generators. In definite signature it does not depend on the orthonormal frame; in indefinite signature it depends on the split into generators of square $1$ and of square $-1$, so observables, states and (P) are relative to that split, and each statement holds for every fixed split. A \emph{pure state} is $\omega_{\rho}(x) = 4\langle\rho x\rangle_{0}$ for a self-adjoint idempotent $\rho$ with $\rho x\rho = 4\langle\rho x\rangle_{0}\rho$ for all $x$. \emph{The settings} are those of clauses (vii), (viii) of the base, the one-mode Klein-twisted realisation with parity-odd directions:
 \[
 A_{1} = e_{1}, \quad A_{2} = p_{1}, \quad B_{1} = e_{2}p_{1}, \quad B_{2} = p_{2}, \qquad C = A_{1}(B_{1} + B_{2}) + A_{2}(B_{1} - B_{2}), \qquad K = e_{1}f_{2}, \quad P_{K} = \tfrac12(1 + K),
 \]
