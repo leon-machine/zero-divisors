@@ -3,8 +3,8 @@ functions:
     kind: sampled
     clauses:
     - '(i) sum_ab g_a w g_b D(g_a, g_b) = -2 xi w/(4 pi^2 s) and sum_ab g_a g_b D(g_a, g_b) = (3 + xi)/(4 pi^2 s) in Cl(4,0), at four rational vectors and four rational gauge parameters (Landau and Feynman among them)'
-    - '(i) the coefficients -xi/4 and (3 + xi)/16 in units e^2 pi^-4; the degrees of divergence 1 and 0 by additivity; the sphere average of w_nu w is g_nu s/4'
-    omits: 'the identities for every vector and gauge parameter are the two-line proof (g^a w g_a = -2w, w w w = Q(w) w, linear in xi); the scaling degree at most 3 of the remainder and local integrability on the partial diagonals are the proof''s'
+    - '(i) the coefficients -xi/4 and (3 + xi)/16 in units e^2 pi^-4; the sphere average of w_nu w is g_nu s/4'
+    omits: 'the identities for every vector and gauge parameter are the two-line proof (g^a w g_a = -2w, w w w = Q(w) w, linear in xi); the scaling degrees 5 and 8, the degree at most 3 of the remainder and local integrability on the partial diagonals are the proof''s and the stored theorem''s, not checked here'
   check_identities_off_the_origin:
     kind: exact
     clauses:
@@ -25,7 +25,8 @@ functions:
   check_ward_matching_of_subtractions_and_scale_coefficients:
     kind: exact
     clauses:
-    - '(iii) for a polynomial f on R^8 the gradient of f in t at the origin equals the gradient at the origin of F(w) = f(w, 0) - f(0, w), and F(0) = 0'
+    - '(iii) for a polynomial f on R^8 the gradient of f in t at the origin equals the gradient at the origin of F(w) = f(w, 0) - f(0, w), F(0) = 0 with f(0) not zero, and the second-order part of F does not vanish'
+    - '(vi) on the Euclidean section the local pair (c_2 dslash delta, c_V n delta delta) preserves the identity exactly when c_V = -c_2 (three coefficient pairs, against the linear part of f)'
     - '(iv) scale derivatives xi e^2/(8 pi^2) dslash delta and -xi e^2/(8 pi^2) n delta delta, from the shell integral and again from the logarithmic form'
-    omits: 'clause (iii) itself is the proof (Fubini and integration by parts in t); no eight-dimensional integral is computed in the check; the mass term''s scale derivative is arithmetic in the proof'
+    omits: 'clause (iii) itself is the proof (Fubini and integration by parts in t); no eight-dimensional integral is computed in the check; the mass term''s scale derivative is arithmetic in the proof; the ranks of the stored count are not recomputed in Cl(4,0)'
 untouched_premises: {}

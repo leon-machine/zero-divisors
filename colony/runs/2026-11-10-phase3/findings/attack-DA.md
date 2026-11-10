@@ -1,7 +1,8 @@
 # Attack DA: dark energy exposure (Cluster D) and the gravity-entanglement literature check
 
 Status: complete (attack round). Labels: proved / computed / argued / conjectured / imported.
-Proposal filed (1 of 2 allowed):
+Proposal filed (1 of 2 allowed; restated in the fix round, see findings/fixes-DA.md; its title is now "Under (Mat),
+bare functional, isotropic flat slices: the released norm tracks dust", id unchanged):
 `synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates`
 (check4: 0 errors, 0 warnings, 3 info I405; validate ok, no findings; registered with propose_claim; coverage.yaml
 copied). Work files: work/DA/ (cones.py, cones_future.json, group.py, cone_table.tsv, the proposal's source folder).
@@ -146,7 +147,7 @@ conserved source: a new matter component would absorb it at the price of a new p
 | einstein: Clausius route (einstein-equations-from-c-loc-and-clausius, inverse problem, c-loc results) | SURVIVE; Lambda stays an integration constant | The route takes any conserved source; evolving dark energy would be a source the series does not have |
 | entropy and thermality (37; 9): de-sitter-entropy-pi-n-squared, de-sitter-mode-count, de-sitter-temperature-frozen-point-norm, cosmological-horizon results, sds-clausius-fixes-area-constant | SURVIVE RESTATED at fixed Lambda; application to the actual future horizon FALLS or becomes conditional | They are statements on the de Sitter or Schwarzschild-de Sitter field; with evolving dark energy a late de Sitter stage is not given |
 | black-hole residue, interior, walls, quantum-fields, one-relation, programme, towers, generations, neutrinos, clifford-structure (about 80; 8) | UNTOUCHED | In the cone through the frozen point as a conformal-geometry object (boost, infinity, tractor transport), not through its norm on matter regions |
-| dark-matter (45; 3) | UNTOUCHED, with one exception | In the cone through the single frozen point of the descent (P1). Exception reported by the dark-matter attacker (attack-MA.md, Unexpected links): postulate D (democracy) uses the de Sitter radius as a constant of the laws; the two results under D go if Lambda moves; the fitted ratio 5.364 does not use D |
+| dark-matter (45; 3) | UNTOUCHED, with one exception | In the cone through the single frozen point of the descent (the dark-matter premise P1, dark-matter.p1-single-frozen-point; not the Kasner-exit (P1)). Exception reported by the dark-matter attacker (attack-MA.md, Unexpected links): postulate D (democracy) uses the de Sitter radius as a constant of the laws; the two results under D go if Lambda moves; the fitted ratio 5.364 does not use D |
 | standard-model (4; 2): constant-d-term-level-fixes-weak-scale-against-planck-under-promotion, d-term-level-free-at-fixed-n | SURVIVE RESTATED | Conditional on the promotion and on N being a number |
 | Outside the cone: neutrino.double-prediction-sum-predicted-floor, pred.neutrino-mass-sum-floor | COUPLED (see Unexpected links) | Its confrontation is stated "within w = -1" |
 
@@ -199,7 +200,19 @@ the series "cannot use that option"), two refuted entries on other topics, and i
 - the tower: enters dark matter (w = 0) and the counts for N, with no pressure of its own stored;
 - the promoted norm's conjugate time advances with matter but is the variable conjugate to Lambda, not a density.
 
-Plain statement: under the stored premises the series has no fallback. No stored structure permits a dark-energy
+Correction after the bridge pass (findings/bridges.md, B7): the search above missed one stored structure with a
+late-time equation of state different from -1, found under "effective equation of state":
+synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands (ii), the unadopted branch with R3
+standing and a static hidden direction, where a fraction between 0.316 and 0.317 of the dark matter dilutes as
+a^(-9/4), an effective w = -1/4 (no pressure derived there). It is a dark-matter component, not a variable norm.
+Read as part of the dark energy it gives w0 about -0.92 and wa about +0.16 (bridge-hunter's computation, with
+density fractions from memory): wa has the opposite sign to every survey best fit, and the matter density inferred
+at recombination and today would differ by about 30 per cent (argued). So it is not a fallback, but the exponent of
+the hidden direction is a parameter in a stored, unadopted branch, and the kill condition's clause "with no
+parameter available to absorb it" must be read against it. The count "two ways of making the norm a variable" and
+every "no stored structure" sentence here is argued from a text search, not audited over a cone.
+
+Plain statement (argued): under the stored and adopted premises the series has no fallback. No stored structure permits a dark-energy
 equation of state different from -1 that is compatible with an accelerating universe. A confirmed w != -1 at the
 registered threshold would refute (FS) and the frozen-point reading of dark energy, and the series would need a new
 premise.
@@ -300,7 +313,8 @@ read these for how the word is used.
    synthesis.macdowell-mansouri-principle-fixes-the-trace-free-part and
    synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation), so the cone
    shows what the data would take.
-4. The plain statement "the series has no fallback for w != -1" on the prediction and in the dark-energy setting
+4. The plain statement "the series has no fallback for w != -1" (argued; it must name the unadopted w = -1/4 branch
+   of the unit-ball result and say why it is not one: wrong sign of wa, matter-density mismatch) on the prediction and in the dark-energy setting
    note (maintainer text; the proposal supplies the citable part). Recommendation: yes.
 5. Whether to compute the dynamical Stelle-West family with derivative terms (the literature's quintessence route)
    now, as a pre-registered analysis, or to leave it uncomputed. Recommendation: leave it and say so; computing a

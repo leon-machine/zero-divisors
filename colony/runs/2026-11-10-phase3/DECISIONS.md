@@ -28,3 +28,6 @@ Third round (10 November).
 7. State the series' position on the graviton once, in store/conventions.md: gravity is the classical gauge field of
    Gauge Theory Gravity; "graviton" in stored text names a helicity-2 channel or prior art, not a quantum of the
    field. Draft for Leon's wording.
+8. Primordial spectrum (after the referee): keep "no mechanism". The spectrum stays free initial data; the open
+   problem records what was examined, labelled argued, and the rule that a future index match counts only with a
+   second number.

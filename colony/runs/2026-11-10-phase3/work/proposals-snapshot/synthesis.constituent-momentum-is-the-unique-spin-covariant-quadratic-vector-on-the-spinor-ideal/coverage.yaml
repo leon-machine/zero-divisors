@@ -23,4 +23,9 @@ functions:
     kind: complete
     clauses:
     - "(iv) on S + S the covariance system has solution space of dimension 3 in (2,1), (1,2) and 4 in (1,3), (3,1); the sum of the two single momenta is a nonzero solution"
-    omits: "n = 5, not computed; clause (v) is argued and has no check"
+    omits: "n = 5 on S + S directly (obtained from the cross block, in its own function); clause (v) is argued and has no check"
+  check_cross_block_has_the_dimension_of_the_field_so_two_constituents_give_three_four_six:
+    kind: complete
+    clauses:
+    - "(iv) in each of the six towers the covariance system for real bilinear maps S x S -> V with no symmetry imposed has solution space of dimension 1, 2, 4 for n = 3, 4, 5; <x e_t rev(w)>_1 is a nonzero solution; with the two diagonal lines the two-constituent counts are 3, 4, 6"
+    omits: "the block decomposition and the sign-change corollary, in the proof"

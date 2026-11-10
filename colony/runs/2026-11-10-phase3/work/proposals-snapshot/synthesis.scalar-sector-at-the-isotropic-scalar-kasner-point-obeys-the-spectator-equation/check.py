@@ -246,7 +246,13 @@ def check_order_zero_and_curvature_perturbation():
         GA.check("control: order 1/2 fails, n = %s" % n, lhs != bessel(n, F(1, 4)))
     GA.check("s = k T^q / q with q = 2/3", q == F(2, 3) and 1 / q == F(3, 2))
     # comoving curvature perturbation in the gauge of unperturbed spatial metric: (H/phi_0') q u = (p/T) u T = p u
-    GA.check("curvature perturbation is u/3, the lapse perturbation over three", P_ISO == F(1, 3))
+    # computed from the background rates: H tau = p, phi_0' tau = q, so (H/phi_0') q u = p u; friction of zeta is
+    # (3H + 2 (z'/z - H)) tau = 3p + 2(p - p) with z = (c/p) a, which must equal the spectator's friction 1
+    h_tau = P_ISO
+    zeta_over_u = h_tau
+    friction = 3 * h_tau + 2 * (P_ISO - h_tau)
+    GA.check("zeta = u/3 and the friction of zeta from the pump field z = 3 q a is 1/tau",
+             zeta_over_u == F(1, 3) and friction == 1)
     # pump field of the curvature perturbation: z^2 = (phi_0'/H)^2 a^2 = (c^2/p^2) a^2 (units 8 pi G = 1)
     GA.check("z^2/a^2 = c^2/p^2 = 6, a constant", C2 / (P_ISO * P_ISO) == 6)
     return True

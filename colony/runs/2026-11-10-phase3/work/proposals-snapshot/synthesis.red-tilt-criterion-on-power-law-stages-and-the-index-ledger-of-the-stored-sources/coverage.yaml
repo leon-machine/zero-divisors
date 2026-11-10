@@ -16,7 +16,7 @@ functions:
     kind: sampled
     clauses:
     - "(iv) exponents read as residue weights in Cl(1,4), unit trace and sum of squares on 21 points of the segment, vacuum ends only at p = 0 and 1/2"
-    - "(iv) hidden-scale rows never red, margin (1 + 3p)(5 - 9p); Kaluza-Klein potential red exactly for p > 5/11 with f^2 - 9 q^2 = (1 + 5p)(11p - 5); field strength index at least 1"
+    - "(iv) hidden-scale rows never red, margin (1 + 3p)(5 - 9p); Kaluza-Klein potential red exactly for p > 5/11 with f^2 - 9 q^2 = (1 + 5p)(11p - 5); field strength index at least 1; at the vacuum end p = 1/2 the potential has index -1 and the field strength +1"
     - "(iv) largest 4 nu^2 over the twelve stored couplings and three weights is 7; the fitted window of xi recomputed, no stored value inside"
     omits: "the margins are polynomial identities of degree two, fixed by the grid; the list of twelve couplings is the stored theorem's"
   check_de_sitter_row_in_the_same_equation:
@@ -29,6 +29,6 @@ functions:
     kind: sampled
     clauses:
     - "(vi) the invariant monomials form the line spanned by (2, 1, -6); invariance of the Hubble rate and of k/a at two rational samples; the density ratio at exit is x/3"
-    - "(vi) alpha + 6 N = -36 x^2 (G'^2 - G'' G)/G^2 for three quadratic G at x = 10^-3, 10^-6, 10^-9; alpha/N tends to -6; a red tilt has positive running; 0.2106 at the measured index"
+    - "(vi) alpha + 6 N = -36 x^2 (G'^2 - G'' G)/G^2 for three quadratic G at x = 10^-3, 10^-6, 10^-9; alpha/N tends to -6; a red tilt has positive running; 0.2106 at the measured index; control with G'(0) = 0 gives ratio -12"
     omits: "that the spectrum is a function of x alone rests on the stated hypothesis on the state; differentiability of G is a hypothesis; G is sampled as a quadratic"
 untouched_premises: {}

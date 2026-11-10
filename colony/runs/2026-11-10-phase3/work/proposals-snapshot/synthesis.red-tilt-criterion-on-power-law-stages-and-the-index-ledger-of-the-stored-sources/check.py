@@ -160,6 +160,9 @@ def check_ledger_of_kasner_rows_from_residue_weights():
     premise("synthesis.kasner-hidden-scale-coupled-scalars-stay-blue")
     premise("synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point")
     premise("synthesis.imported-planck-2018-lcdm-parameters")
+    premise("dark-energy.frozen-point-datum-kasner-wall")
+    premise("synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall")
+    premise("synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue")
     ok = True
     for p in P_GRID:
         P, BB = residue_weights([p, p, p, 1 - 3 * p])
@@ -178,6 +181,8 @@ def check_ledger_of_kasner_rows_from_residue_weights():
         f = 2 * (ph - P[0])
         ok = ok and (red(f) == (p > F(5, 11))) and f * f - 9 * q * q == (1 + 5 * p) * (11 * p - 5)
         ok = ok and f * f <= 16 * q * q
+        if p == F(1, 2):  # the vacuum end: order 2, potential index -1 with no chosen number, field strength +1
+            ok = ok and f * f == 16 * q * q and 3 - 2 * F(2) == -1 and 5 - 2 * F(2) == 1
     # the isotropic point in the Einstein frame: 4 nu^2 = (lambda - 1)^2 + 6 xi for the twelve tree-level couplings
     worst = max((lam - 1) ** 2 + 6 * xi for lam in (-1, 0, 1) for xi in LISTED_XI)
     ok = ok and worst == 7 and worst < 9
@@ -238,6 +243,12 @@ def check_dust_with_cosmological_constant_scaling_and_running():
             alpha = -6 * x * dN
             ok = ok and alpha + 6 * N == -36 * x * x * (G1 * G1 - G2 * G) / (G * G)
             ok = ok and abs(alpha / N + 6) < 100 * x and N < 0 and alpha > 0
+    # control: with G'(0) = 0 the ratio tends to -12, so G'(0) != 0 is needed for -6
+    x = F(1, 10 ** 9)
+    G, G1, G2 = 1 + 5 * x * x, 10 * x, F(10)
+    N = -6 * x * G1 / G
+    alpha = -6 * x * (-6 * (G1 / G + x * (G2 * G - G1 * G1) / (G * G)))
+    ok = ok and abs(alpha / N + 12) < 100 * x * x
     # at the measured index the leading relation gives the running 6 * 0.0351 = 0.2106
     ok = ok and -6 * NS1 == F(2106, 10000)
     assert ok

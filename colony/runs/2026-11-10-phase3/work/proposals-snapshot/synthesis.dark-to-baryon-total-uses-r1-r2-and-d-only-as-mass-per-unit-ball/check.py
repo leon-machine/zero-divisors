@@ -11,14 +11,16 @@ of this world's three-volume through a length lam * d of each extra direction (D
 (D = 2); the stored premise R3 is lam = mu = 1.
 
 (1) Shares and total from an arbitrary filling; R1 and R2 give V_3/V_D and (11 pi + 16)/(3 pi). Rescaling the mass
-    of each tower by its own factor and the number density by the inverse factor breaks R1 and R2 and keeps every
-    share; rescaling the mass alone moves the total.
+    of the odd towers (constant on reversal orbits, the pair {2, 6} untouched) and the number density by the
+    inverse factor breaks R1 and R2 and keeps every share WHEN THE THICKNESS IS THE FIXED LENGTH d; rescaling the
+    mass alone moves the total; with the thickness one OWN cell radius the same fillings move the total
+    (to 17/9 + 32/(3 pi) and to 11/3 + 32/(3 pi)), so the fixed-length reading is a condition, and is tested.
 (2) The sphere law (equal mass per unit sphere of the tower's Euclidean spacetime, dimension D + 1) gives the same
     shares, by |S^(D+1)| = 2 pi V_D from the two recursions (D = 0 to 8). The total mass of a tower on its sphere of
     radius ell, filled at one quantum per ball of radius d, is proportional to (ell/d)^(D+1): equal across the three
     dimensions only at ell = d.
-(3) The mirror term: 1 from the density law at D = 3; 199/200 on the burning branch of the stored mirror share; the
-    two totals differ by 1/200 and both lie within one standard deviation of the record's ratio.
+(3) The mirror term: 1 from the density law at D = 3; 9318/9367 on the burning branch of the stored mirror share
+    (the stored 0.995); the two totals differ by 49/9367, about 1/200, and both lie within one standard deviation of the record's ratio.
 (4) Each remaining premise moves the total: thickness (2, 1) and (1, 2); cubic cells of side two units give exactly
     5, more than five standard deviations below the record; a tower moved from D = 2 to D = 4 changes it.
 """
@@ -98,23 +100,38 @@ def check_total_depends_on_mass_times_number_only():
     _, m0, n0 = base["us"]
     GA.check("share 4/3 at D = 2", share(2, *base["r1"][1:], m0, n0).eqrf(C(F(4, 3))))
     GA.check("share 8/(3 pi) at D = 4", share(4, *base["r3"][1:], m0, n0).eqrf(C(F(8, 3)) / PI))
+    # rescalings constant on the reversal orbits {1,7}, {3,5}, with the pair {2,6} untouched
     scales = [
-        ({"us": F(1), "mirror": F(1), "r1": F(3), "r7": F(1, 5), "r3": F(7, 2), "r5": F(11)},
-         C(1) + C(F(64, 15)) + C(F(116, 3)) / PI),
-        ({"us": F(2), "mirror": F(5, 3), "r1": F(1, 9), "r7": F(4), "r3": F(1), "r5": F(13, 7)},
-         C(F(5, 6)) + C(F(74, 27)) + C(F(80, 21)) / PI),
+        ({"us": F(1), "mirror": F(1), "r1": F(3), "r7": F(3), "r3": F(1, 5), "r5": F(1, 5)},
+         C(9) + C(F(16, 15)) / PI, None),
+        ({"us": F(1), "mirror": F(1), "r1": F(9), "r7": F(9), "r3": F(16), "r5": F(16)},
+         C(25) + C(F(256, 3)) / PI, C(F(17, 9)) + C(F(32, 3)) / PI),
+        ({"us": F(1), "mirror": F(1), "r1": F(1), "r7": F(1), "r3": F(16), "r5": F(16)},
+         C(F(11, 3)) + C(F(256, 3)) / PI, C(F(11, 3)) + C(F(32, 3)) / PI),
     ]
-    for sc, mass_only in scales:
+    roots = {(2, F(9)): F(3), (4, F(16)): F(2), (2, F(1)): F(1), (3, F(1)): F(1), (4, F(1)): F(1)}
+    for sc, mass_only, own_radius in scales:
         f = unit_ball_filling(scale=sc)
-        masses = {v[1] for v in f.values()}
-        GA.check("the rescaled filling breaks R1", len(masses) >= 5)
+        GA.check("the pair {2, 6} is untouched and orbits are kept",
+                 sc["us"] == sc["mirror"] == 1 and sc["r1"] == sc["r7"] and sc["r3"] == sc["r5"])
+        GA.check("the rescaled filling breaks R1", len({v[1] for v in f.values()}) >= 2)
         GA.check("the rescaled filling breaks R2",
-                 sum(1 for k in f if not (f[k][2] * ball(f[k][0])).eqrf(C(1))) >= 4)
+                 sum(1 for k in f if not (f[k][2] * ball(f[k][0])).eqrf(C(1))) >= 2)
         GA.check("mass per unit ball is common", all((C(f[k][1]) * f[k][2] * ball(f[k][0])).eqrf(C(1)) for k in f))
-        GA.check("every share is kept", total(f).eqrf(CLOSED))
+        GA.check("every share is kept (thickness in the fixed length)", total(f).eqrf(CLOSED))
         # mass rescaled without the compensating number density: the total moves, to the value computed by hand
         g = {k: (f[k][0], f[k][1], base[k][2]) for k in f}
         GA.check("mass alone moves the total", total(g).eqrf(mass_only) and not mass_only.eqrf(CLOSED))
+        if own_radius is not None:
+            # thickness one OWN cell radius a_r, with nu_r V_D a_r^D = 1 (a_r rational for these scales)
+            t = C(0)
+            for k, (D, m, n) in f.items():
+                if k == "us":
+                    continue
+                a = roots[(D, sc[k])]
+                GA.check("own cell radius", (n * ball(D) * C(a ** D)).eqrf(C(1)))
+                t = t + share(D, m, n, f["us"][1], f["us"][2], lam=a, mu=a)
+            GA.check("own-radius reading: (E) holds and the total moves", t.eqrf(own_radius) and not t.eqrf(CLOSED))
     return True
 
 
@@ -155,11 +172,14 @@ def check_mirror_term_is_obtained_twice():
     base = unit_ball_filling()
     _, m0, n0 = base["us"]
     GA.check("the density law gives the mirror share one", share(3, *base["mirror"][1:], m0, n0).eqrf(C(1)))
-    burning = F(199, 200)                       # stored mean mass per baryon ratio on the burning branch
+    burning = F(9318, 9367)                     # stored mean masses per baryon 931.8 and 936.7 MeV
+    GA.check("the stored 0.995 is this ratio rounded", F(9945, 10000) < burning < F(9955, 10000))
     f = dict(base)
     f["mirror"] = (3, base["mirror"][1] * burning, base["mirror"][2])
     t_burn = total(f)
-    GA.check("the two totals differ by 1/200", (CLOSED - t_burn).eqrf(C(F(1, 200))))
+    deficit = CLOSED - t_burn
+    GA.check("the two totals differ by 49/9367, about 1/200",
+             deficit.eqrf(C(F(49, 9367))) and F(1, 200) < F(49, 9367) < F(1, 190))
     for t in (CLOSED, t_burn):
         lo, hi = between(t)
         GA.check("within one standard deviation of the record", OBS - SIG < lo and hi < OBS + SIG)

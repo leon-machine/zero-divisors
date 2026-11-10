@@ -7,7 +7,8 @@ with n, a > 0 and y free (torsion allowed), and the norm u = -Q(V) = 3/Lambda a 
 Time derivatives enter as independent sample numbers (jets): ad, yd, ud for the first derivatives.
 (1) Kinematics by the stored definitions: the field strength R(a ^ b), the torsion
     D_0 g_i - D_i g_0 = (ad - n y) e_i, the curvature operator with eigenvalues A = yd/(n a) on e0 e_i and
-    B = y^2/a^2 on e_i e_j, the Einstein map G(e0) = -3B e0, G(e_i) = -(2A + B) e_i.
+    B = y^2/a^2 on e_i e_j, the Einstein map G(e0) = -3B e0, G(e_i) = -(2A + B) e_i, by contraction
+    with the reciprocal frame in the algebra.
 (2) The frozen-point MacDowell-Mansouri density u eps(F, F), F(a ^ b) = R(a ^ b) + g_a ^ g_b / u, summed
     over the 24 orderings against the pseudoscalar, equals 24 times
       Lred = u yd y^2 - a^2 yd - n a y^2 + n a^3/u.
@@ -16,11 +17,18 @@ Time derivatives enter as independent sample numbers (jets): ad, yd, ud for the 
       y: 2a(ad - n y) - ud y^2.
 (4) Elimination: with the frame equations 3B = 3/u + rho, 2A + B = 3/u - p (rho, p in units of
     8 pi G), A B - u^{-2} = ((3/u)(rho - 3p) - rho(rho + 3p))/18, one twenty-fourth of the stored clock
-    density (4/3)(Lambda(rho - 3p) - rho(rho + 3p)) at Lambda = 3/u.
+    density (4/3)(Lambda(rho - 3p) - rho(rho + 3p)) at Lambda = 3/u. That the released norm's equation is
+    the clock density set to zero is definitional (one derivative dL/du read two ways). What is tested,
+    and can fail, is the extension: at jets WITH torsion (y != ad/n) and a varying norm, with rho and p
+    read off the frame equations of the algebra's own curvature operator, the norm derivative of the
+    density is still the stored polynomial; the torsion-free eigenvalues of the same metric belong to a
+    different source.
 (5) Dust: 3/u = rho, y = -2 ad/n, (ad/(n a))^2 = rho/6, deceleration parameter 1/2, all four equations
     solved along the whole curve (jets of the closed form); the Friedmann rate rho/3 and a constant
     norm do not solve them.
-(6) Radiation has no solution; the general barotropic value 3/u = rho(1 + 3w)/(1 - 3w).
+(6) Radiation has no solution; one barotropic fluid p = w rho, -1/3 < w < 1/3: 3/u = rho(1 + 3w)/(1 - 3w),
+    H^2 = rho (1 + 3w)^2/(6(1 - 3w)), y = -2 ad/(n(1 + 3w)), deceleration parameter (1 + 3w)/2 > 0, all four
+    equations solved (jets of the closed form at s = 1).
 (7) Vacuum: A = B = 1/u, F = 0, and every positive u(t) solves all four equations with
     ad/(n a) = u^{-1/2} + ud/(2 n u).
 Exact arithmetic only (Fractions); fixed sample tables.
@@ -53,6 +61,11 @@ FLUIDS = [(F(6), F(0)), (F(3, 2), F(1, 5)), (F(5), F(5, 3)), (F(2, 3), F(-1, 9))
 # dust curve samples (k, s, n): rho = 6 k^2 / a^3 at a = s^2
 DUST = [(F(1), F(1), F(1)), (F(2, 3), F(3, 2), F(1)), (F(5), F(1, 2), F(7, 3))]
 EOS = [F(0), F(1, 5), F(-1, 4), F(2, 7)]
+EOS_LOW = F(-1, 3)
+EOS_HIGH = F(1, 3)
+FLUID_C = [F(1), F(3, 2), F(2, 5)]
+LAPSES = [F(1), F(7, 3)]
+QUARTER = F(1, 4)
 RADIATION_W = F(1, 3)
 # vacuum samples (q, a, n, ud): u = q^2
 VAC = [(F(1), F(1), F(1), F(0)), (F(3, 2), F(2), F(1), F(5)), (F(2), F(1, 3), F(4, 5), F(-7, 2)),
@@ -93,6 +106,26 @@ def _field_strength(y, yd):
             t2 = dOm[mu] if nu == 0 else {}
             R[mu, nu] = GA.add(GA.sub(t1, t2), _comm(Om[mu], Om[nu]))
     return R
+
+
+def _dot_vb(v, Bv):
+    """Inner product of a vector with a bivector: (v B - B v)/2."""
+    return GA.scal(HALF, GA.sub(_m(v, Bv), _m(Bv, v)))
+
+
+def _curv_op(n, a, y, yd):
+    """Curvature operator on the physical bivectors e_mu e_nu: -R(hb(e_mu ^ e_nu))."""
+    R = _field_strength(y, yd)
+    sc = [n, a, a, a]
+    return {(mu, nu): GA.scal(-1 / (sc[mu] * sc[nu]), R[mu, nu]) for mu in R4 for nu in R4}
+
+
+def _einstein_map(n, a, y, yd):
+    cop = _curv_op(n, a, y, yd)
+    recip = [GA.scal(F(1, SQ[mu]), _e(mu)) for mu in R4]
+    ric = [GA.add(*[_dot_vb(recip[mu], cop[mu, nu]) for mu in R4]) for nu in R4]
+    scal = sum((_m(recip[nu], ric[nu]).get((), F(0)) for nu in R4), F(0))
+    return [GA.sub(ric[nu], GA.scal(HALF * scal, _e(nu))) for nu in R4]
 
 
 def _wedge2(x, z):
@@ -213,12 +246,13 @@ def check_field_strength_torsion_and_einstein_map_of_the_isotropic_field():
                     if i != j:
                         tor = GA.sub(_comm(Om[i], g[j]), _comm(Om[j], g[i]))
                         GA.check("spatial torsion vanishes", GA.is_zero(tor))
-        # Ricci and Einstein maps from the eigenvalues, contraction with the reciprocal frame
-        ric0 = sum((A for _ in SPACE), F(0))
-        ricj = A + (len(SPACE) - 1) * B
-        scal = ric0 + len(SPACE) * ricj
-        GA.check("Einstein map: G(e0) = -3B e0", ric0 - scal / 2 == -THREE * B)
-        GA.check("Einstein map: G(e_i) = -(2A + B) e_i", ricj - scal / 2 == -(TWO * A + B))
+        # Ricci and Einstein maps by contraction with the reciprocal frame in the algebra
+        G = _einstein_map(n, a, y, yd)
+        GA.check("Einstein map: G(e0) = -3B e0", GA.eq(G[0], GA.scal(-THREE * B, _e(0))))
+        GA.check("Einstein map: G(e_i) = -(2A + B) e_i",
+                 all(GA.eq(G[i], GA.scal(-(TWO * A + B), _e(i))) for i in SPACE))
+        GA.check("Einstein map is not that of the de Sitter field unless A = B",
+                 (GA.eq(G[0], GA.scal(-THREE * A, _e(0)))) == (A == B))
 
 
 def check_frozen_point_density_on_the_isotropic_field_is_the_reduced_lagrangian():
@@ -274,6 +308,23 @@ def check_elimination_gives_the_stored_clock_density():
             L = THREE / u
             clock = CLOCK_COEFF * (L * (rho - THREE * p) - rho * (rho + THREE * p))
             GA.check("the stored clock density E - (8/3) Lambda^2 is 24 (A B - 1/u^2)", clock == CLOCK_RATIO * lhs)
+    # the extension that can fail: torsion present and the norm varying
+    for (n, a, y, yd, u) in JETS:
+        G = _einstein_map(n, a, y, yd)
+        L = THREE / u
+        # rho, p read off the frame equation G(b) + Lambda b = -8 pi G T(b), T(e0) = rho e0, T(e_i) = -p e_i
+        rho = -(_m(_e(0), G[0]).get((), F(0)) * F(1, SQ[0]) + L)
+        p = L + _m(_e(1), G[1]).get((), F(0)) * F(1, SQ[1])
+        stored = CLOCK_COEFF * (L * (rho - THREE * p) - rho * (rho + THREE * p))
+        norm_eq = _partial((n, a, y, yd, u), 4)
+        GA.check("with torsion: the norm derivative of the density is the stored polynomial",
+                 CLOCK_RATIO * norm_eq == n * a ** 3 * stored)
+        for (ad, ud) in RATES:
+            GA.check("the sample jets carry torsion", ad - n * y != 0)
+            # torsion-free spatial eigenvalue of the same metric, (ad/(n a)) squared, and its density
+            H_lc = ad / (n * a)
+            rho_lc = THREE * H_lc * H_lc - L
+            GA.check("the torsionful and torsion-free densities differ at these jets", rho != rho_lc)
 
 
 def check_dust_solution_tracks_the_density_and_decelerates():
@@ -328,6 +379,38 @@ def check_radiation_has_no_solution_and_barotropic_value():
             elim = L * (rho - THREE * p) - rho * (rho + THREE * p)
             GA.check("barotropic: Lambda = rho (1 + 3w)/(1 - 3w) solves the elimination", elim == 0)
             GA.check("barotropic: Lambda / rho is not 1 unless w = 0", (L == rho) == (w == 0))
+    # one fluid, closed form at s = 1: rho = m s^(-3(1+w)), y = -c s^(-(1+3w)/2), c^2 = 2m/(3(1-3w))
+    for w in EOS:
+        GA.check("sample equation of state lies in the window where Lambda > 0", EOS_LOW < w < EOS_HIGH)
+        for c in FLUID_C:
+            for n in LAPSES:
+                a = F(1)
+                m = THREE * (1 - THREE * w) * c * c / TWO
+                rho = m
+                p = w * rho
+                u = THREE * (1 - THREE * w) / (rho * (1 + THREE * w))
+                y = -c
+                ad = n * c * (1 + THREE * w) / TWO
+                dy_da = c * (1 + THREE * w) / TWO
+                du_da = THREE * (1 + w) * u
+                yd = dy_da * ad
+                ud = du_da * ad
+                eqs = _equations(n, a, ad, y, yd, u, ud, rho, p)
+                GA.check("one fluid: all four equations hold on the closed form", all(x == 0 for x in eqs))
+                H = ad / (n * a)
+                GA.check("one fluid: H^2 = rho (1 + 3w)^2 / (6 (1 - 3w))",
+                         H * H == rho * (1 + THREE * w) ** 2 / (DUST_RATE_DEN * (1 - THREE * w)))
+                GA.check("one fluid: y = -2 ad / (n (1 + 3w))", y == TORSION_RATIO * ad / (n * (1 + THREE * w)))
+                # d^2 s/d tau^2 = d/ds(ds/dtau) ds/dtau, ds/dtau = (c/2)(1 + 3w) s^(-(1+3w)/2)
+                v = ad / n
+                acc = -((1 + THREE * w) / TWO) * v * v
+                GA.check("one fluid: deceleration parameter (1 + 3w)/2, positive",
+                         -acc * a / (v * v) == (1 + THREE * w) / TWO > 0)
+                GA.check("one fluid: H^2 is a quarter of the rate (rho + Lambda)/3 only for dust",
+                         (H * H == QUARTER * (rho + THREE / u) / THREE) == (w == 0))
+                bad = _equations(n, a, TWO * ad, y, yd, u, ud, rho, p)
+                GA.check("one fluid: a different rate does not solve the connection equation",
+                         any(x != 0 for x in bad))
 
 
 def check_vacuum_leaves_the_norm_a_free_function():

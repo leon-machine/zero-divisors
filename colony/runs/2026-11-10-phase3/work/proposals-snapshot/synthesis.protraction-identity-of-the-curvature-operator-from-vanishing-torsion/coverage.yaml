@@ -5,11 +5,11 @@ functions:
     omits: "complete in four dimensions (both signatures) by linearity in the map and in c; in five dimensions a sample; other dimensions are the proof's (the grade count 4 of a four-vector does not depend on the dimension)"
   check_cyclic_trivector_is_the_covariant_curl_of_the_torsion:
     kind: sampled
-    clauses: ["(ii) C(g^mu)/2 = D ^ Theta^mu - Theta^nu ^ D_nu g^mu on one polynomial field with torsion in Cl(1,3) and one in signature (1,2)", "(ii) control: with torsion the cyclic trivector and the protraction are not zero"]
+    clauses: ["(ii) C(g^mu)/2 = D ^ Theta^mu - Theta^nu ^ D_nu g^mu on one polynomial field with torsion in Cl(1,3) and one in signature (1,2)", "(ii) control: with torsion the cyclic trivector and the protraction are not zero", "(iii) the converse fails: Omega = 0 on a polynomial coframe (torsion, zero curvature) and a conformal coframe with twice its torsion-free Omega (torsion, nonzero curvature) both have vanishing protraction"]
     omits: "two fields; the identity for every field is the proof's (Leibniz rule and the commutator of clause (c) of the definition)"
   check_protraction_vanishes_on_torsion_free_fields:
     kind: sampled
-    clauses: ["(iii) P(c) = 0, C(c) = 0, the cyclic vector identity and d_a calR(a ^ c) = calR(c) on four polynomial coframes with Omega solved from the torsion equation (two in Cl(1,3), one in (1,2), one in (2,2)) and on the library's Schwarzschild and de Sitter fields", "(iii) anchors of the store's sign: de Sitter scalar curvature 12 H^2, Schwarzschild radial eigenvalue 2M/r^3"]
+    clauses: ["(iii) P(c) = 0, C(c) = 0, the cyclic vector identity and d_a calR(a ^ c) = calR(c) on four polynomial coframes with Omega solved from the torsion equation (two in Cl(1,3), one in (1,2), one in (2,2)) and on the library's Schwarzschild and de Sitter fields", "(iii) d_a ^ calR(a) = 0 and the symmetry of the Ricci map on the same fields", "(iii) anchors of the store's sign: de Sitter scalar curvature 12 H^2, Schwarzschild radial eigenvalue 2M/r^3"]
     omits: "six fields at one rational point each; the statement for every torsion-free field is the proof's"
   check_kernel_of_the_protraction_is_the_space_of_algebraic_curvature_maps:
     kind: exact

@@ -316,6 +316,7 @@ combination agree with what the classical Maxwell operator on a curved field req
   identity".
 
 ## Decisions for Leon
+(Fix round: item 2 is corrected by findings/fixes-QA.md. The Q1 result holds on the Euclidean section only and supports, without discharging, the imported existence for the time-ordered products; statements above that the import "is no longer needed" are withdrawn.)
 1. Q1 premise edge (maintainer-only): the Q1 proposal has the Krein-form premise in its cone through the stored
    regulator-free result and states it in the text; should it carry its own `assumes` edge to
    synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields, as the stored result does?

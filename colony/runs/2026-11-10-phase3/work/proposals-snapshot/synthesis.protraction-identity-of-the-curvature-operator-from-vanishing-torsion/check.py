@@ -11,7 +11,8 @@ For a linear map M from bivectors to bivectors write
 
   (1) algebra, every M: C(c) = 2 T(c) - c . S with S = d_e ^ T(e), and T(c) = C(c)/2 - c . (d_e ^ C(e))/4;
   (2) every field, with torsion S^mu = D ^ g^mu:  C(g^mu)/2 = D ^ S^mu - S^nu ^ D_nu g^mu;
-  (3) torsion-free fields (Omega solved from hb): T = 0;
+  (3) torsion-free fields (Omega solved from hb): T = 0, and d_a ^ calR(a) = 0 (Ricci symmetry); the converse fails:
+      two fields with torsion and T = 0, one with zero and one with nonzero curvature;
   (4) the kernel of T: dimension d^2 (d^2 - 1)/12, inside the symmetric maps; B -> I B is symmetric and outside it;
       in Cl(1,3) the cyclic vector identity M(x ^ y) . z + M(y ^ z) . x + M(z ^ x) . y = 0 has the same solutions.
 """
@@ -29,6 +30,8 @@ FREE_SEEDS = ((1, S13), (2, S13), (4, S12), (6, S22))
 SCHW = (F(1), F(2), F(3, 5), F(4, 5))                        # M, r, sin, cos of the polar angle: 2M/r^3 = 1/4
 DS_H, DS_E = F(1, 2), F(1)                                   # Hubble rate, value of exp(H t) at the point
 KERNEL_SIGS = (S12, S13, S22, S14)
+CONVERSE_SEEDS = (1, 7)                                      # coframe seed, conformal factor seed
+DOUBLE = F(2)                                                # the factor on Omega in the second converse example
 
 
 def coef(seed, k):
@@ -170,6 +173,21 @@ def field_with_torsion(seed, sq):
     return gtg.Field(TH, None, sq, Om=Om)
 
 
+def converse_examples():
+    """Two fields with torsion and vanishing protraction: Omega = 0 on a generic polynomial coframe (zero
+    curvature), and the conformal coframe g^mu = exp(phi) e^mu with twice its torsion-free Omega (nonzero
+    curvature)."""
+    sq = S13
+    d = len(sq)
+    flat = gtg.Field(coframe(CONVERSE_SEEDS[0], sq), None, sq, Om=[{} for _ in range(d)])
+    phi, _ = poly(CONVERSE_SEEDS[1], 0, 3, F(1, 3), d, F(0))
+    ex = gtg.jexp(phi * F(-1), F(1))
+    TH = [[(ex if a == mu else Jet.const(F(0), d)) for mu in range(d)] for a in range(d)]
+    free = gtg.Field(TH, None, sq)
+    doubled = gtg.Field(TH, None, sq, Om=[gtg.m_scal(DOUBLE, x) for x in free.Om])
+    return flat, free, doubled
+
+
 def check_cyclic_trivector_is_the_covariant_curl_of_the_torsion():
     """(2): C(g^mu)/2 = D ^ S^mu - S^nu ^ D_nu g^mu on two fields with generic polynomial hb and Omega (torsion
     present), in Cl(1,3) and in three dimensions; the protraction is then nonzero (control for (3))."""
@@ -192,6 +210,15 @@ def check_cyclic_trivector_is_the_covariant_curl_of_the_torsion():
         if sq == S13:
             GA.check("with torsion the cyclic trivector is not zero", any(tor))
             GA.check("with torsion the protraction is not zero", any(protraction(M, c, sq) for c in range(d)))
+    # the converse of (iii) fails: torsion with vanishing protraction, with and without curvature
+    flat, free, doubled = converse_examples()
+    for fld, curved in ((flat, False), (doubled, True)):
+        GA.check("converse example has torsion", not fld.torsion_free())
+        GA.check("converse example: curvature as stated", any(v for v in fld.curvature().values()) == curved)
+        Mc = op_of_field(fld)
+        GA.check("converse example: protraction zero", all(protraction(Mc, k, fld.sq) == {} for k in range(fld.d)))
+    GA.check("the conformal field itself is torsion-free with curvature",
+             free.torsion_free() and any(v for v in free.curvature().values()))
     return True
 
 
@@ -217,6 +244,8 @@ def check_protraction_vanishes_on_torsion_free_fields():
         GA.check("the Ricci map is symmetric",
                  all(gtg.vdot(GA.gen(a), gtg.ricci(Rc, GA.gen(b), sq), sq) == gtg.vdot(GA.gen(b), gtg.ricci(Rc, GA.gen(a), sq), sq)
                      for a in range(d) for b in range(a)))
+        GA.check("d_a ^ calR(a) = 0",
+                 gtg.m_add(*[gtg.outer(gtg.er(a, sq), gtg.ricci(Rc, GA.gen(a), sq), sq) for a in range(d)]) == {})
         for a, b, c in itertools.combinations(range(d), 3):
             cyc = gtg.m_add(gtg.bdot(M(a, b), GA.gen(c), sq), gtg.bdot(M(b, c), GA.gen(a), sq),
                             gtg.bdot(M(c, a), GA.gen(b), sq))

@@ -354,3 +354,12 @@ All are maintainer-only actions; none was taken. Recommendation first.
    inference that all six towers are populated (which-towers-are-populated, conjectured). Recommend registering both
    as postulates so that the total's `holds_given` shows them; this RAISES the count by two and is the truthful
    direction.
+
+## After the fix round (see findings/fixes-MA.md)
+The referee's F1 stands: clause (i) holds only with R3's thickness read as one fixed common length; under the
+store's wording (one own cell radius) the same refilling moves the total to 7.06. Decisions 1, 9 and 10 above are
+conditional on Leon choosing the fixed-length reading of R3; a prior decision is therefore: (0) say in R3 whose
+cell radius its unit is when R2 is varied. Corrections to the audit above: P1 enters the closed form through the
+sourcing rule (six, not five, with it); dark-matter.democracy-de-sitter-radius-unit-ball is a third stored
+statement of the same total (cone D, R3), so the union is nine and fourteen lie under no statement of the total;
+the mirror's two derivations share P1, P2, P3; the burning-branch difference is 49/9367, about 1/200.

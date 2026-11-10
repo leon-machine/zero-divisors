@@ -242,11 +242,7 @@ def check_kernels_in_the_euclidean_algebra_and_their_gauge_dependence():
             e[nu] += 1
             e[a] += 1
             ok = ok and sphere_average(e) == (F(1, 4) if a == nu else 0)
-    # scaling degrees: self-energy 5 in R^4 (omega 1); vertex 3 + 3 + 2 = 8 in R^8 (omega 0); partial diagonals 3, 3, 2 < 4
-    ok = ok and (3 + 2 - 4, 3 + 3 + 2 - 8) == (1, 0) and max(3, 3, 2) < 4
-    # zero-transfer integral converges: the vertex falls off as |t|^-6 at fixed w, integrable in four dimensions
-    ok = ok and 3 + 3 > 4
-    GA.check("kernels: sandwich -2 xi w, mass part 3 + xi, sphere average e_nu s/4, degrees 5 and 8", ok)
+    GA.check("kernels: sandwich -2 xi w, mass part 3 + xi, sphere average e_nu s/4", ok)
     return ok
 
 
@@ -400,8 +396,19 @@ def check_ward_matching_of_subtractions_and_scale_coefficients():
         lin = sum(c for e, c in monos if sum(e) == 1 and e[nu] == 1 and sum(e[4:]) == 0) \
             - sum(c for e, c in monos if sum(e) == 1 and e[4 + nu] == 1 and sum(e[:4]) == 0)
         ok = ok and lin == dtf0
-    const = sum(c for e, c in monos if sum(e) == 0)
-    ok = ok and const - const == 0 and const != 0                       # F(0) = 0 although f(0) != 0
+    # F(0) = 0 although f(0) != 0, and the second-order part of F is not zero (the matching is of first order only)
+    f_v0 = {e[:4]: c for e, c in monos if sum(e[4:]) == 0}              # f(u = w, v = 0) as a polynomial in w
+    f_u0 = {e[4:]: c for e, c in monos if sum(e[:4]) == 0}              # f(u = 0, v = w)
+    big_f = {k: f_v0.get(k, F(0)) - f_u0.get(k, F(0)) for k in set(f_v0) | set(f_u0)}
+    ok = ok and f_v0[(0, 0, 0, 0)] != 0 and big_f[(0, 0, 0, 0)] == 0
+    ok = ok and any(v != 0 for k, v in big_f.items() if sum(k) == 2)
+    # the forced relation on the Euclidean section: pair c_V n delta delta and c_2 dslash delta against the linear part
+    # of f; div(c_V g_a delta delta) pairs to -c_V (d_v - d_u)_a f(0) = +c_V d_t f(0), the right side to -c_2 d_a F(0)
+    for nu in range(4):
+        dtf0 = sum(c for e, c in monos if sum(e) == 1 and e[nu] == 1) - sum(c for e, c in monos if sum(e) == 1 and e[4 + nu] == 1)
+        dF0 = big_f.get(tuple(1 if j == nu else 0 for j in range(4)), F(0))
+        for c_v, c_2, want in ((F(3), F(-3), True), (F(3), F(3), dtf0 == 0), (F(1), F(-2), dtf0 == 0)):
+            ok = ok and ((c_v * dtf0 == -c_2 * dF0) == want)
     # scale derivatives (units e^2 pi^-2, gauge parameter xi factored out):
     # Sigma-bar = c_s [w/s^3]_mu, c_s = -1/4 pi^-4; d/dln(mu) of [w/s^3]_mu = +(|S^3|/4) dslash delta... computed:
     # [h]_mu - [h]_mu' = -(int over the shell of h T) so mu d/dmu [w_a/s^3] paired with g is -(2 pi^2)(1/4) d_a g(0)

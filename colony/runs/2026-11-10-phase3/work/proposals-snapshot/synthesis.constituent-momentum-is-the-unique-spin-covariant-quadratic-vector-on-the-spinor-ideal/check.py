@@ -192,6 +192,36 @@ def covariance_system(T, copies, vector_valued):
     return rows, len(pairs) * width, pairs
 
 
+def cross_system(T):
+    """Rows of the covariance equations for ALL real bilinear maps S x S -> V (no symmetry imposed): the block
+    between two different constituents. Returns (rows, number of unknowns)."""
+    sq, n, basis = T['sq'], T['n'], T['basis']
+    d = len(basis)
+    bivectors = [{b: F(1)} for b in T['blades'] if len(b) == 2]
+    rows = []
+    for B in bivectors:
+        left = [coords(GA.mul(B, e, sq), T) for e in basis]
+        ad = []
+        for m in range(n):
+            c = GA.sub(GA.mul(B, GA.gen(m), sq), GA.mul(GA.gen(m), B, sq))
+            ad.append([c.get((k,), F(0)) for k in range(n)])
+        for i in range(d):
+            for k in range(d):
+                for comp in range(n):
+                    row = [F(0)] * (d * d * n)
+                    for l in range(d):
+                        if left[i][l] != 0:
+                            row[(l * d + k) * n + comp] += left[i][l]
+                        if left[k][l] != 0:
+                            row[(i * d + l) * n + comp] += left[k][l]
+                    for m in range(n):
+                        if ad[m][comp] != 0:
+                            row[(i * d + k) * n + m] -= ad[m][comp]
+                    if any(row):
+                        rows.append(row)
+    return rows, d * d * n
+
+
 def solution_dimension(rows, unknowns):
     return unknowns - (GA.mat_rank(rows) if rows else 0)
 
@@ -320,3 +350,25 @@ def check_two_constituents_admit_cross_terms_so_additivity_is_not_forced():
         assert any(c != 0 for c in total)
         assert satisfies(rows, total)
     GA.check("two constituents: cross terms are covariant too; the total momentum is one choice among them", True)
+
+
+def check_cross_block_has_the_dimension_of_the_field_so_two_constituents_give_three_four_six():
+    """All covariant real bilinear maps S x S -> V (the block between two different constituents) form a space
+    of dimension 1, 2, 4 in dimensions 3, 4, 5, the real dimension of the field of S; with the two diagonal
+    blocks (one line each) the two-constituent spaces have dimension 3, 4, 6. The map <x e_t rev(w)>_1 is a
+    nonzero solution of the cross system."""
+    premise("dark-tower-matter.constituents-field")
+    for (p, q, cross, pair) in [(2, 1, 1, 3), (1, 2, 1, 3), (1, 3, 2, 4), (3, 1, 2, 4), (4, 1, 4, 6), (1, 4, 4, 6)]:
+        T = tower(p, q)
+        sq, et = T['sq'], T['et']
+        rows, unknowns = cross_system(T)
+        assert solution_dimension(rows, unknowns) == cross
+        assert 1 + 1 + cross == pair
+        vec = []
+        for x in T['basis']:
+            for w in T['basis']:
+                z = GA.mul(GA.mul(x, et, sq), GA.reverse(w), sq)
+                vec.extend([z.get((k,), F(0)) for k in range(T['n'])])
+        assert any(c != 0 for c in vec)
+        assert satisfies(rows, vec)
+    GA.check("cross block of dimension 1, 2, 4; two constituents: 3, 4, 6", True)
