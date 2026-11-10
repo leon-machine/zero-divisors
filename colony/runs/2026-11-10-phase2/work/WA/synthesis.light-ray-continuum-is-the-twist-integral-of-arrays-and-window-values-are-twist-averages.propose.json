@@ -1,0 +1,21 @@
+{
+ "accepted_for_review": true,
+ "folder": "/home/claude/phys-graph/proposals/synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages",
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 1 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was stored but not run: evidence checks run when a maintainer reviews the proposal"
+}
