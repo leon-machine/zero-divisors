@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   assumes:
-  - dark-matter.d-democracy-total-mass@2
+  - dark-matter.d-democracy-total-mass@3
   - dark-matter.odd-towers-populated@1
   - dark-matter.r3-one-cell-per-unshared-direction@2
   - dark-matter.single-ideal-at-residues-zero-and-four@1

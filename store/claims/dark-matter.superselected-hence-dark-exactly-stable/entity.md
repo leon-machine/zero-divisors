@@ -28,7 +28,7 @@ derivations:
   - dark-matter.residue-soldered-invariant-not-algebraic-one@5
   - sheaf.infinite-wall-sequence@4
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

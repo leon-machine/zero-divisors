@@ -5183,6 +5183,16 @@
       $1.19$ per light ray) against an independent observable rather than the helium window alone; any rule
       must make $\varepsilon$ and the charge per unit entropy uniform across space up to the allowed
       isocurvature.
+    - >-
+      Decide whether the discrete element $\operatorname{Ad}(I_{4})$, by which the tower of reversed signature
+      shares the field-space connection (Remark of
+      \claimref{synthesis.frozen-point-unique-for-the-field-space-connection}), bears on the orientation clause
+      (P1b), and whether the normalisation $c_{r} = \pm 1$ of the towers' frozen points can be derived.
+    - >-
+      Give the charge reading a statement in comoving terms: an identification of the boundary-mode windows
+      of \claimref{synthesis.tower-charge-sector-label-temperature-not} with comoving regions of the two
+      towers, under which equal sector labels are equal charge per comoving volume; without it the common $N$
+      of (P1c) is what matches the two towers' mode sets.
   success: >-
     A computed reheating temperature and deposit energy, or a consistent window for them derived from the
     series' premises.

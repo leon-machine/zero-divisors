@@ -2532,7 +2532,7 @@
 "dark-matter.d-democracy-total-mass": {
 "failed": false,
 "findings": [],
-"key": "045477e191dfabc6",
+"key": "6f33b433c6a2950f",
 "result": "none",
 "runs": []
 },
@@ -3272,7 +3272,7 @@
 "dark-matter.p1-single-frozen-point": {
 "failed": false,
 "findings": [],
-"key": "62dddee0c3855736",
+"key": "cf0d9a205e4f349a",
 "result": "none",
 "runs": []
 },
@@ -10270,7 +10270,7 @@
 "neutrino.double-prediction-sum-predicted-floor": {
 "failed": false,
 "findings": [],
-"key": "cc37fa6d4e0e6420",
+"key": "700582bcb599ada5",
 "result": "none",
 "runs": []
 },
@@ -19628,7 +19628,7 @@
 "pred.dimmed-evaporation-bursts": {
 "failed": false,
 "findings": [],
-"key": "6922a11c6f86abbf",
+"key": "b567a750d616414c",
 "result": "none",
 "runs": []
 },
@@ -21921,7 +21921,7 @@
 "scrambling.no-echo-prediction-registered": {
 "failed": false,
 "findings": [],
-"key": "f3ee8a29aa6dd13a",
+"key": "5433c630b63b908b",
 "result": "none",
 "runs": []
 },
@@ -27291,7 +27291,7 @@
 "standard-model.dating-descent": {
 "failed": false,
 "findings": [],
-"key": "98188bc967979080",
+"key": "b4ef98c754bb0a08",
 "result": "none",
 "runs": []
 },
@@ -35211,7 +35211,7 @@
 "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "4f031c244855c249",
+"key": "7dec9e8b9c7b808a",
 "result": "pass",
 "runs": [
 {
@@ -38314,10 +38314,53 @@
 }
 ]
 },
+"synthesis.frozen-point-unique-for-the-field-space-connection": {
+"failed": false,
+"findings": [],
+"key": "562ae8a348297808",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_pointwise_action_of_the_field_space_connection",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation"
+]
+},
+{
+"derivation": null,
+"func": "check_field_strength_and_kernels_on_de_sitter_fluid_and_schwarzschild_fields",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation",
+"synthesis.frozen-point-unique-where-weyl-has-no-kernel"
+]
+},
+{
+"derivation": null,
+"func": "check_torsion_counter_model",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.frozen-point-field-space-is-the-gtg-pair-and-its-omega-equation-is-the-torsion-equation"
+]
+},
+{
+"derivation": null,
+"func": "check_reversed_signature_reading",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.frozen-point-unique-where-weyl-has-no-kernel": {
 "failed": false,
 "findings": [],
-"key": "aba5695b4782c9fe",
+"key": "680bbf868c54d396",
 "result": "pass",
 "runs": [
 {
@@ -43431,7 +43474,7 @@
 "synthesis.matter-asymmetry-registered-free-input": {
 "failed": false,
 "findings": [],
-"key": "ca45bc827b84bf51",
+"key": "e60f2e82aef9baa0",
 "result": "none",
 "runs": []
 },
@@ -50575,7 +50618,7 @@
 "synthesis.two-frozen-points-conformally-flat": {
 "failed": false,
 "findings": [],
-"key": "1e08f8fa429ca8bd",
+"key": "de1af660875fd93b",
 "result": "pass",
 "runs": [
 {
@@ -53846,7 +53889,7 @@
 "transport.obstructions-are-moved-never-destroyed": {
 "failed": false,
 "findings": [],
-"key": "59749c913f41daf5",
+"key": "be6e5c3f505f0bfb",
 "result": "none",
 "runs": []
 },

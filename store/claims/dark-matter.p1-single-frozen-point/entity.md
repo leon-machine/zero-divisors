@@ -1,7 +1,7 @@
 ---
 id: dark-matter.p1-single-frozen-point
 kind: claim
-version: 2
+version: 3
 title: 'P1: the single frozen point'
 status: postulate
 region: dark-matter
@@ -21,6 +21,15 @@ credit:
   role: 'split into its three clauses (metric, orientation, common N) within the entity, with the status of each'
   version: 2
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'note naming the connection of clause (P1a) under the field-space premise'
+  version: 3
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 3
+  kind: restatement
+  defect: 'the status paragraph of (P1a) did not name its connection and cited only theorems about the normal tractor connection, which under (FS) does not carry the frozen point in the physical scale on matter regions'
+  evidence: 'synthesis.frozen-point-unique-for-the-field-space-connection: check.py::check_field_strength_and_kernels_on_de_sitter_fluid_and_schwarzschild_fields'
 review: typed
 about:
 - obj.dark-matter.witt-flag
@@ -30,6 +39,10 @@ locators:
   label: prem:single
   line: 96
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'Version 2 -> 3. A note is added to the formal level: under (FS) the status of (P1a) is given by synthesis.frozen-point-unique-for-the-field-space-connection; what is postulated is unchanged (the one connection and the normalisation). The three clauses and their wording are untouched.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -54,6 +67,8 @@ The descent was one event freezing one $I$ and making one orientation choice: al
 \item[(P1c)] \emph{(Common $N$.)} The number $N$ is common to the towers. Status: postulated, with no derivation found; it is used by the charge reading of the stored asymmetry (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}; Theorem \claimref{dark-matter.mirror-tower-copy-one}(v), first route). Whether a second tower can carry its own frozen-point norm is undecided; the conformally flat counter-model of (P1a) suggests it can (argued).
 \end{enumerate}
 The clauses are kept in one entity; results that assume P1 use the clause their text names.
+
+\emph{Note (which connection, 2026-11-11).} The ``one tractor connection'' of (P1a) is not named above, and the two theorems cited there are about the normal tractor connection, for which a tractor is parallel in the physical scale only on Einstein regions. Under Premise \claimref{synthesis.field-space-premise-parallel-frozen-point} (FS) the frozen point is parallel, with unit pairing with $X$, for the varied connection $A_{\rho}$ on every field, matter included. For that connection the status of (P1a) is given by Theorem \claimref{synthesis.frozen-point-unique-for-the-field-space-connection}: if every tower's frozen point is parallel for the one $A_{\rho}$ on a connected part of the invertible region that contains one point where $-(\mathcal{R} - \tfrac{\Lambda}{3}\mathrm{id})$ has no kernel vector (any point with isotropic matter other than $w = -\tfrac13$; on Einstein regions the Weyl condition above), the frozen points agree up to constants $c_{r}$, and the independent choice is confined to a component that is de Sitter at that $\Lambda$, not to every conformally flat region. What stays postulated is unchanged: the one connection, and the normalisation $c_{r} = \pm 1$, to which the common $N$ of (P1c) is equivalent given one $G$; (FS) normalises one tractor and does not supply it. For the tower of reversed signature the connection can be shared up to the sign of the frozen point or the discrete element $\operatorname{Ad}(I_{4})$ (the Remark of that Theorem); whether that element bears on the orientation clause (P1b) is not examined. The premise is unchanged.
 
 ## technical
 The premise states that the descent was a single event that froze one point $I$ and made one orientation choice. All towers couple to the one metric of that event and, where they can be oriented, are oriented by its single Witt flag. The orientation clause is used only on the reversal orbit $r \mapsto -r$, where the identification of the flag across the two towers is canonical. It is a structural premise, supported by earlier results of the series, with the orientation clause added here.

@@ -1,7 +1,7 @@
 ---
 id: synthesis.frozen-point-unique-where-weyl-has-no-kernel
 kind: claim
-version: 6
+version: 7
 title: One frozen point up to scale wherever the Weyl tensor has no kernel vector
 status: proved
 region: synthesis
@@ -33,6 +33,14 @@ credit:
   role: 'formal restated at Leon''s second-round decisions: the Consequently clauses for c != 0'
   version: 6
   source: maintainer pass 2026-11-07 (decisions, second round)
+- name: Claude Fable 5.2
+  role: 'scope note: the statement is for the normal tractor connection'
+  version: 7
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 7
+  kind: restatement
+  defect: 'the application to the towers did not say that it is for the normal tractor connection, which under (FS) is not the connection that carries the frozen point on matter regions'
 review: draft
 derivations:
 - name: main
@@ -57,6 +65,10 @@ lineage:
   - dark-matter.p1-single-frozen-point
   - dark-energy.point-infinity-has-no-physical-fluctuation
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'A scope note is added to the formal level, pointing to synthesis.frozen-point-unique-for-the-field-space-connection; the statement and its proof are unchanged.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -113,6 +125,8 @@ extraction:
 Let $(M, [g])$ be a connected four-dimensional conformal manifold with its tractor connection $\nabla$ (Fact \claimref{dark-energy.imported-frozen-point-geometry}); for a gravitational field $(\hb, \Omega)$ on flat spacetime (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}), $M$ is a connected open subset of the invertible region with the conformal class of the derived metric, $\nabla$ is the $\Cl(2,4)$ gauge field $\Omega_{T}$ of Theorem \claimref{synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection}, and the Weyl tensor below is the trace-free part $\mathcal{W}$ of the field strength, and let $I$ be a parallel tractor with $Q(I) = \Lambda/3$ ($\Lambda = 0$ allowed, $I$ then null), so that on its Einstein region, in the scale $g$ it determines, $I = (1, 0, \Lambda/6)$, $g$ is Einstein with $\Ric = \Lambda g$ and $P_{ab} = (\Lambda/6) g_{ab}$. Suppose that at some point $x_0$ of that region the Weyl tensor has no kernel vector: $W_{abcd} v^d = 0$ for all $a, b, c$ implies $v = 0$. Then every tractor $I'$ parallel for $\nabla$ is a constant multiple of $I$, $I' = c\, I$. Consequently, for $c \neq 0$, the Einstein scale of $I'$ is $c$ times that of $I$, the metrics agree up to the constant factor $c^{-2}$, their zero sets (the walls where the scale vanishes) coincide, and $Q(I') = c^2 \Lambda/3$.
 
 Applied to towers: if the frozen points $I_r$ of all towers are parallel for the one tractor connection of a shared conformal structure ($[g]$, or $[-g]$ for the reversed signature, which has the same parallel tractors), and the universe contains one point of the Einstein region at which the Weyl tensor has no kernel vector, then $I_r = c_r I$ for constants $c_r$, and the metric clause of Premise \claimref{dark-matter.p1-single-frozen-point} holds exactly when the frozen points share their norm, $c_r = \pm 1$. Every point of a Schwarzschild ($\Lambda = 0$) or Schwarzschild-de Sitter ($\Lambda > 0$) exterior with $M \neq 0$ has the no-kernel property. The no-kernel property fails at points of Petrov type N (the null propagation vector is a kernel vector) and on regions where the Weyl part of the field strength vanishes (conformally flat derived metric); on the latter uniqueness itself fails, the tractor connection being flat with a six-dimensional space of parallel tractors.
+
+\emph{Note (scope, 2026-11-11).} $\nabla$ here is the normal tractor connection, for which a tractor is parallel in the physical scale only on Einstein regions, so the application to towers above concerns frozen points parallel for that connection, that is Einstein regions. Under Premise \claimref{synthesis.field-space-premise-parallel-frozen-point} (FS) the frozen point is carried by the connection $A_{\rho}$; the corresponding statement, which reduces to this one on Einstein fields with the same $\Lambda$, is Theorem \claimref{synthesis.frozen-point-unique-for-the-field-space-connection}.
 
 ## technical
 A parallel tractor is annihilated by the curvature of the tractor connection, which for a gravitational field on flat spacetime is the field strength of its $\Cl(2,4)$ gauge field. In an Einstein scale that curvature acts as the Weyl tensor on the middle slot of a tractor and kills the other two, the Cotton terms vanishing because the Schouten tensor is a constant multiple of the metric. So where the Weyl tensor has no kernel vector the middle slot of every parallel tractor vanishes; by continuity this holds on an open set, where the parallel transport equations then force the top slot to be constant and the bottom slot to equal $\Lambda/6$ times it. A parallel tractor that is a constant multiple of $I$ on an open set is that multiple everywhere on a connected manifold. Hence the gravitational field admits one frozen point up to a constant factor.

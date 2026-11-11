@@ -1,7 +1,7 @@
 ---
 id: dark-matter.d-democracy-total-mass
 kind: claim
-version: 2
+version: 3
 title: 'D: democracy of the total mass'
 status: postulate
 region: dark-matter
@@ -21,6 +21,14 @@ credit:
   role: 'note on where D belongs: the de Sitter reading, not counted with R1 to R3; joint consequence with R1 and R2; exposure of w = -1'
   version: 2
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'note corrected: the one stored result with both D and R2 among its conditions is named'
+  version: 3
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 3
+  kind: restatement
+  defect: 'the note said no stored statement of the fitted total has D in its past cone; synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball states the total and holds given D and R2'
 review: typed
 locators:
   paper: T14
@@ -28,6 +36,10 @@ locators:
   label: prem:D
   line: 1041
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'Version 2 -> 3. One clause added to the note of 10 November naming the exception; the premise is unchanged.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -41,7 +53,7 @@ extraction:
 ## formal
 Every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere. This is a democracy of mass, distinct from an equality of the asymmetry per mode (the former Premise P4, retired as a postulate; the asymmetry is equal in this tower and the mirror by Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)), which the odd towers do not carry.
 
-\emph{Note (where D belongs).} D is the premise of the de Sitter reading of the count (Propositions \claimref{dark-matter.democracy-de-sitter-radius-unit-ball}, \claimref{dark-matter.two-reductions}) and is not counted with R1 to R3: no stored statement of the fitted total with the cell radius as unit has D in its past cone, and Observation \claimref{dark-matter.status-rule}(iv) has the de Sitter reading replace R2 by D. The two readings cannot be held together with more than one quantum per tower (argued): D with R1 (\claimref{dark-matter.r1-equal-mass-per-quantum}) gives every populated tower the same number of quanta on its de Sitter sphere, and R2 (\claimref{dark-matter.r2-one-quantum-per-unit-ball}) gives a tower of dimension $D$ one quantum per ball of the common cell radius $a$, so by the equality of the ball and sphere forms the number is $(\ell/a)^{D}$ for $D = 2, 3, 4$, and $x^{2} = x^{3} = x^{4}$ holds for $x > 0$ only at $x = 1$: the cell radius is the de Sitter radius and each tower holds one quantum per de Sitter ball. D is also the one postulate of the dark-matter subject that names the de Sitter radius, so it is the one whose content depends on that radius being a constant of the laws: it shares the exposure of $w = -1$. If $w$ differed from $-1$ the unit of D would change with time and the two results under D would go with it; the fitted total, which does not use D, would not.
+\emph{Note (where D belongs).} D is the premise of the de Sitter reading of the count (Propositions \claimref{dark-matter.democracy-de-sitter-radius-unit-ball}, \claimref{dark-matter.two-reductions}) and is not counted with R1 to R3: no stored statement of the fitted total with the cell radius as unit has D in its past cone, with one exception, the audit \claimref{synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball}, which sets the two readings side by side (its clause (ii) is under D, its clause (i) under R1 to R3) and so has both among its conditions, and Observation \claimref{dark-matter.status-rule}(iv) has the de Sitter reading replace R2 by D. The two readings cannot be held together with more than one quantum per tower (argued): D with R1 (\claimref{dark-matter.r1-equal-mass-per-quantum}) gives every populated tower the same number of quanta on its de Sitter sphere, and R2 (\claimref{dark-matter.r2-one-quantum-per-unit-ball}) gives a tower of dimension $D$ one quantum per ball of the common cell radius $a$, so by the equality of the ball and sphere forms the number is $(\ell/a)^{D}$ for $D = 2, 3, 4$, and $x^{2} = x^{3} = x^{4}$ holds for $x > 0$ only at $x = 1$: the cell radius is the de Sitter radius and each tower holds one quantum per de Sitter ball. D is also the one postulate of the dark-matter subject that names the de Sitter radius, so it is the one whose content depends on that radius being a constant of the laws: it shares the exposure of $w = -1$. If $w$ differed from $-1$ the unit of D would change with time and the two results under D would go with it; the fitted total, which does not use D, would not.
 
 ## technical
 This premise states that every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its own de Sitter sphere. It is a democracy of mass, distinct from an equality of the asymmetry per mode, which holds for this tower and the mirror and which the odd towers do not carry. It is the premise under which the shares can be read at the de Sitter radius rather than at a microscopic spacing.

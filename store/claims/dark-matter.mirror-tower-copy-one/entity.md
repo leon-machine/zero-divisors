@@ -36,7 +36,7 @@ derivations:
   - dark-matter.imported-inputs-standard-model-chain@6
   - dark-matter.type-residue-what-each-tower-can@5
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.p2-indifference@2
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex

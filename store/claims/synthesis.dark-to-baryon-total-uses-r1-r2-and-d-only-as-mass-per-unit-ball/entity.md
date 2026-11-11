@@ -1,7 +1,7 @@
 ---
 id: synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball
 kind: claim
-version: 1
+version: 2
 title: 'Dark-to-baryon total uses R1, R2 only as mass per unit ball at a fixed common thickness'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5.2
   role: proposal and drafting
   source: run 2026-11-10-phase3
+- name: Claude Fable 5.2
+  role: 'two stale sentences corrected (the reading of R3; the retired P4)'
+  version: 2
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 2
+  kind: restatement
+  defect: 'clause (i) said the stored wording of R3 does not choose between the two readings, against the Status paragraph of the same result and R3 version 2; the model was called a model of the retired premise P4'
 review: draft
 derivations:
 - name: main
@@ -29,7 +37,7 @@ derivations:
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
   - dark-matter.odd-towers-populated@1
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.single-ideal-at-residues-zero-and-four@1
   proof: proof-main.tex
 checked_by:
@@ -51,6 +59,10 @@ lineage:
   - dark-matter.status-rule
   - synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'Version 1 -> 2. Two sentences of the formal level corrected; no clause changes. Not split, by Leon''s decision of 11 November 2026: the result is an audit setting the two readings side by side, and Premise D''s note names it as the exception.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -92,9 +104,9 @@ f_{r} \;=\; \frac{m_{r}\nu_{r}}{m_{6}\nu_{6}} \times
 \qquad
 T \;=\; \sum_{r \neq 6} f_{r} .
 \]
-Premise R1 (\claimref{dark-matter.r1-equal-mass-per-quantum}) is $m_{r} = m$ for all $r$; R2 (\claimref{dark-matter.r2-one-quantum-per-unit-ball}) is $\nu_{r} V_{D_{r}} d^{D_{r}} = 1$, with $V_{D}$ the volume of the unit ball $\B^{D}$. \emph{Reading of R3.} R3 (\claimref{dark-matter.r3-one-cell-per-unshared-direction}) says ``one cell radius''. It is read here as $\lambda = \mu = 1$ in the fixed length $d$, not in each tower's own cell radius $a_{r}$, defined by $\nu_{r}V_{D_{r}}a_{r}^{D_{r}} = 1$. Under R2 the two readings coincide ($a_{r} = d$); they differ as soon as R2 is varied, and the stored wording does not choose between them. Write $(\mathrm{E}_{d})$, \emph{equal mass per ball of radius $d$}, for the statement that $m_{r}\nu_{r}V_{D_{r}}d^{D_{r}}$ takes one value on all populated towers.
+Premise R1 (\claimref{dark-matter.r1-equal-mass-per-quantum}) is $m_{r} = m$ for all $r$; R2 (\claimref{dark-matter.r2-one-quantum-per-unit-ball}) is $\nu_{r} V_{D_{r}} d^{D_{r}} = 1$, with $V_{D}$ the volume of the unit ball $\B^{D}$. \emph{Reading of R3.} R3 (\claimref{dark-matter.r3-one-cell-per-unshared-direction}) says ``one cell radius''. It is read here as $\lambda = \mu = 1$ in the fixed length $d$, not in each tower's own cell radius $a_{r}$, defined by $\nu_{r}V_{D_{r}}a_{r}^{D_{r}} = 1$. Under R2 the two readings coincide ($a_{r} = d$); they differ as soon as R2 is varied. Premise R3 as now stated chooses the second, each tower's own cell radius (the Status paragraph below); clause (i) is a statement about the first. Write $(\mathrm{E}_{d})$, \emph{equal mass per ball of radius $d$}, for the statement that $m_{r}\nu_{r}V_{D_{r}}d^{D_{r}}$ takes one value on all populated towers.
 \begin{enumerate}
-\item[(i)] \emph{(One density law; proved, under the fixed-length reading of R3.)} R1 and R2 together imply $(\mathrm{E}_{d})$. Under $(\mathrm{E}_{d})$ and R3 so read, $f_{r} = V_{3}/V_{D_{r}}$ and $T = (11\pi + 16)/3\pi$, the total of Proposition \claimref{dark-matter.unit-ball-rule}; with the thicknesses free, $T = 1 + 8/3\mu + 16\lambda/3\pi$, as in Proposition \claimref{dark-matter.total-function-thickness}. $(\mathrm{E}_{d})$ implies neither R1 nor R2: for positive numbers $s_{r}$ that are constant on the reversal orbits, with $s_{2} = s_{6} = 1$ and $s_{1} = s_{7}$, $s_{3} = s_{5}$ not both $1$, the filling $m_{r} = s_{r}m$, $\nu_{r} = 1/(s_{r}V_{D_{r}}d^{D_{r}})$ satisfies $(\mathrm{E}_{d})$, violates R1 and R2, and has every share and the total unchanged. It leaves the mirror pair as the population count has it and keeps every equality along the reversal orbits, so it is a model of P1, P2, P3, P4, the common ceiling coupling and R3 in the fixed-length reading (argued for P2: the model equates along the orbits whatever counts as a sector label). So, under that reading, every share depends on R1 and R2 only through $(\mathrm{E}_{d})$. \emph{Under the other reading this fails.} If the thickness is one own cell radius $a_{r}$, then
+\item[(i)] \emph{(One density law; proved, under the fixed-length reading of R3.)} R1 and R2 together imply $(\mathrm{E}_{d})$. Under $(\mathrm{E}_{d})$ and R3 so read, $f_{r} = V_{3}/V_{D_{r}}$ and $T = (11\pi + 16)/3\pi$, the total of Proposition \claimref{dark-matter.unit-ball-rule}; with the thicknesses free, $T = 1 + 8/3\mu + 16\lambda/3\pi$, as in Proposition \claimref{dark-matter.total-function-thickness}. $(\mathrm{E}_{d})$ implies neither R1 nor R2: for positive numbers $s_{r}$ that are constant on the reversal orbits, with $s_{2} = s_{6} = 1$ and $s_{1} = s_{7}$, $s_{3} = s_{5}$ not both $1$, the filling $m_{r} = s_{r}m$, $\nu_{r} = 1/(s_{r}V_{D_{r}}d^{D_{r}})$ satisfies $(\mathrm{E}_{d})$, violates R1 and R2, and has every share and the total unchanged. It leaves the mirror pair as the population count has it and keeps every equality along the reversal orbits, so it is a model of P1, P2, P3, the common ceiling coupling and R3 in the fixed-length reading (argued for P2: the model equates along the orbits whatever counts as a sector label). So, under that reading, every share depends on R1 and R2 only through $(\mathrm{E}_{d})$. \emph{Under the other reading this fails.} If the thickness is one own cell radius $a_{r}$, then
 \[
 f_{r} \;=\; \frac{m_{r}}{m_{6}}\,\frac{V_{3}}{V_{D_{r}}}\,\Bigl(\frac{a_{6}}{a_{r}}\Bigr)^{3},
 \]

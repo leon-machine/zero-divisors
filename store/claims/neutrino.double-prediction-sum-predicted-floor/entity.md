@@ -1,7 +1,7 @@
 ---
 id: neutrino.double-prediction-sum-predicted-floor
 kind: claim
-version: 1
+version: 2
 title: 'The double prediction: the sum predicted at the floor'
 status: conjectured
 region: neutrino
@@ -20,6 +20,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: authorship disclosure of T15, deposited version
+- name: Claude Fable 5.2
+  role: 'note: the condition of w = -1 is now (FS), and the two stances are exposed in opposite senses'
+  version: 2
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 2
+  kind: restatement
+  defect: 'the text called the condition of the w = -1 prediction unused, while the store now adopts it as (FS), and called the two stances one joint prediction, against the note of pred.neutrino-mass-sum-floor'
 review: typed
 lineage:
   motivated_by:
@@ -32,6 +40,10 @@ locators:
   label: prop:doublebet
   line: 685
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'Version 1 -> 2. A note is added to the formal level; the observation is otherwise unchanged.'
   env: observation
   context_refs:
   - dark-energy.vacuum-region-registration-condition
@@ -58,6 +70,8 @@ extraction:
 
 ## formal
 Under Premise (H), the prediction of Proposition \claimref{neutrino.rank-one-seesaw-ordering-sum-double}(2) is at the exact centre of the sharpest tension in current cosmology, and the framework has no parameter to adjust (Figure \ref{fig:bet}). The second data release of the baryon-acoustic survey with the microwave background gives $\mnu < 0.064$ eV at ninety-five percent confidence in $\Lambda$CDM \cite{DESI2025}. A four-author analysis combining the public microwave small-scale and baryon-acoustic likelihoods reports, in $\Lambda$CDM with adiabatic initial conditions, $\mnu < 0.052$ eV under a prior extending to zero, notes itself that the number lies \emph{below} the minimal normal-ordering value $0.0588$ eV and reads it as an artefact of the unphysical prior, and reports $\mnu < 0.092$ eV with the physical floor imposed; its isocurvature extension relaxes the adiabatic bound only to $0.057$ eV \cite{HouWangZhaoZhang2026}. The community's standard way of relaxing the bound is a varying dark-energy equation of state, which relaxes the bound substantially ($0.111$ eV in the same analysis under the two-parameter $w_{0}w_{a}$ form). This framework cannot use that option: Fact \claimref{dark-energy.vacuum-region-registration-condition} predicts $w = -1$ exactly, with no parameter to absorb a deviation, conditional only on the frozen point's definition off the vacuum region, which the dark-energy paper names, does not use, and shows cannot track the curvature; and that part of the prediction is itself under a contested three-to-four-sigma preference for evolution in the same data release, as Fact \claimref{dark-energy.vacuum-region-registration-condition} records. The two stances are therefore one joint prediction, registered as the framework's fourth and stated plainly: within the frozen-point cosmology the neutrino-mass tension must resolve \emph{at the floor}, the true sum is $0.059$ eV, the present bound below it is a prior artefact or systematics of the known lensing-anomaly and boundary sensitivities, and the ordering is normal. Registered at the level of its inputs, which are date-stamped and refreshed at submission.
+
+\emph{Note (2026-11-11).} The condition named above as unused is now adopted: it is the field-space premise (FS) (\claimref{synthesis.field-space-premise-parallel-frozen-point}), on which the $w = -1$ prediction is registered (\claimref{pred.dark-energy-w-minus-one}). The two stances are exposed in opposite senses (\claimref{pred.neutrino-mass-sum-floor}, Note): the bound below the floor is obtained with $w = -1$ held, so if $w = -1$ falls by its registered rule the floor is relieved, not refuted. ``One joint prediction'' above is to be read with that.
 
 ## technical
 Under Premise (H) the rank-one seesaw puts the neutrino mass sum at the normal-ordering floor, $\mnu \approx 0.059$ eV, with no parameter to adjust. Current cosmology presses on that value: the second baryon-acoustic release with the microwave background gives $\mnu < 0.064$ eV at 95 percent confidence in $\Lambda$CDM, and a combined microwave and baryon-acoustic analysis gives $\mnu < 0.052$ eV with a prior extending to zero (below the floor, read by its authors as a prior artefact) and $\mnu < 0.092$ eV with the floor imposed.

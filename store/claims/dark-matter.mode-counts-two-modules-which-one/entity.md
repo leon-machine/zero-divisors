@@ -27,7 +27,7 @@ derivations:
   - tower.fock-module-one-qubit-per-rung@6
   - tower.witt-index-quantum-capacity@5
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.p2-indifference@2
   proof: proof-main.tex
 checked_by:
