@@ -1,3 +1,6 @@
+> **Superseded in part.** An independent referee (verify/referee.md) found errors and overstatements in
+> this file. The proposals to use are in PROPOSALS.md; where the two differ, PROPOSALS.md is right.
+
 # Consequences of the six proposals of REPORT.md
 
 Leon (11 November 2026, 09:14): "explore the consequences of your proposals further and report back".

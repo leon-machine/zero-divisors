@@ -1,3 +1,6 @@
+> **Superseded in part.** An independent referee (verify/referee.md) found errors and overstatements in
+> this file. The proposals to use are in PROPOSALS.md; where the two differ, PROPOSALS.md is right.
+
 # Run 2026-11-11-contradictions: contradictions in theory across the graph
 
 Leon (11 November 2026): "go through all of the physics graph and identify/resolve any contradictions in
@@ -32,7 +35,7 @@ stored texts, argued.
   `synthesis.two-frozen-points-conformally-flat`. Both are theorems about the normal tractor connection
   $\Omega_{T}$. Neither entity, nor P1, mentions (FS) (**graph**: no reference).
 - The conflict (**read**): in a universe with matter the normal tractor connection has no parallel tractor
-  on the matter regions, so the hypothesis of P1a's theorem fails there; and under (FS) the connection that
+  in the physical scale (unit pairing with $X$) on the matter regions, so the hypothesis of P1a's theorem fails there; and under (FS) the connection that
   does carry the frozen point is not the one the theorem is about.
 - What holds for the (FS) connection (**computed**, `work/fs_parallel_tractors.py`, exact): the soldering
   bivectors stabilise $I_{\rho}$; $(u\wedge a)\times(u\wedge b) = 2\rho\,a\wedge b$ with
