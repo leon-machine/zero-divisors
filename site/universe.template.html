@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zero Divisors</title>
-<meta name="description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta name="description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and three guided introductions.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Zero Divisors">
 <meta property="og:title" content="Zero Divisors">
-<meta property="og:description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta property="og:description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and three guided introductions.">
 <meta property="og:image" content="/*SITE_URL*/img/share.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -101,7 +101,7 @@ details.pgwhy ul { padding-left: 18px; margin: 6px 0; }
 .view.story { background: #100e0d; }
 .view.story iframe { flex: 1; width: 100%; height: 100%; border: 0; display: block; background: #100e0d; }
 /* the Transport Principle shares the Physics Graph's background */
-#principleview, #principleview iframe { background: #060a10; }
+#principleview, #principleview iframe, #gaview, #gaview iframe { background: #060a10; }
 /* universe */
 #universeview { --rw: 480px; position: relative; }
 #universeview.on { display: grid; grid-template-columns: 290px minmax(0, 1fr) var(--rw); }
@@ -409,6 +409,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   <h1>Zero <span>Divisors</span></h1>
   <nav aria-label="Views">
     <a href="#principle" data-view="principle">The Transport Principle</a>
+    <a href="#ga" data-view="ga">Why Geometric Algebra</a>
     <a href="#singularity" data-view="singularity">The Singularity</a>
     <span class="navgroup" id="graphgroup"><a href="#universe" data-view="universe">Physics Graph</a><button class="navcaret" id="graphcaret" aria-haspopup="true" aria-expanded="false" aria-controls="graphmenu" aria-label="More of the Physics Graph: documents, the record, open problems"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
     <a href="#contribute" data-view="contribute">Explore with AI</a>
@@ -476,6 +477,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
     <aside class="reader" id="reader" aria-live="polite"></aside>
     <div class="grip" id="grip" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="reader" aria-label="Resize the reading pane: drag, or use the left and right arrow keys; double-click to reset" aria-valuemin="320" aria-valuemax="1080" aria-valuenow="480" title="Drag to resize the reading pane; double-click to reset"></div>
   </section>
+  <section class="view story" id="gaview" aria-label="Why Geometric Algebra: an introduction"><iframe id="gaframe" title="Why Geometric Algebra: one product, and a ladder from a distinction to the numbers"></iframe></section>
   <section class="view story" id="principleview" aria-label="The Transport Principle: an introduction"><iframe id="princframe" title="The Transport Principle: dividing by zero, from a line to spacetime"></iframe></section>
   <section class="view story" id="singularityview" aria-label="The Singularity: an introduction"><iframe id="singframe" title="The Singularity: a fall into a black hole, and the Transport Papers in seven parts" allow="fullscreen"></iframe></section>
   <section class="view page" id="documentsview"><div class="inner" id="documents"></div></section>
@@ -2212,7 +2214,8 @@ function linkFor(hash) {
   if (DATA.site_url && byId.has(hash)) return b + "r/" + encodeURIComponent(hash) + ".html";
   return b + (hash ? "#" + hash : "");
 }
-const VIEW_TITLE = { principle: "The Transport Principle: dividing by zero, from a line to spacetime", singularity: "The Singularity: a fall into a black hole, and the Transport Papers",
+const STORY = { ga: ["gaframe", "ga.html"], principle: ["princframe", "principle.html"], singularity: ["singframe", "singularity.html"] };
+const VIEW_TITLE = { ga: "Why Geometric Algebra: one product, and a ladder from a distinction to the numbers", principle: "The Transport Principle: dividing by zero, from a line to spacetime", singularity: "The Singularity: a fall into a black hole, and the Transport Papers",
   universe: "The Physics Graph: every result of the Transport Papers, with its proof and check", documents: "The Transport Papers, generated from the Physics Graph",
   record: "The record: what the Transport Papers predicted, and what the data say", problems: "Open problems of the Transport Papers", contribute: "Explore the Physics Graph with an AI", about: "About Leon Butler" };
 // what to share: a result (by id), or whatever the page is showing now
@@ -2224,7 +2227,7 @@ function shareInfo(id) {
   if (id && byId.has(id)) { const n = byId.get(id); return { hash: id, title: n.title, text: plainTex(n.one_liner) }; }
   const h = decodeURIComponent(location.hash.slice(1));
   if (byId.has(h)) return shareInfo(h);
-  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
+  const sl = h.match(/^(ga|principle|singularity)\/(\d+)$/);
   if (sl) return { hash: h, title: VIEW_TITLE[sl[1]].split(":")[0] + ", slide " + sl[2], text: VIEW_TITLE[sl[1]] };
   if (h.startsWith("doc:")) { const d = (DATA.documents || []).find(x => x.id === h.slice(4)); return { hash: h, title: d ? d.title : "A Transport Paper", text: "Generated from the Physics Graph" }; }
   const v = VIEW_TITLE[h] ? h : (document.querySelector("main > .view.on") || {}).id?.replace(/view$/, "") || "principle";
@@ -2929,7 +2932,7 @@ function showView(v) {
   const cur = inGraph ? document.getElementById("graphgroup") : document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - Math.max(0, (n.clientWidth - cur.offsetWidth) / 2); }; navEdges();
   if (v === "universe") { resize(); }
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
-  for (const [view, id, src] of [["principle", "princframe", "principle.html"], ["singularity", "singframe", "singularity.html"]]) {
+  for (const [view, [id, src]] of Object.entries(STORY)) {
     const f = document.getElementById(id); if (v === view && !f.getAttribute("src")) f.setAttribute("src", src); }
   if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute, releases: renderReleases })[v]?.(); }
 }
@@ -2940,16 +2943,16 @@ function route() {
   if (byQ.has(h)) { showView("universe"); showQuantity(h); return; }
   if (NOTES[h] && noteHost(NOTES[h])) { showView("universe"); openNote(h); return; }
   if (h === "contribute/build" || h === "contribute/connect") { const a = h.split("/")[1]; pendingAnchor = a; if (rendered.contribute) { const t = document.getElementById(a); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
-  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
-  if (sl) { const f = document.getElementById(sl[1] === "principle" ? "princframe" : "singframe");
-    const want = (sl[1] === "principle" ? "principle.html" : "singularity.html") + "#" + sl[2];
+  const sl = h.match(/^(ga|principle|singularity)\/(\d+)$/);
+  if (sl) { const f = document.getElementById(STORY[sl[1]][0]);
+    const want = STORY[sl[1]][1] + "#" + sl[2];
     if (!f.getAttribute("src")) f.setAttribute("src", want);
     else { try { if (f.contentWindow.location.hash !== "#" + sl[2]) f.contentWindow.location.hash = sl[2]; } catch (e) { f.setAttribute("src", want); } }
     showView(sl[1]); return; }
   const rl = h.match(/^releases\/(v\d+\.\d+\.\d+|unreleased)$/);
   if (rl) { showView("releases"); const t = document.getElementById("rel-" + rl[1]); if (t) t.scrollIntoView({ block: "start" }); return; }
   if (h.startsWith("op.")) { opTab = "curated"; opSel = h; Object.keys(opFilter).forEach(k => opFilter[k] = ""); showView("problems"); renderProblems(); return; }
-  showView(["principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute", "about"].includes(h) ? h : (h ? "universe" : "principle"));
+  showView(["ga", "principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute", "about"].includes(h) ? h : (h ? "universe" : "principle"));
 }
 window.addEventListener("hashchange", route);
 window.addEventListener("resize", () => { resize(); applyRW(); document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); });

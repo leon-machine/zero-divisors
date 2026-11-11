@@ -57,5 +57,6 @@
  "data/walls.json": "site/data/walls.json",
  "data/zero-divisors.json": "site/data/zero-divisors.json",
  "singularity.html": "site/singularity.html",
- "principle.html": "site/principle.html"
+ "principle.html": "site/principle.html",
+ "ga.html": "site/ga.html"
 }
