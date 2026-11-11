@@ -252,6 +252,9 @@ table.metrics td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .contrib .ways > div { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; background: var(--chipbg); }
 .contrib .ways b { font: 600 16px var(--serif); }
 .contrib .ways p { margin: 6px 0 0; font-size: 14.5px; }
+.contrib .ctab { border: 1px solid var(--rule); border-radius: 10px; padding: 4px 16px 8px; margin: 6px 0 14px; background: var(--chipbg); }
+.contrib .ctab ol.route { padding-left: 1.3em; }
+.contrib h4 { margin: 18px 0 4px; font: 600 15px var(--sans); }
 .contrib .callout.first { font-size: 15.5px; border-left-width: 4px; margin: 18px 0 8px; }
 .agentbox { border: 1px dashed var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 14px; font: 14.5px/1.5 var(--sans); }
 .agentbox code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--chipbg); padding: 1px 5px; border-radius: 5px; }
@@ -2763,6 +2766,53 @@ const TOOL_GROUPS = [
   ["Open problems", ["list_open_problems", "get_open_problem"]],
   ["Check a draft", ["validate_draft"]],
   ["Documents", ["generate_doc", "regenerate_doc"]]];
+// how to connect, one tab per app; the hosted steps appear once store/config.yaml mcp_url is set
+const NOT_LIVE = `<p class="note">The hosted address is not live yet. Until it is, use <b>On your own computer</b> or <b>An AI that reads the web</b>.</p>`;
+const llmsUrl = () => { try { return new URL("llms.txt", DATA.site_url || location.href).href; } catch (e) { return "llms.txt"; } };
+const LOCAL_CLONE = `git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`;
+const CONNECT = [
+  { id: "claude", label: "Claude", body: code => DATA.mcp_url ? `
+    <p>On claude.ai in a browser, on any plan (the Free plan allows one custom connector). Once added, the connector belongs to your account, so the Claude desktop and phone apps can use it too.</p>
+    <ol class="route">
+      <li>Open <b>Customize</b>, then <b>Connectors</b>, then <b>+ Add</b> and <b>Add custom connector</b>.</li>
+      <li>Name it <b>Physics Graph</b> and paste this address:${code(DATA.mcp_url)}Then <b>Continue</b>.</li>
+      <li>For authentication choose <b>No sign in</b>, then <b>Add</b>.</li>
+      <li>In a chat, open <b>+</b>, then <b>Connectors</b>, and switch <b>Physics Graph</b> on.</li>
+    </ol>
+    <p class="note">On a Team or Enterprise plan an owner adds it first, under <b>Organization settings</b>, <b>Connectors</b>; members then find it under <b>Customize</b>, <b>Connectors</b> and choose <b>Connect</b>.</p>` : NOT_LIVE },
+  { id: "chatgpt", label: "ChatGPT", body: code => DATA.mcp_url ? `
+    <p>On chatgpt.com in a browser, with a Plus, Pro, Business, Enterprise or Education plan. It uses ChatGPT's developer mode.</p>
+    <ol class="route">
+      <li>Open <b>Settings</b>, then <b>Apps</b>, then <b>Advanced settings</b>, and switch <b>Developer mode</b> on.</li>
+      <li>Back in <b>Apps</b>, choose <b>Create app</b>. Name it <b>Physics Graph</b>, paste this address and choose <b>No Authentication</b>:${code(DATA.mcp_url)}</li>
+      <li>In a chat, open <b>+</b>, choose <b>Developer mode</b> and select <b>Physics Graph</b>.</li>
+      <li>Name it in your question, for example "Using the Physics Graph app, call conventions first, then ...".</li>
+    </ol>` : NOT_LIVE },
+  { id: "claude-code", label: "Claude Code", body: code => DATA.mcp_url ? `
+    <p>In a terminal:</p>${code(`claude mcp add --transport http physics-graph ${DATA.mcp_url}`)}
+    <p>Add <code>--scope user</code> to have it in every project. To check drafts or contribute, use the set-up under <b>On your own computer</b> instead.</p>` : NOT_LIVE + `<p>Claude Code can already use the graph from a clone: see <b>On your own computer</b>.</p>` },
+  { id: "other", label: "Other apps", body: code => DATA.mcp_url ? `
+    <p>Any app that takes a remote MCP server by its address (Cursor, VS Code and others) works the same way: add a server of type HTTP with this address and no authentication. Each app keeps its own settings page or file for MCP servers.</p>${code(DATA.mcp_url)}` : NOT_LIVE },
+  { id: "local", label: "On your own computer", body: code => `
+    <p>Needed to check a draft against the rules and to contribute, and it works with no hosted address. You need git and Python 3.11 or later.</p>
+    <ol class="route">
+      <li>Get the graph and what it needs:${code(LOCAL_CLONE)}</li>
+      <li><b>Claude Code</b>: from the <code>phys-graph</code> folder, run${code(`claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}</li>
+      <li><b>The Claude desktop app</b>: on Windows, run this in PowerShell from the folder, then quit Claude fully and reopen it:${code(`powershell -ExecutionPolicy Bypass -File register_mcp.ps1`)}Elsewhere, open <b>Settings</b>, <b>Developer</b>, <b>Edit Config</b> and add this inside <code>"mcpServers"</code>, with your own path:${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}Then restart the app.</li>
+      <li><b>Any other app that runs local MCP servers</b>: the same command, arguments and <code>PYTHONPATH</code> as above.</li>
+    </ol>
+    <p class="note">Where <code>python</code> is not found, use <code>python3</code> (macOS, Linux) or <code>py</code> (Windows) in the command.</p>` },
+  { id: "web", label: "An AI that reads the web", body: code => `
+    <p>Any AI that can open web pages can read the graph with nothing connected. Give it this address:${code(llmsUrl())}for example: "Read ${llmsUrl()}, then the conventions it links to, then explain ...". It lists the conventions, every subject as one file in dependency order, and a page for every result with its proof and checks.</p>
+    <p class="note">This route reads only: it cannot search the graph, follow what rests on what, or check a draft. For those, connect the MCP server.</p>` },
+];
+let ctabNow = null;
+function showCtab(el, id) {
+  ctabNow = id;
+  el.querySelectorAll("[data-ctab]").forEach(b => b.setAttribute("aria-pressed", b.dataset.ctab === id ? "true" : "false"));
+  el.querySelectorAll("[data-cpanel]").forEach(p => { p.hidden = p.dataset.cpanel !== id; });
+  try { localStorage.setItem("pg-ctab", id); } catch (e) {}
+}
 let pendingAnchor = null;
 function renderContribute() {
   const el = document.getElementById("contribute");
@@ -2774,24 +2824,19 @@ function renderContribute() {
   const ex = DATA.contrib_example || {};
   el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers, researchers and their AI</div><h2>Explore with AI</h2>
     <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. It is also a good way into the ideas themselves: ask the AI to explain a result back to you and it can pitch the explanation to your level, from beginner to expert. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
-    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
+    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (<a href="#contribute/connect">how to connect</a>), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
     <div class="ways">
       <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>
       <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer: <code>python -m tp check-one &lt;id&gt; --store store</code>.</p></div>
       <div><b>Build</b><p>Take an open problem, a weak check or a gap you have found, write a new result in the graph's form, and send it. <a href="#contribute/build">How to contribute</a></p></div>
     </div>
 
-    <h3>Set up</h3>
-    ${DATA.mcp_url ? `<p><b>With nothing to install.</b> Add this address to your AI as a remote MCP server (in claude.ai, a custom connector; other apps that take an MCP server by its address work the same way):</p>
-    ${code(DATA.mcp_url)}
-    <p>It offers every reading tool. To check a draft or contribute, set it up on your own computer as below.</p>` : ""}
-    <p><b>An AI that can read the web</b> can also read the graph without connecting anything: point it at <a href="llms.txt">llms.txt</a>, which lists the conventions, every subject as one file in dependency order, and a page for every result.</p>
-    <p><b>On your own computer</b> (needed to check drafts and contribute): Python 3.11 or later, then:</p>
-    ${code(`git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`)}
-    <p><b>Claude Code</b>, from the repository folder:</p>
-    ${code(`claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}
-    <p><b>The Claude desktop app, or any client that runs stdio MCP servers</b>: add this to its server list, with your own path. On Windows, <code>register_mcp.ps1</code> does it for the desktop app.</p>
-    ${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}
+    <h3 id="connect">Connect your AI</h3>
+    <p>Choose the app you use. Once it is connected, start with the check at the end of this section.</p>
+    <div class="tabs" role="group" aria-label="Your AI app">${CONNECT.map(c => `<button data-ctab="${c.id}" aria-pressed="false">${esc(c.label)}</button>`).join("")}</div>
+    ${CONNECT.map(c => `<div class="ctab" data-cpanel="${c.id}" hidden>${c.body(code)}</div>`).join("")}
+    <h4>Check that it is working</h4>
+    <p>Ask: <b>"Call conventions, then tell me in two sentences what the Physics Graph is."</b> A connected AI shows that it called the <code>conventions</code> tool before answering. If it answers without calling a tool, it is not connected: check that the server is switched on for this chat.</p>
     <p>Apps that show an MCP server's prompts offer four ready-made starting points: <code>tour</code>, <code>explain-result</code>, <code>audit-result</code> and <code>attack-open-problem</code>.</p>
 
     <h3 id="build">Working on something?</h3>
@@ -2829,6 +2874,11 @@ function renderContribute() {
     <p class="note">The server's own list, read from it when this site was built. A name ending in ? is optional.</p>
     <table class="metrics tools"><tbody>${toolRows}</tbody></table>
   </div>`;
+  el.querySelectorAll("[data-ctab]").forEach(b => b.onclick = () => showCtab(el, b.dataset.ctab));
+  let first = ctabNow;
+  if (!first) { try { first = localStorage.getItem("pg-ctab"); } catch (e) {} }
+  if (!CONNECT.some(c => c.id === first)) first = DATA.mcp_url ? "claude" : "local";
+  showCtab(el, first);
   if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
 // the Physics Graph's own pages sit under its menu in the header
@@ -2889,7 +2939,7 @@ function route() {
   if (h.startsWith("doc:")) { showView("documents"); openDoc(h.slice(4)); return; }
   if (byQ.has(h)) { showView("universe"); showQuantity(h); return; }
   if (NOTES[h] && noteHost(NOTES[h])) { showView("universe"); openNote(h); return; }
-  if (h === "contribute/build") { pendingAnchor = "build"; if (rendered.contribute) { const t = document.getElementById("build"); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
+  if (h === "contribute/build" || h === "contribute/connect") { const a = h.split("/")[1]; pendingAnchor = a; if (rendered.contribute) { const t = document.getElementById(a); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
   const sl = h.match(/^(principle|singularity)\/(\d+)$/);
   if (sl) { const f = document.getElementById(sl[1] === "principle" ? "princframe" : "singframe");
     const want = (sl[1] === "principle" ? "principle.html" : "singularity.html") + "#" + sl[2];

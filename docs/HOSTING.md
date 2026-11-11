@@ -47,5 +47,9 @@ Redeploy at each release (RELEASING.md, step 5).
 
 ## What a visitor does
 
-In claude.ai, add the address as a custom connector; other clients that take a remote MCP server
-by URL work the same way. Then ask the AI to call `conventions` first.
+The site's Explore with AI page (`#contribute/connect`) gives the steps per app once `mcp_url` is
+set: Claude (a custom connector, no sign-in), ChatGPT (developer mode, an app with no
+authentication), Claude Code (`claude mcp add --transport http physics-graph <address>`) and
+other apps that take a remote server by its address. Every tool the endpoint offers is marked
+read-only, so clients that ask before write actions do not ask before each call. The page
+ends with a check: ask the AI to call `conventions` and say what the graph is.

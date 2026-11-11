@@ -172,6 +172,9 @@ class McpNavigation(unittest.TestCase):
         ], "--read-only")
         by = {m["id"]: m for m in out}
         self.assertEqual({t["name"] for t in by[2]["result"]["tools"]}, set(ro))
+        self.assertTrue(all(t["annotations"]["readOnlyHint"] for t in by[2]["result"]["tools"]))
+        local = {t["name"]: t for t in M.tool_list("local")}
+        self.assertFalse(local["generate_doc"]["annotations"]["readOnlyHint"])
         self.assertTrue(by[3]["result"]["isError"])
         self.assertIn("not offered", by[3]["result"]["content"][0]["text"])
         self.assertIn("explain-result", {p["name"] for p in by[4]["result"]["prompts"]})

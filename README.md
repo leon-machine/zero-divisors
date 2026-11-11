@@ -25,7 +25,7 @@ read it, check it and try to break it.
        git clone https://github.com/leon-machine/phys-graph
        cd phys-graph
        pip install -r requirements.txt          # Python 3.11 or later
-       claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"
+       claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"
 
    CONTRIBUTING.md has the set-up for other clients. Whatever the client, ask the AI to
    call `conventions` first.
