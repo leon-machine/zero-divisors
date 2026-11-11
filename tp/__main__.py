@@ -1,4 +1,4 @@
-"""tp: command line for the Transport Lab store.
+"""tp: command line for the Physics Graph.
 
   python -m tp check  [--store store] [--layers 1-6] [--author NAME] [--no-mutants]
   python -m tp build  [--store store] [--out build] [--no-mutants]

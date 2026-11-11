@@ -1,4 +1,4 @@
-"""Build the Transport Lab page from build/graph.json:  python -m tp.site"""
+"""Build the Physics Graph page (site/index.html) from build/graph.json:  python -m tp.site"""
 import datetime
 import json
 import os
@@ -687,7 +687,7 @@ from . import releases as _releases
 
 
 def main(build="build", site="site", store="store", template="universe.template.html",
-         out="transport_lab.html"):
+         out="index.html"):
     from .model import ID_RE, load_store
     g = json.load(open(os.path.join(build, "graph.json")))
     lay_path = os.path.join(build, "layout.json")
@@ -1068,7 +1068,7 @@ def _publish_list(site):
         for f in sorted(os.listdir(d)):
             if f.endswith(".json") or (sub == "pdf" and f.endswith(".pdf")):
                 files[sub + "/" + f] = os.path.relpath(os.path.join(os.path.abspath(d), f), lab).replace(os.sep, "/")
-    for page in ("singularity.html", "principle.html"):
+    for page in ("singularity.html", "principle.html", "ga.html"):
         if os.path.exists(os.path.join(site, page)):
             files[page] = os.path.relpath(os.path.join(os.path.abspath(site), page), lab).replace(os.sep, "/")
     with open(os.path.join(site, "publish_files.json"), "w", encoding="utf-8") as fh:

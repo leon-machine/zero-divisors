@@ -50,7 +50,7 @@ programmes:
     maintainers:
     - leon
 
-# the public address of the site (the page that serves transport_lab.html), e.g. https://zerodivisors.org/
+# the public address of the site (the page that serves index.html), e.g. https://zerodivisors.org/
 # when set, shared links use it, link previews name absolute images, and each result gets a small
 # share page r/<id>.html carrying its own preview. Empty until the site is hosted.
 site_url: ""

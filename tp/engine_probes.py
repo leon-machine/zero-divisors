@@ -1,4 +1,4 @@
-"""Small Python expressions whose values the Transport Lab page compares between CPython (computed
+"""Small Python expressions whose values the Physics Graph page compares between CPython (computed
 here, at site build) and the in-browser engine, to show where the two disagree when a check fails
 in the browser. Each probe is evaluated with GA, Fraction (as F) and itertools in scope."""
 

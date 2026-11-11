@@ -1,4 +1,4 @@
-# Transport Lab roadmap
+# Physics Graph roadmap (written as the Transport Lab roadmap)
 
 Planned improvements, from the review of 2026-10-23: the store judged as a central, AI-written and
 human-readable record that could grow to all of physics, and judged by how easily an AI agent works

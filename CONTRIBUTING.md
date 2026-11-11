@@ -12,7 +12,7 @@ Python 3.11 or later, from a clone of this repository:
 
 Claude Code:
 
-    claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"
+    claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"
 
 The Claude desktop app, or any client that runs stdio MCP servers:
 

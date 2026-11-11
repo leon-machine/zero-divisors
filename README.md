@@ -25,7 +25,7 @@ read it, check it and try to break it.
        git clone https://github.com/leon-machine/phys-graph
        cd phys-graph
        pip install -r requirements.txt          # Python 3.11 or later
-       claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"
+       claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"
 
    CONTRIBUTING.md has the set-up for other clients. Whatever the client, ask the AI to
    call `conventions` first.
@@ -67,7 +67,7 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
                         audit, overrides, changelog, versions/vN snapshots, redlines
     proposals/          the maintainer's local review queue (`--maintainer` MCP mode, `tp accept`)
     build/              graph.json, store.sqlite, report.md (generated)
-    site/               page templates and the built site (transport_lab.html), with the
+    site/               page templates and the built site (index.html), with the
                         pages that need no JavaScript (results/, subjects/, llms.txt)
     seed/               extraction inputs and reports, typing and prose instructions
 
@@ -81,7 +81,7 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
     python -m tp regen  falling-in --store store
     python -m tp audit  falling-in --store store
     python -m tp accept PROPOSAL_ID --store store            (after review; then tp lock)
-    python -m tp.site                                  build site/transport_lab.html
+    python -m tp.site                                  build site/index.html
     python -m tp check-one ID --store store             run one result's machine checks
     python -m tp.mcp_server --store store              MCP server over stdio
     python -m tp.mcp_http --store store [--port 8080]   read-only MCP server over HTTP (docs/HOSTING.md)
@@ -104,7 +104,7 @@ the start of its name, for runs whose checks carry no paper labels.
 
 ## The site
 
-`site/transport_lab.html` is one self-contained page, with two guided introductions
+`site/index.html` is one self-contained page, with two guided introductions
 (The Transport Principle, The Singularity) and the Physics Graph:
 
 - **The graph**: every result as a point in a 3D ball, placed so that each sits

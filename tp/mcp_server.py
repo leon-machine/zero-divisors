@@ -872,8 +872,13 @@ def tool_list(mode="local"):
         if name not in keep:
             continue
         req = t[3] if len(t) > 3 else []
+        writes = name in WRITING | {"propose_claim"}
         out.append({"name": name, "description": desc,
-                    "inputSchema": {"type": "object", "properties": props, "required": req}})
+                    "inputSchema": {"type": "object", "properties": props, "required": req},
+                    # clients use these to decide what needs the user's confirmation: ChatGPT asks
+                    # before every call to a tool not marked read-only
+                    "annotations": {"readOnlyHint": not writes, "destructiveHint": False,
+                                    "idempotentHint": not writes, "openWorldHint": False}})
     return out
 
 

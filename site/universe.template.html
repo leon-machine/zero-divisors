@@ -1,11 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zero Divisors</title>
-<meta name="description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta name="description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and three guided introductions.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Zero Divisors">
 <meta property="og:title" content="Zero Divisors">
-<meta property="og:description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and two guided introductions.">
+<meta property="og:description" content="Division by zero, read as a signpost: the Transport Papers as a graph of results, each with its proof and machine check, and three guided introductions.">
 <meta property="og:image" content="/*SITE_URL*/img/share.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400&display=swap">
 <style>
-/* Transport Lab, version 2.  The Universe view is a 3D ball of results laid out
+/* The Physics Graph page (formerly the Transport Lab, version 2).  The graph view is a 3D ball of results laid out
    so that each result sits near what it rests on and what rests on it; a left
    rail chooses what to light up (categories, collections, a guided trail) and a
    right panel reads the selected result with its proof.  Other views are pages. */
@@ -101,7 +101,7 @@ details.pgwhy ul { padding-left: 18px; margin: 6px 0; }
 .view.story { background: #100e0d; }
 .view.story iframe { flex: 1; width: 100%; height: 100%; border: 0; display: block; background: #100e0d; }
 /* the Transport Principle shares the Physics Graph's background */
-#principleview, #principleview iframe { background: #060a10; }
+#principleview, #principleview iframe, #gaview, #gaview iframe { background: #060a10; }
 /* universe */
 #universeview { --rw: 480px; position: relative; }
 #universeview.on { display: grid; grid-template-columns: 290px minmax(0, 1fr) var(--rw); }
@@ -252,6 +252,9 @@ table.metrics td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .contrib .ways > div { border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; background: var(--chipbg); }
 .contrib .ways b { font: 600 16px var(--serif); }
 .contrib .ways p { margin: 6px 0 0; font-size: 14.5px; }
+.contrib .ctab { border: 1px solid var(--rule); border-radius: 10px; padding: 4px 16px 8px; margin: 6px 0 14px; background: var(--chipbg); }
+.contrib .ctab ol.route { padding-left: 1.3em; }
+.contrib h4 { margin: 18px 0 4px; font: 600 15px var(--sans); }
 .contrib .callout.first { font-size: 15.5px; border-left-width: 4px; margin: 18px 0 8px; }
 .agentbox { border: 1px dashed var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 14px; font: 14.5px/1.5 var(--sans); }
 .agentbox code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--chipbg); padding: 1px 5px; border-radius: 5px; }
@@ -406,6 +409,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   <h1>Zero <span>Divisors</span></h1>
   <nav aria-label="Views">
     <a href="#principle" data-view="principle">The Transport Principle</a>
+    <a href="#ga" data-view="ga">Why Geometric Algebra</a>
     <a href="#singularity" data-view="singularity">The Singularity</a>
     <span class="navgroup" id="graphgroup"><a href="#universe" data-view="universe">Physics Graph</a><button class="navcaret" id="graphcaret" aria-haspopup="true" aria-expanded="false" aria-controls="graphmenu" aria-label="More of the Physics Graph: documents, the record, open problems"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span>
     <a href="#contribute" data-view="contribute">Explore with AI</a>
@@ -473,6 +477,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
     <aside class="reader" id="reader" aria-live="polite"></aside>
     <div class="grip" id="grip" role="separator" tabindex="0" aria-orientation="vertical" aria-controls="reader" aria-label="Resize the reading pane: drag, or use the left and right arrow keys; double-click to reset" aria-valuemin="320" aria-valuemax="1080" aria-valuenow="480" title="Drag to resize the reading pane; double-click to reset"></div>
   </section>
+  <section class="view story" id="gaview" aria-label="Why Geometric Algebra: an introduction"><iframe id="gaframe" title="Why Geometric Algebra: one product, and a ladder from a distinction to the numbers"></iframe></section>
   <section class="view story" id="principleview" aria-label="The Transport Principle: an introduction"><iframe id="princframe" title="The Transport Principle: dividing by zero, from a line to spacetime"></iframe></section>
   <section class="view story" id="singularityview" aria-label="The Singularity: an introduction"><iframe id="singframe" title="The Singularity: a fall into a black hole, and the Transport Papers in seven parts" allow="fullscreen"></iframe></section>
   <section class="view page" id="documentsview"><div class="inner" id="documents"></div></section>
@@ -2209,7 +2214,8 @@ function linkFor(hash) {
   if (DATA.site_url && byId.has(hash)) return b + "r/" + encodeURIComponent(hash) + ".html";
   return b + (hash ? "#" + hash : "");
 }
-const VIEW_TITLE = { principle: "The Transport Principle: dividing by zero, from a line to spacetime", singularity: "The Singularity: a fall into a black hole, and the Transport Papers",
+const STORY = { ga: ["gaframe", "ga.html"], principle: ["princframe", "principle.html"], singularity: ["singframe", "singularity.html"] };
+const VIEW_TITLE = { ga: "Why Geometric Algebra: one product, and a ladder from a distinction to the numbers", principle: "The Transport Principle: dividing by zero, from a line to spacetime", singularity: "The Singularity: a fall into a black hole, and the Transport Papers",
   universe: "The Physics Graph: every result of the Transport Papers, with its proof and check", documents: "The Transport Papers, generated from the Physics Graph",
   record: "The record: what the Transport Papers predicted, and what the data say", problems: "Open problems of the Transport Papers", contribute: "Explore the Physics Graph with an AI", about: "About Leon Butler" };
 // what to share: a result (by id), or whatever the page is showing now
@@ -2221,7 +2227,7 @@ function shareInfo(id) {
   if (id && byId.has(id)) { const n = byId.get(id); return { hash: id, title: n.title, text: plainTex(n.one_liner) }; }
   const h = decodeURIComponent(location.hash.slice(1));
   if (byId.has(h)) return shareInfo(h);
-  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
+  const sl = h.match(/^(ga|principle|singularity)\/(\d+)$/);
   if (sl) return { hash: h, title: VIEW_TITLE[sl[1]].split(":")[0] + ", slide " + sl[2], text: VIEW_TITLE[sl[1]] };
   if (h.startsWith("doc:")) { const d = (DATA.documents || []).find(x => x.id === h.slice(4)); return { hash: h, title: d ? d.title : "A Transport Paper", text: "Generated from the Physics Graph" }; }
   const v = VIEW_TITLE[h] ? h : (document.querySelector("main > .view.on") || {}).id?.replace(/view$/, "") || "principle";
@@ -2742,10 +2748,10 @@ function showDoc(d, blocks) {
       ${b.proof && !inCited ? `<details class="docproof" open><summary>Proof</summary><div class="tx">${tex(b.proof)}</div></details>` : ""}</div>`;
   }).join("");
   const r = document.getElementById("docreader");
-  r.innerHTML = `<div class="docpaper"><div class="eyebrow" style="margin-top:28px">${d.kind === "paper" ? "Transport Papers, " + esc(d.paper || "") + " · generated by the Transport Lab" : "Assembled from the store"}</div>
+  r.innerHTML = `<div class="docpaper"><div class="eyebrow" style="margin-top:28px">${d.kind === "paper" ? "Transport Papers, " + esc(d.paper || "") + " · generated by the Physics Graph" : "Assembled from the store"}</div>
     <h2 style="margin-bottom:2px">${esc(d.title)}</h2>${d.subtitle ? `<div class="lead" style="font-style:italic;margin:0 0 6px">${esc(d.subtitle)}</div>` : ""}
     <div class="row" style="margin:10px 0 18px">${d.pdf ? `<a class="btn" href="${esc(d.pdf)}" target="_blank" rel="noopener">PDF</a>` : ""}${d.doi ? `<a class="btn" href="https://doi.org/${esc(d.doi)}" target="_blank" rel="noopener">Version of record on Zenodo</a>` : ""}</div>
-    <div class="given">${d.doi ? `<b>This is not the version of record.</b> The official version is the paper deposited on Zenodo, <a class="ref" href="https://doi.org/${esc(d.doi)}" target="_blank" rel="noopener">doi:${esc(d.doi)}</a>. This text is generated by the Transport Lab from approved parts of its store. ${d.changes ? esc(d.changes.sentence) + (d.changes.list && d.changes.list.length ? " Each revised or added result carries a mark (corrected, changed, reworded or added); open it for the reason, the store's notes and the deposited wording." : "") : "It may differ where a result has been corrected since."}` : `<b>This is not a deposited paper.</b> It is generated by the Transport Lab from approved parts of its store; the papers it draws on are on Zenodo.`} Click a result's name to open it in the Physics Graph.</div>
+    <div class="given">${d.doi ? `<b>This is not the version of record.</b> The official version is the paper deposited on Zenodo, <a class="ref" href="https://doi.org/${esc(d.doi)}" target="_blank" rel="noopener">doi:${esc(d.doi)}</a>. This text is generated by the Physics Graph from approved parts of its store. ${d.changes ? esc(d.changes.sentence) + (d.changes.list && d.changes.list.length ? " Each revised or added result carries a mark (corrected, changed, reworded or added); open it for the reason, the store's notes and the deposited wording." : "") : "It may differ where a result has been corrected since."}` : `<b>This is not a deposited paper.</b> It is generated by the Physics Graph from approved parts of its store; the papers it draws on are on Zenodo.`} Click a result's name to open it in the Physics Graph.</div>
     ${html}</div>`;
   typeset(r);
   const target = pendingBlock && document.getElementById("db-" + pendingBlock); pendingBlock = null;
@@ -2763,6 +2769,53 @@ const TOOL_GROUPS = [
   ["Open problems", ["list_open_problems", "get_open_problem"]],
   ["Check a draft", ["validate_draft"]],
   ["Documents", ["generate_doc", "regenerate_doc"]]];
+// how to connect, one tab per app; the hosted steps appear once store/config.yaml mcp_url is set
+const NOT_LIVE = `<p class="note">The hosted address is not live yet. Until it is, use <b>On your own computer</b> or <b>An AI that reads the web</b>.</p>`;
+const llmsUrl = () => { try { return new URL("llms.txt", DATA.site_url || location.href).href; } catch (e) { return "llms.txt"; } };
+const LOCAL_CLONE = `git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`;
+const CONNECT = [
+  { id: "claude", label: "Claude", body: code => DATA.mcp_url ? `
+    <p>On claude.ai in a browser, on any plan (the Free plan allows one custom connector). Once added, the connector belongs to your account, so the Claude desktop and phone apps can use it too.</p>
+    <ol class="route">
+      <li>Open <b>Customize</b>, then <b>Connectors</b>, then <b>+ Add</b> and <b>Add custom connector</b>.</li>
+      <li>Name it <b>Physics Graph</b> and paste this address:${code(DATA.mcp_url)}Then <b>Continue</b>.</li>
+      <li>For authentication choose <b>No sign in</b>, then <b>Add</b>.</li>
+      <li>In a chat, open <b>+</b>, then <b>Connectors</b>, and switch <b>Physics Graph</b> on.</li>
+    </ol>
+    <p class="note">On a Team or Enterprise plan an owner adds it first, under <b>Organization settings</b>, <b>Connectors</b>; members then find it under <b>Customize</b>, <b>Connectors</b> and choose <b>Connect</b>.</p>` : NOT_LIVE },
+  { id: "chatgpt", label: "ChatGPT", body: code => DATA.mcp_url ? `
+    <p>On chatgpt.com in a browser, with a Plus, Pro, Business, Enterprise or Education plan. It uses ChatGPT's developer mode.</p>
+    <ol class="route">
+      <li>Open <b>Settings</b>, then <b>Apps</b>, then <b>Advanced settings</b>, and switch <b>Developer mode</b> on.</li>
+      <li>Back in <b>Apps</b>, choose <b>Create app</b>. Name it <b>Physics Graph</b>, paste this address and choose <b>No Authentication</b>:${code(DATA.mcp_url)}</li>
+      <li>In a chat, open <b>+</b>, choose <b>Developer mode</b> and select <b>Physics Graph</b>.</li>
+      <li>Name it in your question, for example "Using the Physics Graph app, call conventions first, then ...".</li>
+    </ol>` : NOT_LIVE },
+  { id: "claude-code", label: "Claude Code", body: code => DATA.mcp_url ? `
+    <p>In a terminal:</p>${code(`claude mcp add --transport http physics-graph ${DATA.mcp_url}`)}
+    <p>Add <code>--scope user</code> to have it in every project. To check drafts or contribute, use the set-up under <b>On your own computer</b> instead.</p>` : NOT_LIVE + `<p>Claude Code can already use the graph from a clone: see <b>On your own computer</b>.</p>` },
+  { id: "other", label: "Other apps", body: code => DATA.mcp_url ? `
+    <p>Any app that takes a remote MCP server by its address (Cursor, VS Code and others) works the same way: add a server of type HTTP with this address and no authentication. Each app keeps its own settings page or file for MCP servers.</p>${code(DATA.mcp_url)}` : NOT_LIVE },
+  { id: "local", label: "On your own computer", body: code => `
+    <p>Needed to check a draft against the rules and to contribute, and it works with no hosted address. You need git and Python 3.11 or later.</p>
+    <ol class="route">
+      <li>Get the graph and what it needs:${code(LOCAL_CLONE)}</li>
+      <li><b>Claude Code</b>: from the <code>phys-graph</code> folder, run${code(`claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}</li>
+      <li><b>The Claude desktop app</b>: on Windows, run this in PowerShell from the folder, then quit Claude fully and reopen it:${code(`powershell -ExecutionPolicy Bypass -File register_mcp.ps1`)}Elsewhere, open <b>Settings</b>, <b>Developer</b>, <b>Edit Config</b> and add this inside <code>"mcpServers"</code>, with your own path:${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}Then restart the app.</li>
+      <li><b>Any other app that runs local MCP servers</b>: the same command, arguments and <code>PYTHONPATH</code> as above.</li>
+    </ol>
+    <p class="note">Where <code>python</code> is not found, use <code>python3</code> (macOS, Linux) or <code>py</code> (Windows) in the command.</p>` },
+  { id: "web", label: "An AI that reads the web", body: code => `
+    <p>Any AI that can open web pages can read the graph with nothing connected. Give it this address:${code(llmsUrl())}for example: "Read ${llmsUrl()}, then the conventions it links to, then explain ...". It lists the conventions, every subject as one file in dependency order, and a page for every result with its proof and checks.</p>
+    <p class="note">This route reads only: it cannot search the graph, follow what rests on what, or check a draft. For those, connect the MCP server.</p>` },
+];
+let ctabNow = null;
+function showCtab(el, id) {
+  ctabNow = id;
+  el.querySelectorAll("[data-ctab]").forEach(b => b.setAttribute("aria-pressed", b.dataset.ctab === id ? "true" : "false"));
+  el.querySelectorAll("[data-cpanel]").forEach(p => { p.hidden = p.dataset.cpanel !== id; });
+  try { localStorage.setItem("pg-ctab", id); } catch (e) {}
+}
 let pendingAnchor = null;
 function renderContribute() {
   const el = document.getElementById("contribute");
@@ -2774,24 +2827,19 @@ function renderContribute() {
   const ex = DATA.contrib_example || {};
   el.innerHTML = `<div class="contrib"><div class="eyebrow">For readers, researchers and their AI</div><h2>Explore with AI</h2>
     <p class="lead">The Physics Graph is built to be read by people and worked on by AI. Every result is a self-contained unit: its statement at four levels (formal, technical, plain words and one line), its proof, the results it rests on, each pinned to the version used, an exact machine check, and a record of who did what. You read that structure on this site; an AI reads the same structure through the graph's MCP server, so it can follow what a result rests on, check it, and write new results in the same form. It is also a good way into the ideas themselves: ask the AI to explain a result back to you and it can pitch the explanation to your level, from beginner to expert. The aim is that the graph grows: anyone, with their AI, can correct it, sharpen it or add to it.</p>
-    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (set-up below), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
+    <div class="callout first"><b>The first thing, every time: ask your AI to call <code>conventions</code>.</b> Once it is connected (<a href="#contribute/connect">how to connect</a>), and before it reads or writes anything, it should read the graph's conventions: that the graph's language is geometric algebra, how a result is stored, the notation and its macros, the two imaginary units and where each is used, the house rules for proofs and checks, and a suggested way to work. An AI that skips this misreads the notation and writes results that fail the checks.</div>
     <div class="ways">
       <div><b>Browse</b><p>Ask an introductory question, such as what the transport principle is or why a black hole's centre divides by zero, and the AI answers from the graph itself, at the level you ask for: a short summary, a plain explanation, or the full proof with its premises.</p></div>
       <div><b>Check</b><p>Take any result and see exactly what it assumes, all the way down, which of its premises are proved and which are postulated, and run its machine check on your own computer: <code>python -m tp check-one &lt;id&gt; --store store</code>.</p></div>
       <div><b>Build</b><p>Take an open problem, a weak check or a gap you have found, write a new result in the graph's form, and send it. <a href="#contribute/build">How to contribute</a></p></div>
     </div>
 
-    <h3>Set up</h3>
-    ${DATA.mcp_url ? `<p><b>With nothing to install.</b> Add this address to your AI as a remote MCP server (in claude.ai, a custom connector; other apps that take an MCP server by its address work the same way):</p>
-    ${code(DATA.mcp_url)}
-    <p>It offers every reading tool. To check a draft or contribute, set it up on your own computer as below.</p>` : ""}
-    <p><b>An AI that can read the web</b> can also read the graph without connecting anything: point it at <a href="llms.txt">llms.txt</a>, which lists the conventions, every subject as one file in dependency order, and a page for every result.</p>
-    <p><b>On your own computer</b> (needed to check drafts and contribute): Python 3.11 or later, then:</p>
-    ${code(`git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`)}
-    <p><b>Claude Code</b>, from the repository folder:</p>
-    ${code(`claude mcp add --env PYTHONPATH="$PWD" physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}
-    <p><b>The Claude desktop app, or any client that runs stdio MCP servers</b>: add this to its server list, with your own path. On Windows, <code>register_mcp.ps1</code> does it for the desktop app.</p>
-    ${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}
+    <h3 id="connect">Connect your AI</h3>
+    <p>Choose the app you use. Once it is connected, start with the check at the end of this section.</p>
+    <div class="tabs" role="group" aria-label="Your AI app">${CONNECT.map(c => `<button data-ctab="${c.id}" aria-pressed="false">${esc(c.label)}</button>`).join("")}</div>
+    ${CONNECT.map(c => `<div class="ctab" data-cpanel="${c.id}" hidden>${c.body(code)}</div>`).join("")}
+    <h4>Check that it is working</h4>
+    <p>Ask: <b>"Call conventions, then tell me in two sentences what the Physics Graph is."</b> A connected AI shows that it called the <code>conventions</code> tool before answering. If it answers without calling a tool, it is not connected: check that the server is switched on for this chat.</p>
     <p>Apps that show an MCP server's prompts offer four ready-made starting points: <code>tour</code>, <code>explain-result</code>, <code>audit-result</code> and <code>attack-open-problem</code>.</p>
 
     <h3 id="build">Working on something?</h3>
@@ -2829,6 +2877,11 @@ function renderContribute() {
     <p class="note">The server's own list, read from it when this site was built. A name ending in ? is optional.</p>
     <table class="metrics tools"><tbody>${toolRows}</tbody></table>
   </div>`;
+  el.querySelectorAll("[data-ctab]").forEach(b => b.onclick = () => showCtab(el, b.dataset.ctab));
+  let first = ctabNow;
+  if (!first) { try { first = localStorage.getItem("pg-ctab"); } catch (e) {} }
+  if (!CONNECT.some(c => c.id === first)) first = DATA.mcp_url ? "claude" : "local";
+  showCtab(el, first);
   if (pendingAnchor) { const t = document.getElementById(pendingAnchor); pendingAnchor = null; if (t) t.scrollIntoView({ block: "start" }); }
 }
 // the Physics Graph's own pages sit under its menu in the header
@@ -2879,7 +2932,7 @@ function showView(v) {
   const cur = inGraph ? document.getElementById("graphgroup") : document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - Math.max(0, (n.clientWidth - cur.offsetWidth) / 2); }; navEdges();
   if (v === "universe") { resize(); }
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
-  for (const [view, id, src] of [["principle", "princframe", "principle.html"], ["singularity", "singframe", "singularity.html"]]) {
+  for (const [view, [id, src]] of Object.entries(STORY)) {
     const f = document.getElementById(id); if (v === view && !f.getAttribute("src")) f.setAttribute("src", src); }
   if (!rendered[v]) { rendered[v] = true; ({ documents: renderDocuments, record: renderRecord, problems: renderProblems, contribute: renderContribute, releases: renderReleases })[v]?.(); }
 }
@@ -2889,17 +2942,17 @@ function route() {
   if (h.startsWith("doc:")) { showView("documents"); openDoc(h.slice(4)); return; }
   if (byQ.has(h)) { showView("universe"); showQuantity(h); return; }
   if (NOTES[h] && noteHost(NOTES[h])) { showView("universe"); openNote(h); return; }
-  if (h === "contribute/build") { pendingAnchor = "build"; if (rendered.contribute) { const t = document.getElementById("build"); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
-  const sl = h.match(/^(principle|singularity)\/(\d+)$/);
-  if (sl) { const f = document.getElementById(sl[1] === "principle" ? "princframe" : "singframe");
-    const want = (sl[1] === "principle" ? "principle.html" : "singularity.html") + "#" + sl[2];
+  if (h === "contribute/build" || h === "contribute/connect") { const a = h.split("/")[1]; pendingAnchor = a; if (rendered.contribute) { const t = document.getElementById(a); pendingAnchor = null; showView("contribute"); if (t) t.scrollIntoView({ block: "start" }); } else showView("contribute"); return; }
+  const sl = h.match(/^(ga|principle|singularity)\/(\d+)$/);
+  if (sl) { const f = document.getElementById(STORY[sl[1]][0]);
+    const want = STORY[sl[1]][1] + "#" + sl[2];
     if (!f.getAttribute("src")) f.setAttribute("src", want);
     else { try { if (f.contentWindow.location.hash !== "#" + sl[2]) f.contentWindow.location.hash = sl[2]; } catch (e) { f.setAttribute("src", want); } }
     showView(sl[1]); return; }
   const rl = h.match(/^releases\/(v\d+\.\d+\.\d+|unreleased)$/);
   if (rl) { showView("releases"); const t = document.getElementById("rel-" + rl[1]); if (t) t.scrollIntoView({ block: "start" }); return; }
   if (h.startsWith("op.")) { opTab = "curated"; opSel = h; Object.keys(opFilter).forEach(k => opFilter[k] = ""); showView("problems"); renderProblems(); return; }
-  showView(["principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute", "about"].includes(h) ? h : (h ? "universe" : "principle"));
+  showView(["ga", "principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute", "about"].includes(h) ? h : (h ? "universe" : "principle"));
 }
 window.addEventListener("hashchange", route);
 window.addEventListener("resize", () => { resize(); applyRW(); document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); });

@@ -5,7 +5,7 @@
 Each check file runs in its own process. A function passes when it returns without raising,
 does not return False and records no GA.check failure (the evidence layer's rule). The record
 keeps, per function: pass or fail, wall time, the premises it touched and the error text. The
-Transport Lab page shows these records beside the check's source as the last recorded run.
+Physics Graph page shows these records beside the check's source as the last recorded run.
 """
 import argparse
 import datetime

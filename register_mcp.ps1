@@ -1,6 +1,7 @@
-# Registers the Transport Lab MCP server with the Claude desktop app.
+# Registers the Physics Graph MCP server with the Claude desktop app.
 # Run:  powershell -ExecutionPolicy Bypass -File register_mcp.ps1
-# Safe to re-run: it backs up the config and only sets the "transport-lab" entry.
+# Safe to re-run: it backs up the config and only sets the "physics-graph" entry (and removes
+# the entry of its old name, "transport-lab", if an earlier version of this script added it).
 $ErrorActionPreference = "Continue"   # native stderr is not an error; failures throw below
 $lab   = $PSScriptRoot
 $store = Join-Path $lab "store"
@@ -70,7 +71,10 @@ foreach ($d in $targets) {
   if (-not ($obj.PSObject.Properties.Name -contains "mcpServers")) {
     $obj | Add-Member -NotePropertyName mcpServers -NotePropertyValue ([pscustomobject]@{})
   }
-  $obj.mcpServers | Add-Member -NotePropertyName "transport-lab" -NotePropertyValue $entry -Force
+  if ($obj.mcpServers.PSObject.Properties.Name -contains "transport-lab") {
+    $obj.mcpServers.PSObject.Properties.Remove("transport-lab")
+  }
+  $obj.mcpServers | Add-Member -NotePropertyName "physics-graph" -NotePropertyValue $entry -Force
   $json = $obj | ConvertTo-Json -Depth 32
   [IO.File]::WriteAllText($cfg, $json, (New-Object Text.UTF8Encoding($false)))
   Write-Host "Updated $cfg"

@@ -209,7 +209,7 @@ const PRESSED = (() => { const n = LAB.preds.filter(x => x.st === 'press').lengt
   return !n ? 'None is under pressure now.' : (W[n] || String(n)) + (n === 1 ? ' is' : ' are') + ' under pressure now, marked in red.'; })();
 // open a result in the Lab's universe (this page is shown inside the Lab, same origin)
 function openInLab(hash){ try { if (window.parent && window.parent !== window) { window.parent.location.hash = hash; return; } } catch (e) {}
-  window.open('transport_lab.html' + hash, '_blank', 'noopener'); }
+  window.open('index.html' + hash, '_blank', 'noopener'); }
 document.addEventListener('click', e => { const a = e.target.closest('[data-lab]'); if (!a) return; e.preventDefault(); openInLab('#' + a.dataset.lab); });
 // video mode (?video): no animation loop; a renderer calls window.__frame(vh, ms, caption) once per frame
 const VIDEO = /[?&]video/.test(location.search); let vVh = 0;
