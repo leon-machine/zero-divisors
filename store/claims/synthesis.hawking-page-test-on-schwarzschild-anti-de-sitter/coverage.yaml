@@ -1,0 +1,23 @@
+functions:
+  check_chart_and_first_law:
+    kind: sampled
+    clauses:
+    - (o)
+    - (i)
+    omits: 'Six rational horizon radii and four ell: f(r_h) = 0, f increasing at three sample points (not for all r), beta^2 = 1 at the horizon locus, r_h^3 < r_*^3, r_h < 2M, the temperature and the Clausius identity; uniqueness of the antiderivative up to a constant and the if-and-only-if of (Z) are in the proof, not computed; Q(K) = 1 - beta^2 is taken from the stored gauge, not recomputed in the algebra'
+  check_branches_and_free_energy:
+    kind: sampled
+    clauses:
+    - (ii)
+    - (iii)
+    omits: 'Sign of the derivative of 4 pi ell T at three points on each branch, the identity tau^2 - 12 = (1 - 3x^2)^2/x^2 at five points, F and its sign and zero at six points, the values at x = 1; (FE) is a hypothesis and is not tested; "exactly two black holes" is the proof''s monotonicity argument'
+  check_dimension_d:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'd = 4 to 7 only, at the sample radii; the entropy r^{d-2}/4 per unit of sphere area is assumed as in the statement; the minimum is tested by its value at x^2 = (d-3)/(d-1), not as a minimum'
+  check_wald_constant_removes_the_transition:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'The constant is computed from the stored formula at chi = 2, not rederived; F_W closed form and sign at six points; the large-branch comparison at four temperatures; the orientation identity with the Weyl square has its coefficient 1/64 matched, so it tests the form in x only'
