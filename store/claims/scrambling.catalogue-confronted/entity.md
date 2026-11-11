@@ -43,7 +43,7 @@ imported_from:
 - citation: LIGO-Virgo-KAGRA, GWTC-4.0 and the echo searches cited by T8
   key: GWTC4
 supports:
-- scrambling.no-echo-prediction-registered@2
+- scrambling.no-echo-prediction-registered@3
 subject: entropy
 tags: [confronted-with-data, live-prediction]
 ---

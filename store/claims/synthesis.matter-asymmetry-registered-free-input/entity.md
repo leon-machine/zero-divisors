@@ -1,7 +1,7 @@
 ---
 id: synthesis.matter-asymmetry-registered-free-input
 kind: claim
-version: 3
+version: 4
 title: 'Premise: the matter asymmetry is a registered free input'
 status: postulate
 region: synthesis
@@ -25,6 +25,14 @@ credit:
   role: 'wording after the retirement of Premise P4; the copy theorem''s use of the registered stance recorded'
   version: 3
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'note on the unit of epsilon: the quoted figure is a yield per unit entropy used as a comoving ruler'
+  version: 4
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 4
+  kind: restatement
+  defect: 'the valuation sentence could be read as epsilon = 8.7e-11 beside Q = epsilon N with N = M_P/H, for which no per-mode reading gives that factor; baryons per unit entropy is the quantity of the thermal reading the charge result rejects'
 review: draft
 lineage:
   motivated_by:
@@ -36,6 +44,10 @@ lineage:
   - synthesis.rung-unit-second-free-number
   - synthesis.number-n-registered-free-input
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'Version 3 -> 4. A note is added to the formal level; the premise and its refutation condition are unchanged. The copy theorem and the charge result, which carry the same wording, are not edited; the note names them.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -69,6 +81,8 @@ extraction:
 \emph{What it does not give.} It does not explain the value or its sign; it does not say how the descent deposits the charge, nor with what energy per unit charge (the open entries of the pre-descent theory); and it does not decide the trichotomy's classification of $\epsilon$, whose kinematic clause runs for it at observation level and whose dynamical clause does not (Fact \claimref{dark-matter.imported-trichotomy-descents-data}).
 
 \emph{Refutation condition.} The premise is false if $\epsilon$ is produced dynamically by any in-framework calculation (the refutation condition of the stance in Proposition \claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(iv)); if it is computed from the transport structure or from another premise of the register; or if it is shown to be a function of $N$ or of another registered number.
+
+\emph{Note (the unit of $\epsilon$, 2026-11-11).} The words ``per mode'' and the formula $Q = \epsilon N$ are the charge reading's own (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}; Theorem \claimref{dark-matter.mirror-tower-copy-one}(v)), whose argument uses only that $N$ is common to the two towers. They do not give $\epsilon$ a number: with $N = M_{P}/H$, about $10^{61}$, no count of modes makes $8.7 \times 10^{-11}$ the factor (the baryon number inside the de Sitter radius is about $5 \times 10^{78}$ today, and it is not constant, the radius being fixed while the density dilutes). The figure $8.7 \times 10^{-11}$ is this tower's yield $n_{B}/s$ today: the conserved charge per comoving volume, measured with this tower's entropy as the unit of comoving volume. It is the descent's datum only if no entropy is produced in this tower after the descent. The equality along the reversal orbit is an equality of charge per comoving volume, $n_{B}' = n_{B}$; it is not $n_{B}'/s' = n_{B}/s$, which is the thermal reading that clause (iv) of the Proposition rejects (the mirror's own ratio is larger by $\xi^{-3}$, the stored $\eta' = \eta/\xi^{3}$). What the premise registers is unchanged.
 
 ## technical
 The series inherits its matter asymmetry rather than generating it: the descent creates the tower charges and makes one orientation choice, and the size of the asymmetry, $\epsilon$ per mode, so that each oriented tower stores the charge $\epsilon N$, was until now held as a flagged stance inside a proved result: initial data of the descent, refuted by any in-framework calculation that produces it. This premise registers that number as a free input, as the D-term level and $N$ are registered: $\epsilon$ is not derived and is not a function of the other registered numbers, and its value comes from the measured baryon density, about $8.7 \times 10^{-11}$ baryons per unit entropy. Its equality across this tower and the mirror is a clause of the copy theorem, and its uniformity across space agrees with the stored result that only a time shift of the descent is an adiabatic modulation of the deposit. It is not the deposit energy per unit charge that the mirror's temperature measures, which stays unregistered. It would be refuted by any in-framework dynamical calculation of $\epsilon$, by a derivation from the structure or another premise, or by showing it is a function of another registered number.

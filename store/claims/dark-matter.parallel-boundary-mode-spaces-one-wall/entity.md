@@ -28,7 +28,7 @@ derivations:
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - hawking.greybody-inheritance-under-interface-premise@6
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.p5-boundary-modes-hold-entropy-not@1
   - singularity.rate-models-kinematic-inputs-l-u@2
   proof: proof-main.tex

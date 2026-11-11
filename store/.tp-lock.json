@@ -2161,22 +2161,27 @@
     "Claude Fable 5.2",
     "note on where D belongs: the de Sitter reading, not counted with R1 to R3; joint consequence with R1 and R2; exposure of w = -1",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "note corrected: the one stored result with both D and R2 among its conditions is named",
+    3
    ]
   ],
-  "hash": "68ef302d31540fc5",
+  "hash": "4c45a751299ac2a3",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "b56dfdb9d0fb65a2"
+   "statement": "0a46e66686db0742"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.democracy-de-sitter-radius-unit-ball": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@2",
+   "dark-matter.d-democracy-total-mass@3",
    "dark-matter.odd-towers-populated@1",
    "dark-matter.r3-one-cell-per-unshared-direction@2",
    "dark-matter.single-ideal-at-residues-zero-and-four@1"
@@ -2443,7 +2448,7 @@
  },
  "dark-matter.imported-gravity-only-coupling": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2"
+   "dark-matter.p1-single-frozen-point@3"
   ],
   "credit": [
    [
@@ -2675,7 +2680,7 @@
  },
  "dark-matter.mirror-share-assembled": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p2-indifference@2",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
@@ -2746,7 +2751,7 @@
  },
  "dark-matter.mirror-tower-copy-one": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p2-indifference@2",
    "synthesis.common-ceiling-coupling-premise@1"
   ],
@@ -2790,7 +2795,7 @@
  },
  "dark-matter.mode-counts-two-modules-which-one": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p2-indifference@2"
   ],
   "credit": [
@@ -2988,18 +2993,23 @@
     "Claude Fable 5.2",
     "split into its three clauses (metric, orientation, common N) within the entity, with the status of each",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "note naming the connection of clause (P1a) under the field-space premise",
+    3
    ]
   ],
-  "hash": "6ea1160334d8d1ac",
+  "hash": "2186dfb40ad4ccd4",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "2db093b5242b0934",
-   "statement": "ff858bf52dbdfd63"
+   "statement": "0225c553e8d47aa0"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.p2-indifference": {
   "assumes": [],
@@ -3083,7 +3093,7 @@
  },
  "dark-matter.parallel-boundary-mode-spaces-one-wall": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p5-boundary-modes-hold-entropy-not@1",
    "singularity.rate-models-kinematic-inputs-l-u@2"
   ],
@@ -3112,7 +3122,7 @@
  },
  "dark-matter.population-count-one-share-half-percent": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p2-indifference@2",
    "dark-matter.p3-nearest-dimension-representatives@3",
    "synthesis.common-ceiling-coupling-premise@1"
@@ -3232,7 +3242,7 @@
  },
  "dark-matter.projection-every-towers-content-dilutes-ones": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2"
+   "dark-matter.p1-single-frozen-point@3"
   ],
   "credit": [
    [
@@ -3544,7 +3554,7 @@
  },
  "dark-matter.stored-asymmetry-charge-not-number": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.p5-boundary-modes-hold-entropy-not@1"
   ],
   "credit": [
@@ -3587,7 +3597,7 @@
  },
  "dark-matter.superselected-hence-dark-exactly-stable": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2"
+   "dark-matter.p1-single-frozen-point@3"
   ],
   "credit": [
    [
@@ -3733,7 +3743,7 @@
  },
  "dark-matter.two-reductions": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@2"
+   "dark-matter.d-democracy-total-mass@3"
   ],
   "credit": [
    [
@@ -9096,18 +9106,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "note: the condition of w = -1 is now (FS), and the two stances are exposed in opposite senses",
+    2
    ]
   ],
-  "hash": "6dab5d5f6fccda7a",
+  "hash": "556639cfd0ed9929",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "e155bcbe1354bd62"
+   "statement": "54a4f196fde2ae49"
   },
   "status": "conjectured",
-  "version": 1
+  "version": 2
  },
  "neutrino.empty-twistor": {
   "assumes": [],
@@ -33115,7 +33130,7 @@
  },
  "odd-extensions.belongs-tower": {
   "assumes": [
-   "dark-matter.p1-single-frozen-point@2"
+   "dark-matter.p1-single-frozen-point@3"
   ],
   "credit": [
    [
@@ -35434,18 +35449,23 @@
     "Claude Fable 5.2",
     "pointer to the open problem on processes of a quantised gravitational field; prediction unchanged",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "wording: the population of the odd towers is now a registered premise",
+    7
    ]
   ],
-  "hash": "77cd37b37f345439",
+  "hash": "fb8febca42e8c98c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "0a2cd801e31551a1",
    "rest": "dff0f3327d9593e2",
-   "statement": "171806649e216b93"
+   "statement": "36cbf405e213eb0f"
   },
   "status": "live",
-  "version": 6
+  "version": 7
  },
  "pred.gravity-entangles-standard-phase": {
   "assumes": [],
@@ -38739,7 +38759,9 @@
  },
  "scrambling.no-echo-prediction-registered": {
   "assumes": [
-   "singularity.c1-curvature-cutoff@5"
+   "synthesis.c-loc-local-horizon-premise@6",
+   "synthesis.field-space-premise-parallel-frozen-point@2",
+   "synthesis.n-plus-null-ground-state@12"
   ],
   "credit": [
    [
@@ -38751,18 +38773,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "basis restated: field equations under (FS), the identification of (C_loc), a stated no-reflection reading and the local form of (N+); (C1) removed from the basis",
+    3
    ]
   ],
-  "hash": "5d2ce2048a9d7a66",
+  "hash": "38337c7f2850d9ea",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
-   "proofs": "f43ed8334e41ca0c",
+   "proofs": "e1973bc31347ef1a",
    "rest": "259d0d2bf8620d3e",
-   "statement": "3e8655036cd95e5e"
+   "statement": "475122e7f3d74e63"
   },
   "status": "live",
-  "version": 2
+  "version": 3
  },
  "scrambling.no-recount-reaches-quarter": {
   "assumes": [],
@@ -43397,18 +43424,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the second-reading margin of formal (iii) stated for the whole observed range (restatement)",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (i) corrected: the coincidence holds near the onset of Lambda-domination",
+    7
    ]
   ],
-  "hash": "22f3f5974a5deece",
+  "hash": "4d4286818e0fbe4e",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "0630fa880d14c7a9",
    "rest": "85079d304d5cbecd",
-   "statement": "014c061dd3bd3fa2"
+   "statement": "da0d15b84fcd50d5"
   },
   "status": "conjectured",
-  "version": 6
+  "version": 7
  },
  "standard-model.direction-demanded-content-doublet-heavy": {
   "assumes": [],
@@ -49615,7 +49647,7 @@
  "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
   "assumes": [
    "dark-matter.odd-towers-populated@1",
-   "dark-matter.p1-single-frozen-point@2",
+   "dark-matter.p1-single-frozen-point@3",
    "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
@@ -49628,18 +49660,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "two stale sentences corrected (the reading of R3; the retired P4)",
+    2
    ]
   ],
-  "hash": "9af7f752ee68cbdd",
+  "hash": "2b44c66ab0405780",
   "ledger": null,
   "parts": {
    "checks": "8abf002e9563fc2a",
    "proofs": "ee5e0b51ad78337d",
    "rest": "d3b65c89b700e77b",
-   "statement": "3b31b8694ac18503"
+   "statement": "7eaba5b333f0041f"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.de-sitter-entropy-pi-n-squared": {
   "assumes": [],
@@ -51337,6 +51374,36 @@
   "status": "proved",
   "version": 4
  },
+ "synthesis.frozen-point-unique-for-the-field-space-connection": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent derivation and checks (field strengths from fields, the derivative step, the torsion counter-model, the reversed-signature reading), and the corrections they forced",
+    null
+   ]
+  ],
+  "hash": "a4ac5fa52e9e3fee",
+  "ledger": null,
+  "parts": {
+   "checks": "5d402115b0b2a1f7",
+   "proofs": "4d4f638f6d780266",
+   "rest": "36880587349d3e5c",
+   "statement": "74539ef9be9e753f"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.frozen-point-unique-where-weyl-has-no-kernel": {
   "assumes": [],
   "credit": [
@@ -51369,18 +51436,23 @@
     "Claude Opus 5.5",
     "formal restated at Leon's second-round decisions: the Consequently clauses for c != 0",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note: the statement is for the normal tractor connection",
+    7
    ]
   ],
-  "hash": "d15f52bf7d6a6db6",
+  "hash": "1ef82b0e1cd6d82b",
   "ledger": null,
   "parts": {
    "checks": "2f648c40abaf5802",
    "proofs": "379e06ed76c779a8",
    "rest": "d3b65c89b700e77b",
-   "statement": "85c6870ccaf70538"
+   "statement": "a455799efa3d4679"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "synthesis.gauge-algebra-by-tower": {
   "assumes": [
@@ -57144,18 +57216,23 @@
     "Claude Fable 5.2",
     "wording after the retirement of Premise P4; the copy theorem's use of the registered stance recorded",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "note on the unit of epsilon: the quoted figure is a yield per unit entropy used as a comoving ruler",
+    4
    ]
   ],
-  "hash": "a7794b9674c5a94d",
+  "hash": "503983849b1960aa",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "75e6a80904d8a024"
+   "statement": "e612bf152c42edf7"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state": {
   "assumes": [],
@@ -62152,18 +62229,23 @@
     "Claude Opus 5.5",
     "proof's citation of the frozen-point Fact taken from its scale-g display, after that Fact's gauge-field sentence became a remark (second-round decisions)",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope note: the statement is for the normal tractor connection",
+    6
    ]
   ],
-  "hash": "5393bf39722e0637",
+  "hash": "91e41d61d8c6b533",
   "ledger": null,
   "parts": {
    "checks": "82a1f0e3667b3ffd",
    "proofs": "158a45334e696aac",
    "rest": "d3b65c89b700e77b",
-   "statement": "a0bbd8df9c3058d4"
+   "statement": "3d90fe26249c1145"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.two-loop-qed-in-the-spacetime-algebra-continued-in-dimension-gives-the-second-beta-coefficient": {
   "assumes": [
@@ -64411,18 +64493,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: completion read strictly, hypothesis moved beyond the tame corank-one case, note on the rung count",
+    3
    ]
   ],
-  "hash": "b5dadea19b42c7dd",
+  "hash": "dbc25f90b5331bed",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "615986a89524ad62",
-   "statement": "9b98be2250f91c07"
+   "statement": "bc34a145b2bed916"
   },
   "status": "conjectured",
-  "version": 2
+  "version": 3
  },
  "transport.odd-lorentzian-dimension-exactly-one-real": {
   "assumes": [],

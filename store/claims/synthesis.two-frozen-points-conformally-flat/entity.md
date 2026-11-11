@@ -1,7 +1,7 @@
 ---
 id: synthesis.two-frozen-points-conformally-flat
 kind: claim
-version: 5
+version: 6
 title: 'Two frozen points of one norm on conformally flat fields'
 status: proved
 region: synthesis
@@ -33,6 +33,14 @@ credit:
   role: 'proof''s citation of the frozen-point Fact taken from its scale-g display, after that Fact''s gauge-field sentence became a remark (second-round decisions)'
   version: 5
   source: maintainer pass 2026-11-07 (decisions, second round)
+- name: Claude Fable 5.2
+  role: 'scope note: the statement is for the normal tractor connection'
+  version: 6
+  source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+amendments:
+- version: 6
+  kind: restatement
+  defect: 'the application to the towers did not say that it is for the normal tractor connection, which under (FS) is not the connection that carries the frozen point on matter regions'
 review: draft
 derivations:
 - name: main
@@ -55,6 +63,10 @@ lineage:
   motivated_by:
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_2026_11_11:
+    by: maintainer-2026-11-11
+    date: '2026-11-11'
+    note: 'A scope note is added to the formal level, pointing to synthesis.frozen-point-unique-for-the-field-space-connection; the statement and its proof are unchanged.'
   maintainer_pass_decisions_2:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -99,6 +111,8 @@ Let $U$ be a connected region of conformal Minkowski space with the flat scale $
 \item[(iv)] \emph{(Stationarity.)} The tractor curvature $F$ vanishes on $U$, so a sum over towers $\sum_r Q(I_r)^{-1}\int \epsilon(I_r, V_r, F, F)$ of functionals in the three-argument form, with one shared connection, is stationary at this configuration under variations of the connection and of every $(I_r, V_r)$, whatever the frozen points are.
 \end{enumerate}
 Consequently, on a region where the Weyl part of the field strength vanishes, and in particular on the de Sitter vacuum, the frozen-point geometry, the three-argument functional and the no-fluctuation proposition allow the towers to couple to different frozen points of one norm. The metric clause of Premise \claimref{dark-matter.p1-single-frozen-point} is there an independent choice: it fixes the invariant by requiring $I_B = \pm I_A$.
+
+\emph{Note (scope, 2026-11-11).} The statement is for the normal tractor connection. For the connection $A_{\rho}$ of Premise \claimref{synthesis.field-space-premise-parallel-frozen-point} (FS) the field strength is $-(\mathcal{R} - \tfrac{\Lambda}{3}\mathrm{id})$, which vanishes on the de Sitter field at that $\Lambda$ and on no other isotropic field with matter, so for that connection the independent choice exists only on a component that is de Sitter at that $\Lambda$ (Theorem \claimref{synthesis.frozen-point-unique-for-the-field-space-connection}, clauses (iii) and (iv)).
 
 ## technical
 P1 says that every tower couples to one frozen point and so to one metric. This result tests whether that follows from the frozen-point geometry and the action. On a region where the Weyl part of the field strength vanishes (conformally flat derived metric), which includes the de Sitter vacuum, the tractor connection is flat and every constant tractor is parallel. Any two parallel tractors of the same norm give two Einstein metrics with the same cosmological constant in one conformal class, not related by a constant rescaling. The ambient group cannot carry one into the other while keeping the pair: the pair has one gauge invariant, their inner product. The configuration is stationary for a sum of the functional over towers, since every term of its first variation carries a factor of the vanishing curvature. So on the vacuum, the premises other than P1 allow towers with different frozen points of one norm, and the metric clause of P1 is an independent choice there. Where the Weyl tensor has no kernel vector, parallel tractors are multiples of one, and the question does not arise.

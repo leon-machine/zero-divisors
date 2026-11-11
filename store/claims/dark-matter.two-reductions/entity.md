@@ -23,7 +23,7 @@ derivations:
   uses:
   - dark-matter.imported-induced-equations-hypersurface@3
   assumes:
-  - dark-matter.d-democracy-total-mass@2
+  - dark-matter.d-democracy-total-mass@3
   proof: proof-main.tex
 checked_by:
 - kind: proof

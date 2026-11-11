@@ -40,7 +40,7 @@ derivations:
   - dark-matter.stored-asymmetry-charge-not-number@10
   - standard-model.hyp-s-slot-statistics@10
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.p2-indifference@2
   - synthesis.common-ceiling-coupling-premise@1
   proof: proof-main.tex

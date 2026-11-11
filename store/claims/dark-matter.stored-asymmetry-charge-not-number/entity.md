@@ -40,7 +40,7 @@ derivations:
   - dark-matter.parallel-boundary-mode-spaces-one-wall@5
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   - dark-matter.p5-boundary-modes-hold-entropy-not@1
   proof: proof-main.tex
 checked_by:

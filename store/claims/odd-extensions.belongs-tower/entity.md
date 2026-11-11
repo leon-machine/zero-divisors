@@ -26,7 +26,7 @@ derivations:
   - odd-extensions.imported-frozen-point@8
   - odd-extensions.imported-copy-theorem-soldered-residue@5
   assumes:
-  - dark-matter.p1-single-frozen-point@2
+  - dark-matter.p1-single-frozen-point@3
   proof: proof-main.tex
 checked_by:
 - kind: check

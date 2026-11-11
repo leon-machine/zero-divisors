@@ -1,0 +1,18 @@
+functions:
+  check_pointwise_action_of_the_field_space_connection:
+    kind: sampled
+    clauses: ["(i)"]
+    omits: "at four values of rho (zero included) and one rational Omega, frame vector and tractor: the bracket (u^A)x(u^B) = 2 rho A^B, A_rho x I_rho = 0, the action on the added plane and on a spacetime vector, the norms of I_rho and u and the pairing <X, c I_rho> = c; the identities for all elements are the proof's"
+  check_field_strength_and_kernels_on_de_sitter_fluid_and_schwarzschild_fields:
+    kind: sampled
+    clauses: ["(i)", "(iii)", "(iv)"]
+    omits: "the field strength of A_rho computed from jets of the field on the de Sitter field (at its own and at another rho), six isotropic fluid instants built from the two Friedmann equations (w = 0, 1/3, 1, -1/3, -1, -2/3) and one Schwarzschild point in Kerr-Schild form, against -(calR - 2 rho id); kernel dimensions on spacetime vectors and on all six directions; F = -Weyl on Schwarzschild at rho = 0. The general identity, the statement for every w and the Einstein case beyond Schwarzschild are the proof's; the Friedmann equations are entered as hypotheses"
+  check_torsion_counter_model:
+    kind: exact
+    clauses: ["(v)"]
+    omits: "the pointwise counter-model on one dust instant; no field with that torsion is exhibited, and the sufficient condition of (v) is argued, not checked"
+  check_reversed_signature_reading:
+    kind: sampled
+    clauses: ["Remark"]
+    omits: "one rational configuration: the sign of a bivector's action in the reversed form, the two renormalisations of the null pair, and the conjugation by I4; that the two towers share a covariant derivative is a hypothesis, not checked"
+untouched_premises: {}
