@@ -116,7 +116,7 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // written by tp.site when the site is built: deposited result numbers mapped to results
 const LAB = /*LAB_DATA*/{"preds": [], "refs": {}}/*END_LAB_DATA*/;
 function openInLab(hash){ try { if (window.parent && window.parent !== window) { window.parent.location.hash = hash; return; } } catch (e) {}
-  window.open('transport_lab.html' + hash, '_blank', 'noopener'); }
+  window.open('index.html' + hash, '_blank', 'noopener'); }
 document.addEventListener('click', e => { const a = e.target.closest('[data-lab]'); if (!a) return; e.preventDefault(); openInLab('#' + a.dataset.lab); });
 
 /* ---------- the timeline, in viewport heights ---------- */

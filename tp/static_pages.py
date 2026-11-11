@@ -1,7 +1,7 @@
 """Pages of the Physics Graph that need no JavaScript: for AI agents reading the web, for search
 engines, and for anyone whose browser cannot run the main page.
 
-Written by `python -m tp.site` beside transport_lab.html (and left out of git and of the preview
+Written by `python -m tp.site` beside index.html (and left out of git and of the preview
 artifact's file list; the public host serves them):
 
   results/<id>.html     one page per result: title, status, the one-line, plain and formal
@@ -126,7 +126,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         if os.path.exists(os.path.join(site, f)):
             os.remove(os.path.join(site, f))
     base = site_url or ""
-    graph = (site_url or "../transport_lab.html") if site_url else "../transport_lab.html"
+    graph = site_url or "../index.html"
     ents = {x: e for x, e in st.entities.items() if e.kind != "note"}
     titles = {x: _display_title(e.title) or x for x, e in ents.items()}
     subjects = {s["id"]: s for s in st.subjects}
@@ -203,7 +203,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         sec.append(f'<h2 id="{H(s["id"])}">{H(s.get("title", s["id"]))}</h2>'
                    f'<p class="meta">{H(s.get("about", ""))} · <a href="../subjects/{H(s["id"])}.md">'
                    "the whole subject in one file</a></p>" + _list(ids, titles))
-    body = ('<p class="nav"><a href="../transport_lab.html">The Physics Graph</a> · '
+    body = ('<p class="nav"><a href="../index.html">The Physics Graph</a> · '
             '<a href="../llms.txt">For AI agents</a></p><h1>Every result, by subject</h1>'
             f"<p>{len(ents)} results of the Transport Papers, each with its statement, proof, premises "
             "and checks.</p>" + "".join(sec))

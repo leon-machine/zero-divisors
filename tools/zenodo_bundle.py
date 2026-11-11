@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 Leon Butler. Released under the MIT License; see LICENSE-CODE.txt.
-"""Build the Zenodo deposit bundle of the Transport Lab store.
+"""Build the Zenodo deposit bundle of the Physics Graph.
 
   python3 tools/zenodo_bundle.py [--out DIR] [--date YYYY-MM-DD]
 
@@ -196,7 +196,7 @@ def _readme(date, commit, counts, papers, disclaimer):
     total = sum(st.values())
     status = ", ".join(f"{v} {k}" for k, v in sorted(st.items(), key=lambda x: -x[1]))
     rows = "\n".join(f"| {k} | {v} | https://doi.org/{d} |" for k, d, v in papers)
-    return f"""# Zero Divisors: the Transport Lab store ({date})
+    return f"""# Zero Divisors: Physics Graph ({date})
 
 A snapshot of the claim store behind the Transport Papers series (T0 to T17, T14a to T14c and
 the companion notes) and the research that has continued from it. Every result is stored as
@@ -270,7 +270,7 @@ Text and data: CC BY 4.0 (LICENSE-CONTENT.txt). Code: MIT (LICENSE-CODE.txt).
 def _citation(date, commit):
     return f"""cff-version: 1.2.0
 message: "If you use this store, please cite it as below."
-title: "Zero Divisors: the Transport Lab store"
+title: "Zero Divisors: Physics Graph"
 type: dataset
 authors:
   - family-names: Butler
