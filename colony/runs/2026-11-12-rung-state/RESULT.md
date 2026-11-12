@@ -48,3 +48,27 @@ The review's own candidates, not stored as results: records of unbounded length 
 disjoint in the limit; interference present at every finite stage); tail classes of the infinite tower; the
 descent's corner read-out (a fixed branch, not a weighted one); a pseudo-random law seeded by stored data.
 None selects with the weights of (P).
+
+# Third result: the infinite tower, and the reviews of it (added later the same day)
+
+Third pre-registration: PREREGISTRATION-3.md (commit c4e2381, before computing). Stored as
+synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit and
+synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not.
+
+Reviews by Claude Opus 5.5: verify/R2-opus.md (second review), verify/R3-opus.md (a pass on the fixes, then a
+confirmation pass). Final state: all four claims READY, no problems outstanding.
+
+What the reviews found in this round, by kind:
+- Wrong mathematics, three: the c = 0 sentence of the records claim (off by one; then, after the fix, still missing
+  the condition that every pair the element involves is coupled); the group-dependence sentence added to the
+  rung-state claim after the first review.
+- Overstated: the first draft of the strings claim said there is no reading law inside the algebra. False. The
+  lemma excludes only rules whose outcome is the value of an element; a rule declaring the outcome by the sign of
+  the value of one element selects with the weights of (P) to within 2^-n. The claim was restated and renamed.
+- Wording corrections: about two dozen across the four claims and the summary given to the maintainer.
+- Weak or tautological checks: five, tightened or described as such in coverage.
+- Pre-registration: two items marked as tests were not tests (2c, conceded by the author; 1a, found by the review).
+
+What changed in the answer: a deterministic rule that selects outcomes with the right weights can be written in the
+framework's terms. It needs an actual, typical string of rung values independent of the system, the rule as a law
+(the state enters it, as in pilot-wave theories), and an order of reading. None is stored.

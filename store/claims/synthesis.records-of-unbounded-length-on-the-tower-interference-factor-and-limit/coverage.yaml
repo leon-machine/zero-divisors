@@ -13,11 +13,12 @@ functions:
     kind: sampled
     clauses:
     - (ii)
+    - (iii)
     omits: 'N = 1, 2, 3 and c in {3/5, 0}; the two counterexamples at c = 0, N = 1 to a looser statement of clause (iii); self-adjointness is tested on a subset of pairs of basis vectors, evenness and the idempotent on all; general N is the proof'
   check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair:
     kind: sampled
     clauses:
     - (iv)
-    omits: 'The one-particle operators of both branch vectors computed from the vectors for N = 1, 2, 3 at three values of c: projections, and squared Hilbert-Schmidt difference 2 + 2 s^2 N; that the branch states are quasi-free (Wick rule) is not checked here; the divergence of the sum and the disjointness are the proof and the imported Fact; clause (iii), a limit, is the proof and is not computed'
+    omits: 'The one-particle operators of both branch vectors computed from the vectors for N = 1, 2, 3 at three values of c: projections, and squared Hilbert-Schmidt difference 2 + 2 s^2 N; that the branch states are quasi-free (Wick rule) is not checked here; the divergence of the sum and the disjointness are the proof and the imported Fact; the limit of clause (iii) is the proof and is not computed (its two c = 0, N = 1 counterexamples are in the previous function)'
 untouched_premises:
   tower.algebraic-limit-even-charge: "supplies the fact that every element of the algebraic tower involves finitely many generators, used in the proof of clause (iii), a limit that no finite computation touches"

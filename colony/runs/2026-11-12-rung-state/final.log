@@ -361,7 +361,7 @@ I510  store
       contradiction scan: 43 quantities, 432 symbol = value occurrences compared (112 left out as predictions, fits or hypotheticals); 0 drift, 0 disagreement(s), 0 decimal, 0 sign (7 C10 patterns; hits none)
 I502  store
       AI judge not configured: statement-vs-check, level overclaiming and citation checks were skipped
-layer 4: ran 4 entities in 2 process(es), replayed 2371 unchanged from the cache (--full to rerun all)
+layer 4: ran 0 entities in 2 process(es), replayed 2375 unchanged from the cache (--full to rerun all)
 
 summary: 0 error(s), 0 warning(s), 1174 information finding(s)
   I126      1  coverage records, store-wide

@@ -157,3 +157,48 @@ Claims: 1 = state-of-a-new-rung, 2 = selector-candidates, 3 = records-of-unbound
 - **Claim 2: READY.**
 - **Claim 3: NOT READY.** P1: the corrected c = 0 sentence is still false (counterexample on_{a_1}, N = 1). P6 is minor.
 - **Claim 4: NOT READY.** P2 to P5 misstate the dividing line that is the claim's content (the comparison is a threshold on one element's value), and the Reading's "any of the four" is false for G_4 alone. P5b is notation.
+
+---
+
+## Confirmation pass (commit 8712d68, diff HEAD~1..HEAD on store/claims)
+
+All changed sentences were read at every level, along with proof-main.tex, check.py and coverage.yaml of claims 1, 3 and 4.
+- Own computations: `work-R3/conf_l2.py` (log `conf_l2.log`).
+- One perturbation of the new check lines: `work-R3/pert/conf_C3_pair1_filled/` (log `conf_perturb.log`). It was caught.
+- All store checks still pass: claim 1 6/6, claim 2 5/5, claim 3 4/4, claim 4 7/7.
+
+**P1 (claim 3 (iii)): applied correctly.**
+- Formal statement: correct. It now has both conditions (every involved pair is coupled; one coupled pair is not involved), and "in particular N > p + 1".
+- The two N = 1 counterexamples are right: O_1 gives 24/25 against 0, and on_{a_1} gives 0 against 16/25 (own Fock).
+- The proof's added explanation (Ψ_N fills only pairs j < N) is correct.
+- New check lines: they test what they say. Changing Ψ_1 to fill pair 1 makes the check fail.
+
+**P6 (claim 3): applied correctly.** "Not uniform over elements of norm at most 1, that is not in norm", with ‖O_N‖ ≤ 1 from O_N² idempotent.
+
+**P2 and P3 (claim 4 (iv), (v), technical level, proof): applied correctly.**
+- The rule is now the sign of the value of Y_n − on_1.
+- "By (iv) it is not the value of any one element" now follows from the outcome being two-valued and not constant in ψ (for each fixed s, the outcome is 1[y(s) < a²], which changes with a).
+- The dividing line is stated as value against sign of a value.
+
+**P4 (claim 4 lay): applied correctly.**
+
+**P5 (claim 4 Reading): applied correctly.** "In any of the four cases of (i) (G_1; G_2; G_3; G_1 with G_4)" is true.
+
+**P5b (rung numbering in claim 4): applied correctly.**
+- The setting (H_1, H_2, …), (iii) (rungs 1, 2), (v) (system on rungs 1, 2, data on further rungs, on_1) and the one-liner (on_1) agree.
+- The proof notes that the script numbers from 0. No stale on_0 or v_0 remains in claim 4's text.
+- Recomputed with the system on rungs 1, 2 and data on rungs 3 to 7: the frequency of [value of Y − on_1 < 0] equals ⌈2^n a²⌉/2^n for a = 3/5 and 5/13, n = 5.
+
+**P7 (claim 1 (ii)): applied correctly.**
+- At ℓ = 0, σ_e alone gives uniqueness among states. Invariance kills the values on e and fe, and reality kills the value on f because f† = −f. Checked by hand; the new check lines test exactly these sign actions.
+- "Ω(e)" is corrected.
+- Technical level, "for one or more old rungs under that of e alone": the proof shows ℓ = 1. I computed ℓ = 2 as well: ½(1 + e_1 f) gives a positive state (exact Gram matrix), σ_e-invariant, equal to the trace on A_2, with on-weight ½ and value 1 on e_1 f. The general ℓ ≥ 1 case is the same argument.
+- Lay level, "fails in general": correct.
+
+**Titles, one-liners and lay levels of all four claims, re-read: nothing says more than its proof.** Two optional points:
+- Claim 4, technical level: "A rule that declares the outcome by the sign of a value does select" reads as if it covered every such rule. Optional: "Such a rule can select: …".
+- Claim 3, coverage.yaml: the two clause (iii) counterexamples live in `check_interference_is_full_…`, whose clauses list only (ii). The (iv) entry still says "clause (iii), a limit, … is not computed". Optional: add (iii) to that function's clauses.
+
+**New errors introduced: none found.**
+
+**Verdicts after the confirmation pass:** claim 1 READY; claim 2 READY; claim 3 READY; claim 4 READY.
