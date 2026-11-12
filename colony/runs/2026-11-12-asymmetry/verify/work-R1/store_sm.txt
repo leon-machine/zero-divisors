@@ -1,0 +1,93 @@
+##### standard-model.hyp-s-slot-statistics | version 10 | status proved | kind claim
+TITLE: Hypothesis (S): slot statistics, derived from the slot-module hypothesis
+FORMAL: \emph{Hypothesis (S), slot statistics.} Under the slot-module hypothesis (Premise \claimref{standard-model.slot-module-hypothesis}: the composite space $V = F \otimes \Lambda^{\bullet}W$, a graded $U(2)$ slot module tensored with one pair system, with hypercharge from the centre of $S(U(2) \times U(3))$, the slot module generated from a unique vacuum by one doublet of slot creation operators, the chirality a CPT halving that commutes with the Pati-Salam algebra of the chain once the slots are fermionic, and slot and pair operators one Clifford system):
+\begin{enumerate}
+\item[(i)] \emph{(Odd slots.)} If the slot quanta are tower elements of one tower parity $\pi$ whose tower grading $(-1)^{\pi n + k}$ is the chirality, then $\pi = 1$.
+\item[(ii)] \emph{(Slot content.)} $F \cong \Lambda^{\bullet}\C^{2}$ as a graded $U(2)$-module, so the composite's state space is the Fock space $\Lambda^{\bullet}\C^{2} \otimes \Lambda^{\bullet}W = \Lambda^{\bullet}(\C^{2} \oplus W)$ of five modes, two slot modes and three pair modes, a state being a set of occupied slots and occupied pairs, on which $(A, B) \in U(2) \times U(3)$ acts as $\Lambda^{\bullet}(A \oplus B)$; its particle half is $(1,1)_{0} \oplus (1,\bar{3})_{-2/3} \oplus (2,3)_{1/6} \oplus (2,1)_{-1/2} \oplus (1,1)_{1} \oplus (1,\bar{3})_{1/3}$.
+\item[(iii)] \emph{(Chirality.)} As in Fact \claimref{standard-model.imported-pair-systems-two-chirality-halves} for the three-mode Fock space $\Lambda^{\bullet}W$, the chirality of a state is the parity of its total mode number.
+\item[(iv)] \emph{(Exclusion statistics.)} Every $U(2)$-equivariant slot creation map $a^{\dagger} : \C^{2} \otimes F_{n} \to F_{n+1}$ satisfies $a^{\dagger}(u)a^{\dagger}(u') = -a^{\dagger}(u')a^{\dagger}(u)$ for all $u, u' \in \C^{2}$; in particular $a^{\dagger}(u)^{2} = 0$.
+\item[(v)] \emph{(One Clifford system.)} The slots are fermionic modes on the same footing as the pairs: the two slot modes and the three pair modes satisfy the canonical anticommutation relations as one system of five modes, so that, by Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov}, their Majorana combinations generate $\Cl(10)$ acting on $\Lambda^{\bullet}\C^{5}$, its spinor module, whose parity grading is that module's chirality.
+\end{enumerate}
+Clauses (ii) and (iv) are Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}(3) under the premise's generation clause and CPT halving, with no anomaly condition; (v) is the premise's clause (f), applied once (ii) has made the slot module fermionic; (iii) follows from anomaly freedom of the particle half, the consistency condition of Fact \claimref{standard-model.imported-anomaly-coefficients}, through Theorem \claimref{synthesis.cpt-closure-forces-slot-module-and-chirality}(4), together with the premise's requirement that the chirality commute with the Pati-Salam algebra, whose two-slot creation operator and its adjoint fix the neutral-singlet line; (i) compares (iii) with a tower grading. Anomaly freedom is used as that consistency condition, not as a clause of the premise.
+
+\emph{Note (the slot operators of (v)).} In clause (f) of the premise, version 5, the five-mode system is formed with the Klein-twisted slot operators $\tilde a_{i} = a_{i}(-1)^{k}$ (Theorem \claimref{synthesis.joint-clifford-clause-is-a-klein-convention-on-the-composite-space}); the untwisted $a_{i}$ commute with the pair operators. The slot modes of (v) and their Majoranas are those of the twisted operators. Nothing else here depends on the choice: the Pati-Salam bivectors, the grading and the two-slot operator $a^{\dagger}_{1}a^{\dagger}_{2} = \tilde a^{\dagger}_{1}\tilde a^{\dagger}_{2}$ are the same in both conventions.
+PROOFS: ['main']
+
+##### standard-model.under-s-composites-state-space-spinor | version 6 | status proved | kind claim
+TITLE: Under (S): the composite's state space is the $\mathrm{Spin}(10)$ spinor
+FORMAL: Assume Hypothesis (S). Let $S(U(2) \times U(3))$ act on $\Lambda^{\bullet}(\C^{2} \oplus \C^{3})$ through $\Lambda^{\bullet}(A \oplus B)$, so that on the component $\Lambda^{j}\C^{2} \otimes \Lambda^{k}\C^{3}$ the abelian factor $\lambda$ acts by $\lambda^{3j - 2k}$. Then:
+\begin{enumerate}
+\item The one-generation spectrum of Theorem \claimref{standard-model.hypercharge-global-form-pair-counting-consistency},
+\[
+Q \oplus L \oplus u^{c} \oplus d^{c} \oplus e^{c} \oplus \nu^{c}
+\;=\; (2,3)_{1/6} \oplus (2,1)_{-1/2} \oplus (1,\bar{3})_{-2/3} \oplus (1,\bar{3})_{1/3} \oplus (1,1)_{1} \oplus (1,1)_{0},
+\]
+is exactly the even part $\Lambda^{\mathrm{even}}(\C^{2} \oplus \C^{3})$, sixteen-dimensional, with $\nu^{c}$, $u^{c}$, $Q$, $L$, $e^{c}$, $d^{c}$ at $(j, k) = (0,0), (0,2), (1,1), (1,3), (2,0), (2,2)$; and the odd part $\Lambda^{\mathrm{odd}}(\C^{2} \oplus \C^{3})$ is its dual, the antiparticles, with the doublet of the empty conformal spinor (the empty-twistor doublet) $(2,1)_{1/2}$ at $(1,0)$. The mass bracket's slot factor $\Lambda^{2}\C^{2}$, $(1,1)_{1}$, is the even component $(2,0)$, the same representation as $e^{c}$.
+\item The five-mode Fock space $\Lambda^{\bullet}(\C^{2} \oplus \C^{3}) = \Lambda^{\bullet}\C^{5}$ is the spinor module of $\Cl(10)$, its two parities are the two half-spinor representations of $\mathrm{Spin}(10)$, and the automorphisms of the five-mode state space's canonical anticommutation relations induced by orthogonal maps of its ten Majorana generators form $O(10)$, implemented on the Fock space by $\mathrm{Pin}(10)$, with the connected part $SO(10)$ implemented by $\mathrm{Spin}(10)$ (Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov}). The derived generation is therefore the half-spinor $16$ of $\mathrm{Spin}(10)$ restricted to $S(U(2) \times U(3))$, with the slots of the conformal spinors as two of the five modes and the pairs as the other three; the automorphisms preserving in addition the mode number form $U(5)$, and those preserving the slot-pair split as well form $U(2) \times U(3)$, of which Theorem \claimref{standard-model.global-form-quotient-determined}'s group is the determinant-one part. (The number-preserving subgroup of $\mathrm{Spin}(10)$ is a double cover of $U(5)$ acting as $\Lambda^{\bullet} \otimes \det^{-1/2}$, the "determinant phase" of Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov}; the action $\Lambda^{\bullet}(A \oplus B)$ declared above is that of $U(2) \times U(3) \subset SO(10)$, and the two agree on the determinant-one subgroup, where every hypercharge of this paper is computed.)
+\item Among the abelian generators of the split-and-number-preserving algebra, acting on the component $(j,k)$ by $\alpha j + \beta k$ with $\alpha, \beta$ real (hypercharge being $(\alpha, \beta) = (\tfrac12, -\tfrac13)$, the pair $(3,-2)$ divided by six):
+\begin{enumerate}
+\item[(a)] in the action $\Lambda^{\bullet}(A \oplus B)$ declared above, the $[SU(3)]^{2}U(1)$, $[SU(2)]^{2}U(1)$ and gravitational sums of Fact \claimref{standard-model.imported-anomaly-coefficients} over the derived generation are $2(2\alpha + 3\beta)$, $2(2\alpha + 3\beta)$ and $8(2\alpha + 3\beta)$, and the cubic sum is a cubic form in $(\alpha, \beta)$ vanishing at $(3,-2)$; so the three linear conditions hold if and only if the generator is a multiple of hypercharge, the total mode number $j + k$ having sums $(10, 10, 40, 400)$ and $j - k$ having $(-2, -2, -8, -32)$;
+\item[(b)] in the action the state space carries, that of $\mathrm{Spin}(10)$ through $\Lambda^{\bullet} \otimes \det^{-1/2}$ in (2), the generator acts by $\alpha j + \beta k - \tfrac12(2\alpha + 3\beta)$, and all four sums, together with the mixed sums $Y^{2}X$ and $YX^{2}$ with hypercharge, vanish for every $(\alpha, \beta)$.
+\end{enumerate}
+The thirteenth generator of the five-mode state space's automorphism algebra is therefore anomaly-free in the action the generation carries. It is
+\[
+X \;=\; j + k - \tfrac52 \;=\; 2Y - \tfrac52\,(B - L), \qquad B - L \;:=\; 1 - \tfrac23\,k,
+\]
+the pair-number form of the operator $B - L$ of Fact \claimref{families.doublet-direction-module-georgi-jarlskog-clebsch}, and it takes the values $-\tfrac52$ on $\nu^{c}$, $-\tfrac12$ on $Q$, $u^{c}$, $e^{c}$ and $\tfrac32$ on $L$, $d^{c}$: the $U(1)_{X}$ of $\mathrm{Spin}(10)$. The automorphism rule of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite}, read with anomaly cancellation, returns thirteen generators. The thirteenth is broken by the right-handed neutrino's Majorana bilinear $\nu^{c}\nu^{c}$, which carries $X = -5$ and $B - L = 2$ (Proposition \claimref{standard-model.majorana-element}), and the twelve are what survives below that scale.
+\end{enumerate}
+Without (S) the first statement is a theorem about a spectrum and an exterior algebra that happen to coincide, with the exterior algebra an object the paper never built; the second is Fact \claimref{standard-model.imported-fock-representation-clifford-algebra-bogoliubov} instantiated and is not available; the third is a computation on the table of components and is not needed.
+PROOFS: ['main']
+
+##### standard-model.proton-decay-only-through-slot-pair | version 5 | status proved | kind claim
+TITLE: Proton decay only through the slot-pair mixing generators
+FORMAL: Under Hypothesis (S), write $n_{B}$ and $n_{L}$ for baryon and lepton number. On the sixteen
+\[
+n_{B} \;=\; \tfrac14\bigl((B - L) + \chi\bigr), \qquad n_{L} \;=\; \tfrac14\bigl(\chi - 3\,(B - L)\bigr), \qquad 3n_{B} + n_{L} \;=\; \chi,
+\]
+reproducing every species' baryon and lepton number. The $21$ generators of Proposition \claimref{standard-model.automorphisms-preserve-slot-pair-split-are} commute with $\chi$, and the $24$ slot-pair mixing generators anticommute with it. The decay $p \to e^{+}\pi^{0}$ has $\Delta(B - L) = 0$ and $\Delta(3n_{B} + n_{L}) = -4$, so it is mediated only by the mixing generators, whose gauge bosons are massive at $M_{U}$.
+PROOFS: ['main']
+
+##### standard-model.automorphisms-preserve-slot-pair-split-are | version 7 | status proved | kind claim
+TITLE: The automorphisms that preserve the slot/pair split are Pati-Salam
+FORMAL: Under Hypothesis (S), the bivectors $\tfrac12\gamma_{m}\gamma_{n}$ of the ten that preserve the split of the ten Majoranas into four slot and six pair generators are $6 + 15 = 21$ of the $45$. They close under the commutator and form $\su(2)_{L} \oplus \su(2)_{R} \oplus \su(4)$, with
+\[
+\su(2)_{L} = \operatorname{span}\bigl\{v_{4}w_{5},\ v_{5}w_{4},\ \tfrac12(N_{4} - N_{5})\bigr\}, \qquad
+\su(2)_{R} = \operatorname{span}\bigl\{v_{4}v_{5},\ w_{5}w_{4},\ \tfrac12(N_{4} + N_{5} - 1)\bigr\},
+\]
+and $\su(4)$ the fifteen pair bivectors, which contain $\su(3)$ and $B - L$. The weak $\su(2)$ of Theorem \claimref{standard-model.gauge-algebra-minimal-massive-composite} is $\su(2)_{L}$, the slot mixing, and
+\[
+Y \;=\; T_{3R} + \tfrac12\,(B - L)
+\]
+exactly, with $T_{3R} = \tfrac12(N_{4} + N_{5} - 1)$. The other $24$ bivectors mix slots with pairs. On the sixteen, the commutant of the $21$ is spanned by $1$ and the rung parity $\chi$ ($+1$ on the slot-doublet states, $-1$ on the slot-singlet states). Hence the automorphisms of the five-mode state space induced by orthogonal maps of the ten that preserve the slot/pair split, but not the mode number, form $\mathrm{Spin}(4) \times \mathrm{Spin}(6)$, the Pati-Salam group, the stabiliser of the rung parity; preserving the mode number as well gives the $U(2) \times U(3)$ of Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(2).
+PROOFS: ['main']
+
+##### standard-model.majorana-element | version 7 | status proved | kind claim
+TITLE: The Majorana element is the $(10,1,3)$
+FORMAL: Under Hypothesis (S), let $T = v_{1}v_{2}v_{3}v_{4}v_{5}$, the product of the five creation operators, a grade-five element of the Clifford algebra of the ten. Then:
+\begin{enumerate}
+\item[(1)] $T$ maps $\nu^{c}$, the empty state, to the full state and annihilates every other state, so the form $B(\psi, T\varphi)$ of Lemma \claimref{standard-model.invariant-pairing-five-modes} on the sixteen is the $\nu^{c}\nu^{c}$ entry alone: the right-handed neutrino's Majorana mass;
+\item[(2)] $T$ commutes with $\su(3)$, $\su(2)_{L}$ and $Y$, and $[B - L, T] = -2T$; in the compact Pati-Salam algebra, the real span of the $21$, the subalgebra fixing $T$ is twelve-dimensional, exactly $\su(3) \oplus \su(2)_{L} \oplus \uu(1)_{Y}$;
+\item[(3)] the orbit of $T$ under the $21$ spans thirty dimensions, on which $\su(2)_{L}$ acts trivially, and $T$ is the highest weight of an $\su(2)_{R}$ triplet: the orbit is the $(10,1,3)$.
+\end{enumerate}
+So a vev along $T$ breaks Pati-Salam to the Standard Model algebra and gives $\nu^{c}$ its Majorana mass at the same scale. It also breaks the thirteenth generator of Proposition \claimref{standard-model.under-s-composites-state-space-spinor}(3), which lies in $\su(2)_{R} \oplus \su(4)$ as $X = 2T_{3R} - \tfrac32(B - L)$.
+PROOFS: ['main']
+
+##### standard-model.bidoublet-complex | version 11 | status proved | kind claim
+TITLE: A second doublet coupling is needed; the complex bidoublet supplies it
+FORMAL: Under Hypothesis (S), a real vector of a rung plane, $x\,\gamma_{6} + y\,\gamma_{7}$ with $x$ and $y$ real, equals $a\,v_{4} + b\,w_{4}$ with $b = \bar{a}$, so $|a| = |b|$. By Corollary \claimref{standard-model.one-vev-vector-relations-breaking-pattern}, with the up-type masses read through the conjugate $c^{*}$, one rung vector $c = a\,v_{4} + b\,w_{4}$, real or complex, gives $m_{u} = m_{d}$ at tree level. So $m_{t} \ne m_{b}$ needs a second independent doublet coupling, and a complex bidoublet, carrying two electroweak doublets, supplies one.
+PROOFS: ['main']
+
+##### standard-model.invariant-pairing-five-modes | version 5 | status proved | kind claim
+TITLE: The invariant pairing on five modes
+FORMAL: On $\Lambda^{\bullet}(W \oplus R_{2})$ define, in the occupation basis $e_{S}$, $S \subseteq \{1, \ldots, 5\}$,
+\[
+B(\psi, \varphi) \;=\; \sum_{S} (-1)^{|S|(|S|-1)/2}\,\varepsilon(S, S^{c})\,\psi_{S}\,\varphi_{S^{c}},
+\]
+$\varepsilon(S, S^{c})$ the sign of $e_{S} \wedge e_{S^{c}} = \varepsilon\, e_{12345}$. Then $B$ is nondegenerate, pairs each state with its complement only (even degree with odd, the $16$ with the $\overline{16}$), and is invariant under $\so(10)$: $B(X\psi, \varphi) + B(\psi, X\varphi) = 0$ for every bivector $X$ of the ten. In particular $B(\psi, \varphi) = 0$ for $\psi, \varphi$ both in the $16$: two sixteens have no invariant pairing without a vector between them.
+PROOFS: ['main']
+
+##### standard-model.imported-anomaly-coefficients | version 1 | status imported | kind claim
+TITLE: Imported: the anomaly coefficients
+FORMAL: For a gauge group with a $U(1)$ factor acting on left-handed Weyl fermions, with the $U(1)$ charges $Y$, the four anomaly-cancellation conditions are: $[SU(3)]^{2}U(1)$, the sum of $Y$ over the colour triplets and antitriplets (each weighted by its $SU(2)$ multiplicity) vanishes; $[SU(2)]^{2}U(1)$, the sum of $Y$ over the weak doublets (each weighted by its colour multiplicity) vanishes; $U(1)^{3}$, the sum of $Y^{3}$ over all Weyl fermions vanishes; and mixed gravitational, the sum of $Y$ over all Weyl fermions vanishes. A right-handed Weyl fermion of charge $Y$ enters the conditions as a left-handed one of charge $-Y$ in the conjugate representation. The four conditions are necessary for the consistency of the gauge theory, and a failure of any of them is not lifted by spontaneous breaking: an anomalous $U(1)$ cannot be gauged whether or not it is broken. \emph{Provenance:} \cite[\S 22.4]{WeinbergQFT2}.
+PROOFS: []
+
