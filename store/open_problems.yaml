@@ -5212,14 +5212,19 @@
   area: dark-matter
   kind: research
   difficulty: frontier
-  status: open
-  source: "T14 (the asymmetry stance) and T15 (leptogenesis suppressed); the register of the asymmetry, 1 November; the gap review of 10 November and Leon's decision of 10 November to register the question"
+  status: partial
+  source: "T14 (the asymmetry stance) and T15 (leptogenesis suppressed); the register of the asymmetry, 1 November; the gap review of 10 November and Leon's decision of 10 November to register the question; the four selection-rule results accepted 12 November and Leon's decisions of 12 November (the inherited charge named as $B - L$; the anomalous weak process and its equilibrium coefficient not imported, registered as an attack item; the problem kept unsettled)"
   statement: >-
     The series does not generate its matter asymmetry: the asymmetry per mode $\epsilon$ is a registered free
-    input, inherited as initial data of the descent, with its value taken from the measured baryon density.
-    Decide whether any dynamics the store holds could generate it, in which case the premise is refuted by its
-    own condition, or prove that none can, so that the inheritance is a theorem about the stored content and not
-    only a stance.
+    input, inherited as initial data of the descent. By the maintainer's decision of 12 November 2026 the
+    inherited charge $Q = \epsilon N$ is named as $B - L$, not baryon number: the measured baryon density fixes
+    the baryons per unit entropy, and the datum, $B - L$ per unit entropy, is related to it only through the
+    equilibrium coefficient of the anomalous weak process, which the store does not hold as a Fact. Decide
+    whether any dynamics the store holds could generate the $B - L$, in which case the premise is refuted by its
+    own condition, or prove from named premises that none can, so that the inheritance is a theorem about the
+    stored content and not only a stance. Exact conservation is not available for the purpose: for one family
+    every abelian charge other than hypercharge is changed by some stored term, so what can be proved is a
+    conditional inheritance of $B - L$ with bounds on the terms that change it, not a selection rule.
   why: >-
     $\epsilon$ is one of the two unexplained numbers of the descent, with $N$, and the dark-to-baryon count
     rests on its equality across this tower and the mirror. The stance is refuted by any in-framework
@@ -5234,26 +5239,66 @@
     registered free input, refuted if produced dynamically by an in-framework calculation, if computed from the
     transport structure or another premise, or if shown to be a function of another registered number
     (\claimref{synthesis.matter-asymmetry-registered-free-input}). It is a charge of the descent, not a thermal
-    number (\claimref{dark-matter.stored-asymmetry-charge-not-number}(i)). Channels the store has examined. (a)
-    Production after the descent through gravity from the visible plasma gives $1.8$ to $2.7 \times 10^{-15}$
-    mirror quanta per unit entropy at the ceiling reheating against the $8.7 \times 10^{-11}$ baryons per unit
-    entropy required, more than four orders too few; black holes are a sink of the charge, not a source
-    (\claimref{dark-matter.stored-asymmetry-charge-not-number}(ii)); the rate used there is an imported one. (b)
-    A constant pre-descent $\theta$-angle is excluded as the source by the neutron dipole bound, and the odd
-    towers carry no continuous $\theta$; an angle that relaxes or rolls is not excluded and not claimed
-    (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii)). (c) The heavy neutrinos of the
-    stored seesaw are the textbook mechanism, and had it operated it would have generated the asymmetry in this
-    tower alone. It is suppressed in three steps of different strength: the decay asymmetries vanish at leading
-    order by the democratic alignment (proved at leading order); the washout and the resonant degenerate pair
-    are avoided by Premise (R), that the descent reheats below the lower heavy scale (a premise;
-    \claimref{neutrino.r-descent-reheats-below-lower-heavy}); and the non-thermal injection by descent-populated
-    heavy states, of order $\delta^{2}\sin\varphi$ from one state and of order $\sin\varphi$ from the pair,
-    vanishes under the real-breaking assumption (a postulate; \claimref{neutrino.real-breaking-assumption})
+    number, and it is named as $B - L$: the stored statements had used the word charge for the residue label $r$
+    of the tower (what superselection is about), for the descent's $B - L$ and for baryon number, and these are
+    now kept apart (\claimref{dark-matter.stored-asymmetry-charge-not-number}(i), (ii)). Channels the store has
+    examined. (a) Production from the other tower after the descent, through gravity from the visible plasma
+    gives $1.8$ to $2.7 \times 10^{-15}$ mirror quanta per unit entropy at the ceiling reheating against the
+    $8.7 \times 10^{-11}$ baryons per unit entropy required, more than four orders too few; black holes are a
+    sink of the charge, not a source (\claimref{dark-matter.stored-asymmetry-charge-not-number}(ii)); the rate
+    used there is an imported one. (b) A constant pre-descent $\theta$-angle is excluded as the source by the
+    neutron dipole bound, and the odd towers carry no continuous $\theta$; an angle that relaxes or rolls is not
+    excluded and not claimed (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii)). (c) The
+    heavy neutrinos of the stored seesaw are the textbook mechanism, and had it operated it would have generated
+    the asymmetry in this tower alone. It is suppressed in three steps of different strength: the decay
+    asymmetries vanish at leading order by the democratic alignment (proved at leading order); the washout and
+    the resonant degenerate pair are avoided by Premise (R), that the descent reheats below the lower heavy
+    scale (a premise; \claimref{neutrino.r-descent-reheats-below-lower-heavy}); and the non-thermal injection by
+    descent-populated heavy states, of order $\delta^{2}\sin\varphi$ from one state and of order $\sin\varphi$
+    from the pair, vanishes under the real-breaking assumption (a postulate;
+    \claimref{neutrino.real-breaking-assumption})
     (\claimref{neutrino.leptogenesis-suppressed-alignment-reheating-premise-new}). So the stored content does
     contain a dynamics that generates an asymmetry when either premise fails, and the pair's asymmetry depends
-    on its split and widths, which are not computed. What is not stored: an enumeration of the baryon-number or
-    lepton-number violating channels of the stored chain with a bound on each, a statement on anomalous
-    electroweak processes after the descent, and any proof that the list (a) to (c) is complete.
+    on its split and widths, which are not computed. Established on 12 November 2026 (selection rules; no rate
+    and no thermal history). (d) The exchange of set and clear in every switch is an inner automorphism of the
+    algebra of finitely many switches, and no integer-valued state is invariant under it; an integer state that
+    is positive on the two tests of each switch puts every switch definitely on or off. So an orientation must
+    exist, and its sign is a label, proved for the algebra of the switches and not for the laws
+    (\claimref{synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state}). (e) On one
+    chirality every linear map normalising the Standard Model algebra fixes baryon number, and the flag
+    conjugate is realised antilinearly; entrywise conjugation of the quark matrices reverses the Jarlskog
+    invariant $J$. Argued, not proved: with $J \neq 0$ the orientation is a label only jointly with the sign of
+    $J$ or with the arrow of time, so the sign of the excess relative to $J$ and the arrow is not shown to be
+    initial data, and is of the kind a dynamics could fix; whether a stored dynamics does is not decided
+    (\claimref{synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog}). (f) For
+    one family, above the electroweak scale, the abelian charges commuting with the Standard Model algebra on
+    the sixteen form a six-dimensional space; the Dirac terms conserve the span of $Y$, $n_{B}$, $n_{L}$; the
+    Majorana element changes $B - L$ and $n_{L}$ by two and leaves $n_{B}$; the $24$ slot-pair generators change
+    $n_{B}$ and carry $B - L$; the mixed weak coefficient is $2$ on $n_{B}$ and $n_{L}$ and $0$ on $Y$ and $B -
+    L$. Only hypercharge survives every stored term
+    (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them}(i) to (v);
+    \claimref{synthesis.baryon-number-centraliser-in-the-five-mode-algebra}(i) to (iv)). (g) Hence exact
+    conservation by every stored term fails for each candidate charge, $n_{B}$, $n_{L}$ and $B - L$: the no-go
+    as first worded here, that no stored dynamics after the descent changes the charge, is false as a statement
+    of exact conservation. For baryon number the store already contains a dynamics that produces it after the
+    descent: the check of Computation \claimref{dark-tower-matter.mirrors-composition} uses the equilibrium of
+    the anomalous weak process, in which $n_{B} = c\,(B - L)$ with $c = \tfrac{28}{79}$ for one light doublet
+    and $\tfrac{8}{23}$ for two
+    (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them}(vi), conditional; the
+    process, its equilibrium and $c$ are literature cited from memory, not stored Facts, and by decision they
+    are not imported now). (h) The naming: the inherited charge is $B - L$, by the maintainer's decision, and
+    the registered premise is restated so (\claimref{synthesis.matter-asymmetry-registered-free-input}); $B - L$
+    is protected by Premise (R), with the Majorana element the named exception (argued; no rate computed). A
+    consequence the decision accepts: the mirror share $f_{2} = 1$ no longer follows from the copy theorem
+    alone, since the copy equates the two towers' $B - L$ and the mirror's ratio of baryon number to $B - L$ is
+    not shown to equal this tower's. What is not stored: a derivation or a sourced import of the anomalous weak
+    process and its equilibrium, and the number of light doublets; any rate (the Majorana element with and
+    without Premise (R), the $24$ slot-pair generators at the descent's temperature) and whether the weak
+    process equilibrates after the descent; a stated descent state for the purpose; the split and widths of the
+    heavy pair; anything beyond one family (no family index, no lepton flavour) or outside the mode algebra
+    (instantons of the larger groups at the unification scale, higher-dimension operators, the relaxing angle);
+    and so any proof that the list of channels is complete. The conditional theorem of the third attack item is
+    not yet written or proved.
   attack:
     - >-
       First computation: the split and widths of the degenerate heavy pair after the breaking, and from them the
@@ -5265,12 +5310,55 @@
       Enumerate the channels: every interaction of the stored chain that violates baryon or lepton number (the
       slot-pair proton channel of \claimref{standard-model.proton-decay-only-through-slot-pair}, the Majorana
       terms, anomalous electroweak processes) and for each either a proof that it produces no net asymmetry from
-      the descent's state or a bound. Say what the descent's state is assumed to be for the purpose.
+      the descent's state or a bound. Say what the descent's state is assumed to be for the purpose. For one
+      family the selection rules of this enumeration are now stored
+      (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them};
+      \claimref{synthesis.baryon-number-centraliser-in-the-five-mode-algebra}): the Majorana element breaks $B -
+      L$ and $n_{L}$, the $24$ slot-pair generators break $n_{B}$, and the anomalous weak process (not stored)
+      breaks $n_{B}$ and $n_{L}$. What remains of this item is the bound or the proof for each, items (b), (c)
+      and (a) below, and the statement of the descent's state.
     - >-
-      The no-go: prove from stated premises (CPT covariance, the flag as the one CP-violating datum, Premise
-      (R), real breaking) that no stored dynamics after the descent changes the charge per unit entropy, and
-      name which premises the proof uses, so that the inheritance becomes a theorem conditional on them. A proof
-      that needs the real-breaking assumption is still a result.
+      The conditional inheritance theorem for $B - L$ (the no-go, reworded: as a statement that no stored
+      dynamics changes the charge it is false, by (g) of what is known). State and prove: the total $B - L$
+      after the descent is changed by no stored term other than the Majorana element (the $24$ slot-pair
+      generators carry it and its mixed weak coefficient vanishes); under Premise (R) and a bound on the
+      non-thermal injection it is inherited; and baryon number is then the fraction $c$ of it. Name every
+      premise used. Those known to be needed: Premise (R); real breaking, or the bound of the first item in its
+      place; the naming decision; the anomalous weak process, its equilibrium after the descent and the value of
+      $c$ (item (a)); a stated descent state; and a completeness clause, at present one family and elements of
+      the mode algebra with one imported anomaly only. A proof that needs the real-breaking assumption is still
+      a result. This would be a partial settlement with named premises; CPT covariance and the flag as datum do
+      not constrain how the descent's datum is split between $B$ and $L$ and do not by themselves give it.
+    - >-
+      (a) The anomalous weak process: derive it from the stored content or source it as an imported Fact with a
+      checked reference (the violation of $B + L$ with $B - L$ kept; its equilibrium above the weak scale; the
+      coefficient $c = (8N_{f} + 4N_{H})/(22N_{f} + 13N_{H})$), decide whether it reaches equilibrium after the
+      descent (the reheating temperature against the weak scale), and fix the number of light doublets:
+      $\tfrac{28}{79}$ for one against $\tfrac{8}{23}$ for two. The stored check of Computation
+      \claimref{dark-tower-matter.mirrors-composition} uses one doublet, while the stored bidoublet
+      (\claimref{standard-model.bidoublet-complex}) needs two doublet couplings; the store should say which is
+      light. Until this is done the registered premise carries no number for $B - L$ per unit entropy.
+    - >-
+      (b) The Majorana element: compute the washout rate of $B - L$ through it, with Premise (R) and without,
+      and state the bound on the reheating temperature that keeps the washout below the inherited value. This
+      decides whether Premise (R) is needed for the inheritance or only sufficient.
+    - >-
+      (c) The $24$ slot-pair generators: a bound on the rate at which they change baryon number at the descent's
+      temperature, their bosons being massive at the unification scale, against the expansion rate. They carry
+      $B - L$, so this bears on baryon number and on the proton channel, not on the inherited datum.
+    - >-
+      (d) The mirror: with $B - L$ the inherited charge, the copy theorem equates the two towers' $B - L$, and
+      the mirror share $f_{2} = 1$, an equality of baryon number, needs in addition that the mirror's ratio of
+      baryon number to $B - L$ equals this tower's. That is not shown: $c$ is a linear-response number for a hot
+      plasma, and the stored computation finds the mirror's plasma degenerate from the moment it is seeded at
+      the floor. Compute the mirror's ratio over the stored interval of its temperature, or state the premise
+      under which the two ratios agree; until then $f_{2} = 1$ is conditional, and the stored results that state
+      it carry that condition.
+    - >-
+      (e) Completeness beyond one family: the commutant with three families (family rotations, lepton flavour),
+      the family-dependent terms, and the channels outside the mode algebra (instantons of the larger groups at
+      the unification scale, higher-dimension operators). Without it the list of channels has no completeness
+      argument.
     - >-
       The relaxing angle: decide whether a stored field makes the $\theta$-angle of the fifteenth refutation
       relax, with op.strong-cp; if one does, compute the asymmetry it sources.
@@ -5287,6 +5375,10 @@
     - neutrino.r-descent-reheats-below-lower-heavy
     - neutrino.real-breaking-assumption
     - refuted.a-pre-descent-term-sources-the-matter-asymmetry
+    - synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state
+    - synthesis.baryon-number-centraliser-in-the-five-mode-algebra
+    - synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them
+    - synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog
   added: '2026-11-10'
 
 - id: op.descent-state-and-spectrum
