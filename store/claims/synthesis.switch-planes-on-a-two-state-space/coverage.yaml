@@ -1,0 +1,17 @@
+functions:
+  check_scalar_square_planes_are_trace_free:
+    kind: sampled
+    clauses: ["(i) a plane of maps all of whose elements square to scalars is trace-free"]
+    omits: "pairs of integer matrices with entries in {-1, 0, 1}, the scalar-square condition tested on five elements of each plane; the general statement is the proof's Cayley-Hamilton argument"
+  check_form_on_trace_free_maps:
+    kind: sampled
+    clauses: ["(i) x^2 = -det x on trace-free maps, and the form alpha^2 + sigma^2 - tau^2 in the basis h, v + w, v - w"]
+    omits: "trace-free integer matrices with entries in [-3, 3]; the Gram matrix of the basis is computed exactly"
+  check_planes_by_signature_and_nilpotent_lines:
+    kind: sampled
+    clauses: ["(ii) two, one or no nilpotent lines; no totally null plane", "(iii) only the three sign patterns occur; over the rationals a (1,1) plane may have no nilpotent line", "(iv) the generated algebra has dimension 4, or 3 when degenerate"]
+    omits: "the 349 planes spanned by trace-free integer matrices with entries in [-2, 2], over the rationals only; other fields are the proof's (the referee's script covers the fields of 3, 5 and 7 elements exhaustively)"
+  check_switch_planes_and_pairs_of_states:
+    kind: sampled
+    clauses: ["(ii) a plane with two nilpotent lines is spanned by a switch", "(v) switch planes correspond to unordered pairs of distinct lines and are conjugate to the plane of set and clear"]
+    omits: "injectivity on the switch planes of the same box; surjectivity on the pairs of lines with integer direction vectors in [-3, 3]"

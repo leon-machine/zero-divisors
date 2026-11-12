@@ -28493,6 +28493,36 @@
   "status": "remark",
   "version": 1
  },
+ "note.synthesis.two-orders-of-construction-ladder-and-switch": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "observation and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "a12f69a3e8935fe2",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "eeb8794ab00ad529",
+   "statement": "f2cf73f6849d2a08"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.what-n-is-counted": {
   "assumes": [],
   "credit": [
@@ -51853,6 +51883,31 @@
   "status": "proved",
   "version": 5
  },
+ "synthesis.hawking-page-test-on-schwarzschild-anti-de-sitter": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "cce7a1a59113ae6b",
+  "ledger": null,
+  "parts": {
+   "checks": "01be233eaaf307e1",
+   "proofs": "881f4b64be27ef06",
+   "rest": "36880587349d3e5c",
+   "statement": "1d07032b90bdf156"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins": {
   "assumes": [],
   "credit": [
@@ -55329,6 +55384,36 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.integer-clifford-algebras-contain-no-switch": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "observation and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "ebb0f8bf1acf2772",
+  "ledger": null,
+  "parts": {
+   "checks": "1ff39cc13e33461c",
+   "proofs": "6dffbf1531fa058f",
+   "rest": "d3b65c89b700e77b",
+   "statement": "b0d356f4a45e68a5"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.integrated-loc-curvature-clause-forced-matter-clause-independent": {
   "assumes": [],
@@ -60848,6 +60933,36 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "observation and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "2c78bf74edf7a008",
+  "ledger": null,
+  "parts": {
+   "checks": "7bf2597347185c3f",
+   "proofs": "1ef484dc105aaa5a",
+   "rest": "325a7bef2d7dfcfa",
+   "statement": "b74b2e762e65b02c"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two": {
   "assumes": [
    "synthesis.premise-positivity-of-values@2"
@@ -61461,6 +61576,36 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.switch-planes-on-a-two-state-space": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "observation and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "5f9c6af391565a73",
+  "ledger": null,
+  "parts": {
+   "checks": "6b370ee8a334fc1b",
+   "proofs": "bdd25e46ee5f6169",
+   "rest": "325a7bef2d7dfcfa",
+   "statement": "0eea089f12dc11bb"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.tameness-splits-regularity-and-order": {
   "assumes": [],

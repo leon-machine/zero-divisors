@@ -1,0 +1,21 @@
+functions:
+  check_set_and_clear_are_a_switch_with_tests:
+    kind: complete
+    clauses: ["(i) v^2 = w^2 = 0, vw + wv = 1, vw and wv complementary orthogonal idempotents, the tests for on and off"]
+    omits: "computed in integer 2 x 2 matrices; other commutative rings follow by reduction of the integer identities"
+  check_basis_of_the_endomorphisms_over_the_integers:
+    kind: complete
+    clauses: ["(ii) wv, w, v, vw are the matrix units and 1, v, w, vw is a basis of the 2 x 2 integer matrices (determinant +-1)"]
+    omits: "over the integers; a unimodular change of basis remains one over every commutative ring"
+  check_square_is_the_hyperbolic_form:
+    kind: sampled
+    clauses: ["(iii) (alpha v + beta w)^2 = alpha beta"]
+    omits: "integer alpha, beta in [-4, 4]; the general identity is the proof's one-line expansion"
+  check_universal_property_on_target_switches:
+    kind: sampled
+    clauses: ["(iii) the map 1, v, w, vw -> 1, a, b, ab is multiplicative for a target switch (a, b)"]
+    omits: "four kinds of target: the Witt pair of Cl(1,1), a Witt pair of Cl(2,2), a mixed-grade conjugate of it, and the 104 conjugates of (v, w) by unimodular integer matrices with entries in [-2, 2]; an arbitrary target algebra is the proof's reduction argument"
+  check_orthonormal_pair_from_the_switch:
+    kind: complete
+    clauses: ["(iv) e+ = v + w, e- = v - w: squares 1 and -1, anticommuting, e+ e- = wv - vw, the actions on the two states"]
+    omits: "computed in integer 2 x 2 matrices"

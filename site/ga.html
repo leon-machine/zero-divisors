@@ -109,7 +109,7 @@ button{font:inherit;color:inherit}
     <div class="end" id="end">
       <div>
         <h2>Why Geometric Algebra?</h2>
-        <p>Because it is what a distinction becomes when it is given a direction.</p>
+        <p>Because it follows from first principles: it is what a distinction becomes when it is given a direction, and every number system physics uses is a part of it.</p>
         <div class="row">
           <a class="btn hot" href="#" data-lab="principle">Where division fails: The Transport Principle</a>
           <a class="btn" href="#" data-lab="singularity">Fall into a black hole</a>
@@ -139,12 +139,12 @@ document.addEventListener('click', e => { const a = e.target.closest('[data-lab]
 /* ---------- the timeline, in viewport heights ---------- */
 const SCENES = [
   ['hero', 130], ['wall', 300], ['voices', 200],
-  ['cross', 200], ['complex', 220], ['hamilton', 240], ['matrices', 220], ['maxwell', 200],
-  ['derive', 380], ['product', 220], ['plane', 240], ['mirror', 240], ['quat', 200], ['dirac', 220], ['onefield', 220], ['rotor', 260], ['fermion', 240], ['dropout', 240],
-  ['departs', 240], ['bit', 220], ['cube', 240], ['sign', 400], ['scalars', 240], ['algebra', 240], ['count', 240],
+  ['tkTitle', 160], ['cross', 200], ['complex', 220], ['hamilton', 240], ['matrices', 220], ['maxwell', 200],
+  ['gaTitle', 160], ['derive', 380], ['product', 220], ['plane', 240], ['mirror', 240], ['quat', 200], ['dirac', 220], ['onefield', 220], ['rotor', 260], ['fermion', 240], ['dropout', 240],
+  ['bitTitle', 160], ['departs', 240], ['bit', 220], ['cube', 240], ['sign', 400], ['scalars', 240], ['algebra', 240], ['count', 240], ['switch', 260],
   ['division', 240], ['continuum', 320], ['physics', 220], ['routes', 240],
   ['readings', 220], ['why', 240], ['allnumber', 240], ['end', 120]];
-const CHAPTERS = [['I', 'Five languages', 'hero'], ['II', 'The toolkit', 'cross'], ['III', 'What drops out', 'derive'], ['IV', 'From the bit', 'departs'], ['V', 'The continuum', 'division'], ['VI', 'What numbers are', 'readings'], ['VII', 'Next', 'end']];
+const CHAPTERS = [['I', 'Five languages', 'hero'], ['II', 'The toolkit', 'tkTitle'], ['III', 'What drops out', 'gaTitle'], ['IV', 'From the bit', 'bitTitle'], ['V', 'The continuum', 'division'], ['VI', 'What numbers are', 'readings'], ['VII', 'Next', 'end']];
 const START = {}; let TOTAL = 0; SCENES.forEach(([k, n]) => { START[k] = TOTAL; TOTAL += n; });
 const LEN = Object.fromEntries(SCENES);
 $('#track').innerHTML = CHAPTERS.map(([n, t, k]) => `<button data-k="${k}"><b>${n}</b>${t}</button>`).join('');
@@ -158,12 +158,14 @@ const CAPS = {
   wall: [[0.03, 0.5, 'Follow a physics degree and the notation changes at every turn: two ways to multiply arrows, complex numbers for waves, quaternions or matrices for rotations, Pauli’s and Dirac’s matrices for spin, vector calculus and tensors for fields.', []],
          [0.5, 1.01, 'Geometric algebra holds that these are not separate tools but parts of a single system, built on one way of multiplying directions: the geometric product. Hermann Grassmann found its outer part, $a\\wedge b$, in 1844; in 1878 William Kingdon Clifford united it with the inner part, $a\\cdot b$.', [], 'textbook']],
   voices: [[0.03, 1.01, 'From the 1960s David Hestenes argued that this one algebra can carry the whole of physics, and that students would learn faster for it. Chris Doran and Anthony Lasenby extended the programme to gravity. A claim that large needs evidence, so we test it against the tools as they are taught.', []]],
+  tkTitle: [[0.03, 1.01, 'To test the claim, start where every physicist starts: with the tools as they are taught. There are five, each invented separately for a job of its own.', []]],
+  gaTitle: [[0.03, 1.01, 'Now the alternative: a single product, derived from one geometric rule, from which all five tools drop out.', []]],
   cross: [[0.03, 1.01, 'The first tool gives arrows two products. The dot product $a\\cdot b$ is a number; the cross product $a\\times b$ is a new arrow at right angles to both. That second product belongs to three dimensions only: a plane has no room for it, and four dimensions offer too many.', [], 'textbook']],
   complex: [[0.03, 1.01, 'Waves and quantum states are written with complex numbers. Multiplying by $i$ is a quarter turn, and doing it twice is a half turn, which is why $i^2=-1$. The rule works, but nothing in it says where $i$ lives or what it is.', [], 'textbook']],
   hamilton: [[0.03, 1.01, 'For rotations in space, William Rowan Hamilton found three square roots of $-1$ in 1843 and cut their rule into Broom Bridge in Dublin. They do not commute: $ij=k$ but $ji=-k$, just as two quarter turns of a book end differently in a different order.', [], 'textbook']],
   matrices: [[0.03, 1.01, 'Quantum theory added matrices. A beam of silver atoms in a magnet splits in two, never in between. In 1927 Wolfgang Pauli described that two-valued spin with three arrays of complex numbers, and in 1928 Paul Dirac needed four larger ones. What the arrays represent was left open.', [], 'textbook']],
-  maxwell: [[0.03, 1.01, 'Electromagnetism completes the set of five. In Oliver Heaviside’s vector notation, Maxwell’s theory is four equations for two fields, $E$ and $B$. Next comes one product, derived from almost nothing, that recovers all five tools.', [], 'textbook']],
-  derive: [[0.03, 0.5, 'Where might one product come from? Ask for little: arrows that add and multiply by the usual laws of algebra, except that order may matter, plus one rule: an arrow times itself is its length squared. Apply the rule to $a+b$ and the dot product falls out: $ab+ba=2\\,a\\cdot b$.', [['the rule and its polarisation', G('std-algebra.polarisation')]], 'textbook'],
+  maxwell: [[0.03, 1.01, 'Electromagnetism completes the set of five. In Oliver Heaviside’s vector notation, Maxwell’s theory is four equations for two fields, $E$ and $B$, with two kinds of derivative and the cross product built into one of them.', [], 'textbook']],
+  derive: [[0.03, 0.5, 'Where might one product come from? Ask for little: arrows that add and multiply by the usual laws of algebra, except that order may matter, plus one rule: an arrow times itself is its length squared. Apply the rule to $a+b$, compare with the cosine rule for the triangle, and the dot product falls out: $ab+ba=2\\,a\\cdot b$.', [['the rule and its polarisation', G('std-algebra.polarisation')]], 'textbook'],
            [0.5, 1.01, 'What is left is the part that changes sign when the factors swap, $a\\wedge b=\\tfrac12(ab-ba)$: the oriented parallelogram spanned by $a$ and $b$, Grassmann’s outer product. The geometric product is the sum of the two parts, $ab=a\\cdot b+a\\wedge b$.', [['the two parts', G('std-algebra.product-decomposition')]], 'textbook']],
   product: [[0.03, 1.01, 'Here $a$ has length 2 and $b$ length 1.5. The number $a\\cdot b$ records how far the arrows align; the plane $a\\wedge b$ is the area they span. Drag $b$: at right angles the area is $2\\times1.5=3$ and the number is zero. Unlike dot or cross, this product can divide.', [['its two parts', G('std-algebra.product-decomposition')], ['inverses', G('std-algebra.inverse-of-vector')]], 'textbook']],
   plane: [[0.03, 1.01, 'Take two unit arrows at right angles, $e_1$ and $e_2$. Their product $B=e_1e_2$ is the unit square they span. Multiply any arrow by $B$ and it makes a quarter turn; twice, and it is reversed, so $B^2=-1$. The imaginary unit was a plane all along.', [['the complex numbers inside', G('std-algebra.complex-numbers')]], 'textbook']],
@@ -175,20 +177,22 @@ const CAPS = {
   fermion: [[0.03, 1.01, 'Spacetime has a third kind of direction: light-like arrows, which square to zero, $n^2=0$. Pair two of them, scaled so that $nm+mn=1$, and they act as a switch: $m$ turns it on, $n$ turns it off, and on twice gives nothing. That is the algebra of a single fermion, such as an electron.', [['zero divisors', G('std-algebra.zero-divisors-annihilated')], ['the switch', G('std-algebra.witt-basis-car')]], 'textbook']],
   dropout: [[0.03, 1.01, 'Read in one algebra, the toolkit is no longer five inventions. Dot and cross are two parts of one product, $i$ is a plane, Hamilton’s units are the planes of space, the matrices are directions, and Maxwell’s four equations are one. The spinor’s sign and the fermion’s switch come with it.', [], 'textbook']],
   departs: [[0.03, 1.01, 'So geometric algebra is a natural language for physics. Where does it come from? Textbooks start from the real numbers and build geometry on top. Galileo read nature’s book as written in geometric figures, and Wheeler put the bit first. From here the argument is this site’s own: start from one distinction and reach the numbers last.', ['Galileo (1623)', 'Wheeler (1989)']]],
+  bitTitle: [[0.03, 1.01, 'Geometric algebra is usually built on top of the numbers. Here the order is reversed: begin with a single distinction, let geometry grow from it, and watch the numbers arrive last.', []]],
   bit: [[0.03, 1.01, 'The foundation is one distinction: something or nothing, marked or unmarked. Cross it and there is something; cross back and it is undone. A bit has no size, no order and no sign, since a distinction cannot be told from its reversal. It is not yet a quantity.', [['Premise F1, the bit', G('synthesis.premise-the-bit')]], 'premise']],
   cube: [[0.03, 1.01, 'Three independent distinctions give eight patterns, the corners of a cube. Sorted by how many distinctions each contains, they fall into groups of 1, 3, 3 and 1: the empty pattern, three directions, three planes, one volume. Notice that we have just counted, using numbers the ladder has not yet derived. The counting is ours, as onlookers; the patterns themselves need none.', [['Premise F1', G('synthesis.premise-the-bit')], ['blades', G('std-algebra.blade-basis')]], 'premise']],
   sign: [[0.03, 0.36, 'Geometry needs order: $e_1$ then $e_2$ should differ from $e_2$ then $e_1$. Allow the smallest possible difference, a single extra bit $c$ left behind when two directions are exchanged.', [['Premise F2', G('synthesis.premise-minimal-non-commutativity')]], 'premise'],
          [0.36, 1.01, 'Exchange twice and the extra bit undoes itself, leaving nothing. Yet $c$ cannot itself be nothing, or order would not matter. Something that undoes itself without being nothing is a sign, the first one. It has no number for a name yet.', [['signed directions', G('synthesis.signed-directions-and-the-integer-clifford-algebra')], ['signs as a form over the bit', G('synthesis.blade-square-signs-f2-quadratic-form')]], 'proved']],
-  scalars: [[0.03, 1.01, 'No number has been assumed so far. When a direction meets itself, $e_1e_1$, every distinction cancels and the result lands on the empty pattern. Only two things can sit there: nothing, or the sign $c$. Those are the first numbers, $+1$ and $-1$, a by-product of geometry. Kronecker held that God made the integers; here geometry makes the first of them.', [['squares in {1, c}', G('synthesis.signed-directions-and-the-integer-clifford-algebra')]], 'proved']],
+  scalars: [[0.03, 1.01, 'No number has been assumed so far. Multiply a direction by itself, $e_1e_1$: the pattern is compared with itself, every distinction cancels, and no direction is left. All that can survive is the sign: nothing, or $c$. A scalar is what a product keeps once its direction has cancelled, and these two, written $+1$ and $-1$, are the first numbers.', [['squares in {1, c}', G('synthesis.signed-directions-and-the-integer-clifford-algebra')]], 'proved']],
   algebra: [[0.03, 1.01, 'Now let patterns be added. Write an arrow as $v=x\\,e_1+y\\,e_2$ and square it. The mixed terms cancel because $e_2e_1=-e_1e_2$, leaving $v^2=x^2+y^2$. Pythagoras’ theorem, which textbooks take as the starting axiom, follows from the sign, given directions that square to $+1$.', [['Premise F3', G('synthesis.premise-superposition-over-the-integers')], ['the rule as a theorem', G('synthesis.signed-directions-and-the-integer-clifford-algebra')]], 'proved']],
   count: [[0.03, 1.01, 'Multiplication alone cannot count: the powers of a direction only go round in a cycle. Counting needs addition, $1+1+1+1+1=5$, and dividing one multiple of an arrow by another then gives every fraction. Quantity comes after geometry, and it is a new step.', [['counting needs addition', G('synthesis.composition-cycles-counting-needs-addition')], ['division gives the fractions', G('synthesis.division-gives-the-rationals')]], 'proved']],
+  switch: [[0.03, 1.01, 'A bit can also be acted on: switched on, $v$, and switched off, $w$. On twice gives no result, $v^2=0$, and the bit is always on or off, $vw+wv=1$. Those are the fermion’s rules, with no sign and no fraction put in. And $v+w$, $v-w$ are two directions squaring to $+1$ and $-1$: the pair the transport principle adds.', [['set and clear', G('synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane')], ['planes on two states', G('synthesis.switch-planes-on-a-two-state-space')], ['whole numbers hold no switch', G('synthesis.integer-clifford-algebras-contain-no-switch')]], 'proved']],
   division: [[0.03, 1.01, 'Division has exceptions. An arrow’s inverse is $v/v^2$, and in spacetime $v^2$ shrinks to zero as the arrow tilts onto the light cone. There the arrow is a zero divisor: a definite object whose inverse arithmetic can only write as $1/0$. The rest of this site begins here. Drag $v$.', [['which arrows divide', G('std-algebra.inverse-of-vector')], ['zero divisors', G('std-algebra.zero-divisors-annihilated')]], 'textbook']],
   continuum: [[0.03, 1.01, 'Every fraction on the line marks one rotation on the circle. Only the full turn, $-1$, is missed: it sits where the line runs off to infinity, the place The Transport Principle gives to $1/0$. And the half circle from $1$ to $-1$ has length $\\pi$, which is no fraction. One last step is needed: fill the gaps between the fractions to reach the real numbers.', [['rational rotors', G('synthesis.the-sign-is-the-rotor-at-infinity')], ['The Transport Principle', 'principle'], ['Premise F4', G('synthesis.continuum-completion-premise')]], 'premise']],
-  physics: [[0.03, 1.01, 'The ladder reaches physics, and shows what each piece needs. A fermion needs only the fraction ½. Quantum correlations beyond the classical Bell limit need no continuum either: their maximum, $2\\sqrt2$, needs just $\\sqrt2$. A boson is a wave of infinitely many fermion pairs, and its bell-shaped states do need the continuum.', [['the CHSH bound', G('synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate')], ['rational values', G('synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist')], ['bosons from the tower', G('synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum')]], 'argued']],
+  physics: [[0.03, 1.01, 'The ladder reaches physics, and shows what each piece needs. A fermion needs only the fraction ½. Quantum correlations beyond the classical Bell limit need no continuum either: their maximum, $2\\sqrt2$, needs just $\\sqrt2$. A boson is a wave of infinitely many fermion pairs, and its bell-shaped states do need the continuum.', [['the CHSH bound', G('synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate')], ['rational values', G('synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records')], ['bosons from the tower', G('synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum')]], 'argued']],
   routes: [[0.03, 1.01, 'Which route is better? Both end at the same algebras, so no calculation can tell them apart. The real numbers are tested and familiar, but put the continuum in the first line. The bit takes smaller steps and derives the squaring rule the other route must assume. That makes it the more economical foundation, though not the more rigorous: both reason soundly from what they state.', [], 'argued']],
-  readings: [[0.03, 1.01, 'If numbers arrive late, the universe need not use them. A measurement compares one piece of geometry with another, and the number records the comparison. Counting still needs addition and the continuum is a choice, so this is a thesis, not a theorem.', [['Premise F3', G('synthesis.premise-superposition-over-the-integers')], ['Premise F4', G('synthesis.continuum-completion-premise')]], 'argued']],
-  why: [[0.03, 1.01, 'In 1960 Eugene Wigner called the fit between mathematics and physics a miracle we neither understand nor deserve. On the ladder it is less of one: both grow from the same root. Richard Hamming’s sceptical reply, that we see what we look for, remains the rival reading.', [], 'argued']],
-  allnumber: [[0.03, 1.01, 'Which returns us to the title. The number systems of physics all sit inside geometric algebra: the reals, the complex numbers, the quaternions, and every $Cl(p,q)$ built from them. Iterating the transport principle builds a tower of these algebras, and in its limit the tower generates the Weyl algebra, the algebra of bosons. Only the octonions stay outside.', [['Frobenius in GA', G('synthesis.frobenius-and-universality-in-clifford-algebras')], ['Weyl algebra in the limit', G('synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit')]], 'proved']]
+  readings: [[0.03, 1.01, 'If numbers arrive late, the universe need not use them. A measurement compares one piece of geometry with another, and the number records the comparison. The geometry, written in geometric algebra, comes first; the numbers are a part of it. This is a thesis, not a theorem.', [['Premise F3', G('synthesis.premise-superposition-over-the-integers')], ['Premise F4', G('synthesis.continuum-completion-premise')]], 'argued']],
+  why: [[0.03, 1.01, 'In 1960 Eugene Wigner called the fit between mathematics and physics a miracle we neither understand nor deserve. On the ladder it is less of one: both grow from the same root, and geometric algebra is what grows first. Richard Hamming’s sceptical reply, that we see what we look for, remains the rival reading.', [], 'argued']],
+  allnumber: [[0.03, 1.01, 'Which returns us to the title. Geometric algebra is not one formalism among many: it is built from first principles, and the number systems of physics are parts of it. The reals, the complex numbers, the quaternions and every $Cl(p,q)$ sit inside. Iterating the transport principle even yields the Weyl algebra of bosons, in the limit. Only the octonions stay outside.', [['Frobenius in GA', G('synthesis.frobenius-and-universality-in-clifford-algebras')], ['Weyl algebra in the limit', G('synthesis.central-limit-of-tower-fluctuation-states-with-the-kernel-unit')]], 'proved']]
 };
 
 const STEPS = [[0, 0]];              // [start, stop] on the timeline, in viewport heights
@@ -296,7 +300,7 @@ const meas = document.createElement('div'); meas.className = 'cap show'; meas.se
 meas.style.visibility = 'hidden'; meas.innerHTML = '<div class="line"></div><div class="tags"></div>'; $('.pin').appendChild(meas);
 // the room a scene's drawing has: down to the top of the tallest subtitle of that scene, measured with a
 // hidden copy of the subtitle box; the ladder scenes share one measure so the ladder does not jump
-const LADDER_SCENES = ['bit', 'cube', 'sign', 'scalars', 'algebra', 'count', 'division', 'continuum', 'infinity'];
+const LADDER_SCENES = ['bit', 'cube', 'sign', 'scalars', 'algebra', 'count', 'switch', 'division', 'continuum', 'infinity'];
 function capTopOf(scene){
   const key = 's:' + scene; if (capTops.has(key)) return capTops.get(key);
   const pinTop = $('.pin').getBoundingClientRect().top; let top = HF;
@@ -659,6 +663,25 @@ function drawRoutes(s){
     if (i === n - 1) { ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(xa, y - rh / 2); ox.lineTo(xc + w2, y - rh / 2); ox.stroke(); }
     ox.globalAlpha = 1; });
 }
+/* ---------- section title slides ---------- */
+function sectionTitle(s, num, title, sub, extra){
+  const nar = NARROW, cy = H * 0.4, ft = nar ? Math.min(30, W * 0.066) : Math.min(54, W * 0.05), a = sm((s - 0.03) / 0.12);
+  ox.globalAlpha = a; text(num, W / 2, cy - ft * 1.25, C.gold, nar ? 13 : 16, 'center', MONO);
+  text(title, W / 2, cy, C.text, ft, 'center', SERIF, '600');
+  ox.fillStyle = 'rgba(240,194,122,.7)'; ox.fillRect(W / 2 - 30 * a, cy + ft * 0.85, 60 * a, 2);
+  ox.globalAlpha = sm((s - 0.2) / 0.12); text(sub, W / 2, cy + ft * 0.85 + (nar ? 28 : 38), C.t2, nar ? 15 : 21, 'center', SERIF);
+  extra(cy + ft * 0.85 + (nar ? 70 : 96)); ox.globalAlpha = 1;
+}
+function drawTkTitle(s){ sectionTitle(s, 'PART ONE', 'The Existing Physics Toolkit', 'five tools, as every physicist learns them', y => {
+  const nar = NARROW, names = KIT.map(k => k[1]), fs = nar ? 12 : 15;
+  if (nar) names.forEach((n, i) => { ox.globalAlpha = sm((s - 0.34 - i * 0.08) / 0.1); ox.fillStyle = KIT[i][3]; ox.fillRect(W / 2 - 96, y + i * 24 - 7, 3, 14); text(n, W / 2 - 84, y + i * 24, C.t2, fs, 'left', SERIF); });
+  else { const gap = 34, ws = names.map(n => textW(n, fs) + 12), tot = ws.reduce((p, q) => p + q, 0) + gap * (names.length - 1); let x = (W - tot) / 2;
+    names.forEach((n, i) => { ox.globalAlpha = sm((s - 0.34 - i * 0.08) / 0.1); ox.fillStyle = KIT[i][3]; ox.fillRect(x, y - 8, 3, 16); text(n, x + 12, y, C.t2, fs, 'left', SERIF); x += ws[i] + gap; }); } }); }
+function drawBitTitle(s){ sectionTitle(s, 'PART THREE', 'Geometry First', 'from a single distinction to the numbers', y => {
+  const names = NARROW ? ['distinction', 'geometry', 'number'] : ['distinction', 'directions', 'geometry', 'number', 'physics'], fs = NARROW ? 13 : 16, gap = NARROW ? 26 : 40, ws = names.map(n => textW(n, fs)), tot = ws.reduce((p, q) => p + q, 0) + gap * (names.length - 1); let x = (W - tot) / 2;
+  names.forEach((n, i) => { ox.globalAlpha = sm((s - 0.34 - i * 0.08) / 0.1); text(n, x, y, i === 0 ? C.gold : C.t2, fs, 'left', SERIF); if (i < names.length - 1) arrow(x + ws[i] + 8, y, x + ws[i] + gap - 8, y, C.line, 1.2, 6); x += ws[i] + gap; }); }); }
+function drawGaTitle(s){ sectionTitle(s, 'PART TWO', 'Geometric Algebra', 'one product in place of five tools', y => {
+  ox.globalAlpha = sm((s - 0.4) / 0.14); text('ab = a·b + a∧b', W / 2, y + 6, C.gold, NARROW ? 22 : 32, 'center', SERIF, 'italic'); }); }
 function drawMatricesPlain(s){
   const nar = NARROW, fs = nar ? 12 : 20, r1 = H * (nar ? 0.12 : 0.13), gap = nar ? 10 : 30, rf = 19;
   const a1 = sm((s - 0.04) / 0.12), a2 = sm((s - 0.66) / 0.12);
@@ -833,7 +856,9 @@ function drawDerive(s){
     [2, 0.56, 'a∧b = ½ (ab − ba)', C.plum],
     [2, 0.66, 'ab = a·b + a∧b', C.gold, 1.25]];
   L.forEach(([stage, t0, t, col, sc = 1], i) => { const a2 = sm((s - t0) / 0.06); if (a2 <= 0) return; ox.globalAlpha = a2;
-    text(t, x, y + i * lh + (i >= 2 ? lh * 0.4 : 0) + (i >= 5 ? lh * 0.4 : 0), col, fs * sc, 'left', SERIF, sc === 0.7 ? 'italic' : 'italic'); ox.globalAlpha = 1; });
+    const yy = y + i * lh + (i >= 2 ? lh * 0.4 : 0) + (i >= 5 ? lh * 0.4 : 0); text(t, x, yy, col, fs * sc, 'left', SERIF, 'italic');
+    const why = {2: 'by algebra', 3: 'by the cosine rule'}[i]; if (why) text(why, x + textW(t, fs * sc, SERIF, 'italic') + (nar ? 10 : 22), yy, i === 3 ? C.green : C.t3, nar ? 10 : 13, 'left', MONO);
+    ox.globalAlpha = 1; });
   if (s > 0.78) { ox.globalAlpha = sm((s - 0.78) / 0.06); text('derived, not assumed', x, y + 8 * lh, C.green, fs * 0.8, 'left', SERIF, '600'); ox.globalAlpha = 1; }
 }
 
@@ -894,7 +919,7 @@ function drawScalars(s){
   { const qa = 1 - sm((s - 0.15) / 0.06); if (qa > 0) { ox.globalAlpha = qa; token(cx - gap * (1 - p), y1, 'e₁', C.gold, tw, tf); token(cx + gap * (1 - p), y1, 'e₁', C.gold, tw, tf); ox.globalAlpha = 1; } }
   text('e₁ e₁', cx - gap * (nar ? 1.5 : 2.2), y1, C.t2, nar ? 15 : 25, 'right', SERIF, 'italic');
   if (p > 0.95) { const q = sm((s - 0.15) / 0.06); ox.globalAlpha = q; ox.fillStyle = 'rgba(6,10,16,1)'; ox.fillRect(cx - 50, y1 - 32, 100, 64); token(cx, y1, '±1', C.text, nar ? 56 : 76, tf);
-    text(nar ? 'written +1, −1' : 'nothing, or the sign c: written +1 and −1', cx + (nar ? 38 : 54), y1, C.t3, nar ? 11 : 16, 'left', SERIF, 'italic'); ox.globalAlpha = 1; }
+    text(nar ? 'no direction left' : 'no direction left: only a sign, nothing or c', cx + (nar ? 38 : 54), y1, C.t3, nar ? 11 : 16, 'left', SERIF, 'italic'); ox.globalAlpha = 1; }
   // the grades: where products come to rest
   const gy = R.y0 + R.h * (nar ? 0.4 : 0.44), gw = Math.min(R.w * 0.86, nar ? 520 : 680), gx = cx - gw / 2, bh = nar ? 26 : 32, labels = [['grade 0', 'scalars'], ['grade 1', 'directions'], ['grade 2', 'planes'], ['grade 3', 'volume']];
   const g = sm((s - 0.3) / 0.06); ox.globalAlpha = g;
@@ -906,8 +931,33 @@ function drawScalars(s){
   text(nar ? 'adding, dividing, completing' : 'by adding, dividing and completing', x0, gy + bh + (nar ? 36 : 48), C.t3, nar ? 10 : 14, 'center', SERIF, 'italic');
   ox.globalAlpha = 1;
   if (s >= 0.5) { const a = sm((s - 0.54) / 0.1), yp = gy + bh + (nar ? 76 : 96); ox.globalAlpha = a;
-    text('scalars are not assumed: they pop out', cx, yp, C.gold, nar ? 15 : 23, 'center', SERIF, '600'); ox.globalAlpha = 1;
+    text(nar ? 'no direction left: only a sign' : 'a scalar: what is left of a product when its direction has cancelled', cx, yp, C.gold, nar ? 15 : 23, 'center', SERIF, '600'); ox.globalAlpha = 1;
     quote('God made the integers; all else is the work of man.', 'Leopold Kronecker, as reported by Weber, 1893', cx, yp + (nar ? 46 : 56), R.w * 0.8, nar ? 12 : 18, C.text, sm((s - 0.68) / 0.1)); }
+}
+
+/* ---------- the switch: a bit that is set and cleared ---------- */
+function drawSwitch(s){
+  const R = region(4), nar = NARROW, b = Math.min(R.w * (nar ? 0.1 : 0.06), R.h * 0.1, 50), fs = nar ? 13 : 18, cx = R.cx;
+  const rowY = [R.y0 + R.h * (nar ? 0.1 : 0.13), R.y0 + R.h * (nar ? 0.25 : 0.29)], dx = nar ? R.w * 0.25 : Math.min(R.w * 0.21, 250), g = b * (nar ? 1.25 : 1.5);
+  // each operation on each state: a new state, or no result
+  [['switch on', '$v$', [[0, 1], [1, null]], 0.04], ['switch off', '$w$', [[1, 0], [0, null]], 0.18]].forEach(([name, sym, cases, t0], r) => {
+    const y = rowY[r];
+    cases.forEach(([from, to], c) => { const a = sm((s - t0 - c * 0.06) / 0.07); if (a <= 0) return; ox.globalAlpha = a; const x = cx + (c ? dx : -dx);
+      mark(x - g, y, b, from); arrow(x - g + b / 2 + 7, y, x + g - b / 2 - 9, y, r ? C.blue : C.gold, 1.5, 8);
+      text(sym, x, y - (nar ? 13 : 17), r ? C.blue : C.gold, nar ? 14 : 19, 'center');
+      if (to === null) text('no result', x + g, y, C.red, nar ? 12 : 16, 'center', SERIF); else mark(x + g, y, b, to);
+      ox.globalAlpha = 1; });
+    ox.globalAlpha = sm((s - t0) / 0.07); if (nar) text(name, cx, y + b / 2 + 13, C.t3, 11, 'center', MONO); else text(name, cx - dx - g - b / 2 - 18, y, r ? C.blue : C.gold, 14, 'right', MONO); ox.globalAlpha = 1; });
+  // the rules these two operations obey
+  const y0 = rowY[1] + b / 2 + (nar ? 46 : 58), lh = nar ? 40 : 60, fm = nar ? 16 : 24, fg = nar ? 12 : 15;
+  [[0.34, '$v^2 = 0 \\qquad w^2 = 0$', 'on twice, or off twice: no result', C.text],
+   [0.46, '$vw + wv = 1$', 'it is on, or it is off: the rules of a single fermion', C.text],
+   [0.6, '$(v+w)^2 = +1 \\qquad (v-w)^2 = -1$', 'their sum and difference: two directions, one plus and one minus', C.gold]].forEach(([t0, f, gloss, col], i) => {
+    ox.globalAlpha = sm((s - t0) / 0.08); text(f, cx, y0 + i * lh, col, fm, 'center'); text(gloss, cx, y0 + i * lh + (nar ? 17 : 23), C.t3, fg, 'center', SERIF); });
+  const yb = y0 + 3 * lh + (nar ? 4 : 8);
+  ox.globalAlpha = sm((s - 0.74) / 0.1); text(nar ? 'no sign and no fraction put in' : 'no sign and no fraction was put in', cx, yb, C.gold, nar ? 14 : 20, 'center', SERIF, '600');
+  ox.globalAlpha = sm((s - 0.84) / 0.1); text(nar ? 'built from the directions instead, the switch needs ½' : 'built the other way, from whole-number directions, the switch needs the fraction ½', cx, yb + (nar ? 22 : 30), C.t3, nar ? 11 : 14, 'center', SERIF);
+  ox.globalAlpha = 1;
 }
 
 /* ---------- infinity is geometric ---------- */
@@ -993,7 +1043,7 @@ function drawAllNumber(s){
   const f = sm((s - 0.62) / 0.1), fs = nar ? 12 : 16.5, l2 = fs * 1.4, ww = nar ? W - 40 : W * 0.44, x = nar ? W / 2 : xr, al = nar ? 'center' : 'left'; let y = nar ? cy + ryMax + 42 : cy - ryMax * 0.9 + n * lh + 18;
   ox.globalAlpha = f; wrap('Frobenius: ℝ, ℂ and ℍ are the only finite-dimensional associative division algebras over the reals, and all three are inside.', ww, fs, SERIF, 'italic').forEach(l => { text(l, x, y, C.text, fs, al, SERIF, 'italic'); y += l2; });
   ox.globalAlpha = sm((s - 0.7) / 0.1); y += 8; wrap('Iterating the transport principle builds a tower of these algebras; in its limit the tower generates the Weyl algebra of bosons.', ww, fs, SERIF, '').forEach(l => { text(l, x, y, C.text, fs, al, SERIF); y += l2; });
-  ox.globalAlpha = sm((s - 0.8) / 0.1); y += 8; wrap('All of it grown from one distinction, with four stated choices.', ww, fs, SERIF, '600').forEach(l => { text(l, x, y, C.gold, fs, al, SERIF, '600'); y += l2; });
+  ox.globalAlpha = sm((s - 0.8) / 0.1); y += 8; wrap('Geometric algebra, grown from one distinction with four stated choices, contains them all.', ww, fs, SERIF, '600').forEach(l => { text(l, x, y, C.gold, fs, al, SERIF, '600'); y += l2; });
   ox.globalAlpha = 1;
 }
 
@@ -1033,24 +1083,24 @@ function drawProduct(s){
 }
 
 function drawPlane(s){
-  const nar = NARROW, u = Math.min(W * (nar ? 0.3 : 0.2), H * 0.36, 190), cx = nar ? W * 0.5 : W * 0.38, cy = nar ? H * 0.42 : H * 0.54;
-  // the unit plane B = e1 e2 as an oriented square
-  ox.fillStyle = PLUM_FILL(0.14); ox.fillRect(cx, cy - u * 0.62, u * 0.62, u * 0.62); ox.strokeStyle = PLUM_FILL(0.6); ox.lineWidth = 1; ox.strokeRect(cx, cy - u * 0.62, u * 0.62, u * 0.62);
-  arcArrow(cx + u * 0.31, cy - u * 0.31, u * 0.17, rad(-30), rad(250), C.plum, 1.3, 7);
-  text('B = e₁e₂', cx + u * 0.34, cy + u * 0.2, C.plum, nar ? 13 : 16, 'center', SERIF, 'italic');
-  arrow(cx, cy, cx + u * 0.62, cy, C.t2, 1.4, 8); arrow(cx, cy, cx, cy - u * 0.62, C.t2, 1.4, 8);
-  text('e₁', cx + u * 0.62 + 14, cy + 2, C.t2, 14, 'left', SERIF, 'italic'); text('e₂', cx - 14, cy - u * 0.62, C.t2, 14, 'right', SERIF, 'italic');
-  ring(cx, cy, u, C.line2, 1);
+  const nar = NARROW, u = Math.min(W * (nar ? 0.28 : 0.2), H * 0.36, 190), cx = nar ? W * 0.5 : W * 0.38, cy = nar ? H * 0.42 : H * 0.54;
+  // the plane of e1 and e2: the disc the rotation happens in, with the unit square B = e1 e2 marked on it. The unit
+  // arrows reach the circle, so the square, the circle and the rotation all share one scale and one sense of turning.
+  ox.fillStyle = PLUM_FILL(0.07); ox.beginPath(); ox.arc(cx, cy, u, 0, 2 * Math.PI); ox.fill(); ring(cx, cy, u, PLUM_FILL(0.45), 1.2);
+  ox.fillStyle = PLUM_FILL(0.13); ox.fillRect(cx, cy - u, u, u); ox.save(); ox.setLineDash([4, 4]); ox.strokeStyle = PLUM_FILL(0.6); ox.lineWidth = 1; ox.strokeRect(cx, cy - u, u, u); ox.restore();
+  text('B = e₁e₂', cx + u * 0.84, cy - u * 0.91, C.plum, nar ? 13 : 16, 'center', SERIF, 'italic');
+  arrow(cx, cy, cx + u, cy, C.t2, 1.6, 9); arrow(cx, cy, cx, cy - u, C.t2, 1.6, 9);
+  text('e₁', cx + u + 14, cy + 2, C.t2, nar ? 14 : 16, 'left', SERIF, 'italic'); text('e₂', cx, cy - u - 14, C.t2, nar ? 14 : 16, 'center', SERIF, 'italic');
+  arcArrow(cx, cy, u * 1.06, rad(34), rad(60), C.plum, 1.5, 7);
   const a0 = rad(25), step1 = s < 0.5 ? sm((s - 0.12) / 0.3) : 1, step2 = s < 0.5 ? 0 : sm((s - 0.56) / 0.3);
   const vec = (ang, col, w) => arrow(cx, cy, cx + u * Math.cos(ang), cy - u * Math.sin(ang), col, w, 11);
-  vec(a0, C.gold, 2.6); text('v', cx + u * 1.08 * Math.cos(a0), cy - u * 1.08 * Math.sin(a0), C.gold, 18, 'center', SERIF, 'italic');
-  if (step1 > 0) { const a1 = a0 + Math.PI / 2 * step1; arcArrow(cx, cy, u * 0.82, a0 + 0.05, a1 - 0.05, C.blue, 1.4, 7); vec(a1, C.blue, 2.2);
-    if (step1 > 0.95) text('vB', cx + u * 1.1 * Math.cos(a1), cy - u * 1.1 * Math.sin(a1), C.blue, 17, 'center', SERIF, 'italic'); }
-  if (step2 > 0) { const b0 = a0 + Math.PI / 2, b1 = b0 + Math.PI / 2 * step2; arcArrow(cx, cy, u * 0.9, b0 + 0.05, b1 - 0.05, C.red, 1.4, 7); vec(b1, C.red, 2.2);
-    if (step2 > 0.95) text('vB² = −v', cx + u * 1.14 * Math.cos(b1), cy - u * 1.14 * Math.sin(b1) + 14, C.red, 17, 'center', SERIF, 'italic'); }
+  vec(a0, C.gold, 2.6); text('v', cx + u * 1.1 * Math.cos(a0), cy - u * 1.1 * Math.sin(a0), C.gold, 18, 'center', SERIF, 'italic');
+  if (step1 > 0) { const a1 = a0 + Math.PI / 2 * step1; arcArrow(cx, cy, u * 0.6, a0 + 0.05, a1 - 0.05, C.blue, 1.4, 7); vec(a1, C.blue, 2.2);
+    if (step1 > 0.95) text('vB', cx + u * 1.12 * Math.cos(a1), cy - u * 1.12 * Math.sin(a1), C.blue, 17, 'center', SERIF, 'italic'); }
+  if (step2 > 0) { const b0 = a0 + Math.PI / 2, b1 = b0 + Math.PI / 2 * step2; arcArrow(cx, cy, u * 0.6, b0 + 0.05, b1 - 0.05, C.red, 1.4, 7); vec(b1, C.red, 2.2);
+    if (step2 > 0.95) text('vB² = −v', cx + u * 1.16 * Math.cos(b1), cy - u * 1.16 * Math.sin(b1) + 14, C.red, 17, 'center', SERIF, 'italic'); }
   // the algebra beside it
-  const px = nar ? W * 0.5 : W * 0.76, py = nar ? H * 0.86 : H * 0.34, fs = nar ? 15 : 24, lh = nar ? 22 : 42;
-  if (!nar && s >= 0.5) boxStart('the algebra', sm((s - 0.5) / 0.08));
+  const px = nar ? W * 0.5 : W * 0.76, py = nar ? H * 0.9 : H * 0.34, fs = nar ? 15 : 24, lh = nar ? 22 : 42;
   const lines = [['B² = e₁e₂e₁e₂', C.t2], ['     = −e₁e₁e₂e₂', C.t2], ['     = −1', C.red]];
   const shown = s < 0.5 ? 0 : Math.min(3, Math.floor(sm((s - 0.6) / 0.3) * 3.999));
   if (!nar) lines.slice(0, shown).forEach(([l, c], i) => text(l, px - 110, py + lh * i, c, fs, 'left', SERIF, 'italic'));
@@ -1206,25 +1256,27 @@ function mark(x, y, b, on){
 function markRule(cx, y, b, p, q, r, fs, col){ const g = b * 0.5, w1 = textW('with', fs), w2 = textW('gives', fs); let x = cx - (3 * b + w1 + w2 + 4 * g) / 2;
   mark(x + b / 2, y, b, p); x += b + g; text('with', x, y, col, fs, 'left'); x += w1 + g; mark(x + b / 2, y, b, q); x += b + g; text('gives', x, y, col, fs, 'left'); x += w2 + g; mark(x + b / 2, y, b, r); }
 function drawBit(s){
-  const R = region(0), nar = NARROW;
-  quote('To be, or not to be, that is the question', 'Shakespeare, Hamlet (about 1600)', R.cx, R.y0 + R.h * (nar ? 0.08 : 0.1), Math.min(R.w - 40, 640), nar ? 16 : 24, C.text, sm((s - 0.03) / 0.08));
+  const R = region(0), nar = NARROW, cx = R.cx;
+  // the quotation stands to the right of the drawing (above it on a phone)
+  if (nar) quote('To be, or not to be, that is the question', 'Shakespeare, Hamlet (about 1600)', R.cx, R.y0 + R.h * 0.08, R.w - 40, 16, C.text, sm((s - 0.03) / 0.08));
+  else { const tk = TRACK; TRACK = false; const half = Math.min(R.w * 0.1, R.h * 0.22, 96) * 2.6 + 40, qw = Math.max(150, Math.min(250, W / 2 - half - 60)), qx = R.cx + half + 30 + qw / 2; ox.globalAlpha = sm((s - 0.03) / 0.08); ox.fillStyle = 'rgba(240,194,122,.6)'; ox.fillRect(qx - qw / 2 - 18, R.y0 + R.h * 0.3, 2, R.h * 0.3); ox.globalAlpha = 1;
+    quote('To be, or not to be, that is the question', 'Shakespeare, Hamlet (about 1600)', qx, R.y0 + R.h * 0.42, qw, 21, C.text, sm((s - 0.03) / 0.08)); TRACK = tk; }
   // three frames: nothing, something, nothing again
-  const b = Math.min(R.w * (nar ? 0.2 : 0.13), R.h * (nar ? 0.18 : 0.2), 96), sp = b * (nar ? 1.7 : 2.3), fy = R.y0 + R.h * (nar ? 0.34 : 0.36), fs = nar ? 13 : 17;
-  [[0, 'nothing', 0.1], [1, 'something', 0.18], [0, 'nothing', 0.27]].forEach(([st, lab, t0], i) => { const a = sm((s - t0) / 0.06); if (a <= 0) return; const x = R.cx + (i - 1) * sp; ox.globalAlpha = a;
+  const b = Math.min(R.w * (nar ? 0.2 : 0.1), R.h * (nar ? 0.18 : 0.22), 96), sp = b * (nar ? 1.7 : 2.1), fy = R.y0 + R.h * (nar ? 0.34 : 0.2), fs = nar ? 13 : 17;
+  [[0, 'nothing', 0.1], [1, 'something', 0.18], [0, 'nothing', 0.27]].forEach(([st, lab, t0], i) => { const a = sm((s - t0) / 0.06); if (a <= 0) return; const x = cx + (i - 1) * sp; ox.globalAlpha = a;
     mark(x, fy, b, st); text(lab, x, fy + b / 2 + (nar ? 16 : 22), st ? C.gold : C.t2, fs, 'center', SERIF);
-    if (i > 0) { const xa = R.cx + (i - 2) * sp + b / 2 + 8, xb = x - b / 2 - 8; arrow(xa, fy, xb, fy, C.t2, 1.4, 8); if (!nar) text(i === 1 ? 'cross' : 'cross back', (xa + xb) / 2, fy - 16, C.t2, 14, 'center', SERIF); }
+    if (i > 0) { const xa = cx + (i - 2) * sp + b / 2 + 8, xb = x - b / 2 - 8; arrow(xa, fy, xb, fy, C.t2, 1.4, 8); if (!nar) text(i === 1 ? 'cross' : 'cross back', (xa + xb) / 2, fy - 16, C.t2, 13, 'center', SERIF); }
     ox.globalAlpha = 1; });
   // the rule of comparison, in marks
-  const gb = nar ? 22 : 28, ey = fy + b / 2 + (nar ? 62 : 72);
-  ox.globalAlpha = sm((s - 0.36) / 0.08); markRule(R.cx, ey, gb, 1, 1, 0, nar ? 14 : 19, C.text);
-  let y2 = ey;
-  if (nar) { text('crossed twice, a distinction is undone', R.cx, ey + gb / 2 + 16, C.t3, 12, 'center', SERIF); y2 = ey + gb / 2 + 46;
-    ox.globalAlpha = sm((s - 0.46) / 0.08); markRule(R.cx - R.w * 0.25, y2, 13, 1, 0, 1, 11, C.t2); markRule(R.cx + R.w * 0.25, y2, 13, 0, 0, 0, 11, C.t2); }
-  else { const dx = Math.min(R.w * 0.34, 290); ox.globalAlpha = sm((s - 0.46) / 0.08); markRule(R.cx - dx, ey, 18, 1, 0, 1, 14, C.t2); markRule(R.cx + dx, ey, 18, 0, 0, 0, 14, C.t2); }
-  const ly = y2 + (nar ? 34 : 46);
-  ox.globalAlpha = sm((s - 0.58) / 0.1); text(nar ? 'no sign, no order, no size' : 'no sign          no order          no size', R.cx, ly, C.t2, nar ? 13 : 18, 'center', SERIF);
-  ox.globalAlpha = sm((s - 0.68) / 0.1); text('a distinction, not a quantity', R.cx, ly + (nar ? 26 : 32), C.gold, nar ? 14 : 19, 'center', SERIF, '600');
-  ox.globalAlpha = sm((s - 0.78) / 0.1); text('in ordinary notation, the first rule reads 1 + 1 = 0', R.cx, ly + (nar ? 50 : 58), C.t3, nar ? 11 : 13, 'center', SERIF);
+  const gb = nar ? 22 : 28, ey = fy + b / 2 + (nar ? 62 : 74);
+  ox.globalAlpha = sm((s - 0.36) / 0.08); markRule(cx, ey, gb, 1, 1, 0, nar ? 14 : 19, C.text);
+  text('crossed twice, a distinction is undone', cx, ey + gb / 2 + (nar ? 16 : 20), C.t3, nar ? 12 : 15, 'center', SERIF);
+  const y2 = ey + gb / 2 + (nar ? 46 : 54), dx = nar ? R.w * 0.25 : 120;
+  ox.globalAlpha = sm((s - 0.46) / 0.08); markRule(cx - dx, y2, nar ? 13 : 16, 1, 0, 1, nar ? 11 : 13, C.t2); markRule(cx + dx, y2, nar ? 13 : 16, 0, 0, 0, nar ? 11 : 13, C.t2);
+  const ly = y2 + (nar ? 34 : 42);
+  ox.globalAlpha = sm((s - 0.58) / 0.1); text(nar ? 'no sign, no order, no size' : 'no sign          no order          no size', cx, ly, C.t2, nar ? 13 : 18, 'center', SERIF);
+  ox.globalAlpha = sm((s - 0.68) / 0.1); text('a distinction, not a quantity', cx, ly + (nar ? 26 : 32), C.gold, nar ? 14 : 19, 'center', SERIF, '600');
+  ox.globalAlpha = sm((s - 0.78) / 0.1); text('in ordinary notation, the first rule reads 1 + 1 = 0', cx, ly + (nar ? 50 : 58), C.t3, nar ? 11 : 13, 'center', SERIF);
   ox.globalAlpha = 1;
 }
 
@@ -1400,12 +1452,12 @@ function drawPhysics(s){
 // These are starting points: sceneNeed then draws each step unseen and raises the figure until no text runs
 // past the room the subtitles leave.
 const MINH = {all: 380, voices: 440, hamilton: 450, matrices: 500, maxwell: 450, toolkit: 420, derive: 460, product: 400, mirror: 400, dirac: 460, onefield: 440, rotor: 420, fermion: 430, dropout: 480, tensors: 450,
-  departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
+  departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, switch: 480, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
 const MINH_NARROW = {all: 300};
 const CHAP_OF = k => { let c = 0; CHAPTERS.forEach(([, , ck], i) => { if (START[k] >= START[ck]) c = i; }); return c; };
 const DRAWS = {allnumber: drawAllNumber, wall: drawWall, voices: drawVoices, derive: drawDerive, units: drawUnits, departs: drawDeparts, scalars: drawScalars, infinity: drawInfinity, readings: drawReadings, why: drawWhy, cross: s => drawCrossIntro(s * 0.55), complex: drawComplex, hamilton: drawHamilton, matrices: drawMatricesPlain, maxwell: drawMaxwell, toolkit: drawToolkit,
-  product: drawProduct, plane: drawPlane, mirror: drawMirror, routes: drawRoutes, quat: () => drawInventions(0.2), dirac: s => drawInventions(0.5 + 0.47 * s), onefield: drawOneField, rotor: drawRotor, fermion: drawFermion, dropout: drawDropout, tensors: drawTensors,
-  bit: drawBit, cube: drawCube, sign: drawSign, algebra: drawAlgebra, count: drawCount, division: drawDivision, continuum: drawContinuum, physics: drawPhysics};
+  product: drawProduct, plane: drawPlane, mirror: drawMirror, routes: drawRoutes, tkTitle: drawTkTitle, gaTitle: drawGaTitle, bitTitle: drawBitTitle, quat: () => drawInventions(0.2), dirac: s => drawInventions(0.5 + 0.47 * s), onefield: drawOneField, rotor: drawRotor, fermion: drawFermion, dropout: drawDropout, tensors: drawTensors,
+  bit: drawBit, cube: drawCube, sign: drawSign, algebra: drawAlgebra, count: drawCount, switch: drawSwitch, division: drawDivision, continuum: drawContinuum, physics: drawPhysics};
 // draw scene k at phase s in a figure of height `need`; returns how far its text overran the room it had
 // the heading is always drawn at its full size; only the drawing beneath it is scaled to fit, and it is centred under the heading
 function paint(k, s, need, probe){
@@ -1473,10 +1525,10 @@ const TITLES = {
   tensors: ['What About Tensors?', 'the standard answer, and where it stops'],
   departs: ['A Different Order', 'information first'],
   bit: ['The Bit', 'a single distinction'], cube: ['Many Distinctions', 'patterns before geometry'], sign: ['The First Sign', 'order costs one bit'],
-  scalars: ['Scalars Pop Out', 'numbers left behind by geometry'], algebra: ['Adding Patterns', 'Pythagoras as a theorem'], count: ['Counting', 'why number needs addition'],
+  scalars: ['Scalars Pop Out', 'what is left when direction cancels'], algebra: ['Adding Patterns', 'Pythagoras as a theorem'], count: ['Counting', 'why number needs addition'], switch: ['The Switch', 'what a bit does'],
   division: ['Division and Its Exceptions', 'the light cone'], continuum: ['The Continuum', 'rotors from fractions, and π'], infinity: ['Infinity as a Place', 'two readings of 1/0'],
   physics: ['The Ladder', 'from a distinction to physics'], routes: ['Two Routes Compared', 'the same algebras, in a different order'],
-  readings: ['What Numbers Are', 'readings of geometry'], why: ['Why Mathematics Works', 'an answer from the ladder'], allnumber: ['The Numbers of Physics', 'all inside one algebra'],
+  readings: ['What Numbers Are', 'readings of geometry'], why: ['Why Mathematics Works', 'an answer from the ladder'], allnumber: ['The Numbers of Physics', 'parts of geometric algebra'],
   beyond: ['Beyond Physics?', 'a coda: speculation, not a result']};
 function loop(now){
   const v = playerV(now), {k, s} = phaseAt(v);
