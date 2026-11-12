@@ -60946,6 +60946,38 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review; the odd homogeneous coupling and the multi-mode descent in clause (ii)",
+    null
+   ]
+  ],
+  "hash": "49ab0649878d467b",
+  "ledger": null,
+  "parts": {
+   "checks": "77632ac865a476fd",
+   "proofs": "48f42bbcd687af70",
+   "rest": "a21cace97b2880a2",
+   "statement": "99f6adc7594d2d44"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts": {
   "assumes": [
    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
@@ -61491,15 +61523,20 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
    ]
   ],
-  "hash": "bf47deef79de2d58",
+  "hash": "a9fa04ff537a5127",
   "ledger": null,
   "parts": {
-   "checks": "09805c38b70192ad",
-   "proofs": "2f34658b19c70306",
+   "checks": "d9f0efb1fe7d7c20",
+   "proofs": "a425849a5df79c6c",
    "rest": "d3b65c89b700e77b",
-   "statement": "9afac29094c8732c"
+   "statement": "50664fa3d82bcfd8"
   },
   "status": "proved",
   "version": 1

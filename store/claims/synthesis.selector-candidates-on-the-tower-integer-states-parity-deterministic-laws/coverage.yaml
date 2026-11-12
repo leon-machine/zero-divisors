@@ -8,7 +8,7 @@ functions:
     kind: sampled
     clauses:
     - (ii)
-    omits: 'Centre of the even subalgebra computed for Cl(2,2) only; one state (weights 9/25, 16/25), one even coupling, one observable; the single-rung coupling on one state; that every even unitary commutes with the volume element is the proof'
+    omits: 'Centre of the even subalgebra computed for Cl(2,2) and Cl(3,3), the general statement being standard and not proved here; one state (weights 9/25, 16/25), one even coupling, one observable; the single-rung coupling on one state; that every even unitary commutes with the volume element is the proof'
   check_no_deterministic_law_on_strings:
     kind: sampled
     clauses:
@@ -19,3 +19,8 @@ functions:
     clauses:
     - (iv)
     omits: 'Two new rungs above one old rung in the off state; uniqueness of the symmetric extension is the cited theorem; "no stored premise makes a string actual" is a statement about the store, not computed'
+  check_odd_coupling_and_the_stored_descent:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One odd coupling and one state on four rungs; the descent computed as the sum over the sixteen strings; that the descent selects nothing is the proof''s remark on linearity, not computed; tower.answers-iteration-question is cited in (iv) and not touched by a computation'

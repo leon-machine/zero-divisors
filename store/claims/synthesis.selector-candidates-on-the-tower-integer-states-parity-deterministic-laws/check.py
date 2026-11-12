@@ -140,22 +140,27 @@ def check_parity_gives_two_sectors_and_no_record_superselection():
     premise("synthesis.premise-positivity-of-values")
     premise("synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables")
     ok = True
-    # (a) the centre of the even subalgebra of Cl(2,2) has dimension 2 (1 and the volume element)
-    S2 = sq(2)
-    allB = blades(range(4))
-    evenB = [b for b in allB if is_even(b)]
-    keys = [next(iter(b)) for b in allB]
-    biv = [mul(gen(a), gen(b), S2) for a, b in combinations(range(4), 2)]
-    cols = []
-    for b in evenB:
-        col = []
-        for Bv in biv:
-            cm = sub(mul(b, Bv, S2), mul(Bv, b, S2))
-            col += [cm.get(k, F(0)) for k in keys]
-        cols.append(col)
-    ok = ok and len(evenB) == 8 and len(evenB) - rank([list(r) for r in zip(*cols)]) == 2
-    Gam = mul(mul(f(0), e(0), S2), mul(f(1), e(1), S2), S2)
-    ok = ok and all(mul(Gam, Bv, S2) == mul(Bv, Gam, S2) for Bv in biv)
+    # (a) the centre of the even subalgebra of Cl(n,n) has dimension 2 (1 and the volume element), n = 2, 3
+    for nn in (2, 3):
+        Sn = sq(nn)
+        allB = blades(range(2 * nn))
+        evenB = [b for b in allB if is_even(b)]
+        keys = [next(iter(b)) for b in allB]
+        biv = [mul(gen(a), gen(b), Sn) for a, b in combinations(range(2 * nn), 2)]
+        cols = []
+        for b in evenB:
+            col = []
+            for Bv in biv:
+                cm = sub(mul(b, Bv, Sn), mul(Bv, b, Sn))
+                col += [cm.get(k, F(0)) for k in keys]
+            cols.append(col)
+        ok = ok and len(evenB) == 2 ** (2 * nn - 1)
+        ok = ok and len(evenB) - rank([list(r) for r in zip(*cols)]) == 2
+        Gam = sc(1)
+        for j in range(nn):
+            Gam = mul(Gam, mul(f(j), e(j), Sn), Sn)
+        ok = ok and all(mul(Gam, Bv, Sn) == mul(Bv, Gam, Sn) for Bv in biv)
+        ok = ok and all(mul(Gam, gen(i), Sn) == scal(-1, mul(gen(i), Gam, Sn)) for i in range(2 * nn))
     # (b) an even record coupling: system rungs 0, 1 (one quantum, weights 9/25 and 16/25), record
     # rungs 2, 3 (one quantum, moved from rung 2 to rung 3 when the system's quantum is on rung 0)
     S4 = sq(4)
@@ -262,4 +267,60 @@ def check_unread_rungs_carry_the_uniform_weight():
         if any(i >= 2 for i in key):
             ok = ok and om(b) == 0
     GA.check("two unread rungs in the symmetric extension: each of the 4 strings has weight 1/4", ok)
+    return ok
+
+
+def check_odd_coupling_and_the_stored_descent():
+    premise("synthesis.premise-positivity-of-values")
+    premise("tower.answers-iteration-question")
+    ok = True
+    S4 = sq(4)
+    one = sc(1)
+    n = [mul(v(j), w(j), S4) for j in range(4)]
+    vac = one
+    for j in range(4):
+        vac = mul(vac, sub(one, n[j]), S4)
+    amp = add(scal(F(3, 5), v(0)), scal(F(4, 5), v(1)))
+    hop = mul(v(0), w(1), S4)
+    O0 = add(hop, dagger(hop))                 # the system's own interference element
+
+    def pinch(x):
+        """The multi-mode descent: the sum of P_s x P_s over the 16 strings of four rungs."""
+        out = {}
+        for bits in range(16):
+            P = one
+            for j in range(4):
+                P = mul(P, n[j] if (bits >> j) & 1 else sub(one, n[j]), S4)
+            out = add(out, mul(mul(P, x, S4), P, S4))
+        return out
+
+    # (a) the odd homogeneous coupling: records on single rungs 2 and 3 (rungs 3 and 4 in the text)
+    y = mul(amp, vac, S4)
+    rho = mul(y, dagger(y), S4)
+    ok = ok and mul(rho, rho, S4) == rho and is_even(rho)
+    ok = ok and state(rho, S4)(O0) == F(24, 25)
+    U = add(mul(sub(one, n[0]), e(3), S4), mul(n[0], e(2), S4))
+    ok = ok and mul(U, dagger(U), S4) == one
+    ok = ok and all(len(k) % 2 == 1 for k in U)                     # odd, so parity-homogeneous
+    rho2 = mul(mul(U, rho, S4), dagger(U), S4)
+    ok = ok and is_even(rho2)                                       # an even state stays even
+    om = state(rho2, S4)
+    R_a = mul(n[2], sub(one, n[3]), S4)                             # record on rung 2: system quantum on rung 0
+    R_b = mul(sub(one, n[2]), n[3], S4)                             # record on rung 3: system quantum on rung 1
+    ok = ok and om(R_a) == F(9, 25) and om(R_b) == F(16, 25)
+    ok = ok and om(mul(R_a, n[0], S4)) == F(9, 25) and om(mul(R_b, n[1], S4)) == F(16, 25)
+    O = mul(mul(U, O0, S4), dagger(U), S4)
+    ok = ok and is_even(O) and dagger(O) == O and om(O) == F(24, 25)
+    block = add(mul(mul(R_a, rho2, S4), R_a, S4), mul(mul(R_b, rho2, S4), R_b, S4))
+    ok = ok and s0(block) == s0(rho2) and state(block, S4)(O) == 0
+    # (b) the stored descent on the state after the coupling: record weights kept, interference gone
+    d2 = pinch(rho2)
+    od = state(d2, S4)
+    ok = ok and s0(d2) == s0(rho2)
+    ok = ok and od(R_a) == F(9, 25) and od(R_b) == F(16, 25) and od(O) == 0
+    # (c) the stored descent on the state before any record: the system's own interference is gone too
+    d0 = pinch(rho)
+    ok = ok and s0(d0) == s0(rho) and state(d0, S4)(O0) == 0
+    ok = ok and state(d0, S4)(n[0]) == F(9, 25) and state(d0, S4)(n[1]) == F(16, 25)
+    GA.check("odd coupling keeps interference 24/25; the multi-mode descent removes it, keeps 9/25 and 16/25", ok)
     return ok

@@ -48592,7 +48592,7 @@
 "synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
 "failed": false,
 "findings": [],
-"key": "7238979e2c14094f",
+"key": "8ca2f728430deac2",
 "result": "pass",
 "runs": [
 {
@@ -48633,6 +48633,16 @@
 "quantities": [],
 "touched": [
 "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_odd_coupling_and_the_stored_descent",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.answers-iteration-question"
 ]
 }
 ]
@@ -49484,7 +49494,7 @@
 "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
 "failed": false,
 "findings": [],
-"key": "8a69e777adda5ecd",
+"key": "18aee26046c360c8",
 "result": "pass",
 "runs": [
 {
@@ -49526,6 +49536,15 @@
 "quantities": [],
 "touched": [
 "synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them"
+]
+},
+{
+"derivation": null,
+"func": "check_dependence_of_uniqueness_on_the_group",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
 ]
 }
 ]

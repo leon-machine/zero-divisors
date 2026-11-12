@@ -266,3 +266,53 @@ def check_a_string_is_a_weight_on_one_context():
     ok = ok and mul(Pi, Pi, S) == Pi and dagger(Pi) == Pi and Om(Pi) == F(1, 2)
     GA.check("a string of rung values is a two-valued weight on one context and gives 1/2 on an atom of another", ok)
     return ok
+
+
+def subst(x, img, S):
+    """The algebra map sending generator i to img[i]."""
+    out = {}
+    for blade, coef in x.items():
+        prod = sc(coef)
+        for i in blade:
+            prod = mul(prod, img[i], S)
+        out = add(out, prod)
+    return out
+
+
+def check_dependence_of_uniqueness_on_the_group():
+    premise("synthesis.premise-positivity-of-values")
+    ok = True
+    l = 1
+    n = l + 1
+    S = sq(n)
+    ie, jf = 2 * l, 2 * l + 1
+    allB = blades(range(2 * n))
+    # a boost of the new plane with cosh = 5/4, sinh = 3/4: an isometry (squares and product kept)
+    ch, sh = F(5, 4), F(3, 4)
+    img = {i: gen(i) for i in range(2 * n)}
+    img[ie] = add(scal(ch, e(l)), scal(sh, f(l)))
+    img[jf] = add(scal(sh, e(l)), scal(ch, f(l)))
+    ok = ok and mul(img[ie], img[ie], S) == sc(1) and mul(img[jf], img[jf], S) == sc(-1)
+    ok = ok and add(mul(img[ie], img[jf], S), mul(img[jf], img[ie], S)) == {}
+    on = mul(v(l), w(l), S)
+    ok = ok and subst(on, img, S) == on                      # the boost fixes the tests
+    ok = ok and subst(v(l), img, S) == scal(ch + sh, v(l))   # and rescales set (by 2) and clear (by 1/2)
+    ok = ok and subst(w(l), img, S) == scal(ch - sh, w(l)) and ch + sh == 2
+    for rho in old_densities(l, S):
+        for t in (F(0), F(1, 3), F(1, 2), F(1)):
+            Om = state(mul(rho, tau_el(l, t, S), S), S)
+            # every Omega_t is invariant under the boost and under the joint sign change
+            ok = ok and all(Om(subst(b, img, S)) == Om(b) for b in allB)
+            ok = ok and all(Om(flip(b, {ie, jf})) == Om(b) for b in allB)
+    # under the sign change of f alone, on one rung, the state with omega(e) = 1 is invariant,
+    # satisfies (P), is sharp, and is not the half-weight state on e
+    S1 = sq(1)
+    rho_e = scal(F(1, 2), add(sc(1), e(0)))
+    Om = state(rho_e, S1)
+    B1 = blades(range(2))
+    ok = ok and satisfies_p(Om, 1, S1) and mul(rho_e, rho_e, S1) == rho_e
+    ok = ok and all(Om(flip(b, {1})) == Om(b) for b in B1)
+    ok = ok and Om(e(0)) == 1 and Om(mul(v(0), w(0), S1)) == F(1, 2)
+    ok = ok and not all(Om(flip(b, {0})) == Om(b) for b in B1)   # it is not invariant under the sign change of e
+    GA.check("group dependence: boosts keep every weight; the sign change of f alone admits a sharp invariant state", ok)
+    return ok

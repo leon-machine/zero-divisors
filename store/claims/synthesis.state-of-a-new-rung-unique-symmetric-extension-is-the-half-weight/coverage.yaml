@@ -19,3 +19,8 @@ functions:
     clauses:
     - (iv)
     omits: 'One string and one atom outside its context; the non-existence of a two-valued weight on all contexts is the cited theorem, not recomputed'
+  check_dependence_of_uniqueness_on_the_group:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One boost (cosh 5/4, sinh 3/4) on l = 1 with two states and four weights; the sharp invariant state under the sign change of f alone is exhibited on one rung; that the half-weight state is the only extension invariant under any group containing an exchange is the proof'
