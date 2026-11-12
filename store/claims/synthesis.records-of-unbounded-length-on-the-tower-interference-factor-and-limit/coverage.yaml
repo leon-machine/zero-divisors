@@ -1,0 +1,23 @@
+functions:
+  check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs:
+    kind: complete
+    clauses:
+    - setting
+    omits: 'Three rungs: the Clifford relations of all six generators, v_j and w_j as creation and annihilation, the adjoint, and the vector-level operators against the matrices on every basis vector; larger floors are the same construction, not rechecked'
+  check_interference_factor_on_a_full_basis_for_three_pairs:
+    kind: complete
+    clauses:
+    - (i)
+    omits: 'Complete for N = 3 and c in {3/5, 0}: every proper subset K and every element of a linear basis of the algebra on the system and the pairs of K; general N and c are the proof; the amplitudes 3/5, 4/5 are fixed'
+  check_interference_is_full_for_an_element_touching_every_pair:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'N = 1, 2, 3 and c in {3/5, 0}; self-adjointness is tested on a subset of pairs of basis vectors, evenness and the idempotent on all; general N is the proof'
+  check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair:
+    kind: partial
+    clauses:
+    - (iv)
+    omits: 'Only the per-pair overlap c and the per-pair squared Hilbert-Schmidt difference 2 s^2 at three values of c; the divergence of the sum, the identification of the branch states as pure quasi-free states and the disjointness are the proof and the imported Fact; clause (iii), a limit, is the proof and is not computed'
+untouched_premises:
+  tower.algebraic-limit-even-charge: "supplies the fact that every element of the algebraic tower involves finitely many generators, used in the proof of clause (iii), a limit that no finite computation touches"

@@ -1,5 +1,5 @@
 I126  store
-      coverage records: 3571 check function(s) in 1017 entities (exact 823, complete 298, sampled 2215, partial 235); 0 check function(s) in those entities have no record
+      coverage records: 3580 check function(s) in 1019 entities (exact 823, complete 301, sampled 2220, partial 236); 0 check function(s) in those entities have no record
 I213  angle.imported-conformal-model-null-rotations
       only 0% of its 3 logical neighbours share its subject; most are in 'completion'
       fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
@@ -357,19 +357,23 @@ I213  transport.type-p-self-repairing
 I213  transport.where-obstruction-lies-commuting-square
       only 17% of its 12 logical neighbours share its subject; most are in 'clifford-structure'
       fix:   check the subject; a bridging result may rightly stay where it is and carry a tag for the other side
+I305  store
+      this change touches 2 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)
 I510  store
-      contradiction scan: 43 quantities, 429 symbol = value occurrences compared (112 left out as predictions, fits or hypotheticals); 0 drift, 0 disagreement(s), 0 decimal, 0 sign (7 C10 patterns; hits none)
+      contradiction scan: 43 quantities, 432 symbol = value occurrences compared (112 left out as predictions, fits or hypotheticals); 0 drift, 0 disagreement(s), 0 decimal, 0 sign (7 C10 patterns; hits none)
 I502  store
       AI judge not configured: statement-vs-check, level overclaiming and citation checks were skipped
-layer 4: ran 0 entities in 2 process(es), replayed 2373 unchanged from the cache (--full to rerun all)
+layer 4: ran 2 entities in 2 process(es), replayed 2373 unchanged from the cache (--full to rerun all)
 
-summary: 0 error(s), 0 warning(s), 1169 information finding(s)
+summary: 0 error(s), 0 warning(s), 1175 information finding(s)
   I126      1  coverage records, store-wide
                store
   I213    119  
                angle.imported-conformal-model-null-rotations, conformal.nilpotent-ideal-becomes-unit-ideal, dark-energy.forcing-half-schwarzschild-wall-residue-sense, +116 more
-  I405    732  untouched premise, expected (suppressed W405)
-               standard-model.trichotomy-what-kind-number (9), dark-matter.mirror-share-assembled (8), dark-matter.population-count-one-share-half-percent (7), +382 more
+  I305      1  
+               store
+  I405    737  untouched premise, expected (suppressed W405)
+               standard-model.trichotomy-what-kind-number (9), dark-matter.mirror-share-assembled (8), dark-matter.population-count-one-share-half-percent (7), +384 more
   I410    315  
                conformal.minimal-nondegenerate-completion, conformal.nilpotent-ideal-becomes-unit-ideal, correspondence.chevalley-pairing, +312 more
   I502      1  
