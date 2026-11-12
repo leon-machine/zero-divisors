@@ -27,6 +27,10 @@ lineage:
   - dark-matter.mirror-share-one-how-fragile
   - dark-matter.no-coupling-rule-odd-towers-follows
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The sentence that the share of one holds given P1, P2 (for the asymmetry ratio), this premise (for the mass ratio) and the copy now needs one more condition: the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). This premise supplies the mass factor only, as before; the mirror''s unit of the observed 5.364 is conditional on the hypothesis as well as on this premise.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'

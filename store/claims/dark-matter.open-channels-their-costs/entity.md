@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.superselected-hence-dark-exactly-stable@5
   proof: proof-main.tex
 checked_by:
@@ -45,6 +45,10 @@ locators:
   label: prop:openchannel
   line: 573
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The sentence that a cold mirror with our baryon number is what the framework predicts reads at version 11 of the charge Proposition: a cold mirror with our B - L, and with our baryon number under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

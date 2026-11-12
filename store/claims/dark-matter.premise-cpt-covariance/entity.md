@@ -1,7 +1,7 @@
 ---
 id: dark-matter.premise-cpt-covariance
 kind: claim
-version: 3
+version: 4
 title: 'CPT covariance of the kinematic structures and of every action'
 status: postulate
 region: dark-matter
@@ -24,6 +24,18 @@ credit:
   role: drafting of the restated sentence
   version: 3
   source: maintainer pass 2026-11-07
+- name: Leon Butler
+  role: decision to restrict the action clause on the family terms to the adjoint reading
+  version: 4
+- name: Claude Fable 5.2
+  role: drafting of the restricted action clause
+  version: 4
+  source: maintainer pass 2026-11-12 (asymmetry)
+amendments:
+- version: 4
+  kind: restatement
+  defect: 'the action clause did not say how the conjugation acts on the family (Yukawa and mass-matrix) terms; read as entrywise conjugation of the family matrices it sends the Jarlskog invariant J to -J, so the clause would require J = 0, against the stored non-zero value'
+  evidence: 'synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog: check.py::check_commutator_determinant_is_odd_under_conjugation'
 review: typed
 locators:
   paper: T14
@@ -34,6 +46,10 @@ about:
 - obj.dark-matter.witt-flag
 - obj.dark-energy.four-ways-number-enters-theory-shape
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Leon''s decision of 12 November: the action clause is restricted on the family (Yukawa and mass-matrix) terms to the adjoint reading, the conjugation taking each term to its adjoint and not conjugating the family matrices; what the other reading would require (J = 0) is stated, with the computation in synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog (iii). Nothing else in the premise is changed; the fermion sector stays premised. Version 3 -> 4.'
   maintainer_pass_cpt_sentence:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -62,7 +78,7 @@ extraction:
 
 \emph{Convention (field action).} $\phi$ acts on fields as a symmetry: on a vector field by its vector part, and on a connection $A$ through the Lie algebra automorphism it induces, $A \mapsto -\phi(A)$, so that curvature is carried by that automorphism. In this convention $\phi$ acts on fields as $C = \mathrm{Ad}(I_{6}) \circ \kappa$, with $\kappa$ complex conjugation on $\Cl(2,4) \otimes \C$: its vector part $-1$ is the rotor $I_{6}$ of the identity component, and the flag conjugate that preserves the frozen point's action is complex conjugation, a real-linear one reversing that action (\claimref{synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation}). So CPT conjugation is antilinear on the complexified ambient and on the Fock module, of Wigner's antiunitary type (argued there, not proved).
 
-\emph{Action clause.} For every action functional $S_{\mu}$ of Definition \claimref{obj.dark-energy.four-ways-number-enters-theory-shape}, the gauge couplings among its parameters $\mu$ included, $S_{\mu} \circ C = S_{\mu}$; in particular $C$ does not move $\mu$.
+\emph{Action clause.} For every action functional $S_{\mu}$ of Definition \claimref{obj.dark-energy.four-ways-number-enters-theory-shape}, the gauge couplings among its parameters $\mu$ included, $S_{\mu} \circ C = S_{\mu}$; in particular $C$ does not move $\mu$. On the family terms (the Yukawa and mass-matrix terms) the clause is premised in the adjoint reading only: $C$ takes each family term to its adjoint, and does not conjugate the family matrices. In this reading the clause is consistent with a non-zero Jarlskog invariant $J$, and $C$ is a symmetry of the laws that also reverses the arrow (argued, in the Reading of \claimref{synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog}). The other reading, entrywise conjugation of the family matrices followed by a change of family basis, sends $J$ to $-J$ (clause (iii) of that result), so with it the clause would require $J = 0$; it is not premised.
 
 \emph{What is checked and what is premised.} Checked: the fibre metric, the completion, the pairing on the Fock module, and the frozen point's action, which with every functional of real tensor fields invariant under constant $SO_{0}(2,4)$ satisfies the action clause in this convention by the cited result's clause (5). Premised: the imported gauge sector, spinor and fermion fields, and structures later papers add. For the gauge sector the standard CPT theorem for local Lorentz-invariant actions concerns the antiunitary CPT operator of quantum field theory, and this conjugation is not that operator (argued): it fixes every bivector of $\Cl(2,4)$ ($I_{6}$ commutes with the even algebra), so every conformal generator and in particular every translation, and it is antilinear, so on a Hilbert space that carries the translations it reverses their generator and with it the energy, whereas the CPT operator of quantum field theory reverses the translations and keeps the energy positive. The gauge sector's invariance under this conjugation is therefore not supplied by the CPT theorem; it ``is imported and carried as a premise''.
 
@@ -71,7 +87,7 @@ The premise is that CPT conjugation, the composite of grade involution, reversal
 
 The convention is stated because the composite is an anti-automorphism (reversal reverses products), and an anti-automorphism can be made to act on an action in more than one way. Here it acts as a symmetry acts on fields: vectors by its vector part, connections through the Lie algebra automorphism it induces, so curvature is fixed. In that convention the composite acts on fields as the pseudoscalar rotor $I_{6}$, a rotation of the identity component, followed by complex conjugation, and the flag conjugate compatible with an invariant action has to be complex conjugation. So the conjugation is antilinear, the type of Wigner's antiunitary symmetries, not the real linear map the dark-matter paper's wording describes.
 
-The paper checks the premise for the fibre metric, the completion's hyperbolic plane, the pairing on the Fock module and the frozen point's action; in the convention the action clause also holds for every functional of real tensor fields invariant under constant conformal rotations. For the imported gauge sector, spinor and fermion fields, and any structure a later paper adds, it is assumed. Under it, anything the structures and laws determine is conjugation-invariant, which is the first step of the argument that the particle-antiparticle orientation is not determined by them.
+The paper checks the premise for the fibre metric, the completion's hyperbolic plane, the pairing on the Fock module and the frozen point's action; in the convention the action clause also holds for every functional of real tensor fields invariant under constant conformal rotations. For the imported gauge sector, spinor and fermion fields, and any structure a later paper adds, it is assumed. On the family terms, the Yukawa and mass-matrix terms, it is assumed in one reading only: the conjugation takes each term to its adjoint and does not conjugate the family matrices. So read it is consistent with a non-zero Jarlskog invariant, and the conjugation reverses the arrow together with the orientation (argued). Conjugating the matrices instead would reverse the sign of that invariant, and the premise would then require it to vanish. Under it, anything the structures and laws determine is conjugation-invariant, which is the first step of the argument that the particle-antiparticle orientation is not determined by them.
 
 ## lay
 This is an assumption, partly checked: a particular symmetry that swaps matter with antimatter, reverses time and mirrors space is taken to leave every basic structure of the framework, and every one of its laws including the strengths of the forces, unchanged. Worked out exactly, the symmetry involves complex conjugation, the same kind of operation quantum field theory uses for this symmetry, rather than an ordinary linear swap. The series verifies the assumption for the geometric structures and for gravity, and assumes it for the imported description of the forces and of matter. It is the first premise behind the claim that the matter-antimatter orientation of the universe is a free choice rather than something the framework fixes.

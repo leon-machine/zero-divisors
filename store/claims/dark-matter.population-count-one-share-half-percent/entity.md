@@ -33,8 +33,8 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-share-one-how-fragile@8
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.superselected-hence-dark-exactly-stable@5
@@ -64,6 +64,10 @@ locators:
   label: prop:count
   line: 377
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). Clause (i) says the mirror''s share is exactly one, citing the copy theorem (iii) and the assembled share; those are restated (versions 11 and 10) so that the share of one holds under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). The count of this result is unchanged; its mirror unit, and with it the observed total 5.364 as a sum with that unit, is conditional on the hypothesis.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'

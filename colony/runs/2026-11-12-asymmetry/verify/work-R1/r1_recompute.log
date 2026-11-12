@@ -1,0 +1,42 @@
+== Proposal 1: switches, own integer-matrix model ==
+OK   m=1: switch relations, X=Ad(u) exchanges v,w, X(n)=1-n, other product gives -w, u^2=1
+OK   m=2: switch relations, X=Ad(u) exchanges v,w, X(n)=1-n, other product gives -w, u^2=-1
+OK   m=3: switch relations, X=Ad(u) exchanges v,w, X(n)=1-n, other product gives -w, u^2=-1
+OK   m=4: switch relations, X=Ad(u) exchanges v,w, X(n)=1-n, other product gives -w, u^2=1
+OK   m=1: no (a,d) integers with a+d=1 and a=d in a box of 101^2 (parity: 2a=1)
+OK   m=1: omega(n)=2, omega(1-n)=-1 is an integer state: integer states need not have omega(n) in {0,1}
+== Five modes: own model on the 32 occupation states ==
+OK   A: n_B of proposal 2 = n_B of proposal 4 on all 32; = stored (B-L+chi)/4 on the sixteen; n_L likewise; B-L = n_B - n_L
+OK   A: on the odd half the stored formula with chi differs from proposal 2 (so the extension to 32 is a choice): differs on 16 of 16
+     species: (Y, n_B, n_L, B-L): {'nu^c': ('0', '0', '-1', '1'), 'u^c': ('-2/3', '-1/3', '0', '-1/3'), 'Q': ('1/6', '1/3', '0', '1/3'), 'e^c': ('1', '0', '-1', '1'), 'L': ('-1/2', '0', '1', '-1'), 'd^c': ('1/3', '-1/3', '0', '-1/3')}
+OK   species charges are the textbook ones for left-handed fields
+OK   P2(ii): centraliser of n_B has dim 352 (claimed 352), of B-L 320 (claimed 320), of n_L 608 (= 38*16 = 608)
+OK   P2(iv): [n_B,T]=0, [B-L,T]=-2T, [n_L,T]=2T
+OK   P2(iii)/P3(iv): [n_B, v1 v4] is not a multiple of v1 v4; ratios on its entries: ['-2/3', '1/3']
+OK   P2(iii): [n_B, v1 v2] = -1/3 v1 v2 = (1/4)[B-L, v1 v2]
+OK   P2(v)/B: U=e1..e5, U^2=1, U n_B U = -n_B, U B-L U = -(B-L), U maps even states to odd
+== Proposal 3: commutant on the sixteen, full kernel without weight pre-selection ==
+OK   generators of g preserve the sixteen
+OK   P3(i): commutant of su(3)+su(2)_L+u(1)_Y on the sixteen has dimension 256 - 250 = 6 (claimed 6)
+     slot creation pairs: [['L', 'nu^c'], ['Q', 'u^c']]  slot contraction pairs: [['L', 'e^c'], ['Q', 'd^c']]
+OK   P3(ii): pairs are (Q,u^c),(L,nu^c) for v and (Q,d^c),(L,e^c) for w
+OK   P3: dims: Dirac 4 (4), one doublet 3 (3), +Majorana 2 (2), +A2 2 (2), +A2+Majorana 1 (1), Dirac+A3 3 (3)
+OK   P3(v): A2 on (Y,n_B,n_L,B-L) = ['0', '2', '2', '0'], A3 = ['0', '0', '0', '0']
+OK   P3 title without any anomaly input: Dirac + one doublet + Majorana + the 24 leaves dimension 1 (span{Y})
+== C: the coefficient, by the conserved-charge route (not the chemical-potential kernel of the stored check) ==
+OK   B/(B-L) = 28/79 at N_f=3, one doublet; 8/23 with two doublets; general (8N_f+4N_H)/(22N_f+13N_H)
+OK   L/B = -51/28
+== Proposal 4(ii): true normaliser test for the 32 partial exchanges (membership of X_A(g) in g on all 32 states) ==
+OK   Y built from number operators equals the diagonal hypercharge
+OK   dim g = 12; exchanges normalising g: [[], [1, 2, 3, 4, 5]]; reversing n_B: [[1, 2, 3], [1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 3, 4, 5]]; reversing Y, B-L, n_B: [[1, 2, 3, 4, 5]]
+OK   X_{1234} is a LINEAR map of the sixteen to itself reversing n_B (it does not normalise g): parity kept True
+== Proposal 4(iii): the imported identity and the sign of J, from rational unitaries (Cayley transforms) ==
+OK   unitaries exact: True; J = QI(-4233875766672528/846426682443990245, 0); det[H_u,H_d] = QI(0, -4064520736005626880/169285336488798049); equals 2 i J F_u F_d: True
+OK   conjugated matrices: J -> QI(4233875766672528/846426682443990245, 0) = -J, det -> -det
+OK   transpose (the adjoint reading on Hermitian matrices equals conjugation): det[H_u^T,H_d^T] = -det
+== G: the Witt exchange on the complexified R^{2,4} ==
+OK   B(w_k, conj w_k) = [QI(2, 0), QI(-2, 0), QI(-2, 0)] (stored: 2,-2,-2)
+OK   stored normalisation (c=1): e_0 -> [QI(5/4, 0), QI(0, -3/4)]: component on i e_1 is -3/4, not real
+     rescaled Witt basis w'_k = (1+i)/2 w_k, v'_k = conj(w'_k)/B(w'_k,conj w'_k)... images of e_0..e_5: [['QI(0, 0)', 'QI(1, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)'], ['QI(1, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)'], ['QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(-1, 0)', 'QI(0, 0)', 'QI(0, 0)'], ['QI(0, 0)', 'QI(0, 0)', 'QI(-1, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)'], ['QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(-1, 0)'], ['QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(0, 0)', 'QI(-1, 0)', 'QI(0, 0)']]
+OK   rescaled basis (|c|^2 = 1/2): the exchange w'_k <-> v'_k is real: True, an isometry: True
+OK   B(w'_k, v'_k) = 1 in both normalisations, and v'_k = +-(conj w'_k) up to the factor: v'/conj(w') = [QI(1, 0), QI(-1, 0), QI(-1, 0)]
