@@ -61,7 +61,10 @@ extraction:
     action clause of the premise of conjugation covariance. Clause (iv) is the consequence for that premise and
     is argued, not proved, because the store does not say how the conjugation acts on the family matrices
     (the convention of the conjugation result does not cover spinor fields). No premise is changed here; the
-    decision is the maintainer's. The statement is about one chirality half. In the five-mode algebra, on all 32
+    decision is the maintainer's. It was made on 12 November 2026: dark-matter.premise-cpt-covariance, from
+    version 4, premises the action clause on the family terms in the adjoint reading only, so of the two
+    readings in the Reading paragraph the second is the stored one, and the sentence there that the store does
+    not choose describes the premise at version 3. The statement is about one chirality half. In the five-mode algebra, on all 32
     states, the total exchange is linear and inner and reverses baryon number with no conjugation (the proposals
     synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state and
     synthesis.baryon-number-centraliser-in-the-five-mode-algebra of the same run); the two statements are
