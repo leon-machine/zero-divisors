@@ -1,0 +1,20 @@
+functions:
+  check_only_the_total_exchange_reverses_the_charges_and_keeps_the_gauge_algebra:
+    kind: complete
+    clauses:
+    - (ii)
+    omits: 'Exhaustive for clause (ii) only: all 32 exchanges on all 32 states, the normaliser tested as membership of the image of each of the twelve generators in their span. Clause (i), a statement about all invertible linear maps, is proved in the text and is tested here only through its data (the six pairwise distinct (dimension, Y), Q alone of dimension 6) and through the one instance on modes 1, 2, 3, 4; the identification of the odd half with the complex conjugate module and the antilinear statement are the proof''s'
+  check_commutator_determinant_is_odd_under_conjugation:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'Three Hermitian pairs over the Gaussian rationals with pinned determinants, one unitary over the Gaussian rationals, one real symmetric pair; the general statements are the proof''s three lines'
+  check_imported_identity_and_sign_of_j_on_a_rational_pair:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'One pair built from two Cayley unitaries and fixed eigenvalues: the imported identity with its sign, and J to -J under conjugation; the stored value of J is read and compared with zero only. Clause (iv) and the reading are argued and are not computed'
+untouched_premises:
+  dark-matter.orientation-arrow-seventeenth-refutation: 'cited for the properties of the conjugation in the reading; nothing of it is computed'
+  synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase: 'cited in the reading for the stored phase requirement'
+  one-relation.arrow-frequency-are-one-bit-level: 'cited in the reading for the identification of frequency sign and time direction'

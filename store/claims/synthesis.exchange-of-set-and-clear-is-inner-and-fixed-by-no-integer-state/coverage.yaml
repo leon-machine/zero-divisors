@@ -1,0 +1,23 @@
+functions:
+  check_exchange_is_conjugation_by_a_product_of_directions:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'm = 1 to 5 in Cl(m,m) over the rationals: the switch relations, the square of u, conjugation by u exchanging every v_a with w_a and squaring to the identity, and the other product of directions sending v_a to -w_a; a general ring A and general m are the proof''s; uniqueness on the generated subring is not computed'
+  check_what_the_exchange_fixes:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'm = 1 to 3: every blade goes to itself with the sign (-1)^|S''|, u is a single blade with coefficient 1, the hyperbolic form for integer coefficients in [-3, 3], and reversal and the grade involution commute with the exchange on all 4^m ordered monomials; the anti-automorphism property of the adjoint is tested on one pair of monomials; the identification of the blade lattice with the integer Clifford algebra is the cited result''s'
+  check_what_the_exchange_moves:
+    kind: sampled
+    clauses:
+    - (iii)
+    - (iv)
+    omits: 'm = 1 to 5: the number operators, h_a = e_a f_a, the total number, the volume element with its sign (-1)^m, and the exchange of the empty and full idempotents, which are annihilated by the clears and the sets respectively; (iv) is tested only on these two idempotents, the general statement being the proof''s two lines'
+  check_integer_states_choose_an_orientation:
+    kind: sampled
+    clauses:
+    - (v)
+    - (vi)
+    omits: 'm = 1 to 3: for all 2^m configurations the state is normalised, takes values 0, 1, -1 on the 4^m ordered monomials, takes the stated values on n_a, v_a v_a^dagger and w_a w_a^dagger, has charge 2|sigma| - m, and composed with the exchange is the state of the complementary configuration; the set of charges; the scalar part is invariant, one half on each n_a and 0 or 1 on blades. The non-existence of an invariant integer state is the proof''s one line: the check computes only its input n_1 + X(n_1) = 1 and the parity fact on a range of integers, which is arithmetic and not a search over states. One non-positive integer state (values 2 and -1 on the two tests) is exhibited to show that the definite-position statement needs positivity'
