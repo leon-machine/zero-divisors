@@ -1,0 +1,27 @@
+functions:
+  check_baryon_and_lepton_number_as_elements:
+    kind: complete
+    clauses:
+    - (i)
+    omits: 'The switch relations of the five modes, the spectral projections of the pair number, the values of n_B, n_L and B - L on each, the agreement with the stored expressions on the even half and the sign change on the odd half, the grade content and the commutator with each e_a, all in Cl(5,5) over the rationals; the species assignment of the sixteen is taken from the stored result, not recomputed; "generates no rotation" is the proof''s remark on bivectors'
+  check_centraliser_is_the_shifts_by_multiples_of_three:
+    kind: complete
+    clauses:
+    - (ii)
+    omits: 'All 64 ordered monomials of the pair algebra: each is an eigenvector of the shift, the counts by shift, which commute with n_B, and the rank of the commutator map (22 for n_B, 20 for the pair number, 38 for n_L); the factor 16 from the slot vectors is checked by their commuting with n_B, the product 352 is arithmetic; the step from monomials to all elements is also covered by the rank computation in the pair algebra'
+  check_table_of_the_forty_five:
+    kind: complete
+    clauses:
+    - (iii)
+    omits: 'All 45 bivectors: the typed generators span them, the dimensions 15 and 21, the compensation identity on the six, anticommutation with P and chi and non-proportionality on each of the 24; that su(2)_L and su(2)_R are the named spans is the stored result''s'
+  check_majorana_element_and_rung_vectors:
+    kind: sampled
+    clauses:
+    - (iv)
+    - (vi)
+    omits: 'The commutators of T with n_B, n_L, B - L, the pair number, hypercharge, su(3) and su(2)_L are exact; rung vectors are tested at one rational pair of coefficients per slot (the statement is linear in them); (vi) is tested on one element of the generated algebra, the general statement being that a centraliser is a subalgebra'
+  check_exchange_reverses_the_charges:
+    kind: complete
+    clauses:
+    - (v)
+    omits: 'The exchange on the ten null vectors, its implementation by e_1...e_5 (tested on the vectors and three further elements), the five charges, chi, T, and the four families and su(2)_L mapped onto themselves by rank'
