@@ -61477,6 +61477,33 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "bf47deef79de2d58",
+  "ledger": null,
+  "parts": {
+   "checks": "09805c38b70192ad",
+   "proofs": "2f34658b19c70306",
+   "rest": "d3b65c89b700e77b",
+   "statement": "9afac29094c8732c"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.state-selection-r-and-le-against-t05": {
   "assumes": [],
   "credit": [

@@ -49433,6 +49433,55 @@
 }
 ]
 },
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
+"failed": false,
+"findings": [],
+"key": "8a69e777adda5ecd",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_both_values_extend_the_state_under_p",
+"ok": true,
+"quantities": [],
+"touched": [
+"rungs.imported-totality-minimality-completion",
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_one_invariant_extension_with_weight_one_half",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state",
+"synthesis.premise-positivity-of-values",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_strings_form_one_orbit_and_two_rotor_classes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_a_string_is_a_weight_on_one_context",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them"
+]
+}
+]
+},
 "synthesis.state-selection-r-and-le-against-t05": {
 "failed": false,
 "findings": [],
