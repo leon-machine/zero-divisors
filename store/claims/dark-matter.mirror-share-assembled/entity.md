@@ -1,7 +1,7 @@
 ---
 id: dark-matter.mirror-share-assembled
 kind: claim
-version: 9
+version: 10
 title: The mirror share, assembled
 status: proved
 region: dark-matter
@@ -25,6 +25,14 @@ credit:
   role: 'wording after the retirement of Premise P4: the equal asymmetry is cited from the copy theorem''s clause (v) with its premises'
   version: 9
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'restatement at the maintainer''s decision: the share of one holds under the hypothesis of equal conversion; the asymmetry ratio is an equality of B - L'
+  version: 10
+  source: maintainer pass 2026-11-12 (asymmetry)
+amendments:
+- version: 10
+  kind: restatement
+  defect: 'the assembled product stated f_2 = 1 as following from the equal asymmetry per mode; by the maintainer''s decision of 12 November 2026 the inherited charge is B - L, the copy equates the two towers'' B - L and not their baryon number, so the share of one needs in addition that the mirror''s ratio of baryon number to B - L equals this tower''s, which is not shown. Restated as conditional on that hypothesis; no number changed.'
 review: typed
 derivations:
 - name: main
@@ -32,12 +40,12 @@ derivations:
   - dark-matter.asymmetry-arrow-counted-fifteenth-refutation@8
   - dark-matter.imported-derived-generation-flag@6
   - dark-matter.imported-inputs-standard-model-chain@6
-  - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-share-one-how-fragile@8
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.mode-counts-two-modules-which-one@6
   - dark-matter.population-count-one-share-half-percent@7
   - dark-matter.projection-every-towers-content-dilutes-ones@3
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   - standard-model.hyp-s-slot-statistics@10
   assumes:
   - dark-matter.p1-single-frozen-point@3
@@ -57,6 +65,10 @@ locators:
   label: thm:share
   line: 474
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Version 9 -> 10. Leon''s decision of 12 November 2026 on the mirror share: f_2 = 1 is restated as holding under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; a stated hypothesis, not a registered premise, no assumes edge), citing clause (i) of dark-matter.stored-asymmetry-charge-not-number at version 11. The opening, clauses (iii) and (iv), the technical and lay levels, the one-liner and two sentences of the proof are restated; clauses (i) and (ii) and both checks are unchanged. No number, check or pin is changed; the open item is attack item (d) of op.matter-asymmetry-origin.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -137,25 +149,25 @@ payload:
 ---
 
 ## formal
-Under Premises \claimref{dark-matter.p1-single-frozen-point}, \claimref{dark-matter.p2-indifference} and \claimref{synthesis.common-ceiling-coupling-premise} (the former Premise P4, democracy of the asymmetry, retired as a postulate, being a theorem for the mirror, clause (iii)), the Standard-Model paper's Hypothesis (S) as carried in Fact \claimref{dark-matter.imported-derived-generation-flag}, and the input list of Fact \claimref{dark-matter.imported-inputs-standard-model-chain}, the mirror tower contributes exactly one visible share:
+Under Premises \claimref{dark-matter.p1-single-frozen-point}, \claimref{dark-matter.p2-indifference} and \claimref{synthesis.common-ceiling-coupling-premise} (the former Premise P4, democracy of the asymmetry, retired as a postulate, being a theorem for the mirror, clause (iii)), the Standard-Model paper's Hypothesis (S) as carried in Fact \claimref{dark-matter.imported-derived-generation-flag}, the input list of Fact \claimref{dark-matter.imported-inputs-standard-model-chain}, and Hypothesis (equal conversion) stated below, the mirror tower contributes exactly one visible share:
 \[
 f_{2} \;=\; \underbrace{\frac{\epsilon_{2}}{\epsilon_{6}}}_{\text{P2}}\cdot\;\underbrace{\frac{n_{2}}{n_{6}}}_{\text{derived}}\;\cdot\;\underbrace{\frac{m_{2}}{m_{6}}}_{\text{derived, given the common ceiling coupling}} \;=\; 1\cdot 1\cdot 1 \;=\; 1, \qquad \Omega_{\mathrm{mirror}} \;=\; \Omega_{b},
 \]
-exactly on the proton-only branch and to half a percent on the burning branch (Proposition \claimref{dark-matter.mirror-share-one-how-fragile}(i)). The three factors are stated separately because they have three standings, and the exposure of the share is the weakest of them.
+exactly on the proton-only branch and to half a percent on the burning branch (Proposition \claimref{dark-matter.mirror-share-one-how-fragile}(i)). The three factors are stated separately because they have three standings, and the exposure of the share is the weakest of them. \emph{Hypothesis (equal conversion).} The mirror's ratio of baryon number to $B - L$ equals this tower's. It is not shown, and it is a stated hypothesis of this result, not a registered premise: the inherited charge is the total $B - L$, and the copy equates the two towers' $B - L$, not their baryon number (Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(i), version 11). The mirror's unit of the observed dark-to-baryon total $5.364$ is conditional on it. It bears on the first factor: as a ratio of $B - L$ that factor is one by (iii), and as a ratio of baryon number, which is what $f_{2}$ and $\Omega_{\mathrm{mirror}} = \Omega_{b}$ need, it is one under the Hypothesis.
 \begin{enumerate}
 \item[(i)] \emph{(The mode ratio: derived, on no premise of this paper.)} $n_{2} = n_{6}$, the same state space.
 \item[(ii)] \emph{(The mass ratio: derived, given the common ceiling coupling.)} $m_{2} = m_{6}$ up to the two sectors' composition, the common ceiling and coupling being Premise \claimref{synthesis.common-ceiling-coupling-premise} along the reversal orbit (Premise \claimref{dark-matter.p2-indifference}, scoped to sector labels, does not reach a coupling).
-\item[(iii)] \emph{(The asymmetry ratio: premised on P2.)} $\epsilon_{2} = \epsilon_{6}$ by the audit along the same orbit (P1's orientation clause a weaker second route), under the premises Theorem \claimref{dark-matter.mirror-tower-copy-one}(v) states for it (the common $N$ of P1 and the charge reading of the stored asymmetry); the former P4 is that clause on the mirror and is not assumed.
-\item[(iv)] \emph{(No temperature in it.)} The share is one anywhere in the interval of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(iii).
+\item[(iii)] \emph{(The asymmetry ratio: premised on P2.)} $\epsilon_{2} = \epsilon_{6}$ by the audit along the same orbit (P1's orientation clause a weaker second route), under the premises Theorem \claimref{dark-matter.mirror-tower-copy-one}(v) states for it (the common $N$ of P1 and the charge reading of the stored asymmetry); the equality is of the charge $B - L$, and it is an equality of baryon number under Hypothesis (equal conversion); the former P4 is that clause on the mirror and is not assumed.
+\item[(iv)] \emph{(No temperature in it.)} Under Hypothesis (equal conversion) the share is one anywhere in the interval of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}(iii); what holds there without it is the equal $B - L$.
 \end{enumerate}
 
 ## technical
-Under the single frozen point, indifference and the common ceiling coupling, with Hypothesis (S) and the input list of the Standard-Model chain (the democracy of the asymmetry being discharged for the mirror, not assumed), the mirror tower's share factorises as $f_{2} = (\epsilon_{2}/\epsilon_{6})(n_{2}/n_{6})(m_{2}/m_{6}) = 1 \cdot 1 \cdot 1 = 1$, so $\Omega_{\mathrm{mirror}} = \Omega_{b}$, exactly on the proton-only branch and to half a percent on the burning branch. The three factors have three standings. The mode ratio $n_{2} = n_{6}$ is derived from the shared state space, on no premise of the dark-matter analysis. The mass ratio is derived given the common-ceiling-coupling premise, which supplies the common ceiling and coupling along the reversal orbit (indifference, scoped to sector labels, does not reach a coupling), up to the two sectors' composition. The asymmetry ratio $\epsilon_{2} = \epsilon_{6}$ is premised on indifference along the same orbit, which discharges the democracy premise for the mirror.
+Under the single frozen point, indifference and the common ceiling coupling, with Hypothesis (S) and the input list of the Standard-Model chain (the democracy of the asymmetry being discharged for the mirror, not assumed), and under the hypothesis of equal conversion (the mirror's ratio of baryon number to $B - L$ equals this tower's, which is not shown), the mirror tower's share factorises as $f_{2} = (\epsilon_{2}/\epsilon_{6})(n_{2}/n_{6})(m_{2}/m_{6}) = 1 \cdot 1 \cdot 1 = 1$, so $\Omega_{\mathrm{mirror}} = \Omega_{b}$, exactly on the proton-only branch and to half a percent on the burning branch. The three factors have three standings. The mode ratio $n_{2} = n_{6}$ is derived from the shared state space, on no premise of the dark-matter analysis. The mass ratio is derived given the common-ceiling-coupling premise, which supplies the common ceiling and coupling along the reversal orbit (indifference, scoped to sector labels, does not reach a coupling), up to the two sectors' composition. The asymmetry ratio $\epsilon_{2} = \epsilon_{6}$ is premised on indifference along the same orbit, which discharges the democracy premise for the mirror; it is an equality of $B - L$, and of baryon number only under the hypothesis of equal conversion.
 
-No temperature enters: the share is one anywhere in the allowed interval for the stored asymmetry. The exposure of the share is that of its weakest factor, the premised asymmetry ratio.
+No temperature enters: under that hypothesis the share is one anywhere in the allowed interval for the stored asymmetry. The exposure of the share is that of its weakest factor, the premised asymmetry ratio with the hypothesis it now carries; the mirror's unit of the observed dark-to-baryon total $5.364$ is conditional on the hypothesis.
 
 ## lay
-The mirror world, our world with the roles of time and space reversed, contributes exactly as much matter as our ordinary matter (exactly on one branch of the analysis, to within half a percent on the other), given two of the paper's premises (a single frozen point and indifference between mirror towers; a third, that the oriented towers share one asymmetry, follows for the mirror and is not assumed), the assumption that the two worlds start with equal force strengths at one common highest scale (the common ceiling coupling), the Standard-Model inputs, and the assumption that the slots behave like the pairs (Hypothesis (S)). The three ingredients, how many kinds of particle there are, how heavy they are and how large the matter excess is, each come out equal, but on different footings: the first is derived outright, the second depends on the equal-strengths assumption, and the third is assumed through the indifference symmetry. The answer does not depend on how hot the mirror world is.
+The mirror world, our world with the roles of time and space reversed, contributes exactly as much matter as our ordinary matter (exactly on one branch of the analysis, to within half a percent on the other), given two of the paper's premises (a single frozen point and indifference between mirror towers; a third, that the oriented towers share one asymmetry, follows for the mirror and is not assumed), the assumption that the two worlds start with equal force strengths at one common highest scale (the common ceiling coupling), the Standard-Model inputs, the assumption that the slots behave like the pairs (Hypothesis (S)), and one further condition that has not been shown: what is inherited equally is the excess of baryons minus leptons, and baryons must make up the same fraction of it in the mirror world as in ours. The three ingredients, how many kinds of particle there are, how heavy they are and how large the matter excess is, each come out equal, but on different footings: the first is derived outright, the second depends on the equal-strengths assumption, and the third is assumed through the indifference symmetry. The answer does not depend on how hot the mirror world is.
 
 ## one-liner
-Under the single frozen point, indifference, the common ceiling coupling and Hypothesis (S), the democracy of the asymmetry being discharged for the mirror, the mirror tower's share is $f_{2} = 1 \cdot 1 \cdot 1 = 1$, so $\Omega_{\mathrm{mirror}} = \Omega_{b}$ (to half a percent on the burning branch), the asymmetry ratio being the premised factor.
+Under the single frozen point, indifference, the common ceiling coupling and Hypothesis (S), the democracy of the asymmetry being discharged for the mirror, and under the hypothesis of equal conversion (the mirror's ratio of baryon number to $B - L$ equals this tower's, which is not shown), the mirror tower's share is $f_{2} = 1 \cdot 1 \cdot 1 = 1$, so $\Omega_{\mathrm{mirror}} = \Omega_{b}$ (to half a percent on the burning branch), the asymmetry ratio being the premised factor.

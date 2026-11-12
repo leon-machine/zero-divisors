@@ -36,7 +36,7 @@ derivations:
   - dark-matter.flag-bit-exists-exactly-tower-dimension@3
   - dark-matter.imported-derived-generation-flag@6
   - dark-matter.imported-trichotomy-descents-data@6
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   proof: proof-main.tex
 checked_by:
 - kind: legacy
@@ -55,6 +55,10 @@ locators:
   label: prop:arrow
   line: 504
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026). Pointer for the register note of (iv): from version 5 of synthesis.matter-asymmetry-registered-free-input the registered datum is named as the total B - L, so the equality of epsilon that the count uses is of B - L, and the count needs in addition that the mirror''s ratio of baryon number to B - L equals this tower''s, which is not shown (dark-matter.stored-asymmetry-charge-not-number (i), version 11; attack item (d) of op.matter-asymmetry-origin). No sentence of this result named baryon number as the inherited charge. The pointer is kept here and not in the formal text, where the validator counts an added sentence as a substantive change needing a new version (E206).'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'

@@ -21,9 +21,9 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -41,6 +41,10 @@ locators:
   label: comp:mirror
   line: 770
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The computation takes the mirror''s baryon number equal to this tower''s and a copied lepton number L <= 0 (this tower''s equilibrium value L/B = -51/28 with one light doublet, or zero). With B - L the copied datum, both inputs are conditional: the equal baryon number is the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11), and the split of the mirror''s B - L between B and L is not fixed by the copy. The statement and the check are unchanged (the check keeps the one-doublet equilibrium; the number of light doublets, 28/79 against 8/23, is attack item (a) of the same open problem).'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.mirror-temperature-measures-deposit-under-r@1
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
@@ -48,6 +48,10 @@ lineage:
   - synthesis.cold-mirror-needs-non-equilibrium-descent
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The hypothesis list says that under the charge reading the mirror carries the same baryon charge as this tower. At version 11 of the charge Proposition the charge is B - L: the mirror carries the same B - L, and the same baryon number only under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). The uniformity this result requires is then of B - L per unit entropy; a uniform baryon number per unit entropy follows where the conversion coefficient is uniform. The pin to the charge Proposition is not moved.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

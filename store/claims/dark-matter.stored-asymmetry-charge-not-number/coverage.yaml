@@ -1,8 +1,8 @@
 functions:
   check_charge_reading_against_thermal_reading:
     kind: partial
-    clauses: ["(i) f_2 = 1 at any mirror temperature", "(iv) thermal reading at most 0.090 under the cap and 10^-7 or less on the interval"]
-    omits: "f_2 = 1 is obtained by setting Q_6 = Q_2 = eps N (the same eps and N under P1), so it holds by construction at the sample xi; exact content is the bracket 0.448^3 in (0.0899, 0.0900) and xi_hot^3 < 1e-7; the cap 0.448 itself is an input"
+    clauses: ["(i) the mirror carries the same charge Q = eps N (the total B - L) at any mirror temperature", "(iv) thermal reading at most 0.090 under the cap and 10^-7 or less on the interval"]
+    omits: "the ratio Q_2 m/(Q_6 m) = 1 is obtained by setting Q_6 = Q_2 = eps N (the same eps and N under P1), so it holds by construction at the sample xi and tests the equal B - L only; that f_2 = 1 as an equality of baryon number needs the mirror's ratio of baryon number to B - L to equal this tower's, which clause (i) at version 11 states as not shown and the check does not touch (coverage line edited 2026-11-12; the judge below has not re-agreed); exact content is the bracket 0.448^3 in (0.0899, 0.0900) and xi_hot^3 < 1e-7; the cap 0.448 itself is an input"
   check_origin_gravity_cannot_supply_the_charge:
     kind: partial
     clauses: ["(ii) gravitational production more than four orders short of n_B/s = 8.7e-11"]

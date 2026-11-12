@@ -39,7 +39,7 @@ derivations:
   - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
 supports:
-- dark-matter.mirror-tower-copy-one@10
+- dark-matter.mirror-tower-copy-one@11
 checked_by:
 - kind: check
   ref: check.py::test_gauge_algebra_by_tower

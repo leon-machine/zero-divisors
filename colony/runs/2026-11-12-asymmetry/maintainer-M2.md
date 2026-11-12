@@ -170,3 +170,123 @@ physical consequence: with D2 it is conditional until attack item (d) is done.
 - `coverage.yaml` of the charge Proposition not edited (see 1.2).
 - `success` of the open problem not reworded (see 1.3).
 - No commit, no repin, no lock, no build.
+
+# Second pass (Leon's decisions of 12 November 2026 on the mirror share)
+
+Decisions applied: (1) the results stating `f_2 = 1` as exact are restated as conditional; scope notes on the
+dependants; the 5.364 total is said to be conditional wherever a restated result or note touches it, no number
+changed. (2) `partial` for op.matter-asymmetry-origin is confirmed (no edit needed). Nothing committed by me,
+nothing repinned.
+
+The condition is named the same way in the three restated results, one labelled paragraph with identical wording:
+
+> *Hypothesis (equal conversion).* The mirror's ratio of baryon number to B - L equals this tower's. It is not
+> shown, and it is a stated hypothesis of this result, not a registered premise: the inherited charge is the
+> total B - L, and the copy equates the two towers' B - L, not their baryon number (Proposition
+> dark-matter.stored-asymmetry-charge-not-number (i), version 11). The mirror's unit of the observed
+> dark-to-baryon total 5.364 is conditional on it.
+
+No assumes edge was added and the validator did not ask for one.
+
+## S1. Restated (version + 1, amendments entry kind restatement, credit entry, extraction entry)
+
+| entity | version | what changed |
+|---|---|---|
+| `dark-matter.mirror-tower-copy-one` | 10 -> 11 | (iii): `f_2 = 1` and `Omega_mirror = Omega_b` under the Hypothesis; (v): the equality proved is of B - L, the Hypothesis added to what the share of one rests on; technical, lay, one-liner; two sentences of the proof |
+| `dark-matter.mirror-share-assembled` | 9 -> 10 | opening, (iii), (iv): the product is one under the Hypothesis, the asymmetry factor is one as a ratio of B - L; technical, lay, one-liner; two sentences of the proof |
+| `dark-matter.mirror-share-one-how-fragile` | 7 -> 8 | (i): `f_2 = 1` under the Hypothesis; (ii) closing sentence: "exact" now said of the mass factor; level line; technical, lay, one-liner; first sentence of the proof |
+
+Only three results were restated: the brief says "the four results" and then names three entities (the copy
+theorem's two clauses make the fourth sentence). `dark-matter.population-count-one-share-half-percent` ("its share
+is exactly one") got a scope note, as listed in the brief; if it was meant as the fourth restatement it is a
+small edit to (i).
+
+Kept on purpose: in (v) of the copy theorem the words "a sector label of the descent" stay, because the audit
+of P2 runs on sector labels; a parenthesis now says the charge is the total B - L, not the residue label r and
+not baryon number. My first-pass recommendation to reword that phrase is withdrawn.
+
+Checks of the three: none asserts the asymmetry factor. They compute the mode ratio, the mean-mass ratio
+(0.995), the one-loop factors and the coupling window; their labels speak of the mass factor of `f_2`, which the
+restated statements keep. No check, label or coverage line of the three was edited. `check4` on each: pass.
+
+## S2. Scope notes (version kept, formal text untouched; `extraction.maintainer_pass_2026_11_12`)
+
+`dark-matter.population-count-one-share-half-percent`, `synthesis.common-ceiling-coupling-premise`,
+`synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball`, `dark-matter.unit-ball-rule`,
+`synthesis.adiabatic-deposit-modulation-is-a-time-shift`, `dark-matter.open-channels-their-costs`,
+`dark-tower-matter.mirrors-composition` (check unchanged), `simulations.imported-mirror`,
+`synthesis.mirror-temperature-measures-deposit-under-r` (the xi factor of about (1/c)^(1/4), roughly 1.3, is
+written as an estimate, not computed in the store and not checked),
+`dark-matter.asymmetry-arrow-counted-fifteenth-refutation`.
+
+Deviation, the fifteenth refutation: the brief asked for a one-sentence pointer in its note with the version
+kept. The note is part of the formal text, and the validator refused the added sentence there (E206,
+"substantive fields changed without a version bump"). I removed the sentence and put the pointer in the
+extraction note, version 8 kept. If Leon wants it visible in the formal note, that needs version 9 with an
+amendments entry and one more lagging pin set.
+
+These notes live in the extraction block, so they are in the record and not in the rendered statement. A
+reader of the site sees the condition only on the three restated results and on the charge Proposition.
+
+## S3. Wording fixes in today's accepted claims (version 1 kept, pins not moved)
+
+- `synthesis.baryon-number-centraliser-in-the-five-mode-algebra`, Reading: "is a dynamics conserving the baryon
+  charge, and so that the charge is inherited on that class" -> "is a dynamics conserving baryon number, and so
+  that baryon number is unchanged on that class", with a parenthesis that the inherited charge is B - L from
+  version 11 of the charge Proposition.
+- `synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them`, Reading: "speaks of baryon number"
+  -> "spoke of baryon number at version 10, the version used here; from version 11 it names the charge as the
+  total B - L and keeps the three objects apart"; and "the stored sentence ..." -> "the sentence of version 10
+  ..., and version 11 is restated so".
+The validator accepted both at version 1.
+
+## S4. Coverage of the charge Proposition
+
+`dark-matter.stored-asymmetry-charge-not-number/coverage.yaml`, `check_charge_reading_against_thermal_reading`:
+the clause quoted is now "(i) the mirror carries the same charge Q = eps N (the total B - L) at any mirror
+temperature", and `omits` says the check tests the equal B - L only and does not touch the equality of baryon
+number. **The judge has not re-agreed**: the `judge` block still carries the verdict of 2026-10-23 on the old
+line, and the `omits` text says so. `check.py` unchanged; `check4`: pass.
+
+## S5. Pins that now lag (not repinned)
+
+- `dark-matter.stored-asymmetry-charge-not-number@10` (now 11), twelve: dark-matter.mirror-share-assembled,
+  dark-matter.radiation-audit-what-theorem-closes-what, dark-tower-matter.mirrors-composition,
+  dark-tower-matter.mirrors-temperature-p2, pred.no-indirect-dark-signals, simulations.imported-mirror,
+  synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them,
+  synthesis.adiabatic-deposit-modulation-is-a-time-shift, synthesis.mirror-temperature-measures-deposit-under-r,
+  synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3,
+  synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping,
+  synthesis.tower-charge-sector-label-temperature-not.
+- `dark-matter.mirror-tower-copy-one@10` (now 11), twenty-one:
+  dark-matter.asymmetry-arrow-counted-fifteenth-refutation, dark-matter.coefficients-floors-they-give-what-gravity,
+  dark-matter.mirror-share-assembled, dark-matter.mirror-share-one-how-fragile,
+  dark-matter.mode-counts-two-modules-which-one, dark-matter.no-coupling-rule-odd-towers-follows,
+  dark-matter.open-channels-their-costs, dark-matter.population-count-one-share-half-percent,
+  dark-matter.radiation-audit-what-theorem-closes-what, dark-matter.stored-asymmetry-charge-not-number,
+  dark-tower-matter.mirrors-composition, dark-tower-matter.mirrors-temperature-p2,
+  odd-extensions.imported-copy-theorem-soldered-residue,
+  standard-model.imported-sectors-superselection-mirror-copy, simulations.imported-mirror,
+  synthesis.dimmed-burst-time-rescaled-copy,
+  synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio,
+  synthesis.gauge-algebra-by-tower, synthesis.mirror-asymmetry-route-one,
+  synthesis.mirror-temperature-measures-deposit-under-r, synthesis.tower-charge-sector-label-temperature-not.
+- `dark-matter.mirror-share-one-how-fragile@7` (now 8), five: dark-matter.mirror-share-assembled,
+  dark-matter.population-count-one-share-half-percent, dark-tower-matter.r1-has-no-mechanism-odd-towers,
+  simulations.imported-mirror, synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball.
+- `dark-matter.mirror-share-assembled@9` (now 10): no pinned dependant.
+- `synthesis.matter-asymmetry-registered-free-input@4` (now 5): no pinned dependant.
+
+The restated results lag on each other: the assembled share pins the copy theorem @10, the fragility result @7
+and the charge Proposition @10; the fragility result pins the copy theorem @10; the charge Proposition pins the
+copy theorem @10. Their new text cites the charge Proposition "version 11" in words while the assembled share's
+edge stays at @10. Content to look at on repin, beyond the entities already noted: the two imported restatements
+of the copy theorem (`odd-extensions.imported-copy-theorem-soldered-residue`,
+`standard-model.imported-sectors-superselection-mirror-copy`) and `simulations.imported-mirror`, if they repeat
+the share of one.
+
+## S6. Left open
+- The equality of the two conversion ratios: attack item (d) of op.matter-asymmetry-origin, unchanged.
+- The notes that carry the paper's running text ("The mirror share is exactly one" in
+  `note.dark-matter.setting-predictions-collected`, and the like) were not in the brief and are untouched.
+- Edges on the charge Proposition, the `success` clause of the open problem: as in the first pass.

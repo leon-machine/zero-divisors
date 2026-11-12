@@ -2704,18 +2704,23 @@
     "Claude Fable 5.2",
     "wording after the retirement of Premise P4: the equal asymmetry is cited from the copy theorem's clause (v) with its premises",
     9
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision: the share of one holds under the hypothesis of equal conversion; the asymmetry ratio is an equality of B - L",
+    10
    ]
   ],
-  "hash": "f908b6247b2458f6",
+  "hash": "ce42de0f58895ece",
   "ledger": null,
   "parts": {
    "checks": "6da68b821dc60e8e",
-   "proofs": "6b79037b3fb190c7",
+   "proofs": "50f0acf067015bcb",
    "rest": "d3b65c89b700e77b",
-   "statement": "f3ad95e1588c833d"
+   "statement": "d0844806ab3dc594"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "dark-matter.mirror-share-one-how-fragile": {
   "assumes": [
@@ -2736,18 +2741,23 @@
     "Claude Opus 5.5",
     "maintainer pass, share protection restated onto the common-ceiling-coupling premise at Leon's decisions",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clauses (i) and (ii) at the maintainer's decision: exactness is of the mass factor; f_2 = 1 holds under the hypothesis of equal conversion",
+    8
    ]
   ],
-  "hash": "6ad85d0c19460177",
+  "hash": "79ed9bfdb0c20174",
   "ledger": null,
   "parts": {
    "checks": "392eeb7b189db1c4",
-   "proofs": "cc3bd9b72ce9382b",
+   "proofs": "1a88a00aac0edf2a",
    "rest": "d3b65c89b700e77b",
-   "statement": "75c3f47242b4a492"
+   "statement": "2d3ec330993ee62b"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "dark-matter.mirror-tower-copy-one": {
   "assumes": [
@@ -2780,18 +2790,23 @@
     "Claude Fable 5.2",
     "clause (v) given its stated premises (common N of P1, the charge reading), Premise P4 retired as a postulate in its favour",
     10
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clauses (iii) and (v) at the maintainer's decision: the equality of (v) is of B - L, and the share of one in (iii) holds under the hypothesis of equal conversion",
+    11
    ]
   ],
-  "hash": "29fd6e1e81c311d2",
+  "hash": "ad9c7023ac011e94",
   "ledger": null,
   "parts": {
    "checks": "c199048d69935583",
-   "proofs": "c8b4e4f8e6680d5e",
+   "proofs": "6d3902804673851e",
    "rest": "d3b65c89b700e77b",
-   "statement": "b61ddad570025687"
+   "statement": "aca18dfd29fb222d"
   },
   "status": "proved",
-  "version": 10
+  "version": 11
  },
  "dark-matter.mode-counts-two-modules-which-one": {
   "assumes": [
@@ -2945,7 +2960,7 @@
  },
  "dark-matter.orientation-arrow-seventeenth-refutation": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-cpt-covariance@4",
    "dark-matter.premise-flag-as-datum@4"
   ],
   "credit": [
@@ -3187,18 +3202,28 @@
     "Claude Opus 5.5",
     "drafting of the restated sentence",
     3
+   ],
+   [
+    "Leon Butler",
+    "decision to restrict the action clause on the family terms to the adjoint reading",
+    4
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting of the restricted action clause",
+    4
    ]
   ],
-  "hash": "9090a5a241061222",
+  "hash": "a52beffc80ac7f4c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "a6c4751e45ced69f",
-   "statement": "e44d22ef2f2d902d"
+   "statement": "93f84e482d026ad4"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "dark-matter.premise-flag-as-datum": {
   "assumes": [],
@@ -3582,18 +3607,23 @@
     "Claude Opus 5.5",
     "wording of the P1 parenthetical, the number pi N^2/ln 2 named a count of registered units and the light-ray count corrected",
     10
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clauses (i) and (ii) at the maintainer's decision: the residue label, B - L and baryon number named apart; the charge is B - L; no statement that baryon number cannot be produced afterwards; the mirror share made conditional",
+    11
    ]
   ],
-  "hash": "5071b31829d134ce",
+  "hash": "cf7471b5d2f3b6d9",
   "ledger": null,
   "parts": {
    "checks": "2d0097beeae084dd",
-   "proofs": "af1a4a59f14c48b0",
+   "proofs": "0b3db4d4cbb4af1e",
    "rest": "d3b65c89b700e77b",
-   "statement": "045a59ccdb0e9042"
+   "statement": "2422f42b90518e4e"
   },
   "status": "proved",
-  "version": 10
+  "version": 11
  },
  "dark-matter.superselected-hence-dark-exactly-stable": {
   "assumes": [
@@ -9177,7 +9207,7 @@
  "neutrino.imported-ceiling-under-hypothesis-u-arrow": {
   "assumes": [
    "dark-matter.hyp-u-equal-rank-one-eigenvalues@3",
-   "dark-matter.premise-cpt-covariance@3"
+   "dark-matter.premise-cpt-covariance@4"
   ],
   "credit": [
    [
@@ -34138,7 +34168,7 @@
  },
  "one-relation.imported-flag-arrow-superselection": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-cpt-covariance@4",
    "dark-matter.premise-flag-as-datum@4"
   ],
   "credit": [
@@ -34484,7 +34514,7 @@
  },
  "one-relation.record-chain-votes-measurement-without-collapse": {
   "assumes": [
-   "dark-matter.premise-cpt-covariance@3",
+   "dark-matter.premise-cpt-covariance@4",
    "dark-matter.premise-flag-as-datum@4",
    "one-relation.recorded-sectors-superselected-premise@1",
    "one-relation.recording-irreversible-stated-so-it-can@1"
@@ -47281,6 +47311,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "061eb305c9d3760e",
+  "ledger": null,
+  "parts": {
+   "checks": "7a1bb4ce30ec6dd8",
+   "proofs": "878fc30599ee0136",
+   "rest": "d3b65c89b700e77b",
+   "statement": "6fa8218193c80215"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
   "assumes": [],
   "credit": [
@@ -47570,6 +47625,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "synthesis.baryon-number-centraliser-in-the-five-mode-algebra": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d812a8686601272b",
+  "ledger": null,
+  "parts": {
+   "checks": "8992cb3a312fbe23",
+   "proofs": "6c1359c60f5a3923",
+   "rest": "d3b65c89b700e77b",
+   "statement": "1f09a74097c68482"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.bkl-bounce-invariant-holonomy-and-bound": {
   "assumes": [],
@@ -49506,18 +49586,28 @@
     "Claude Opus 5.5",
     "unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar",
     4
+   ],
+   [
+    "Leon Butler",
+    "decision to correct the last sentence of clause (3)",
+    5
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the last sentence of clause (3) and its exact check",
+    5
    ]
   ],
-  "hash": "10174d65af6cd52d",
+  "hash": "689a0cae3ad6077c",
   "ledger": null,
   "parts": {
-   "checks": "917b205e5e163137",
-   "proofs": "e2ba80fa420d0581",
+   "checks": "21a84f29c7d2df47",
+   "proofs": "0db7231f3443b1fa",
    "rest": "4d3cb792e4751025",
-   "statement": "1bd71c856fcb4b33"
+   "statement": "b4d831d51b473464"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.crossing-transport-tipler-threshold-sharp": {
   "assumes": [],
@@ -50677,6 +50767,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "414a23adfdb2a2c8",
+  "ledger": null,
+  "parts": {
+   "checks": "0457b9e8d59e2243",
+   "proofs": "fb471b42b5aaa5bb",
+   "rest": "325a7bef2d7dfcfa",
+   "statement": "4aa9316298949bf0"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
   "assumes": [],
   "credit": [
@@ -50996,6 +51111,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "485a6107d4a5bfc7",
+  "ledger": null,
+  "parts": {
+   "checks": "591a7c010a118aee",
+   "proofs": "7cfa8f80f925f093",
+   "rest": "d3b65c89b700e77b",
+   "statement": "c02814234eef050c"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.floor-regulator-keeps-the-charge-and-the-central-term-below-the-cut-off": {
   "assumes": [],
@@ -57306,18 +57446,23 @@
     "Claude Fable 5.2",
     "note on the unit of epsilon: the quoted figure is a yield per unit entropy used as a comoving ruler",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision: the inherited charge is named as B - L, and the valuation by the measured baryon density is made conditional on the anomalous weak equilibrium and its coefficient",
+    5
    ]
   ],
-  "hash": "503983849b1960aa",
+  "hash": "6b168eddbbf4dfa6",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "e612bf152c42edf7"
+   "statement": "3b062cf6f8b14bb2"
   },
   "status": "postulate",
-  "version": 4
+  "version": 5
  },
  "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state": {
   "assumes": [],

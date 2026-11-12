@@ -25,10 +25,10 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@7
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-share-one-how-fragile@8
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.radiation-audit-what-theorem-closes-what@8
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -47,6 +47,10 @@ locators:
   label: fact:mirror
   line: 100
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The mirror''s baryon-to-photon ratio eta'' = eta/xi^3 takes the mirror''s baryon number equal to this tower''s, which holds under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). The simulation statements are unchanged.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
