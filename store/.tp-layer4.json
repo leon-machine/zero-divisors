@@ -31583,6 +31583,55 @@
 }
 ]
 },
+"synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them": {
+"failed": false,
+"findings": [],
+"key": "6e8c946608248f5d",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_commutant_of_the_gauge_algebra_is_six_dimensional",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are",
+"standard-model.hyp-s-slot-statistics"
+]
+},
+{
+"derivation": null,
+"func": "check_dirac_majorana_and_mixing_conditions",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.invariant-pairing-five-modes",
+"standard-model.majorana-element",
+"standard-model.proton-decay-only-through-slot-pair"
+]
+},
+{
+"derivation": null,
+"func": "check_mixed_coefficients_leave_hypercharge_only",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.imported-anomaly-coefficients",
+"standard-model.majorana-element"
+]
+},
+{
+"derivation": null,
+"func": "check_equilibrium_generates_and_erases_baryon_number",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-tower-matter.mirrors-composition",
+"standard-model.bidoublet-complex"
+]
+}
+]
+},
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
@@ -31986,6 +32035,64 @@
 "synthesis.attachment-conformal-energy-is-generated-by-z",
 "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection",
 "synthesis.imported-gtg-dictionary"
+]
+}
+]
+},
+"synthesis.baryon-number-centraliser-in-the-five-mode-algebra": {
+"failed": false,
+"findings": [],
+"key": "051f1fd3da3f8465",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_baryon_and_lepton_number_as_elements",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.hyp-s-slot-statistics",
+"standard-model.proton-decay-only-through-slot-pair",
+"standard-model.under-s-composites-state-space-spinor"
+]
+},
+{
+"derivation": null,
+"func": "check_centraliser_is_the_shifts_by_multiples_of_three",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.proton-decay-only-through-slot-pair"
+]
+},
+{
+"derivation": null,
+"func": "check_table_of_the_forty_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are",
+"standard-model.proton-decay-only-through-slot-pair"
+]
+},
+{
+"derivation": null,
+"func": "check_majorana_element_and_rung_vectors",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.bidoublet-complex",
+"standard-model.majorana-element"
+]
+},
+{
+"derivation": null,
+"func": "check_exchange_reverses_the_charges",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are",
+"standard-model.majorana-element"
 ]
 }
 ]
@@ -36884,6 +36991,52 @@
 }
 ]
 },
+"synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state": {
+"failed": false,
+"findings": [],
+"key": "b1eacecac11111e1",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_exchange_is_conjugation_by_a_product_of_directions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_what_the_exchange_fixes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.integer-clifford-algebras-contain-no-switch",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_what_the_exchange_moves",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_integer_states_choose_an_orientation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.integer-clifford-algebras-contain-no-switch",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+}
+]
+},
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
@@ -37459,6 +37612,45 @@
 "dark-matter.parallel-boundary-mode-spaces-one-wall",
 "hawking.greybody-inheritance-under-interface-premise",
 "synthesis.dimmed-burst-time-rescaled-copy"
+]
+}
+]
+},
+"synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog": {
+"failed": false,
+"findings": [],
+"key": "d00160ab6640d601",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_only_the_total_exchange_reverses_the_charges_and_keeps_the_gauge_algebra",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.automorphisms-preserve-slot-pair-split-are",
+"standard-model.hyp-s-slot-statistics",
+"standard-model.proton-decay-only-through-slot-pair"
+]
+},
+{
+"derivation": null,
+"func": "check_commutator_determinant_is_odd_under_conjugation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-jarlskog-commutator-identity"
+]
+},
+{
+"derivation": null,
+"func": "check_imported_identity_and_sign_of_j_on_a_rational_pair",
+"ok": true,
+"quantities": [
+"quantity.jarlskog-invariant"
+],
+"touched": [
+"synthesis.imported-jarlskog-commutator-identity"
 ]
 }
 ]
