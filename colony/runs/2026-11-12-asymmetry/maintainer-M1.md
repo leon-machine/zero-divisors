@@ -120,3 +120,43 @@ Of the CPT premise (D4):
 - Not run: the full check, repin, lock, build. `store/.tp-lock.json` and `store/.tp-layer4.json` still record
   the old versions.
 - The folder id of the flag-conjugate claim still carries its earlier title; renaming is left as its note says.
+
+## Second pass (two wording follow-ups)
+
+Validation after these edits: layers 1,2,3 give 0 errors, 0 warnings. No repin, lock or build.
+
+1. `synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog`, version kept at 1.
+   - Formal, Reading paragraph: "the store does not choose" replaced by: the premise
+     (`dark-matter.premise-cpt-covariance`, from version 4) takes the second, adjoint reading, the first
+     being kept for what it would require. The first-reading sentence is now conditional ("would require
+     J = 0: with J non-zero it would not hold in the quark sector ..."), still labelled argued, and "a matter
+     for the maintainer" is removed. The adjoint sentence gains "and as the premise now states". "Not shown"
+     now notes that the adjoint reading is premised, not derived.
+   - Technical: last sentence now says the premise takes the adjoint reading and the other would require the
+     invariant to vanish. Lay: one sentence added to the same effect. One-liner unchanged.
+   - Extraction note updated to match (it no longer says the Reading describes the premise at version 3).
+   - Clauses (i) to (iv), the proof and the check are untouched.
+   - Validator: no finding. Reason to know: the version rule (E206) compares the formal level against
+     `store/.tp-lock.json`, and this claim is not in the lock yet, so the validator did not judge the edit
+     either way. Any formal-level edit to a locked entity is counted as substantive (see item 2).
+
+2. `dark-matter.orientation-arrow-seventeenth-refutation`, version kept at 10, pins not moved.
+   - Re-read against the premise at version 4. The formal conclusion is unchanged: the proof needs only
+     S_mu o C = S_mu for every mu (the premise, now with the adjoint reading on the family terms) and
+     q(Cx) = -q(x); both stand, so the bit still takes both values on every nonempty solution space and is
+     initial data. That Cx also has the opposite arrow is what the claim already says ("one choice, made
+     once"). No restatement needed.
+   - The sentence was first put in the formal level; the validator then raised E206 (substantive fields
+     changed without a version bump), because it hashes the whole formal level. Since the instruction was a
+     wording change with the version kept, I moved the sentence to the technical level, where the action
+     clause is also quoted, and left the formal level byte-identical. If Leon wants the sentence in the
+     formal level, that needs version 11 with an amendments entry.
+   - Added: the technical sentence (adjoint reading on the family terms, citing the premise; the exchange of
+     orientations then also reverses the arrow, argued, citing the flag-conjugate claim) and an
+     extraction.maintainer_pass_2026_11_12 note.
+   - For Leon's attention, not acted on: the flag-conjugate claim's Reading argues that no stored
+     automorphism exchanges two states of the same laws and the same arrow with opposite baryon charge, so
+     the exchange argument does not show the sign of the excess relative to J and the arrow to be initial
+     data. This does not contradict the refutation's formal conclusion (which is about the orientation bit,
+     identified with the arrow), but its lay level ("none of the framework's laws can make that choice")
+     reads more broadly than that. I left it as it is.
