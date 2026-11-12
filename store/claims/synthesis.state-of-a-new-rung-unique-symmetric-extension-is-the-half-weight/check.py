@@ -344,5 +344,11 @@ def check_either_sign_change_alone_admits_another_invariant_extension():
     ch, sh = F(5, 4), F(3, 4)
     be = add(scal(ch, e(1)), scal(sh, f(1)))                             # the image of e under the boost
     ok = ok and dagger(be) != be and dagger(e(1)) == e(1)
-    GA.check("each sign change alone admits another invariant extension; a boost does not commute with the adjoint", ok)
+    # for l = 0 the sign change of e alone does give uniqueness among states: invariance kills the
+    # values on e and f e, and reality kills the value on f (f^dagger = -f)
+    S1 = sq(1)
+    ok = ok and dagger(f(0)) == scal(-1, f(0))
+    ok = ok and flip(e(0), {0}) == scal(-1, e(0)) and flip(mul(f(0), e(0), S1), {0}) == scal(-1, mul(f(0), e(0), S1))
+    ok = ok and flip(f(0), {0}) == f(0)
+    GA.check("sign change of f alone (l = 0) and of e alone (l = 1) admit other invariant extensions; boosts do not commute with the adjoint", ok)
     return ok

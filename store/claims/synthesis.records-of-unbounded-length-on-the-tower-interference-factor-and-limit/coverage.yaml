@@ -13,7 +13,7 @@ functions:
     kind: sampled
     clauses:
     - (ii)
-    omits: 'N = 1, 2, 3 and c in {3/5, 0}; self-adjointness is tested on a subset of pairs of basis vectors, evenness and the idempotent on all; general N is the proof'
+    omits: 'N = 1, 2, 3 and c in {3/5, 0}; the two counterexamples at c = 0, N = 1 to a looser statement of clause (iii); self-adjointness is tested on a subset of pairs of basis vectors, evenness and the idempotent on all; general N is the proof'
   check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair:
     kind: sampled
     clauses:

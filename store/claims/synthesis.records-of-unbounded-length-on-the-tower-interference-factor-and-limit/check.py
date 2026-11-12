@@ -186,6 +186,13 @@ def check_interference_is_full_for_an_element_touching_every_pair():
             for t in range(0, 2 ** m, 7):
                 for u in range(0, 2 ** m, 5):
                     ok = ok and ip({t: F(1)}, O({u: F(1)})) == ip(O({t: F(1)}), {u: F(1)})
+    # c = 0, N = 1, x = on of the first rung of pair 1 (rung 4), a pair the vector leaves empty:
+    # value 0 in Psi_1 against 16/25 in the mixture defined with pair 1 filled
+    A1, B1 = branches(1, F(0), F(1), [0])
+    psi1 = vadd(vsc(AL, A1), vsc(BE, B1))
+    ok = ok and ip(psi1, num(4, psi1)) == 0
+    A2, B2 = branches(2, F(0), F(1), [0, 1])
+    ok = ok and AL * AL * ip(A2, num(4, A2)) + BE * BE * ip(B2, num(4, B2)) == F(16, 25)
     GA.check("for N = 1, 2, 3 an even self-adjoint element touching every pair has interference 24/25", ok)
     return ok
 
