@@ -40567,10 +40567,10 @@
 }
 ]
 },
-"synthesis.infinite-strings-tail-classes-and-no-reading-law-inside-the-algebra": {
+"synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not": {
 "failed": false,
 "findings": [],
-"key": "667ac18807ec10a1",
+"key": "1ecbe4fa9180797b",
 "result": "pass",
 "runs": [
 {
@@ -40580,6 +40580,15 @@
 "quantities": [],
 "touched": [
 "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_rung_permutations_act_on_strings",
+"ok": true,
+"quantities": [],
+"touched": [
 "tower.ladder-pairs-satisfy-car-vectors"
 ]
 },
@@ -40609,6 +40618,16 @@
 "quantities": [],
 "touched": [
 "synthesis.premise-positivity-of-values"
+]
+},
+{
+"derivation": null,
+"func": "check_comparison_rule_selects_within_two_to_the_minus_n",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit"
 ]
 },
 {
@@ -47348,7 +47367,7 @@
 "synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit": {
 "failed": false,
 "findings": [],
-"key": "5bf9c9196a65b875",
+"key": "6fcb1c62cb354562",
 "result": "pass",
 "runs": [
 {
@@ -48693,7 +48712,7 @@
 "synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
 "failed": false,
 "findings": [],
-"key": "8ca2f728430deac2",
+"key": "7504e3a3cc5778f7",
 "result": "pass",
 "runs": [
 {
@@ -49595,7 +49614,7 @@
 "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
 "failed": false,
 "findings": [],
-"key": "18aee26046c360c8",
+"key": "5d87f29886ac1f7c",
 "result": "pass",
 "runs": [
 {
@@ -49642,6 +49661,15 @@
 {
 "derivation": null,
 "func": "check_dependence_of_uniqueness_on_the_group",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
+]
+},
+{
+"derivation": null,
+"func": "check_either_sign_change_alone_admits_another_invariant_extension",
 "ok": true,
 "quantities": [],
 "touched": [

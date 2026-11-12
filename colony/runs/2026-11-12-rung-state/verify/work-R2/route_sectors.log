@@ -1,0 +1,11 @@
+PASS c=0, N=1: both branches are single occupation vectors (string states)
+PASS c=0, N=1: they differ at all 4 rungs (strings (1, 0, 0, 1) vs (0, 1, 1, 0))
+PASS c=0, N=1: the G3 element (f -> -f on all 4 rungs) sends branch A's string to branch B's
+PASS c=0, N=2: both branches are single occupation vectors (string states)
+PASS c=0, N=2: they differ at all 6 rungs (strings (1, 0, 0, 1, 0, 1) vs (0, 1, 1, 0, 1, 0))
+PASS c=0, N=2: the G3 element (f -> -f on all 6 rungs) sends branch A's string to branch B's
+PASS c=0, N=3: both branches are single occupation vectors (string states)
+PASS c=0, N=3: they differ at all 8 rungs (strings (1, 0, 0, 1, 0, 1, 0, 1) vs (0, 1, 1, 0, 1, 0, 1, 0))
+PASS c=0, N=3: the G3 element (f -> -f on all 8 rungs) sends branch A's string to branch B's
+PASS c=3/5: branch A is a superposition of 8 occupation vectors (not a string state)
+ALL PASS

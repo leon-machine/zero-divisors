@@ -180,7 +180,7 @@ def check_even_atoms_other_than_strings_also_average_to_the_symmetric_state():
     one = sc(1)
     P0 = string_proj((0, 0), S)
     ys = [add(P0, mul(mul(v(0), v(1), S), P0, S)), sub(P0, mul(mul(v(0), v(1), S), P0, S)),
-          mul(add(v(0), v(1)), P0, S), mul(sub(v(0), v(1)), P0, S)]
+          mul(add(v(0), scal(F(2), v(1))), P0, S), mul(sub(v(0), v(1)), P0, S)]
     atoms = [scal(F(1, 2), mul(y, dagger(y), S)) for y in ys]
     ok = True
     for i, A in enumerate(atoms):

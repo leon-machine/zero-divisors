@@ -24,3 +24,8 @@ functions:
     clauses:
     - (ii)
     omits: 'One boost (cosh 5/4, sinh 3/4) on l = 1 with two states and four weights; the sharp invariant state under the sign change of f alone is exhibited on one rung; that the half-weight state is the only extension invariant under any group containing an exchange is the proof'
+  check_either_sign_change_alone_admits_another_invariant_extension:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One counterexample for the sign change of e alone (l = 1, extending the symmetric state of the old rung); the counterexample for the sign change of f alone is in the previous function; that the boost does not commute with the adjoint is shown on the image of one generator'

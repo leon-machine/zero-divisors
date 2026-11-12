@@ -170,7 +170,7 @@ def check_interference_is_full_for_an_element_touching_every_pair():
             O = lambda x, N=N: bell_element(N, c, s, x)
             ok = ok and ip(psi, O(psi)) == F(24, 25)                  # value in the state after the couplings
             ok = ok and ip(A, O(A)) == 0 and ip(B, O(B)) == 0         # value in each branch
-            ok = ok and AL * BE * (ip(A, O(B)) + ip(B, O(A))) == F(24, 25)
+            ok = ok and AL * BE * (ip(A, O(B)) + ip(B, O(A))) == F(24, 25)   # also for c = 0, N = 1
             # weights of the system's tests are those of the mixture
             ok = ok and ip(psi, num(0, psi)) == F(9, 25) and ip(psi, num(1, psi)) == F(16, 25)
             basis = [{t: F(1)} for t in range(2 ** m)]
@@ -190,20 +190,31 @@ def check_interference_is_full_for_an_element_touching_every_pair():
     return ok
 
 
+def one_particle(vec, m):
+    """The one-particle operator <v_i w_k> of a vector on m rungs."""
+    return [[ip(vec, cre(i, ann(k, vec))) for k in range(m)] for i in range(m)]
+
+
 def check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair():
     premise("synthesis.imported-powers-stormer-takesaki-disjointness")
     ok = True
     for c, s in ((F(3, 5), F(4, 5)), (F(0), F(1)), (F(5, 13), F(12, 13))):
         ok = ok and c * c + s * s == 1
-        # one-quantum mode of the pair in each branch: (1, 0) and (c, -s); their projections
-        Pb = [[F(1), F(0)], [F(0), F(0)]]
-        Pa = [[c * c, -c * s], [-c * s, s * s]]
-        hs2 = sum((Pa[i][j] - Pb[i][j]) ** 2 for i in range(2) for j in range(2))
-        ok = ok and hs2 == 2 * s * s and hs2 > 0
+        for N in (1, 2, 3):
+            m = 2 + 2 * N
+            A, B = branches(N, c, s, range(N))
+            GA_, GB_ = one_particle(A, m), one_particle(B, m)
+            for G in (GA_, GB_):
+                # each branch's one-particle operator is a projection of trace 1 + N
+                G2 = [[sum(G[i][k] * G[k][j] for k in range(m)) for j in range(m)] for i in range(m)]
+                ok = ok and G2 == G and sum(G[i][i] for i in range(m)) == 1 + N
+            hs2 = sum((GA_[i][j] - GB_[i][j]) ** 2 for i in range(m) for j in range(m))
+            # 2 from the system's rungs and 2 s^2 from each record pair
+            ok = ok and hs2 == 2 + 2 * s * s * N
+            # the off-diagonal entry of branch A in pair 0 has the sign of the rotated mode (c, -s)
+            ok = ok and GA_[2][3] == -c * s and GA_[2][2] == c * c and GA_[3][3] == s * s
         # the overlap of the two record vectors of one pair is c
         A, B = branches(1, c, s, [0])
-        a_rec = ann(0, A)
-        b_rec = ann(1, B)
-        ok = ok and ip(a_rec, b_rec) == c
-    GA.check("per pair the two record modes overlap by c and their projections differ by 2 s^2 in Hilbert-Schmidt norm squared", ok)
+        ok = ok and ip(ann(0, A), ann(1, B)) == c
+    GA.check("branch one-particle operators are projections differing by 2 + 2 s^2 N in squared Hilbert-Schmidt norm", ok)
     return ok

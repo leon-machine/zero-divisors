@@ -316,3 +316,33 @@ def check_dependence_of_uniqueness_on_the_group():
     ok = ok and not all(Om(flip(b, {0})) == Om(b) for b in B1)   # it is not invariant under the sign change of e
     GA.check("group dependence: boosts keep every weight; the sign change of f alone admits a sharp invariant state", ok)
     return ok
+
+
+def check_either_sign_change_alone_admits_another_invariant_extension():
+    premise("synthesis.premise-positivity-of-values")
+    ok = True
+    # under the sign change of e alone, l = 1: the state of (1 + e_1 f)/2, e_1 the old generator
+    S = sq(2)
+    allB = blades(range(4))
+    u = mul(e(0), f(1), S)
+    ok = ok and mul(u, u, S) == sc(1) and dagger(u) == u
+    rho = scal(F(1, 2), add(sc(1), u))
+    Om = state(rho, S)
+    ok = ok and mul(rho, rho, S) == rho and satisfies_p(Om, 2, S)
+    ok = ok and all(Om(flip(b, {2})) == Om(b) for b in allB)            # invariant under the sign change of e
+    ok = ok and not all(Om(flip(b, {3})) == Om(b) for b in allB)        # not under that of f
+    # it restricts to the symmetric state of the old rung and has on-weight 1/2, but is not Omega_1/2
+    for b in blades(range(2)):
+        ok = ok and Om(b) == (1 if b == {(): F(1)} else 0)
+    ok = ok and Om(mul(v(1), w(1), S)) == F(1, 2) and Om(u) == 1
+    half = state(scal(F(1, 4), sc(1)), S)
+    ok = ok and half(u) == 0
+    # the sign change of f does exchange on with off, and so does that of e
+    on, off = mul(v(1), w(1), S), mul(w(1), v(1), S)
+    ok = ok and flip(on, {3}) == off and flip(on, {2}) == off
+    # a boost does not commute with the adjoint
+    ch, sh = F(5, 4), F(3, 4)
+    be = add(scal(ch, e(1)), scal(sh, f(1)))                             # the image of e under the boost
+    ok = ok and dagger(be) != be and dagger(e(1)) == e(1)
+    GA.check("each sign change alone admits another invariant extension; a boost does not commute with the adjoint", ok)
+    return ok
