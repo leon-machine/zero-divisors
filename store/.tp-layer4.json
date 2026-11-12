@@ -48589,6 +48589,54 @@
 }
 ]
 },
+"synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
+"failed": false,
+"findings": [],
+"key": "7238979e2c14094f",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_integer_states_of_one_rung_in_the_two_integer_forms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.integer-clifford-algebras-contain-no-switch",
+"synthesis.premise-positivity-of-values",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_parity_gives_two_sectors_and_no_record_superselection",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables"
+]
+},
+{
+"derivation": null,
+"func": "check_no_deterministic_law_on_strings",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_unread_rungs_carry_the_uniform_weight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight"
+]
+}
+]
+},
 "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts": {
 "failed": false,
 "findings": [],
