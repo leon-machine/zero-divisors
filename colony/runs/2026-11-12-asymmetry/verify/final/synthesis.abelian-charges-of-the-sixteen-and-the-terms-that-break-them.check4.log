@@ -1,0 +1,6 @@
+I405  synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them
+      dark-matter.stored-asymmetry-charge-not-number is declared and untouched, as expected: coverage.yaml: cited in the reading for the stored wording on baryon number
+I405  synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them
+      dark-matter.superselected-hence-dark-exactly-stable is declared and untouched, as expected: coverage.yaml: cited in the reading for what the tower charge is; nothing of it is computed
+
+synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them: 0 error(s), 2 other finding(s); check result: pass

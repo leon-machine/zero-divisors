@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "I213",
+   "severity": "info",
+   "entity": "synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog",
+   "message": "only 14% of its 7 logical neighbours share its subject; most are in 'standard-model'",
+   "fix": "check the subject; a bridging result may rightly stay where it is and carry a tag for the other side"
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 1 entities; 0 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was not run (validate_draft never runs code). Put the folder under store/ in your copy and run `python -m tp check-one <id> --store store`; the pull request's checks run it again"
+}
