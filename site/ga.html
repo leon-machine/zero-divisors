@@ -141,7 +141,7 @@ const SCENES = [
   ['hero', 130], ['wall', 300], ['voices', 200],
   ['cross', 200], ['complex', 220], ['hamilton', 240], ['matrices', 220], ['maxwell', 200],
   ['derive', 380], ['product', 220], ['plane', 240], ['mirror', 240], ['quat', 200], ['dirac', 220], ['onefield', 220], ['rotor', 260], ['fermion', 240], ['dropout', 240],
-  ['departs', 240], ['bit', 220], ['cube', 240], ['sign', 400], ['scalars', 240], ['algebra', 240], ['count', 240],
+  ['departs', 240], ['bit', 220], ['cube', 240], ['sign', 400], ['scalars', 240], ['algebra', 240], ['count', 240], ['switch', 260],
   ['division', 240], ['continuum', 320], ['physics', 220], ['routes', 240],
   ['readings', 220], ['why', 240], ['allnumber', 240], ['end', 120]];
 const CHAPTERS = [['I', 'Five languages', 'hero'], ['II', 'The toolkit', 'cross'], ['III', 'What drops out', 'derive'], ['IV', 'From the bit', 'departs'], ['V', 'The continuum', 'division'], ['VI', 'What numbers are', 'readings'], ['VII', 'Next', 'end']];
@@ -182,6 +182,7 @@ const CAPS = {
   scalars: [[0.03, 1.01, 'No number has been assumed so far. When a direction meets itself, $e_1e_1$, every distinction cancels and the result lands on the empty pattern. Only two things can sit there: nothing, or the sign $c$. Those are the first numbers, $+1$ and $-1$, a by-product of geometry. Kronecker held that God made the integers; here geometry makes the first of them.', [['squares in {1, c}', G('synthesis.signed-directions-and-the-integer-clifford-algebra')]], 'proved']],
   algebra: [[0.03, 1.01, 'Now let patterns be added. Write an arrow as $v=x\\,e_1+y\\,e_2$ and square it. The mixed terms cancel because $e_2e_1=-e_1e_2$, leaving $v^2=x^2+y^2$. Pythagoras’ theorem, which textbooks take as the starting axiom, follows from the sign, given directions that square to $+1$.', [['Premise F3', G('synthesis.premise-superposition-over-the-integers')], ['the rule as a theorem', G('synthesis.signed-directions-and-the-integer-clifford-algebra')]], 'proved']],
   count: [[0.03, 1.01, 'Multiplication alone cannot count: the powers of a direction only go round in a cycle. Counting needs addition, $1+1+1+1+1=5$, and dividing one multiple of an arrow by another then gives every fraction. Quantity comes after geometry, and it is a new step.', [['counting needs addition', G('synthesis.composition-cycles-counting-needs-addition')], ['division gives the fractions', G('synthesis.division-gives-the-rationals')]], 'proved']],
+  switch: [[0.03, 1.01, 'A bit can also be acted on: switched on, $v$, and switched off, $w$. On twice gives no result, $v^2=0$, and the bit is always on or off, $vw+wv=1$. Those are the fermion’s rules, with no sign and no fraction put in. And $v+w$, $v-w$ are two directions squaring to $+1$ and $-1$: the pair the transport principle adds.', [['set and clear', G('synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane')], ['planes on two states', G('synthesis.switch-planes-on-a-two-state-space')], ['whole numbers hold no switch', G('synthesis.integer-clifford-algebras-contain-no-switch')]], 'proved']],
   division: [[0.03, 1.01, 'Division has exceptions. An arrow’s inverse is $v/v^2$, and in spacetime $v^2$ shrinks to zero as the arrow tilts onto the light cone. There the arrow is a zero divisor: a definite object whose inverse arithmetic can only write as $1/0$. The rest of this site begins here. Drag $v$.', [['which arrows divide', G('std-algebra.inverse-of-vector')], ['zero divisors', G('std-algebra.zero-divisors-annihilated')]], 'textbook']],
   continuum: [[0.03, 1.01, 'Every fraction on the line marks one rotation on the circle. Only the full turn, $-1$, is missed: it sits where the line runs off to infinity, the place The Transport Principle gives to $1/0$. And the half circle from $1$ to $-1$ has length $\\pi$, which is no fraction. One last step is needed: fill the gaps between the fractions to reach the real numbers.', [['rational rotors', G('synthesis.the-sign-is-the-rotor-at-infinity')], ['The Transport Principle', 'principle'], ['Premise F4', G('synthesis.continuum-completion-premise')]], 'premise']],
   physics: [[0.03, 1.01, 'The ladder reaches physics, and shows what each piece needs. A fermion needs only the fraction ½. Quantum correlations beyond the classical Bell limit need no continuum either: their maximum, $2\\sqrt2$, needs just $\\sqrt2$. A boson is a wave of infinitely many fermion pairs, and its bell-shaped states do need the continuum.', [['the CHSH bound', G('synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate')], ['rational values', G('synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist')], ['bosons from the tower', G('synthesis.fluctuation-forms-of-the-tower-and-density-wave-bosons-of-the-null-vacuum')]], 'argued']],
@@ -296,7 +297,7 @@ const meas = document.createElement('div'); meas.className = 'cap show'; meas.se
 meas.style.visibility = 'hidden'; meas.innerHTML = '<div class="line"></div><div class="tags"></div>'; $('.pin').appendChild(meas);
 // the room a scene's drawing has: down to the top of the tallest subtitle of that scene, measured with a
 // hidden copy of the subtitle box; the ladder scenes share one measure so the ladder does not jump
-const LADDER_SCENES = ['bit', 'cube', 'sign', 'scalars', 'algebra', 'count', 'division', 'continuum', 'infinity'];
+const LADDER_SCENES = ['bit', 'cube', 'sign', 'scalars', 'algebra', 'count', 'switch', 'division', 'continuum', 'infinity'];
 function capTopOf(scene){
   const key = 's:' + scene; if (capTops.has(key)) return capTops.get(key);
   const pinTop = $('.pin').getBoundingClientRect().top; let top = HF;
@@ -910,6 +911,31 @@ function drawScalars(s){
     quote('God made the integers; all else is the work of man.', 'Leopold Kronecker, as reported by Weber, 1893', cx, yp + (nar ? 46 : 56), R.w * 0.8, nar ? 12 : 18, C.text, sm((s - 0.68) / 0.1)); }
 }
 
+/* ---------- the switch: a bit that is set and cleared ---------- */
+function drawSwitch(s){
+  const R = region(4), nar = NARROW, b = Math.min(R.w * (nar ? 0.1 : 0.06), R.h * 0.1, 50), fs = nar ? 13 : 18, cx = R.cx;
+  const rowY = [R.y0 + R.h * (nar ? 0.1 : 0.13), R.y0 + R.h * (nar ? 0.25 : 0.29)], dx = nar ? R.w * 0.25 : Math.min(R.w * 0.21, 250), g = b * (nar ? 1.25 : 1.5);
+  // each operation on each state: a new state, or no result
+  [['switch on', '$v$', [[0, 1], [1, null]], 0.04], ['switch off', '$w$', [[1, 0], [0, null]], 0.18]].forEach(([name, sym, cases, t0], r) => {
+    const y = rowY[r];
+    cases.forEach(([from, to], c) => { const a = sm((s - t0 - c * 0.06) / 0.07); if (a <= 0) return; ox.globalAlpha = a; const x = cx + (c ? dx : -dx);
+      mark(x - g, y, b, from); arrow(x - g + b / 2 + 7, y, x + g - b / 2 - 9, y, r ? C.blue : C.gold, 1.5, 8);
+      text(sym, x, y - (nar ? 13 : 17), r ? C.blue : C.gold, nar ? 14 : 19, 'center');
+      if (to === null) text('no result', x + g, y, C.red, nar ? 12 : 16, 'center', SERIF); else mark(x + g, y, b, to);
+      ox.globalAlpha = 1; });
+    ox.globalAlpha = sm((s - t0) / 0.07); if (nar) text(name, cx, y + b / 2 + 13, C.t3, 11, 'center', MONO); else text(name, cx - dx - g - b / 2 - 18, y, r ? C.blue : C.gold, 14, 'right', MONO); ox.globalAlpha = 1; });
+  // the rules these two operations obey
+  const y0 = rowY[1] + b / 2 + (nar ? 46 : 58), lh = nar ? 40 : 60, fm = nar ? 16 : 24, fg = nar ? 12 : 15;
+  [[0.34, '$v^2 = 0 \\qquad w^2 = 0$', 'on twice, or off twice: no result', C.text],
+   [0.46, '$vw + wv = 1$', 'it is on, or it is off: the rules of a single fermion', C.text],
+   [0.6, '$(v+w)^2 = +1 \\qquad (v-w)^2 = -1$', 'their sum and difference: two directions, one plus and one minus', C.gold]].forEach(([t0, f, gloss, col], i) => {
+    ox.globalAlpha = sm((s - t0) / 0.08); text(f, cx, y0 + i * lh, col, fm, 'center'); text(gloss, cx, y0 + i * lh + (nar ? 17 : 23), C.t3, fg, 'center', SERIF); });
+  const yb = y0 + 3 * lh + (nar ? 4 : 8);
+  ox.globalAlpha = sm((s - 0.74) / 0.1); text(nar ? 'no sign and no fraction put in' : 'no sign and no fraction was put in', cx, yb, C.gold, nar ? 14 : 20, 'center', SERIF, '600');
+  ox.globalAlpha = sm((s - 0.84) / 0.1); text(nar ? 'built from the directions instead, the switch needs ½' : 'built the other way, from whole-number directions, the switch needs the fraction ½', cx, yb + (nar ? 22 : 30), C.t3, nar ? 11 : 14, 'center', SERIF);
+  ox.globalAlpha = 1;
+}
+
 /* ---------- infinity is geometric ---------- */
 function drawInfinity(s){
   const R = region(5), nar = NARROW, r = Math.min(R.w * (nar ? 0.2 : 0.13), R.h * (nar ? 0.24 : 0.27), nar ? 110 : 140);
@@ -1400,12 +1426,12 @@ function drawPhysics(s){
 // These are starting points: sceneNeed then draws each step unseen and raises the figure until no text runs
 // past the room the subtitles leave.
 const MINH = {all: 380, voices: 440, hamilton: 450, matrices: 500, maxwell: 450, toolkit: 420, derive: 460, product: 400, mirror: 400, dirac: 460, onefield: 440, rotor: 420, fermion: 430, dropout: 480, tensors: 450,
-  departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
+  departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, switch: 480, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
 const MINH_NARROW = {all: 300};
 const CHAP_OF = k => { let c = 0; CHAPTERS.forEach(([, , ck], i) => { if (START[k] >= START[ck]) c = i; }); return c; };
 const DRAWS = {allnumber: drawAllNumber, wall: drawWall, voices: drawVoices, derive: drawDerive, units: drawUnits, departs: drawDeparts, scalars: drawScalars, infinity: drawInfinity, readings: drawReadings, why: drawWhy, cross: s => drawCrossIntro(s * 0.55), complex: drawComplex, hamilton: drawHamilton, matrices: drawMatricesPlain, maxwell: drawMaxwell, toolkit: drawToolkit,
   product: drawProduct, plane: drawPlane, mirror: drawMirror, routes: drawRoutes, quat: () => drawInventions(0.2), dirac: s => drawInventions(0.5 + 0.47 * s), onefield: drawOneField, rotor: drawRotor, fermion: drawFermion, dropout: drawDropout, tensors: drawTensors,
-  bit: drawBit, cube: drawCube, sign: drawSign, algebra: drawAlgebra, count: drawCount, division: drawDivision, continuum: drawContinuum, physics: drawPhysics};
+  bit: drawBit, cube: drawCube, sign: drawSign, algebra: drawAlgebra, count: drawCount, switch: drawSwitch, division: drawDivision, continuum: drawContinuum, physics: drawPhysics};
 // draw scene k at phase s in a figure of height `need`; returns how far its text overran the room it had
 // the heading is always drawn at its full size; only the drawing beneath it is scaled to fit, and it is centred under the heading
 function paint(k, s, need, probe){
@@ -1473,7 +1499,7 @@ const TITLES = {
   tensors: ['What About Tensors?', 'the standard answer, and where it stops'],
   departs: ['A Different Order', 'information first'],
   bit: ['The Bit', 'a single distinction'], cube: ['Many Distinctions', 'patterns before geometry'], sign: ['The First Sign', 'order costs one bit'],
-  scalars: ['Scalars Pop Out', 'numbers left behind by geometry'], algebra: ['Adding Patterns', 'Pythagoras as a theorem'], count: ['Counting', 'why number needs addition'],
+  scalars: ['Scalars Pop Out', 'numbers left behind by geometry'], algebra: ['Adding Patterns', 'Pythagoras as a theorem'], count: ['Counting', 'why number needs addition'], switch: ['The Switch', 'what a bit does'],
   division: ['Division and Its Exceptions', 'the light cone'], continuum: ['The Continuum', 'rotors from fractions, and π'], infinity: ['Infinity as a Place', 'two readings of 1/0'],
   physics: ['The Ladder', 'from a distinction to physics'], routes: ['Two Routes Compared', 'the same algebras, in a different order'],
   readings: ['What Numbers Are', 'readings of geometry'], why: ['Why Mathematics Works', 'an answer from the ladder'], allnumber: ['The Numbers of Physics', 'all inside one algebra'],

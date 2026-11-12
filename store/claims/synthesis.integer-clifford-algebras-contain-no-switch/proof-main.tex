@@ -1,0 +1,13 @@
+Write $\bar{A} = \Cl_{R}(p,q)/2\Cl_{R}(p,q)$. It is free over $R/2R$ on the $e_{S}$ with $e_{S}e_{T} = e_{S \triangle T}$, since $-1 = 1$ in $R/2R$: a commutative ring in which every $e_{S}$ squares to $1$.
+
+\emph{(ii)} In the commutative ring $\bar{A}$ the image of $ab + ba$ is $2\bar{a}\bar{b} = 0$. So $1 \in 2\Cl_{R}(p,q)$, and the coefficient of $e_{\emptyset}$ in the free module gives $r \in R$ with $2r = 1$. For $R = \Z$ there is no such $r$.
+
+\emph{(i)} Take $R = \Z$ and let $x = \sum_{S} x_{S}e_{S}$ be idempotent. $\bar{A}$ is commutative of characteristic $2$, so squaring is additive, and
+\[
+\bar{x}^{2} = \sum_{S} \bar{x}_{S}^{2}\,e_{S}^{2} = \Bigl(\sum_{S} \bar{x}_{S}\Bigr)\cdot 1 .
+\]
+Hence $\bar{x} = \bar{x}^{2}$ is $0$ or $1$. If $\bar{x} = 0$, then $x = 2y$ and $x = x^{k} = 2^{k}y^{k}$ for every $k \ge 1$, so every integer coefficient of $x$ is divisible by every power of $2$ and $x = 0$. If $\bar{x} = 1$, the idempotent $1 - x$ reduces to $0$, so $x = 1$.
+
+\emph{(iii)} $e_{1}^{2} = 1$, $e_{p+1}^{2} = -1$ and $e_{1}e_{p+1} = -e_{p+1}e_{1}$, so $\bigl(\tfrac12(e_{1} \pm e_{p+1})\bigr)^{2} = \tfrac14(1 - 1) = 0$ and the anticommutator of the two is $\tfrac14\bigl(2e_{1}^{2} - 2e_{p+1}^{2}\bigr) = 1$.
+
+\emph{(iv)} $e_{+} = v + w$ and $e_{-} = v - w$ anticommute with squares $1$ and $-1$ (Theorem \claimref{synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane}(iv), recomputed here: $(v \pm w)^{2} = \pm(vw + wv) = \pm 1$, $(v + w)(v - w) = wv - vw = -(v - w)(v + w)$), so $e_{\emptyset} \mapsto 1$, $e_{1} \mapsto e_{+}$, $e_{2} \mapsto e_{-}$, $e_{12} \mapsto e_{+}e_{-}$ respects the blade product and is a ring homomorphism. In the basis $(s_{\mathrm{off}}, s_{\mathrm{on}})$ the image of $\alpha + \beta e_{1} + \gamma e_{2} + \delta e_{12}$ has diagonal entries $\alpha + \delta$, $\alpha - \delta$ and off-diagonal entries $\beta - \gamma$ (row off, column on) and $\beta + \gamma$. The map $(\alpha, \beta, \gamma, \delta) \mapsto (\alpha + \delta, \alpha - \delta, \beta - \gamma, \beta + \gamma)$ is injective on $\Z^{4}$ with determinant of absolute value $4$, and its image is exactly the quadruples whose first two entries have the same parity and whose last two have the same parity.
