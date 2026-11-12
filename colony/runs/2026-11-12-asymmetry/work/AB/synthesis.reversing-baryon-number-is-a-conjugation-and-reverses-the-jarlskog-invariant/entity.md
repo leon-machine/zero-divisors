@@ -6,7 +6,7 @@ title: 'Reversing baryon number needs a conjugation, which reverses the Jarlskog
 status: proved
 region: synthesis
 subject: dark-matter
-tags: [matter-asymmetry, cpt]
+tags: [matter-asymmetry, flavour-and-mixing]
 outside_ga:
   kind: imported
   why: 'the family matrices and their determinant are those of the imported Jarlskog identity, read as that Fact reads them, with entries in the span of 1 and I_4; the mode-algebra part is in the Clifford algebra of the ten'
@@ -30,6 +30,7 @@ derivations:
   - synthesis.imported-jarlskog-commutator-identity@2
   - dark-matter.orientation-arrow-seventeenth-refutation@10
   - synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase@4
+  - one-relation.arrow-frequency-are-one-bit-level@4
   proof: proof-main.tex
 checked_by:
 - kind: check
@@ -63,7 +64,7 @@ extraction:
 Under Hypothesis (S) (\claimref{standard-model.hyp-s-slot-statistics}) take the five-mode module with pair modes $1, 2, 3$ and slot modes $4, 5$, its occupation states $e_{S}$, the sixteen (the even states), and $\mathfrak{g} = \su(3) \oplus \su(2)_{L} \oplus \uu(1)_{Y}$ (\claimref{standard-model.automorphisms-preserve-slot-pair-split-are}). Write $k$ and $j$ for the pair and slot numbers of a state; on all $32$ states $B - L = 1 - \tfrac23 k$, $Y = \tfrac12(j - 1) + \tfrac12(B - L)$, and baryon number is $n_{B} = 0, \tfrac13, -\tfrac13, 0$ at $k = 0, 1, 2, 3$, which on the sixteen is the $n_{B}$ of Proposition \claimref{standard-model.proton-decay-only-through-slot-pair}. For $A \subseteq \{1, \dots, 5\}$ the \emph{partial exchange} $X_{A}$ exchanges set and clear, $v_{a} \leftrightarrow w_{a}$, on the modes of $A$ and fixes the others; on states it is $e_{S} \mapsto \pm e_{S \triangle A}$. Scalars of the family matrices are read in $\mathrm{span}\{1, I_{4}\}$ and $^{*}$ is $I_{4} \mapsto -I_{4}$, as in Fact \claimref{synthesis.imported-jarlskog-commutator-identity}.
 \begin{enumerate}
 \item[(i)] \emph{(Linear automorphisms fix baryon number.)} Let $g$ be an invertible linear map of the sixteen with $g\mathfrak{g}g^{-1} = \mathfrak{g}$. Then $g$ preserves each of the six species and commutes with every operator commuting with $\mathfrak{g}$; in particular $g\,n_{B}\,g^{-1} = n_{B}$. The same holds on the sixteen tensored with a family space, for $n_{B} \otimes 1$.
-\item[(ii)] \emph{(The exchanges.)} Of the $32$ partial exchanges, four reverse $n_{B}$ on every state, those with $A \supseteq \{1, 2, 3\}$; two normalise $\mathfrak{g}$, the identity and the total exchange $A = \{1, \dots, 5\}$; and the total exchange alone reverses $Y$, $B - L$ and $n_{B}$ together. It maps the sixteen onto the odd states, the conjugate sixteen. So the only exchange of set and clear that reverses baryon number and keeps the gauge algebra is the flag conjugate, and as a map of the sixteen to itself it is antilinear.
+\item[(ii)] \emph{(The exchanges.)} Of the $32$ partial exchanges, four reverse $n_{B}$ on every state, those with $A \supseteq \{1, 2, 3\}$; two normalise $\mathfrak{g}$, the identity and the total exchange $A = \{1, \dots, 5\}$; and the total exchange alone reverses $Y$, $B - L$ and $n_{B}$ together. It maps the sixteen onto the odd states, the conjugate sixteen. So the only exchange of set and clear that reverses baryon number and keeps the gauge algebra is the flag conjugate, and composed with the identification of the conjugate sixteen with the complex conjugate of the sixteen it is an antilinear map of the sixteen to itself. An antilinear $g$ normalising $\mathfrak{g}$ commutes with $n_{B}$ and anticommutes with the unit of the module, so it reverses the generator of the baryon rotation: it carries a field of baryon charge $b$ to one of charge $-b$.
 \item[(iii)] \emph{(Conjugation reverses the invariant.)} For $3 \times 3$ Hermitian $H_{u}$, $H_{d}$ put $D(H_{u}, H_{d}) = \det[H_{u}, H_{d}]$. Then $D^{*} = -D$; $D(UH_{u}U^{\dagger}, UH_{d}U^{\dagger}) = D(H_{u}, H_{d})$ for unitary $U$; $D(H_{u}^{*}, H_{d}^{*}) = -D(H_{u}, H_{d})$; and $D = 0$ when both are real symmetric. Hence, by the cited Fact, with the masses fixed and nondegenerate, a common unitary change of family basis fixes $J$, and entrywise conjugation followed by any such change sends $J$ to $-J$.
 \item[(iv)] \emph{(Consequence; argued.)} Let a map act on the sixteen tensored with the families, linearly or antilinearly, normalising $\mathfrak{g}$, and on $(H_{u}, H_{d})$ by a common unitary change of family basis in the linear case and by conjugation followed by one in the antilinear case. By (i) to (iii) the linear maps fix both the baryon charge and $J$, and the antilinear ones reverse both: the product of the sign of the baryon charge of a state and the sign of $J$ is invariant under every such map. So if $J \neq 0$, no map of this class is at once an automorphism of the laws, with their family matrices fixed up to a change of family basis, and a reversal of the baryon charge; if $H_{u}$ and $H_{d}$ are real in one family basis, conjugation in that basis is both.
 \end{enumerate}

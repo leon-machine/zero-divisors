@@ -21,3 +21,6 @@ functions:
     clauses:
     - (vi)
     omits: 'Arithmetic with the stored coefficient 28/79 only; the equilibrium conditions are those of the cited check and are not recomputed; that the process acts and equilibrates is literature, not tested'
+untouched_premises:
+  dark-matter.superselected-hence-dark-exactly-stable: 'cited in the reading for what the tower charge is; nothing of it is computed'
+  dark-matter.stored-asymmetry-charge-not-number: 'cited in the reading for the stored wording on baryon number'
