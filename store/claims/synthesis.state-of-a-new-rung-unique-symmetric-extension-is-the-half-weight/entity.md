@@ -53,6 +53,7 @@ lineage:
   - synthesis.boundary-mode-thermal-entropy
   - tower.fock-module-one-qubit-per-rung
 extraction:
+  open_problem: op.outcome-selector-premises
   note: >-
     A test asked for by Leon on 12 November 2026, after a review of the no-collapse result: the counting argument
     there says a collapse needs unboundedly many fresh bits and the framework has a short list of free data; his

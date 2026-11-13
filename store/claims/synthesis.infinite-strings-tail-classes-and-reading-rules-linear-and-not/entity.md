@@ -59,6 +59,7 @@ lineage:
   motivated_by:
   - one-relation.record-chain-votes-measurement-without-collapse
 extraction:
+  open_problem: op.outcome-selector-premises
   note: >-
     Steps 2 and 3 of three approved by Leon on 12 November 2026: are the values of rungs data on the infinite
     tower, and if so what would a law reading them be. Pre-registered before computing

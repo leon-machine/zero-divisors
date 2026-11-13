@@ -48,6 +48,7 @@ lineage:
   - one-relation.record-chain-votes-measurement-without-collapse
   - synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws
 extraction:
+  open_problem: op.outcome-selector-premises
   note: >-
     Step 1 of three approved by Leon on 12 November 2026. The candidate came from the independent review of the
     earlier results (records of unbounded length; computed there for up to three pairs). Pre-registered before

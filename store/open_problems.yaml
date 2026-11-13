@@ -2579,6 +2579,101 @@
     - one-relation.spacetime-manifold-vacuum-lines
   added: "2026-10-22"
 
+
+- id: op.outcome-selector-premises
+  title: "A selector of measurement outcomes on the tower: derive its premises, refute them, or show them independent"
+  area: one-relation
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "The review of the no-collapse result and the search for a mechanism, 12 November (four results, three independent reviews); Leon's direction of 13 November: the stance is that the stored content holds no mechanism, that one exists given premises, and that the premises are to be an open problem"
+  statement: >-
+    The stored content holds no mechanism that selects one outcome of a measurement: of the candidates examined
+    none selects, and the examination is a survey, not a proof that none can exist. A selector can nevertheless be
+    written in the framework's own terms: read fresh rungs of the tower as the binary digits of a number and
+    declare the first outcome when that number is below the outcome's weight; for a typical string of rung values
+    this gives the weights of Premise (P) (\claimref{synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not},
+    clauses (v) and (vi)). It rests on three premises that the store does not hold: (A) the occupation context is
+    the level of facts and one string of rung values is actual, typical for the uniform weight, and independent of
+    the system measured; (B) the rule is a law: the outcome is declared by the sign of a value in which the
+    system's own state enters; (C) rungs are read in an order. Decide each premise: derive it from stored content,
+    refute it from stored content, or show it independent of the stored premises by two models.
+  why: >-
+    The no-collapse result (\claimref{one-relation.record-chain-votes-measurement-without-collapse}) argues that a
+    selector would need unboundedly many fresh bits the framework does not have. The tower supplies unboundedly
+    many two-state systems, and whether their values are data is exactly what premise (A) asserts and what the
+    stored content leaves undecided. If the premises can be derived, the framework has a mechanism and the
+    no-collapse result must be restated; if they can be refuted, the no-collapse result gains an argument that
+    does not depend on its counting; if they are independent, the choice between the two accounts is a premise
+    and should be registered as one.
+  known: >-
+    On finite towers the completion forces no value on a new rung, strings of values are one orbit of sign changes,
+    and the one extension invariant under both sign changes of a new rung has weight $\tfrac12$
+    (\claimref{synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight}); integer states,
+    parity sectors and a deterministic law on strings are not selectors, and the stored multi-mode descent ends
+    interference between records and selects nothing
+    (\claimref{synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws}). On the
+    infinite tower, whether a string is a datum depends on the group: tail classes under changes on finitely many
+    rungs, three classes if rungs may be permuted, one orbit under sign changes of arbitrary sets of generators;
+    no single rung's value is constant on a class; a rule whose outcome is the value of an element cannot select
+    with odds that depend on the state, and a rule declaring the outcome by the sign of a value can
+    (\claimref{synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not}). For a model coupling,
+    records of unbounded length give a limit state that is the mixture of two disjoint states, with the full
+    interference present at every finite stage; in that limit the single premise that one outcome obtains with
+    probability its weight agrees with the value of every element, and is not a mechanism
+    (\claimref{synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit}). Against premise
+    (A): the symmetric state of the infinite tower is disjoint from every string state (argued from an import),
+    and the store takes the occupation-diagonal algebra as the level of records only on a stated choice between
+    two assemblies. Against premise (C): the stored account has no clock on the tower and places the rungs beyond
+    the first away from the physical region (\claimref{tower.answers-iteration-question}). Against premise (B):
+    nothing stored; it is a law of the pilot-wave kind, and the indifference premise as the series reads it
+    forbids an uncaused selection, though a selection caused by an actual string is not obviously of that kind.
+  attack:
+    - >-
+      Premise (A), the group. Decide which automorphisms of the infinite tower are symmetries of the construction:
+      those acting on finitely many rungs, those permuting rungs, or the product over all rungs of the step's sign
+      changes. State the criterion before computing. Under the last a string is a label and premise (A) cannot
+      hold as a statement with invariant meaning; under the first its tail class is a datum.
+    - >-
+      Premise (A), the context. Decide between the two assemblies of the pointwise levels (the choice left open in
+      \claimref{singularity.p-reduced-metric-level-reading-many}); if the sheaf assembly is forced, the
+      occupation-diagonal algebra is the level of records by theorem and the first half of (A) follows.
+    - >-
+      Premise (A), typicality and independence. Find a stored state-selection premise that fixes the state of the
+      rungs beyond the first, or prove none does; a string state is disjoint from the symmetric state, so (A) is
+      not a reading of the symmetric state and needs its own source.
+    - >-
+      Premise (B). Decide whether the indifference premise forbids a selection that is determined by an actual
+      string and the system's state. Then either derive the sign rule from a stored structure (the natural
+      candidate is a guidance law on the occupation context) or exhibit a second rule with the same weights, which
+      would show the rule is not forced.
+    - >-
+      Premise (C). Decide whether any stored structure orders the rungs in a way an event could use (the wall
+      sequence of the stored account is one ordering); if none does, (C) is independent and must be a premise.
+    - >-
+      Independence, if no premise is derived or refuted: two models of the stored premises, one in which a string
+      is actual and the rule holds and one with no actual string, agreeing on every stored result.
+    - >-
+      Consequences either way for \claimref{one-relation.record-chain-votes-measurement-without-collapse}: its
+      counting argument speaks of two numbers and one bit, which no longer matches the registered free inputs, and
+      it counts data items, not information; restate it once the premises are decided.
+  success: >-
+    For each of (A), (B), (C): a derivation from stored content with its premises named, or a refutation from
+    stored content, or a pair of models showing independence. A derivation of all three gives the framework a
+    mechanism and refutes the no-collapse stance as registered. A refutation of any one closes this route and
+    leaves the no-collapse stance with the candidates examined as its support. Independence of all three makes
+    the choice a premise of the series, to be registered with its cost.
+  entities:
+    - one-relation.record-chain-votes-measurement-without-collapse
+    - one-relation.recorded-sectors-superselected-premise
+    - synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight
+    - synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws
+    - synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit
+    - synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not
+    - tower.answers-iteration-question
+    - singularity.p-reduced-metric-level-reading-many
+  added: '2026-11-13'
+
 # ---------------------------------------------------------------- tower
 
 - id: op.r-premises-external

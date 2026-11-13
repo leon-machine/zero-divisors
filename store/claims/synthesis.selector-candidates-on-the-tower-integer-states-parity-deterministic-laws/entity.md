@@ -55,6 +55,7 @@ lineage:
   - one-relation.imported-indifference-instrument
   - descent-lift.imported-descent-modes-univalence-supplied-class
 extraction:
+  open_problem: op.outcome-selector-premises
   note: >-
     Asked for by Leon on 12 November 2026 after the rung-state result: look for other ideas, from the graph or not,
     that could give a mechanism for the collapse of the wave function, and say so if there is none. A mechanism has
