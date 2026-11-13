@@ -202,3 +202,123 @@ All changed sentences were read at every level, along with proof-main.tex, check
 **New errors introduced: none found.**
 
 **Verdicts after the confirmation pass:** claim 1 READY; claim 2 READY; claim 3 READY; claim 4 READY.
+
+---
+
+## No-collapse restatement and open problem
+
+Read:
+- `store/open_problems.yaml`, entry `op.outcome-selector-premises` (commit 804c6f4).
+- `git diff HEAD~1 HEAD` for `one-relation.record-chain-votes-measurement-without-collapse`, version 8 to 9 (commit 0fb5114), and `pred.no-objective-collapse`.
+
+Stored entities checked against: the indifference instrument Fact, `tower.answers-iteration-question`, `singularity.p-reduced-metric-level-reading-many`, the registered free inputs, `docs/CONTRIBUTING-rules.md` (amendment kinds), and the four reviewed claims.
+
+### (1) op.outcome-selector-premises
+
+**Premises (A), (B), (C) compared with claim 4's Reading.**
+- The Reading lists premises of two kinds. Actuality: the occupation context is the level of facts; one string is actual; it is typical for the uniform weight; fresh rungs are used for each event; the rungs are independent of the system. A law: the rule of (v), and an order of reading.
+- (A) matches Actuality except that it **omits "fresh rungs for each event"**. (B) and (C) split the Law into two premises.
+- The regrouping into three is legitimate, but nowhere is it said that it is a regrouping of the Reading's two kinds.
+
+**Problems**
+
+- **Q1, statement (A): a premise is missing.**
+  - Fix: "(A) the occupation context is the level of facts and one string of rung values is actual, typical for the uniform weight, read on fresh rungs for each event, and independent of the system measured".
+  - Fix: after (C), add "((A) is the Reading's premise of actuality; (B) and (C) together are its law)".
+
+- **Q2, known: "a deterministic law on strings [is] not a selector". As written, this contradicts claim 4.**
+  - Claim 2 (iii) excludes only a rule mapping strings of a fixed finite set of rungs to strings, with the string as the only hidden datum. It says such a law "is stochastic, or draws on data outside those rungs".
+  - Claim 4 (v) is a deterministic rule that draws on data outside those rungs.
+  - Fix: "a deterministic law mapping strings of a fixed finite set of rungs to strings, with the string the only hidden datum, is not a selector".
+  - The same qualifier is needed in the no-collapse proof (R4 below).
+
+- **Q3, known: "a limit state that is the mixture of two disjoint states".**
+  - The mixture is proved on the algebraic tower (claim 3 (iii)).
+  - The disjointness is argued from the import (claim 3 (iv)).
+  - Fix: "the mixture of the two branch states on every element (proved), states that are disjoint in the completed algebra (argued from the imported Powers and Stormer criterion)".
+
+- **Q4, known: the stored bearing of the indifference premise is assigned to the wrong premise.**
+  - The stored Fact (`one-relation.imported-indifference-instrument`) reads first: "Indifference forbids uncaused structure: a construction may not carry distinctions nothing in the framework determines".
+  - Claim 1 (i) shows that the completion determines no rung value.
+  - So an actual string is, on the face of that wording, such a distinction. The stored premise bears directly on (A), not only on (B).
+  - Against this stands the Fact's moduli clause ("genuine moduli are data rather than smoothed away"), which may admit a tail class as a datum.
+  - Fix: under "Against premise (A)" add: "the indifference premise in its stored wording forbids distinctions nothing in the framework determines (Fact one-relation.imported-indifference-instrument), and by Theorem synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight (i) the completion determines no rung value, so an actual string is on its face such a distinction; whether the moduli clause of the same Fact admits a tail class as a datum is open".
+  - Fix: under (B), replace "nothing stored; …" with "nothing stored beyond the indifference premise, whose clause on uncaused selections does not obviously apply to a selection fixed by an actual string and the state; the question moves to (A)".
+
+- **Q5, why and success: overstated, and inconsistent with no-collapse version 9.**
+  - "If the premises can be derived, the framework has a mechanism" is too strong. A derivation gives a deterministic selector of outcomes with the weights of (P). Ending interference still rests on the stored recorded-sectors premise, or on the record limit (claim 3). Claim 2 names both jobs.
+  - "A derivation of all three … refutes the no-collapse stance as registered" contradicts the sentence version 9 adds. The registered stance (no objective-collapse signature) concerns stochastic and gravitational collapse, and the deterministic rule "is not a collapse of that kind, and what signature, if any, it would have is not examined".
+  - Fix in why: "If the premises can be derived, the framework has a selector of outcomes with the weights of (P) (the end of interference still resting on the recorded-sectors premise or the record limit), and the conclusions of the no-collapse result (all branches occupied; no selector within the framework) must be withdrawn".
+  - Fix in success: "A derivation of all three gives the framework a selector and refutes the vote's conclusion that all branches are occupied; whether it touches the registered stance on objective-collapse signatures depends on whether the rule has a signature, which is not examined".
+
+- **Q6 (minor), known: "Against premise (A): the symmetric state … is disjoint from every string state".**
+  - This is not evidence against (A). It shows only that (A) cannot be read off the symmetric state.
+  - Fix: "Bearing on premise (A)".
+
+- **Q7 (minor), attack 2: "the first half of (A) follows" says more than the cited Proposition.**
+  - The Proposition gives "the metric level is the joint-diagonal algebra" under the sheaf assembly.
+  - That this is "the level of facts" is a further identification, which claim 4 (iii) also leaves as a reading.
+  - Fix: "… the metric level is the joint-diagonal algebra by theorem, and the first half of (A) reduces to identifying the metric level with the level of facts".
+
+**Checked and correct**
+- Statement: "no mechanism … a survey, not a proof" and the description of the sign rule with the citation of claim 4 (v), (vi). The weights hold to within 2^{-n}, and exactly when read until decided, given typicality.
+- Known, finite towers: claim 1 (i) to (iii) and (ii) are correctly stated.
+- Known, multi-mode descent: correct.
+- Known, infinite tower: the three cases, "no single rung's value constant on a class", and linear against sign of a value, all as claim 4 states them.
+- Known, the ignorance premise in the limit: as claim 3's Reading states it (argued).
+- Known, against (C): matches `tower.answers-iteration-question` (frozen clock; one rung per shadow wall, displaced away from the physical region).
+- Why: "the no-collapse result argues that a selector would need unboundedly many fresh bits" is fair to version 8.
+- Attack, last bullet: the registered free inputs do outnumber the papers' two numbers. See (2).
+
+**Verdict (1): NOT READY.** Q1, Q2, Q4 and Q5 need the fixes above. Q3 is a strength flag; Q6 and Q7 are minor.
+
+### (2) No-collapse claim, version 8 to 9
+
+**Correct as cited**
+- **"the store has since registered further free inputs beside the two numbers": correct.** The store registers, as postulates:
+  - `synthesis.number-n-registered-free-input` (N);
+  - `synthesis.matter-asymmetry-registered-free-input` (ε);
+  - `synthesis.down-type-126-weight-registered-free-input` (w_d);
+  - `synthesis.majorana-scale-free-input` (an input "beside N and v/H").
+  The list is finite, which is all the argument uses.
+- **"it counts items of data, not information": correct.** It is a fair scope statement: one registered rational or real number can carry unboundedly many bits, so a finite count of items bounds nothing in bits.
+- **"with both sign changes … counted as symmetries, gives the values no meaning beyond a relabelling": correct.** Under the group of sign changes, all strings are one orbit (claim 1 (iii)). The one class bit appears only under rotors, so it is rightly not mentioned here. The citation of clauses (i) to (iii) is right.
+- **The sentence added to the first gap (records of unbounded length): correct and at the right strength.** It says "model coupling written by hand", "what the premise says holds in the limit", "premise not derived", and the mixture is on the algebraic tower's elements. The proof cites claim 3 (i) to (iii).
+- **The sentence added to the registered stance: correct.** It is consistent with claim 4 (the rule is deterministic given its premises), and "signature not examined" is honest.
+- **Amendment kind "restatement": correct.** `docs/CONTRIBUTING-rules.md` defines restatement as "the formal statement changed", and the formal level changed.
+- **Defect text: fair to version 8.** Version 8 says "a mechanism that uses freedom the framework does not possess is not an open alternative within it", stated as closing the question.
+- **The original two arguments, premises and registered stance: unchanged verbatim.**
+- **Lay and one-liner: accurate at lay strength**, apart from the omission covered in R2.
+- **`pred.no-objective-collapse`, repinned @8 to @9: still holds as cited.** Its basis ("a collapse mechanism would be the uncaused selector the framework forbids"; null results consistent; one signature refutes) survives verbatim in version 9. Version 9 states that the deterministic rule is not a collapse of that kind.
+
+**Problems**
+
+- **R1, "a selection determined by an actual string and the system's state is not on its face an uncaused selection, so the first argument does not by itself exclude it": misleading by omission (same point as Q4).**
+  - The stored indifference Fact forbids "uncaused structure: … distinctions nothing in the framework determines". The actual string on which the selection rests is, on the face of that wording, such structure (claim 1 (i)).
+  - So the first argument bears on premise (A) even if not on the rule.
+  - Fix: "A selection determined by an actual string and the system's state is not on its face an uncaused selection; but the actual string it rests on is, on the face of the stored wording of the indifference premise (which forbids distinctions nothing in the framework determines), uncaused structure, since the completion determines no rung value (Theorem synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight (i)); so the first argument bears on the premise of an actual string rather than on the rule, and whether it excludes it, given the moduli clause of the same premise, is part of that problem."
+  - In the proof, change "an observation about the wording of the indifference premise" so that it names both clauses.
+
+- **R2, the formal and technical premise lists are incomplete compared with claim 4's Reading.**
+  - Formal: "(one string of rung values is actual, typical and independent of the system; …)" omits "the occupation context is the level of facts" and "fresh rungs for each event".
+  - Fix (formal): "(the occupation context is the level of facts and one string of rung values is actual, typical, read on fresh rungs for each event and independent of the system; the sign rule is a law; rungs are read in an order)".
+  - Fix (technical): make the corresponding change.
+  - Fix (lay): "that one pattern of settings is real and typical".
+  - The formal phrase "given an actual typical string" in the sentence on clauses (v), (vi) should likewise read "given an actual typical string, with fresh rungs for each event, independent of the system".
+
+- **R3, proof: "its Reading lists the three premises" is inaccurate.**
+  - Claim 4's Reading lists premises of two kinds.
+  - Fix: "its Reading lists the premises, of two kinds (actuality; a law with an order of reading), grouped here as three; they are argued there and not stored."
+
+- **R4, proof: "That integer states, parity sectors and a deterministic law on strings do not select" needs the qualifier of claim 2 (iii).** As Q2 notes, claim 4's rule is a deterministic law that selects.
+  - Fix: "a deterministic law mapping strings of a fixed finite set of rungs to strings, with the string the only hidden datum".
+
+- **R5 (minor), formal: "it shows that a selector of outcomes is not among the framework's stored structures" credits the counting argument with what the survey shows.**
+  - The counting argument shows that the stored free data cannot supply a fresh bit per event. That no stored structure selects is the result of the survey (claims 2 and 4).
+  - Fix: "it shows that the stored free data do not supply a fresh uncaused bit per event (that no stored structure selects is the survey of the results cited below), not that a selector cannot be added".
+
+- **R6 (minor), maintainer note: "This entity's open_problem field still names op.trichotomy-exhaustiveness".**
+  - That problem is in `open_problems_settled.yaml`.
+  - The note is accurate, but the field should name `op.outcome-selector-premises`, or the note should say the named problem is settled.
+
+**Verdict (2): NOT READY.** R1 to R4 need the fixes above; R5 and R6 are minor. The conclusions of the two arguments, the premises and the registered stance are untouched, and the restatement kind and the dependent prediction are right.
