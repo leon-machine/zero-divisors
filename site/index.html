@@ -309,6 +309,8 @@ body.resizing, body.resizing * { cursor: col-resize !important; user-select: non
 /* coverage of a check, the browser-run comparison, history and quantities (roadmap 7, 10, 15, 17) */
 .ck-fns .chip { padding: 0 7px; font-size: 11.5px; margin-right: 6px; }
 .ck-fns .cov { grid-column: 2 / -1; color: var(--muted); font-size: 12.5px; }
+ul.revs { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 10px; font-size: 14px; }
+ul.revs li.faint { opacity: .6; }
 ul.hist { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 6px; font-size: 13.5px; }
 ul.hist li { display: grid; grid-template-columns: 6.2em 2.6em minmax(0, 1fr); gap: 2px 8px; align-items: baseline; }
 ul.hist .d, ul.hist .v { color: var(--muted); font: 12px var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -2064,6 +2066,32 @@ function openNote(nid) {
 // the eyebrow and the chips of a result, shown at once; the rest waits for its data file
 const evidChip = n => passing(n) && n.cov ? `<span class="chip warn" title="${esc(COV_ABOUT[n.cov])}">${n.cov === "sampled" ? "Checked at samples" : "Partly checked"}</span>`
   : EVID_WORD[n.check] ? `<span class="chip ${passing(n) ? "good" : ""}">${EVID_WORD[n.check]}</span>` : "";
+// expert reviews sealed by ORCID (docs/REVIEWS.md): shown only when the store switches them on
+const ROUTE_WORD = { employment: "research employment", publications: "publication record", invitation: "invited by the author" };
+const REVIEW_STATE = { stale: "for an earlier version", withdrawn: "withdrawn by the reviewer", removed: "identity removed on request" };
+const SCOPE_WORD = { statement: "the statement", proof: "the proof", check: "the check", imports: "the imported results" };
+function reviewsSection(n) {
+  if (!DATA.reviews_on) return "";
+  const rs = n.reviews || [];
+  const one = r => {
+    const who = r.orcid
+      ? `${esc(r.by || "")} <a href="https://orcid.org/${esc(r.orcid)}" target="_blank" rel="noopener" aria-label="ORCID record of ${esc(r.by || r.orcid)}">https://orcid.org/${esc(r.orcid)}</a>`
+      : "A reviewer whose identity was removed on request";
+    const badge = r.qualified
+      ? `<span class="chip good" title="Meets the published qualification rule">Qualified reviewer${r.route ? ": " + esc(ROUTE_WORD[r.route] || r.route) : ""}</span>`
+      : `<span class="chip" title="Shown, but does not count towards trust">Reviewer</span>`;
+    const what = r.verdict === "object"
+      ? `<b>Objection</b>${r.location ? " at " + esc(r.location) : ""}${r.defect ? ": " + esc(r.defect) : ""}`
+      : `<b>Endorsement</b> of ${(r.scope || []).map(x => esc(SCOPE_WORD[x] || x)).join(", ")}${r.depth ? ", " + esc(r.depth === "line-by-line" ? "checked line by line" : "read") : ""}`;
+    return `<li class="${r.state === "current" ? "" : "faint"}"><div>${what}${r.state !== "current" ? ` <span class="note">(${esc(REVIEW_STATE[r.state] || r.state)})</span>` : ""}</div>
+      <div class="note">${who} ${badge}${r.date ? " · " + esc(r.date) : ""} · version ${esc(r.version)}${r.conflicts && r.conflicts !== "none" ? " · conflicts declared: " + esc(r.conflicts) : ""}</div>
+      ${r.note ? `<div class="note">${esc(r.note)}</div>` : ""}</li>`;
+  };
+  return `<details data-sec="reviews"${rs.length ? " open" : ""}><summary>Reviews <span class="c">${rs.length}</span></summary>
+    ${n.disputed ? `<p class="note"><b>Disputed:</b> an objection from a qualified reviewer stands.</p>` : ""}
+    ${rs.length ? `<ul class="revs">${rs.map(one).join("")}</ul>` : `<p class="note">No review is recorded yet.</p>`}
+    <p class="note">Each review carries ORCID's signature, checked against ORCID's published key. ORCID confirms identity only and does not endorse reviews.</p></details>`;
+}
 const trustChip = n => n.trust ? `<span class="chip ${n.trust === "human-checked" || n.trust === "published" ? "good" : ""}" title="Trust: ${esc(TRUST_ABOUT[n.trust] || "")}">${esc(TRUST_WORD[n.trust] || n.trust)}</span>` : "";
 // who did what: the names in the heading, the roles and the evidence for the model under Source
 // the original credit first ("Leon Butler · with Claude Fable 5"), then each amendment by the version it made
@@ -2093,7 +2121,7 @@ function resultHead(n) {
     ${titleHead(n.title)}
     ${byline(n)}
     ${coreWords(n) ? `<p class="note" style="margin:2px 0 6px">${esc(coreWords(n))}</p>` : ""}
-    <div class="chips"><span class="chip">${esc(STATUS_WORD[n.status] || n.status)}</span>${evidChip(n)}${trustChip(n)}${n.kind === "claim" && n.ledger === "essential" ? `<span class="chip">Needs the completion</span>` : ""}${n.coverage && n.coverage.judge && n.coverage.judge.verdict !== "agrees" ? `<span class="chip warn" title="${esc(n.coverage.judge.note)}">${esc(JUDGE_WORD[n.coverage.judge.verdict] || "Coverage judge: " + n.coverage.judge.verdict)}</span>` : ""}</div>`;
+    <div class="chips"><span class="chip">${esc(STATUS_WORD[n.status] || n.status)}</span>${evidChip(n)}${trustChip(n)}${DATA.reviews_on && n.disputed ? `<span class="chip bad" title="An objection from a qualified reviewer stands">Disputed</span>` : ""}${n.kind === "claim" && n.ledger === "essential" ? `<span class="chip">Needs the completion</span>` : ""}${n.coverage && n.coverage.judge && n.coverage.judge.verdict !== "agrees" ? `<span class="chip warn" title="${esc(n.coverage.judge.note)}">${esc(JUDGE_WORD[n.coverage.judge.verdict] || "Coverage judge: " + n.coverage.judge.verdict)}</span>` : ""}</div>`;
 }
 function historySection(n) {
   const h = n.history || [];
@@ -2165,6 +2193,7 @@ function renderResult(n, fly) {
     <details><summary>Used by <span class="c">${dept.get(id).length}</span></summary>${linkList(dept.get(id), "Nothing in the store builds on it yet.")}</details>
     ${motBy.get(id).length ? `<details><summary>Motivated by <span class="c">${motBy.get(id).length}</span></summary>${linkList(motBy.get(id), "")}</details>` : ""}
     ${mots.get(id).length ? `<details><summary>Motivates <span class="c">${mots.get(id).length}</span></summary>${linkList(mots.get(id), "")}</details>` : ""}
+    ${reviewsSection(n)}
     ${historySection(n)}
     <details><summary>Source</summary>
       <p class="note">${colls.length ? "In: " + colls.map(c => esc(c.title)).join("; ") + "." : ""}${loc.number ? ` Numbered ${esc(loc.number)} there.` : ""}</p>
@@ -2173,7 +2202,7 @@ function renderResult(n, fly) {
       ${amendNote(n)}
       ${gaNote(n)}
       ${n.cov ? `<p class="note">${n.cov === "sampled" ? "Its check covers sample cases only" : "Its check covers part of the statement"}: a check of the general case would strengthen it. <a href="#contribute/build">How to contribute</a></p>` : ""}
-      <p class="note">Trust: ${n.trust ? `${esc(TRUST_WORD[n.trust] || n.trust)}. ${esc(TRUST_ABOUT[n.trust] || "")}` : "not recorded."}${signs.length ? "" : " No human sign-off is recorded."}</p>
+      <p class="note">Trust: ${n.trust ? `${esc(TRUST_WORD[n.trust] || n.trust)}. ${esc(TRUST_ABOUT[n.trust] || "")}` : "not recorded."}${signs.length || DATA.reviews_on ? "" : " No human sign-off is recorded."}</p>
       ${signs.length ? `<ul class="hist">${signs.map(x => `<li><span class="d">${esc(x.date)}</span><span class="v">v${esc(x.version)}</span><span><b>${esc(TRUST_WORD[x.level] || x.level)}</b> by ${esc(x.by)}${x.note ? ": " + esc(x.note) : ""}</span></li>`).join("")}</ul>` : ""}
       <p class="note" style="font-family:var(--mono)">${esc(n.id)} · version ${n.version}</p></details>
     ${tnav("bottom")}

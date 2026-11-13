@@ -870,6 +870,7 @@ class SubjectFit(unittest.TestCase):
 
 
 # W510, I510: tested in tests/test_quantity.py (Contradictions)
+# E130 E131 E132 E133 E134 E135 E136 E137 E138: review records, tested in tests/test_reviews.py
 class RuleCoverage(unittest.TestCase):
     def test_every_code_has_a_test(self):
         here = open(__file__).read()
@@ -1269,37 +1270,26 @@ class Quantities(StoreCase):
 
 
 class TrustAndSignoffs(StoreCase):
+    """Human trust is earned through reviews (tests/test_reviews.py), never set by hand."""
     def sign(self, eid, text):
         self.edit(eid, "checked_by:", text + "checked_by:")
 
-    def test_E119_signoff_ahead(self):
-        self.sign("fx.witt.car", "signoffs:\n- {by: leon, date: '2026-10-23', version: 2, "
+    def test_E119_front_matter_signoffs_are_retired(self):
+        self.sign("fx.witt.car", "signoffs:\n- {by: leon, date: '2026-10-23', version: 1, "
                   "level: human-read}\n")
         self.assertFires("E119", (1,))
 
-    def test_E120_trust_without_signoff(self):
-        self.sign("fx.witt.car", "trust: human-checked\nsignoffs:\n- {by: leon, date: "
-                  "'2026-10-23', version: 1, level: human-read}\n")
-        self.assertFires("E120", (1,))
-
-    def test_trust_matching_signoff_is_clean(self):
-        self.sign("fx.witt.car", "trust: human-read\nsignoffs:\n- {by: leon, date: "
-                  "'2026-10-23', version: 1, level: human-checked}\n")
-        rep = self.run_layers((1,))
-        self.assertFalse({"E119", "E120", "I121"} & self.codes(rep))
-
-    def test_ai_and_published_need_no_signoff(self):
-        for t in ("ai-proposed", "ai-refereed", "published"):
+    def test_E120_human_trust_set_by_hand(self):
+        for t in ("human-read", "human-checked"):
             self.edit("fx.witt.car", "checked_by:", f"trust: {t}\nchecked_by:")
-            self.assertNotIn("E120", self.codes(self.run_layers((1,))))
+            self.assertFires("E120", (1,))
             self.edit("fx.witt.car", f"trust: {t}\n", "")
 
-    def test_I121_old_signoff(self):
-        self.edit("fx.witt.car", "version: 1", "version: 2")
-        self.sign("fx.witt.car", "trust: human-read\nsignoffs:\n- {by: leon, date: "
-                  "'2026-10-20', version: 1, level: human-read}\n")
-        rep = self.assertFires("I121", (1,))
-        self.assertIn("E120", self.codes(rep))      # the old sign-off does not carry over
+    def test_ai_and_published_are_fine(self):
+        for t in ("ai-proposed", "ai-refereed", "published"):
+            self.edit("fx.witt.car", "checked_by:", f"trust: {t}\nchecked_by:")
+            self.assertFalse({"E119", "E120"} & self.codes(self.run_layers((1,))))
+            self.edit("fx.witt.car", f"trust: {t}\n", "")
 
 
 class Programmes(StoreCase):

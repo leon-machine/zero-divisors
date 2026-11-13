@@ -26,8 +26,14 @@ jobs:
           git archive "origin/${{ github.base_ref }}" tp lib tests | tar -x -C /tmp/base
           git show "origin/${{ github.base_ref }}:store/config.yaml" > /tmp/base/config.yaml
           git show "origin/${{ github.base_ref }}:store/.tp-lock.json" > /tmp/base/lock.json || echo '{}' > /tmp/base/lock.json
+          # accepted review records: a pull request may add reviews, never change or remove one (E138)
+          git show "origin/${{ github.base_ref }}:store/.tp-reviews-lock.json" > /tmp/base/reviews-lock.json || echo '{}' > /tmp/base/reviews-lock.json
+          git archive "origin/${{ github.base_ref }}" store/orcid_keys | tar -x -C /tmp/base || true
           cp /tmp/base/config.yaml store/config.yaml
           cp /tmp/base/lock.json store/.tp-lock.json
+          cp /tmp/base/reviews-lock.json store/.tp-reviews-lock.json
+          # ORCID's keys come from the base branch too: a pull request cannot add a key of its own
+          if [ -d /tmp/base/store/orcid_keys ]; then rm -rf store/orcid_keys && cp -r /tmp/base/store/orcid_keys store/; fi
           rm -rf tp lib && cp -r /tmp/base/tp /tmp/base/lib .
       - name: Tests
         run: python -m unittest discover -s tests -t .

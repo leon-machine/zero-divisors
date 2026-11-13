@@ -52,6 +52,13 @@ class Lab:
         self.past, self.future = derive.cones(g, self.store.entities.keys())
         self.conds = derive.conditions(self.store, self.past)
         self.fnd = derive.foundation_of(self.store, self.past)
+        # expert reviews sealed by ORCID: reported only when reviews.enabled is true
+        from . import reviews
+        self.reviews_on = reviews.enabled(self.store.config)
+        self.reviews = (reviews.standing(reviews.load(self.store.root, self.store.config,
+                                                      self.store.entities),
+                                         self.store.entities, self.store.config)
+                        if self.reviews_on else {})
         gp = os.path.join(self.lab, "build", "graph.json")
         self.checks = {}
         if os.path.exists(gp):
@@ -572,9 +579,17 @@ class Lab:
                 notes.append({"id": n.id, "kind": n.status, "title": n.title,
                               "text" if notes_text else "opening":
                               t if notes_text else t[:240] + ("..." if len(t) > 240 else "")})
+        derived_extra = {}
+        if self.reviews_on:
+            from . import reviews
+            row = self.reviews.get(id) or {}
+            derived_extra = {"trust": reviews.effective_trust(e.meta.get("trust") or "ai-proposed",
+                                                              row.get("trust")),
+                             "disputed": bool(row.get("disputed")),
+                             "reviews": row.get("reviews") or []}
         return {"front_matter": e.meta, "levels": e.levels, "proofs": e.proofs,
                 "notes": notes,
-                "derived": {"effective_status": (e.status if e.kind == "prediction"
+                "derived": {**derived_extra,"effective_status": (e.status if e.kind == "prediction"
                                                  else self.eff.get(id)),
                             "basis_status": (self.eff.get(id) if e.kind == "prediction"
                                              else None),

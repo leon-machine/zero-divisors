@@ -83,6 +83,7 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
     python -m tp accept PROPOSAL_ID --store store            (after review; then tp lock)
     python -m tp.site                                  build site/index.html
     python -m tp check-one ID --store store             run one result's machine checks
+    python -m tp reviews check --store store            expert reviews sealed by ORCID (docs/REVIEWS.md)
     python -m tp.mcp_server --store store              MCP server over stdio
     python -m tp.mcp_http --store store [--port 8080]   read-only MCP server over HTTP (docs/HOSTING.md)
     python -m tp.gate   recipes/falling-in.yaml ../G00_transport_papers_guide.tex

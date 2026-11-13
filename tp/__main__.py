@@ -9,6 +9,7 @@
   python -m tp release-notes vX.Y.Z [--store store]     draft releases/vX.Y.Z.md
   python -m tp ga-report [--store store]                entities written outside geometric algebra, undeclared
   python -m tp check-one ID [--store store]             run one result's machine checks
+  python -m tp reviews check|hash|fingerprint|add [--store store]   reviews sealed by ORCID
 """
 import argparse
 import os
@@ -32,7 +33,7 @@ def _layers(s):
 # subcommands that live in their own modules: each module defines main(argv) -> int
 EXTENSIONS = {
     "bump": "edit", "note": "edit", "wire-check": "edit", "restate": "edit",
-    "sign": "edit", "trust": "trust",
+    "reviews": "reviews",
     "lint": "lint", "context": "context", "checkruns": "checkruns", "quantity": "quantity",
     "mutants": "mutants", "credit": "credit", "release-notes": "releases", "ga-report": "galang",
     "check-one": "checkone",
@@ -41,6 +42,10 @@ EXTENSIONS = {
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == "sign":
+        print("tp sign is retired: a human review is recorded through the review page with "
+              "ORCID sign-in, and checked with `tp reviews check` (docs/REVIEWS.md)")
+        return 1
     if argv and argv[0] in EXTENSIONS:
         import importlib
         mod = importlib.import_module(f"tp.{EXTENSIONS[argv[0]]}")
@@ -110,6 +115,8 @@ def main(argv=None):
         return 1 if rep.errors() else 0
     if a.cmd == "lock":
         write_lock(load_store(a.store))
+        from . import reviews
+        reviews.write_lock(a.store)
         print("lock written")
         return 0
     if a.cmd == "doc":

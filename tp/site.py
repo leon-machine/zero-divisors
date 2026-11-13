@@ -696,6 +696,11 @@ def main(build="build", site="site", store="store", template="universe.template.
         layout.main(build)
     lay = json.load(open(lay_path))
     st = load_store(store)
+    # expert reviews sealed by ORCID: shown only when reviews.enabled is true (docs/REVIEWS.md)
+    from . import reviews as _reviews
+    reviews_on = _reviews.enabled(st.config)
+    review_rows = (_reviews.standing(_reviews.load(st.root, st.config, st.entities),
+                                     st.entities, st.config) if reviews_on else {})
     known = {"proved", "imported", "conjectured", "refuted", "postulate", "defined",
              "live", "confirmed", "killed", "open", "settled"}
     g["nodes"] = [n for n in g["nodes"] if isinstance(n.get("id"), str)
@@ -769,6 +774,12 @@ def main(build="build", site="site", store="store", template="universe.template.
                 if weak:
                     d["cov"] = weak
             d["trust"] = _trust(e)
+            if reviews_on:
+                row = review_rows.get(nid) or {}
+                d["trust"] = _reviews.effective_trust(d["trust"], row.get("trust"))
+                if row.get("disputed"):
+                    d["disputed"] = True
+                full["reviews"] = row.get("reviews") or []
             if e.meta.get("credit"):
                 full["credit"] = [dict(c) for c in e.meta["credit"] if isinstance(c, dict)]
             if e.meta.get("outside_ga"):
@@ -913,6 +924,7 @@ def main(build="build", site="site", store="store", template="universe.template.
                         "notes": len(notes),
                         "status": s["status"]},
             "trust_levels": list(TRUST_LEVELS),
+            "reviews_on": reviews_on,
             "programmes": programmes,
             "quantities": quantities,
             "data_files": sorted(data_chunks),

@@ -1,10 +1,10 @@
-"""Structured edits of entity.md (roadmap item 1, and `tp sign` for item 8).
+"""Structured edits of entity.md (roadmap item 1). `tp sign` is retired: human sign-off is
+recorded through reviews sealed by ORCID (tp/reviews.py, docs/REVIEWS.md).
 
   tp bump       <id> --note "<sentence>" [--by maintainer-YYYY-MM-DD]
   tp note       <id> "<text>"                     [--by ...]
   tp wire-check <id>
   tp restate    <id> --level formal|technical|lay|one-liner|title --from FILE --note "<why>"
-  tp sign       <id> --level human-read|human-checked [--by leon] [--note "..."]
 
 Every command also takes --store (default store) and --date YYYY-MM-DD (default today).
 
@@ -577,42 +577,6 @@ def _set_top_scalar(lines, key, value, after=("review", "ai_involved")):
     return lines + [line]
 
 
-def _signoff_lines(d, s):
-    p = " " * d
-    out = [f"{p}- by: {scalar(s['by'])}\n", f"{p}  date: '{s['date']}'\n",
-           f"{p}  version: {s['version']}\n", f"{p}  level: {s['level']}\n"]
-    if s.get("note"):
-        out.append(f"{p}  note: {sq(s['note'])}\n")
-    return out
-
-
-def add_signoff(lines, old, s):
-    span = top_span(lines, "signoffs")
-    if span is None:
-        tsp = top_span(lines, "trust")
-        at = tsp[1] if tsp else None
-        if at is None:
-            for k in ("review", "ai_involved"):
-                sp = top_span(lines, k)
-                if sp:
-                    at = sp[1]
-                    break
-        if at is None:
-            at = len(lines)
-        return lines[:at] + ["signoffs:\n"] + _signoff_lines(0, s) + lines[at:]
-    i, j = span
-    if _inline_value(lines[i]):
-        body = [ln for x in (old or []) + [s] for ln in _signoff_lines(0, x)]
-        return lines[:i] + ["signoffs:\n"] + body + lines[j:]
-    items = [n for n in range(i + 1, j) if lines[n].lstrip(" ").startswith("-")]
-    d = _indent(lines[items[0]]) if items else 0
-    return lines[:j] + _signoff_lines(d, s) + lines[j:]
-
-
-# ---------------------------------------------------------------------------
-# commands
-# ---------------------------------------------------------------------------
-
 def _load(a):
     folder = find_folder(a.store, a.id)
     path = os.path.join(folder, ENTITY_FILE)
@@ -725,32 +689,6 @@ def cmd_restate(a):
     return f"restate {a.id}: {a.level} replaced; {msg}"
 
 
-def cmd_sign(a):
-    today = today_str(a)
-    if a.note:
-        _house_style(a.note, a.store)
-    folder, text, meta, levels, lines, tail = _load(a)
-    v = int(meta.get("version") or 1)
-    s = {"by": a.by, "date": today, "version": v, "level": a.level}
-    if a.note:
-        s["note"] = " ".join(a.note.split())
-    old = list(meta.get("signoffs") or [])
-    allsig = old + [s]
-    cur = [x["level"] for x in allsig if isinstance(x, dict) and x.get("version") == v
-           and x.get("level") in TRUST_ORDER]
-    best = max(cur, key=TRUST_ORDER.index)
-    prev = meta.get("trust")
-    trust = prev if prev == "published" else best
-    expect = copy.deepcopy(meta)
-    expect["signoffs"] = allsig
-    expect["trust"] = trust
-    lines = add_signoff(lines, old, s)
-    lines = _set_top_scalar(lines, "trust", trust)
-    commit(folder, a.store, a.id, text, join_doc(lines, tail), expect, levels)
-    tmsg = f"trust {prev or 'unset'} -> {trust}" if prev != trust else f"trust {trust} kept"
-    return f"sign {a.id}: {a.level} by {a.by} for version {v}; {tmsg}"
-
-
 def _parser(cmd):
     ap = argparse.ArgumentParser(prog=f"tp {cmd}")
     ap.add_argument("id")
@@ -775,10 +713,6 @@ def _parser(cmd):
         ap.add_argument("--from", dest="source", required=True)
         ap.add_argument("--note", required=True)
         ap.add_argument("--by", default=None)
-    elif cmd == "sign":
-        ap.add_argument("--level", required=True, choices=["human-read", "human-checked"])
-        ap.add_argument("--by", default="leon")
-        ap.add_argument("--note", default=None)
     return ap
 
 
@@ -795,8 +729,6 @@ def main(argv):
             out = cmd_wire(a)
         elif cmd == "restate":
             out = cmd_restate(a)
-        elif cmd == "sign":
-            out = cmd_sign(a)
         else:
             print(f"tp: unknown edit command {cmd!r}")
             return 1

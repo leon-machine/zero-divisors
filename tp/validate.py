@@ -240,6 +240,7 @@ def layer1(store: Store, rep: Report):
         quantity_checks(e, rep)
         trust_checks(e, rep)
     coverage_checks(store, rep)
+    review_checks(store, rep)
 
 
 # ---- quantities (roadmap item 10) -----------------------------------------
@@ -285,30 +286,32 @@ TRUST_SIGNED = {"human-read": 1, "human-checked": 2}
 
 
 def trust_checks(e, rep):
-    """E119: a sign-off names a version the entity has not reached; E120: trust claims
-    a human level no sign-off of the current version supports; I121: a sign-off is for
-    an older version."""
-    eid, cur = e.id, e.version
-    best = 0
-    for so in e.meta.get("signoffs") or []:
-        if not isinstance(so, dict) or not isinstance(so.get("version"), int):
-            continue                       # layer-1 schema reports the shape
-        v = so["version"]
-        if v > cur:
-            rep.add("E119", eid, f"sign-off by {so.get('by')} is for version {v}, "
-                    f"but the entity is at version {cur}")
-        elif v < cur:
-            rep.add("I121", eid, f"sign-off by {so.get('by')} ({so.get('level')}) is for "
-                    f"version {v}; the entity is at version {cur}",
-                    "re-read the current version and sign again (tp sign)")
-        else:
-            best = max(best, TRUST_SIGNED.get(so.get("level"), 0))
+    """Human trust is earned through reviews sealed by ORCID (tp/reviews.py,
+    docs/REVIEWS.md), never written by hand. E119: front-matter sign-offs (the retired
+    `tp sign`); E120: a human level set in the front matter."""
+    eid = e.id
+    if e.meta.get("signoffs"):
+        rep.add("E119", eid, "sign-offs are no longer recorded in the front matter",
+                "remove signoffs; a human review is recorded through the review page with "
+                "ORCID sign-in (docs/REVIEWS.md)")
     trust = e.meta.get("trust")
-    need = TRUST_SIGNED.get(trust, 0)
-    if need > best:
-        have = {0: "none", 1: "human-read", 2: "human-checked"}[best]
-        rep.add("E120", eid, f"trust '{trust}' but the highest sign-off for version {cur} "
-                f"is {have}", "record the sign-off with tp sign, or lower trust")
+    if trust in TRUST_SIGNED:
+        rep.add("E120", eid, f"trust '{trust}' is set by hand; human levels are earned "
+                "through reviews", "set trust to ai-proposed or ai-refereed; reviews raise it")
+
+
+def review_checks(store: Store, rep: Report):
+    """Every review record in store/reviews: shape (E130), file name (E131), the result it
+    concerns (E132), its entry in the open review log (E133), ORCID's token (E134, E135),
+    withdrawals, answers and rulings (E136, E137), and the append-only rule against the
+    accepted state (E138). Checked whatever reviews.enabled says."""
+    from . import reviews
+    for r in reviews.load(store.root, store.config, store.entities):
+        for code, msg, fix in r.errors:
+            rep.add(code, r.path, msg, fix)
+    for rel, msg in reviews.append_only(store.root):
+        rep.add("E138", rel, msg, "accepted reviews are never changed or removed; record a "
+                "withdrawal, or list the record in store/reviews/redactions.yaml")
 
 
 # ---- coverage records (roadmap item 7) -------------------------------------
@@ -1630,7 +1633,7 @@ CODE_TITLES = {
     "W212": "unused tag",
     "I405": "untouched premise, expected (suppressed W405)",
     "I126": "coverage records, store-wide",
-    "I121": "sign-off is for an older version",
+    "E138": "an accepted review record was changed or removed",
 }
 
 

@@ -1,0 +1,26 @@
+{
+ "by": "leon zd test",
+ "orcid": "0009-0000-4817-5406",
+ "orcid_token": "eyJraWQiOiJzYW5kYm94LW9yY2lkLW9yZy0zaHBnb3NsM2I2bGFwZW5oMWV3c2dkb2IzZmF3ZXBvaiIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoicFMycy1MT2lac3QwX2RRSjQyNnZrZyIsInN1YiI6IjAwMDktMDAwMC00ODE3LTU0MDYiLCJhdWQiOiJBUFAtSkJRUzdaRTNMN0hON040WiIsImF1dGhfdGltZSI6MTc5NDU2NTY2MywiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm9yY2lkLm9yZyIsImV4cCI6MTc5NDY1NTM0MSwiZ2l2ZW5fbmFtZSI6Imxlb24gemQiLCJpYXQiOjE3OTQ1Njg5NDEsIm5vbmNlIjoiOTk4NzhjNWJjY2I3MTU5NWQ5MzgxZDI1ZTFiY2MyYzFlYjk3YmEzYmFiYWQ4ODMwZGYxNGNlOGEwZDk1MWM5YyIsImZhbWlseV9uYW1lIjoidGVzdCIsImp0aSI6IjQ2NTkzMDMwLTAxYjgtNDNkYi05NTVkLTkyYTIxODdjOWViYSJ9.lvQmGZtjWN4tc94x8Nm21GpEJtzFlGTwOmPL5OBlJ_Sfoh9WfWoRcuewDjzVDFaR-d65q5hnupEsWNxTWxUtylj6KxzklddNfOf_Gye8cFfUffzxRg9dd_HLBALlTV9QKrMYWVgYo-USWWaaYupkISSosVCyUjysgR_FtQY5tl17NdF7vgWQ0SVCs0AxIYuuMSO6-3YSpCPlU6L86g7Bzj4k9s3TQz4l78SP_oFhPTSRDXjZCoAARJuHR1tmB6JTx3tEBPh4ywuM5btN_ByPdmdU0ALKSnbuyJxGyp-Bov8EDIo9KZb-zi7STArcnk38-eSfzUNK9OX4U8hREmoM1Q",
+ "qualification": {
+  "route": "invitation",
+  "rule": 1
+ },
+ "signed": {
+  "conflicts": "none",
+  "depth": "line-by-line",
+  "fingerprint": "f9c954fb51b1c7185e44cb5fdb50d12de5b4259f2c64f0526e69c342d0646813",
+  "kind": "review",
+  "note": "Fixture review for the Physics Graph test suite (ORCID sandbox).",
+  "result": "fx.witt.car",
+  "scope": [
+   "statement",
+   "proof"
+  ],
+  "terms": 1,
+  "verdict": "endorse",
+  "version": 1,
+  "zenodo_credit": false
+ },
+ "submitted": "2026-11-13"
+}

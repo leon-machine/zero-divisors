@@ -3,3 +3,6 @@
 /store/config.yaml        @leon-machine
 /store/subjects.yaml      @leon-machine
 /store/tombstones.yaml    @leon-machine
+/store/orcid_keys/        @leon-machine
+/store/reviews/redactions.yaml @leon-machine
+/store/.tp-reviews-lock.json   @leon-machine
