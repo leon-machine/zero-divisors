@@ -2594,23 +2594,27 @@
     declare the first outcome when that number is below the outcome's weight; for a typical string of rung values
     this gives the weights of Premise (P) (\claimref{synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not},
     clauses (v) and (vi)). It rests on three premises that the store does not hold: (A) the occupation context is
-    the level of facts and one string of rung values is actual, typical for the uniform weight, and independent of
-    the system measured; (B) the rule is a law: the outcome is declared by the sign of a value in which the
-    system's own state enters; (C) rungs are read in an order. Decide each premise: derive it from stored content,
+    the level of facts and one string of rung values is actual, typical for the uniform weight, read on fresh rungs
+    for each event, and independent of the system measured; (B) the rule is a law: the outcome is declared by the sign of a value in which the
+    system's own state enters; (C) rungs are read in an order ((A) is the Reading's premise of actuality; (B) and (C) together are its law).
+    Decide each premise: derive it from stored content,
     refute it from stored content, or show it independent of the stored premises by two models.
   why: >-
     The no-collapse result (\claimref{one-relation.record-chain-votes-measurement-without-collapse}) argues that a
     selector would need unboundedly many fresh bits the framework does not have. The tower supplies unboundedly
     many two-state systems, and whether their values are data is exactly what premise (A) asserts and what the
-    stored content leaves undecided. If the premises can be derived, the framework has a mechanism and the
-    no-collapse result must be restated; if they can be refuted, the no-collapse result gains an argument that
+    stored content leaves undecided. If the premises can be derived, the framework has a selector of outcomes with
+    the weights of (P) (the end of interference still resting on the recorded-sectors premise or the record
+    limit), and the conclusions of the no-collapse result (all branches occupied; no selector within the
+    framework) must be withdrawn; if they can be refuted, the no-collapse result gains an argument that
     does not depend on its counting; if they are independent, the choice between the two accounts is a premise
     and should be registered as one.
   known: >-
     On finite towers the completion forces no value on a new rung, strings of values are one orbit of sign changes,
     and the one extension invariant under both sign changes of a new rung has weight $\tfrac12$
-    (\claimref{synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight}); integer states,
-    parity sectors and a deterministic law on strings are not selectors, and the stored multi-mode descent ends
+    (\claimref{synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight}); integer states and
+    parity sectors are not selectors, nor is a deterministic law mapping strings of a fixed finite set of rungs to
+    strings with the string the only hidden datum, and the stored multi-mode descent ends
     interference between records and selects nothing
     (\claimref{synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws}). On the
     infinite tower, whether a string is a datum depends on the group: tail classes under changes on finitely many
@@ -2618,16 +2622,22 @@
     no single rung's value is constant on a class; a rule whose outcome is the value of an element cannot select
     with odds that depend on the state, and a rule declaring the outcome by the sign of a value can
     (\claimref{synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not}). For a model coupling,
-    records of unbounded length give a limit state that is the mixture of two disjoint states, with the full
-    interference present at every finite stage; in that limit the single premise that one outcome obtains with
+    records of unbounded length give a limit state that is the mixture of the two branch states on every element
+    (proved), states that are disjoint in the completed algebra (argued from the imported Powers and Stormer
+    criterion), with the full interference present at every finite stage for an element reaching every record; in that limit the single premise that one outcome obtains with
     probability its weight agrees with the value of every element, and is not a mechanism
-    (\claimref{synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit}). Against premise
+    (\claimref{synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit}). Bearing on premise
     (A): the symmetric state of the infinite tower is disjoint from every string state (argued from an import),
     and the store takes the occupation-diagonal algebra as the level of records only on a stated choice between
-    two assemblies. Against premise (C): the stored account has no clock on the tower and places the rungs beyond
+    two assemblies. Against premise (A): the indifference premise in its stored wording forbids distinctions
+    nothing in the framework determines (\claimref{one-relation.imported-indifference-instrument}), and by
+    \claimref{synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight}(i) the completion
+    determines no rung value, so an actual string is on its face such a distinction; whether the moduli clause of
+    the same Fact admits a tail class as a datum is open. Against premise (C): the stored account has no clock on the tower and places the rungs beyond
     the first away from the physical region (\claimref{tower.answers-iteration-question}). Against premise (B):
-    nothing stored; it is a law of the pilot-wave kind, and the indifference premise as the series reads it
-    forbids an uncaused selection, though a selection caused by an actual string is not obviously of that kind.
+    nothing stored beyond the indifference premise, whose clause on uncaused selections does not obviously apply
+    to a selection fixed by an actual string and the state; the question moves to (A). (B) is a law of the
+    pilot-wave kind.
   attack:
     - >-
       Premise (A), the group. Decide which automorphisms of the infinite tower are symmetries of the construction:
@@ -2637,14 +2647,16 @@
     - >-
       Premise (A), the context. Decide between the two assemblies of the pointwise levels (the choice left open in
       \claimref{singularity.p-reduced-metric-level-reading-many}); if the sheaf assembly is forced, the
-      occupation-diagonal algebra is the level of records by theorem and the first half of (A) follows.
+      metric level is the joint-diagonal algebra by theorem, and the first half of (A) reduces to identifying the
+      metric level with the level of facts.
     - >-
       Premise (A), typicality and independence. Find a stored state-selection premise that fixes the state of the
       rungs beyond the first, or prove none does; a string state is disjoint from the symmetric state, so (A) is
       not a reading of the symmetric state and needs its own source.
     - >-
-      Premise (B). Decide whether the indifference premise forbids a selection that is determined by an actual
-      string and the system's state. Then either derive the sign rule from a stored structure (the natural
+      Premises (A) and (B) against indifference. Decide whether the indifference premise forbids an actual string
+      as a distinction nothing in the framework determines, or admits it as a datum under its moduli clause; and
+      whether it forbids a selection that is determined by an actual string and the system's state. Then either derive the sign rule from a stored structure (the natural
       candidate is a guidance law on the occupation context) or exhibit a second rule with the same weights, which
       would show the rule is not forced.
     - >-
@@ -2660,12 +2672,13 @@
   success: >-
     For each of (A), (B), (C): a derivation from stored content with its premises named, or a refutation from
     stored content, or a pair of models showing independence. A derivation of all three gives the framework a
-    mechanism and refutes the no-collapse stance as registered. A refutation of any one closes this route and
+    selector and refutes the vote's conclusion that all branches are occupied; whether it touches the registered
+    stance on objective-collapse signatures depends on whether the rule has a signature, which is not examined. A refutation of any one closes this route and
     leaves the no-collapse stance with the candidates examined as its support. Independence of all three makes
     the choice a premise of the series, to be registered with its cost.
   entities:
     - one-relation.record-chain-votes-measurement-without-collapse
-    - one-relation.recorded-sectors-superselected-premise
+    - one-relation.imported-indifference-instrument
     - synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight
     - synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws
     - synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit
