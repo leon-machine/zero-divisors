@@ -1,0 +1,26 @@
+PASS adjoint = transpose: e symmetric, f antisymmetric
+PASS X = e_0 f_new is self-adjoint with X^2 = 1
+PASS (1+X)/2 is a projection, so Omega(x) = tr(P x)/tr(P) is a state under (P)
+PASS Omega restricts to the tracial state omega on A_1 (blades of rung 0)
+PASS Omega is invariant under sigma_e (e_new -> -e_new), which exchanges on and off
+PASS Omega(on_new) = 1/2
+PASS Omega != Omega_1/2: Omega(e_0 f_new) = 1 (Omega_1/2 vanishes there)
+PASS Omega is not sigma_f-invariant (so the full group is needed, not 'exchange + a sign change moving e')
+PASS sigma_f maps v to w, hence on to off (it DOES exchange on with off)
+PASS conjugation by the odd unitary e_0 negates every generator of the other rungs (an infinite sign change on the tower)
+PASS ... and fixes every on_j, j != 0 (so no string value beyond rung 0 changes)
+PASS conjugation by e_j flips string value j
+PASS the swap of two rungs is a dagger-commuting automorphism (relations and adjoint preserved)
+PASS claim 4 (iii): four even, orthogonal atoms of trace 1/4, sum 1 (own matrices)
+   psi = (1, 0): Born weight 1, frequency of outcome 1 over the 16 data strings 1
+   psi = (0, 1): Born weight 0, frequency of outcome 1 over the 16 data strings 0
+   psi = (3/5, 4/5): Born weight 9/25, frequency of outcome 1 over the 16 data strings 3/8
+   psi = (4/5, 3/5): Born weight 16/25, frequency of outcome 1 over the 16 data strings 11/16
+   psi = (5/13, 12/13): Born weight 25/169, frequency of outcome 1 over the 16 data strings 3/16
+   psi = (8/17, 15/17): Born weight 64/289, frequency of outcome 1 over the 16 data strings 1/4
+   psi = (-3/5, 4/5): Born weight 9/25, frequency of outcome 1 over the 16 data strings 3/8
+PASS a rule comparing VALUES of two elements of A (on_0 and Y) has state-dependent odds within 2^-n of Born
+PASS for fixed data the outcome is a non-constant 0/1 function of psi ([1, 0, 1, 1, 0, 0, 1]), as (iv) forbids for a single value
+PASS (v): 9/25 has binary period 20 (order of 2 mod 25), probability of outcome 1 = 9/25
+PASS (v): truncated mean sum_{k<20} 2^-k = 2 - 2^-19
+ALL PASS

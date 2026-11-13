@@ -1,0 +1,17 @@
+PASS  claim1 (ii): sigma_e-invariant state of (1+e_1 f)/2 at l=1 is a state, restricts to trace, on=1/2, e_1 f=1  
+PASS  claim1 (ii): l=0, sigma_e alone: reality forces Om(f)=0, so uniqueness holds (statement 'each alone admits others' fails at l=0 for sigma_e)  
+PASS  claim1 (ii): l=0 sigma_f-invariant state of (1+e)/2: values on 1,e,f,ef and on-weight  vals=[Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)], on=1/2
+PASS  claim1: boost image of e is not self-adjoint  
+PASS  claim3 (iii) c=0 N=1 x=on_(a_1): omega_Psi_1(x) vs mixture (filled=2)  omega_Psi_1 = 0, mixture = 16/25
+PASS  claim3 (iii) c=0 N=1 x=on_(a_1): omega_Psi_1(x) vs mixture (filled=3)  omega_Psi_1 = 0, mixture = 16/25
+PASS  claim3: for x = on_(a_1), omega_Psi_N(x) for N = 1,2,3 vs limit  values [Fraction(0, 1), Fraction(481, 625), Fraction(481, 625)], limit 481/625
+PASS  claim3: c=0, N=1, O_1 value 24/25  
+PASS  claim3 (iii): gap 24/25 for every N<=3, two values of c; O_N^2 idempotent on the (1+N)-quantum sector  
+PASS  claim3: I_K independent of the number of filled spectator pairs  [Fraction(72, 125), Fraction(72, 125), Fraction(72, 125)]
+PASS  claim4 (v): count of strings with y(s) < a^2 is ceil(2^n a^2), within 2^-n, n<=8, 120 targets  
+PASS  claim4 (v): in the joint state (own Fock), n=5, three a: frequency ceil(2^n a^2)/2^n  
+PASS  claim4 (vi): read-until-decided agrees with the comparison on decided strings; undecided string -> first  
+PASS  claim4 (vi): dyadic a^2 = 1/2 (digits 1000): decided strings still agree; the undecided string 1000 is NOT first  0 disagreeing decided strings; undecided gives first: False
+PASS  claim4 (i)/Reading: under G4 alone the all-on class is a singleton (rung values constant on it)  by inspection: pi permutes the on set, all-on maps to all-on
+PASS  claim4 (iii): with P_0 = off off (vacuum), the four atoms are orthogonal projections summing to 1  
+PASS  claim4 (v): the comparison is the sign of the value of the single element Y_n - on_0 (by linearity)  omega(Y) < omega(on_0) iff omega(Y - on_0) < 0

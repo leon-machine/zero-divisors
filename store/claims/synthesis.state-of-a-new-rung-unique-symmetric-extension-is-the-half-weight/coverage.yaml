@@ -1,0 +1,31 @@
+functions:
+  check_both_values_extend_the_state_under_p:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'l = 1 and 2, two states on the old rungs (an atom and a mixed product), t in {0, 2/5, 1} positive and t in {-1/5, 6/5} not, by exact positive semidefiniteness of the Gram matrix on all blades; the general positivity argument is in the proof; correlated (non-product) extensions are not sampled'
+  check_one_invariant_extension_with_weight_one_half:
+    kind: complete
+    clauses:
+    - (ii)
+    omits: 'Complete for l = 1 and 2 over all blades: every blade containing a new generator is negated by a symmetry, so uniqueness among all linear functionals is tested blade by blade; the invariance of the weights t is tested at five values; general l is the proof'
+  check_strings_form_one_orbit_and_two_rotor_classes:
+    kind: complete
+    clauses:
+    - (iii)
+    omits: 'm = 3 only; that every rotor commutes with the volume element is tested on the fifteen bivectors, which generate the even subalgebra, and the step from there to all rotors is the proof'
+  check_a_string_is_a_weight_on_one_context:
+    kind: partial
+    clauses:
+    - (iv)
+    omits: 'One string and one atom outside its context; the non-existence of a two-valued weight on all contexts is the cited theorem, not recomputed'
+  check_dependence_of_uniqueness_on_the_group:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One boost (cosh 5/4, sinh 3/4) on l = 1 with two states and four weights; the sharp invariant state under the sign change of f alone is exhibited on one rung; that the half-weight state is the only extension invariant under any group containing an exchange is the proof'
+  check_either_sign_change_alone_admits_another_invariant_extension:
+    kind: sampled
+    clauses:
+    - (ii)
+    omits: 'One counterexample for the sign change of e alone (l = 1, extending the symmetric state of the old rung); the counterexample for the sign change of f alone is in the previous function; that the boost does not commute with the adjoint is shown on the image of one generator'

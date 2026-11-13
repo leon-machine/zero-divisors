@@ -1,0 +1,83 @@
+== C3_wrong_exponent  (expected: FAIL (i))
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   FAIL  N = 3: I_N(x) = c^(N-k) I_K(x) on a full basis of the algebra on the system and every proper K
+   FAIL check_interference_factor_on_a_full_basis_for_three_pairs   (returned False)
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   PASS check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair
+== C3_record_written_on_both_branches  (expected: FAIL (i))
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   FAIL  N = 3: I_N(x) = c^(N-k) I_K(x) on a full basis of the algebra on the system and every proper K
+   FAIL check_interference_factor_on_a_full_basis_for_three_pairs   (returned False)
+   FAIL  for N = 1, 2, 3 an even self-adjoint element touching every pair has interference 24/25
+   FAIL check_interference_is_full_for_an_element_touching_every_pair   (returned False)
+   FAIL  per pair the two record modes overlap by c and their projections differ by 2 s^2 in Hilbert-Schmidt norm squared
+   FAIL check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair   (returned False)
+== C3_drop_odd_words  (expected: info: if it still passes except for the count, odd words were never informative)
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   PASS check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair
+== C3_rotor_mode_sign_flipped_in_HS  (expected: info: (iv) check is insensitive to the mode actually produced)
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   PASS check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair
+== C3_HS_uses_a_made_up_mode  (expected: info: (iv) check's HS number does not come from the branch vectors)
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   FAIL  per pair the two record modes overlap by c and their projections differ by 2 s^2 in Hilbert-Schmidt norm squared
+   FAIL check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair   (returned False)
+== C3_bell_element_not_conjugated  (expected: FAIL (ii))
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   FAIL  for N = 1, 2, 3 an even self-adjoint element touching every pair has interference 24/25
+   FAIL check_interference_is_full_for_an_element_touching_every_pair   (returned False)
+   PASS check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair
+== C4_lemma_bound_loosened  (expected: info: if it passes, the bound is not what is being tested)
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_nonquadratic_form  (expected: FAIL (iv))
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   FAIL  for 4 data strings, 4 couplings, 5 tests: the weight is a quadratic form, two-valued only when constant
+   FAIL check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued   (returned False)
+== C4_only_number_tests_replaced_by_identity  (expected: info: constant forms count changes)
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   FAIL  for 4 data strings, 4 couplings, 5 tests: the weight is a quadratic form, two-valued only when constant
+   FAIL check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued   (returned False)
+== C4_flip_e_instead_of_f  (expected: info: sigma_e also exchanges on/off, so should still pass)
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_wrong_flip_target  (expected: FAIL (i))
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   FAIL  finite changes of a string are conjugations by e_j or sign changes of f_j; none reaches beyond its floor
+   FAIL check_strings_under_finite_changes_and_under_all_sign_changes   (returned False)
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_atom_not_normalised  (expected: FAIL (iii))
+   FAIL  four even atoms that are not strings are orthogonal, sum to 1 and average to the symmetric state
+   FAIL check_even_atoms_other_than_strings_also_average_to_the_symmetric_state   (returned False)
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_wrong_target_weight  (expected: FAIL (v)? (period differs))
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   FAIL  reading unbiased values until decided gives exactly 9/25, mean 2 reads; no bounded number of reads does
+   FAIL check_reading_until_decided_gives_the_prescribed_weight   (returned False)
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued

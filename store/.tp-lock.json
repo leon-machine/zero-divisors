@@ -34539,18 +34539,23 @@
     "Claude Fable 5.2",
     "premise wording: the branch weights are those of the stored Born account in its version 4, which hold under Premise (P) for a state sharp on an atom",
     8
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope of the counting argument and the position on a selector of outcomes, at Leon's direction of 13 November 2026",
+    9
    ]
   ],
-  "hash": "e614ba908abb74d7",
+  "hash": "b7b4ccf12b29a60f",
   "ledger": null,
   "parts": {
    "checks": "0a0fc2855036da45",
-   "proofs": "6bc09cc3a86e59dc",
+   "proofs": "c398665d943fabdd",
    "rest": "d3b65c89b700e77b",
-   "statement": "d3c5fc7c99713ad0"
+   "statement": "6ff505c27542191c"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "one-relation.recorded-sectors-superselected-premise": {
   "assumes": [],
@@ -55465,6 +55470,38 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review; the tail classes, the rung permutations, the comparison rule of clause (v) and the read-until-decided rule",
+    null
+   ]
+  ],
+  "hash": "0ad6c90b382dc074",
+  "ledger": null,
+  "parts": {
+   "checks": "2cf9af493ee5a261",
+   "proofs": "c2d9b4047e0642bd",
+   "rest": "a21cace97b2880a2",
+   "statement": "6a1e2b49ba92f49e"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale": {
   "assumes": [],
   "credit": [
@@ -60056,6 +60093,38 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "the candidate (records of unbounded length) and its first computation, in review of the earlier results",
+    null
+   ]
+  ],
+  "hash": "25a9913c565c492d",
+  "ledger": null,
+  "parts": {
+   "checks": "d5a88266187adeef",
+   "proofs": "59e2c87d4eb117f3",
+   "rest": "d3b65c89b700e77b",
+   "statement": "f2f56265e7e145b0"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
   "assumes": [],
   "credit": [
@@ -60946,6 +61015,38 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review; the odd homogeneous coupling and the multi-mode descent in clause (ii)",
+    null
+   ]
+  ],
+  "hash": "7f50faf1ab715109",
+  "ledger": null,
+  "parts": {
+   "checks": "77632ac865a476fd",
+   "proofs": "48f42bbcd687af70",
+   "rest": "a21cace97b2880a2",
+   "statement": "442eda7bb6b05a0c"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts": {
   "assumes": [
    "synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields@3"
@@ -61473,6 +61574,38 @@
    "proofs": "7c88ee30b5ff432d",
    "rest": "33009deb10105397",
    "statement": "a51c5e6e9bff4c87"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
+  "assumes": [
+   "synthesis.premise-positivity-of-values@2"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "de87ed48f177c98f",
+  "ledger": null,
+  "parts": {
+   "checks": "c58a1e3c0c534faf",
+   "proofs": "b07b7f704f34962a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "ab494c24c39ab74b"
   },
   "status": "proved",
   "version": 1

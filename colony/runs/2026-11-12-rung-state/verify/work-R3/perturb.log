@@ -1,0 +1,71 @@
+== C1_u_uses_new_e  (expected: FAIL (e_0 e_new is not sigma_e-invariant))
+   PASS check_a_string_is_a_weight_on_one_context
+   PASS check_both_values_extend_the_state_under_p
+   PASS check_dependence_of_uniqueness_on_the_group
+   FAIL  each sign change alone admits another invariant extension; a boost does not commute with the adjoint
+   FAIL check_either_sign_change_alone_admits_another_invariant_extension   (returned False)
+   PASS check_one_invariant_extension_with_weight_one_half
+   PASS check_strings_form_one_orbit_and_two_rotor_classes
+== C1_drop_restriction_test  (expected: PASS (info: restriction line removed))
+   PASS check_a_string_is_a_weight_on_one_context
+   PASS check_both_values_extend_the_state_under_p
+   PASS check_dependence_of_uniqueness_on_the_group
+   PASS check_either_sign_change_alone_admits_another_invariant_extension
+   PASS check_one_invariant_extension_with_weight_one_half
+   PASS check_strings_form_one_orbit_and_two_rotor_classes
+== C3_one_pair_not_rotated  (expected: FAIL (iv))
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   FAIL  branch one-particle operators are projections differing by 2 + 2 s^2 N in squared Hilbert-Schmidt norm
+   FAIL check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair   (returned False)
+== C3_mode_sign_flipped  (expected: FAIL (iv) unless c = 0 ... c=3/5 present)
+   PASS check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+   PASS check_interference_factor_on_a_full_basis_for_three_pairs
+   PASS check_interference_is_full_for_an_element_touching_every_pair
+   FAIL  branch one-particle operators are projections differing by 2 + 2 s^2 N in squared Hilbert-Schmidt norm
+   FAIL check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair   (returned False)
+== C4_rule_shifted  (expected: FAIL (v))
+   FAIL  comparing sum 2^-k on_k with on_0 selects: frequencies 3/8, 11/16, 3/16, 1/4 within 1/16 of a^2
+   FAIL check_comparison_rule_selects_within_two_to_the_minus_n   (returned False)
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_rung_permutations_act_on_strings
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_rule_nonstrict  (expected: PASS expected (non-dyadic a^2; harmless))
+   PASS check_comparison_rule_selects_within_two_to_the_minus_n
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_rung_permutations_act_on_strings
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_agreement_reversed  (expected: FAIL (vi))
+   FAIL  comparing sum 2^-k on_k with on_0 selects: frequencies 3/8, 11/16, 3/16, 1/4 within 1/16 of a^2
+   FAIL check_comparison_rule_selects_within_two_to_the_minus_n   (returned False)
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   PASS check_rung_permutations_act_on_strings
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_perm_e_to_f  (expected: FAIL (squares change))
+   PASS check_comparison_rule_selects_within_two_to_the_minus_n
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   FAIL  exchanging two rungs is an automorphism commuting with the adjoint and permutes the strings
+   FAIL check_rung_permutations_act_on_strings   (returned False)
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued
+== C4_perm_not_bijective_on_strings  (expected: FAIL)
+   PASS check_comparison_rule_selects_within_two_to_the_minus_n
+   PASS check_even_atoms_other_than_strings_also_average_to_the_symmetric_state
+   PASS check_no_element_connects_strings_that_differ_beyond_its_support
+   PASS check_reading_until_decided_gives_the_prescribed_weight
+   FAIL  exchanging two rungs is an automorphism commuting with the adjoint and permutes the strings
+   FAIL check_rung_permutations_act_on_strings   (returned False)
+   PASS check_strings_under_finite_changes_and_under_all_sign_changes
+   PASS check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued

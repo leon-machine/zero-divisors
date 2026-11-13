@@ -18677,7 +18677,7 @@
 "one-relation.record-chain-votes-measurement-without-collapse": {
 "failed": false,
 "findings": [],
-"key": "c509d039bdfecd21",
+"key": "44122119224c004e",
 "result": "proof-only",
 "runs": []
 },
@@ -19691,7 +19691,7 @@
 "pred.no-objective-collapse": {
 "failed": false,
 "findings": [],
-"key": "025673881ff2a05d",
+"key": "f472843a65c58b8e",
 "result": "none",
 "runs": []
 },
@@ -40567,6 +40567,80 @@
 }
 ]
 },
+"synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not": {
+"failed": false,
+"findings": [],
+"key": "4ed3613fe3b4ed2e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_strings_under_finite_changes_and_under_all_sign_changes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_rung_permutations_act_on_strings",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_no_element_connects_strings_that_differ_beyond_its_support",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.fock-module-one-qubit-per-rung"
+]
+},
+{
+"derivation": null,
+"func": "check_even_atoms_other_than_strings_also_average_to_the_symmetric_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
+]
+},
+{
+"derivation": null,
+"func": "check_comparison_rule_selects_within_two_to_the_minus_n",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit"
+]
+},
+{
+"derivation": null,
+"func": "check_reading_until_decided_gives_the_prescribed_weight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws"
+]
+}
+]
+},
 "synthesis.infinity-vacuum-incidence-is-a-property-of-the-scale": {
 "failed": false,
 "findings": [],
@@ -47290,6 +47364,52 @@
 }
 ]
 },
+"synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit": {
+"failed": false,
+"findings": [],
+"key": "baa8c159500f73a1",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs",
+"ok": true,
+"quantities": [],
+"touched": [
+"tower.fock-module-one-qubit-per-rung",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_interference_factor_on_a_full_basis_for_three_pairs",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.fock-module-one-qubit-per-rung"
+]
+},
+{
+"derivation": null,
+"func": "check_interference_is_full_for_an_element_touching_every_pair",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
+]
+},
+{
+"derivation": null,
+"func": "check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-powers-stormer-takesaki-disjointness"
+]
+}
+]
+},
 "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
 "failed": false,
 "findings": [],
@@ -48589,6 +48709,64 @@
 }
 ]
 },
+"synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws": {
+"failed": false,
+"findings": [],
+"key": "e9ba1e0cccd23be9",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_integer_states_of_one_rung_in_the_two_integer_forms",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.integer-clifford-algebras-contain-no-switch",
+"synthesis.premise-positivity-of-values",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_parity_gives_two_sectors_and_no_record_superselection",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables"
+]
+},
+{
+"derivation": null,
+"func": "check_no_deterministic_law_on_strings",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_unread_rungs_carry_the_uniform_weight",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight"
+]
+},
+{
+"derivation": null,
+"func": "check_odd_coupling_and_the_stored_descent",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values",
+"tower.answers-iteration-question"
+]
+}
+]
+},
 "synthesis.self-adjoint-brst-charge-needs-a-krein-form-and-the-tower-supplies-the-ghosts": {
 "failed": false,
 "findings": [],
@@ -49429,6 +49607,73 @@
 "touched": [
 "synthesis.null-plane-photon-data-and-the-pair-currents-of-the-generators",
 "synthesis.null-vacuum-on-a-horizon-generator"
+]
+}
+]
+},
+"synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight": {
+"failed": false,
+"findings": [],
+"key": "911dda28621bdc14",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_both_values_extend_the_state_under_p",
+"ok": true,
+"quantities": [],
+"touched": [
+"rungs.imported-totality-minimality-completion",
+"synthesis.premise-positivity-of-values",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_one_invariant_extension_with_weight_one_half",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state",
+"synthesis.premise-positivity-of-values",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_strings_form_one_orbit_and_two_rotor_classes",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_a_string_is_a_weight_on_one_context",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them"
+]
+},
+{
+"derivation": null,
+"func": "check_dependence_of_uniqueness_on_the_group",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
+]
+},
+{
+"derivation": null,
+"func": "check_either_sign_change_alone_admits_another_invariant_extension",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.premise-positivity-of-values"
 ]
 }
 ]

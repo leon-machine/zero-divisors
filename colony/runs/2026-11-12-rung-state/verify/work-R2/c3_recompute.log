@@ -1,0 +1,34 @@
+PASS N=2 c=3/5: R_j, U_j unitary and even
+PASS N=2 c=3/5: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=2 c=3/5: I_N(x) = c^(N-k) I_K(x) on all 528 blade-basis elements (34 with I_K != 0)
+PASS N=2 c=0: R_j, U_j unitary and even
+PASS N=2 c=0: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=2 c=0: I_N(x) = c^(N-k) I_K(x) on all 528 blade-basis elements (18 with I_K != 0)
+PASS N=2 c=-5/13: R_j, U_j unitary and even
+PASS N=2 c=-5/13: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=2 c=-5/13: I_N(x) = c^(N-k) I_K(x) on all 528 blade-basis elements (34 with I_K != 0)
+PASS N=3 c=3/5: R_j, U_j unitary and even
+PASS N=3 c=3/5: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=3 c=3/5: I_N(x) = c^(N-k) I_K(x) on all 13072 blade-basis elements (434 with I_K != 0)
+PASS N=3 c=0: R_j, U_j unitary and even
+PASS N=3 c=0: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=3 c=0: I_N(x) = c^(N-k) I_K(x) on all 13072 blade-basis elements (122 with I_K != 0)
+PASS N=3 c=-5/13: R_j, U_j unitary and even
+PASS N=3 c=-5/13: U_(N-1)..U_0 Psi_0 = 3/5 A_N + 4/5 B
+PASS N=3 c=-5/13: I_N(x) = c^(N-k) I_K(x) on all 13072 blade-basis elements (434 with I_K != 0)
+PASS N=3: factor holds for 240 random elements (both parities, hops system<->record, interleaved K)
+PASS hypothesis is not idle: 64 blade elements touching uncoupled pair 1 violate the factor with K={0}
+PASS I_K(x) for K={0} is the same with N = 1, 2, 3 spectator-filled pairs
+PASS (ii) c=3/5 N=1: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+PASS (ii) c=3/5 N=2: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+PASS (ii) c=3/5 N=3: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+PASS (ii) c=0 N=1: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+PASS (ii) c=0 N=2: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+PASS (ii) c=0 N=3: O_N even, self-adjoint, O_N^2 idempotent, value 24/25, branch values 0
+   c=0, N=1, x=O_1 (largest pair involved: 0): omega_N(x) = 24/25, mixture value = 0
+PASS COUNTEREXAMPLE to (iii) last sentence: N exceeds the largest pair x involves, yet omega_N(x) != mixture
+PASS (iv) c=3/5: both branch symbols are projections, branch A is quasi-free (all 4096 4-point functions)
+PASS (iv) c=3/5: ||S_A - S_B||_HS^2 = 146/25 = 2 (system) + 2 s^2 N = 146/25
+PASS (iv) c=5/13: both branch symbols are projections, branch A is quasi-free (all 4096 4-point functions)
+PASS (iv) c=5/13: ||S_A - S_B||_HS^2 = 1202/169 = 2 (system) + 2 s^2 N = 1202/169
+ALL PASS
