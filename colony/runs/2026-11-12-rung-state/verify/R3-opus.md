@@ -322,3 +322,37 @@ Stored entities checked against: the indifference instrument Fact, `tower.answer
   - The note is accurate, but the field should name `op.outcome-selector-premises`, or the note should say the named problem is settled.
 
 **Verdict (2): NOT READY.** R1 to R4 need the fixes above; R5 and R6 are minor. The conclusions of the two arguments, the premises and the registered stance are untouched, and the restatement kind and the dependent prediction are right.
+
+---
+
+## Confirmation pass 2 (commit 4e65c53)
+
+Read: `git diff HEAD~1 HEAD` on `store/open_problems.yaml` and the no-collapse claim. I then re-read the whole open-problem entry and all four levels and the proof of the no-collapse claim as they now stand.
+
+**Fixes applied as written, all correct:**
+- Open problem: Q1, Q2, Q3, Q4, Q5 (why and success), Q6, Q7.
+  - Q3 also gained "for an element reaching every record". That is correct (claim 3 (ii)).
+- No-collapse claim: R1 (formal, and the proof's two-clause reading of the Fact), R2 (formal, technical and lay, plus "with fresh rungs for each event, independent of the system" on the clauses (v), (vi) sentence), R3, R4, R5, R6.
+- The why and success of the open problem now agree with each other and with the no-collapse claim's stance sentence. A derivation would refute the vote's conclusion; the registered signature stance is left open.
+
+**Changes beyond my list:**
+- **(a) Attack item widened to "Premises (A) and (B) against indifference": correct, and an improvement.** It now poses both questions the stored Fact raises: an actual string as a distinction nothing determines, against the moduli clause; and the clause on uncaused selections.
+- **(b) Entities: `one-relation.recorded-sectors-superselected-premise` replaced by `one-relation.imported-indifference-instrument`: acceptable.**
+  - The indifference Fact is now cited by `\claimref` in "known". The recorded-sectors premise is named only in words in "why".
+  - The eight `\claimref`s in the text now equal the eight entities.
+  - I did not find a written limit of eight in `docs/`, so the reason given is unverified. The choice is right either way.
+- **(c) No-collapse technical: "the indifference premise, as worded, bears against the first of these": accurate but one step stronger than the formal.**
+  - The formal adds that the moduli clause of the same premise may admit a string or its tail class.
+  - Optional fix: "the indifference premise, as worded, bears against the first of these, though its clause on moduli may admit it".
+- **(c) No-collapse lay: "The first of these sits badly with the framework's own rule against unexplained distinctions, since nothing in the framework fixes the settings": acceptable at lay strength.** Optional, same caveat: add "though the same rule lets genuinely free numbers stand as data, which might cover it".
+
+**Re-read in full.** Nothing else says more than its proof.
+- Statement, why, known and success of the open problem are each supported at the stated strength.
+- The no-collapse one-liner's "one exists given three premises" uses "one" for "a mechanism that selects". That matches the formal's "can be written". The lay level now says "a rule that picks one".
+- pred.no-objective-collapse still holds as cited.
+
+**Problems:** none blocking. The two optional points are the caveat in (c), technical and lay.
+
+**Verdicts:**
+- **op.outcome-selector-premises: READY.**
+- **No-collapse restatement (version 9): READY.**
