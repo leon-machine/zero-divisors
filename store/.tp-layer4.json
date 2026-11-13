@@ -18677,7 +18677,7 @@
 "one-relation.record-chain-votes-measurement-without-collapse": {
 "failed": false,
 "findings": [],
-"key": "c509d039bdfecd21",
+"key": "6d3509945777e482",
 "result": "proof-only",
 "runs": []
 },
@@ -19691,7 +19691,7 @@
 "pred.no-objective-collapse": {
 "failed": false,
 "findings": [],
-"key": "025673881ff2a05d",
+"key": "f472843a65c58b8e",
 "result": "none",
 "runs": []
 },

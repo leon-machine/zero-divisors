@@ -34539,18 +34539,23 @@
     "Claude Fable 5.2",
     "premise wording: the branch weights are those of the stored Born account in its version 4, which hold under Premise (P) for a state sharp on an atom",
     8
+   ],
+   [
+    "Claude Fable 5.2",
+    "scope of the counting argument and the position on a selector of outcomes, at Leon's direction of 13 November 2026",
+    9
    ]
   ],
-  "hash": "e614ba908abb74d7",
+  "hash": "c1c11d625cc3e811",
   "ledger": null,
   "parts": {
    "checks": "0a0fc2855036da45",
-   "proofs": "6bc09cc3a86e59dc",
+   "proofs": "8dcf162144815c62",
    "rest": "d3b65c89b700e77b",
-   "statement": "d3c5fc7c99713ad0"
+   "statement": "fbfb6c8ed62f1f37"
   },
   "status": "proved",
-  "version": 8
+  "version": 9
  },
  "one-relation.recorded-sectors-superselected-premise": {
   "assumes": [],

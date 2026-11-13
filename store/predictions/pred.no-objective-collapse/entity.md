@@ -60,7 +60,7 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - one-relation.record-chain-votes-measurement-without-collapse@8
+  - one-relation.record-chain-votes-measurement-without-collapse@9
 ---
 
 ## formal
