@@ -3769,3 +3769,28 @@ HarrisonScott2002:
   doi: 10.1016/S0370-2693(02)02772-7
   first_in: synthesis
   latex: 'P. F. Harrison and W. G. Scott, mu-tau reflection symmetry in lepton mixing and neutrino oscillations, Phys. Lett. B 547 (2002), 219--228; arXiv:hep-ph/0210197.'
+Goodearl1979:
+  citation: 'K. R. Goodearl, Von Neumann Regular Rings, Pitman, London (1979); 2nd ed., Krieger, Malabar (1991).'
+  doi: null
+  first_in: synthesis
+  latex: 'K.~R.~Goodearl, \emph{Von Neumann Regular Rings}, Pitman, London (1979); 2nd ed., Krieger, Malabar (1991).'
+Goodearl1982:
+  citation: 'K. R. Goodearl, Metrically complete regular rings, Trans. Amer. Math. Soc. 272 (1982), no. 1.'
+  doi: null
+  first_in: synthesis
+  latex: 'K.~R.~Goodearl, Metrically complete regular rings, \emph{Trans.\ Amer.\ Math.\ Soc.} \textbf{272} (1982), no.~1.'
+Goodearl1978:
+  citation: 'K. R. Goodearl, Centers of regular self-injective rings, Pacific J. Math. 76 (1978), 381--395.'
+  doi: null
+  first_in: synthesis
+  latex: 'K.~R.~Goodearl, Centers of regular self-injective rings, \emph{Pacific J.\ Math.} \textbf{76} (1978), 381--395.'
+AraClaramunt2017:
+  citation: 'P. Ara and J. Claramunt, Uniqueness of the von Neumann continuous factor, arXiv:1705.04501 (2017).'
+  doi: null
+  first_in: synthesis
+  latex: 'P.~Ara and J.~Claramunt, Uniqueness of the von Neumann continuous factor, arXiv:1705.04501 (2017).'
+Halperin1968:
+  citation: 'I. Halperin, Von Neumann''s manuscript on inductive limits of regular rings, Canad. J. Math. 20 (1968), 477--483.'
+  doi: null
+  first_in: synthesis
+  latex: 'I.~Halperin, Von Neumann''s manuscript on inductive limits of regular rings, \emph{Canad.\ J.\ Math.} \textbf{20} (1968), 477--483.'
