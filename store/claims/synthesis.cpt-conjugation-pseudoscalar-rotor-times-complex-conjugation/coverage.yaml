@@ -10,7 +10,11 @@ functions:
   check_real_linear_swap_reverses_action:
     kind: sampled
     clauses: [(3)]
-    omits: 'One real-linear isometry (reflection in e1, e3, e5, g(W) = W-bar, g(I6) = -I6) and one data point (I, V, F) with value -152: the integrand flips under g, is fixed by grade involution o reversal and by complex conjugation; "every" real-linear g with g(W) = W-bar having det -1 is not enumerated; the Witt swap leaving R^{2,4} is shown by one non-real coefficient.'
+    omits: 'One real-linear isometry (reflection in e1, e3, e5, g(W) = W-bar, g(I6) = -I6) and one data point (I, V, F) with value -152: the integrand flips under g, is fixed by grade involution o reversal and by complex conjugation; "every" real-linear g with g(W) = W-bar having det -1 is not enumerated; the Witt swap leaving R^{2,4} in the proof''s normalisation is shown by one non-real coefficient.'
+  check_witt_exchange_real_exactly_for_unit_gram:
+    kind: sampled
+    clauses: [(3)]
+    omits: 'Last two sentences of (3) on six bases of the one flag W (the proof''s; that basis rescaled by (1 + i)/2; three further bases with c conj(c) = 1, one with c not diagonal; one generic basis): for each the exchange is a complex isometry and an involution, and it is real exactly when c conj(c) = 1, then with determinant -1 and trace 0. Exact for the two named bases (e0 -> 5/4 e0 - 3/4 i e1; the real map e0 <-> e1, e2 <-> -e3, e4 <-> -e5). The "exactly when" for every basis of every flag is proved in the text, not enumerated; "a product of three reflections" is read from determinant -1 and trace 0, the reflections are not constructed.'
   check_C_antilinear_automorphism:
     kind: sampled
     clauses: [(4)]

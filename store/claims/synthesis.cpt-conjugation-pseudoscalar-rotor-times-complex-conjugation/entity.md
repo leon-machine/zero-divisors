@@ -1,7 +1,7 @@
 ---
 id: synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation
 kind: claim
-version: 4
+version: 5
 title: 'CPT conjugation as the pseudoscalar rotor times complex conjugation'
 status: proved
 region: synthesis
@@ -25,6 +25,18 @@ credit:
   role: unit resolution, every imaginary unit written as a geometric-algebra pseudoscalar
   version: 4
   source: maintainer pass 2026-11-07 (resolve units)
+- name: Leon Butler
+  role: decision to correct the last sentence of clause (3)
+  version: 5
+- name: Claude Fable 5.2
+  role: restatement of the last sentence of clause (3) and its exact check
+  version: 5
+  source: maintainer pass 2026-11-12 (asymmetry)
+amendments:
+- version: 5
+  kind: restatement
+  defect: 'the last sentence of clause (3) said the complex-linear Witt exchange does not preserve R^{2,4}; that holds only for some normalisations of the Witt basis, the proof''s among them; for the basis rescaled by (1 + I_7)/2 the exchange is the real isometry e_0 <-> e_1, e_2 <-> -e_3, e_4 <-> -e_5 of determinant -1, and the proof''s own instance (the reflection in e_1, e_3, e_5) is a real exchange of W with its conjugate'
+  evidence: check.py::check_witt_exchange_real_exactly_for_unit_gram
 review: draft
 about:
 - obj.dark-matter.witt-flag
@@ -49,6 +61,8 @@ checked_by:
 - kind: check
   ref: check.py::check_real_linear_swap_reverses_action
 - kind: check
+  ref: check.py::check_witt_exchange_real_exactly_for_unit_gram
+- kind: check
   ref: check.py::check_C_antilinear_automorphism
 - kind: check
   ref: check.py::check_reading_convention
@@ -59,6 +73,10 @@ lineage:
   - dark-matter.premise-cpt-covariance
   - dark-matter.orientation-arrow-seventeenth-refutation
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Leon''s decision of 12 November: the last sentence of clause (3) is restated, in the formal level and in the proof. The Witt exchange preserves R^{2,4} exactly when the Gram matrix of the basis against its conjugate satisfies c conj(c) = 1, and is then a real isometry of determinant -1, an instance of the first sentence of (3); the first sentence of (3) and the last of (4) are unchanged. A check of the criterion on six bases is added. Version 4 -> 5.'
   maintainer_pass_resolve_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -96,7 +114,7 @@ Let $\R^{2,4}$ carry the conformal ambient metric, $\Cl(2,4)$ its Clifford algeb
 \begin{enumerate}
 \item The composite of grade involution and reversal is an anti-automorphism of $\Cl(2,4)$, not an automorphism, and acts on vectors as $-1$. Grade involution equals $\mathrm{Ad}(I_6)$, and $I_6 = (e_0e_1)(e_2e_3)(e_4e_5)$ is a rotor of the identity component: each factor squares to $-1$ and is $\exp(\pi B_k/2)$, and $I_6 \widetilde{I_6} = 1$. So the vector action $-1$ lies in $SO_0(2,4)$. In $\Cl(1,3)$, by contrast, $I_4\widetilde{I_4} = -1$.
 \item $W$ is the $+I_7$ eigenspace of an orthogonal complex structure $J$ on $\R^{2,4}$, $W \oplus \overline W = \C^6$, and $I_6\psi_{W} = \pm I_7\,\psi_{W}$, $I_6 \psi_{\overline W} = \mp I_7\,\psi_{\overline W}$. So $\overline W$ lies in the other family, and complex conjugation is a flag conjugate. In $\Cl(3,3)$, $I_6^2 = +1$ and conjugation preserves the family.
-\item Every real-linear isometry $g$ of $\R^{2,4}$ with $g(W) = \overline W$ has $\det g = -1$, so that $\epsilon(gI, gV, gF, gF) = -\epsilon(I, V, F, F)$ for vectors $I, V$ and bivectors $F$, $g$ acting on bivectors by its outermorphism. The complex-linear Witt exchange $v_k \leftrightarrow w_k$ does not preserve $\R^{2,4}$.
+\item Every real-linear isometry $g$ of $\R^{2,4}$ with $g(W) = \overline W$ has $\det g = -1$, so that $\epsilon(gI, gV, gF, gF) = -\epsilon(I, V, F, F)$ for vectors $I, V$ and bivectors $F$, $g$ acting on bivectors by its outermorphism. For a basis $w_k$ of $W$ and the dual basis $v_k$ of $\overline W$ ($B(w_j, v_k) = \delta_{jk}$, $B$ the symmetric bilinear form of $Q$ extended complex-bilinearly), the complex-linear Witt exchange $v_k \leftrightarrow w_k$ preserves $\R^{2,4}$ exactly when the Gram matrix $c_{jk} = B(w_j, \overline{w_k})$ of the $w_k$ against their conjugates satisfies $c\,\overline{c} = 1$, in particular when $v_k = \pm\overline{w_k}$; it is then a real isometry of determinant $-1$, a product of three reflections, an instance of the first sentence. For other normalisations, such as $w_k = e_{2k-2} - I_7e_{2k-1}$ with $v_k = \overline{w_k}/B(w_k, \overline{w_k})$, it does not preserve $\R^{2,4}$.
 \item $C := \mathrm{Ad}(I_6) \circ \kappa$ is an antilinear involutive automorphism of $\Cl(2,4) \otimes \C$ that is $-1$ on $\R^{2,4}$, fixes the metric, $\epsilon$ and $I_6$, and carries $\psi_W$ to a multiple of $\psi_{\overline W}$. With the flag conjugate realised by $\kappa$, the stored composite $\phi$ (grade involution, reversal, flag conjugate) is reversal composed with $C$: an antilinear anti-automorphism. No realisation of the flag conjugate on $\R^{2,4}$ is both real-linear and orientation-preserving.
 \item \emph{Convention.} A (possibly anti-) automorphism $\phi$ acts on fields as a symmetry: on a vector field by its vector part, and on a connection $A$ through the Lie algebra automorphism it induces, $A \mapsto -\phi(A)$ when $\phi$ is an anti-automorphism, so that curvature transforms by the same automorphism; for the stored composite this is the action of $C$. In this convention every action functional of real tensor (multivector) fields on which $C$ acts through its vector part, invariant under constant $SO_0(2,4)$ transformations, in particular the frozen point's $Q(I)^{-1}\int \epsilon(I, V, F, F)$ (\claimref{dark-energy.frozen-point-makes-stelle-west-vector}), satisfies $S \circ \phi = S$, while with any real-linear flag conjugate in place of $\kappa$ the same action changes sign. Spinor fields are not covered. If instead $\phi$ is applied to the Clifford integrand $IVFF$ as a whole and the top-grade coefficient taken, both sign statements invert (with $\kappa$ the integrand changes sign, with a real-linear flag conjugate it is preserved), so the conclusion of (5) depends on the convention.
 \end{enumerate}

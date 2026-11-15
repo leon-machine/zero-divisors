@@ -1,0 +1,26 @@
+functions:
+  check_commutant_of_the_gauge_algebra_is_six_dimensional:
+    kind: exhaustive
+    clauses:
+    - (i)
+    omits: 'The commutant is computed as an exact kernel among the matrix units commuting with the four Cartan generators, against the eight root vectors of su(3) and su(2)_L; irreducibility of each block is in the proof'
+  check_dirac_majorana_and_mixing_conditions:
+    kind: exhaustive
+    clauses:
+    - (ii)
+    - (iii)
+    - (iv)
+    omits: 'The conditions are derived from the pairing and the operators on all sixteen states; the statement that a slot contraction carries the opposite charge of a slot creation is the hypothesis, entered as one row'
+  check_mixed_coefficients_leave_hypercharge_only:
+    kind: exhaustive
+    clauses:
+    - (v)
+    omits: 'The identification of the two traces with the anomaly conditions is the imported Fact; the normalisation of the generators is not fixed'
+  check_equilibrium_generates_and_erases_baryon_number:
+    kind: sampled
+    clauses:
+    - (vi)
+    omits: 'Arithmetic with the stored coefficient 28/79 only; the equilibrium conditions are those of the cited check and are not recomputed; that the process acts and equilibrates is literature, not tested'
+untouched_premises:
+  dark-matter.superselected-hence-dark-exactly-stable: 'cited in the reading for what the tower charge is; nothing of it is computed'
+  dark-matter.stored-asymmetry-charge-not-number: 'cited in the reading for the stored wording on baryon number'

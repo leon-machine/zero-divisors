@@ -23,10 +23,10 @@ derivations:
   uses:
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
   - dark-matter.coefficients-floors-they-give-what-gravity@4
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   - dark-tower-matter.mirrors-composition@3
   - dark-matter.open-channels-their-costs@6
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex
@@ -36,6 +36,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The hot-deposit arithmetic uses this tower''s baryons per unit entropy as the charge per unit entropy. With the charge named as B - L, the charge per unit entropy is larger by 1/c, c the anomalous weak equilibrium coefficient (not a stored Fact; 28/79 for one light doublet, 8/23 for two), if that process equilibrated. An estimate, not computed in the store and not checked: at fixed energy per unit charge the deposit''s xi would then be larger by about (1/c)^(1/4), roughly 1.3 for either value of c. The statement, its numbers and its check are unchanged.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'

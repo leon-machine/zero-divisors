@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.type-residue-what-each-tower-can@5
   - tower.commuting-copies@5
   - tower.fock-module-one-qubit-per-rung@6

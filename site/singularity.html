@@ -68,7 +68,7 @@ body.atend #sky{touch-action:pan-y}
 .cap .line{font-family:var(--display);font-weight:400;font-size:clamp(.95rem,min(1.75vw,2.9vh),1.32rem);line-height:1.36;color:var(--text);text-shadow:0 0 2px #000,0 2px 14px #000,0 0 30px rgba(0,0,0,.9);text-wrap:balance}
 .cap .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--text-3);text-shadow:0 1px 6px #000}
 .cap a{pointer-events:auto}
-.cap .acts{margin-top:14px;display:flex;gap:10px;justify-content:center;pointer-events:auto}
+.cap .acts{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;pointer-events:auto}
 .chip{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;padding:0 6px;border:1px solid currentColor;white-space:nowrap;background:rgba(16,14,13,.5)}
 .chip.std{color:var(--text-3)} .chip.A{color:var(--blue)} .chip.B{color:var(--green)} .chip.C{color:var(--plum)}
 .chip.AB{color:#9fbdb9} .chip.BC{color:#b9b0c6}
@@ -556,7 +556,7 @@ function setCap(key, text, tags, acts){
   capKey = key;
   if (!key) { box.classList.remove('show'); return; }
   { $('#capLine').textContent = text; $('#capTags').innerHTML = tagHtml(tags);
-    $('#capActs').innerHTML = acts === 'end' ? '<a class="btn" href="#" data-lab="universe">Explore the Physics Graph</a><a class="btn" href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Read the papers</a><button class="btn hot" id="again">Fall again</button>' : '';
+    $('#capActs').innerHTML = acts === 'end' ? '<a class="btn" href="#" data-lab="principle">The Transport Principle</a><a class="btn" href="#" data-lab="ga">Why Geometric Algebra</a><a class="btn" href="#" data-lab="universe">Explore the Physics Graph</a><a class="btn" href="https://zenodo.org/communities/transport-papers" target="_blank" rel="noopener">Read the papers</a><button class="btn hot" id="again">Fall again</button>' : '';
     const ag = $('#again'); if (ag) ag.addEventListener('click', () => { stopAuto(); goStep(0, false); });
     box.classList.add('show'); }
 }

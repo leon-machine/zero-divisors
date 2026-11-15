@@ -1,0 +1,16 @@
+functions:
+  check_only_the_total_exchange_reverses_the_charges_and_keeps_the_gauge_algebra:
+    kind: exhaustive
+    clauses:
+    - (i)
+    - (ii)
+    omits: 'All 32 exchanges are run on all 32 states for the three charges as functions of the occupation; the normaliser test is the necessary condition of the proof (blocks kept, Y to plus or minus Y), sufficiency for the total exchange is in the proof; clause (i) is tested only through its data, the six pairwise distinct (dimension, Y) with Q alone of dimension 6'
+  check_commutator_determinant_is_odd_under_conjugation:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'Three Hermitian pairs over the Gaussian rationals with pinned determinants, one unitary over the Gaussian rationals, one real symmetric pair; the general statements are the proof''s three lines; clause (iv) and the reading are not computed'
+untouched_premises:
+  dark-matter.orientation-arrow-seventeenth-refutation: 'cited for the properties of the conjugation in the reading; nothing of it is computed'
+  synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase: 'cited in the reading for the stored phase requirement'
+  one-relation.arrow-frequency-are-one-bit-level: 'cited in the reading for the identification of frequency sign and time direction'

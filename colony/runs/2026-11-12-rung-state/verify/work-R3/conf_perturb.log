@@ -1,0 +1,2 @@
+FAIL  for N = 1, 2, 3 an even self-adjoint element touching every pair has interference 24/25
+FAIL check_interference_is_full_for_an_element_touching_every_pair   (returned False)

@@ -52,6 +52,10 @@ locators:
   label: prop:rule
   line: 821
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). The sentence that the mirror''s share of one is derived separately now reads: derived under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). The closed form and its two shares 4/3 and 8/(3 pi) are unchanged; the comparison of the total with the observed 5.364 takes the mirror''s unit as one and is conditional on the hypothesis.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'

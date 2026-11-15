@@ -1,0 +1,42 @@
+functions:
+  check_strings_under_finite_changes_and_under_all_sign_changes:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'Three rungs: conjugation by e_j and the sign change of f_j on all eight strings, the commutation of every blade of the first two rungs with the test of the third, the sign change of all f_j at once; the statements about infinitely many rungs (tail classes, uncountably many, one orbit under G3) are the proof'
+  check_no_element_connects_strings_that_differ_beyond_its_support:
+    kind: complete
+    clauses:
+    - (ii)
+    omits: 'Complete for elements on two rungs against strings on four, but the fact is elementary (an element does not change the occupation of rungs it does not involve) and the check restates it; disjointness in the completed algebra, and of the symmetric state from string states, is argued from the imported Fact and not computed'
+  check_even_atoms_other_than_strings_also_average_to_the_symmetric_state:
+    kind: sampled
+    clauses:
+    - (iii)
+    omits: 'One family of four even atoms on two rungs; that any orthogonal family of atoms with sum 1 averages to the symmetric state is elementary and the check restates it for this family; the statement about what the store prefers is a reading of a stored proposition'
+  check_weight_after_a_coupling_is_a_quadratic_form_and_is_not_two_valued:
+    kind: sampled
+    clauses:
+    - (iv)
+    omits: 'Four data strings, four couplings, five tests, seven rational directions; what is tested is that each weight is the stated quadratic form; the lemma (two-valued implies constant) cannot fail for any quadratic form and is the proof, not a test; the counts 13 (constant forms) and 2 (most two-valued directions of a non-constant form) are recorded from the computation'
+  check_reading_until_decided_gives_the_prescribed_weight:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'p = 9/25 only; prefixes of length 12 enumerated exactly; the infinite sum and the mean are closed forms in the proof'
+  check_rung_permutations_act_on_strings:
+    kind: sampled
+    clauses:
+    - (i)
+    omits: 'One transposition on three rungs; multiplicativity on 400 pairs of blades; the three orbits on the infinite tower are the proof'
+  check_comparison_rule_selects_within_two_to_the_minus_n:
+    kind: complete
+    clauses:
+    - (v)
+    - (vi)
+    omits: 'n = 4 data rungs, all sixteen strings, four values of a^2; both compared values are computed in the joint state; general n is the proof; that a string is actual and typical is a premise, not computed'
+untouched_premises:
+  tower.algebraic-limit-even-charge: "supplies that every element of the algebraic tower involves finitely many generators, used throughout the proof for statements about infinitely many rungs that no finite computation touches"
+  tower.answers-iteration-question: "cited in the Reading for the absence of a clock on the tower; a statement of the store, not computed"
+  synthesis.imported-powers-stormer-takesaki-disjointness: "used only for the reading of clause (ii) in the completed algebra, which is argued from the import and not computed"
+  singularity.p-reduced-metric-level-reading-many: "cited in clause (iii) for what the store says about the occupation-diagonal algebra; a reading of a stored statement"

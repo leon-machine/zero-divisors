@@ -12,7 +12,11 @@ J: e0 -> e1, e2 -> e3, e4 -> e5; w_k = e_{2k} - i e_{2k+1}.
       conjugate flag is in the other family; control: in Cl(3,3), I6^2 = +1 (real chirality);
   (3) the real reflection g in e1, e3, e5 carries w_k to conj(w_k), has g(I6) = -I6, and reverses the
       MacDowell-Mansouri integrand eps(I, V, F, F) under the fibre action; complex conjugation fixes
-      it (value -152 pinned); the complex-linear Witt swap does not preserve R^{2,4};
+      it (value -152 pinned); the complex-linear Witt swap w_k <-> v_k (v_k the dual basis in conj W,
+      B(w_j, v_k) = delta_jk) preserves R^{2,4} exactly when the Gram matrix G = B(w_j, conj w_k) has
+      G conj(G) = 1 (six bases of W); for w_k = e_{2k} - i e_{2k+1} it does not (e0 -> 5/4 e0 - 3/4 i e1),
+      for the basis rescaled by (1 + i)/2 it is the real isometry e0 <-> e1, e2 <-> -e3, e4 <-> -e5 of
+      determinant -1;
   (4) C = Ad(I6) o kappa is multiplicative, antilinear, involutive, fixes I6 and carries N to -conj(N).
 """
 from fractions import Fraction as F
@@ -158,6 +162,129 @@ def check_real_linear_swap_reverses_action():
     v0 = cs(QI(F(1, 2)), wb[0])
     Se0 = add(cs(QI(F(1, 2)), v0), cs(QI(1), w[0]))
     assert any(isinstance(c, QI) and c.im != 0 for c in Se0.values())
+    return True
+
+
+def _q(x):
+    return x if isinstance(x, QI) else QI(x)
+
+
+def _inv(M):
+    """Inverse of a square matrix over the Gaussian rationals (Gauss-Jordan, exact)."""
+    n = len(M)
+    A = [[_q(x) for x in row] + [QI(1 if i == j else 0) for j in range(n)] for i, row in enumerate(M)]
+    for c in range(n):
+        p = next(r for r in range(c, n) if A[r][c] != QI(0))
+        A[c], A[p] = A[p], A[c]
+        d = A[c][c]
+        A[c] = [x / d for x in A[c]]
+        for r in range(n):
+            if r != c and A[r][c] != QI(0):
+                f = A[r][c]
+                A[r] = [x - f * y for x, y in zip(A[r], A[c])]
+    return [row[n:] for row in A]
+
+
+def _mm(A, B):
+    return [[sum((_q(A[i][k]) * _q(B[k][j]) for k in range(len(B))), QI(0)) for j in range(len(B[0]))]
+            for i in range(len(A))]
+
+
+def _det(M):
+    n = len(M)
+    if n == 1:
+        return _q(M[0][0])
+    tot = QI(0)
+    for j in range(n):
+        if _q(M[0][j]) != QI(0):
+            minor = [row[:j] + row[j + 1:] for row in M[1:]]
+            tot = tot + QI((-1) ** j) * _q(M[0][j]) * _det(minor)
+    return tot
+
+
+METRIC = [1, 1, -1, -1, -1, -1]
+
+
+def _B(x, y):
+    return sum((QI(METRIC[i]) * x[i] * y[i] for i in range(6)), QI(0))
+
+
+def witt_exchange(M):
+    """For the basis w'_j = sum_k M[j][k] w_k of W (w_k = e_{2k} - i e_{2k+1}): the Gram matrix
+    G = B(w'_j, conj w'_k), the dual basis v'_k in conj W (B(w'_j, v'_k) = delta_jk), and the matrix
+    (columns = images of e_0..e_5) of the complex-linear map S with S w'_k = v'_k, S v'_k = w'_k."""
+    w0 = []
+    for k in range(3):
+        v = [QI(0)] * 6
+        v[2 * k] = QI(1)
+        v[2 * k + 1] = QI(0, -1)
+        w0.append(v)
+    w = [[sum((_q(M[j][k]) * w0[k][i] for k in range(3)), QI(0)) for i in range(6)] for j in range(3)]
+    wb = [[x.conj() for x in v] for v in w]
+    for a in range(3):
+        for b in range(3):
+            assert _B(w[a], w[b]) == QI(0)
+    G = [[_B(w[j], wb[k]) for k in range(3)] for j in range(3)]
+    a = _inv([[G[k][j] for k in range(3)] for j in range(3)])          # a = (G^T)^{-1}
+    v = [[sum((a[k][j] * wb[j][i] for j in range(3)), QI(0)) for i in range(6)] for k in range(3)]
+    for j in range(3):
+        for k in range(3):
+            assert _B(w[j], v[k]) == QI(1 if j == k else 0)
+    T = [[(w + v)[c][r] for c in range(6)] for r in range(6)]         # columns w'_1..3, v'_1..3
+    Tx = [[(v + w)[c][r] for c in range(6)] for r in range(6)]        # columns v'_1..3, w'_1..3
+    return G, w, v, _mm(Tx, _inv(T))
+
+
+def check_witt_exchange_real_exactly_for_unit_gram():
+    """Last two sentences of clause (3). Six bases of the one flag W; for each the exchange S is a complex
+    isometry, and S preserves R^{2,4} exactly when G conj(G) = 1."""
+    premise("dark-matter.two-families-are-two-chiralities")
+    one = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+    c = QI(F(1, 2), F(1, 2))
+    resc = [[c, 0, 0], [0, c, 0], [0, 0, c]]
+    ph = QI(F(3, 5), F(4, 5))
+    p = QI(1, F(1, 2))
+    q = QI(0, F(-3, 4)) / p.conj()
+    r = QI(F(4, 5), F(2, 5))
+    mixed = _mm([[1, 0, 0], [0, p, 0], [0, q, r]], resc)               # Gram not diagonal, G conj(G) = 1
+    cases = {
+        'proof': (one, False),
+        'rescaled': (resc, True),
+        'rescaled, one phase': (_mm([[1, 0, 0], [0, ph, 0], [0, 0, 1]], resc), True),
+        'rescaled, real rotation of w_2, w_3': (_mm([[1, 0, 0], [0, F(3, 5), F(4, 5)], [0, F(-4, 5), F(3, 5)]], resc), True),
+        'rescaled, mixed': (mixed, True),
+        'generic': ([[1, QI(0, 1), 0], [0, 2, 1], [QI(1, 1), 0, 1]], False),
+    }
+    I3 = [[QI(1 if i == j else 0) for j in range(3)] for i in range(3)]
+    I6m = [[QI(1 if i == j else 0) for j in range(6)] for i in range(6)]
+    eta = [[QI(METRIC[i] if i == j else 0) for j in range(6)] for i in range(6)]
+    out = {}
+    for name, (M, expect) in cases.items():
+        G, w, v, S = witt_exchange(M)
+        unit = _mm(G, [[x.conj() for x in row] for row in G]) == I3
+        real = all(x.im == 0 for row in S for x in row)
+        St = [[S[j][i] for j in range(6)] for i in range(6)]
+        assert _mm(_mm(St, eta), S) == eta                             # complex isometry, always
+        assert _mm(S, S) == I6m
+        assert unit == real == expect, name
+        if real:
+            assert _det(S) == QI(-1)
+            assert sum((S[i][i] for i in range(6)), QI(0)) == QI(0)   # eigenvalues +1, -1 three times each
+        out[name] = (G, w, v, S)
+    # the proof's normalisation: Gram diag(2,-2,-2), S(e0) = 5/4 e0 - 3/4 i e1
+    G, w, v, S = out['proof']
+    assert G == [[QI(2), QI(0), QI(0)], [QI(0), QI(-2), QI(0)], [QI(0), QI(0), QI(-2)]]
+    assert [S[r][0] for r in range(6)] == [QI(F(5, 4)), QI(0, F(-3, 4))] + [QI(0)] * 4
+    # the rescaled basis: v'_k = +conj w'_1, -conj w'_2, -conj w'_3; S is e0 <-> e1, e2 <-> -e3, e4 <-> -e5
+    G, w, v, S = out['rescaled']
+    assert G == [[QI(1), QI(0), QI(0)], [QI(0), QI(-1), QI(0)], [QI(0), QI(0), QI(-1)]]
+    for k, s in enumerate((1, -1, -1)):
+        assert v[k] == [QI(s) * x.conj() for x in w[k]]
+    expected = [[0, 1, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0], [0, 0, 0, -1, 0, 0],
+                [0, 0, -1, 0, 0, 0], [0, 0, 0, 0, 0, -1], [0, 0, 0, 0, -1, 0]]
+    assert S == [[QI(x) for x in row] for row in expected]
+    # the mixed basis has a Gram matrix that is not diagonal
+    assert out['rescaled, mixed'][0][1][2] != QI(0)
     return True
 
 

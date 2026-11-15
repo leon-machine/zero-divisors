@@ -26,11 +26,11 @@ derivations:
 - name: main
   uses:
   - dark-matter.imported-eight-towers-mod-8-clock@4
-  - dark-matter.mirror-tower-copy-one@10
+  - dark-matter.mirror-tower-copy-one@11
   - dark-matter.open-channels-their-costs@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
-  - dark-matter.stored-asymmetry-charge-not-number@10
+  - dark-matter.stored-asymmetry-charge-not-number@11
   - dark-matter.type-residue-what-each-tower-can@5
   - dark-matter.ceiling-valued-inherited-success@5
   proof: proof-main.tex

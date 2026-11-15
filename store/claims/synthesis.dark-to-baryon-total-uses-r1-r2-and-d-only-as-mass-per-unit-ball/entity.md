@@ -33,7 +33,7 @@ derivations:
   - dark-matter.total-function-thickness@6
   - dark-matter.democracy-de-sitter-radius-unit-ball@5
   - dark-matter.population-count-one-share-half-percent@7
-  - dark-matter.mirror-share-one-how-fragile@7
+  - dark-matter.mirror-share-one-how-fragile@8
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
   - dark-matter.odd-towers-populated@1
@@ -59,6 +59,10 @@ lineage:
   - dark-matter.status-rule
   - synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
 extraction:
+  maintainer_pass_2026_11_12:
+    by: maintainer-2026-11-12
+    date: '2026-11-12'
+    note: 'Scope note, version kept, no statement changed (Leon''s decision of 12 November 2026: the inherited charge is B - L). Where the text says that the population count gives f_2 = 1 from P1, P2, the common ceiling coupling and the copy of content, read: and under the hypothesis of equal conversion (the mirror''s ratio of baryon number to B - L equals this tower''s; not shown; attack item (d) of op.matter-asymmetry-origin; Proposition dark-matter.stored-asymmetry-charge-not-number (i), version 11). The dependence of the total on R1, R2 and d shown here is unchanged; the mirror''s unit of the total 5.364 is conditional on the hypothesis.'
   maintainer_pass_2026_11_11:
     by: maintainer-2026-11-11
     date: '2026-11-11'
