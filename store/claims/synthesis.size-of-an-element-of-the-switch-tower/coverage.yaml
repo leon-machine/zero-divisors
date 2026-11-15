@@ -27,3 +27,6 @@ functions:
     kind: sampled
     clauses: ["(v) sizes of exclusive tests add and N(e) + N(1 - e) = 1", "(vi) the ingredients of uniqueness: invariance under conjugation, and 2^k exclusive minimal tests of equal size summing to 1"]
     omits: "rung 2 only, one conjugating unit; that these rules determine the function on every element is the proof, not computed"
+untouched_premises:
+  synthesis.signed-directions-and-the-integer-clifford-algebra: "supplies the blade basis and the universal property of Cl_Q(k,k) used in the written proof; the checks compute in the blade product of GA.py directly"
+  synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane: "supplies the case k = 1 of the isomorphism with all maps in the written proof; the checks compute the rank on a left ideal directly"

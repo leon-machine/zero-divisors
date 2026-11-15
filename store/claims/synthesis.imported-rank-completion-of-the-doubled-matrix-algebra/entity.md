@@ -2,7 +2,7 @@
 id: synthesis.imported-rank-completion-of-the-doubled-matrix-algebra
 kind: claim
 version: 1
-title: 'Imported: the rank completion of the endlessly doubled matrix algebra (von Neumann''s continuous regular ring)'
+title: 'Imported: von Neumann''s continuous regular ring'
 status: imported
 region: synthesis
 subject: tower
