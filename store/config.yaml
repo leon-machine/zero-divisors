@@ -61,3 +61,21 @@ mcp_url: ""
 # the private preview of the site (the claude.ai artifact): used for shared links while site_url is
 # empty and the viewer cannot see the page's own address
 preview_url: "https://claude.ai/artifact/U5uQ2AitmiRZCwEDFEa8qQ"
+
+# expert reviews sealed by ORCID (tp/reviews.py, docs/REVIEWS.md). Records in store/reviews are
+# always validated; `enabled` only decides whether they are shown on the site and through MCP.
+# Leave it false until launch.
+reviews:
+  enabled: false
+  # the open review log (a separate repository holding the identifying part of each record),
+  # relative to this store; checked out beside the lab
+  log: ../../review-log
+  orcid:
+    issuers: ["https://orcid.org"]
+    # the review service's production ORCID client id, once registered (stage 2)
+    client_ids: []
+  # iDs whose answers to objections count as the maintainer's
+  maintainer_orcids: ["0009-0006-4449-5617"]
+  # qualification rule and reviewer terms versions in force (docs/REVIEWS.md)
+  rule_versions: [1]
+  terms_versions: [1]

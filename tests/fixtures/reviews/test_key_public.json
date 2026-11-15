@@ -1,0 +1,12 @@
+{
+ "issuer": "https://test.orcid.invalid",
+ "note": "a throwaway key for the test suite only",
+ "keys": [
+  {
+   "kty": "RSA",
+   "kid": "test-key-1",
+   "e": "AQAB",
+   "n": "6dlxglzPkrEhvd80MfF7le-TvpNj7tqRufWZ9prkuryIN-v-lIOY_QAeii_HxX-E22PeigHNJc98Cjzg8ldmRBtPPvP9-EMKy2lhSP--jAGW8GEYrFZB9MR2HL6UGEH2najCrnBj_9PJMDGbSwyNe0qGbJWaSw5Eb9z9UT4D0uYyFIFaagxfZExKIJpsa4E0A_a2pagE7EVl-2L88vPMJZm0wFNC0brHf53TlJvLDn2eq8cbJMA3OJTCdxqenYuUkwLjJ9B3QVvce-U1GwE_23sx0ExDVOGapD9U2EWaKWxGFq0bgVTQRUqSkCWhkZlZtLGxcXibV83iMLvdbQsF5w"
+  }
+ ]
+}

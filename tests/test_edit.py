@@ -186,12 +186,6 @@ class LockRule(EditCase):
         self.assertIn("version 2 kept", out)
         self.assertEqual(self.meta(self.ID)["version"], 2)
 
-    def test_signoff_still_forces_a_bump(self):
-        self.ok("bump", self.ID, "--note", "First", "--date", "2026-10-23")
-        self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-23")
-        out = self.ok("bump", self.ID, "--note", "Second", "--date", "2026-10-23")
-        self.assertIn("version 2 -> 3, trust human-read -> ai-proposed", out)
-
     def test_entity_missing_from_lock_uses_the_date_rule(self):
         p = E(self.root, ".tp-lock.json")
         with open(p) as fh:
@@ -240,14 +234,6 @@ class RealStyle(EditCase):
         self.assertEqual(new.replace("version: 3", "version: 2", 1).replace(
             "  maintainer_pass:\n    by: maintainer-2026-11-01\n    date: '2026-11-01'\n"
             "    note: 'Later. Version 2 -> 3.'\n", ""), old)
-
-    def test_sign_inserts_trust_after_review(self):
-        self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-23")
-        new = self.text(self.ID)
-        self.assertIn("review: typed\ntrust: human-read\nsignoffs:\n- by: leon\n"
-                      "  date: '2026-10-23'\n  version: 2\n  level: human-read\nderivations:",
-                      new)
-
 
 class WireCheck(EditCase):
     ID = "fx.null.square-zero"
@@ -353,65 +339,11 @@ class Restate(EditCase):
 class Sign(EditCase):
     ID = "fx.witt.car"
 
-    def test_sign_raises_trust(self):
-        before = self.meta(self.ID)
-        out = self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-23")
-        self.assertIn("trust unset -> human-read", out)
-        m = self.meta(self.ID)
-        self.assertEqual(m["trust"], "human-read")
-        self.assertEqual(m["version"], before["version"])
-        self.assertEqual(m["signoffs"], [{"by": "leon", "date": "2026-10-23", "version": 1,
-                                          "level": "human-read"}])
-        self.ok("sign", self.ID, "--level", "human-checked", "--note", "Checked the CAR by hand",
-                "--date", "2026-10-24")
-        m = self.meta(self.ID)
-        self.assertEqual(m["trust"], "human-checked")
-        self.assertEqual(len(m["signoffs"]), 2)
-        self.assertEqual(m["signoffs"][1]["note"], "Checked the CAR by hand")
-        # a later human-read on the same version does not lower it
-        self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-25")
-        self.assertEqual(self.meta(self.ID)["trust"], "human-checked")
-
-    def test_older_version_signoff_does_not_raise(self):
-        self.ok("sign", self.ID, "--level", "human-checked", "--date", "2026-10-23")
-        # the bump voids the version-1 sign-off: trust falls to the floor (E120 otherwise)
-        out = self.ok("bump", self.ID, "--note", "Changed", "--date", "2026-10-24")
-        self.assertIn("trust human-checked -> ai-proposed", out)
-        m = self.meta(self.ID)
-        self.assertEqual(m["trust"], "ai-proposed")
-        self.assertIn("Trust lowered from human-checked to ai-proposed",
-                      m["extraction"]["maintainer_pass"]["note"])
-        out = self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-24")
-        m = self.meta(self.ID)
-        self.assertEqual(m["version"], 2)
-        self.assertEqual(m["trust"], "human-read")
-        self.assertIn("ai-proposed -> human-read", out)
-        self.assertEqual([s["version"] for s in m["signoffs"]], [1, 2])
-
-
-    def test_change_after_todays_signoff_bumps_again(self):
-        self.ok("bump", self.ID, "--note", "Morning change", "--date", "2026-10-23")
-        self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-23")
-        out = self.ok("bump", self.ID, "--note", "Afternoon change", "--date", "2026-10-23")
-        self.assertIn("version 2 -> 3, trust human-read -> ai-proposed", out)
-        self.ok("note", self.ID, "Typo", "--date", "2026-10-23")
-        m = self.meta(self.ID)
-        self.assertEqual(m["extraction"]["maintainer_pass"]["note"],
-                         "Morning change. Version 1 -> 2. Afternoon change. Version 2 -> 3. "
-                         "Trust lowered from human-read to ai-proposed: the sign-offs are for "
-                         "version 2. Typo.")
-
-    def test_signoff_of_older_version_in_file_is_ignored(self):
-        p = E(self.folder(self.ID), "entity.md")
-        t = self.text(self.ID).replace("version: 1", "version: 3", 1).replace(
-            "ai_involved: 'no'\n", "ai_involved: 'no'\nsignoffs:\n- by: leon\n  date: '2026-10-01'\n"
-            "  version: 2\n  level: human-checked\n", 1)
-        with open(p, "w") as fh:
-            fh.write(t)
-        self.assertEqual(self.meta(self.ID)["signoffs"][0]["version"], 2)
-        out = self.ok("sign", self.ID, "--level", "human-read", "--date", "2026-10-23")
-        self.assertEqual(self.meta(self.ID)["trust"], "human-read")
-        self.assertIn("unset -> human-read", out)
+    def test_sign_is_retired(self):
+        rc, out = self.run_tp("sign", self.ID, "--level", "human-read", store=False)
+        self.assertEqual(rc, 1)
+        self.assertIn("tp sign is retired", out)
+        self.assertNotIn("signoffs", self.text(self.ID))
 
 
 class AcceptUpdate(EditCase):
