@@ -28523,6 +28523,36 @@
   "status": "remark",
   "version": 1
  },
+ "note.synthesis.the-tower-classifies-the-continuum-and-does-not-create-it": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "19851c9a1bc6e5d2",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "b82d294d929f9a28",
+   "statement": "f27f5f9e7ddc9efb"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.two-orders-of-construction-ladder-and-switch": {
   "assumes": [],
   "credit": [
@@ -47291,6 +47321,36 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.a-division-no-rung-of-the-switch-tower-performs": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "c53642a22468fcfc",
+  "ledger": null,
+  "parts": {
+   "checks": "625705f116c06ab1",
+   "proofs": "705b000f5b9399d1",
+   "rest": "d3b65c89b700e77b",
+   "statement": "815f0b414bb94c01"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.a-finite-subgroup-of-colour-shares-its-strong-coupling-expansion-through-link-degree-three": {
   "assumes": [],
   "credit": [
@@ -47353,18 +47413,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: the flat patch of the separate-universe reading named as Hypothesis (LC), with the patch's curvature recorded as a fourth local datum set to zero by that hypothesis",
+    3
    ]
   ],
-  "hash": "4f6a794d03bfb32e",
+  "hash": "1ac19dfe2508e341",
   "ledger": null,
   "parts": {
    "checks": "c7bd6081f3c7a8dd",
-   "proofs": "386f59bea14fe0d7",
+   "proofs": "f0f2b7c069de5e3e",
    "rest": "d3b65c89b700e77b",
-   "statement": "7d04cccca321401c"
+   "statement": "f5eda9c3471182ff"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.admissible-decay-does-not-control-tangential-derivatives": {
   "assumes": [],
@@ -50098,6 +50163,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "47d884104895af33",
+  "ledger": null,
+  "parts": {
+   "checks": "f899055875d9e21e",
+   "proofs": "93472f4f8b78d060",
+   "rest": "36880587349d3e5c",
+   "statement": "916fd3bafb0b508d"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.diagonal-kasner-momentum-constraint": {
   "assumes": [],
   "credit": [
@@ -50797,6 +50887,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.exchangeable-deposits-carry-two-numbers-and-no-spectral-shape": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d972125cf70d5dd1",
+  "ledger": null,
+  "parts": {
+   "checks": "2694245b179a79d1",
+   "proofs": "a4b26a45d1fb94db",
+   "rest": "d3b65c89b700e77b",
+   "statement": "c410c3d56949d11c"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
   "assumes": [],
   "credit": [
@@ -51074,18 +51189,23 @@
     "Claude Opus 5.5",
     "notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: the closing sentence stated for a deposit whose zeta has finite range, with the dependence on the descent slice's expansion datum named (readings (FR), (FM), (UE))",
+    6
    ]
   ],
-  "hash": "7709feacb9a0a300",
+  "hash": "170ef181ebb3b2bc",
   "ledger": null,
   "parts": {
    "checks": "268ebd8fe0ab1954",
-   "proofs": "e9bc9194abfb65de",
+   "proofs": "549a27d0a5229f06",
    "rest": "d3b65c89b700e77b",
-   "statement": "bffdf8abab51f3d2"
+   "statement": "d1369bd8ee4a3c04"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst": {
   "assumes": [],
@@ -54771,6 +54891,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "e3c5e7380124bf80",
    "statement": "a3d487d134e10df6"
+  },
+  "status": "imported",
+  "version": 1
+ },
+ "synthesis.imported-rank-completion-of-the-doubled-matrix-algebra": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "b2f91d952621407c",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "82093433500c9fad",
+   "statement": "bd03e47084adc2fe"
   },
   "status": "imported",
   "version": 1
@@ -59824,6 +59969,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.quasi-free-deposit-has-white-energy-noise-unless-pure-and-stationary": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "55b790af2e14b347",
+  "ledger": null,
+  "parts": {
+   "checks": "986e112ea61b1f8f",
+   "proofs": "fff9aad76b1158a3",
+   "rest": "d3b65c89b700e77b",
+   "statement": "7a5cba55bd865a93"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise": {
   "assumes": [],
   "credit": [
@@ -59841,18 +60011,23 @@
     "Claude Opus 5.5",
     "notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement: the reading of the contrast as the curvature perturbation named as hypothesis (FR), with a note on the three readings of the shot term",
+    5
    ]
   ],
-  "hash": "7126a3d9e7160589",
+  "hash": "6f2ea1eba88775a6",
   "ledger": null,
   "parts": {
-   "checks": "e03eee95cbce51bf",
-   "proofs": "3f18ea1291aaf6b1",
+   "checks": "cc42fe9c125383ad",
+   "proofs": "cb7d40d715c0196c",
    "rest": "d3b65c89b700e77b",
-   "statement": "0a10495d1adb31b9"
+   "statement": "09b60cdf498bbb7e"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.r-lambda-regularity-cosmological-horizon": {
   "assumes": [],
@@ -61266,6 +61441,36 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.size-of-an-element-of-the-switch-tower": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "idea and direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal, mathematics and drafting",
+    null
+   ],
+   [
+    "Claude Opus 5.5",
+    "independent review",
+    null
+   ]
+  ],
+  "hash": "ab81e62e0e93211a",
+  "ledger": null,
+  "parts": {
+   "checks": "6bea1cafefe2c6a7",
+   "proofs": "ae9e33b82d2fd89b",
+   "rest": "d3b65c89b700e77b",
+   "statement": "f9419dfd56baedfe"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.slot-count-not-from-constituent-fock-space": {
   "assumes": [],
   "credit": [
@@ -61467,6 +61672,31 @@
    "proofs": "bc077aea5b709fd6",
    "rest": "d3b65c89b700e77b",
    "statement": "2d489bffe1df0a11"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "496bfa09bba8978c",
+  "ledger": null,
+  "parts": {
+   "checks": "47e1397871f3170e",
+   "proofs": "2ebe052635d3a3c0",
+   "rest": "d3b65c89b700e77b",
+   "statement": "0a50dfd229e5edbc"
   },
   "status": "proved",
   "version": 1

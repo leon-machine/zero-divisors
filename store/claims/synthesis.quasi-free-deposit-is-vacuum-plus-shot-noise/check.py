@@ -428,3 +428,123 @@ if __name__ == "__main__":
                check_bound_with_pairing_and_the_pure_pair_states, check_descent_parity_average,
                check_shot_term_at_the_pivot):
         print(fn.__name__, fn())
+
+def _ls_add(a, b, s=1):
+    r = dict(a)
+    for k, v in b.items():
+        r[k] = r.get(k, 0) + s * v
+    return {k: v for k, v in r.items() if v != 0}
+
+
+def _ls_mul(a, b, cut):
+    r = {}
+    for i, u in a.items():
+        for j, v in b.items():
+            if i + j <= cut:
+                r[i + j] = r.get(i + j, 0) + u * v
+    return {k: v for k, v in r.items() if v != 0}
+
+
+def _radiation_projection():
+    """Frobenius series of Phi'' + (4/x) Phi' + Phi/3 = 0 (growing sum a_n x^(2n), decaying sum b_n x^(2n-3)),
+    R = Phi + (x Phi' + Phi)/2, Delta = -(2/3) x^2 Phi, and the projection of data (R, Delta) on the growing
+    solution: R_inf = R cR(x) + Delta cD(x).  Returns the pieces the check asserts on."""
+    nterms = 7
+    g, d = {0: F(1)}, {-3: F(1)}
+    a = b = F(1)
+    for n in range(1, nterms):
+        a = -a / (3 * (2 * n) * (2 * n + 3))
+        g[2 * n] = a
+        b = -b / (3 * (2 * n - 3) * (2 * n))
+        d[2 * n - 3] = b
+    xd = lambda p: {k: v * k for k, v in p.items() if k != 0}
+    residual_ok = True
+    for p in (g, d):
+        xdp = xd(p)
+        res = _ls_add(_ls_add(_ls_add(xd(xdp), xdp, -1), {k: 4 * v for k, v in xdp.items()}),
+                      _ls_mul({2: F(1, 3)}, p, 99))
+        residual_ok = residual_ok and all(v == 0 for k, v in res.items() if k < max(p))
+    R = lambda p: _ls_add(p, {k: v / 2 for k, v in _ls_add(xd(p), p).items()})
+    D = lambda p: _ls_mul({2: F(-2, 3)}, p, 99)
+    Rg, Dg, Rd, Dd = R(g), D(g), R(d), D(d)
+    det = _ls_add(_ls_mul(Rg, Dd, 5), _ls_mul(Dg, Rd, 5), -1)
+    cR = {k + 1: -F(3, 2) * v for k, v in Dd.items()}       # R_inf = (3/2) A, A = -x (R D_d - Delta R_d)
+    cD = {k + 1: F(3, 2) * v for k, v in Rd.items()}
+    dec = _ls_add(Rd, {k: v / 4 for k, v in Dd.items()})
+    return dict(residual_ok=residual_ok, g=g, d=d, Rg=Rg, Rd=Rd, Dd=Dd, det=det, cR=cR, cD=cD, dec=dec)
+
+
+def check_conversion_readings_of_the_shot_term():
+    premise("synthesis.imported-large-scale-potential-and-sachs-wolfe-relations")
+    premise("synthesis.imported-superhorizon-zeta-conservation")
+    premise("synthesis.finite-range-descent-deposit-cannot-seed-cmb")
+    premise("synthesis.imported-planck-2018-lcdm-parameters")
+    S = _radiation_projection()
+    marks = []
+    ok = S["residual_ok"]
+    ok &= S["g"][2] == F(-1, 30) and S["d"][-1] == F(1, 6)
+    marks.append(ok)
+    GA.check("note: the two Frobenius solutions of the radiation-era equation, term by term", ok)
+    ok = True
+    # growing solution: R = (3w + 5)/(3(w + 1)) Phi at w = 1/3, the stored relation
+    w = F(1, 3)
+    ok &= S["Rg"][0] == (3 * w + 5) / (3 * (w + 1)) == F(3, 2)
+    marks.append(ok)
+    GA.check("note: R = (3/2) Phi on the growing solution, the stored relation at w = 1/3", ok)
+    ok = True
+    ok &= S["det"] == {-1: F(-1)}
+    cR, cD = S["cR"], S["cD"]
+    ok &= (cR[0], cR[2], cD[0], cD[2]) == (F(1), F(1, 6), F(1, 4), F(-1, 24))
+    # the decaying solution has R + Delta/4 = 0 to the two leading orders
+    ok &= min(S["dec"]) == 1 and S["Rd"][-1] == F(1, 6) and S["Dd"][-1] == F(-2, 3)
+    marks.append(ok)
+    GA.check("note: determinant -1/x, projection coefficients 1, 1/6, 1/4, -1/24; decaying solution has R + Delta/4 = 0 to two orders", ok)
+    ok = True
+    # slice data in the radiation era: R = psi + r, Delta_c = delta + 4 r, r = -H q/(rho + p); x = 1/X
+    delta, r, X = F(2, 3), F(-5), F(10)
+
+    def r_inf(psi):
+        return (psi + r) * (cR[0] + cR[2] / X ** 2) + (delta + 4 * r) * (cD[0] + cD[2] / X ** 2)
+
+    fm = r_inf(F(0))                                    # (FM): delta/4 + 2 r - delta/(24 X^2)
+    ok &= fm == F(-35401, 3600) and fm == delta / 4 + 2 * r - delta / (24 * X ** 2)
+    ue = r_inf(-F(3, 2) * X ** 2 * delta)               # (UE): the terms of order delta cancel
+    ok &= ue == F(-396001, 3600) and ue == -F(3, 2) * X ** 2 * delta + 2 * r - delta / (24 * X ** 2)
+    fr = delta * (cD[0] + cD[2] / X ** 2)               # (FR): r = 0, psi = 0
+    ok &= fr == F(599, 3600)
+    marks.append(ok)
+    GA.check("note: readings (FM), (UE), (FR) on rational slice data: delta/4 + 2r, -(3/2) X^2 delta + 2r, delta/4", ok)
+    ok = True
+    # under (FR), in the stored Fact's convention zeta = -(R - Delta_c/4): +delta/4 on the slice (R = 0,
+    # Delta_c = delta), and zeta_inf = -R_inf = -delta/4 afterwards: opposite sign, same size
+    zeta_slice, zeta_inf = -(F(0) - delta / 4), -fr
+    ok &= zeta_slice == delta / 4 and zeta_slice * zeta_inf < 0 and abs(zeta_inf + zeta_slice) == delta / (24 * X ** 2)
+    marks.append(ok)
+    GA.check("note: under (FR) zeta is +delta/4 on the slice and -delta/4 afterwards", ok)
+    ok = True
+    # thermal ratio: P_delta = 4T/rho, P_u = T/(rho + p) with p = rho/3
+    T, rho = F(3, 7), F(11)
+    Pd, Pu = 4 * T / rho, T / (rho + rho / 3)
+    ok &= (Pd, Pu) == (F(12, 77), F(9, 308)) and Pu == F(3, 16) * Pd and 4 * Pu == 12 * Pd / 16
+    marks.append(ok)
+    GA.check("note: thermal ratio P_v = (3/16) P_delta, so (FM) is (1 + 12 X^2)/16 of the shot term", ok)
+    ok = True
+    # numbers.  (FM) at the pivot, Standard Model count: shot < 8e-80, X < 7.63e22/222
+    X_hi = F(763, 100) * 10 ** 22 / 222
+    ok &= F(343, 100) * 10 ** 20 < X_hi < F(344, 100) * 10 ** 20
+    fm_hi = 8 * F(10) ** -80 * (1 + 12 * X_hi ** 2) / 16
+    ok &= F(70, 10) * F(10) ** -39 < fm_hi < F(71, 10) * F(10) ** -39
+    marks.append(ok)
+    GA.check("note: (FM) at the pivot between 7.0e-39 and 7.1e-39 for the Standard Model count", ok)
+    ok = True
+    # (UE), thermal: amplitude^2 = (135 f)^2 g (T/M)^6 X^2/(90^3 pi^2), M the reduced Planck mass 2.435e18 GeV
+    gst, f, M = F(10675, 100), F(1, 2), F(2435, 1000) * 10 ** 18
+    X_lo = F(32, 10) * 10 ** 20
+    amp2_top = (135 * f) ** 2 * gst * (10 ** 12 / M) ** 6 * X_lo ** 2 / (90 ** 3 * F(22, 7) ** 2)
+    amp2_top_hi = (135 * f) ** 2 * gst * (10 ** 12 / M) ** 6 * X_lo ** 2 / (90 ** 3 * F(333, 106) ** 2)
+    ok &= F(57, 10) ** 2 < amp2_top < amp2_top_hi < F(58, 10) ** 2
+    amp2_1e10 = amp2_top / 10 ** 16                      # T_d and X each a hundred times smaller: T^6 X^2
+    ok &= amp2_1e10 * 10 ** 16 == amp2_top and (26 * F("2.13e-9")) ** 2 < amp2_1e10 < (28 * F("2.13e-9")) ** 2
+    marks.append(ok)
+    GA.check("note: (UE) thermal amplitude between 5.7 and 5.8 at 1e12 GeV and between 26 and 28 A_s at 1e10 GeV (f = 1/2)", ok)
+    assert all(marks)

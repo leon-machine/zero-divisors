@@ -1,0 +1,6 @@
+synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit exit 0
+synthesis.exchangeable-deposits-carry-two-numbers-and-no-spectral-shape exit 0
+synthesis.quasi-free-deposit-has-white-energy-noise-unless-pure-and-stationary exit 0
+synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise exit 0
+synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta exit 0
+DONE

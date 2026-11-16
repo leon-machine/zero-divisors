@@ -1,0 +1,20 @@
+functions:
+  check_pauli_count_and_energy_inequality:
+    kind: sampled
+    clauses:
+    - "(i) 0 <= X_E <= 1 and Tr X_E on rational samples with non-commuting E and E_0 (signatures by exact congruence); the Pauli count and the energy inequality on a cubic momentum grid for five profiles, three masses and four wavenumbers; the factor 2 attained"
+    - "(iii) the energy and the longitudinal momentum forms are below (3/4)(w + k_d)^2 mode by mode"
+    omits: "the continuum integrals are replaced by sums over a grid with energies |p|_1 + m; the operator inequality f^2 <= (c p^2 c + p^2)/2 is in the proof"
+  check_ceiling_of_the_shot_term_in_hubble_masses:
+    kind: exact
+    clauses:
+    - "(ii) the ceiling of the shot term in Hubble masses and eta = 4 g G H^2/(9 pi X^4), as rational identities with pi a rational symbol"
+    omits: "three rational values of pi and three rational samples"
+  check_thresholds_under_the_three_conversions:
+    kind: sampled
+    clauses:
+    - "(iv) the three thresholds solve D^2 = A at the ceiling, the (UE) one with the velocity term 2X"
+    - "(v) the brackets in Hubble masses and in reduced Planck masses at 1 MeV and 1e12 GeV; the (UE) threshold at the pivot against thermal energies; the white contrast at the Hubble scale"
+    omits: "the coefficients of the three readings are taken from the result on the descent slice's constraints and not tested here, and which reading holds is a hypothesis; that the (FM) bound in Planck masses is least at the top of the window between the two ends is argued in the proof"
+untouched_premises:
+  synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit: "supplies the coefficients 1/4, 2X and (3/2) X^2 of the three readings, which the check takes as stated; they are checked in that result"

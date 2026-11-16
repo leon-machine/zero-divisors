@@ -1,0 +1,31 @@
+functions:
+  check_doubly_transitive_relabelling_leaves_two_numbers:
+    kind: sampled
+    clauses:
+    - "(i) orbit counts by closure for six permutation groups; invariance, the two eigenvalues and the variance of arbitrary rational profiles for (v - c) 1 + c U under three doubly transitive groups; the positivity ends"
+    - "(iii) the cyclic and dihedral groups of six have three orbits on unordered pairs; the group x -> a^2 x + b of seven labels has one orbit on unordered and two on ordered pairs"
+    omits: "the general statement is the orbit argument of the proof; the groups are examples"
+  check_embedding_supplies_the_only_shape:
+    kind: sampled
+    clauses:
+    - "(ii) point cells on a ring of six and Walsh modes on eight cells: variance v - c per unit norm on every mode of zero sum"
+    - "(iii) the nearest-neighbour covariance on the ring of six is invariant under the dihedral group, positive, and has variances 5/4, 3/4, 1/2 on the three cosine modes"
+    omits: "the finite-range bound itself is the stored theorem's; only the k^3 scaling of a white spectrum is checked"
+  check_exchangeable_fermion_states:
+    kind: sampled
+    clauses:
+    - "(iv) four modes in Cl(4,4): the symmetric one-quantum state is fixed by relabellings, E_ij = 1/4, the pairing vanishes, number covariances 3/16 and -1/16, the quasi-free variance for diagonal and general one-body f"
+    - "(iv) the stored ladder states on two and three blocks: v, c, sharp total and v - c"
+    omits: "reality of E and vanishing of the pairing for every exchangeable state are the transposition argument of the proof; the lower end of the bound on e is not exhibited"
+  check_similarities_are_doubly_transitive_and_leave_one_exponent:
+    kind: sampled
+    clauses:
+    - "(v) three rational pairs carried to prescribed pairs by a dilatation, a reflection -u x u^(-1) in Cl(3,0) and a translation; squared distances scale by lambda^2; the kernels Q(x - y)^(-D), D = 0, 1, -1, 2, scale by lambda^(-2D)"
+    omits: "irrational ratios of lengths are covered by the proof, not the check"
+  check_placements_tiling_lattice_and_off_lattice:
+    kind: sampled
+    clauses:
+    - "(ii) white cases: point cells on a lattice and on a sublattice; equal and unequal cells tiling a ring of six"
+    - "(ii) boundary: point cells at sites 0, 1, 3 carry c times the placement's structure factor; two cells a quarter circle apart have variances v and 2(v - c)"
+    omits: "one ring and four placements; the general formula is the identity of clause (ii)"
+untouched_premises: {}

@@ -29,7 +29,7 @@ derivations:
   - synthesis.imported-wands-duality-of-perturbation-spectra@1
   - synthesis.frozen-phase-spectrum-not-red@4
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@3
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@6
   - mass.weight-polynomial-two-series@6
   - dark-energy.frozen-point-datum-kasner-wall@8
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2

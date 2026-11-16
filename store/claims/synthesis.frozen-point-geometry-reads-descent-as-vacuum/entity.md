@@ -34,7 +34,7 @@ derivations:
   - standard-model.imported-frozen-point-dictionary@9
   - synthesis.frozen-phase-spectrum-not-red@4
   - synthesis.sudden-descent-feature-not-tilt@4
-  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@5
+  - synthesis.finite-range-descent-deposit-cannot-seed-cmb@6
   - synthesis.quadratic-flows-cannot-thermalise-descent@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-bbn-reheating-temperature-floor@1

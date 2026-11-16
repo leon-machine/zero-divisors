@@ -1,0 +1,22 @@
+functions:
+  check_zero_momentum_noise_of_a_weyl_state_in_cl30:
+    kind: sampled
+    clauses:
+    - "(ii) tr[p E p (1 - E)] = p^2 (nu(2 - nu) - mu^2)/2 + |p ^ mu|^2 and tr[E(1 - E)] = (nu(2 - nu) - mu^2)/2 in Cl(3,0) at three rational samples (the identities are polynomial of degree two in (nu, mu) and in p)"
+    - "(ii) the three classes at p = (2, 3, 6): the spectral idempotent (no noise), two mixed stationary states (2 p^2 n(1 - n) and momentum weight), two pure pair states (|p ^ m|^2 = 4 p^2 n(1 - n), no momentum weight)"
+    omits: "(i) for a general band space is linear algebra in the proof; the trace on the ideal as twice the scalar part is stated in the proof"
+  check_fermi_ball_overlaps_and_structure_factors:
+    kind: sampled
+    clauses:
+    - "(iii) the overlaps tr[eps P_+ eps P_+] = (r + s)^2 (1 + cos)/8 and tr[eps P_- eps P_+] = (s - r)^2 (1 - cos)/8 in Cl(3,0) on three pairs of rational vectors of rational length"
+    - "(iii) exact bipolar integrals at rational k: the number structure factor 3k/4 - k^3/16 at five k up to 2 k_F; at four k up to k_F the Weyl number lune, the particle-hole part k/2 - k^5/320, the blocked part k^4/60 - k^5/120, their difference and the contrast spectrum"
+    omits: "the polynomials are of degree five and are sampled at four points with the low coefficients fixed by the proof's leading terms; the reduction of the integrand to bipolar coordinates is in the proof; k between k_F and 2 k_F is not covered for the energy"
+  check_index_amplitude_and_thermal_crossover_under_the_conversion:
+    kind: exact
+    clauses:
+    - "(iv) index s - 1 under (UE); the miss between 8.3 and 8.4 standard deviations; the coefficients 1/6, 3/8 (and 27/32 for the variant) and 1/240; every bracket of the amplitude and of the density and Hubble rate at A_s; the ratio to the ceiling's energy scale"
+    - "(v) the pair-occupation identity as rational functions; e = t/(2 - t), running t(2 - t) = 0.06896799 and k/T between 19.1 and 19.3 at the measured tilt; the two-term model's t(1 - t)"
+    - "(vi) k_*/(a_0 T_0) from the record values, the factor 14, and k_*/(4 a_d T_d) < 5e-27"
+    omits: "the function F and its two expansions are computed in the proof (the value of zeta(2) enters through the rational bookkeeping only); (UE) is a hypothesis, with its coefficient 3/2 taken as stated; (vi) is argued"
+untouched_premises:
+  synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit: "supplies the coefficient 3/2 of Hypothesis (UE), which the check takes as stated; the constraint and the growing-mode projection are checked in that result"
