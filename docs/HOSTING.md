@@ -53,3 +53,18 @@ authentication), Claude Code (`claude mcp add --transport http physics-graph <ad
 other apps that take a remote server by its address. Every tool the endpoint offers is marked
 read-only, so clients that ask before write actions do not ask before each call. The page
 ends with a check: ask the AI to call `conventions` and say what the graph is.
+
+## The review service
+
+The same image runs the review service (docs/REVIEWS.md) with a different command and its secrets
+in the environment, and a writable volume for its state folder:
+
+    docker run -p 8090:8090 -e PORT=8090 -e HOST=0.0.0.0 \
+      -e TP_ORCID_CLIENT_ID=... -e TP_ORCID_CLIENT_SECRET=... -e TP_GITHUB_TOKEN=... \
+      -e TP_REVIEW_STATE=/state -v review-state:/state \
+      physics-graph-mcp python -m tp.review_server --store store --host 0.0.0.0
+
+Give it its own address on the site's domain (for example `review.<domain>`) and put that in
+`reviews.server.base_url`. Redeploy it after each merge, like the MCP endpoint, so that its
+store (and so the fingerprints it checks) matches the site.
+

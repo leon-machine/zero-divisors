@@ -2085,11 +2085,13 @@ function reviewsSection(n) {
       : `<b>Endorsement</b> of ${(r.scope || []).map(x => esc(SCOPE_WORD[x] || x)).join(", ")}${r.depth ? ", " + esc(r.depth === "line-by-line" ? "checked line by line" : "read") : ""}`;
     return `<li class="${r.state === "current" ? "" : "faint"}"><div>${what}${r.state !== "current" ? ` <span class="note">(${esc(REVIEW_STATE[r.state] || r.state)})</span>` : ""}</div>
       <div class="note">${who} ${badge}${r.date ? " · " + esc(r.date) : ""} · version ${esc(r.version)}${r.conflicts && r.conflicts !== "none" ? " · conflicts declared: " + esc(r.conflicts) : ""}</div>
-      ${r.note ? `<div class="note">${esc(r.note)}</div>` : ""}</li>`;
+      ${r.note ? `<div class="note">${esc(r.note)}</div>` : ""}
+      ${DATA.review_url && r.orcid && r.state === "current" ? `<div class="note"><a href="${esc(DATA.review_url)}/withdraw/${esc(r.hash)}" target="_blank" rel="noopener">Withdraw</a> (the reviewer only)${r.verdict === "object" ? ` · <a href="${esc(DATA.review_url)}/answer/${esc(r.hash)}" target="_blank" rel="noopener">Answer</a> (the maintainer)` : ""}</div>` : ""}</li>`;
   };
   return `<details data-sec="reviews"${rs.length ? " open" : ""}><summary>Reviews <span class="c">${rs.length}</span></summary>
     ${n.disputed ? `<p class="note"><b>Disputed:</b> an objection from a qualified reviewer stands.</p>` : ""}
     ${rs.length ? `<ul class="revs">${rs.map(one).join("")}</ul>` : `<p class="note">No review is recorded yet.</p>`}
+    ${DATA.review_url ? `<p><a class="btn" href="${esc(DATA.review_url)}/review/${encodeURIComponent(n.id)}" target="_blank" rel="noopener">Review this result</a></p>` : ""}
     <p class="note">Each review carries ORCID's signature, checked against ORCID's published key. ORCID confirms identity only and does not endorse reviews.</p></details>`;
 }
 const trustChip = n => n.trust ? `<span class="chip ${n.trust === "human-checked" || n.trust === "published" ? "good" : ""}" title="Trust: ${esc(TRUST_ABOUT[n.trust] || "")}">${esc(TRUST_WORD[n.trust] || n.trust)}</span>` : "";
