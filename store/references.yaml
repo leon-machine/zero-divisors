@@ -3794,3 +3794,63 @@ Halperin1968:
   doi: null
   first_in: synthesis
   latex: 'I.~Halperin, Von Neumann''s manuscript on inductive limits of regular rings, \emph{Canad.\ J.\ Math.} \textbf{20} (1968), 477--483.'
+Dragos2021:
+  citation: 'J. Dragos, T. Luu, A. Shindler, J. de Vries and A. Yousif, Confirming the existence of the strong CP problem in lattice QCD with the gradient flow, Phys. Rev. C 103 (2021), 015202; arXiv:1902.03254.'
+  doi: 10.1103/PhysRevC.103.015202
+  first_in: synthesis
+  latex: 'J. Dragos, T. Luu, A. Shindler, J. de Vries and A. Yousif, Confirming the existence of the strong CP problem in lattice QCD with the gradient flow, Phys. Rev. C 103 (2021), 015202; arXiv:1902.03254.'
+Bhattacharya2021:
+  citation: 'T. Bhattacharya, V. Cirigliano, R. Gupta, E. Mereghetti and B. Yoon, Contribution of the QCD Theta-term to the nucleon electric dipole moment, Phys. Rev. D 103 (2021), 114507; arXiv:2101.07230.'
+  doi: 10.1103/PhysRevD.103.114507
+  first_in: synthesis
+  latex: 'T. Bhattacharya, V. Cirigliano, R. Gupta, E. Mereghetti and B. Yoon, Contribution of the QCD Theta-term to the nucleon electric dipole moment, Phys. Rev. D 103 (2021), 114507; arXiv:2101.07230.'
+PDGAxions2023:
+  citation: 'L. J. Rosenberg, G. Rybka and B. Safdi, Axions and other similar particles, in Review of Particle Physics (Particle Data Group), review revised August 2023.'
+  doi: null
+  first_in: synthesis
+  latex: 'L. J. Rosenberg, G. Rybka and B. Safdi, Axions and other similar particles, in Review of Particle Physics (Particle Data Group), review revised August 2023.'
+Peccei2008:
+  citation: 'R. D. Peccei, The strong CP problem and axions, in Axions: Theory, Cosmology, and Experimental Searches, Lect. Notes Phys. 741, Springer (2008), 3--17; arXiv:hep-ph/0607268.'
+  doi: null
+  first_in: synthesis
+  latex: 'R. D. Peccei, The strong CP problem and axions, in Axions: Theory, Cosmology, and Experimental Searches, Lect. Notes Phys. 741, Springer (2008), 3--17; arXiv:hep-ph/0607268.'
+Fujikawa1979:
+  citation: 'K. Fujikawa, Path-integral measure for gauge-invariant fermion theories, Phys. Rev. Lett. 42 (1979), 1195--1198.'
+  doi: 10.1103/PhysRevLett.42.1195
+  first_in: synthesis
+  latex: 'K. Fujikawa, Path-integral measure for gauge-invariant fermion theories, Phys. Rev. Lett. 42 (1979), 1195--1198.'
+BoerBoomsma2008:
+  citation: 'D. Boer and J. K. Boomsma, Spontaneous CP-violation in the strong interaction at theta = pi, Phys. Rev. D 78 (2008), 054027; arXiv:0806.1669.'
+  doi: 10.1103/PhysRevD.78.054027
+  first_in: synthesis
+  latex: 'D. Boer and J. K. Boomsma, Spontaneous CP-violation in the strong interaction at theta = pi, Phys. Rev. D 78 (2008), 054027; arXiv:0806.1669.'
+tHooft1976:
+  citation: 'G. ''t Hooft, Symmetry breaking through Bell-Jackiw anomalies, Phys. Rev. Lett. 37 (1976), 8.'
+  doi: 10.1103/PhysRevLett.37.8
+  first_in: synthesis
+  latex: 'G. ''t Hooft, Symmetry breaking through Bell-Jackiw anomalies, Phys. Rev. Lett. 37 (1976), 8.'
+KuzminRubakovShaposhnikov1985:
+  citation: 'V. A. Kuzmin, V. A. Rubakov and M. E. Shaposhnikov, On anomalous electroweak baryon-number non-conservation in the early universe, Phys. Lett. B 155 (1985), 36--42.'
+  doi: 10.1016/0370-2693(85)91028-7
+  first_in: synthesis
+  latex: 'V. A. Kuzmin, V. A. Rubakov and M. E. Shaposhnikov, On anomalous electroweak baryon-number non-conservation in the early universe, Phys. Lett. B 155 (1985), 36--42.'
+RubakovShaposhnikov1996:
+  citation: 'V. A. Rubakov and M. E. Shaposhnikov, Electroweak baryon number non-conservation in the early universe and in high energy collisions, arXiv:hep-ph/9603208 (for Usp. Fiz. Nauk 166, no. 5, 1996).'
+  doi: null
+  first_in: synthesis
+  latex: 'V. A. Rubakov and M. E. Shaposhnikov, Electroweak baryon number non-conservation in the early universe and in high energy collisions, arXiv:hep-ph/9603208 (for Usp. Fiz. Nauk 166, no. 5, 1996).'
+HarveyTurner1990:
+  citation: 'J. A. Harvey and M. S. Turner, Cosmological baryon and lepton number in the presence of electroweak fermion-number violation, Phys. Rev. D 42 (1990), 3344.'
+  doi: 10.1103/PhysRevD.42.3344
+  first_in: synthesis
+  latex: 'J. A. Harvey and M. S. Turner, Cosmological baryon and lepton number in the presence of electroweak fermion-number violation, Phys. Rev. D 42 (1990), 3344.'
+KhlebnikovShaposhnikov1996:
+  citation: 'S. Yu. Khlebnikov and M. E. Shaposhnikov, Melting of the Higgs vacuum: conserved numbers at high temperature, Phys. Lett. B 387 (1996), 817; arXiv:hep-ph/9607386.'
+  doi: 10.1016/0370-2693(96)01116-1
+  first_in: synthesis
+  latex: 'S. Yu. Khlebnikov and M. E. Shaposhnikov, Melting of the Higgs vacuum: conserved numbers at high temperature, Phys. Lett. B 387 (1996), 817; arXiv:hep-ph/9607386.'
+DOnofrioRummukainenTranberg2014:
+  citation: 'M. D''Onofrio, K. Rummukainen and A. Tranberg, The sphaleron rate in the minimal Standard Model, Phys. Rev. Lett. 113 (2014), 141602; arXiv:1404.3565.'
+  doi: 10.1103/PhysRevLett.113.141602
+  first_in: synthesis
+  latex: 'M. D''Onofrio, K. Rummukainen and A. Tranberg, The sphaleron rate in the minimal Standard Model, Phys. Rev. Lett. 113 (2014), 141602; arXiv:1404.3565.'

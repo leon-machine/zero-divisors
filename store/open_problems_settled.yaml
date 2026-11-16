@@ -1859,3 +1859,144 @@
     - dark-tower-matter.r1-has-no-mechanism-odd-towers
     - dark-tower-matter.five-dimensional-towers
   added: "2026-11-09"
+- id: op.strong-cp
+  title: 'The strong CP angle'
+  area: standard-model
+  kind: research
+  difficulty: frontier
+  status: settled
+  source: "The gap review of 10 November and Leon's decision of 10 November to register the question; settled 16 November by Leon's decision of 16 November to register the physical colour angle as a free input, on the two results accepted that day"
+  statement: >-
+    The colour gauge field admits a term proportional to the characteristic four-form of its field strength
+    (the trace of its square), with an
+    angle $\theta$ as coefficient, and the physical angle is $\theta$ shifted by the phase of the determinant of
+    the quark mass matrices. The neutron dipole bound quoted in the store puts it below about $10^{-10}$ today.
+    The store holds no result on why. Decide whether the series fixes the physical angle, at zero or at any other
+    value, or record it as a free input with a refutation condition. Settled 16 November: recorded as a free
+    input with a refutation condition (\claimref{synthesis.colour-angle-registered-free-input}).
+  why: >-
+    It is a number of the Standard Model that the series neither derives nor registers. The premise register
+    counts the series' continuous inputs ($N$, the D-term level, the asymmetry $\epsilon$, the down-type
+    weight), and an angle that must be small to ten decimal places and is not in the register is an uncounted
+    input. The series also has structure that bears on it and had not been asked: a real geometric vacuum, a
+    flag, and a mirror tower related to this one by the reversal. (Corrected 16 November: this text called the
+    flag the vacuum's one CP-violating datum. It is not: the flag is configuration data, and the up-down stage
+    phase that the store selects from the data is a parity- and time-odd parameter of the family terms,
+    which the stored conjugation does not move; argued, in Reading (b) of
+    \claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}.)
+  known: >-
+    (As registered, 10 November.) What the graph held on the angle itself: nothing. No stored result states the angle, the phase of the quark
+    mass determinant, or a symmetry or field that would set either. The angle enters the store once, and only as
+    a candidate source of the matter asymmetry: a pre-descent $\theta$-term integrates a characteristic class of
+    even degree, so the odd-dimensional towers carry no continuous $\theta$, and at the P3 representatives a
+    $\theta$-term exists exactly where a flag bit does; in this tower a constant angle of order one at the
+    descent, one that does not relax before it acts, is excluded as the source of the asymmetry by the neutron
+    dipole bound cited there (through a hadronic matrix element with its own uncertainty)
+    (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii), with the refuted claim
+    \claimref{refuted.a-pre-descent-term-sources-the-matter-asymmetry}). That clause says what it does not
+    exclude and does not claim: an angle that relaxes or rolls. It also records that the mirror's angle equals
+    ours only by the common ceiling coupling along the reversal orbit, a premise of its own
+    (\claimref{dark-matter.mirror-tower-copy-one}(iv)), the copy being of the functional and not of its
+    coefficient. Neighbouring structure, none of it a statement about the angle: the CPT-covariance premise
+    leaves every action functional and its parameters invariant and is assumed, not checked, for the gauge and
+    matter sectors (\claimref{dark-matter.premise-cpt-covariance}); the real-breaking assumption makes the lepton
+    matrices real in the vacuum's basis and gives a trivial leptonic Dirac phase
+    (\claimref{neutrino.real-breaking-assumption}), and nothing stored extends it to the quark matrices: the one stored quark-stage result needs a relative
+    phase near a quarter turn, selected from the data
+    (\claimref{synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase}); the characteristic forms the series uses are imported
+    (\claimref{synthesis.imported-chern-weil-and-chern-simons-forms}).
+
+    (16 November.) Settled by the second branch of the success clause: the stored structures are shown, at the
+    level stated here, to leave the physical angle free, and it is registered as a free input with a refutation
+    condition (Premise \claimref{synthesis.colour-angle-registered-free-input}; Leon's decision of 16 November
+    2026). Proved
+    (\claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}):
+    the angle term is the grade-four part of the colour field square; among maps acting by the outermorphism
+    of a vector isometry exactly those of determinant $-1$ reverse it, and the duality map reverses it too;
+    the stored CPT conjugation fixes it in both of its conventions, on the hypothesis, which the store does
+    not state, that it acts on the colour index by an automorphism or anti-automorphism; the reversal to the
+    mirror carries it up to the sign of the identification of the two orientations, $+$ for the stored
+    reversal; on the covariant rung coupling with both family matrices invertible, with no further field of
+    the doublets' charges and no further coloured fermion, every phase symmetry has colour coefficient $0$, a
+    nonzero one needing $\det(aY + b\tilde{Y})$ to be a single monomial, in which case a quark is massless
+    at the family point of the cone; the charge that the conjugate coupling removes is the unit of the module,
+    of which the pseudoscalar of the ten Majoranas survives; the potential's axial phase is broken by the
+    Yukawa terms and by the lift constraint, and the neutral normal pair is massive. Proved
+    (\claimref{synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion}): off the balanced frame
+    the covariant completion is a bijection onto pairs of mass matrices, so the phase of the determinant takes
+    every value at fixed masses and mixing; the determinant is real for real matrices (no Jarlskog invariant),
+    for a self-conjugate coupling (equal up and down spectra) and for Hermitian matrices (real when
+    symmetric); on one-type symmetric stages with real first stages and one sector's second stage real it is
+    real exactly at the quarter turn of the up-down phase, with a mass phase of zero or a half turn according
+    to a sign that nothing stored fixes. Argued, not proved: that no stored premise fixes the coefficient (a
+    reading over a named list of stored maps, not a search of the store); that no stored field relaxes the
+    angle (over the rung field's eight components; the list of stored scalar fields is not shown complete,
+    and a further field with the doublets' charges or further coloured fermions would be outside the proof);
+    and that the normal pair lowers the angle by a relative part of order $10^{-13}$ (an order-of-magnitude
+    estimate). So completeness over the stored fields and maps is argued, and the registration is a decision
+    taken at that level. Imported, read at source: the physical angle as the coefficient plus the phase of the
+    determinant, its shift under a rephasing of the quarks, and CP conservation at a half turn, whose
+    spontaneous breaking is model-dependent
+    (\claimref{synthesis.imported-physical-colour-angle-and-its-shift-under-quark-rephasing}); the neutron dipole
+    measurement and its conversion, which bound the angle near zero at about $2 \times 10^{-10}$, to a
+    factor of a few (\claimref{synthesis.imported-neutron-dipole-bound-and-its-conversion-to-the-colour-angle}).
+    The decision: the physical angle is a registered free input; the exact quarter-turn texture is stored as
+    a conjecture and is not adopted (\claimref{synthesis.exact-quarter-turn-texture-of-the-quark-stages}). Residual items
+    and where they are kept: how the stored CPT conjugation acts on the gauge sector, and which
+    identification of orientations the common-ceiling coupling premise uses for the angle, are recorded as
+    open and not decided in \claimref{note.synthesis.two-premise-questions-raised-by-the-colour-angle}; the mass phase at one
+    loop on the quarter-turn texture is an attack item of op.second-order-breaking; the exclusion of a physical
+    angle of a half turn by the hadron spectrum is literature that is not imported.
+  attack:
+    - >-
+      Answered (16 November; \claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}(i)
+      to (iii)): the stored CPT conjugation fixes the term, on a hypothesis about its action on the colour
+      index; the reversal to the mirror carries it up to the sign of the identification of orientations and
+      does not send it to its negative for the stored reversal; no stored premise examined forces the angle
+      to zero, and the common-ceiling coupling premise only relates the two towers' angles. The item as
+      posed: write the colour $\theta$-term in the store's language (the characteristic four-form of the
+      colour field strength, \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}) and compute its
+      behaviour under the flag reversal and under the CPT conjugation of
+      \claimref{dark-matter.premise-cpt-covariance}. If the reversal that relates this tower to the mirror sends
+      $\theta$ to $-\theta$, state exactly which premise would then force $\theta = 0$ in each tower or only
+      relate the two angles.
+    - >-
+      Answered (16 November; \claimref{synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion}): the stored
+      structure does not fix the phase of the determinant; a real determinant together with the selected
+      quark-stage phase holds on one texture, the exact quarter turn, which is stored as a conjecture
+      (\claimref{synthesis.exact-quarter-turn-texture-of-the-quark-stages}) and is half of a result in the sense of
+      this item. The item as posed: decide whether the stored quark mass structure (the rung vectors and family matrices of
+      the Standard-Model and families results) fixes the phase of the determinant of the quark mass matrices, in
+      particular whether a real vacuum with one flavour-independent flag gives a real determinant together with
+      the quark-stage phase the store selects from the data. A real determinant with a vanishing bare angle would be a result; a real
+      determinant alone is half of one.
+    - >-
+      Answered in the negative (16 November;
+      \claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}(iv)
+      to (viii)): proved for the covariant rung coupling with both family matrices invertible; that no stored
+      field does so is argued, the list of stored fields not being shown complete. The item as posed: decide
+      whether any stored field couples to the
+      colour characteristic four-form with a shift symmetry. If none does, say so as a stored statement (a search is
+      argued, not proved).
+    - >-
+      Done (16 November): registered as \claimref{synthesis.colour-angle-registered-free-input}, with the neutron
+      dipole bound and the definition of the physical angle imported and read at source. The item as posed:
+      if none of the three fixes the angle, register it: a postulate in the format of the other registered free
+      inputs, with the neutron dipole bound as an imported Fact checked at source, and a refutation condition.
+  success: >-
+    A stored result that fixes the physical angle from the series' premises, with the quark mass phase included,
+    and survives the neutron dipole bound; or a proof that the series' structures leave it free, followed by its
+    registration as a free input with a refutation condition. A statement about the bare angle alone, without
+    the mass phase, does not settle it. Met on its second branch (16 November), at the level stated in the
+    last paragraph of the known text: proved for the covariant rung coupling and for the stored maps examined,
+    argued for the store as a whole.
+  entities:
+    - synthesis.colour-angle-registered-free-input
+    - synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling
+    - synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion
+    - synthesis.imported-physical-colour-angle-and-its-shift-under-quark-rephasing
+    - synthesis.imported-neutron-dipole-bound-and-its-conversion-to-the-colour-angle
+    - synthesis.exact-quarter-turn-texture-of-the-quark-stages
+    - note.synthesis.two-premise-questions-raised-by-the-colour-angle
+    - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
+  added: '2026-11-10'

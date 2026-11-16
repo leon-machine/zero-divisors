@@ -1,0 +1,41 @@
+functions:
+  check_stored_terms_carry_b_minus_l_except_the_majorana_element:
+    kind: complete
+    clauses:
+    - (i)
+    omits: 'All 40 off-diagonal mode bilinears, the slot vectors, the number operators and the Majorana element are tested as weight vectors on all 32 states, and the five traces on the sixteen and the fifteen are computed; that a gauge field carries the weight of its generator is the proof''s; the mixed coefficients of B - L are tested in the checks of (iv)'
+  check_neutral_colour_singlet_mass_forms:
+    kind: complete
+    clauses:
+    - (ii)
+    omits: 'The invariant forms are an exact kernel of the six colour root vectors on the pairs of states of zero colour weight and zero electric charge; the weights, the weak isospin and the species of each are read from the kernel; that the stored chain holds no weak-triplet form is the statement of the cited results, not computed'
+  check_conserved_charges_of_the_equilibrated_interactions:
+    kind: complete
+    clauses:
+    - (iv)
+    omits: 'The four conserved spaces are exact kernels on 21 numbers; the weak anomalous condition is entered as one row, the selection rule of the imported Fact; that an interaction in equilibrium conserves the charge of the chemical potentials is the thermal input and is not tested'
+  check_gram_ratio_in_the_symmetric_phase:
+    kind: sampled
+    clauses:
+    - (v)
+    omits: 'The Gram ratio is computed from the states on the grid of 1 to 6 families and 0 to 6 doublets against the closed form, and against the kernel of the five stored conditions in four cases; the general formula is the proof''s algebra; the weights one per fermion state and two per boson state are entered, not derived; hypothesis (T) is not tested'
+  check_gram_ratio_in_the_broken_phase_and_the_bracket:
+    kind: sampled
+    clauses:
+    - (v)
+    - (vii)
+    omits: 'The broken-phase ratio on the same grid, with the boson count of the stated convention entered; the interpolation is tested as a mediant on a grid of non-negative weights; where in the bracket the value lies is not computed'
+  check_lepton_flavour_does_not_enter_the_ratio:
+    kind: sampled
+    clauses:
+    - (vi)
+    omits: 'Five distributions of the asymmetry over three flavours, of rank three, for one and two doublets; the general statement is linear in the distribution and is the proof''s'
+  check_doublets_carry_one_charge_and_the_count_at_freeze_out:
+    kind: partial
+    clauses:
+    - (iv)
+    - (vii)
+    omits: 'Exact: the one further charge with independent slot charges and its colour coefficient 8; the shift of the coefficient with a second doublet at three weights and at the bound of the proof; the arithmetic of the bracket. Not tested: the two quoted inputs, the stored bound of about 2500 GeV and the imported freeze-out temperature, enter only through their ratio being at least 18, and the count of one doublet is argued'
+untouched_premises:
+  neutrino.real-breaking-assumption: 'the postulate under which hypothesis (I), no injection, holds; nothing is computed from it'
+  synthesis.matter-asymmetry-registered-free-input: 'hypothesis (N), the naming of the inherited datum as the total B - L; a decision, with nothing to compute'
