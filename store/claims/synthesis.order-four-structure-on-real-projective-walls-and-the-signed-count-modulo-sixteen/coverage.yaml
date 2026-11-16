@@ -1,0 +1,23 @@
+functions:
+  check_pseudoscalar_lifts_of_the_antipodal_map_square_to_a_sign_set_by_the_signature:
+    kind: exact
+    clauses:
+    - '(i) for every Cl(p,q) with p + q = 2m <= 8 the pseudoscalar anticommutes with every vector and squares to (-1)^(m+q); the listed signatures with square -1 in dimensions six, four and two; the ten Majoranas (10,0): square -1'
+    - '(iv) in Cl(6,2): J_{6,0} and j commute, both square to -1, their product is the pseudoscalar, of square +1, and equals -J_{5,1} E with E^2 = 1, E anticommuting with the two vectors of its plane and commuting with the other six'
+    omits: 'the general formula for every m is the proof''s two-line computation; that the pair (J_{6,0}, j) is the far side''s lift under the stored Clifford jump is read from clause (4) of the cited rung-count theorem'
+  check_classes_of_real_projective_and_lens_walls:
+    kind: sampled
+    clauses:
+    - '(v) for n <= 13: RP^n is spin exactly for n = 1, 3, 7, 11 and has w_1 = 0, w_2 = x^2 exactly for n = 5, 9, 13; with the doubled line w_2 changes by x^2'
+    - '(iii) on RP^(2m-1), m <= 6, every flat side of signature (p,q) has w_1(E+) = w_1(E-) and w_2(E+) + w_2(E-) = (m + q) x^2; of the definite side and its far side exactly one has the class x^2 (m = 2, 3)'
+    - '(v) quarter-turn lens spaces from the stored cell model: x^2 = 6u = 0 and w = (1 + u)^(k+1), so L^5(4) is neither spin nor carries the order-four structure with either flat line; the same route at order two reproduces the classes of projective space'
+    omits: 'finite ranges of n, m and k; the existence statements need (L2) and, on a side, (K), which are named conditions of the statement and are not checked; the classes for a side that is not flat ((iii), the term t^2) are the proof''s'
+  check_signed_count_of_the_order_four_element_is_defined_modulo_sixteen:
+    kind: exact
+    clauses:
+    - '(vi) the elements of the Standard Model torus with square 1 on the sixteen give sixteen sign patterns, one trivial and fifteen reversing exactly eight states; none reverses the neutral singlet'
+    - '(vi) the signed count of omega g is -16 or 0 on sixteen components and -15 or 1 on fifteen; the greatest common divisor of the differences is 16; fifteen-component generations give 0 modulo 16 only for 16 and 32 generations below 40, and three give 3'
+    - '(vi) X = 5 - 2N: the linear and cubic sums are 0 and 0 on sixteen, -5 and -125 on fifteen, and the linear sum is -10 with the full state as the singlet, whose X is 3 modulo 4'
+    omits: 'elements outside the maximal torus (the conjugacy into the torus is a classical fact named in the statement); that the count is an anomaly is the unimported hypothesis (H2) and is not used'
+untouched_premises:
+  synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials: 'cited as (H1) in the argued Reading only (half the spectral asymmetry, 1/16 per component); clauses (i) to (vi) and the checks do not use it, and nothing here is computed from it'

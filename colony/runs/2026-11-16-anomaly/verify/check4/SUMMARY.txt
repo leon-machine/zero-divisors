@@ -1,0 +1,5 @@
+synthesis.colour-angle-fixed-by-no-stored-conjugation-and-relaxed-by-no-stored-field exit 0
+synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio exit 0
+synthesis.order-four-structure-on-real-projective-walls-and-the-signed-count-modulo-sixteen exit 0
+synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion exit 0
+synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials exit 0

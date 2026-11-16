@@ -1,0 +1,8 @@
+W405  synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling
+      dark-matter.mirror-tower-copy-one is declared but none of the entity's 10 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+W405  synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling
+      synthesis.imported-chern-weil-and-chern-simons-forms is declared but none of the entity's 10 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+
+synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling: 0 error(s), 2 other finding(s); check result: pass

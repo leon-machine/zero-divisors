@@ -1,0 +1,8 @@
+W405  synthesis.colour-angle-fixed-by-no-stored-conjugation-and-relaxed-by-no-stored-field
+      dark-matter.mirror-tower-copy-one is declared but none of the entity's 10 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+W405  synthesis.colour-angle-fixed-by-no-stored-conjugation-and-relaxed-by-no-stored-field
+      synthesis.imported-chern-weil-and-chern-simons-forms is declared but none of the entity's 10 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+
+synthesis.colour-angle-fixed-by-no-stored-conjugation-and-relaxed-by-no-stored-field: 0 error(s), 2 other finding(s); check result: pass
