@@ -1,0 +1,4 @@
+I405  synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta
+      synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit is declared and untouched, as expected: coverage.yaml: supplies the coefficients 1/4, 2X and (3/2) X^2 of the three readings, which the check takes as stated; they are checked in that result
+
+synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta: 0 error(s), 1 other finding(s); check result: pass

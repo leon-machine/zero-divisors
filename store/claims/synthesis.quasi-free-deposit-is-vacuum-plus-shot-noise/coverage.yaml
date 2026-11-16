@@ -1,0 +1,32 @@
+functions:
+  check_wick_variance_on_fock_space:
+    kind: sampled
+    clauses:
+    - "(i) Var(N_f) = Tr(f E f (1 - E)) on the Fock space for mixed and pure quasi-free states"
+    omits: "finite numbers of modes with rational one-particle data"
+  check_shot_noise_bound_and_its_proof_steps:
+    kind: sampled
+    clauses:
+    - "(ii) sd <= sd_0 + sqrt(2 Tr(f^2 X_E)) with the purification steps of the proof, gauge-invariant case; a cat mixture of five modes breaks the bound"
+    omits: "finite numbers of modes; existence of a purification for every quasi-free state is cited in the proof"
+  check_bound_with_pairing_and_the_pure_pair_states:
+    kind: sampled
+    clauses:
+    - "(i), (ii) the Nambu form with pairing: Var = Tr(F G F (1 - G))/2 and sd <= sd_0 + sqrt(Tr(F^2 X)), the stored pure pair states included"
+    omits: "finite numbers of modes"
+  check_descent_parity_average:
+    kind: sampled
+    clauses:
+    - "(iii) Var under the parity average is (Var_F + Var_SFS)/2 + D^2/4, and D^2 <= 8 sum |F_(K, not K)|^2"
+    omits: "finite numbers of modes"
+  check_shot_term_at_the_pivot:
+    kind: exact
+    clauses:
+    - "(iv) the energy spread of the Fermi-Dirac spectrum, k_*/(a_0 T_0), and the shot term at the pivot below 1e-77 for g_sd <= 1e4, in rational brackets; 1e68 times it is below A_s, a comparison made under (FR)"
+    omits: "the one-body bound on the cosine moment is in the proof"
+  check_conversion_readings_of_the_shot_term:
+    kind: sampled
+    clauses:
+    - "note on the conversion: the projection coefficients 1 and 1/4 of the radiation-era growing solution by exact series; the three readings on rational slice data; the sign of zeta under (FR); the thermal ratio 3/16; the brackets of the (FM) and (UE) numbers"
+    omits: "the constraint psi = -(3/2) X^2 delta at uniform expansion is an input taken from the result on the descent slice's constraints, not tested; the series are truncated at seven terms"
+untouched_premises: {}

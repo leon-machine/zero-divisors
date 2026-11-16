@@ -27,7 +27,7 @@ about:
 derivations:
 - name: main
   uses:
-  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@4
+  - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@5
   - synthesis.imported-microlocal-hadamard-condition@2
   - hawking.i-state@4
   - field-theory.second-quantisation@6

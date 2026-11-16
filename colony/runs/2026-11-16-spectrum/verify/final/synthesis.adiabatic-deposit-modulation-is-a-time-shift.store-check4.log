@@ -1,0 +1,12 @@
+I405  synthesis.adiabatic-deposit-modulation-is-a-time-shift
+      synthesis.finite-range-descent-deposit-cannot-seed-cmb is declared and untouched, as expected: coverage.yaml: (iii): the delay field remains subject to the bound; cited, no number enters the checks
+I405  synthesis.adiabatic-deposit-modulation-is-a-time-shift
+      synthesis.imported-large-scale-potential-and-sachs-wolfe-relations is declared and untouched, as expected: coverage.yaml: imported Fact: the weight 2 of the matter isocurvature enters the Sachs-Wolfe share; the check computes the share from that weight directly
+I405  synthesis.adiabatic-deposit-modulation-is-a-time-shift
+      synthesis.imported-planck-2018-isocurvature-and-isotropy-bounds is declared and untouched, as expected: coverage.yaml: imported Fact: the 1.3 percent bound is compared in the text; the check verifies the share exceeds twenty times 0.013 with the bound as a literal
+I405  synthesis.adiabatic-deposit-modulation-is-a-time-shift
+      synthesis.imported-superhorizon-zeta-conservation is declared and untouched, as expected: coverage.yaml: imported Fact: per-species conservation is the setting of the separate-universe computation; the check verifies the entropy map and its kernel directly
+I405  synthesis.adiabatic-deposit-modulation-is-a-time-shift
+      synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise is declared and untouched, as expected: coverage.yaml: setting: it reduces the carrier to a classical modulation; no number from it enters the checks
+
+synthesis.adiabatic-deposit-modulation-is-a-time-shift: 0 error(s), 5 other finding(s); check result: pass

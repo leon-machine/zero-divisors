@@ -1,0 +1,31 @@
+functions:
+  check_constraints_of_the_perturbed_field_from_the_field_equation:
+    kind: sampled
+    clauses:
+    - "(i) Omega solved from the torsion equation agrees with the three displayed expressions; first-order n.G(n), m_1.G(n) and the expansion D.n of the slice normal, at two backgrounds (generic a, a', a'') and two wavenumbers with generic Taylor data of (phi, psi, b)"
+    - "(i) scalar curvature of the slice's induced field on Cl(0,3) is -4 (k/a)^2 psi cos, with the sign fixed on the unit sphere; the Gauss relation at zeroth and first order; the energy constraint and 3R = 6 H^2 (delta - 2 delta_H)"
+    omits: "sampled at rational points, not symbolic: each expression is linear in the Taylor data of (phi, psi, b), with coefficients rational in (a, a', k); that every scalar perturbation has the displayed form is argued in the proof"
+  check_slice_independent_combinations_and_the_poisson_relation:
+    kind: sampled
+    clauses:
+    - "(ii) under the relabelling of time the engine's own delta and u shift by -3(1+w) Hc xi and Hc xi on backgrounds of generic w; R, zeta, delta_c and Psi are unchanged; the Poisson relation holds on both slicings"
+    omits: "the identification of u with the proper-time offset to the slice orthogonal to the flow is in the proof"
+  check_radiation_equation_and_the_growing_mode_projection:
+    kind: sampled
+    clauses:
+    - "(iii) on a = eta the engine's spatial and normal components give A'' + 4A'/eta + k^2 A/3; anisotropic stress -k^2 (phi - psi) cos/a^2; u and delta_c in the zero-shear slicing"
+    - "(iii) exact series of g and d to order x^20, the Wronskian 3/x^4, R[d] = cos x/(2x), and the projection identity on both solutions to order x^18"
+    omits: "the closed forms of g and d are checked as series, not as functions; the conservation of the constant outside the Hubble length is the imported Fact"
+  check_three_readings_and_the_index_ledger:
+    kind: sampled
+    clauses:
+    - "(iv) series of the three readings: 1/(2x^2) + x^2/16 - x^4/144 under uniform expansion, -cos x/4 and -(2 cos x + x sin x) on the flat slice, +1/4 for the pure growing datum, and the mixed slice at two values of lambda"
+    - "(v) the powers of X = a_d H_d/k read off the leading exponents of the series (2 under (UE), 0 under (FR), 1 for the velocity term on every slice), hence indices -1, +1, +3 for a white deposit and 0 for a structure factor linear in k; (vi) the factor 12/16 of (FM) with thermal momentum noise"
+    omits: "the dominance conditions between the terms and the infrared end are in the proof"
+  check_thermal_deposit_under_uniform_expansion:
+    kind: exact
+    clauses:
+    - "(vi) the fluctuation identities n(1 -+ n) = -T dn/d omega as rational functions of e^(omega/T); the coefficients 135, 1/40 and 60; P_v/P_delta = 3/16"
+    - "(vi) every bracket of the pivot amplitude (1 MeV, 7.3e8 GeV, 1e12 GeV, the temperature at A_s), the value at k = a_0 H_0, the infrared end from both sides, the temperature bracket at which k = a_0 H_0 reaches A_s, the enhancement factors, and the flat-slice numbers"
+    omits: "the integration by parts for massless quanta and the flatness of the spectra for k << aT are in the proof; g = 106.75 is used at 7.3e8 GeV and above; the brackets are point evaluations at the record values, not propagated uncertainties, and the temperature at which k = a_0 H_0 reaches A_s is not a bound from data"
+untouched_premises: {}

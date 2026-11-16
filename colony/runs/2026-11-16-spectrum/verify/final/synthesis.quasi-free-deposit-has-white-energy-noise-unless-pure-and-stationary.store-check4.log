@@ -1,0 +1,4 @@
+I405  synthesis.quasi-free-deposit-has-white-energy-noise-unless-pure-and-stationary
+      synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit is declared and untouched, as expected: coverage.yaml: supplies the coefficient 3/2 of Hypothesis (UE), which the check takes as stated; the constraint and the growing-mode projection are checked in that result
+
+synthesis.quasi-free-deposit-has-white-energy-noise-unless-pure-and-stationary: 0 error(s), 1 other finding(s); check result: pass

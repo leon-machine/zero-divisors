@@ -31699,7 +31699,7 @@
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
-"key": "55852125f2535461",
+"key": "90ee8937cab13cf7",
 "result": "pass",
 "runs": [
 {
@@ -36091,7 +36091,7 @@
 "synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite": {
 "failed": false,
 "findings": [],
-"key": "4adb60f3b249f2f3",
+"key": "e61185218f62325a",
 "result": "pass",
 "runs": [
 {
@@ -36131,6 +36131,65 @@
 "touched": [
 "synthesis.imported-microlocal-hadamard-condition",
 "synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+}
+]
+},
+"synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit": {
+"failed": false,
+"findings": [],
+"key": "96a3cda2759b84a2",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_constraints_of_the_perturbed_field_from_the_field_equation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-gtg-dictionary"
+]
+},
+{
+"derivation": null,
+"func": "check_slice_independent_combinations_and_the_poisson_relation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-gtg-dictionary",
+"synthesis.imported-superhorizon-zeta-conservation"
+]
+},
+{
+"derivation": null,
+"func": "check_radiation_equation_and_the_growing_mode_projection",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-large-scale-potential-and-sachs-wolfe-relations",
+"synthesis.imported-superhorizon-zeta-conservation"
+]
+},
+{
+"derivation": null,
+"func": "check_three_readings_and_the_index_ledger",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+},
+{
+"derivation": null,
+"func": "check_thermal_deposit_under_uniform_expansion",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.i-state",
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-bbn-reheating-temperature-floor",
+"synthesis.imported-planck-2018-lcdm-parameters"
 ]
 }
 ]
@@ -37312,6 +37371,57 @@
 }
 ]
 },
+"synthesis.exchangeable-deposits-carry-two-numbers-and-no-spectral-shape": {
+"failed": false,
+"findings": [],
+"key": "84df9ccd77cd9618",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_doubly_transitive_relabelling_leaves_two_numbers",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_embedding_supplies_the_only_shape",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb"
+]
+},
+{
+"derivation": null,
+"func": "check_exchangeable_fermion_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.ladder-states-are-locally-product-with-non-gaussian-fluctuations",
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_similarities_are_doubly_transitive_and_leave_one_exponent",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.frozen-phase-spectrum-not-red"
+]
+},
+{
+"derivation": null,
+"func": "check_placements_tiling_lattice_and_off_lattice",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
@@ -37802,7 +37912,7 @@
 "synthesis.finite-range-descent-deposit-cannot-seed-cmb": {
 "failed": false,
 "findings": [],
-"key": "05718d2e9a9b13cc",
+"key": "1cdbb8b618731d10",
 "result": "pass",
 "runs": [
 {
@@ -41787,7 +41897,7 @@
 "synthesis.kasner-hidden-scale-coupled-scalars-stay-blue": {
 "failed": false,
 "findings": [],
-"key": "fdfec9902224f784",
+"key": "125fc71d5eb1ccc0",
 "result": "pass",
 "runs": [
 {
@@ -43330,7 +43440,7 @@
 "synthesis.local-conversion-cannot-redden-a-gaussian-spectator": {
 "failed": false,
 "findings": [],
-"key": "4564269e1b832201",
+"key": "25850839d4d6356d",
 "result": "pass",
 "runs": [
 {
@@ -44713,7 +44823,7 @@
 "synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
 "failed": false,
 "findings": [],
-"key": "122f1be62b7b98e2",
+"key": "011425de3efcca93",
 "result": "pass",
 "runs": [
 {
@@ -47409,10 +47519,50 @@
 }
 ]
 },
+"synthesis.quasi-free-deposit-has-white-energy-noise-unless-pure-and-stationary": {
+"failed": false,
+"findings": [],
+"key": "f0f60b5a41b7a41e",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_zero_momentum_noise_of_a_weyl_state_in_cl30",
+"ok": true,
+"quantities": [],
+"touched": [
+"hawking.imported-quasi-free-states-car-algebra",
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+},
+{
+"derivation": null,
+"func": "check_fermi_ball_overlaps_and_structure_factors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+},
+{
+"derivation": null,
+"func": "check_index_amplitude_and_thermal_crossover_under_the_conversion",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-large-scale-potential-and-sachs-wolfe-relations",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.imported-string-gas-thermal-spectrum-and-conversion",
+"synthesis.quadratic-flows-cannot-thermalise-descent"
+]
+}
+]
+},
 "synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise": {
 "failed": false,
 "findings": [],
-"key": "dd4ad80ef0404338",
+"key": "5e1a1e1c9b2690e0",
 "result": "pass",
 "runs": [
 {
@@ -47466,6 +47616,18 @@
 "synthesis.finite-range-descent-deposit-cannot-seed-cmb",
 "synthesis.frozen-point-geometry-reads-descent-as-vacuum",
 "synthesis.imported-planck-2018-lcdm-parameters"
+]
+},
+{
+"derivation": null,
+"func": "check_conversion_readings_of_the_shot_term",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-large-scale-potential-and-sachs-wolfe-relations",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.imported-superhorizon-zeta-conservation"
 ]
 }
 ]
@@ -47810,7 +47972,7 @@
 "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
 "failed": false,
 "findings": [],
-"key": "2d5fafd0999ea9fe",
+"key": "7b669cdde5ec4753",
 "result": "pass",
 "runs": [
 {
@@ -49853,6 +50015,43 @@
 }
 ]
 },
+"synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta": {
+"failed": false,
+"findings": [],
+"key": "2d3a97d61b1f4b76",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_pauli_count_and_energy_inequality",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+},
+{
+"derivation": null,
+"func": "check_ceiling_of_the_shot_term_in_hubble_masses",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+},
+{
+"derivation": null,
+"func": "check_thresholds_under_the_three_conversions",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.finite-range-descent-deposit-cannot-seed-cmb",
+"synthesis.imported-planck-2018-lcdm-parameters",
+"synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise"
+]
+}
+]
+},
 "synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials": {
 "failed": false,
 "findings": [],
@@ -49911,7 +50110,7 @@
 "synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard": {
 "failed": false,
 "findings": [],
-"key": "8d9ec88a776d6792",
+"key": "9c2b6c08ee118151",
 "result": "pass",
 "runs": [
 {
@@ -51465,7 +51664,7 @@
 "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
 "failed": false,
 "findings": [],
-"key": "a98cacb787194a08",
+"key": "75fb6309039e3ba0",
 "result": "pass",
 "runs": [
 {
