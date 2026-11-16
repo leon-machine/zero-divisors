@@ -64,9 +64,9 @@ preview_url: "https://claude.ai/artifact/U5uQ2AitmiRZCwEDFEa8qQ"
 
 # expert reviews sealed by ORCID (tp/reviews.py, docs/REVIEWS.md). Records in store/reviews are
 # always validated; `enabled` only decides whether they are shown on the site and through MCP.
-# Leave it false until launch.
+# Switched on 16 November 2026.
 reviews:
-  enabled: false
+  enabled: true
   # the open review log (a separate repository holding the identifying part of each record),
   # relative to this store; checked out beside the lab
   log: ../../review-log
