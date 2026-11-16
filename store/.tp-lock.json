@@ -28583,6 +28583,31 @@
   "status": "remark",
   "version": 1
  },
+ "note.synthesis.two-premise-questions-raised-by-the-colour-angle": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "6e1c64449d9fdb97",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "eeafe6d877e03d69",
+   "statement": "edbae72f0a546cb7"
+  },
+  "status": "remark",
+  "version": 1
+ },
  "note.synthesis.what-n-is-counted": {
   "assumes": [],
   "credit": [
@@ -47388,18 +47413,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "citations of the anomalous weak process repointed to the imported Facts",
+    2
    ]
   ],
-  "hash": "061eb305c9d3760e",
+  "hash": "c2ead88e5542d91f",
   "ledger": null,
   "parts": {
    "checks": "7a1bb4ce30ec6dd8",
    "proofs": "878fc30599ee0136",
    "rest": "d3b65c89b700e77b",
-   "statement": "6fa8218193c80215"
+   "statement": "efc3957d5a53445c"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
   "assumes": [],
@@ -49202,6 +49232,56 @@
   "status": "proved",
   "version": 4
  },
+ "synthesis.colour-angle-registered-free-input": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "d8953ea3436f77a1",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "055adabad7190c6c"
+  },
+  "status": "postulate",
+  "version": 1
+ },
+ "synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "2b15d7183338438f",
+  "ledger": null,
+  "parts": {
+   "checks": "9d59f95a1f3f6e7b",
+   "proofs": "94353f0b6a382519",
+   "rest": "d3b65c89b700e77b",
+   "statement": "a939acbb4394bfa7"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.colour-centre-flux-bounds-polyakov-lines-and-the-leading-glueball-tube": {
   "assumes": [],
   "credit": [
@@ -49386,6 +49466,40 @@
   },
   "status": "proved",
   "version": 1
+ },
+ "synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio": {
+  "assumes": [
+   "neutrino.r-descent-reheats-below-lower-heavy@1",
+   "neutrino.real-breaking-assumption@2",
+   "synthesis.matter-asymmetry-registered-free-input@6"
+  ],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision: hypothesis (A) and the literature's closed forms and temperatures now cite the imported Facts (uses), and the three stored postulates the statement is conditional on are assumed",
+    2
+   ]
+  ],
+  "hash": "c6b93024d8b414ad",
+  "ledger": null,
+  "parts": {
+   "checks": "16afe300510203c5",
+   "proofs": "1f515a62cca2fe1e",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2a8a350f554eb7eb"
+  },
+  "status": "proved",
+  "version": 2
  },
  "synthesis.conjugate-reading-up-down-split-is-t3r-odd-or-cp-odd": {
   "assumes": [],
@@ -50811,6 +50925,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.exact-quarter-turn-texture-of-the-quark-stages": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "7e624f8362211385",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2171f889dca6730e",
+   "rest": "85079d304d5cbecd",
+   "statement": "976158283c2b3837"
+  },
+  "status": "conjectured",
+  "version": 1
  },
  "synthesis.exact-window-sugawara-identity-and-luttinger-normal-modes-of-tower-density-waves": {
   "assumes": [],
@@ -52445,6 +52584,31 @@
   "status": "imported",
   "version": 3
  },
+ "synthesis.imported-anomalous-weak-process-changes-b-plus-l-and-keeps-b-minus-l": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "e6a1dff31b9f4909",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "88f0d510b00466e5",
+   "statement": "99a81fb121041042"
+  },
+  "status": "imported",
+  "version": 1
+ },
  "synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory": {
   "assumes": [],
   "credit": [
@@ -53044,6 +53208,31 @@
   },
   "status": "imported",
   "version": 2
+ },
+ "synthesis.imported-equilibrium-baryon-number-as-a-fraction-of-b-minus-l": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "7677f6d1ce03cd39",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "02b9241da8598be2",
+   "statement": "a04decd2cc865734"
+  },
+  "status": "imported",
+  "version": 1
  },
  "synthesis.imported-fayet-iliopoulos-level-only-for-abelian-factors": {
   "assumes": [],
@@ -53955,6 +54144,31 @@
   "status": "imported",
   "version": 2
  },
+ "synthesis.imported-lattice-crossover-and-freeze-out-of-the-anomalous-weak-process": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "3feb1108233d4b47",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "8f4c76000b3ca828",
+   "statement": "d1a07b9aacf29bbe"
+  },
+  "status": "imported",
+  "version": 1
+ },
  "synthesis.imported-left-right-bidoublet-two-yukawa-couplings": {
   "assumes": [],
   "credit": [
@@ -54440,6 +54654,31 @@
   "status": "imported",
   "version": 1
  },
+ "synthesis.imported-neutron-dipole-bound-and-its-conversion-to-the-colour-angle": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "43823fac347678d4",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "f1a79e7bd6bb0e65",
+   "statement": "4aa0c6f15ccd918e"
+  },
+  "status": "imported",
+  "version": 1
+ },
  "synthesis.imported-nielsen-olesen-string-tension": {
   "assumes": [],
   "credit": [
@@ -54681,6 +54920,31 @@
    "proofs": "2ced0a75ebab5a10",
    "rest": "0075f50dc66d9296",
    "statement": "2ddd7b196c349a13"
+  },
+  "status": "imported",
+  "version": 1
+ },
+ "synthesis.imported-physical-colour-angle-and-its-shift-under-quark-rephasing": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction and decision",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "drafting",
+    null
+   ]
+  ],
+  "hash": "db0373db9ab10e1e",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "6eb1437c1f6755a1",
+   "statement": "787e4fb79114d244"
   },
   "status": "imported",
   "version": 1
@@ -57633,18 +57897,23 @@
     "Claude Fable 5.2",
     "restatement at the maintainer's decision: the inherited charge is named as B - L, and the valuation by the measured baryon density is made conditional on the anomalous weak equilibrium and its coefficient",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision: one light doublet on the level branch (argued), the datum B - L per unit entropy bracketed between the two one-doublet ends of the imported equilibrium coefficient, conditional on the imported Facts",
+    6
    ]
   ],
-  "hash": "6b168eddbbf4dfa6",
+  "hash": "aaaf4dd46c9283d4",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "3b062cf6f8b14bb2"
+   "statement": "f96c64be2124ed6f"
   },
   "status": "postulate",
-  "version": 5
+  "version": 6
  },
  "synthesis.microlocal-condition-on-a-generator-gives-the-local-null-ground-state": {
   "assumes": [],
@@ -58913,6 +59182,36 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.order-four-structure-on-real-projective-walls-and-the-signed-count-modulo-sixteen": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "hypothesis (H1) of the Reading replaced by a uses edge to the stored spectral-asymmetry result; no clause changed",
+    2
+   ]
+  ],
+  "hash": "faa03207256d9dd7",
+  "ledger": null,
+  "parts": {
+   "checks": "a2825ef2de8712d7",
+   "proofs": "2f6bdc86ca8e8cdb",
+   "rest": "d3b65c89b700e77b",
+   "statement": "bc8f10275854360b"
+  },
+  "status": "proved",
+  "version": 2
+ },
  "synthesis.oriented-causal-towers-mirror-pair-every-window": {
   "assumes": [],
   "credit": [
@@ -59099,6 +59398,31 @@
   },
   "status": "proved",
   "version": 4
+ },
+ "synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "c66e956b11d3849f",
+  "ledger": null,
+  "parts": {
+   "checks": "9c0ee5d30d813b78",
+   "proofs": "1b415c9333653c87",
+   "rest": "d3b65c89b700e77b",
+   "statement": "334b3d09fcbaaf13"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.plane-commutant-even-ground": {
   "assumes": [],
@@ -61697,6 +62021,31 @@
    "proofs": "2ebe052635d3a3c0",
    "rest": "d3b65c89b700e77b",
    "statement": "0a50dfd229e5edbc"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "2071f299dc10558e",
+  "ledger": null,
+  "parts": {
+   "checks": "80db0c22db184d0d",
+   "proofs": "67b1d2071d463f5b",
+   "rest": "d3b65c89b700e77b",
+   "statement": "9e43d7196d654f57"
   },
   "status": "proved",
   "version": 1

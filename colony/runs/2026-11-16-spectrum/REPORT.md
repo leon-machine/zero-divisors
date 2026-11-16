@@ -7,12 +7,13 @@ round, one maintainer agent. No bridge-hunter (one cluster).
 
 ## Gates
 Every proposal: check4 0 errors and validate_draft ok after the fix round (logs in verify/final/). After the
-maintainer pass: layers 1, 2, 3 and 5 at 0 errors and 0 warnings store-wide; check4 on the seven changed store
-entities (the five accepted results, the time-shift result, the finite-range result) 0 errors; 445 unit tests pass;
-build, layout, site and lock rebuilt. NOT done: the store-wide layer-4 run. The layer-4 cache on main is stale (the
-review-service changes to tp/validate.py invalidated every record), so the run is from scratch, more than an hour
-on the cloud machine; it was stopped at Leon's instruction ("push as it stands") and the stale cache is left as it
-was. No stored check file changed except the quasi-free result's, which keeps its five functions and adds one.
+maintainer pass and the merge of main (which brought run 2026-11-16-anomaly and a fresh layer-4 cache): one
+store-wide `tp check`, layers 1 to 6, 0 errors and 1 warning; layer 4 ran the 14 changed entities and replayed 2382
+from the cache. The one warning, W413 on synthesis.a-division-no-rung-of-the-switch-tower-performs (a weak check),
+is on main and is not from this run. Two W503 warnings raised on the finite-range result by its restatement were
+fixed (the one-liner and the lay level now state the condition). 445 unit tests pass; build, layout, site and lock
+rebuilt. An earlier attempt at the store-wide run, before main was updated, was stopped at Leon's instruction: the
+cache on main was then stale after the review-service changes to tp/validate.py.
 
 ## Outcome
 The problem is not settled and keeps its status (reformulated). The series still records no mechanism for the
@@ -98,7 +99,6 @@ datum of a Hadamard deposit; a red or non-Gaussian modulator. The amplitude and 
 - The filled sea's amplitude has the slow-roll form at epsilon = 1/3: a coincidence of form, no meaning claimed.
 
 ## Not done, for a later pass
-- The store-wide layer-4 run and a refreshed layer-4 cache (see Gates).
 - synthesis.frozen-point-geometry-reads-descent-as-vacuum and synthesis.pati-salam-chain-defects-cannot-source-spectrum
   still pass from a matter deposit of finite range to "the finite-range class, index 3" without naming (FR). They are
   outside the four entries Leon approved for rewording and were left as they are.

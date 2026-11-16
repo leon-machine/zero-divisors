@@ -1581,8 +1581,11 @@
     (\claimref{synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free}).
     Doublets: two doublets follow only from three readings taken exactly
     (\claimref{synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint});
-    on the working branch with a level the second doublet is heavy, about $2.5$ to $3.5$ TeV, and
-    the low-energy content is one doublet.
+    on the working branch with a level the second doublet is heavy, about $2.5$ to $3.5$ TeV, and the
+    low-energy content is one doublet. (16 November 2026.) In particular, on the level branch one doublet is
+    light at the freeze-out of the anomalous weak process, near $132$ GeV, so the equilibrium coefficient
+    between baryon number and $B - L$ is the one-doublet one (argued, not proved;
+    \claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio}(vii)).
 
     (8 November.) The statistics half is now derived at the level of the tower: by the foundation's sign bit
     distinct directions anticommute (\claimref{synthesis.premise-minimal-non-commutativity},
@@ -4109,6 +4112,12 @@
     the premise set, which is what independence needs. This is consistent with the register, which holds $\xi
     G$ as the constant of the laws (\claimref{synthesis.rung-unit-second-free-number}); a derived $\xi G$
     would still refute it.
+
+    (16 November.) The second invariant $W(\mathsf{N})$ is not constrained by the colour angle: no phase
+    symmetry of the covariant rung coupling has a colour coefficient when both family matrices are invertible,
+    and the statements on the scalar sector that bear on the angle hold for every $W$
+    (\claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}(iv)
+    to (viii) and Reading (d)).
   attack:
   - >-
     Compute the charged pair's mass from the second invariant $W(N)$ on the covariant completion, where it
@@ -4155,17 +4164,21 @@
   kind: research
   difficulty: frontier
   status: reformulated
-  source: "The cross-subject review of 9 November (the Klein twist of the modular-conjugation results against the neutral-singlet bit); Leon's decision of 9 November to register the question; the order-four and mass-term results accepted 10 November and Leon's decision of 9 November (restate around the pseudoscalar of the ten Majoranas; the modulo-16 statement not imported)"
+  source: "The cross-subject review of 9 November (the Klein twist of the modular-conjugation results against the neutral-singlet bit); Leon's decision of 9 November to register the question; the order-four and mass-term results accepted 10 November and Leon's decision of 9 November (restate around the pseudoscalar of the ten Majoranas; the modulo-16 statement not imported); the spectral-asymmetry and wall-structure results accepted 16 November and Leon's decision of 16 November (the modulo-16 statement stays unimported; the problem restated around the one question left)"
   statement: >-
-    Restated 10 November. The order-four element of the slot module
+    Restated 16 November (first restated 10 November). The order-four element of the slot module
     (\claimref{standard-model.slot-module-hypothesis}) whose square is the grading and which acts with one odd
     charge on all sixteen components is the pseudoscalar of the ten Majorana generators, $\omega = -I(-1)^{N}$,
     the classical generator of the centre of $\Spin(10)$; the Klein twist of the modular-conjugation results is
     not a candidate. In the stored chain $\omega$ is at no stage an unbroken symmetry that is not a gauge
-    transformation, because the Majorana element breaks it to the grading. What stays open is posed only on a
-    reading without the Majorana term, where $\omega$ modulo the Standard Model group is unbroken: does
-    consistency of the fermion content on walls with cross-section $\mathbb{RP}^{5}$ then force sixteen Weyl
-    components per generation, the neutral singlet included, and exclude fifteen?
+    transformation, because the Majorana element breaks it to the grading. The count that was asked for is
+    derived: on $\mathbb{RP}^{5}$ with the order-four structure, half the spectral asymmetry of the Dirac
+    operator is $\tfrac{1}{16}$ per component of the sixteen. That sixteen components per generation pass and
+    fifteen fail is conditional on two things the store does not hold, the anomaly statement of the literature,
+    which stays unimported, and a gauged $\omega$; and it then holds for three generations, not for every
+    number of them. That the count constrains no stage of the stored chain is argued, not proved. One question
+    stays open: is $\omega$ gauged at a stage whose continuous gauge group does not contain it? Only then
+    would the count be a condition on the fermion content, the neutral singlet included.
   why: >-
     The neutral-singlet bit, sixteen components per generation against
     fifteen, is not decided by the gauge quantum numbers, CPT, anomaly
@@ -4187,13 +4200,14 @@
     On a real projective wall with tautological dying line the rung count is
     $n + 1$, the mod-2 height
     (\claimref{synthesis.wall-rung-count-is-height-of-dying-line-class}).
-    From the literature, cited from memory and not in the store: a
+    From the literature, not in the store (first cited from memory; read at source on 16 November, see the
+    last paragraph): a
     $\mathbb{Z}_{4}$ symmetry whose square is fermion parity has an anomaly
     valued modulo $16$ on Weyl fields of odd charge, the bordism group of
     five-manifolds with that structure being $\mathbb{Z}_{16}$, generated by
     $\mathbb{RP}^{5}$ (Garcia-Etxebarria and Montero; Hsieh; Tachikawa and
-    Yonekura). The store has no entity on bordism groups, the eta invariant
-    or an index theorem of this kind. Argued, not computed in the store: the
+    Yonekura). Until 16 November the store had no entity on bordism groups, the eta invariant
+    or an index theorem of this kind, and the following was argued, not computed in the store: the
     fixed-point contribution of the one nontrivial deck element on
     $\mathbb{RP}^{5}$ is $\tfrac12 \cdot 2^{-3} = \tfrac{1}{16}$ per Weyl
     field, which is where the sixteen would come from; and the lens space
@@ -4224,6 +4238,43 @@
     structure in the mode language of the towers, where the charge that separates the Majorana from the Dirac
     term is the mode-level image of $B - L$:
     \claimref{synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac}.
+
+    (16 November.) Restated by Leon's decision of 16 November: the modulo-16 anomaly statement of the
+    literature stays unimported. Derived (\claimref{synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials}): on the round $\mathbb{RP}^{5}$, with the antipodal
+    map lifted by the volume element of the six-space, of square $-1$, and paired with $\omega$, the spectrum of
+    the Dirac operator is found from monogenic polynomials, and half its spectral asymmetry is $\xi =
+    \tfrac12\eta(0) = \mp\tfrac{1}{16}$ per component of the sixteen ($\eta(0) = \mp\tfrac18$): $\mp 1$ for
+    the sixteen of a generation and $\mp\tfrac{15}{16}$ for fifteen. The algebra is proved; that the listed
+    eigenvalues are the whole spectrum, and that the continued asymmetry function at zero is the Abel sum, are
+    proved given classical analysis that is named there and not stored. The value agrees with the fixed-point
+    weight above and with the literature's $\eta(\mathbb{RP}^{5}) = \tfrac{1}{16}$. Proved
+    (\claimref{synthesis.order-four-structure-on-real-projective-walls-and-the-signed-count-modulo-sixteen}): on a
+    real projective wall with tautological dying line and a definite physical side exactly one side needs an
+    order-four twist, the definite side for $\mathbb{RP}^{5}$ and the Lorentzian far side for
+    $\mathbb{RP}^{3}$, and in the stored Clifford jump the twist is the pseudoscalar of the jump plane (the
+    existence statements given two classical facts named there and not stored); $L^{5}(4)$ carries no
+    order-four structure; the signed count of $\omega g$ over the class of $\omega$ modulo the Standard Model
+    group is $0$ modulo $16$ on sixteen components and $1$ on fifteen, $16$ being the largest such modulus for
+    one generation, so $n_{g}$ fifteen-component generations give $n_{g}$ modulo $16$, which is $3$ for three.
+    Conditional: that a total $\xi$ which is not an integer is an obstruction is the anomaly statement of the
+    literature, not imported; in the source it is a necessary condition for gauging the symmetry, an anomaly
+    of a global symmetry being no inconsistency. Given that statement and a gauged $\omega$, sixteen components
+    per generation pass for every number of generations, and fifteen fail unless sixteen divides the number of
+    generations: ``sixteen, not fifteen'' holds for three generations and not for every number of them.
+    Argued, not proved: the count constrains no stage of the stored chain. With the Majorana element $\omega$
+    is broken to the grading; at a stage whose gauge group contains $\omega$ the neutral singlet is already
+    forced, by the multiplet at Pati-Salam and $\so(10)$ and by the linear and cubic conditions on the abelian
+    charge $X = 5 - 2N$ at a stage with $\uu(5)$ and its abelian factor gauged
+    (\claimref{standard-model.imported-anomaly-coefficients}); at a stage whose group does not contain it, and
+    without the Majorana element, it is a global symmetry. No stored result supplies an identification of the
+    wall's order-four element with $\omega$, fields of the slot module on a six-dimensional space (the tower is
+    four-dimensional, and the cross-sections of its walls are three-dimensional, where the literature's group
+    vanishes), or the anomaly statement. Literature read at source on 16 November: Garcia-Etxebarria and
+    Montero, arXiv:1808.00009 (section 4.3: the generator of the bordism group is $\mathbb{RP}^{5}$, with eta
+    invariant $\tfrac{1}{16}$; equation (C.21): the group is $\Z_{16}$ in dimension five and zero in dimension
+    three; the mass term of the right-handed neutrino breaks the $\Z_{4}$; inside a $U(1)$ the condition
+    follows from the local ones); Hsieh, arXiv:1808.02881, equation (2.47). Tachikawa and Yonekura stays cited
+    from memory.
   attack:
     - >-
       Answered in the negative (10 November;
@@ -4236,15 +4287,35 @@
       Dirac terms keep it only modulo the Standard Model group, so no stage of the stored chain has it as an
       unbroken symmetry that is not a gauge transformation.
     - >-
-      The anomaly itself, on a reading without the Majorana term only. The modulo-16 statement is not imported
-      (Leon's decision of 9 November). Derive the fixed-point count on $\mathbb{RP}^{5}$ in the store and state
-      what a wall with cross-section $\mathbb{RP}^{5}$ requires of the fermion content, or show that a reading
-      without the Majorana term is excluded by a stored premise.
+      Answered in part (16 November). The count on $\mathbb{RP}^{5}$ is derived, $\tfrac{1}{16}$ per component
+      (\claimref{synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials}), and the wall theory
+      carries the order-four structure on the definite side of a wall with that cross-section
+      (\claimref{synthesis.order-four-structure-on-real-projective-walls-and-the-signed-count-modulo-sixteen}). What such
+      a wall requires of the fermion content is not a stored statement: it is conditional on the unimported
+      anomaly statement and on a gauged $\omega$, and no stored result puts fields of the slot module on a
+      six-dimensional space or identifies the wall's order-four element with $\omega$. That a reading without
+      the Majorana term is excluded by a stored premise is not shown.
+    - >-
+      The one live question: decide whether $\omega$ is gauged at a stage whose continuous gauge group does not
+      contain it, without the Majorana element. It is a question of a premise, not a computation: with such a
+      premise and the anomaly statement the derived count forces the neutral singlet for three generations;
+      without it the count constrains nothing (argued). A place to look, not claimed: $\mathbb{RP}^{5}$ is the
+      space of lines of the conformal ambient $\R^{2,4}$, whose pseudoscalar has square $-1$; whether fields
+      on lines of the ambient are to be twisted by $\omega$ is not a stored statement (Reading (e) of the
+      wall-structure result).
+    - >-
+      Prove or refute the argued statement that the count constrains no stage of the stored chain: that at
+      every stage either $\omega$ is broken, or the gauge group contains it and already forces the singlet, or
+      it is a global symmetry (Reading (b) of the wall-structure result; it leans on the literature's reading
+      of an anomaly of a global symmetry, which is not imported).
   success: >-
-    On a reading without the Majorana term, a stored statement that the anomaly of $\omega$ on $\mathbb{RP}^{5}$
-    walls vanishes exactly for sixteen components per generation, or a proof that it does not constrain the
-    content, or a proof that the reading is excluded. With the Majorana term the question is answered in the
-    negative (argued).
+    A decision, with its grounds, on whether $\omega$ is gauged at a stage whose continuous gauge group does
+    not contain it. A stored premise or result that it is, together with the anomaly statement of the
+    literature if it is then imported, would make the derived count a condition on the content: sixteen
+    components per generation, for three generations. A proof that no stage of the stored chain gauges $\omega$
+    without already forcing the singlet would close the problem with the count constraining nothing; at
+    present that is argued. With the Majorana term the question is answered in the negative (argued). The
+    count itself is derived and is no longer part of what is open.
   entities:
     - standard-model.slot-module-hypothesis
     - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5
@@ -4255,84 +4326,9 @@
     - synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element
     - synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac
     - standard-model.majorana-element
+    - synthesis.spectral-asymmetry-on-real-projective-five-space-from-monogenic-polynomials
+    - synthesis.order-four-structure-on-real-projective-walls-and-the-signed-count-modulo-sixteen
   added: "2026-11-09"
-
-- id: op.strong-cp
-  title: 'The strong CP angle'
-  area: standard-model
-  kind: research
-  difficulty: frontier
-  status: open
-  source: "The gap review of 10 November and Leon's decision of 10 November to register the question"
-  statement: >-
-    The colour gauge field admits a term proportional to the characteristic four-form of its field strength
-    (the trace of its square), with an
-    angle $\theta$ as coefficient, and the physical angle is $\theta$ shifted by the phase of the determinant of
-    the quark mass matrices. The neutron dipole bound quoted in the store puts it below about $10^{-10}$ today.
-    The store holds no result on why. Decide whether the series fixes the physical angle, at zero or at any other
-    value, or record it as a free input with a refutation condition.
-  why: >-
-    It is a number of the Standard Model that the series neither derives nor registers. The premise register
-    counts the series' continuous inputs ($N$, the D-term level, the asymmetry $\epsilon$, the down-type
-    weight), and an angle that must be small to ten decimal places and is not in the register is an uncounted
-    input. The series also has structure that bears on it and has not been asked: a real geometric vacuum, a
-    flag that is its one CP-violating datum, and a mirror tower related to this one by the reversal.
-  known: >-
-    What the graph holds on the angle itself: nothing. No stored result states the angle, the phase of the quark
-    mass determinant, or a symmetry or field that would set either. The angle enters the store once, and only as
-    a candidate source of the matter asymmetry: a pre-descent $\theta$-term integrates a characteristic class of
-    even degree, so the odd-dimensional towers carry no continuous $\theta$, and at the P3 representatives a
-    $\theta$-term exists exactly where a flag bit does; in this tower a constant angle of order one at the
-    descent, one that does not relax before it acts, is excluded as the source of the asymmetry by the neutron
-    dipole bound cited there (through a hadronic matrix element with its own uncertainty)
-    (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii), with the refuted claim
-    \claimref{refuted.a-pre-descent-term-sources-the-matter-asymmetry}). That clause says what it does not
-    exclude and does not claim: an angle that relaxes or rolls. It also records that the mirror's angle equals
-    ours only by the common ceiling coupling along the reversal orbit, a premise of its own
-    (\claimref{dark-matter.mirror-tower-copy-one}(iv)), the copy being of the functional and not of its
-    coefficient. Neighbouring structure, none of it a statement about the angle: the CPT-covariance premise
-    leaves every action functional and its parameters invariant and is assumed, not checked, for the gauge and
-    matter sectors (\claimref{dark-matter.premise-cpt-covariance}); the real-breaking assumption makes the lepton
-    matrices real in the vacuum's basis and gives a trivial leptonic Dirac phase
-    (\claimref{neutrino.real-breaking-assumption}), and nothing stored extends it to the quark matrices: the one stored quark-stage result needs a relative
-    phase near a quarter turn, selected from the data
-    (\claimref{synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase}); the characteristic forms the series uses are imported
-    (\claimref{synthesis.imported-chern-weil-and-chern-simons-forms}).
-  attack:
-    - >-
-      First computation: write the colour $\theta$-term in the store's language (the characteristic four-form of the
-      colour field strength, \claimref{synthesis.imported-chern-weil-and-chern-simons-forms}) and compute its
-      behaviour under the flag reversal and under the CPT conjugation of
-      \claimref{dark-matter.premise-cpt-covariance}. If the reversal that relates this tower to the mirror sends
-      $\theta$ to $-\theta$, state exactly which premise would then force $\theta = 0$ in each tower or only
-      relate the two angles.
-    - >-
-      The mass phase: decide whether the stored quark mass structure (the rung vectors and family matrices of
-      the Standard-Model and families results) fixes the phase of the determinant of the quark mass matrices, in
-      particular whether a real vacuum with one flavour-independent flag gives a real determinant together with
-      the quark-stage phase the store selects from the data. A real determinant with a vanishing bare angle would be a result; a real
-      determinant alone is half of one.
-    - >-
-      The relaxing angle left open by the fifteenth refutation: decide whether any stored field couples to the
-      colour characteristic four-form with a shift symmetry. If none does, say so as a stored statement (a search is
-      argued, not proved).
-    - >-
-      If none of the three fixes the angle, register it: a postulate in the format of the other registered free
-      inputs, with the neutron dipole bound as an imported Fact checked at source, and a refutation condition.
-  success: >-
-    A stored result that fixes the physical angle from the series' premises, with the quark mass phase included,
-    and survives the neutron dipole bound; or a proof that the series' structures leave it free, followed by its
-    registration as a free input with a refutation condition. A statement about the bare angle alone, without
-    the mass phase, does not settle it.
-  entities:
-    - dark-matter.asymmetry-arrow-counted-fifteenth-refutation
-    - refuted.a-pre-descent-term-sources-the-matter-asymmetry
-    - dark-matter.mirror-tower-copy-one
-    - dark-matter.premise-cpt-covariance
-    - neutrino.real-breaking-assumption
-    - synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase
-    - synthesis.imported-chern-weil-and-chern-simons-forms
-  added: '2026-11-10'
 
 - id: op.non-gaussian-completion
   title: 'The non-Gaussian completion: the 207 from caused structure'
@@ -4530,6 +4526,17 @@
     (\claimref{synthesis.cabibbo-from-one-type-quark-stages-selects-near-quarter-turn-phase}). The 10-only
     covariant completion gives one-type quark stages, with the phase set by couplings independent in the two
     sectors.
+
+    (16 November.) The up-down phase and the phase of the quark mass determinant are tied on these stages
+    (\claimref{synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion}(iv)): on one-type symmetric
+    stages with real first stages the mass phase is twice the sum of the two sectors' stage phases, up to a
+    half turn, while the up-down phase is their difference, so the two are independent in general; with one
+    sector's second stage real the determinant is real exactly when the up-down phase is a quarter turn, and
+    its phase is then zero or a half turn according to a sign that nothing stored fixes. The exact quarter
+    turn is stored as a conjecture and is not adopted
+    (\claimref{synthesis.exact-quarter-turn-texture-of-the-quark-stages}): on it $|V_{us}|^{2} = (x + y)/((1 +
+    x)(1 + y))$ with no free phase, which the stored mass-ratio windows allow and do not yet test. The texture
+    is at tree level and no symmetry protects it; its mass phase at one loop is not computed.
   attack:
     - >-
       Go beyond the breaking lemma's order: the root past the peak of $m_{2}/m_{3}$, where the lemma's
@@ -4552,7 +4559,19 @@
       couplings, which the one-type result does not cover.
     - >-
       Find what fixes the up-down phase $\phi$ of one-type quark stages ($|\cos\phi| < \tfrac12$ is needed),
-      or count it as a free number of the breaking.
+      or count it as a free number of the breaking. The candidate value is the exact quarter turn of the
+      conjecture \claimref{synthesis.exact-quarter-turn-texture-of-the-quark-stages}, at which the quark mass
+      determinant is real (\claimref{synthesis.phase-of-the-quark-mass-determinant-on-the-covariant-completion}(iv)) and
+      the Cabibbo relation has no free phase; find what would select the quarter turn, and the sign that
+      separates a mass phase of zero from a half turn, or refute the conjecture by its parameter-free Cabibbo
+      relation as the lattice mass ratios sharpen.
+    - >-
+      The mass phase at one loop on the quarter-turn texture (carried here from op.strong-cp, settled 16
+      November): compute the one-loop correction to the phase of $\det M_{u}\det M_{d}$ on the covariant
+      coupling, where the second doublet couples with the two family matrices exchanged. A value above the
+      neutron bound (\claimref{synthesis.imported-neutron-dipole-bound-and-its-conversion-to-the-colour-angle},
+      about $2 \times 10^{-10}$) refutes the conjecture as a texture that keeps the determinant real; that
+      the correction is not to be presumed small is argued, not computed.
   success: >-
     All three PMNS angles and the CKM numbers from one breaking without refitting; a breaking that cannot
     place $|U_{\tau 3}|^2$ in the measured window on an admissible root refutes the structure at that
@@ -5324,18 +5343,25 @@
   kind: research
   difficulty: frontier
   status: partial
-  source: "T14 (the asymmetry stance) and T15 (leptogenesis suppressed); the register of the asymmetry, 1 November; the gap review of 10 November and Leon's decision of 10 November to register the question; the four selection-rule results accepted 12 November and Leon's decisions of 12 November (the inherited charge named as $B - L$; the anomalous weak process and its equilibrium coefficient not imported, registered as an attack item; the problem kept unsettled)"
+  source: "T14 (the asymmetry stance) and T15 (leptogenesis suppressed); the register of the asymmetry, 1 November; the gap review of 10 November and Leon's decision of 10 November to register the question; the four selection-rule results accepted 12 November and Leon's decisions of 12 November (the inherited charge named as $B - L$; the anomalous weak process and its equilibrium coefficient not imported, registered as an attack item; the problem kept unsettled); the conditional inheritance theorem and the colour-angle result accepted 16 November and Leon's decisions of 16 November (the anomalous weak process, its equilibrium coefficient and the lattice freeze-out imported as Facts; the registered premise restated to one light doublet with a bracket for $B - L$ per unit entropy; the three assumes edges of the theorem; the problem kept partial)"
   statement: >-
     The series does not generate its matter asymmetry: the asymmetry per mode $\epsilon$ is a registered free
     input, inherited as initial data of the descent. By the maintainer's decision of 12 November 2026 the
     inherited charge $Q = \epsilon N$ is named as $B - L$, not baryon number: the measured baryon density fixes
-    the baryons per unit entropy, and the datum, $B - L$ per unit entropy, is related to it only through the
-    equilibrium coefficient of the anomalous weak process, which the store does not hold as a Fact. Decide
+    the baryons per unit entropy, and the datum, $B - L$ per unit entropy, is related to it only through the equilibrium coefficient of the anomalous weak process, imported on 16
+    November 2026: with one light doublet on the level branch (argued) the datum lies between $2.45 \times
+    10^{-10}$ and $2.68 \times 10^{-10}$, if the process equilibrated after the descent. Decide
     whether any dynamics the store holds could generate the $B - L$, in which case the premise is refuted by its
     own condition, or prove from named premises that none can, so that the inheritance is a theorem about the
     stored content and not only a stance. Exact conservation is not available for the purpose: for one family
-    every abelian charge other than hypercharge is changed by some stored term, so what can be proved is a
-    conditional inheritance of $B - L$ with bounds on the terms that change it, not a selection rule.
+    every abelian charge other than hypercharge is changed by some stored term, so what can be proved is a conditional inheritance of $B - L$ with bounds on the terms that change it, not
+    a selection rule. The conditional inheritance is now written and proved as algebra, under seven named
+    hypotheses
+    (\claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio});
+    it is not a settlement. What is left is to turn the three hypotheses that are not stored (no washout, the
+    thermal state of the descent, no gravitational channel) into bounds or premises, to decide whether the
+    weak process equilibrates after the descent, and a completeness argument beyond bilinear terms of one
+    family and the three four-forms.
   why: >-
     $\epsilon$ is one of the two unexplained numbers of the descent, with $N$, and the dark-to-baryon count
     rests on its equality across this tower and the mirror. The stance is refuted by any in-framework
@@ -5395,21 +5421,60 @@
     descent: the check of Computation \claimref{dark-tower-matter.mirrors-composition} uses the equilibrium of
     the anomalous weak process, in which $n_{B} = c\,(B - L)$ with $c = \tfrac{28}{79}$ for one light doublet
     and $\tfrac{8}{23}$ for two
-    (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them}(vi), conditional; the
-    process, its equilibrium and $c$ are literature cited from memory, not stored Facts, and by decision they
-    are not imported now). (h) The naming: the inherited charge is $B - L$, by the maintainer's decision, and
+    (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them}(vi), conditional; the process, its equilibrium and $c$ were literature cited from memory on 12 November and are
+    imported Facts since 16 November, (j) below). (h) The naming: the inherited charge is $B - L$, by the maintainer's decision, and
     the registered premise is restated so (\claimref{synthesis.matter-asymmetry-registered-free-input}); $B - L$
-    is protected by Premise (R), with the Majorana element the named exception (argued; no rate computed). A
-    consequence the decision accepts: the mirror share $f_{2} = 1$ no longer follows from the copy theorem
-    alone, since the copy equates the two towers' $B - L$ and the mirror's ratio of baryon number to $B - L$ is
-    not shown to equal this tower's. What is not stored: a derivation or a sourced import of the anomalous weak
-    process and its equilibrium, and the number of light doublets; any rate (the Majorana element with and
-    without Premise (R), the $24$ slot-pair generators at the descent's temperature) and whether the weak
-    process equilibrates after the descent; a stated descent state for the purpose; the split and widths of the
-    heavy pair; anything beyond one family (no family index, no lepton flavour) or outside the mode algebra
-    (instantons of the larger groups at the unification scale, higher-dimension operators, the relaxing angle);
-    and so any proof that the list of channels is complete. The conditional theorem of the third attack item is
-    not yet written or proved.
+    is protected by Premise (R), with the Majorana element the named exception (argued on 12 November, no rate
+    computed; since 16 November the conditional theorem of (i) below). A consequence the decision accepts: the mirror share $f_{2} = 1$ no longer follows from the copy theorem
+    alone, since the copy equates the two towers' $B - L$ and the mirror's ratio of baryon number to $B - L$ is not shown to equal this tower's. Established on 16 November 2026 (algebra and imports; no rate and no
+    thermal history). (i) The conditional inheritance theorem of the third attack item is written and proved
+    as algebra
+    (\claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio}).
+    Every stored term other than the Majorana element carries $B - L$: the $40$ off-diagonal mode bilinears
+    are weight vectors, the slot and rung vectors have weight $0$, and both mixed coefficients vanish on it.
+    Among the bilinear forms on one family's sixteen invariant under colour and the electric charge exactly
+    two change $B - L$: the Majorana form, and a weak-triplet form on $\nu\nu$ that the store does not hold.
+    Under seven named hypotheses the total $B - L$ after the descent is the inherited datum, and $n_{B} =
+    c\,(B - L)$ with $c$ a Gram ratio of the susceptibility form on the stored charges. The standing of the
+    hypotheses: Premise (R), the real-breaking assumption (under which no injection holds) and the naming are
+    stored postulates, which the theorem now assumes; the anomalous weak process is imported; (W) no washout
+    through virtual heavy singlets, (T) a thermal state of the descent reheated above the freeze-out, and (Gr)
+    no gravitational channel are hypotheses of the theorem and are not stored. Premise (R) does not imply (W).
+    With the heavy singlet out of the plasma the trace of $B - L$ over the remaining fifteen states is $-1$
+    per family, so $B - L$ pairs with the gravitational four-form: that is the channel of (Gr). The
+    completeness of the theorem is over bilinear terms of one family's mode algebra, with family multiplicity,
+    and the three four-forms (weak, colour, gravitational), and no further: it is a conditional theorem with
+    its premises named, not a proof that no stored dynamics generates the asymmetry. (j) The process, the
+    coefficient and the doublet count. The anomalous weak process ($B + L$ changed, $B - L$ kept, fast above
+    the weak transition), the equilibrium relation between baryon number and $B - L$, and the lattice
+    crossover and freeze-out temperatures are imported Facts, checked at source
+    (\claimref{synthesis.imported-anomalous-weak-process-changes-b-plus-l-and-keeps-b-minus-l};
+    \claimref{synthesis.imported-equilibrium-baryon-number-as-a-fraction-of-b-minus-l};
+    \claimref{synthesis.imported-lattice-crossover-and-freeze-out-of-the-anomalous-weak-process}). The Gram
+    ratio reproduces the literature's closed forms: for one doublet $\tfrac{28}{79}$ at the symmetric-phase
+    end and $\tfrac{12}{37}$ at the broken-phase end; lepton flavour does not enter it. The doublet count is
+    argued at one: on the level branch the second doublet lies at or above about $2.5$ TeV, far above the
+    freeze-out at $131.7 \pm 2.3$ GeV
+    (\claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio}(vii)).
+    The registered premise is restated accordingly: $B - L$ per unit entropy between $2.45 \times 10^{-10}$
+    (the symmetric-phase end, where the stored mirror check sits) and $2.68 \times 10^{-10}$ (the broken-phase
+    end), conditional on the Facts and on the equilibrium after the descent. So item (a) of the attack is done
+    except for the equilibrium after the descent. (k) The relaxing angle is answered: no phase symmetry of the
+    rung coupling has a colour coefficient, proved for the covariant coupling with both family matrices
+    invertible and no further doublet or coloured fermion, so no component of the rung field relaxes the angle
+    (\claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling});
+    completeness over the stored fields is argued, not proved; and the physical colour angle is now a
+    registered free input (\claimref{synthesis.colour-angle-registered-free-input}). The one charge that
+    independent charges of the slot creation and contraction operators would add is the colour-anomalous one,
+    which is also why both doublets count alike in the coefficient. What is not stored: any rate (the Majorana
+    element with and without Premise (R), in particular the washout through virtual heavy singlets; the $24$
+    slot-pair generators at the descent's temperature; the gravitational pairing) and whether the weak process
+    equilibrates after the descent; a descent state for the purpose beyond hypothesis (T); the split and
+    widths of the heavy pair; the value of the coefficient within its bracket, which needs the Higgs
+    expectation value at the freeze-out; the mirror's ratio; anything beyond bilinear terms of one family's
+    mode algebra and the three four-forms (the commutant with three families beyond multiplicity and lepton
+    flavour, instantons of the larger groups at the unification scale, higher-dimension operators); and so any
+    proof that the list of channels is complete.
   attack:
     - >-
       First computation: the split and widths of the degenerate heavy pair after the breaking, and from them the
@@ -5425,12 +5490,16 @@
       family the selection rules of this enumeration are now stored
       (\claimref{synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them};
       \claimref{synthesis.baryon-number-centraliser-in-the-five-mode-algebra}): the Majorana element breaks $B -
-      L$ and $n_{L}$, the $24$ slot-pair generators break $n_{B}$, and the anomalous weak process (not stored)
-      breaks $n_{B}$ and $n_{L}$. What remains of this item is the bound or the proof for each, items (b), (c)
-      and (a) below, and the statement of the descent's state.
+      L$ and $n_{L}$, the $24$ slot-pair generators break $n_{B}$, and the anomalous weak process (imported since 16 November 2026) breaks $n_{B}$ and $n_{L}$. What
+      remains of this item is the bound or the proof for each, items (b), (c), (W), (Gr) and the rest of (a)
+      below, and the descent's state, item (T).
     - >-
       The conditional inheritance theorem for $B - L$ (the no-go, reworded: as a statement that no stored
-      dynamics changes the charge it is false, by (g) of what is known). State and prove: the total $B - L$
+      dynamics changes the charge it is false, by (g) of what is known). Written and proved as algebra on 16
+      November 2026, with seven named hypotheses
+      (\claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio};
+      (i) of what is known); what is left of this item is its three hypotheses that are not stored, items (W),
+      (T) and (Gr) below, and its completeness, item (e). The item as posed. State and prove: the total $B - L$
       after the descent is changed by no stored term other than the Majorana element (the $24$ slot-pair
       generators carry it and its mixed weak coefficient vanishes); under Premise (R) and a bound on the
       non-thermal injection it is inherited; and baryon number is then the fraction $c$ of it. Name every
@@ -5441,14 +5510,25 @@
       a result. This would be a partial settlement with named premises; CPT covariance and the flag as datum do
       not constrain how the descent's datum is split between $B$ and $L$ and do not by themselves give it.
     - >-
-      (a) The anomalous weak process: derive it from the stored content or source it as an imported Fact with a
-      checked reference (the violation of $B + L$ with $B - L$ kept; its equilibrium above the weak scale; the
-      coefficient $c = (8N_{f} + 4N_{H})/(22N_{f} + 13N_{H})$), decide whether it reaches equilibrium after the
-      descent (the reheating temperature against the weak scale), and fix the number of light doublets:
-      $\tfrac{28}{79}$ for one against $\tfrac{8}{23}$ for two. The stored check of Computation
-      \claimref{dark-tower-matter.mirrors-composition} uses one doublet, while the stored bidoublet
-      (\claimref{standard-model.bidoublet-complex}) needs two doublet couplings; the store should say which is
-      light. Until this is done the registered premise carries no number for $B - L$ per unit entropy.
+      (a) The anomalous weak process. Done on 16 November 2026 except the equilibrium after the descent. The
+      process (the violation of $B + L$ with $B - L$ kept, and that it is fast above the weak transition), the
+      equilibrium relation and the lattice freeze-out are imported Facts with checked references
+      (\claimref{synthesis.imported-anomalous-weak-process-changes-b-plus-l-and-keeps-b-minus-l};
+      \claimref{synthesis.imported-equilibrium-baryon-number-as-a-fraction-of-b-minus-l};
+      \claimref{synthesis.imported-lattice-crossover-and-freeze-out-of-the-anomalous-weak-process}); the
+      coefficient $c = (8N_{f} + 4N_{H})/(22N_{f} + 13N_{H})$ and its broken-phase form are reproduced as a
+      Gram ratio
+      (\claimref{synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio}(v));
+      and the number of light doublets is argued to be one on the level branch ((vii) there): the stored check
+      of Computation \claimref{dark-tower-matter.mirrors-composition} uses one doublet, at the symmetric-phase
+      end $\tfrac{28}{79}$, and the two doublet couplings of the stored bidoublet
+      (\claimref{standard-model.bidoublet-complex}) count as one light doublet because the second doublet is
+      heavy at the freeze-out; $\tfrac{8}{23}$ is not the working-branch value. The registered premise now
+      carries the bracket $2.45 \times 10^{-10}$ to $2.68 \times 10^{-10}$ for $B - L$ per unit entropy. What
+      is left: decide whether the process reaches equilibrium after the descent (the reheating temperature
+      against the freeze-out near $132$ GeV; item (T) below); the value of $c$ within its bracket, which needs
+      the ratio of the Higgs expectation value to the temperature at the freeze-out; and a proof in place of
+      the argument for the doublet count.
     - >-
       (b) The Majorana element: compute the washout rate of $B - L$ through it, with Premise (R) and without,
       and state the bound on the reheating temperature that keeps the washout below the inherited value. This
@@ -5467,12 +5547,44 @@
       it carry that condition.
     - >-
       (e) Completeness beyond one family: the commutant with three families (family rotations, lepton flavour),
-      the family-dependent terms, and the channels outside the mode algebra (instantons of the larger groups at
-      the unification scale, higher-dimension operators). Without it the list of channels has no completeness
-      argument.
+      the family-dependent terms, and the channels outside the mode algebra (instantons of the larger groups at the unification scale,
+      higher-dimension operators). Without it the list of channels has no completeness argument. The stored
+      theorem's completeness clause covers bilinear terms of one family's mode algebra with family
+      multiplicity, lepton flavour for the coefficient only, and the three four-forms.
     - >-
-      The relaxing angle: decide whether a stored field makes the $\theta$-angle of the fifteenth refutation
-      relax, with op.strong-cp; if one does, compute the asymmetry it sources.
+      (W) The washout, hypothesis (W) of the theorem: the rate of the processes of second order in the
+      Majorana element between states of the fifteen (exchange of a virtual heavy neutral singlet; they change
+      $B - L$ by $\pm 2$) against the expansion rate after the descent. Premise (R) does not imply that they
+      are slow: it takes the heavy singlets out of the plasma, not their exchange. The standard estimate,
+      cited from memory and not stored, puts the rate below the expansion rate for temperatures well under
+      about $10^{13}$ GeV. Compute it on the stored seesaw and state the bound on the reheating temperature,
+      or record (W) as a premise. This is item (b) made specific.
+    - >-
+      (T) The thermal state of the descent, hypothesis (T) of the theorem: a homogeneous plasma reheated above
+      the freeze-out of the anomalous weak process ($131.7 \pm 2.3$ GeV, imported), with vanishing densities
+      of the gauge charges, small asymmetries, and the gauge interactions and the Dirac pairings of every
+      family in equilibrium at the freeze-out. Decide from the stored reheating results whether the descent
+      reheats above the freeze-out and thermalises in this sense. If it does not, baryon number is not the
+      fraction $c$ of the datum and the record does not fix $B - L$ per unit entropy.
+    - >-
+      (Gr) The gravitational pairing, hypothesis (Gr) of the theorem: with the heavy singlet out of the plasma
+      the trace of $B - L$ over the fifteen is $-1$ per family (and so is the trace of its cube), so $B - L$
+      pairs with the gravitational four-form, the pseudoscalar part of the square of the curvature. Argued,
+      not computed: the four-form vanishes on a homogeneous isotropic background, so the channel needs a
+      parity-odd gravitational background or fluctuation. It is a candidate in-framework source of $B - L$,
+      given a datum odd under the conjugation (the series holds the flag, and gravity is its subject), and a
+      computed yield would bear on the refutation condition of the registered premise. No rate is computed;
+      the literature's mechanism is cited from memory and is not stored. Compute the rate of the pairing on
+      the descent's background, or bound it below the inherited value.
+    - >-
+      The relaxing angle: answered on 16 November 2026. No phase symmetry of the rung coupling has a colour
+      coefficient, proved for the covariant coupling with both family matrices invertible and no further
+      doublet or coloured fermion
+      (\claimref{synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling}),
+      so no component of the rung field makes the $\theta$-angle of the fifteenth refutation relax;
+      completeness over the stored fields is argued, not proved, and the physical colour angle is a registered
+      free input (\claimref{synthesis.colour-angle-registered-free-input}). The item reopens only if a field
+      outside those examined is stored.
   success: >-
     Either a stored calculation in which a dynamics of the series produces the asymmetry, with a value to set
     against the measured baryon density (this refutes the premise as registered and replaces it), or a proof,
@@ -5490,6 +5602,7 @@
     - synthesis.baryon-number-centraliser-in-the-five-mode-algebra
     - synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them
     - synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog
+    - synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio
   added: '2026-11-10'
 
 - id: op.descent-state-and-spectrum
