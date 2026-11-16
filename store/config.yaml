@@ -79,3 +79,19 @@ reviews:
   # qualification rule and reviewer terms versions in force (docs/REVIEWS.md)
   rule_versions: [1]
   terms_versions: [1]
+  # qualification rule version 1 (tp/qualify.py): OpenAlex subfields that count, and whether a
+  # work counts only when OpenAlex lists the reviewer's iD among its authors
+  qualification:
+    min_works: 3
+    subfields: [2610, 3103, 3106, 3107, 2602, 2608]
+    require_author_match: true
+    invited: []
+  # the review service (tp/review_server.py). Secrets come from the environment, never from here:
+  # TP_ORCID_CLIENT_ID, TP_ORCID_CLIENT_SECRET, TP_GITHUB_TOKEN. The site shows "Review this
+  # result" only once base_url is set.
+  server:
+    base_url: ""
+    orcid_base: https://orcid.org
+    graph_repo: leon-machine/phys-graph
+    log_repo: leon-machine/review-log
+    privacy_contact: ""

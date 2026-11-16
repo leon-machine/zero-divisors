@@ -925,6 +925,10 @@ def main(build="build", site="site", store="store", template="universe.template.
                         "status": s["status"]},
             "trust_levels": list(TRUST_LEVELS),
             "reviews_on": reviews_on,
+            # the review service's public address (reviews.server.base_url): the "Review this
+            # result" link appears only when it is set
+            "review_url": (((st.config.get("reviews") or {}).get("server") or {}).get("base_url")
+                           or "").rstrip("/") if reviews_on else "",
             "programmes": programmes,
             "quantities": quantities,
             "data_files": sorted(data_chunks),

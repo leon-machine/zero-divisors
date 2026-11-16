@@ -102,11 +102,69 @@ identity removed on request, or abusive text removed from view.
 archived on 13 November 2026, with an `issuer` field added. When ORCID rotates its key, add the
 new key set as another file and keep the old one, so that older tokens stay checkable.
 
-## Before launch (stage 2)
+## The review service (stage 2)
 
-- Register the production ORCID client and add its id to `reviews.orcid.client_ids`.
-- Create the open review log repository; check it out beside the lab in CI (`reviews.log`).
-- Show ORCID's official iD icon beside each iD, per ORCID's display guidelines (the core
-  shows the full https://orcid.org/ link only).
-- The review page, the sign-in server (authorisation-code flow), the qualification check,
-  reminder emails, the privacy notice and the reviewer terms.
+`tp/review_server.py` is the page a reviewer uses. It runs on the standard library, like the
+MCP server.
+
+    python -m tp.review_server --store store --host 0.0.0.0 --port 8090
+
+How a review is made:
+
+1. **Review this result** on the site opens `/review/<result id>`: the result, and a form for
+   the verdict, scope, depth, an objection's location and defect, conflicts, a note, the Zenodo
+   opt-in, a contact email and acceptance of the reviewer terms (`docs/REVIEW_TERMS.md`).
+2. **Sign in with ORCID to submit.** The server builds the signed part, recomputing the
+   fingerprint from the store (a review of an out-of-date page is refused), takes its hash and
+   sends the browser to ORCID with the hash as the nonce. It uses the authorisation-code flow,
+   so the client secret never leaves the server, and a random state also set as a short-lived
+   cookie, so the sign-in completes only in the browser that started it.
+3. **ORCID returns** to `/callback`. The server exchanges the code for ORCID's id_token, checks
+   its signature against `store/orcid_keys/`, its issuer, its audience and that its nonce is the
+   hash, then runs the qualification check (`tp/qualify.py`).
+4. **Published**: the entry goes to the open review log first, then the signed part goes to a
+   new branch of the Physics Graph with a pull request (`tp/review_publish.py`). The contact
+   email is kept only in the server's state folder, never in either repository.
+
+Withdrawal (`/withdraw/<hash>`) and the maintainer's answer to an objection (`/answer/<hash>`)
+work the same way; a withdrawal is accepted only from the reviewer's own iD and an answer only
+from an iD in `reviews.maintainer_orcids`.
+
+### Qualification rule version 1 (`tp/qualify.py`)
+
+Any one route: a current employment whose source on the ORCID record is an organisation; or at
+least `min_works` works that carry a DOI, were added by a client rather than typed in, have an
+OpenAlex primary subfield in `subfields`, and (with `require_author_match`) list the reviewer's
+iD among their authors in OpenAlex, so that linking someone else's paper does not count; or an
+invitation (`invited`). The subfields are OpenAlex ids: Mathematical Physics 2610, Astronomy and
+Astrophysics 3103 (where general relativity is filed), Nuclear and High Energy Physics 3106,
+Atomic and Molecular Physics, and Optics 3107, Algebra and Number Theory 2602, Geometry and
+Topology 2608. The record is read once per submission; ORCID's terms forbid polling.
+
+### Configuration
+
+`reviews.server` in `store/config.yaml`: `base_url` (the service's public address; the site
+shows **Review this result** only once it is set), `orcid_base` (`https://orcid.org`, or
+`https://sandbox.orcid.org` for a trial), `graph_repo`, `log_repo`, `privacy_contact`.
+Secrets come from the environment only:
+
+| Variable | What |
+|---|---|
+| `TP_ORCID_CLIENT_ID`, `TP_ORCID_CLIENT_SECRET` | the ORCID Public API client registered for `base_url` + `/callback` |
+| `TP_GITHUB_TOKEN` | a token that can write the open review log and open pull requests on the Physics Graph (without it the service writes to local folders, for trials) |
+| `TP_REVIEW_STATE` | the folder for contact emails (default `review-state`); keep it on a persistent volume |
+
+The client id also goes in `reviews.orcid.client_ids`, so that `tp reviews check` accepts the
+tokens.
+
+### Before going live
+
+- Register the production ORCID client for `base_url/callback`; add its id to the config.
+- Create the open review log repository (`log_repo`) and give the service's token write access
+  to it alone, plus pull-request access on the Physics Graph; check the log out beside the lab
+  in CI (`reviews.log`).
+- Show ORCID's official iD icon beside each iD (the site shows the full https://orcid.org/ link).
+- Publish the privacy notice (`docs/PRIVACY.md`) with the privacy contact, and run the launch
+  admin in the design document (ICO fee check, legitimate-interests assessment).
+- Pending sign-ins are held in memory for 30 minutes: run one instance.
+- Not yet built (stage 3): adjudication, lapse and reminder emails.
