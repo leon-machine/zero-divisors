@@ -2364,6 +2364,10 @@ function trailFull(dir) {
 }
 function showTrailStep() {
   const t = trail, s = t.steps[trailStep], n = byId.get(s.id);
+  // the plain-words text lives in the subject's data file: fetch it, then draw the card again;
+  // the next step's file is fetched ahead so Next is immediate
+  if (!n._full) { const k0 = trailStep; loadFull(n).then(() => { if (trail === t && trailStep === k0) showTrailStep(); }, () => {}); }
+  const nx = t.steps[trailStep + 1] && byId.get(t.steps[trailStep + 1].id); if (nx && !nx._full) loadFull(nx).catch(() => {});
   overlay(); dirty = true;
   flyTo([s.id], Math.max(zoomT, 2.2));
   reader.innerHTML = `<div class="eyebrow">${t.coll ? "Tour · " + esc(t.kind) : "Guided trail" + (t.subject ? " · " + esc(subjTitle(t.subject)) : "")}</div><h2>${esc(t.title)}</h2>
