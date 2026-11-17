@@ -874,15 +874,34 @@ def main(build="build", site="site", store="store", template="universe.template.
         if code:
             papers.setdefault(code, []).append(n["id"])
     order = {c: i for i, c in enumerate(PAPER_ORDER)}
-    collections = [{"id": "paper:" + c, "kind": "Transport Papers",
-                    "title": (c.replace("T0", "T") + ": " + titles[c]) if c in titles else c,
-                    "members": ids}
-                   for c, ids in sorted(papers.items(), key=lambda kv: order.get(kv[0], 99))
-                   if c not in UNLISTED_COLLECTIONS]
-    collections += [{"id": "doc:" + d["id"], "kind": "Generated documents",
-                     "title": d["title"],
-                     "members": [b["claim"].split("@")[0] for b in d["blocks"] if b.get("claim")]}
-                    for d in documents]
+    # one entry per paper: the generated document where there is one (its results, then any
+    # result the paper's locators name that the document leaves out), else the locators alone
+    def _code(p):
+        m = re.match(r"^T0*(\d+)([a-z]?)$", str(p or ""))
+        return f"T{int(m.group(1)):02d}{m.group(2)}" if m else None
+    def _uniq(xs):
+        seen = set()
+        return [x for x in xs if not (x in seen or seen.add(x))]
+    doc_of = {_code(d.get("paper")): d for d in documents if _code(d.get("paper"))}
+    collections, used = [], set()
+    for c, ids in sorted(papers.items(), key=lambda kv: order.get(kv[0], 99)):
+        if c in UNLISTED_COLLECTIONS:
+            continue
+        d = doc_of.get(c)
+        if d:
+            used.add(d["id"])
+            collections.append({"id": "doc:" + d["id"], "kind": "Transport Papers",
+                                "title": d["paper"] + ": " + d["title"],
+                                "members": _uniq([b["claim"].split("@")[0] for b in d["blocks"]
+                                                  if b.get("claim")] + ids)})
+        else:
+            collections.append({"id": "paper:" + c, "kind": "Transport Papers",
+                                "title": (c.replace("T0", "T") + ": " + titles[c]) if c in titles else c,
+                                "members": ids})
+    collections += [{"id": "doc:" + d["id"], "kind": "Transport Papers",
+                     "title": ((d["paper"] + ": ") if d.get("paper") else "") + d["title"],
+                     "members": _uniq([b["claim"].split("@")[0] for b in d["blocks"] if b.get("claim")])}
+                    for d in documents if d["id"] not in used]
     tag_members = {}
     for n in nodes:
         for t in n.get("tags") or []:
