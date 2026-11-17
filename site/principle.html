@@ -422,7 +422,10 @@ function oneOverZero(x, y, fs, col){
 }
 // a section title over a run of slides, with the drawing moved down beneath it
 function titled(t1, t2, fn){
-  const nar = narrow(); text(t1, W / 2, nar ? 30 : 42, C.text, nar ? 18 : 24, 'center', SERIF, '600');
+  // a title shrinks to fit a narrow screen rather than run off its edges
+  const nar = narrow(); let fs = nar ? 18 : 24; ox.font = `600 ${fs}px ${SERIF}`;
+  const tw = ox.measureText(t1).width; if (tw > W - 28) fs = Math.max(12, fs * (W - 28) / tw);
+  text(t1, W / 2, nar ? 30 : 42, C.text, fs, 'center', SERIF, '600');
   if (t2) text(t2, W / 2, nar ? 50 : 68, C.t2, nar ? 12 : 15, 'center', SERIF, 'italic');
   const dy = t2 ? (nar ? 64 : 86) : (nar ? 46 : 62), h0 = H; ox.save(); ox.translate(0, dy); H = h0 - dy; fn(); H = h0; ox.restore();
 }
@@ -962,7 +965,7 @@ function loop(now){
   const v = playerV(now), {k, s} = phaseAt(v);
   if (W !== cv.getBoundingClientRect().width || HF !== cv.getBoundingClientRect().height) size();
   ox.clearRect(0, 0, W, HF);
-  const draw = {line: s => drawLine(0.24 + s * 0.52), limits: drawLimits, why: drawWhy, circle: s => titled(s < 0.28 ? 'General Idea: Stereographic Projection' : 'Stereographic Projection', '', () => drawCircle(s)), pairs: s => titled('Stereographic Projection', '', () => drawPairs(s)), flip: s => titled('Stereographic Projection', '', () => drawFlip(0.36 + s * 0.65)), sphere: drawSphere, clifford: s => titled('Clifford’s algebra', 'geometric algebra: the language the papers are written in', () => drawClifford(s)), recipe: s => titled('The Transport Principle', 'a generalisation of the Riemann sphere', () => s < 0.307 ? drawRecipe(0.69 + cl(s / 0.307) * 0.31) : s < 0.615 ? drawRecipe(0.35 + (s - 0.307) / 0.308 * 0.31) : drawMorph((s - 0.615) / 0.385)), spacetime: drawSpacetime, principle: drawPrinciple, more: drawMore, everyday: drawEveryday, approach: drawApproach}[k];
+  const draw = {line: s => drawLine(0.24 + s * 0.52), limits: drawLimits, why: drawWhy, circle: s => titled(s < 0.28 ? 'The Simplest Case: Stereographic Projection' : 'Stereographic Projection', '', () => drawCircle(s)), pairs: s => titled('Stereographic Projection', '', () => drawPairs(s)), flip: s => titled('Stereographic Projection', '', () => drawFlip(0.36 + s * 0.65)), sphere: drawSphere, clifford: s => titled('Clifford’s algebra', 'geometric algebra: the language the papers are written in', () => drawClifford(s)), recipe: s => titled('The Transport Principle', 'a generalisation of the Riemann sphere', () => s < 0.307 ? drawRecipe(0.69 + cl(s / 0.307) * 0.31) : s < 0.615 ? drawRecipe(0.35 + (s - 0.307) / 0.308 * 0.31) : drawMorph((s - 0.615) / 0.385)), spacetime: drawSpacetime, principle: drawPrinciple, more: drawMore, everyday: drawEveryday, approach: drawApproach}[k];
   if (draw) { TOP = $('#track').offsetHeight + 6; H = Math.max(120, sceneCapTop(k) - 12 - TOP); NARROW = W < HF;
     // a drawing is laid out for at least its design height; on a shorter screen the whole of it, text
     // included, is scaled down to fit, so its lines never close up on one another
