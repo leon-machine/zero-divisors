@@ -369,7 +369,7 @@ details.docproof > summary { font: italic 500 15px var(--serif); }
 .docl { margin-top: 4px; } .docl .btn { padding: 5px 12px; font-size: 13px; text-decoration: none; }
 /* site footer: the support link */
 footer { flex: none; display: flex; align-items: center; justify-content: flex-end; gap: 14px; padding: 6px max(16px, env(safe-area-inset-right, 0px)) 6px max(16px, env(safe-area-inset-left, 0px)); background: var(--panel); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
-.aboutpage p { font-size: 16px; max-width: 680px; }
+.aboutpage p { font-size: 16px; max-width: 680px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .aboutpage a { color: var(--accent); }
 .aboutpage h3 { font: 600 20px/1.25 var(--serif); margin: 30px 0 8px; }
 .aboutpage .aboutnote { margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
@@ -1375,7 +1375,8 @@ sky.addEventListener("pointermove", ev => {
   const r = sky.getBoundingClientRect();
   if (!ptrs.has(ev.pointerId)) { const h = pick(ev.clientX - r.left, ev.clientY - r.top);
     if (h !== hover) { hover = h; dirty = true; }
-    if (h) { const n = byId.get(h); tip.style.display = "block"; tip.innerHTML = `<b>${esc(n.title)}</b><br><span class="note">${esc(subjTitle(n.subject))}</span>`;
+    if (h) { const n = byId.get(h); tip.style.display = "block";
+      if (tip.dataset.for !== h) { tip.dataset.for = h; tip.innerHTML = `<b>${texLine(n.title)}</b><br><span class="note">${esc(subjTitle(n.subject))}</span>`; if (/[$\\]/.test(n.title)) typeset(tip); }
       tip.style.left = Math.min(ev.clientX - r.left + 14, W - 310) + "px"; tip.style.top = (ev.clientY - r.top + 14) + "px"; }
     else tip.style.display = "none";
     return; }
@@ -1663,7 +1664,7 @@ function codeSection(n) {
       : `<p class="note">No coverage record yet: which clauses each function tests is not recorded.</p>`}
     <ul class="ck-fns">${o.fns.map(fn => ckRow(fn, rf.get(fn), cf[fn])).join("")}</ul>
     ${rec && rec.load_error ? `<pre class="ck-err">${esc(rec.load_error)}</pre>` : ""}
-    <div class="ck-row"><button class="btn primary" type="button" data-ckrun>Run in this browser</button><button class="btn" type="button" data-ckcopy>Copy code</button><button class="btn" type="button" data-ckcmd>Copy command</button><button class="btn" type="button" data-ckall>Run every check here</button></div>
+    <div class="ck-row"><button class="btn primary" type="button" data-ckrun>Run in this browser</button><button class="btn" type="button" data-ckcopy>Copy code</button><button class="btn" type="button" data-ckcmd>Copy command</button></div>
     <p class="note" data-ckmsg aria-live="polite"></p>
     <pre class="ck-code" tabindex="0"><code>Opening ${esc(o.path)}…</code></pre></details>`;
 }
@@ -1695,7 +1696,6 @@ function wireCheck(n) {
   ck.querySelector("[data-ckcopy]").onclick = async () => { try { await load(); } catch (e) { return; } ckCopy(src, msg, "Code", code); };
   ck.querySelector("[data-ckcmd]").onclick = () => ckCopy(`python3 colony/runcheck.py ${o.path}`, msg, "Command (run it in your clone of the lab)", null);
   ck.querySelector("[data-ckrun]").onclick = () => ckRun(n, ck);
-  ck.querySelector("[data-ckall]").onclick = () => ckRunAll(ck);
   ckShowBrowser(n, ck);
 }
 // the last run of this check in a browser (kept in the artifact's store), against the recorded run
@@ -2003,41 +2003,6 @@ async function ckRun(n, ck) {
   } catch (e) {
     say(`Could not run it here: ${e.message || e}. The recorded run above is from the lab's workspace; to run it yourself, use Copy command in your clone of the lab.`);
   } finally { CK_BUSY = false; btn.disabled = false; }
-}
-// every check in turn (fast ones first; functions slower than 0.4 s in CPython are skipped), each
-// result kept in the artifact's store
-let CK_ALL_STOP = false;
-async function ckRunAll(ck) {
-  const msg = ck.querySelector("[data-ckmsg]"), btn = ck.querySelector("[data-ckall]");
-  if (CK_BUSY) { if (btn.dataset.running) { CK_ALL_STOP = true; btn.textContent = "Stopping…"; } return; }
-  const say = t => { msg.textContent = t; };
-  CK_BUSY = true; CK_ALL_STOP = false; btn.dataset.running = "1"; btn.textContent = "Stop";
-  const runBtn = ck.querySelector("[data-ckrun]"); runBtn.disabled = true;
-  try {
-    await ckEngine(say);
-    const db = await ckDb();
-    // resume: results already stored for this build of the page are kept
-    const have = new Set();
-    try { if (db) (await db.collection("browserruns").get()).docs.forEach(d => { const x = d.data(); if (x && (x.built === CK_RT.built || (CK_RT.compatible || []).includes(x.built))) have.add(d.id); }); } catch (e) { /* run everything */ }
-    const todo = nodes.filter(n => n.ck != null && !have.has(n.id)).sort((a, b) => a.ck - b.ck);
-    let done = 0, agree = 0, differ = 0, skippedFns = 0;
-    const t0 = Date.now();
-    for (const n of todo) {
-      if (CK_ALL_STOP) break;
-      say(`Running every check here: ${done} of ${todo.length} done, ${agree} agree with the recorded run, ${differ} differ. Now: ${n.title}`);
-      await ckTick();
-      let res;
-      try { await loadFull(n); res = await ckExec(n, { skipOver: 400 }); } catch (e) { res = { id: n.id, at: new Date().toISOString(), engine: ckEngineName(), built: CK_RT.built || "", fns: [], load_error: String(e && e.message || e) }; }
-      skippedFns += res.fns.filter(r => r.skipped).length;
-      if (ckVerdict(n, res, CK_RT).differ.length) differ++; else agree++;
-      done++;
-      await ckSave(n.id, res);
-    }
-    if (done === todo.length || CK_ALL_STOP) await ckSave("_summary", { at: new Date().toISOString(), engine: ckEngineName(), built: CK_RT.built || "", done, total: todo.length, agree, differ, skipped_functions: skippedFns, seconds: Math.round((Date.now() - t0) / 1000), probe_diffs: ckProbeDiffs() });
-    say(`${CK_ALL_STOP ? "Stopped" : "Finished"}: ${done} of ${todo.length} checks run here in ${Math.round((Date.now() - t0) / 60000)} min; ${agree} agree with the recorded run, ${differ} differ; ${skippedFns} slow functions skipped. ${db ? "Results are saved with the page." : "Results could not be saved (storage is not available in this view)."}`);
-  } catch (e) {
-    say(`Could not run the checks here: ${e.message || e}.`);
-  } finally { CK_BUSY = false; delete btn.dataset.running; btn.textContent = "Run every check here"; runBtn.disabled = false; }
 }
 // the remarks and examples on a result, in paper order; each is typeset when first opened
 const notesOf = n => (n.notes || []).filter(x => NOTES[x]).map(x => NOTES[x]);
