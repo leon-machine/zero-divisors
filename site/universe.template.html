@@ -199,6 +199,8 @@ a.ref:hover { text-decoration: underline; }
 .trailbar button { width: 22px; height: 8px; border-radius: 4px; border: 0; background: var(--rule); cursor: pointer; padding: 0; }
 .trailbar button.done { background: color-mix(in srgb, var(--accent) 45%, var(--rule)); }
 .trailbar button.on { background: var(--accent); }
+.trailprog { height: 8px; border-radius: 4px; background: var(--rule); margin: 8px 0 14px; overflow: hidden; cursor: pointer; }
+.trailprog span { display: block; height: 100%; background: var(--accent); }
 .stepcard { border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; margin: 12px 0; background: var(--bg); }
 .stepcard h3 { margin-top: 2px; font: 600 19px/1.25 var(--serif); }
 .legend { display: grid; grid-template-columns: auto 1fr; gap: 4px 8px; font-size: 13px; color: var(--muted); align-items: center; }
@@ -1512,7 +1514,7 @@ function overlay() {
     parts.push(`<span class="chip"><i style="background:${t.theme ? subjColour(t.theme) : cssv("--accent")}"></i>${esc(t.subject ? subjTitle(t.subject) : t.title || "")}</span>`); }
   if (litLabel.startsWith("coll:")) parts.push(`<span class="chip">${esc((DATA.collections.find(c => c.id === litLabel.slice(5)) || {}).title || "")}</span>`);
   if (litLabel.startsWith("qty:")) parts.push(`<span class="chip">Uses ${esc((byQ.get(litLabel.slice(4)) || {}).title || "")}</span>`);
-  if (trail) parts.push(`<span class="chip">Trail: step ${trailStep + 1} of ${trail.steps.length}</span>`);
+  if (trail) parts.push(`<span class="chip">${trail.coll ? "Tour" : "Trail"}: step ${trailStep + 1} of ${trail.steps.length}</span>`);
   if (selected) parts.push(`<span class="chip" style="color:var(--past)">● rests on ${near.prem.size}</span><span class="chip" style="color:var(--future)">● used by ${near.dept.size}</span>`);
   if (parts.length) parts.push(`<button class="btn" id="clearall">Clear</button>`);
   o.innerHTML = parts.join("");
@@ -2325,11 +2327,16 @@ function showCollection(c) {
   const doc = c.id.startsWith("doc:");
   reader.innerHTML = `<div class="eyebrow">${esc(c.kind)}</div><h2>${esc(c.title)}</h2>
     ${c.about ? `<p>${esc(c.about)}</p>` : ""}
-    <p class="note">${c.members.length} results. The collection lights up where its results sit in the Physics Graph; the arrangement itself is by logic and subject, never by source.</p>
+    <p class="note">${c.members.filter(m => byId.has(m)).length} results. The collection lights up where its results sit in the Physics Graph; the arrangement itself is by logic and subject, never by source.</p>
     ${doc ? `<p><a class="ref" href="#doc:${esc(c.id.slice(4))}">Read the document</a></p>` : ""}
+    ${collTour(c).steps.length > 1 ? `<div class="stepcard"><div class="eyebrow">Tour · ${collTour(c).steps.length} steps</div><p class="note" style="margin:4px 0 10px">Step through the collection one result at a time${doc ? ", in the order of the paper" : ""}, with Previous and Next.</p><div class="row"><button class="btn primary" id="tour">Start the tour</button></div></div>` : ""}
     ${linkList(c.members.filter(m => byId.has(m)).slice(0, 60), "")}`;
+  const tb = document.getElementById("tour"); if (tb) tb.onclick = () => startTrail(collTour(c));
   reader.scrollTop = 0; typeset(reader);
 }
+// a collection walked like a guided trail: its results in order, without the trail's prose
+const collTour = c => ({ id: "coll:" + c.id, coll: c.id, kind: c.kind, title: c.title,
+  steps: [...new Set(c.members)].filter(m => byId.has(m)).map(id => ({ id })) });
 // lighting a trail without walking it: a subject's trail lights the whole subject,
 // a tour or cross-subject trail lights its own steps
 function lightTrail(t) {
@@ -2357,10 +2364,15 @@ function trailFull(dir) {
 }
 function showTrailStep() {
   const t = trail, s = t.steps[trailStep], n = byId.get(s.id);
+  // the plain-words text lives in the subject's data file: fetch it, then draw the card again;
+  // the next step's file is fetched ahead so Next is immediate
+  if (!n._full) { const k0 = trailStep; loadFull(n).then(() => { if (trail === t && trailStep === k0) showTrailStep(); }, () => {}); }
+  const nx = t.steps[trailStep + 1] && byId.get(t.steps[trailStep + 1].id); if (nx && !nx._full) loadFull(nx).catch(() => {});
   overlay(); dirty = true;
   flyTo([s.id], Math.max(zoomT, 2.2));
-  reader.innerHTML = `<div class="eyebrow">Guided trail${t.subject ? " · " + esc(subjTitle(t.subject)) : ""}</div><h2>${esc(t.title)}</h2>
-    <div class="trailbar">${t.steps.map((x, i) => `<button aria-label="Step ${i + 1}" class="${i === trailStep ? "on" : i < trailStep ? "done" : ""}" data-step="${i}"></button>`).join("")}</div>
+  reader.innerHTML = `<div class="eyebrow">${t.coll ? "Tour · " + esc(t.kind) : "Guided trail" + (t.subject ? " · " + esc(subjTitle(t.subject)) : "")}</div><h2>${esc(t.title)}</h2>
+    ${t.steps.length > 40 ? `<div class="trailprog" role="progressbar" aria-valuemin="1" aria-valuemax="${t.steps.length}" aria-valuenow="${trailStep + 1}" title="Click to jump"><span style="width:${(100 * (trailStep + 1) / t.steps.length).toFixed(2)}%"></span></div>`
+      : `<div class="trailbar">${t.steps.map((x, i) => `<button aria-label="Step ${i + 1}" class="${i === trailStep ? "on" : i < trailStep ? "done" : ""}" data-step="${i}"></button>`).join("")}</div>`}
     ${trailStep === 0 && t.intro ? `<div class="prose">${tex(t.intro)}</div>` : ""}
     ${trailStep === 0 && (t.assumes || []).length ? `<div class="given"><b>This trail assumes</b> ${t.assumes.filter(x => byId.has(x)).map(x => `<a class="ref" data-id="${esc(x)}">${esc(byId.get(x).title)}</a>`).join(", ")}.</div>` : ""}
     ${s.text ? `<div class="prose">${tex(s.text)}</div>` : ""}
@@ -2372,10 +2384,12 @@ function showTrailStep() {
     <div class="row" style="justify-content:space-between;margin-top:10px">
       <button class="btn" id="prev" ${trailStep ? "" : "disabled"}>← Previous</button>
       <button class="btn primary" id="next">${trailStep < t.steps.length - 1 ? "Next →" : "Finish"}</button></div>
-    <p class="note" style="margin-top:14px">The prose between steps was written by an AI from the store's own text and audited against it: every sentence is tagged to the result it restates, and numbers are checked.</p>`;
+    ${t.coll ? "" : `<p class="note" style="margin-top:14px">The prose between steps was written by an AI from the store's own text and audited against it: every sentence is tagged to the result it restates, and numbers are checked.</p>`}`;
   reader.querySelectorAll("[data-step]").forEach(b => b.onclick = () => { trailStep = +b.dataset.step; showTrailStep(); });
+  const prog = reader.querySelector(".trailprog");
+  if (prog) prog.onclick = ev => { const r = prog.getBoundingClientRect(); trailStep = Math.max(0, Math.min(t.steps.length - 1, Math.floor((ev.clientX - r.left) / r.width * t.steps.length))); showTrailStep(); };
   document.getElementById("prev").onclick = () => { trailStep--; showTrailStep(); };
-  document.getElementById("next").onclick = () => { if (trailStep < t.steps.length - 1) { trailStep++; showTrailStep(); } else { const k = t.subject; trail = null; k ? (litLabel = "", lightCategory(k)) : clearLight(); } };
+  document.getElementById("next").onclick = () => { if (trailStep < t.steps.length - 1) { trailStep++; showTrailStep(); } else { const k = t.subject; trail = null; if (t.coll) { collSel.value = t.coll; collSel.dispatchEvent(new Event("change")); } else k ? (litLabel = "", lightCategory(k)) : clearLight(); } };
   document.getElementById("readfull").onclick = () => select(s.id, false);
   wireSections(reader);
   reader.scrollTop = 0; typeset(reader);
