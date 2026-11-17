@@ -3854,3 +3854,44 @@ DOnofrioRummukainenTranberg2014:
   doi: 10.1103/PhysRevLett.113.141602
   first_in: synthesis
   latex: 'M. D''Onofrio, K. Rummukainen and A. Tranberg, The sphaleron rate in the minimal Standard Model, Phys. Rev. Lett. 113 (2014), 141602; arXiv:1404.3565.'
+FregePW1979:
+  citation: G. Frege, Sources of knowledge of mathematics and the mathematical natural sciences (1924/25),
+    in Posthumous Writings, ed. H. Hermes, F. Kambartel and F. Kaulbach, trans. P. Long and R. White,
+    Blackwell, Oxford (1979).
+  doi: null
+  first_in: synthesis
+  latex: 'G.~Frege,
+
+    Sources of knowledge of mathematics and the mathematical natural sciences (1924/25),
+
+    in \emph{Posthumous Writings}, ed.\ H.~Hermes, F.~Kambartel and F.~Kaulbach, trans.\ P.~Long and R.~White, Blackwell, Oxford (1979).'
+HeathEuclid1926:
+  citation: T. L. Heath, The Thirteen Books of Euclid's Elements, 2nd edition, Cambridge University Press
+    (1926).
+  doi: null
+  first_in: synthesis
+  latex: 'T.~L.~Heath,
+
+    \emph{The Thirteen Books of Euclid''s Elements}, 2nd edition,
+
+    Cambridge University Press (1926).'
+ScottFleuriot2019:
+  citation: P. Scott and J. D. Fleuriot, Where are the natural numbers in Hilbert's Foundations of Geometry?,
+    arXiv:1911.07057 (2019).
+  doi: null
+  first_in: synthesis
+  latex: 'P.~Scott and J.~D.~Fleuriot,
+
+    Where are the natural numbers in Hilbert''s \emph{Foundations of Geometry}?,
+
+    arXiv:1911.07057 (2019).'
+Tarski1959:
+  citation: A. Tarski, What is elementary geometry?, in The Axiomatic Method, ed. L. Henkin, P. Suppes and
+    A. Tarski, North-Holland, Amsterdam (1959), 16--29.
+  doi: null
+  first_in: synthesis
+  latex: 'A.~Tarski,
+
+    What is elementary geometry?,
+
+    in \emph{The Axiomatic Method}, ed.\ L.~Henkin, P.~Suppes and A.~Tarski, North-Holland, Amsterdam (1959), 16--29.'
