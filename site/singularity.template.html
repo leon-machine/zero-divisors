@@ -391,7 +391,7 @@ const sec = $('#fall');
 const FALL = 700, SCENE = 160, TITLE = 70;
 const PARTS = [
   {n: 'I', k: 'fall', short: 'The fall', eyebrow: 'The Transport Papers · Part I · T4 to T6', h: 'Fall into a black hole', p: 'Press Next, or scroll, to fall. Drag to look around. Every pixel is a ray of light traced backwards around the hole, the way it would reach your eye.', scenes: []},
-  {n: 'II', k: 't2', short: 'Transport', eyebrow: 'Part II · T1, T5, T9', h: 'The Transport Principle', p: 'Where a calculation divides by zero, the papers do not stop. They move it to a larger space where it can go on, and prove that the smallest such space is unique.', scenes: ['move', 'twistor', 'switches']},
+  {n: 'II', k: 't2', short: 'Transport', eyebrow: 'Part II · T1, T5, T9', h: 'The Transport Principle', p: 'Where a calculation divides by zero, the papers do not stop. They move it to a larger space where it can go on, and prove that the smallest such space is unique.', scenes: ['move', 'twistor', 'where', 'switches']},
   {n: 'III', k: 't4', short: 'Information', eyebrow: 'Part III · T5, T7, T8', h: 'The Information Paradox', p: 'A black hole glows, shrinks and vanishes. So where did everything that fell in go?', scenes: ['paradox', 'info', 'fate', 'thermo', 'count', 'scramble']},
   {n: 'IV', k: 't5', short: 'The tower', eyebrow: 'Part IV · T3, T14', h: 'The Tower and the CAR Limit', p: 'Make the move again and again. Each floor holds one more switch, the algebra of a free fermion field waits at the top, and there turn out to be eight towers.', scenes: ['car', 'dark']},
   {n: 'V', k: 't6', short: 'Dark ratio', eyebrow: 'Part V · T14', h: 'The Dark Matter Ratio', p: 'Why the dark towers might hold 5.364 times as much matter as ours.', scenes: ['ratio']},
@@ -399,7 +399,7 @@ const PARTS = [
 ];
 const SCENES = [], PART_OF = {fall: 0}, TITLES = new Set();
 PARTS.forEach((pt, i) => { if (i) { SCENES.push(pt.k); TITLES.add(pt.k); PART_OF[pt.k] = i; } pt.scenes.forEach(k => { SCENES.push(k); PART_OF[k] = i; }); });
-const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 150, twistor: 210, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
+const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 190, twistor: 210, where: 170, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
 TITLES.forEach(k => LEN[k] = TITLE);
 const START = {fall: 0}; { let acc = FALL; SCENES.forEach(k => { START[k] = acc; acc += LEN[k] || SCENE; }); }
 const TOTAL = START.score + LEN.score + 100;
@@ -441,10 +441,12 @@ const FALLCAPS = [
   {hi: 0.235, lo: 0, t: 'In the papers’ description, the light cones fold flat onto a single line. The equations are about to divide by zero.', g: [['B'], 'T5 Prop 2.5, 2.7']},
 ];
 const SCAPS = {
-  move: [[0, 1.01, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction squaring to −1 and one squaring to +1. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4: one more direction of time and one more of space. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']]],
+  move: [[0, 0.6, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction squaring to −1 and one squaring to +1. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4: one more direction of time and one more of space. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']],
+         [0.6, 1.01, 'The new time is not a second clock: nothing moves along it. The two new directions are read as a pair. Their light-like combinations are an origin and a point at infinity, the two points the reciprocal swaps, and movement between them is a change of scale.', [['std'], 'conformal geometry', ['A'], 'T1 Thm 4.10']]],
   twistor: [[0, 0.3, 'The 2 + 4 space is not new. Roger Penrose used it in 1967 to describe rays of light, through its spinors: the conformal spinors (his twistors).', [['std'], 'Penrose 1967']],
          [0.3, 1.01, 'Up there the reciprocal is defined everywhere. The rule lifts every point of spacetime onto a light ray of the larger space and works with the rays instead. Written out, that lift is Penrose\u2019s founding equation of twistor theory, term for term: the classical Klein correspondence, reached from the other end.', [['A'], 'T1 Thm 4.10 \u00b7 \u00a78.1', ['AB'], 'T9 Thm 4.2']]],
-  switches: [[0, 0.5, 'No ordinary numbers can fill the gap. What the move leaves instead are switches, each on or off and never on twice: the algebra of the Pauli exclusion principle, and nobody put it in.', [['B'], 'T5 §4, Fact 5.4']],
+  where: [[0, 1.01, 'So is the larger space extra room that opens at the centre? No. Spacetime keeps its four dimensions, and every point is lifted the same way: the six directions are in use everywhere. Away from the centre they add nothing: the familiar description sits inside the larger one unchanged, and Einstein’s vacuum equations are a single statement there. Only at the singularity do the two part: the familiar one breaks down and leaves a gap, and the larger one carries on.', [['A'], 'T4 Thm 4.4 · T4 Cor 4.5', ['AB'], 'T6 Thm 4.5', ['B'], 'T5 Prop 5.2']]],
+  switches: [[0, 0.5, 'No ordinary number can fill that gap. What the move leaves there instead are switches, each on or off and never on twice: the algebra of the Pauli exclusion principle, and nobody put it in. Why only there? Up there every point is light-like and has its vacua, but nothing divides by them. Only at the singularity do the equations have to divide by a light-like direction.', [['A'], 'T4 Cor 4.5', ['B'], 'T5 §4, Fact 5.4', ['BC'], 'T16 Prop 4.1']],
          [0.5, 1.01, 'Where classical gravity breaks, fermionic structure appears. Click a quantum switch.', []]],
   paradox: [[0, 1.01, 'Back outside, far away. Hawking found that black holes glow, very faintly, and slowly evaporate, and the glow looks completely random. So when the hole is gone, where is everything that fell in? Quantum theory says information is never destroyed: that is the information paradox.', [['std'], 'Hawking 1975']]],
   fate: [[0, 0.3, 'And the matter itself? Falling in, its mass adds to the hole\u2019s, so the hole grows. The matter reaches the centre, where the switches are.', [['std'], ['C'], 'T14 Prop 6.5']],
@@ -664,21 +666,39 @@ function overlayFall(cx, cy, unit){
   ox.globalAlpha = 1;
   overlayKasner();
 }
-// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13)
+// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13).
+// Then, on a step of its own: the two new directions turn to face us as a plane, with its two light-like lines (the
+// origin and the point at infinity, which the reciprocal swaps, T1 Thm 4.10) and the movement between them, a change of scale
 function overlayMove(s){
   const S = Math.min(OW, OH), narrow = PORTRAIT(), sm = sm01, cx = OW / 2, {top, bot} = region('move');
   const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return; ox.globalAlpha = a;
-  const head = narrow ? 44 : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
+  const fs = Math.round(Math.min(S * 0.065, 56)), head = narrow ? Math.max(44, fs * 0.8 + 12) : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
   const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
-  const add = [[-0.62, -0.78, C.red, '+ time'], [0.66, -0.75, C.red, '+ space']];
-  base.forEach(([dx, dy, col, t]) => { ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke(); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); });
-  const g = sm((s - 0.01) / 0.5);
-  add.forEach(([dx, dy, col, t]) => { if (g <= 0) return; ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L * g, cy + dy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + dx * (L + 22), cy + dy * (L + 22), col, 'center'); });
-  const sig = g < 1 ? '1 + 3' : '2 + 4', fs = Math.round(Math.min(S * 0.065, 56));
+  const add = [[-0.62, -0.78, C.red, '+ time', 0, -1], [0.66, -0.75, C.red, '+ space', 1, 0]];
+  const g = sm((s - 0.01) / 0.36), m = sm((s - 0.6) / 0.14), dg = sm((s - 0.72) / 0.08), hy = sm((s - 0.78) / 0.08);
+  base.forEach(([dx, dy, col, t]) => { ox.globalAlpha = a * (1 - 0.85 * m); ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke();
+    if (m < 1) { ox.globalAlpha = a * (1 - m); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); } });
+  ox.globalAlpha = a;
+  // the plane's two light-like lines
+  if (dg > 0) { [[-1, 'origin'], [1, 'infinity']].forEach(([sg, t]) => { const ux = sg * Math.SQRT1_2, uy = -Math.SQRT1_2; ox.setLineDash([4, 4]); ox.strokeStyle = C.gold; ox.lineWidth = 1.4;
+      ox.globalAlpha = a * dg; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + ux * L * dg, cy + uy * L * dg); ox.stroke();
+      ox.globalAlpha = a * dg * 0.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx - ux * L * 0.7 * dg, cy - uy * L * 0.7 * dg); ox.stroke(); ox.setLineDash([]);
+      ox.globalAlpha = a * dg; texL(t, cx + ux * (L + 10), cy + uy * (L + 10), C.gold, narrow ? 14 : 16, sg < 0 ? 'right' : 'left'); }); ox.globalAlpha = a; }
+  // the two new directions; on the second step they turn to stand as the plane's two axes
+  add.forEach(([dx, dy, col, t, ex, ey]) => { if (g <= 0) return; let ux = dx + (ex - dx) * m, uy = dy + (ey - dy) * m; const n = Math.hypot(ux, uy); ux /= n; uy /= n;
+    if (m > 0) { ox.globalAlpha = a * 0.35 * m; ox.strokeStyle = col; ox.lineWidth = 1.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx - ux * L * 0.7, cy - uy * L * 0.7); ox.stroke(); ox.globalAlpha = a; }
+    ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + ux * L * g, cy + uy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + ux * (L + 22), cy + uy * (L + 22), col, 'center'); });
+  // movement between the two light-like lines: a change of scale
+  if (hy > 0) { const rho = L * 0.44, T = 0.85, P = t => [cx + rho * Math.sinh(t), cy - rho * Math.cosh(t)]; ox.globalAlpha = a * hy; ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.beginPath();
+    for (let i = 0; i <= 40; i++) { const [x, y] = P(-T + 2 * T * i / 40); i ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke();
+    [-1, 1].forEach(d => { const [x, y] = P(d * T), n = Math.hypot(Math.cosh(T), Math.sinh(T)), tx = d * Math.cosh(T) / n, ty = -Math.sinh(T) / n; arrowLine(x - tx * 2, y - ty * 2, x + tx * 7, y + ty * 7, C.gold, 1.6, 7); });
+    const z = narrow ? 10 : 12, ly = cy - rho * Math.cosh(T) - 14; ox.font = `${z}px "IBM Plex Mono", Consolas, monospace`; const w = ox.measureText('change of scale').width;
+    plate(cx - w / 2 - 5, ly - z * 0.8, w + 10, z * 1.6, 0.92); mono('change of scale', cx, ly, C.gold, 'center', z); ox.globalAlpha = a; }
+  const sig = g < 1 ? '1 + 3' : '2 + 4';
   ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; ox.fillStyle = C.text;
   if (narrow) { ox.textAlign = 'center'; ox.fillText(sig, cx, top + fs * 0.8); }
   else { ox.textAlign = 'right'; ox.fillText(sig, cx - L * 1.25, cy - L * 0.35); mono(g < 1 ? 'time + space' : 'one more of each', cx - L * 1.25, cy - L * 0.35 + 24, C.t3, 'right', 11); }
-  mono(g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
+  mono(m > 0.5 ? 'the two new directions, seen as a plane of their own' : g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
   ox.globalAlpha = 1;
 }
 // switches
@@ -988,6 +1008,79 @@ function overlayKasner(){
   ox.globalAlpha = 1;
 }
 
+// where: is the larger space extra room at the centre? No. Two drawings. The first, struck out: a bulb of extra room
+// opening at one point. The second: the same six directions carried at every point (T4 Thm 4.4); away from the centre
+// the familiar four sit inside them unchanged and each reads as the other (T4 Cor 4.5, T6 Thm 4.5); at the singularity
+// the four fold flat and the way back fails (T5 Prop 5.2), and a switch is forced exactly there (T4 Cor 4.5)
+const WH4 = [[0, -1, C.blue, -1], [0.94, 0.34, C.t2, 1], [-0.94, 0.34, C.t2, -1], [0.3, 0.75, C.t2, 1]], WH2 = [[-0.62, -0.78], [0.66, -0.75]];
+function whStar(x, y, r, grow, extra, fold, alpha){
+  WH4.forEach(([dx, dy, col, sg]) => { let ex = dx, ey = dy;
+    if (fold > 0) { ex = dx + (0.94 * sg - dx) * fold; ey = dy + (0.34 * sg - dy) * fold; const n = Math.hypot(ex, ey) || 1; ex /= n; ey /= n; }
+    ox.strokeStyle = fold > 0.5 ? C.red : col; ox.globalAlpha = alpha * (1 - 0.35 * fold); ox.lineWidth = 1.7; ox.beginPath(); ox.moveTo(x, y); ox.lineTo(x + ex * r * grow, y + ey * r * grow); ox.stroke(); });
+  if (extra > 0) WH2.forEach(([dx, dy]) => { ox.strokeStyle = C.red; ox.globalAlpha = alpha; ox.lineWidth = 2.2; ox.beginPath(); ox.moveTo(x, y); ox.lineTo(x + dx * r * extra, y + dy * r * extra); ox.stroke(); });
+  ox.globalAlpha = alpha; ox.fillStyle = C.text; ox.beginPath(); ox.arc(x, y, 2.2, 0, 2 * Math.PI); ox.fill();
+}
+function overlayWhere(s){
+  const narrow = PORTRAIT(), sm = sm01, {top, bot} = region('where');
+  const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return;
+  const W = Math.min(OW - (narrow ? 28 : 60), 1180), X0 = (OW - W) / 2, H = bot - top;
+  const Ah = narrow ? Math.min(130, H * 0.24) : H - 8, Bh = narrow ? H - Ah - 16 : H - 8, Bw = narrow ? W : W * 0.7, Bx = narrow ? X0 : X0 + W * 0.3;
+  // the second drawing's measure: five points along spacetime, the last of them the singularity
+  const N = 5, colL = narrow ? 0 : Math.min(190, Bw * 0.24), room = Bh - 18 - 46 - 30;
+  const r0 = Math.max(12, Math.min(46, (Bw - colL) / (N - 1) * 0.28, room / 5.4)), px0 = Bx + colL + (narrow ? r0 + 2 : 34), px1 = Bx + Bw - (narrow ? r0 + 4 : 50), dx = (px1 - px0) / (N - 1);
+  const r = Math.min(r0, dx * 0.3), z = narrow ? Math.max(1, Math.min(1.4, r / 30)) : Math.max(0.9, Math.min(1.4, r / 24)), gap = Math.max(30, Math.min(r * 2.6, room - 3.75 * r));
+  const used = 18 + 46 + 3.75 * r + gap + 30, slack = Math.max(0, Bh - used);
+  const A = narrow ? {x: X0, y: top + 4 + slack * 0.35, w: W, h: Ah} : {x: X0, y: top + 4, w: W * 0.24, h: Ah};
+  const B = {x: Bx, y: narrow ? A.y + A.h + 8 + Math.min(40, slack * 0.15) : top + 4, w: Bw, h: Bh};
+  const y0 = narrow ? B.y : B.y + slack / 2, yUp = y0 + 18 + 46 + r, yDn = yUp + r + gap + r, ym = (yUp + yDn) / 2;
+  const X = i => px0 + i * dx, xw = X(N - 1), fz = n => Math.round(n * z);
+  // ---- the first drawing: not this
+  const fa = sm(s / 0.05), bulb = sm((s - 0.03) / 0.08), strike = sm((s - 0.11) / 0.06), dimA = 1 - 0.25 * sm((s - 0.17) / 0.06);
+  { const rb = narrow ? Math.min(34, A.h * 0.27) : Math.min(46, A.w * 0.19, gap * 0.9), ya = narrow ? A.y + A.h * 0.58 : ym;
+    const xa0 = narrow ? A.x + W * 0.36 : A.x + 4, xa1 = narrow ? A.x + W - 10 : A.x + A.w - 4, bx = xa1 - rb - 2, pad = narrow ? 5 : rb * 0.5;
+    ox.globalAlpha = a * fa * dimA;
+    if (narrow) { mono('NOT THIS', A.x, A.y + 10, C.red, 'left', fz(11)); mono('extra room that', A.x, ya - fz(6), C.t2, 'left', fz(10)); mono('opens at the centre', A.x, ya + fz(8), C.t2, 'left', fz(10)); }
+    else { mono('NOT THIS', (xa0 + xa1) / 2, y0 + 8, C.red, 'center', fz(11)); mono('extra room that opens', (xa0 + xa1) / 2, ya + rb + pad + fz(22), C.t2, 'center', fz(11)); mono('at the centre', (xa0 + xa1) / 2, ya + rb + pad + fz(22) + fz(15), C.t2, 'center', fz(11)); }
+    ox.strokeStyle = C.blue; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(xa0, ya); ox.lineTo(bx - rb * bulb, ya); ox.stroke();
+    if (bulb > 0) { ox.fillStyle = 'rgba(224,122,85,0.16)'; ox.strokeStyle = C.red; ox.lineWidth = 1.6; ox.beginPath(); ox.arc(bx, ya, rb * bulb, 0, 2 * Math.PI); ox.fill(); ox.stroke(); }
+    mono('four', xa0 + (bx - rb - xa0) * 0.3, ya - 13, C.blue, 'center', narrow ? fz(10) : fz(11)); if (bulb >= 1) mono('six', bx, ya, C.red, 'center', narrow ? fz(11) : fz(12));
+    if (strike > 0) { const sx0 = xa0 + 6, sy0 = ya + rb + pad, sx1 = xa1, sy1 = ya - rb - pad;
+      ox.globalAlpha = a * fa; ox.strokeStyle = C.red; ox.lineWidth = 3; ox.lineCap = 'round'; ox.beginPath(); ox.moveTo(sx0, sy0); ox.lineTo(sx0 + (sx1 - sx0) * strike, sy0 + (sy1 - sy0) * strike); ox.stroke(); ox.lineCap = 'butt'; } }
+  // ---- the second drawing: this
+  const fb = sm((s - 0.19) / 0.05); if (fb <= 0) { ox.globalAlpha = 1; return; }
+  const base = sm((s - 0.2) / 0.1), six = sm((s - 0.31) / 0.1), arr = sm((s - 0.42) / 0.08), fold = sm((s - 0.51) / 0.09), cut = sm((s - 0.57) / 0.05), pair = sm((s - 0.61) / 0.05);
+  ox.globalAlpha = a * fb; mono('THIS: SIX DIRECTIONS AT EVERY POINT', narrow ? B.x : px0 - r, y0 + 8, C.text, 'left', fz(11));
+  // the column of the singularity
+  ox.globalAlpha = a * fb * (0.5 + 0.5 * fold); ox.fillStyle = 'rgba(224,122,85,0.10)'; ox.fillRect(xw - r - 12, yUp - r - 40 * z, 2 * r + 24, yDn + r + 8 - (yUp - r - 40 * z));
+  // spacetime, and its four directions at each point
+  ox.globalAlpha = a * fb; ox.strokeStyle = 'rgba(147,180,218,0.6)'; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(px0 - r, yDn); ox.lineTo(px0 - r + (xw - px0 + r) * base, yDn); ox.stroke();
+  for (let i = 0; i < N; i++) { const g = sm((base - i / N) * N); if (g <= 0) continue; whStar(X(i), yDn, r, g, 0, i === N - 1 ? fold : 0, a * fb); }
+  // the six, the same above every point, the centre included
+  if (six > 0) for (let i = 0; i < N; i++) whStar(X(i), yUp, r, six, sm((six - 0.45) / 0.55), 0, a * fb);
+  // each reads as the other, except at the centre
+  const am = narrow ? 4 : 7, ay1 = yUp + r * 0.8 + am, ay2 = yDn - r - am;
+  if (arr > 0) for (let i = 0; i < N - 1; i++) { ox.globalAlpha = a * fb * arr; const h = (ay2 - ay1) / 2 * arr; const hd = Math.min(6 * z, h * 0.42); arrowLine(X(i), ym, X(i), ym - h, C.gold, 1.4, hd); arrowLine(X(i), ym, X(i), ym + h, C.gold, 1.4, hd); }
+  if (cut > 0) { ox.globalAlpha = a * fb * cut; const k = 6 * z; ox.setLineDash([3, 4]); ox.strokeStyle = C.red; ox.lineWidth = 1.4; ox.beginPath(); ox.moveTo(xw, ay1); ox.lineTo(xw, yDn - r * 0.4 - 6); ox.stroke(); ox.setLineDash([]);
+    ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(xw - k, ym - k); ox.lineTo(xw + k, ym + k); ox.moveTo(xw + k, ym - k); ox.lineTo(xw - k, ym + k); ox.stroke();
+    mono('no way back', xw - k - 7, ym, C.red, 'right', narrow ? fz(10) : fz(11)); }
+  // what is forced only at the centre: a switch, drawn as the next slide draws one that is on. (The switch algebra is
+  // at every point up there, T16 Prop 4.1; only here must the equations divide by a light-like direction, T4 Cor 4.5)
+  if (pair > 0) { ox.globalAlpha = a * fb * pair; const yp = yUp - r - 30 * z, q = 5.5 * z, lx = xw + r + 10;
+    ox.lineWidth = 1.6; ox.strokeStyle = C.green; ox.fillStyle = C.green; ox.beginPath(); ox.arc(lx - q - 1, yp, q, 0, 2 * Math.PI); ox.fill(); ox.stroke();
+    mono('only here: a switch is forced', lx - 2 * q - 7 * z, yp, C.green, 'right', narrow ? fz(10) : fz(11)); }
+  // the labels
+  ox.globalAlpha = a * fb * base;
+  if (narrow) mono('1 + 3 · the familiar description', B.x, yDn + r + 20, C.blue, 'left', fz(10));
+  else { texL('1 + 3', B.x + colL - 6, yDn + 2, C.text, fz(22), 'right'); mono('the familiar description', B.x + colL - 6, yDn + fz(19), C.t2, 'right', fz(10)); mono('far away', X(0), yDn + r + 20, C.t3, 'center', fz(10)); }
+  ox.globalAlpha = a * fb * fold; mono('the singularity', xw + r + 12, yDn + r + 20, C.red, 'right', narrow ? fz(10) : fz(11));
+  ox.globalAlpha = a * fb * six;
+  if (narrow) mono('2 + 4 · the larger description', B.x, yUp - r - 14, C.red, 'left', fz(10));
+  else { texL('2 + 4', B.x + colL - 6, yUp + 2, C.text, fz(22), 'right'); mono('the larger description', B.x + colL - 6, yUp + fz(19), C.t2, 'right', fz(10)); }
+  ox.globalAlpha = a * fb * arr;
+  if (narrow) mono('same content', (X(0) + X(1)) / 2, ym, C.gold, 'center', fz(10));
+  else mono('same content, both ways', B.x + colL - 6, ym, C.gold, 'right', fz(10));
+  ox.globalAlpha = 1;
+}
 // the move lands on the conformal completion; its lift is the incidence relation of conformal spinors (T9 Thm 4.2)
 // three steps, each one continuous movement: the cone of 2 + 4 draws itself; points of spacetime rise one after another
 // to their light rays; the two equations write themselves out, term by term
@@ -1211,7 +1304,7 @@ function overlayFate(s, hx, hy, rs){
 /* ---------- the loop ---------- */
 let lastSig = '', lastFilt = '', dirty = true, dirtyOv = true, inView = true, frames = [], lastT = performance.now();
 new IntersectionObserver(es => { inView = es[0].isIntersecting; }).observe(sec);
-const CENTRE = new Set(['sing', 'move', 'twistor', 'switches', 't2']), CLEAR = new Set(['paradox', 'fate', 'thermo', 'count', 'scramble', 'echo']);
+const CENTRE = new Set(['sing', 'move', 'twistor', 'where', 'switches', 't2']), CLEAR = new Set(['paradox', 'fate', 'thermo', 'count', 'scramble', 'echo']);
 const OUTSIDE = new Set(SCENES.filter(k => !CENTRE.has(k)));
 // the predictions as the Lab's record holds them: [status, claim, paper, latest data]
 const CLAIMS = LAB.preds.map(p => [p.st, p.title, p.paper, p.note]);
@@ -1289,6 +1382,7 @@ function loop(now){
     else if (mode === 'move') overlayMove(ph.s);
     else if (mode === 'switches') overlaySwitches(ph.s, cx, OH * 0.44, now);
     else if (mode === 'twistor') overlayTwistor(ph.s);
+    else if (mode === 'where') overlayWhere(ph.s);
     else if (OUTSIDE.has(mode) && mode !== 'ledger' && !TITLES.has(mode)) { const [hx, hy, rs] = holeOnScreen(cx, cyc, unit);
       if (mode === 'thermo') overlayThermo(ph.s, hx, hy, rs, now); else if (mode === 'info') overlayCorr(ph.s, now); else if (mode === 'paradox') overlayParadox(ph.s, hx, hy, rs, now); else if (mode === 'fate') overlayFate(ph.s, hx, hy, rs);
       else if (mode === 'scramble') overlayScramble(ph.s, hx, hy, rs); else if (mode === 'car') overlayCar(ph.s); else if (mode === 'arrow') overlayArrow(ph.s);
