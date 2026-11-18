@@ -1,0 +1,36 @@
+functions:
+  check_least_module_and_symmetric_generators:
+    kind: sampled
+    clauses:
+    - 'setting: the ideal Cl(3,0)(1+e3)/2 has dimension four, e1, e2, e3 act by symmetric anticommuting maps of square one, g(x)^2 = Q(x), signature (2,2) for x != 0 and the zero form at x = 0'
+    omits: 'seven sample vectors for the signature; that the ideal is a module of least dimension is the stored classification'
+  check_hemisphere_frames_of_the_positive_eigenbundle:
+    kind: sampled
+    clauses:
+    - '(1) the two frames lie in the +1 eigenspace, are orthogonal with squares (1+x3)/4 and (1-x3)/4, and the eigenspace has dimension two'
+    omits: 'ten rational points of the sphere; the identity for every x is the proof''s'
+  check_clutching_function_is_one_full_turn:
+    kind: sampled
+    clauses:
+    - '(1) on the equator the south frame is the north frame turned by the angle of the point, gamma = [[c, s], [-s, c]]'
+    omits: 'twelve rational points of the equator in all four quadrants; the identity for every angle is the proof''s (pi x = pi on the sphere)'
+  check_rotor_lift_of_the_full_turn_ends_at_minus_one:
+    kind: sampled
+    clauses:
+    - '(2) the rotor cos(a/2) + sin(a/2) f1f2 acts on the frame as the clutching function and fixes three added directions; it runs from 1 to -1; for k = 1, 2, 3 planes the lift ends at (-1)^k'
+    omits: 'thirteen points of the turn; N = 3 added directions only; the rotor is tested in the algebra of the stabilised fibre, not on the module frames, the link being clauses (1) and (2) of the proof; the lifting clause (L) and the step from a trivialisation to a contractible loop, clause (3), are the proof''s and are not checked'
+  check_two_copies_carry_a_fourth_generator:
+    kind: sampled
+    clauses:
+    - '(5) T = Cl(4,0)(1+e1e2e3e4)/2 has dimension eight, is S p4 + S e1 p4 with the product halved and the images orthogonal, e1..e4 act by symmetric anticommuting maps of square one, (x + b e4)^2 = Q(x) + b^2 with signature (4,4)'
+    omits: 'seven vectors and four couplings for the signature; the bump and the continuity of the completion are the proof''s'
+  check_no_fourth_generator_on_the_least_module:
+    kind: complete
+    clauses:
+    - '(6) on S the symmetric maps anticommuting with e1, e2, e3 are zero (exact linear system of rank sixteen); the anticommuting maps form a plane'
+    omits: 'this excludes only repairs of the form x + b E; that no repair of any form exists on S is clause (4) with W0 = 0, the proof''s'
+  check_elements_commuting_or_anticommuting_with_every_vector:
+    kind: sampled
+    clauses:
+    - '(L) the two algebraic steps that identify the rotors with the closed set of even R with R R~ = 1 preserving vectors: an even element commuting with every vector is a scalar, an odd element anticommuting with every vector is zero; and the plane rotor of (2) is a product of two unit vectors'
+    omits: 'n = 1 to 6 only (the statement for every n is the stored centre and the kernel step of the stored double cover); compactness and the lifting of paths and squares are the proof''s'

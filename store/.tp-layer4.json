@@ -2433,7 +2433,7 @@
 ""
 ]
 ],
-"key": "99337a562b4d6776",
+"key": "b6786fb0730cc770",
 "result": "pass",
 "runs": [
 {
@@ -2942,7 +2942,7 @@
 "dark-matter.mirror-share-assembled": {
 "failed": false,
 "findings": [],
-"key": "8245a085fe5fc3e4",
+"key": "a00ebdbfb6f8a5fd",
 "result": "pass",
 "runs": [
 {
@@ -2978,7 +2978,7 @@
 ""
 ]
 ],
-"key": "ae6745a30fdf0612",
+"key": "45029c9baba00931",
 "result": "pass",
 "runs": [
 {
@@ -3194,7 +3194,7 @@
 ""
 ]
 ],
-"key": "38a15bd6aa57e928",
+"key": "1b1ee8ee422d5025",
 "result": "pass",
 "runs": [
 {
@@ -3350,7 +3350,7 @@
 ""
 ]
 ],
-"key": "1a6e2c45b335af8b",
+"key": "ad5abce5d01e8c8c",
 "result": "pass",
 "runs": [
 {
@@ -3465,7 +3465,7 @@
 ""
 ]
 ],
-"key": "e4780abf2f73c3ff",
+"key": "22f336025a83bd7b",
 "result": "pass",
 "runs": [
 {
@@ -3597,7 +3597,7 @@
 ""
 ]
 ],
-"key": "a67795f7e28bfac9",
+"key": "840ceee02af1ba3c",
 "result": "pass",
 "runs": [
 {
@@ -3617,6 +3617,15 @@
 "ok": true,
 "quantities": [],
 "touched": []
+},
+{
+"derivation": null,
+"func": "check_mean_energy_per_event",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+]
 },
 {
 "derivation": null,
@@ -3699,7 +3708,7 @@
 ""
 ]
 ],
-"key": "44292a43616d7859",
+"key": "2a4e5f3b802bd8fa",
 "result": "pass",
 "runs": [
 {
@@ -4670,7 +4679,7 @@
 "dark-tower-matter.mirrors-composition": {
 "failed": false,
 "findings": [],
-"key": "f246e56196113f0c",
+"key": "11cfb6da6c109d2d",
 "result": "pass",
 "runs": [
 {
@@ -4694,7 +4703,7 @@
 ""
 ]
 ],
-"key": "fad6d65be0f9303b",
+"key": "f73abab29b333c48",
 "result": "pass",
 "runs": [
 {
@@ -7768,7 +7777,7 @@
 "hawking.helicity-lift-joints-itemised": {
 "failed": false,
 "findings": [],
-"key": "8eef410851bf435c",
+"key": "13dce9b6d20f10d1",
 "result": "pass",
 "runs": [
 {
@@ -8148,7 +8157,7 @@
 "hawking.joint-j3-s-wave-reduction": {
 "failed": false,
 "findings": [],
-"key": "05569651de3dba85",
+"key": "4dcef09f88a1897f",
 "result": "none",
 "runs": []
 },
@@ -8398,7 +8407,7 @@
 "interior.duality-monodromy-fibration-over-ring": {
 "failed": false,
 "findings": [],
-"key": "e46651b6a7cc2fbd",
+"key": "f06936d7fcc17d73",
 "result": "none",
 "runs": []
 },
@@ -19667,7 +19676,7 @@
 "pred.gravity-entangles-standard-phase": {
 "failed": false,
 "findings": [],
-"key": "2b7924445cfb30b5",
+"key": "3b6b0c7a962a1a5c",
 "result": "none",
 "runs": []
 },
@@ -19688,7 +19697,7 @@
 "pred.no-dark-radiation": {
 "failed": false,
 "findings": [],
-"key": "1021efae2955cfdc",
+"key": "e81f0c8d190c13b6",
 "result": "none",
 "runs": []
 },
@@ -19702,7 +19711,7 @@
 "pred.no-indirect-dark-signals": {
 "failed": false,
 "findings": [],
-"key": "c3f4fa2f595870b4",
+"key": "df46bce9ee256ac2",
 "result": "none",
 "runs": []
 },
@@ -22171,7 +22180,7 @@
 "scrambling.return-delay-scrambling-log-recovered": {
 "failed": false,
 "findings": [],
-"key": "82646e7f5987f622",
+"key": "30fe4dbc11dbf4d8",
 "result": "pass",
 "runs": [
 {
@@ -22272,9 +22281,19 @@
 ""
 ]
 ],
-"key": "6cf3a0dc8257a1dd",
+"key": "6ab96d85db5b5676",
 "result": "pass",
 "runs": [
+{
+"derivation": null,
+"func": "check_affine_cell_count_is_log_n",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.affine-cell-boost-spreads-without-scrambling",
+"synthesis.boost-evolution-on-generators-is-one-unitary-group"
+]
+},
 {
 "derivation": null,
 "func": "check_boost_flow_scales_ladders_exponentially",
@@ -23866,7 +23885,7 @@
 "sheaf.wall-class": {
 "failed": false,
 "findings": [],
-"key": "7ca117a36f86beda",
+"key": "5882c60c03b56175",
 "result": "none",
 "runs": []
 },
@@ -24191,7 +24210,7 @@
 "simulations.halo-shapes": {
 "failed": false,
 "findings": [],
-"key": "2cbf0ca79efd5fb1",
+"key": "e16d651225e05a08",
 "result": "none",
 "runs": []
 },
@@ -24226,7 +24245,7 @@
 "simulations.imported-mirror": {
 "failed": false,
 "findings": [],
-"key": "565586adc583a562",
+"key": "86a83abcc46eb530",
 "result": "pass",
 "runs": [
 {
@@ -24310,7 +24329,7 @@
 "simulations.merger": {
 "failed": false,
 "findings": [],
-"key": "57620b1695318cd8",
+"key": "95944efeb84adb51",
 "result": "none",
 "runs": []
 },
@@ -24338,7 +24357,7 @@
 "simulations.s3-mirror-cluster": {
 "failed": false,
 "findings": [],
-"key": "ea2828a75fb5b9d3",
+"key": "ffdd69a9221d6af0",
 "result": "none",
 "runs": []
 },
@@ -31661,7 +31680,7 @@
 "synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them": {
 "failed": false,
 "findings": [],
-"key": "b37d511e59bd65e8",
+"key": "4b0120085650708e",
 "result": "pass",
 "runs": [
 {
@@ -31707,10 +31726,99 @@
 }
 ]
 },
+"synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear": {
+"failed": false,
+"findings": [],
+"key": "2bf2fa8dbb4b084d",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_two_modes_are_the_rational_matrices_of_size_four_and_the_adjoint_is_the_transpose",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_frames_are_cosets_of_the_klein_groups_of_half_turns",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_octahedral_rays_span_a_copy_of_the_three_by_three_matrices",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_certificate_puts_the_rotor_two_plus_b1_in_the_octahedral_span",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_integer_rotors_of_norm_a_power_of_five_factor_into_six_rotors_and_a_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_conjugate_of_a_power_by_a_half_turn_is_an_integer_rotor_of_norm_a_power_of_five",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_half_turn_relation_forces_the_central_factor_to_be_one",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.quaternions"
+]
+},
+{
+"derivation": null,
+"func": "check_linear_functionals_give_the_weights_and_non_negative_weights_are_states",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.signed-directions-and-the-integer-clifford-algebra",
+"tower.ladder-pairs-satisfy-car-vectors"
+]
+},
+{
+"derivation": null,
+"func": "check_atoms_of_rational_unit_vectors_admit_an_additive_weight_that_is_not_linear",
+"ok": true,
+"quantities": [],
+"touched": []
+}
+]
+},
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
-"key": "c49bfb3156b6fa4d",
+"key": "0d2b1dc15b402793",
 "result": "pass",
 "runs": [
 {
@@ -31830,7 +31938,7 @@
 "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
 "failed": false,
 "findings": [],
-"key": "8c3f1776cb0a5e1c",
+"key": "72fd31727c35dab2",
 "result": "pass",
 "runs": [
 {
@@ -33558,7 +33666,7 @@
 "synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records": {
 "failed": false,
 "findings": [],
-"key": "266364db447c53dc",
+"key": "e02fc26834163592",
 "result": "pass",
 "runs": [
 {
@@ -34058,7 +34166,7 @@
 "synthesis.cold-mirror-needs-non-equilibrium-descent": {
 "failed": false,
 "findings": [],
-"key": "e4ee229df7998f2a",
+"key": "141dce6525e8f676",
 "result": "pass",
 "runs": [
 {
@@ -34414,7 +34522,7 @@
 "synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling": {
 "failed": false,
 "findings": [],
-"key": "1c9c93da125b2442",
+"key": "9321282222b9e0cb",
 "result": "pass",
 "runs": [
 {
@@ -34842,7 +34950,7 @@
 "synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio": {
 "failed": false,
 "findings": [],
-"key": "b75e965df7f0523c",
+"key": "82e91733a7ba87aa",
 "result": "pass",
 "runs": [
 {
@@ -35671,7 +35779,7 @@
 "synthesis.de-sitter-field-fixes-the-observer-tube-point": {
 "failed": false,
 "findings": [],
-"key": "b1fc29e3e51cf8c1",
+"key": "af4865793f0a9ebd",
 "result": "pass",
 "runs": [
 {
@@ -36517,6 +36625,44 @@
 }
 ]
 },
+"synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line": {
+"failed": false,
+"findings": [],
+"key": "74275b9f43aa31ab",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_twisted_wall_and_its_eigenbundles",
+"ok": true,
+"quantities": [],
+"touched": [
+"sheaf.imported-real-line-bundles",
+"synthesis.wall-class-one-rung-obstruction"
+]
+},
+{
+"derivation": null,
+"func": "check_two_rung_completion_moves_the_twist_into_the_far_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump",
+"synthesis.wall-rung-count-is-height-of-dying-line-class"
+]
+},
+{
+"derivation": null,
+"func": "check_transfer_bookkeeping_for_k_rungs",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-whitney-product-formula-and-projective-space",
+"synthesis.wall-rung-count-is-height-of-dying-line-class"
+]
+}
+]
+},
 "synthesis.einstein-condition-is-infinity-vacuum-incidence": {
 "failed": false,
 "findings": [],
@@ -37049,6 +37195,60 @@
 }
 ]
 },
+"synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations": {
+"failed": false,
+"findings": [],
+"key": "fea11c36a455d956",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_even_parity_closed_forms_identically_in_radius_and_angle",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_odd_parity_closed_forms_identically_in_radius_and_angle",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature",
+"synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional"
+]
+},
+{
+"derivation": null,
+"func": "check_sampled_controls_other_masses_and_wrong_coefficients",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature"
+]
+},
+{
+"derivation": null,
+"func": "check_reconstructed_field_of_a_zerilli_solution_is_a_vacuum_solution",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional"
+]
+},
+{
+"derivation": null,
+"func": "check_oscillating_channel_field_is_the_reconstruction_of_its_master_function",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional"
+]
+}
+]
+},
 "synthesis.even-slots-need-a-spectator-generator": {
 "failed": false,
 "findings": [],
@@ -37436,7 +37636,7 @@
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
-"key": "48ba83965347afe0",
+"key": "bdbe3d12e6919066",
 "result": "pass",
 "runs": [
 {
@@ -38024,6 +38224,79 @@
 }
 ]
 },
+"synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints": {
+"failed": false,
+"findings": [],
+"key": "fc7ec75dd130fefa",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_kernel_at_null_momentum_is_displacements_plus_two_transverse_trace_free_maps",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+},
+{
+"derivation": null,
+"func": "check_image_at_null_momentum_is_the_sources_without_transverse_trace_free_part",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+},
+{
+"derivation": null,
+"func": "check_pole_at_the_null_cone_is_in_the_transverse_trace_free_part",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+]
+},
+{
+"derivation": null,
+"func": "check_constraint_components_carry_no_second_power_of_the_frequency",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+},
+{
+"derivation": null,
+"func": "check_free_directions_are_exchanged_by_the_pseudoscalar",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.fock-space-maxwell-modes"
+]
+},
+{
+"derivation": null,
+"func": "check_static_coupling_does_not_separate_the_channels_and_pair_production_does",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+]
+},
+{
+"derivation": null,
+"func": "check_burst_ratio_under_the_options_for_the_gravitational_term",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.dimmed-burst-time-rescaled-copy"
+]
+}
+]
+},
 "synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst": {
 "failed": false,
 "findings": [],
@@ -38061,6 +38334,55 @@
 "dark-matter.parallel-boundary-mode-spaces-one-wall",
 "hawking.greybody-inheritance-under-interface-premise",
 "synthesis.dimmed-burst-time-rescaled-copy"
+]
+}
+]
+},
+"synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial": {
+"failed": false,
+"findings": [],
+"key": "d5576b6c66346f92",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_rotation_homotopy_joins_f_plus_f_inverse_to_the_identity",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_two_copies_of_the_plane_family_complete_with_a_fixed_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump"
+]
+},
+{
+"derivation": null,
+"func": "check_winding_two_family_needs_one_added_direction",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_one_copy_has_no_frame",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump"
+]
+},
+{
+"derivation": null,
+"func": "check_double_lift_of_the_winding_two_loop",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.spin-double-cover"
 ]
 }
 ]
@@ -39356,7 +39678,7 @@
 "synthesis.gravitational-pair-production-from-the-operator-source-at-first-order": {
 "failed": false,
 "findings": [],
-"key": "87d91b469d9e542b",
+"key": "12af8462d9ecec14",
 "result": "pass",
 "runs": [
 {
@@ -39773,6 +40095,56 @@
 }
 ]
 },
+"synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath": {
+"failed": false,
+"findings": [],
+"key": "4547cc3c79eba163",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_scalar_channel_weight_at_unequal_couplings",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+]
+},
+{
+"derivation": null,
+"func": "check_stored_readings_move_no_stated_figure",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt"
+]
+},
+{
+"derivation": null,
+"func": "check_tilt_window_on_the_doublets_uses_up_the_margin",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.seeding-remainder-excludes-perturbative-pati-salam",
+"synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point"
+]
+},
+{
+"derivation": null,
+"func": "check_chain_bath_enters_coefficient_and_threshold_and_raises_the_margins",
+"ok": true,
+"quantities": [],
+"touched": [
+"standard-model.chain",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.seeding-remainder-excludes-perturbative-pati-salam",
+"synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off"
+]
+}
+]
+},
 "synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins": {
 "failed": false,
 "findings": [],
@@ -40039,7 +40411,7 @@
 "synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional": {
 "failed": false,
 "findings": [],
-"key": "ff1bae4803883c00",
+"key": "505178692b083b95",
 "result": "pass",
 "runs": [
 {
@@ -40997,7 +41369,7 @@
 "synthesis.imported-whitney-product-formula-and-projective-space": {
 "failed": false,
 "findings": [],
-"key": "38ea5646e9495f43",
+"key": "82afa58e33876aa2",
 "result": "none",
 "runs": []
 },
@@ -41067,7 +41439,7 @@
 "synthesis.indifference-is-curie-plus-single-valuedness": {
 "failed": false,
 "findings": [],
-"key": "25134e2f153e75af",
+"key": "df11bacad6e70b7c",
 "result": "pass",
 "runs": [
 {
@@ -41486,7 +41858,7 @@
 "synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
 "failed": false,
 "findings": [],
-"key": "e64432d67f6a2f64",
+"key": "bd03274abf56eef2",
 "result": "pass",
 "runs": [
 {
@@ -43150,7 +43522,7 @@
 "synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
 "failed": false,
 "findings": [],
-"key": "77a7e3da4c33eb99",
+"key": "3a0f9622f7a346be",
 "result": "pass",
 "runs": [
 {
@@ -44441,7 +44813,7 @@
 "synthesis.mirror-asymmetry-route-one": {
 "failed": false,
 "findings": [],
-"key": "c4cdc66233851799",
+"key": "8fee242c00d7160a",
 "result": "pass",
 "runs": [
 {
@@ -44487,7 +44859,7 @@
 "synthesis.mirror-temperature-measures-deposit-under-r": {
 "failed": false,
 "findings": [],
-"key": "b060146bd32f1b47",
+"key": "29caa3cd9ccf9353",
 "result": "pass",
 "runs": [
 {
@@ -44892,7 +45264,7 @@
 "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
 "failed": false,
 "findings": [],
-"key": "8a66b8184d363f40",
+"key": "57ea5588a44730ee",
 "result": "pass",
 "runs": [
 {
@@ -46462,7 +46834,7 @@
 "synthesis.pati-salam-monopoles-bound-descent-history": {
 "failed": false,
 "findings": [],
-"key": "6915f92e8d74d652",
+"key": "fe23d1d6b11d1e64",
 "result": "pass",
 "runs": [
 {
@@ -46510,6 +46882,50 @@
 "quantities": [],
 "touched": [
 "synthesis.seeding-remainder-excludes-perturbative-pati-salam"
+]
+}
+]
+},
+"synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals": {
+"failed": false,
+"findings": [],
+"key": "0a944220ef5a9990",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_deficit_of_a_pure_value_is_one_or_at_least_seven",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records"
+]
+},
+{
+"derivation": null,
+"func": "check_pell_denominators_grow_by_less_than_the_square_root_of_thirty_four",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records"
+]
+},
+{
+"derivation": null,
+"func": "check_running_maxima_of_pure_values_are_the_pell_values",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records"
+]
+},
+{
+"derivation": null,
+"func": "check_first_pell_value_is_the_value_of_the_even_state",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records"
 ]
 }
 ]
@@ -46786,6 +47202,75 @@
 "hawking.imported-algebra-boundary-modes-car-algebra",
 "hawking.modular-structure-completed-pair",
 "singularity.modular-theory-matrix-factor-proved-outright"
+]
+}
+]
+},
+"synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two": {
+"failed": false,
+"findings": [],
+"key": "33d7177b2ec5c329",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_least_module_and_symmetric_generators",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.periodicity"
+]
+},
+{
+"derivation": null,
+"func": "check_hemisphere_frames_of_the_positive_eigenbundle",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_clutching_function_is_one_full_turn",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_rotor_lift_of_the_full_turn_ends_at_minus_one",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.spin-double-cover"
+]
+},
+{
+"derivation": null,
+"func": "check_two_copies_carry_a_fourth_generator",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.periodicity",
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump"
+]
+},
+{
+"derivation": null,
+"func": "check_no_fourth_generator_on_the_least_module",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump"
+]
+},
+{
+"derivation": null,
+"func": "check_elements_commuting_or_anticommuting_with_every_vector",
+"ok": true,
+"quantities": [],
+"touched": [
+"primer.centre",
+"std-algebra.spin-double-cover"
 ]
 }
 ]
@@ -48446,6 +48931,53 @@
 }
 ]
 },
+"synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight": {
+"failed": false,
+"findings": [],
+"key": "4dae1e6cf1b9b162",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_conserved_sources_split_and_rotation_invariants_are_one_line",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+},
+{
+"derivation": null,
+"func": "check_pair_sources_have_rotation_weights_zero_one_and_two",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.imported-maxwell-stress-spacetime-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_channel_weights_follow_from_norms_and_traces",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+]
+},
+{
+"derivation": null,
+"func": "check_scalar_curvature_term_changes_only_the_trace_channel",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order",
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+}
+]
+},
 "synthesis.rule-2-fusing-plane-lorentzian": {
 "failed": false,
 "findings": [],
@@ -49363,7 +49895,7 @@
 "synthesis.seeding-remainder-excludes-perturbative-pati-salam": {
 "failed": false,
 "findings": [],
-"key": "059527a919ef9401",
+"key": "35018e305088a918",
 "result": "pass",
 "runs": [
 {
@@ -51141,7 +51673,7 @@
 "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": {
 "failed": false,
 "findings": [],
-"key": "ef88938782ff7d5a",
+"key": "c866e876505eaa01",
 "result": "pass",
 "runs": [
 {
@@ -51443,7 +51975,7 @@
 "synthesis.tower-charge-sector-label-temperature-not": {
 "failed": false,
 "findings": [],
-"key": "61f88c974ee35984",
+"key": "5f9872ae8dcac551",
 "result": "pass",
 "runs": [
 {
@@ -51993,9 +52525,76 @@
 "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries": {
 "failed": false,
 "findings": [],
-"key": "57e75e1ddc444f22",
+"key": "772a7724606d7ff4",
 "result": "none",
 "runs": []
+},
+"synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent": {
+"failed": false,
+"findings": [],
+"key": "dc79b9f0b9e66967",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_centraliser_of_the_boost_is_the_boost_and_the_transverse_bivectors",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.wick-rotated-boost-selects-observer-tube-point"
+]
+},
+{
+"derivation": null,
+"func": "check_stabiliser_of_a_timelike_vector_is_a_compact_so3_with_one_fixed_boost_orbit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.de-sitter-field-fixes-the-observer-tube-point",
+"synthesis.wick-rotated-boost-selects-observer-tube-point"
+]
+},
+{
+"derivation": null,
+"func": "check_tube_point_is_fixed_exactly_when_its_observer_is",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.wick-rotated-boost-selects-observer-tube-point"
+]
+},
+{
+"derivation": null,
+"func": "check_static_chart_of_the_wedge_and_the_fixed_points_of_its_rotations",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.de-sitter-field-fixes-the-observer-tube-point"
+]
+},
+{
+"derivation": null,
+"func": "check_static_lapse_candidates_on_schwarzschild_and_schwarzschild_de_sitter",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature",
+"synthesis.de-sitter-field-fixes-the-observer-tube-point",
+"synthesis.imported-gtg-dictionary"
+]
+},
+{
+"derivation": null,
+"func": "check_twisted_gauge_selects_the_observers_on_the_rotation_axis",
+"ok": true,
+"quantities": [],
+"touched": [
+"pairing.imported-schwarzschild-connection-curvature",
+"synthesis.de-sitter-field-fixes-the-observer-tube-point",
+"synthesis.wick-rotated-boost-selects-observer-tube-point"
+]
+}
+]
 },
 "synthesis.twisted-wall-induction-conserves-dying-line-class": {
 "failed": false,
@@ -52130,6 +52729,69 @@
 "touched": [
 "correspondence.incidence-relation-chart",
 "one-relation.two-capacities-three-consequences"
+]
+}
+]
+},
+"synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes": {
+"failed": false,
+"findings": [],
+"key": "4c66c0120b9470b9",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_bare_recombiner_breaks_the_constraint_and_the_string_dressed_one_keeps_it",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_string_dressed_detection_commutes_with_the_field_off_the_string",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.no-canonical-commutation-relations-tower"
+]
+},
+{
+"derivation": null,
+"func": "check_constrained_part_alone_fails_and_the_transverse_part_cancels_it",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling",
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
+]
+},
+{
+"derivation": null,
+"func": "check_string_shaped_slaved_field_keeps_the_constraint_and_is_not_static",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
+]
+},
+{
+"derivation": null,
+"func": "check_in_one_space_dimension_the_constrained_part_is_the_string",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
+]
+},
+{
+"derivation": null,
+"func": "check_dynamics_string_dressed_detection_commutes_at_spacelike_events_and_the_slaved_field_does_not",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
 ]
 }
 ]
@@ -53409,7 +54071,7 @@
 "synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
 "failed": false,
 "findings": [],
-"key": "f5e7c0330dab55ca",
+"key": "506a19611eb1835b",
 "result": "pass",
 "runs": [
 {
@@ -53468,6 +54130,59 @@
 "key": "5be096b677525560",
 "result": "none",
 "runs": []
+},
+"synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound": {
+"failed": false,
+"findings": [],
+"key": "0f2c3fbe56841696",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_matter_algebra_has_a_central_unit_and_the_device_is_a_unit",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_classical_source_shifts_the_detection_probability_at_first_order",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
+]
+},
+{
+"derivation": null,
+"func": "check_signal_exists_at_172_of_502_spacelike_events",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation"
+]
+},
+{
+"derivation": null,
+"func": "check_gravitational_size_of_the_phase_in_the_window",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_curvature_level_of_the_cutoff_premise_is_not_reached_outside_the_bodies",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling"
+]
+}
+]
 },
 "synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
 "failed": false,

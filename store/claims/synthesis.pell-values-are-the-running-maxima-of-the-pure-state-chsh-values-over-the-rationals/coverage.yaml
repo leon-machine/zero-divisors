@@ -1,0 +1,17 @@
+functions:
+  check_deficit_of_a_pure_value_is_one_or_at_least_seven:
+    kind: sampled
+    clauses: ["(i) for all 79 positive pure values of denominator up to 250: P and R even, Q odd, a and b odd, a^2 + b^2 = 2 Q^2, b = 1 or b >= 7, every prime factor of b is 1 or 7 modulo 8, and b = 1 exactly on solutions of the Pell equation", "(i) 2 is not a square modulo 3 or 5 and is one modulo 7"]
+    omits: "the parity and residue argument for all denominators is the proof's"
+  check_pell_denominators_grow_by_less_than_the_square_root_of_thirty_four:
+    kind: sampled
+    clauses: ["(ii) Q_{n+1}^2 < 34 Q_n^2 and x_n^2 < 2 Q_n^2 for fourteen steps of the recursion; 288 < 289 and 136 < 196"]
+    omits: "the inequality for all n is the proof's"
+  check_running_maxima_of_pure_values_are_the_pell_values:
+    kind: sampled
+    clauses: ["(ii) each of the positive pure values of denominator up to 1000 that is not a Pell value is exceeded by the Pell value of the largest smaller denominator, and has R^2 >= 196", "(iii) the running maxima for denominators up to 1000 are 2, 14/5, 82/29, 478/169, 2786/985"]
+    omits: "denominators above 1000 are covered by the proof only"
+  check_first_pell_value_is_the_value_of_the_even_state:
+    kind: complete
+    clauses: ["setting: the stored even state rho_0 is an idempotent of Cl(2,2) with value 2 = S_0 of the CHSH element at the stored settings"]
+    omits: "the identification of all pure-state values with the rational points of the circle is the stored theorem's clause (ii), not recomputed"

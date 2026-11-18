@@ -1,7 +1,7 @@
 ---
 id: hawking.helicity-lift-joints-itemised
 kind: claim
-version: 7
+version: 8
 title: The helicity lift, with its joints itemised
 status: proved
 region: hawking
@@ -25,6 +25,14 @@ credit:
   role: restatement of Joint J3 to the premise as narrowed again, channel reduction assumed for even-parity spin 2 only, the reduction worded per partial-wave channel
   version: 7
   source: maintainer pass of 2026-11-09
+- name: Claude Fable 5.2
+  role: 'dated sentence in joint J3 at every level and in the proof: the channel reduction for even-parity spin 2 is now derived in the store on oscillating channels given (C1) and (C2); the premise and the composite statement are unchanged'
+  version: 8
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
+amendments:
+- version: 8
+  kind: restatement
+  defect: 'joint J3 was described as resting on premise for the even-parity channels of the graviton with nothing derived there; the store now derives that reduction on oscillating channels given two cited classical facts, which the description did not say'
 review: typed
 about:
 - obj.hawking.continuum-mode-space
@@ -37,7 +45,7 @@ derivations:
   - hawking.imported-s-wave-bosonic-sector@6
   proof: proof-main.tex
   assumes:
-  - hawking.joint-j3-s-wave-reduction@3
+  - hawking.joint-j3-s-wave-reduction@4
 checked_by:
 - kind: proof
   derivation: main
@@ -51,6 +59,10 @@ locators:
   label: asm:helicity
   line: 597
 extraction:
+  maintainer_pass_2026_11_18_leads:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 7 -> 8. A dated sentence (18 November 2026) in joint J3 of the formal level and of the proof, with matching words in the technical level, the lay level and the one-liner, citing synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations in the text (no new uses edge: the composite statement still holds under premise J3 as stated, which keeps its even-parity clause). The pin of hawking.joint-j3-s-wave-reduction is moved 3 -> 4 with this reading: its version 4 adds the same dated note and changes no clause of the premise. The check, the coverage and orig-proof-main.tex are unchanged.'
   maintainer_pass_2026_11_09:
     by: maintainer-2026-11-09
     date: '2026-11-09'
@@ -108,17 +120,17 @@ Helicity is not additional structure imported into the framework: it is the eige
 \begin{enumerate}
 \item (\emph{Joint J1: the transform, classical.}) By Fact \claimref{hawking.imported-penrose-transform}, the helicity-$s$ mode space is the cohomology at homogeneity $-2s-2$; photon kinematics are at homogeneities $-4$ and $0$ ($s = \pm1$), graviton kinematics at $-6$ and $+2$ ($s = \pm2$).
 \item (\emph{Joint J2: the charge, proved in the series.}) The ordering shift is proved in the correspondence paper (Fact \claimref{hawking.imported-twistor-storey-ordering-shift}), and Proposition \claimref{hawking.homogeneity-ordering-shift} derives the homogeneity $-2s-2$ from it: the classification parameter of Joint J1 is an internal charge of the completion, so the helicity ladder is part of the ascended kinematics rather than a phenomenological label.
-\item (\emph{Joint J3: the reduction, modelling.}) The current boson of the s-wave theory (Fact \claimref{hawking.imported-s-wave-bosonic-sector}) is each partial-wave channel, $\ell \geq |s|$, of each such four-dimensional field (a field of helicity $s$ has no partial wave below $\ell = |s|$), and the lift from the boundary modes to the field is the standard partial-wave reconstruction, each helicity sector identified through the transform of Joint J1; and the near-horizon reduction of field theory on the Schwarzschild exterior identifies each $(\omega, \ell, m, s)$ channel with a two-dimensional mode, which is where Definition \claimref{obj.hawking.continuum-mode-space}'s modelling input enters, flagged as such in Remark \ref{rem:whichdynamics}. That channel reduction is premise only for the even-parity channels of the graviton (spin $2$); for the photon, and for scalar and Dirac fields, it is derived at the horizon (Theorem \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}), and for the odd-parity channels of the graviton, $\ell \geq 2$, it is derived in the static frame given the hypotheses stated in Theorem \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}. The current-boson identification and the lift stay premise for every species; the identification is not one array tower per helicity channel.
+\item (\emph{Joint J3: the reduction, modelling.}) The current boson of the s-wave theory (Fact \claimref{hawking.imported-s-wave-bosonic-sector}) is each partial-wave channel, $\ell \geq |s|$, of each such four-dimensional field (a field of helicity $s$ has no partial wave below $\ell = |s|$), and the lift from the boundary modes to the field is the standard partial-wave reconstruction, each helicity sector identified through the transform of Joint J1; and the near-horizon reduction of field theory on the Schwarzschild exterior identifies each $(\omega, \ell, m, s)$ channel with a two-dimensional mode, which is where Definition \claimref{obj.hawking.continuum-mode-space}'s modelling input enters, flagged as such in Remark \ref{rem:whichdynamics}. That channel reduction is premise only for the even-parity channels of the graviton (spin $2$); for the photon, and for scalar and Dirac fields, it is derived at the horizon (Theorem \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}), and for the odd-parity channels of the graviton, $\ell \geq 2$, it is derived in the static frame given the hypotheses stated in Theorem \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}. Since 18 November 2026 the reduction is derived for the even-parity channels of the graviton too, $\ell \geq 2$, on channels of real nonzero frequency, in the static frame and given the classical facts (C1) and (C2) cited in that theorem (Theorem \claimref{synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations}); the premise's clause is kept as stated. The current-boson identification and the lift stay premise for every species; the identification is not one array tower per helicity channel.
 \end{enumerate}
 The composite statement is the conjunction of the three joints with the provenance displayed: J1 is classical, J2 is Fact \claimref{hawking.imported-twistor-storey-ordering-shift} together with Proposition \claimref{hawking.homogeneity-ordering-shift}, and J3 is the one modelling joint. The homogeneity table is checked by the script.
 
 ## technical
 Helicity is identified with the eigenvalue of the distinguished $\mathfrak{u}(1)$ charge of the completion's conformal storey, $\Cl(2,4)$ with its conformal spinor space $\CS$, through three joints. Joint J1 is classical: by the Penrose transform the helicity-$s$ mode space is the cohomology on the projective spinor space $\PCS$ at homogeneity $-2s-2$, so photons sit at homogeneities $-4$ and $0$ and gravitons at $-6$ and $+2$. Joint J2 is proved in the series: the symmetric-ordering shift of the conformal storey gives $q(\id) = -\hbar(\Upsilon + 2)$, which places helicity $s$ at homogeneity $-2s-2$.
 
-Joint J3 is a modelling premise: the current boson of the s-wave theory is each partial-wave channel, $\ell \geq |s|$, of each four-dimensional massless field, and the near-horizon reduction of field theory on the Schwarzschild exterior identifies each $(\omega, \ell, m, s)$ channel with a two-dimensional mode. The channel reduction is assumed only for the even-parity channels of the graviton: for the photon, and for scalar and Dirac fields, it is derived at the horizon in Gauge Theory Gravity (\claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}), and for the odd-parity channels of the graviton it is derived, given its stated hypotheses, by linearising the gauge field (\claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}); the identification of the current boson with these channels is assumed for every species, and it is not one array tower per helicity channel. The composite statement is the conjunction of the three joints and holds under premise J3.
+Joint J3 is a modelling premise: the current boson of the s-wave theory is each partial-wave channel, $\ell \geq |s|$, of each four-dimensional massless field, and the near-horizon reduction of field theory on the Schwarzschild exterior identifies each $(\omega, \ell, m, s)$ channel with a two-dimensional mode. The channel reduction is assumed only for the even-parity channels of the graviton: for the photon, and for scalar and Dirac fields, it is derived at the horizon in Gauge Theory Gravity (\claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}), and for the odd-parity channels of the graviton it is derived, given its stated hypotheses, by linearising the gauge field (\claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}), and since 18 November 2026 the even-parity channels are derived in the same way on channels of real nonzero frequency, given the same two cited classical facts (\claimref{synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations}), the premise's clause being kept as stated; the identification of the current boson with these channels is assumed for every species, and it is not one array tower per helicity channel. The composite statement is the conjunction of the three joints and holds under premise J3.
 
 ## lay
-Massless particles such as photons and gravitons carry helicity, a measure of how they spin about their direction of motion. This result reads helicity as a charge already present at the framework's conformal level, the level whose spinors describe light rays, by combining a classical theorem of Penrose (his transform) with a calculation proved earlier in the series. Connecting it to the horizon modes relies on one modelling assumption: that the framework's horizon modes are the spherical-wave pieces of the four-dimensional fields. That the fields do break into such one-dimensional pieces near the horizon has been derived for light and for one of the two kinds of gravitational wave, and is still assumed for the other kind.
+Massless particles such as photons and gravitons carry helicity, a measure of how they spin about their direction of motion. This result reads helicity as a charge already present at the framework's conformal level, the level whose spinors describe light rays, by combining a classical theorem of Penrose (his transform) with a calculation proved earlier in the series. Connecting it to the horizon modes relies on one modelling assumption: that the framework's horizon modes are the spherical-wave pieces of the four-dimensional fields. That the fields do break into such one-dimensional pieces near the horizon has been derived for light and for one of the two kinds of gravitational wave; for the other kind it has since been derived as well, up to two quoted textbook facts, though the assumption still lists it.
 
 ## one-liner
-Under the modelling joint J3 (its channel reduction assumed for even-parity spin $2$ only, derived for lower spins and for odd-parity spin $2$), helicity is the eigenvalue of the conformal storey's distinguished $\mathfrak{u}(1)$ charge, with helicity $s$ at Penrose homogeneity $-2s-2$.
+Under the modelling joint J3 (its channel reduction assumed for even-parity spin $2$ only, derived for lower spins and for odd-parity spin $2$, and since 18 November 2026 derived for even-parity spin $2$ too on oscillating channels given two cited classical facts), helicity is the eigenvalue of the conformal storey's distinguished $\mathfrak{u}(1)$ charge, with helicity $s$ at Penrose homogeneity $-2s-2$.

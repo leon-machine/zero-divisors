@@ -1,0 +1,10 @@
+I410  scrambling.spreading-law-chaos-bound-saturated
+      1 legacy checks pass in verify_T08.py (premises untracked, no mutation test)
+I405  scrambling.spreading-law-chaos-bound-saturated
+      synthesis.number-diagonal-dynamics-spreads-nothing is declared and untouched, as expected: coverage.yaml: cited only in clause (e), the part named as not proved, as the stored result that bears on the window reading; no check function computes with it
+I405  scrambling.spreading-law-chaos-bound-saturated
+      synthesis.phase-flow-is-time-rotor-flow-kms-continuation is declared and untouched, as expected: coverage.yaml: supplies the statement of clause (b) that the rotor flow is the KMS-strip continuation and not a time evolution; a structural statement with no finite computation here
+I405  scrambling.spreading-law-chaos-bound-saturated
+      synthesis.positive-null-energy-gives-r-premises is declared and untouched, as expected: coverage.yaml: supplies kappa beta = 2 pi under (N+) in clause (c); the check does the arithmetic that follows from it and does not recompute the thermal state
+
+scrambling.spreading-law-chaos-bound-saturated: 0 error(s), 4 other finding(s); check result: pass

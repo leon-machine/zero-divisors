@@ -31,7 +31,7 @@ derivations:
   uses:
   - synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element@1
   - synthesis.wall-rung-count-is-height-of-dying-line-class@2
-  - synthesis.imported-whitney-product-formula-and-projective-space@1
+  - synthesis.imported-whitney-product-formula-and-projective-space@2
   - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1
   - synthesis.neutral-singlet-bit-decided-by-gauge-algebra-leaving-u5@3
   - standard-model.imported-anomaly-coefficients@1

@@ -1,0 +1,34 @@
+functions:
+  check_bare_recombiner_breaks_the_constraint_and_the_string_dressed_one_keeps_it:
+    kind: complete
+    clauses:
+    - '(1) the commutator of the constraint with the bare recombiner at the two sites, the inverse and square of the dressed recombiner, and the vanishing of the commutator of the constraint with the string-dressed recombiner and detection at all 49 sites'
+    omits: 'one box, one coupling 2/3 and one recombiner (3/5, 4/5); the Weyl operators are held as formal symbols with the stated commutator, not as operators on a state space'
+  check_string_dressed_detection_commutes_with_the_field_off_the_string:
+    kind: complete
+    clauses:
+    - '(2) for the string: the form of the detection, its commutator with E on the two links of the string and its vanishing on the 82 other links'
+    omits: 'one box; the statement for every dressing by one Weyl operator is the proof''s one line; dressings by sums of Weyl operators are not treated'
+  check_constrained_part_alone_fails_and_the_transverse_part_cancels_it:
+    kind: complete
+    clauses:
+    - '(3) the gradient part of the string from the exact graph Laplacian, its values on four links, the count 76 of 82, and the commutators of the two parts with the detection on four links'
+    - '(4) the commutator of the Coulomb slaved field with the bare detection on all 82 links, nonzero on 76, and with four further matter elements: zero on every link for the two that commute with the charge, nonzero on the 76 for the two that do not'
+    - '(2) for the Coulomb dressing: the detection dressed by the constrained field commutes with the constraint and fails on 76 links'
+    omits: 'the two parts'' commutators are computed on four links, the others following from linearity; four sampled matter elements, the statement for every one being the proof''s; that the gradient part is an element of the matter algebra on the constraint surface is the proof''s'
+  check_string_shaped_slaved_field_keeps_the_constraint_and_is_not_static:
+    kind: complete
+    clauses:
+    - '(5) the string-shaped slaved field has the divergence the constraint asks and commutes with the bare detection on all 82 links off the string; after two steps of the field equation it has changed on 10 links while the Coulomb field is unchanged; the gradient part of the evolved string is kappa at steps 1, 2, 3'
+    omits: 'the small box and three steps; that the gradient part is kappa at every step is the proof''s (the divergence is preserved); the number field that completes the string-shaped field is not constructed'
+  check_in_one_space_dimension_the_constrained_part_is_the_string:
+    kind: complete
+    clauses:
+    - '(6) on a chain of 13 sites the gradient part of the string is the string'
+    omits: 'one chain; the general statement (no plaquettes) is the proof''s'
+  check_dynamics_string_dressed_detection_commutes_at_spacelike_events_and_the_slaved_field_does_not:
+    kind: complete
+    clauses:
+    - '(7) the evolved string vanishes at all 2750 events beyond the cone and not inside it; the difference of the two slaved solutions is nonzero at 878 of them, none before step 4, every one in the forward cone of the source event and outside the cone of the detection, with two named values (for unit coupling and step 1/2), and satisfies the constraint at every step; Remark: the slaved field string-shaped at the detection step keeps the constraint, commutes with the detection at step 5 at all 2750 events and fails for a detection at step 7 at 86 of 2562; the step is inverted by its inverse and preserves the bracket of a pair on two links'
+    omits: 'one box of 13 x 13 sites with reflecting edges, eleven steps of 1/2 (the two named values depend on the step; the counts were not recomputed here at another step); the identification of the commutator with the evolved string is the proof''s; the canonical property is checked on two links, the general statement being the proof''s (two shears)'
+untouched_premises:

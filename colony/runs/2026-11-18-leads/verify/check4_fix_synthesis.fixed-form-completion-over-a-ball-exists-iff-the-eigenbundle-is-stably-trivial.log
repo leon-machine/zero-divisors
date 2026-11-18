@@ -1,0 +1,4 @@
+I405  synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial
+      synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two is declared and untouched, as expected: coverage.yaml: its clause (L), the lifting through the double cover, is used in the proof of (4); it is a statement about continuous maps and no check function can exercise it (check_double_lift_of_the_winding_two_loop tests the two rotor lifts the proof feeds to it)
+
+synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial: 0 error(s), 1 other finding(s); check result: pass

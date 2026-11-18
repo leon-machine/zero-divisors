@@ -65,7 +65,7 @@ derivations:
   - singularity.euclidean-section-period@6
   - synthesis.r-loc-needs-sheet-labelled-modes@4
   assumes:
-  - hawking.joint-j3-s-wave-reduction@3
+  - hawking.joint-j3-s-wave-reduction@4
   proof: proof-main.tex
 checked_by:
 - kind: check

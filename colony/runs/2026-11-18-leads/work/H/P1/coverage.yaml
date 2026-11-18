@@ -1,0 +1,26 @@
+functions:
+  check_scalar_channel_weight_at_unequal_couplings:
+    kind: sampled
+    clauses:
+    - '(i) the scalar bracket with two couplings and its integrated weight (1 + 5 tau_1 tau_2)/180 times pi at seven pairs'
+    omits: 'five rational angles fix the quartic in the cosine; the other eight channels are the stored theorem''s'
+  check_stored_readings_move_no_stated_figure:
+    kind: complete
+    clauses:
+    - '(i) the composite coefficient is the sum of the theorem''s; vectors and fermions see no coupling'
+    - '(ii) 1519247/82944000 at coupling 0; lower by 16/777600, that is 5120/4557741 of itself, at the conformal value on either side; the brackets (0.5672, 0.5673) and (0.5679, 0.5680); the margin 1.56 and the count 23 at both'
+    omits: 'the floor is not recomputed (only the fourth-power ratio); the stored threshold is recomputed from the stored inputs, not read from the stored check'
+  check_tilt_window_on_the_doublets_uses_up_the_margin:
+    kind: complete
+    clauses:
+    - '(ii) tau at the ends of the window; c between 3.362 and 3.578 and its ratio; four contents against c* at both ends; the crossing between 1.5239 and 1.5241; the central c* between 14.44 and 14.45'
+    - '(ii) the window on the bath only; one further real scalar in three placements'
+    omits: 'the window itself and the stored inputs of c* are taken from the stored results'
+  check_chain_bath_lowers_the_margins_and_its_scalars_decide_the_copies:
+    kind: complete
+    clauses:
+    - '(iii) the scalar counts 64, 68, 188 against the stored 28, 32, 152; the order of the scales'
+    - '(iii) per-vector ratios, c of the 22 vectors, the margins at 22 vectors and at four Standard-Model contents, the counts 256 and 10'
+    - '(iii) four copies of the chain''s content at coupling 0 and at the conformal value; the interval for N_s = 188 and the bounds for 64 and 68'
+    omits: 'thresholds and thermal masses; the identification of the bath on the chain is the proof''s reading of the stored content'
+untouched_premises: {}

@@ -415,6 +415,32 @@ the source does not fix, and whether it requires its gravitational field to comm
 spacelike separation, is not decided: open problem op.gravitational-field-at-null-momentum. Until it is, no
 stored result is to be read as asserting or denying a free part of the field with states of its own.
 
+Requirement (18 November 2026). The series requires that no signal pass outside the light cone. So a gravitational
+field with no variables of its own, a field slaved to its source, is not the full account of the field. This
+replaces the clause of the paragraph above that left the requirement undecided. How the requirement is met is not
+decided and stays open problem op.gravitational-field-at-null-momentum: no stored result is to be read as saying
+that the two components at null momentum carry states or variables of their own, that the field has a quantum, or
+that those components carry none.
+
+The stored results behind the requirement, each with its own label. Proved: at null momentum the first-order field
+has exactly two directions that the source does not fix, the transverse trace-free ones, and four of its ten
+equations are constraints
+(`synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints`). Proved,
+in an exact two-dimensional lattice Maxwell model with a Gauss constraint (an electromagnetic model; the step to
+gravity is by analogy): a field with no variable of its own fails to commute with matter at a distance, the static
+Coulomb choice on 76 of 82 links with every matter element that does not commute with the charge, and the retarded
+slaved field obeying the field equation with the source's later detection at 878 of 2750 events spacelike to that
+detection, all in the forward cone of the source event; the constraint and the Coulomb dressing do not restore
+commutation, and in that model canonical transverse variables with a string dressing do, which is a statement about
+the model and not about how the series meets the requirement
+(`synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes`).
+Proved in the stored lattice model under that result's hypothesis (D), that a classical device couples to the slaved
+field by the model's own coupling: the failure is a signal of first order in the device's strength, in a unitary
+model; argued from it: its gravitational size outside the light cone is at most about $1.3 \times 10^{-13}$ in the
+proposed experiments, and of order one for a source near 190 kg at a metre against a superposed mass of $10^{-14}$
+kg; and a survey finds no stored premise that implies commutation or bounds the failure
+(`synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound`).
+
 ## Working with the store
 
 - Start broad: `list_subjects`, `list_tags`, then `trail(subject)` for the

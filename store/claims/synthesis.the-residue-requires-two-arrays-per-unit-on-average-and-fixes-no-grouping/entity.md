@@ -27,7 +27,7 @@ derivations:
   - synthesis.capacity-per-mode-independent-of-helicity@2
   - synthesis.slot-module-light-ray-arrays-are-weyl-components@3
   - synthesis.de-sitter-entropy-pi-n-squared@6
-  - dark-matter.stored-asymmetry-charge-not-number@12
+  - dark-matter.stored-asymmetry-charge-not-number@13
   assumes:
   - singularity.q-joint-quasi-freeness-s-wave@3
   - singularity.c2-cell-density@4

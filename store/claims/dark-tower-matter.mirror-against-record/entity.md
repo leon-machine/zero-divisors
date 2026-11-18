@@ -38,8 +38,6 @@ extraction:
   env: observation
   outside_pilot_cites:
   - ButlerT14b
-  flags:
-  - conjecture with no referenced motivation
   typing:
     by: ai-typing-pass
     note: 'E107 fix: kept conjectured (an observation on imported galaxy modelling, not computed in the

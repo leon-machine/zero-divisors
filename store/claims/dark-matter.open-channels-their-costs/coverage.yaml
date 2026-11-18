@@ -2,7 +2,7 @@ functions:
   check_mirror_radiation_and_threshold:
     kind: exact
     clauses: ["N_eff^tot = 7.447", "threshold T'/T_gamma < 0.448 (0.47 with the heaviest neutrino non-relativistic, coefficient 6.40)", "met by eight orders or more at the hot-deposit point estimate", "xi = 1 is excluded"]
-    omits: "the 0.47 threshold is pinned in (0.465244, 0.465245), above the rounding edge 0.465; the condition 'T'/T below about 0.3' for the heaviest neutrino being non-relativistic and the burning-branch reheating factor 3.0 to 3.2 are not computed"
+    omits: "the 0.47 threshold is pinned in (0.465244, 0.465245), above the rounding edge 0.465; the condition 'T'/T below about 0.3' for the heaviest neutrino being non-relativistic and the burning-branch reheating factor (3.0 to 3.2 at xi = 2.8 to 3.2e-4, 1.9 at the present floor 6.6e-4, from supplementary scripts that are not in the lab) are not computed"
   check_five_dimensional_thresholds:
     kind: exact
     clauses: ["Delta N_eff ~ 2.2 g (T_r/T_gamma)^4 per species", "thresholds 0.51 for g = 2 and 0.46 for g = 3"]

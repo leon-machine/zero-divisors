@@ -1,0 +1,25 @@
+functions:
+  check_centraliser_of_the_boost_is_the_boost_and_the_transverse_bivectors:
+    kind: exact
+    clauses: ["(i) the bivectors commuting with K = e1 e2 form a space of dimension 7, spanned by K and the six bivectors of T; the eight mixed basis bivectors do not commute", "the null pair: <nO, ninf> = 1, Q(nO) = Q(ninf) = 0"]
+    omits: "that every so(3) in the centraliser is the stabiliser of a vector of positive square is the proof's (representation theory); the check does not enumerate subalgebras"
+  check_stabiliser_of_a_timelike_vector_is_a_compact_so3_with_one_fixed_boost_orbit:
+    kind: sampled
+    clauses: ["(i) for six vectors I of T with Q(I) > 0 the stabiliser in the bivectors of T is three-dimensional with negative definite Killing form", "(ii) on a grid of feet, seven scales and three rapidities the compatible tube points fixed by the stabiliser are exactly x_perp = c/alpha, rho^2 = Q(I)/alpha^2 (15 hits)", "(ii) rho^2 = 12/Lambda for the stored de Sitter tractor at four values of Lambda", "(ii) for five vectors with Q(I) <= 0 the stabiliser is not compact and fixes no compatible tube point of the grid"]
+    omits: "the general statement is the proof's comparison of Re X(m) with I; the grid samples it"
+  check_tube_point_is_fixed_exactly_when_its_observer_is:
+    kind: sampled
+    clauses: ["(ii) [B, X(x(m))] = [B, Re X(m)] and [B, Im X(m)] = 0 for eight bivectors of T on the grid; fixing m and fixing x(m) agree at every sample, with both outcomes seen", "the boost K fixes no compatible tube point of the grid; 51 fixed and 957 moved pairs", "the bivector Im X ^ Re X fixes the tube point with a complex multiple (the general branch of the test)", "preamble: a K + B fixes no compatible tube point of the grid, for three nonzero a and the eight bivectors B"]
+    omits: "the identity is proved for every bivector of T in the proof"
+  check_static_chart_of_the_wedge_and_the_fixed_points_of_its_rotations:
+    kind: sampled
+    clauses: ["(iii) at Lambda = 3: X(eta, sigma, n) is null, lies over the right wedge, K . X = -dX/d(eta); the rotations of I fix it exactly when sigma = 0 (72 points, 18 fixed); the fixed points have Q(x) = -12/Lambda and foot at the centre"]
+    omits: "other Lambda and centres follow by the dilation and the translations, not computed; that the parametrisation covers the wedge is the proof's"
+  check_static_lapse_candidates_on_schwarzschild_and_schwarzschild_de_sitter:
+    kind: sampled
+    clauses: ["(v), (vi) the stored static field with a general lapse is torsion-free with Ricci map Lambda times the identity at three points, and the static observer's acceleration has magnitude f'/(2 sqrt f)", "(v) Schwarzschild: r^2 f' = 2M > 0 and f < 1 at sample radii for three masses, 1/kappa^2 = 16 M^2", "(vi) the sample Lambda = M = 3/7: horizons at 1 and 2, kappa_b = 2/7, kappa_c = 5/28, ratio 8/5, r_0^3 = 3 with 36/25 < r_0 < 13/9, (1 - f(r_0))^3 = 9 Lambda M^2 = 243/343, 3/28 < f(r_0) < 10/91"]
+    omits: "uniqueness of r_0 and the formula for f(r_0) for general Lambda and M are the proof's; the adapted gauge of (iv) is constructed in the proof and not in the check; the Tolman remark is not checked"
+  check_twisted_gauge_selects_the_observers_on_the_rotation_axis:
+    kind: sampled
+    clauses: ["(vii) at Lambda = 3, J = e3 e4: J lies in so(3)_I and commutes with K; the boost conjugated by the rapidity-dependent rotation equals the boost times a rotation about J on 72 points with rational rotations", "(vii) J fixes X(eta, sigma, n) exactly when sigma = 0 or n is on the axis (9 axis points with sigma > 0, 45 moved); the tube points of 18 axis observers are fixed by J and not by the whole so(3), with foot the centre and rho = 2 sqrt(1 - sigma^2)/(1 -+ sigma) = 2/3, 1, 4/3, 3, 4, 6", "(vii) a^2 f - c^2 r^2 sin^2 < 0 at two points near the horizon", "(vii) de Sitter: the bivectors commuting with I_Lambda form a space of dimension 10 and those also commuting with K + c J one of dimension 2, at Lambda = 3, 12, 4/3 and c = 1, 3/7, -2"]
+    omits: "that the displaced field is a gauge of the same field, that the symmetries commuting with K are K and J, and the general axis are the proof's; that the two fields have no further symmetries is cited from memory; reading (c) of the closing paragraph is argued and not checked"

@@ -5,8 +5,8 @@ functions:
     omits: "helium branch (ratio in (0.994, 0.996), computed 0.99486) with our composition taken as 75/25 by baryon number; the proton branch ratio 1 holds by definition and is not computed"
   check_temperature_ratio_interval:
     kind: exact
-    clauses: ["xi between the gravitational floor 5.2e-4 and the hot-deposit estimate about 4e-3", "hot deposit inside the helium window (3e-3, 2e-2)"]
-    omits: "interval arithmetic from T14's typed inputs (g_d, g*, ceiling, eta) and the derived production coefficients (typed here as rationals over pi^3, not read from the result that derives them, which this entity does not cite); the helium window itself is T14c's cited result, only the hot deposit's position in it is checked; c, n_B/s pinned exactly, the floor ends and the hot deposit to one-decimal enclosures"
+    clauses: ["xi between the gravitational floor 6.6e-4 and the hot-deposit estimate about 4e-3", "hot deposit inside the helium window (3e-3, 2e-2)"]
+    omits: "interval arithmetic from T14's typed inputs (g_d, g*, ceiling, eta) and the derived production coefficients (typed here as rationals over pi^3, not read from the result that derives them, which this entity does not cite) and the mean energy per creation event (computed here from the typed Bose and Fermi parts of the rate and a bracket of zeta(5), by the stored seeding proposition's formula, which this entity does not cite either); the helium window itself is T14c's cited result, only the hot deposit's position in it is checked; c, n_B/s pinned exactly, the floor ends and the hot deposit to one-decimal enclosures"
   check_eta_prime:
     kind: sampled
     clauses: ["eta' = eta/xi^3"]
@@ -19,4 +19,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "Docstring lists the helium/neutron composition and halo plasma behaviour as not computable; the four computable figures reproduce. 2026-10-23 weak-check pass: brackets that a looser bracket also passed (and two one-sided interval tests that an inverted interval passed) were replaced by exact by-hand pins of c, eta and n_B/s and one-decimal enclosures of the floor ends, hot deposit, eta' values and atomic cross-sections. 2026-11-18 (maintainer pass, version 7): the floor and eta' at it recomputed with the derived coefficients (5.2e-4 and 4.36, one value where a counting bracket stood); not judged again by an independent judge."
+  note: "Docstring lists the helium/neutron composition and halo plasma behaviour as not computable; the four computable figures reproduce. 2026-10-23 weak-check pass: brackets that a looser bracket also passed (and two one-sided interval tests that an inverted interval passed) were replaced by exact by-hand pins of c, eta and n_B/s and one-decimal enclosures of the floor ends, hot deposit, eta' values and atomic cross-sections. 2026-11-18 (maintainer pass, version 7): the floor and eta' at it recomputed with the derived coefficients (5.2e-4 and 4.36, one value where a counting bracket stood); not judged again by an independent judge. 2026-11-18 (maintainer pass, version 8): the floor takes the mean energy per creation event (E/T in (7.889, 7.890)): floor 6.6e-4 and eta' at it in (2.1, 2.2); not judged again by an independent judge."

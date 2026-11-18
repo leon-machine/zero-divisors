@@ -1,0 +1,21 @@
+functions:
+  check_even_parity_closed_forms_identically_in_radius_and_angle:
+    kind: exact
+    clauses: ["(1) for each of the 24 basis second-order jets of (H0, H1, H2, K) and each of the 3 basis jets (P, P', P'') every one of the sixteen components of the first-order Ricci vectors equals the closed form, as an identity in the ring in z = sqrt f, sin and cos of the polar angle, M = 1 (72 cases, 72 nonzero components)", "(1) the ring refuses a division by a non-unit"]
+    omits: "that a basis of jets suffices (linearity in the second-order jet) and the homogeneity in M are the proof's"
+  check_odd_parity_closed_forms_identically_in_radius_and_angle:
+    kind: exact
+    clauses: ["(2) the stored odd-parity closed forms on the 12 basis jets of (h0, h1), the 2 basis data of (S, S') and L = 7/2, 6, as identities in the same ring (48 cases, 56 nonzero components)"]
+    omits: "that two values of L decide every L (degree one through S'') is the proof's"
+  check_sampled_controls_other_masses_and_wrong_coefficients:
+    kind: sampled
+    clauses: ["(1) at two rational points with masses 9/8 and 25/18, generic jets and generic (P, P', P''), all components agree", "(1) a changed coefficient in C11 fails; the closed forms of twice the mass fail"]
+    omits: "two points only; the identity in the radius is the exact check's"
+  check_reconstructed_field_of_a_zerilli_solution_is_a_vacuum_solution:
+    kind: exact
+    clauses: ["(4) with d_t^2 Phi eliminated by the Zerilli operator, no symbol of Phi is left in any of E1 to E7 of the reconstructed field; E2, E3, E6 vanish; E4 = -(r d_r + a) Z and E7 = -Z'/2 + b Z with the stated a, b; E1 and E5 are of second order in Z with leading coefficient -r/2", "(4) the Zerilli-Moncrief function of the reconstructed field is (lam + 1) Phi, and is not lam Phi", "(4) with f/r^2 added to the potential a term in Phi is left in E4"]
+    omits: "M = 1; the lower coefficients of E1 and E5 are computed and not compared with displayed formulas"
+  check_oscillating_channel_field_is_the_reconstruction_of_its_master_function:
+    kind: exact
+    clauses: ["(5) E3, E4 and d_t E2 are the first-order system, as equalities of linear forms", "(5) under the system E2, E3, E4, E6 reduce to zero and E7 to the relation Rel/(2 r^3) with the stated three coefficients", "(5) E1, E5, d_r Rel and the Zerilli operator on the master function reduce to multiples of Rel with coefficients in the ring; with f/r^2 added to the potential the last fails", "(5) (lam + 1)(K, H, H1) minus the reconstruction of the master function reduces to zero; with lam in place of lam + 1 it does not", "(5) on the system the master function is a combination of K and d_t H1"]
+    omits: "M = 1; the bijection is drawn from these identities in the proof; the forward implication without a condition on the time dependence is not checked (it stays with the stored sample-point computation); clause (6) and the cited facts (C1), (C2) are not checked"

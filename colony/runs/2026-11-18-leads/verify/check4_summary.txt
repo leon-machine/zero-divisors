@@ -1,0 +1,11 @@
+synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath EXIT 0
+synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-forbid-a-fermion-trace EXIT 0
+scrambling.spreading-law-chaos-bound-saturated EXIT 0
+synthesis.tube-point-clause-fixes-no-observer-where-rotations-have-no-fixed-point EXIT 0
+synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations EXIT 0
+synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two EXIT 0
+synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial EXIT 0
+synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line EXIT 0
+synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints EXIT 0
+synthesis.constraint-and-dressing-do-not-restore-commutation-for-a-slaved-field-and-the-transverse-part-does EXIT 0
+synthesis.slaved-field-failure-is-a-first-order-signal-from-a-classical-source-and-no-stored-premise-bounds-it EXIT 0

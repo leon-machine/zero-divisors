@@ -53,8 +53,6 @@ extraction:
     note: 'Version 2 -> 3. Leon''s answer 3 (C2): the plain levels (technical, lay, one-liner) now carry ''with a real charged-lepton matrix'', the clause the real-breaking assumption gains at its version 2, and the assumes pin moves to neutrino.real-breaking-assumption@2; the formal and the kill condition are unchanged.'
   env: table row
   source: T17 tab:stances
-  flags:
-  - 'basis not linked: no store claim clearly carries it yet'
   typing:
     by: ai-typing-pass
     added:

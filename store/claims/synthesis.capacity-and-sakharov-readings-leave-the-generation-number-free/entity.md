@@ -31,7 +31,7 @@ derivations:
   - synthesis.slot-module-light-ray-arrays-are-weyl-components@3
   - standard-model.connection-forced@5
   - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum@5
-  - hawking.helicity-lift-joints-itemised@7
+  - hawking.helicity-lift-joints-itemised@8
   - synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations@4
   - synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike@3
   - synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off@2

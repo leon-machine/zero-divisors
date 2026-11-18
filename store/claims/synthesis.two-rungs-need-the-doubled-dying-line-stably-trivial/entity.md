@@ -31,7 +31,7 @@ derivations:
   - synthesis.lens-space-wall-rung-count-sees-the-integral-twist@6
   - sheaf.degeneration-sheaf@6
   - sheaf.imported-real-line-bundles@1
-  - synthesis.imported-whitney-product-formula-and-projective-space@1
+  - synthesis.imported-whitney-product-formula-and-projective-space@2
   - std-algebra.spin-double-cover@1
   - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1
   assumes:

@@ -34,8 +34,6 @@ extraction:
   env: observation
   unresolved_refs:
   - rem:branch
-  flags:
-  - conjecture with no referenced motivation
   typing:
     by: ai-typing-pass
     note: 'kept as a conjecture: the observation is mostly unscripted estimates and an open question,

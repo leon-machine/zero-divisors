@@ -1,0 +1,44 @@
+== synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two
+accepted synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two into store/claims/synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two; run tp lock after review
+exit 0
+== synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial
+accepted synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial into store/claims/synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial; run tp lock after review
+exit 0
+== synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line
+accepted synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line into store/claims/synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line; run tp lock after review
+exit 0
+== synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints
+accepted synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints into store/claims/synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints; run tp lock after review
+exit 0
+== synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes
+accepted synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes into store/claims/synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes; run tp lock after review
+exit 0
+== synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound
+accepted synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound into store/claims/synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound; run tp lock after review
+exit 0
+== synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight
+accepted synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight into store/claims/synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight; run tp lock after review
+exit 0
+== synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath
+accepted synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath into store/claims/synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath; run tp lock after review
+exit 0
+== synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent
+accepted synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent into store/claims/synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent; run tp lock after review
+exit 0
+== synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations
+accepted synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations into store/claims/synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations; run tp lock after review
+exit 0
+== synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear
+E122  synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear
+      coverage.yaml: unknown key(s) outside_ga
+E206  hawking.helicity-lift-joints-itemised
+      substantive fields changed without a version bump
+      fix:   set version: 8
+exit 1
+== synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals
+E122  synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals
+      coverage.yaml: unknown key(s) outside_ga
+exit 1
+== scrambling (update)
+updated scrambling.spreading-law-chaos-bound-saturated version 6 -> 7 in store/claims/scrambling.spreading-law-chaos-bound-saturated; kept no stored-only files; run tp lock after review
+exit 0

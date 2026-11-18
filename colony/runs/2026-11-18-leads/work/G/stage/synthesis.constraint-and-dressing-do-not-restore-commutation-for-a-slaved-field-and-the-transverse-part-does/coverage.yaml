@@ -1,0 +1,29 @@
+functions:
+  check_bare_recombiner_breaks_the_constraint_and_the_string_dressed_one_keeps_it:
+    kind: complete
+    clauses:
+    - '(1) the commutator of the constraint with the bare recombiner at the two sites, the inverse and square of the dressed recombiner, and the vanishing of the commutator of the constraint with the string-dressed recombiner and detection at all 49 sites'
+    omits: 'one box, one coupling 2/3 and one recombiner (3/5, 4/5); the Weyl operators are held as formal symbols with the stated commutator, not as operators on a state space'
+  check_string_dressed_detection_commutes_with_the_field_off_the_string:
+    kind: complete
+    clauses:
+    - '(2) the form of the detection, its commutator with E on the two links of the string and its vanishing on the 82 other links'
+    omits: 'one box; the general statement is the proof''s one line'
+  check_constrained_part_alone_fails_and_the_transverse_part_cancels_it:
+    kind: complete
+    clauses:
+    - '(3) the gradient part of the string from the exact graph Laplacian, its values on four links, the count 76 of 82, and the commutators of the two parts with the detection on four links'
+    - '(4) the commutator of the field with no variable of its own with the bare detection on all 82 links, nonzero on 76'
+    - '(5) the detection dressed by the constrained field commutes with the constraint and fails on 76 links'
+    omits: 'the two parts'' commutators are computed on four links, the others following from linearity; that the gradient part is an element of the matter algebra on the constraint surface is the proof''s'
+  check_in_one_space_dimension_the_constrained_part_is_the_string:
+    kind: complete
+    clauses:
+    - '(6) on a chain of 13 sites the gradient part of the string is the string'
+    omits: 'one chain; the general statement (no plaquettes) is the proof''s'
+  check_dynamics_string_dressed_detection_commutes_at_spacelike_events_and_the_slaved_field_does_not:
+    kind: complete
+    clauses:
+    - '(7) the evolved string vanishes at all 2750 events beyond the cone and not inside it; the difference of the two slaved solutions is nonzero at 878 of them, none before step 4, with two named values (for unit coupling), and satisfies the constraint at every step; the step is inverted by its inverse and preserves the bracket of a pair on two links'
+    omits: 'one box of 13 x 13 sites with reflecting edges, eleven steps of 1/2; the identification of the commutator with the evolved string is the proof''s; the canonical property is checked on two links, the general statement being the proof''s (two shears)'
+untouched_premises:

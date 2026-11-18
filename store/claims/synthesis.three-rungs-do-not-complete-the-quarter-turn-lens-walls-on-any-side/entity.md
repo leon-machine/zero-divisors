@@ -28,7 +28,7 @@ derivations:
   - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height@2
   - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1
   - synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory@1
-  - synthesis.imported-whitney-product-formula-and-projective-space@1
+  - synthesis.imported-whitney-product-formula-and-projective-space@2
   - sheaf.imported-real-line-bundles@1
   assumes:
   - sheaf.tameness@1

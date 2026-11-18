@@ -37,7 +37,7 @@ derivations:
   - hawking.imported-quasi-free-states-car-algebra@2
   - dark-matter.superselected-hence-dark-exactly-stable@5
   - dark-tower-matter.mirrors-temperature-p2@7
-  - dark-matter.open-channels-their-costs@6
+  - dark-matter.open-channels-their-costs@7
   proof: proof-main.tex
 checked_by:
 - kind: check

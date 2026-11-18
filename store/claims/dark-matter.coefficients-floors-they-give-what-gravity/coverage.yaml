@@ -6,11 +6,11 @@ functions:
   check_mirror_floor_and_eta_prime:
     kind: exact
     clauses: ["(ii)"]
-    omits: "species content (4 scalars, 45 Weyl fermions, 12 vectors) taken from the mirror premise; the per-species coefficients are computed from the closed form of the pair-production theorem's clause (v), coded here and compared with its printed rationals (that theorem's check exports nothing); the charge reading of the cited stored-asymmetry proposition is not tested; the crossover 'about 4' is bracketed between c = 4 and 4.1; the two-quanta energy count is the factor 4 on xi^8"
+    omits: "species content (4 scalars, 45 Weyl fermions, 12 vectors) taken from the mirror premise; the per-species coefficients are computed from the closed form of the pair-production theorem's clause (v), coded here and compared with its printed rationals (that theorem's check exports nothing); the charge reading of the cited stored-asymmetry proposition is not tested; the crossover 'about 1.5' is bracketed between c = 1.539 and 1.54 at the mirror's g_d and energy per event; the mean energies per event are the seeding proposition's export, compared here with the quoted 7.889 T and 7.890 T, and its Bose and Fermi parts of the rate are compared with the coefficients"
   check_yield_shortfall_and_rescue:
     kind: exact
     clauses: ["(iii)"]
-    omits: "the final sentence that gravity heats the dark towers and does not populate them with charge is interpretive"
+    omits: "the final sentence that gravity heats the dark towers and does not populate them with charge is interpretive; the hot-deposit value takes 3T per unit of baryon number as an input, and the floor at the rescue temperature is compared with it through the exact ratio E/3T"
   check_neff_contributions:
     kind: exact
     clauses: ["(iv)"]
@@ -19,4 +19,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "each numerical claim is bracketed by exact rational interval arithmetic. 2026-11-18 (maintainer pass, version 5): all four functions recomputed with the derived coefficients (rational multiples of pi^3, pi bracketed by Machin); the new bounds and the values on the two-quanta energy count are bracketed the same way; not judged again by an independent judge."
+  note: "each numerical claim is bracketed by exact rational interval arithmetic. 2026-11-18 (maintainer pass, version 5): all four functions recomputed with the derived coefficients (rational multiples of pi^3, pi bracketed by Machin); the new bounds and the values on the two-quanta energy count are bracketed the same way; not judged again by an independent judge. 2026-11-18 (maintainer pass, version 6): the floors take the seeding proposition's mean energy per event; all four functions recomputed (floors 8.118e-4 and 6.621e-4, eta' 2.112, crossover between 1.539 and 1.54, floor at the rescue temperature 5.40e-3 against the hot deposit 4.24e-3, Delta N_eff 1.43e-12 and 1.72e-11), bracketed the same way; the brackets on the two-quanta energy count are gone with the statement; not judged again by an independent judge."

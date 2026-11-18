@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@9
+  - dark-matter.mirror-share-one-how-fragile@10
   - dark-tower-matter.gauge-algebras@5
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.anomalies@3
