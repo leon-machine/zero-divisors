@@ -28,7 +28,7 @@ derivations:
   - standard-model.majorana-element@7
   - standard-model.imported-pati-salam-representation-theory-survival@1
   - standard-model.what-angle-asks-neutrino-sector@4
-  - synthesis.untuned-fit-caps-lightest-heavy-neutrino@1
+  - synthesis.untuned-fit-caps-lightest-heavy-neutrino@2
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@6
   - std-algebra.spin-double-cover@1

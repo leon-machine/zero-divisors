@@ -68,11 +68,11 @@ derivations:
 - name: simulation
   uses:
   - simulations.imported-unit-ball-rule-family@4
-  - simulations.imported-mirror@6
+  - simulations.imported-mirror@7
   assumes:
   - simulations.s1-one-species-per-tower@3
   - simulations.s2-sheet-fluid@3
-  - simulations.s3-mirror-cluster@2
+  - simulations.s3-mirror-cluster@3
   - simulations.s4-our-matter@2
   - simulations.s5-halos@2
   - simulations.c-odd-towers-collisionless@3

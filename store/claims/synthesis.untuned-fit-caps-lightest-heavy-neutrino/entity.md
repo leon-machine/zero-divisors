@@ -1,7 +1,7 @@
 ---
 id: synthesis.untuned-fit-caps-lightest-heavy-neutrino
 kind: claim
-version: 1
+version: 2
 title: 'The untuned fit caps the lightest heavy neutrino'
 status: proved
 region: synthesis
@@ -17,13 +17,23 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'restatement: the rate cited from the result that derives it; the contents that meet the condition c <= 1 named with the derived coefficients, and the margin at four Standard-Model contents added; the factor 2 identified as the two quanta of an event; thresholds unchanged'
+  version: 2
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+amendments:
+- version: 2
+  kind: restatement
+  defect: 'the statement read the condition c <= 1 as several hundred vector species, from the first published per-vector coefficient 2.3e-3, which is too small by about a factor ten: with the derived coefficient c <= 1 is forty-one vector species or one Standard-Model content, and four such contents (c = 2.27) fall outside it, so the margin stated for c <= 1 did not cover the largest content considered'
+  evidence: check.py::check_untuned_fit_caps_lightest_heavy_neutrino
 review: draft
 derivations:
 - name: main
   uses:
   - standard-model.fits-record-level@6
   - standard-model.chain@8
-  - dark-matter.imported-massless-graviton-production-rate@3
+  - dark-matter.imported-massless-graviton-production-rate@4
+  - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@1
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex
@@ -33,6 +43,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 1 -> 2, at Leon''s decision of 18 November 2026 (restate the direct users of the corrected production rate). The thresholds are conditions on c and are unchanged (c > 3.9e12; more than 1400-fold for c <= 1; the cap 7.3e8 GeV; the tuned rows). What changed is which contents meet c <= 1: with the coefficients of synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, clause (v), that is forty-one vector species (not several hundred) or one Standard-Model content (0.568); the odd towers'' vectors have 0.529, and four Standard-Model contents have 2.27, for which the margin is more than 1100-fold. The factor 2 on the yield is now the two quanta of each creation event and no longer a bracket.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -60,12 +74,12 @@ For any complex $3 \times 3$ Dirac matrix $M_{D}$ and complex symmetric invertib
 \[
 \alpha \;\le\; \frac{\lVert M_{D}\rVert^{2}}{m_{3}} \;\le\; \frac{9\,e^{2}}{m_{3}}, \qquad e = \max_{ij}\,|(M_{D})_{ij}|.
 \]
-On the untuned fit among the representative fits of Proposition \claimref{standard-model.fits-record-level}, which rest on Premise (EW) (Dirac entries at most $0.04$ GeV at $M_{I}$, nothing cancelling), with $e \le 0.045$ GeV and $m_{3}(M_{I}) \ge 25$ meV (a factor two below the record's lower end, as allowance for running), $\alpha < 7.3 \times 10^{8}$ GeV, which lies below the chain's $M_{I} = 1.9 \times 10^{10}$ GeV (Proposition \claimref{standard-model.chain}) by a factor above $26$. Under Premise \claimref{neutrino.r-descent-reheats-below-lower-heavy}, $T_{\mathrm{desc}} \le \alpha$, with $\alpha$ read as the fit's lightest heavy mass, the descent on that fit reheats below $7.3 \times 10^{8}$ GeV and below the intermediate scale. Then the dark-matter remainder $\Omega h^{2} = \Omega_{c}h^{2} - \Omega_{b}h^{2}$ cannot be a relic of gravitational production from the plasma at the rate of Fact \claimref{dark-matter.imported-massless-graviton-production-rate}, with quanta no heavier than the bath (the odd towers' seeding signpost of the dark-matter paper), unless the summed production coefficient $c$ of its light content exceeds $3.9 \times 10^{12}$; for any $c \le 1$ the seeding temperature exceeds the cap more than $1400$-fold. The fit's tuned rows (Dirac entries $2.2$, $2.9$, $4.0$ GeV) give by the same bound only $\alpha < 8.9$, $15.4$, $29.2 \times 10^{11}$ GeV at $m_{3} = 49.4$ meV, which with the running allowance do not decide even at $c = 1$.
+On the untuned fit among the representative fits of Proposition \claimref{standard-model.fits-record-level}, which rest on Premise (EW) (Dirac entries at most $0.04$ GeV at $M_{I}$, nothing cancelling), with $e \le 0.045$ GeV and $m_{3}(M_{I}) \ge 25$ meV (a factor two below the record's lower end, as allowance for running), $\alpha < 7.3 \times 10^{8}$ GeV, which lies below the chain's $M_{I} = 1.9 \times 10^{10}$ GeV (Proposition \claimref{standard-model.chain}) by a factor above $26$. Under Premise \claimref{neutrino.r-descent-reheats-below-lower-heavy}, $T_{\mathrm{desc}} \le \alpha$, with $\alpha$ read as the fit's lightest heavy mass, the descent on that fit reheats below $7.3 \times 10^{8}$ GeV and below the intermediate scale. Then the dark-matter remainder $\Omega h^{2} = \Omega_{c}h^{2} - \Omega_{b}h^{2}$ cannot be a relic of gravitational production from the plasma at the rate of Theorem \claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}(v) (Fact \claimref{dark-matter.imported-massless-graviton-production-rate} for the published values), under that theorem's hypothesis (OS), or on the standard account of the Fact, with quanta no heavier than the bath (the odd towers' seeding signpost of the dark-matter paper), unless the summed production coefficient $c$ of its light content exceeds $3.9 \times 10^{12}$; for any $c \le 1$ the seeding temperature exceeds the cap more than $1400$-fold, and at the theorem's coefficients $c \le 1$ holds for up to forty-one vector species, for the odd towers' twenty-two gauge vectors ($c = 0.529$) and for one copy of the Standard Model's content ($c = 0.568$), while four such copies have $c = 2.27$, where the seeding temperature exceeds the cap more than $1100$-fold. The fit's tuned rows (Dirac entries $2.2$, $2.9$, $4.0$ GeV) give by the same bound only $\alpha < 8.9$, $15.4$, $29.2 \times 10^{11}$ GeV at $m_{3} = 49.4$ meV, which with the running allowance do not decide even at $c = 1$.
 
 ## technical
 In any seesaw, the heaviest light neutrino mass is bounded by the square of the Dirac matrix's norm divided by the lightest heavy neutrino mass, so the lightest heavy mass is at most the Dirac norm squared over $m_{3}$, and the norm of a three-by-three matrix is at most three times its largest entry. One representative fit of the Standard-Model paper, the untuned one, made under Premise (EW), keeps every Dirac neutrino entry below $0.04$ GeV at the intermediate scale. Allowing a factor two for the running of $m_{3}$ to that scale, the lightest heavy neutrino lies below $7.3 \times 10^{8}$ GeV, more than twenty-six times below the intermediate scale $1.9 \times 10^{10}$ GeV.
 
-If the descent reheats below the lightest heavy neutrino, as the neutrino paper's Premise (R) states, then on that fit it reheats below $7.3 \times 10^{8}$ GeV and below the Pati-Salam breaking scale. The odd towers' remainder of the dark matter then cannot have been made by gravitational production from the plasma with quanta no heavier than the bath unless the hidden light content's summed production coefficient exceeds $3.9 \times 10^{12}$; for any content with coefficient up to one (several hundred vector species) the required temperature exceeds the cap more than a thousandfold. The fit's tuned rows, with Dirac entries of $2$ to $4$ GeV, give weaker bounds that do not decide. The fits rest on Premise (EW), not on Hypothesis (U), and identifying the neutrino paper's lower heavy scale with the fit's lightest heavy mass joins two papers' objects.
+If the descent reheats below the lightest heavy neutrino, as the neutrino paper's Premise (R) states, then on that fit it reheats below $7.3 \times 10^{8}$ GeV and below the Pati-Salam breaking scale. The odd towers' remainder of the dark matter then cannot have been made by gravitational production from the plasma with quanta no heavier than the bath unless the hidden light content's summed production coefficient exceeds $3.9 \times 10^{12}$; for any content with coefficient up to one (forty-one vector species, or one copy of the Standard Model's content, at the production coefficients derived in the store, taken under that derivation's hypothesis (OS) or on the standard account of the imported rate) the required temperature exceeds the cap more than a thousandfold, and for four copies of the Standard Model's content, with coefficient $2.27$, still more than $1100$-fold. The fit's tuned rows, with Dirac entries of $2$ to $4$ GeV, give weaker bounds that do not decide. The fits rest on Premise (EW), not on Hypothesis (U), and identifying the neutrino paper's lower heavy scale with the fit's lightest heavy mass joins two papers' objects.
 
 ## lay
 In the seesaw picture, the ordinary neutrino masses are tiny because they are suppressed by very heavy partner neutrinos. A simple matrix inequality turns this around: given how large the neutrinos' ordinary (Dirac) mass terms are, the lightest heavy partner cannot be heavier than a definite amount. In one representative fit of the Standard-Model paper, the one that needs no fine cancellation, those mass terms are small, at most a few hundredths of a GeV, which puts the lightest heavy partner below about a billion GeV. The neutrino paper assumes the early universe never got hotter than that partner's mass, so on this fit the early universe stayed below about a billion GeV, far too cool for gravity alone to have made the hidden matter that would account for the rest of the dark matter.

@@ -2147,6 +2147,19 @@
     \beta x$, $\rho$ the reduction modulo $2$. These bounds replace the stored window $3 \le k \le 6$ on
     $L^{5}(4)$ and $L^{7}(4)$. Both new rung-count results carry the tameness premise as an assumes edge (Leon's
     decision of 9 November).
+    (18 November.) Conjecture 7.9 of the first paper is decided
+    (\claimref{synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump}) and, by Leon's
+    decision of that day, recorded as refuted as stated. For any continuous family, tame or not: a signature
+    jump obstructs every completion of one exterior signature (where it degenerates is not fixed by the
+    family); without a jump the doubling is such a completion; every completion that is nondegenerate
+    everywhere carries on its complement the opposite of the class of the family's eigenbundles relative to
+    the base (transfer); with one fixed exterior form there are further obstructions, of which the twisted
+    eigenline of $\begin{psmallmatrix} x & y \\ y & -x\end{psmallmatrix}$ around the origin is the first;
+    $x^{2}$, $\operatorname{diag}(x,-x)$ and $x^{2}+y^{2}$ complete with a fixed exterior form. The coarse
+    part of the wall class is therefore the integer signature jump, which for tame walls is the clock mismatch
+    $2$, and clause (c) of Conjecture \claimref{sheaf.wall-class} now refers to a refuted conjecture: its
+    rewording around the transfer clause is left with op.eigenbundle-class-of-degenerations. Nothing in that
+    result bears on the rung counts of tame walls asked for here.
   attack:
     - >-
       Answered in the negative (9 November) on lens-space walls, given the
@@ -2228,6 +2241,7 @@
     - synthesis.definite-side-rung-count-on-the-quarter-turn-lens-wall-of-dimension-five
     - synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components
     - synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation
+    - synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -4865,7 +4879,8 @@
     mass at one, and the three-dimensional abelian algebra is log-confining,
     so those quanta are neutral composites, matching mass at two. The
     gravitational-seeding origin of the remainder is given up by decision (26
-    October): under Premise (R) it needs $M_{3} > 1.36 \times 10^{12}$ GeV,
+    October): under Premise (R) it needs $M_{3} > 8.3 \times 10^{11}$ GeV (restated 18 November with the
+    derived production coefficients; $1.36 \times 10^{12}$ GeV before),
     beyond the perturbative Pati-Salam cap
     (\claimref{synthesis.seeding-remainder-excludes-perturbative-pati-salam}),
     and on the Pati-Salam chain it fails on its own by monopole overproduction
@@ -4972,7 +4987,7 @@
   area: dark-matter
   kind: research
   difficulty: substantial
-  status: open
+  status: partial
   source: "Leon's decisions of 10 November 2026 (the graviton does not exist in the series; flag the imported rate now and derive it later; the position stated in the conventions); the search of the store for the word made the same day"
   statement: >-
     The store imports the rate $R(T) = \alpha\,T^{8}/\bar{M}_{P}^{4}$ at which the Standard-Model plasma
@@ -5046,6 +5061,27 @@
     groups that the three readings of the conventions do not cover are the processes and rates (this
     problem), the ontology readings, and one result that gives linear modes of the gravitational field a
     vacuum state.
+    (18 November.) The first two attack items are done
+    (\claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}). Under
+    the hypothesis (OS), that to first order the gauge field is the solution of the linearised frame equation
+    with the matter's stress map, an element of the matter algebra, as source, the rate is $\alpha
+    T^{8}/\bar{M}_{P}^{4}$ with no state of the gauge field: at non-null momentum the first-order field is
+    fixed by its source up to a displacement (the Einstein map of the stored curvature has kernel four there
+    and six at null momentum), so the retarded, symmetric and time-ordered inverses agree, and the
+    normalisation is fixed by the stored Newtonian coupling. The channels factorise as $(\pi/180)(c_{i}c_{j}
+    + 5\tau_{i}\tau_{j})$ with $c = 1, 3, 12$ for a real scalar, a chiral fermion and a real massless vector
+    and $\tau = (1 - 6\xi)^{2}$ on scalars, the datum of op.curvature-coupling-across-subjects. From the
+    Standard Model's content the coefficients are $5789\pi^{3}/82944000$ (scalar), $16087\pi^{3}/82944000$
+    (chiral fermion) and $16087\pi^{3}/20736000$ (massless vector) per creation event. The stored coefficient
+    was low by $46312/3997 \approx 11.6$ for the scalar: sixteen from the 2018 source's coupling (half the
+    canonical one; its appendix confirms it, and the same group's later paper prints sixteen times the value)
+    and $5789/7994$ from weighting chiral fermions as Dirac. The correction holds on the standard account as
+    well as under (OS). The imported Fact is restated (version 4) and its flag replaced by a citation of the
+    result; the four direct users are restated with the new coefficients by Leon's decision of that day. A
+    mean-field source gives no production at this order in a bath of trace-free stress (argued). (OS) is
+    kept as a hypothesis of the result, not a stored premise (Leon, 18 November). Not decided by the result:
+    the field at null momentum, which the rate does not probe; that is op.gravitational-field-at-null-momentum,
+    and the burst baseline (the term $g$) follows it.
   attack:
     - >-
       First computation: the operator source beyond the static limit. Replace the Newtonian potential of the
@@ -5077,7 +5113,7 @@
     temperature law and coefficients compared with the imported ones; or a proof that it vanishes, with the
     temperature floor and the two predictions restated. In either case the flag on the imported Fact is
     replaced by a citation of the result.
-  entities: [dark-matter.imported-massless-graviton-production-rate, dark-matter.seeding-gravity-floor-dark-towers-temperature, dark-matter.coefficients-floors-they-give-what-gravity, pred.no-dark-radiation, pred.no-indirect-dark-signals, pred.dimmed-evaporation-bursts, field-theory.operator-newtonian-coupling, note.synthesis.where-stored-text-names-a-graviton]
+  entities: [dark-matter.imported-massless-graviton-production-rate, dark-matter.seeding-gravity-floor-dark-towers-temperature, dark-matter.coefficients-floors-they-give-what-gravity, pred.no-dark-radiation, pred.no-indirect-dark-signals, pred.dimmed-evaporation-bursts, field-theory.operator-newtonian-coupling, note.synthesis.where-stored-text-names-a-graviton, synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation]
   added: 2026-11-10
 
 - id: op.window-p3
@@ -5232,7 +5268,7 @@
     The stored asymmetry is a charge, not a number, and the deposit energy sets the temperature above the
     floor (\claimref{dark-matter.stored-asymmetry-charge-not-number}); P1 is the single frozen point
     (\claimref{dark-matter.p1-single-frozen-point}). Under Premise (R) the mirror's gravitational floor is
-    below $1.5 \times 10^{-5}$, so its temperature measures only the deposit per unit charge, $\xi^{4} =
+    below $2.5 \times 10^{-5}$ (restated 18 November; $1.5 \times 10^{-5}$ before), so its temperature measures only the deposit per unit charge, $\xi^{4} =
     \tfrac43 Y_{B}\varepsilon$, and the reheating temperature drops out; a helium mirror needs $0.70 \le
     \varepsilon \le 1.4 \times 10^{3}$ (\claimref{synthesis.mirror-temperature-measures-deposit-under-r}). A
     representative untuned Pati-Salam fit under (EW) puts the lightest heavy neutrino below $7.3 \times
@@ -5245,7 +5281,7 @@
     strict form) to $7.3 \times 10^{8}$ GeV, with $\varepsilon$ free in $0.70$ to $1.4 \times 10^{3}$ for a
     helium mirror. An independent reason supports that choice: on the Pati-Salam chain, causally formed
     monopoles exceed the MACRO flux limit for every formation temperature above $0.48\,v_{R} = 2.0 \times
-    10^{10}$ GeV, so the seeding origin, which needs $T_{d} > 1.36 \times 10^{12}$ GeV, fails on its own
+    10^{10}$ GeV, so the seeding origin, which needs $T_{d} > 8.3 \times 10^{11}$ GeV (restated 18 November), fails on its own
     unless the transition is cold ($T_{c} < 0.48\,v_{R}$), the symmetry is not restored at high temperature,
     or a temporary breaking of electromagnetism removes the monopoles, whether or not (R) and perturbative
     couplings hold (\claimref{synthesis.pati-salam-monopoles-bound-descent-history}, proved given its
@@ -5380,10 +5416,12 @@
     of the tower (what superselection is about), for the descent's $B - L$ and for baryon number, and these are
     now kept apart (\claimref{dark-matter.stored-asymmetry-charge-not-number}(i), (ii)). Channels the store has
     examined. (a) Production from the other tower after the descent, through gravity from the visible plasma
-    gives $1.8$ to $2.7 \times 10^{-15}$ mirror quanta per unit entropy at the ceiling reheating against the
-    $8.7 \times 10^{-11}$ baryons per unit entropy required, more than four orders too few; black holes are a
+    gives $3.9 \times 10^{-14}$ mirror quanta per unit entropy ($1.95 \times 10^{-14}$ creation events of two
+    quanta; restated 18 November with the derived coefficients) at the ceiling reheating against the
+    $8.7 \times 10^{-11}$ baryons per unit entropy required, more than three orders too few; black holes are a
     sink of the charge, not a source (\claimref{dark-matter.stored-asymmetry-charge-not-number}(ii)); the rate
-    used there is an imported one. (b) A constant pre-descent $\theta$-angle is excluded as the source by the
+    used there is now derived in the store
+    (\claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}). (b) A constant pre-descent $\theta$-angle is excluded as the source by the
     neutron dipole bound, and the odd towers carry no continuous $\theta$; an angle that relaxes or rolls is not
     excluded and not claimed (\claimref{dark-matter.asymmetry-arrow-counted-fifteenth-refutation}(ii)). (c) The
     heavy neutrinos of the stored seesaw are the textbook mechanism, and had it operated it would have generated
@@ -5934,3 +5972,135 @@
     - synthesis.exchangeable-deposits-carry-two-numbers-and-no-spectral-shape
     - synthesis.sparse-fermion-deposit-reaches-the-amplitude-on-a-flat-slice-only-with-super-planckian-quanta
   added: '2026-10-22'
+- id: op.eigenbundle-class-of-degenerations
+  title: "The eigenbundle class of a degenerating family, beyond tame walls"
+  area: walls
+  kind: research
+  difficulty: substantial
+  status: open
+  source: "The decision of Conjecture 7.9 of the first paper and Leon's decision of 18 November 2026 (the conjecture refuted as stated; this problem for what is still open)"
+  statement: >-
+    For a continuous family $G$ of symmetric forms degenerating on a closed set $\Sigma$, every completion that
+    is nondegenerate everywhere carries on its complement, outside a neighbourhood $U$ of $\Sigma$, the opposite of
+    the class of the positive and negative eigenbundles of $G$ relative to the base
+    (\claimref{synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump}, clause (4)). Its part
+    of degree zero is the integer signature jump; a part of degree one is shown by one example. Determine this
+    class in the store's own terms: say when its vanishing is sufficient for a completion with one fixed
+    exterior form, classify it for an isolated degeneration in codimension $m$, and relate it to the wall class
+    and the rung count of tame walls.
+  why: >-
+    It is what remains of the conservation conjecture of the first paper after its first wording was refuted:
+    the candidate for the invariant that conjecture asked for. Multiplication by the position vector, the family that fails
+    exactly at the zero divisors, is its first example, so the question is about the transport's own
+    object. A positive answer would give Conjecture \claimref{sheaf.wall-class} a natural candidate (the same
+    class on a tame wall) and turn the rung count into the question of how many flat directions cancel a
+    class.
+  known: >-
+    (18 November.) Proved: the transfer clause; the dichotomy for completions of one exterior signature; no
+    completion with a fixed exterior form for $\begin{psmallmatrix} x & y \\ y & -x\end{psmallmatrix}$ over
+    the plane and a bounded $U$ (the positive eigenline is not orientable on a circle around the origin);
+    for multiplication by the position vector on the least module of $\Cl(m,0)$, a repair on the same module
+    exists for $m \equiv 0, 4, 6, 7 \pmod 8$ (one more symmetric anticommuting generator, from the stored
+    classification), and no such generator exists for the other residues; the repair does not restrict to the
+    family at the origin. Not proved in the store: that for $m \equiv 1, 2, 3, 5 \pmod 8$ beyond $m = 1, 2$ no
+    completion with a fixed exterior form exists (the periodicity theorem of Bott in the form of Atiyah, Bott
+    and Shapiro, cited from memory in the result and not imported); that vanishing of the class suffices.
+    The obstruction of the plane example depends on $U$: it needs a loop around the origin in the exterior.
+  attack:
+    - >-
+      The case $m = 3$ on the least module (dimension four): show in the store's cell model that the positive
+      eigenbundle of the position vector over the two-sphere is not stably trivial (a class of degree two),
+      or import the statement as one Fact.
+    - >-
+      Tame walls: compute the relative class of the eigenbundles of a tame corank-one wall and compare it
+      with the pair $(w(\Sigma), w_{1}(L))$ of Theorem \claimref{synthesis.wall-class-one-rung-obstruction};
+      if they agree, restate Conjecture \claimref{sheaf.wall-class} around the transfer clause.
+    - >-
+      The Kerr ring: a degeneration in codimension two. Test whether the forced double cover of
+      \claimref{synthesis.kerr-ring-double-cover-data} is the class of degree one found here, and whether the
+      winding number three is an invariant of the completion or only of the family of rank two (a class of
+      degree one is stable only modulo two once directions are added).
+    - >-
+      Sufficiency: for a contractible base and an isolated degeneration, is a completion with a fixed exterior
+      form available whenever the class of the eigenbundles on the surrounding sphere vanishes after adding
+      the form's eigenspaces?
+  success: >-
+    The class identified and computed for isolated degenerations in every codimension, with the stored clock
+    of period eight derived for it or shown not to govern it; and its value on tame walls compared with the
+    stored wall class.
+  entities:
+    - synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
+    - transport.obstructions-are-moved-never-destroyed
+    - sheaf.wall-class
+    - synthesis.wall-class-one-rung-obstruction
+    - sheaf.conservation-degeneracy-absolute-form
+    - std-algebra.periodicity
+    - synthesis.kerr-ring-double-cover-data
+  added: 2026-11-18
+- id: op.gravitational-field-at-null-momentum
+  title: "The gravitational gauge field at null momentum, and commutation with matter at spacelike separation"
+  area: quantum-fields
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "The lattice-model result of 18 November 2026, the working notes of 12 October 2026 behind the registered entanglement prediction, and Leon's decision of 18 November (record as open; no position changed)"
+  statement: >-
+    The series holds no quantum of the gravitational gauge field (conventions, section ``Gravity and the
+    graviton''), and its registered entanglement prediction treats the field of a body, in the static limit,
+    as an operator built from the matter's commuting numbers
+    (\claimref{field-theory.operator-newtonian-coupling}). At first order the field is fixed by its source at
+    every non-null momentum, and at null momentum two components are not
+    (\claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}, clause (i)).
+    Decide what the series says of those two components, and whether it requires its gravitational field to
+    commute with the observables of matter at spacelike separation: a condition the store does not state, and
+    which, in a scalar lattice model, a field with no variable of its own fails and a free part with canonical
+    commutators restores
+    (\claimref{synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation}).
+  why: >-
+    The third addendum to the entanglement registration (12 October 2026) says that the full theory needs a
+    radiative sector with quantum states; the conventions (10 November 2026) say the field has no quantum.
+    The store holds neither the argument of the first nor a reason for the second beyond the decision. The
+    registered phase does not depend on the answer, but three stored items do: the baseline of the dimmed
+    evaporation burst (emission into the helicity-two channels, the term $g$), the ontology readings of the
+    note listing where stored text names a graviton, and the one-algebra programme of
+    op.einstein-from-the-field-theory.
+  known: >-
+    (18 November.) In the lattice model the slaved field fails to commute with the source's later detection
+    at $172$ of $502$ spacelike events; its own bracket vanishes, so the stored locality theorem for free
+    fields is not what fails; an instantaneous slaved field fails likewise; a free part with canonical
+    commutators restores commutation to first order. The transfer to the gravitational gauge field is argued,
+    by the standard argument, and the model has no gauge constraint and no spin two. The production rate of
+    the dark towers' heating does not depend on the answer (it is at non-null momentum). The working notes of
+    12 October found that the failure is unobservable in the proposed experiments only under a floor on
+    localisation at the Planck length, which they did not derive, and that the tower cannot supply canonical
+    commutators for a field in the bulk (\claimref{field-theory.no-canonical-commutation-relations-tower});
+    those notes are not stored results.
+  attack:
+    - >-
+      State the condition: does any stored premise, or the unitarity behind the registered prediction, imply
+      that the gravitational field commutes with matter observables at spacelike separation? If not, say what
+      the series puts in its place (no signalling stated on dressed observables, for instance).
+    - >-
+      The localisation floor: do the cutoff premises (C1) and (C2), or the finite count of boundary modes,
+      supply a bound on localisation under which the model's failure cannot be observed? A derivation, or a
+      counter-model.
+    - >-
+      Repeat the model with the constraint structure of the gauge field: a field whose instantaneous part is
+      fixed by a constraint and whose observables are dressed, in the spacetime algebra, at first order.
+    - >-
+      If a free part is admitted: is it the palatial storey on the two null-momentum components, and does the
+      convention on the graviton then read ``no quantum is posited, the free part of the field carries
+      states''? If it is not admitted: restate the burst baseline with $g = 0$.
+  success: >-
+    A stored statement of what the series requires of its gravitational field at spacelike separation, with
+    the two null-momentum components either given states or shown to need none, and the burst baseline and
+    the conventions restated to match.
+  entities:
+    - synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation
+    - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order
+    - pred.gravity-entangles-standard-phase
+    - pred.dimmed-evaporation-bursts
+    - field-theory.operator-newtonian-coupling
+    - field-theory.no-canonical-commutation-relations-tower
+    - note.synthesis.where-stored-text-names-a-graviton
+  added: 2026-11-18

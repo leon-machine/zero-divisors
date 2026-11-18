@@ -7,10 +7,11 @@ polynomial in pi), the hot-deposit xi^4 = 4 (n_B/s) g*/g_d (rational), and Delta
 (i)/(iv) The two readings: the charge reading gives f_2 = Q_2 m/(Q_6 m) = 1 for every xi (Q = eps N,
 the same eps and N in both towers, checked at sample xi), the thermal reading f_2 ~ xi^3, at most
 0.448^3 in (0.0899, 0.0900) under the cap and below 1e-7 anywhere in [floor, hot deposit]; they differ.
-(ii) Origin: the gravitational yield at the ceiling falls short of n_B/s by more than 1e4 (both
-countings).
+(ii) Origin: the gravitational yield at the ceiling, counted in quanta (two per creation event, the
+seeding export QUANTA_PER_EVENT), is 3.9e-14 per unit entropy and falls short of n_B/s by more than
+1e3 and less than 1e4 (it was more than 1e4 with the coefficients first imported).
 (iii) eta in (6.1, 6.2) x 10^-10; the crossover eta^(1/3) in (8.4, 8.6) x 10^-4 ("8.5e-4"); eta' = eta/xi^3
-in (19, 26) at the floor and (0.007, 0.009) at the hot deposit, and eta'/eta = xi^-3 above 1e7
+is 4.36 ("4.4") at the floor and in (0.007, 0.009) at the hot deposit, and eta'/eta = xi^-3 above 1e7
 throughout; Delta N_eff = 7.447 xi^4 at least eight orders below the cap 0.3 on the whole interval;
 the bottom of the ceiling range lowers the floor by a factor in (3.7, 3.8) x 10^-3 ("four parts in a
 thousand").
@@ -103,9 +104,19 @@ def check_origin_gravity_cannot_supply_the_charge():
     s = k["seeding"]
     k2lo, k2hi = s["kappa2_bracket"]()
     Y2_hi = s["y_kappa"](k["c_hi"], s["TCEIL"]) ** 2 / k2lo
-    ok = k["nb_s"] ** 2 > F(10 ** 4) ** 2 * Y2_hi
+    Y2_lo = s["y_kappa"](k["c_lo"], s["TCEIL"]) ** 2 / k2hi
+    # Y counts creation events; the quanta are QUANTA_PER_EVENT (two) per event
+    q = s["QUANTA_PER_EVENT"]
+    ok = q == 2
+    # the quoted 3.9e-14 quanta per unit entropy (1.95e-14 events)
+    ok = ok and all(root_rounds_to(q ** 2 * y2, 39, -15) for y2 in (Y2_lo, Y2_hi))
+    ok = ok and all(root_rounds_to(y2, 195, -16) for y2 in (Y2_lo, Y2_hi))
+    # more than three orders short even counting every quantum, and not four
+    ok = ok and k["nb_s"] ** 2 > F(10 ** 3) ** 2 * q ** 2 * Y2_hi
+    ok = ok and k["nb_s"] ** 2 < F(10 ** 4) ** 2 * q ** 2 * Y2_lo
     ok = ok and F(86, 10 ** 12) < k["nb_s"] < F(87, 10 ** 12)
-    GA.check("prop:charge(ii): gravitational production at the ceiling is more than four orders short of n_B/s", ok)
+    GA.check("prop:charge(ii): gravitational production at the ceiling, 3.9e-14 quanta per unit entropy, is more than "
+             "three orders (and less than four) short of n_B/s", ok)
     return ok
 
 
@@ -119,10 +130,12 @@ def check_eta_prime_and_radiation_over_the_interval():
     # crossover eta^(1/3) = 8.494520e-4, the quoted 8.5e-4
     ok = ok and root_rounds_to(eta, 8494520, -10, 3) and root_rounds_to(eta, 85, -5, 3)
     f_lo, f_hi = k["floor8"]
-    # eta' = eta/xi^3 at the two ends of the floor (decimal evaluation of the export's brackets):
-    # 19.35951 and 25.79277, the quoted 19 to 26
-    ok = ok and root_rounds_to(eta ** 8 / f_hi ** 3, 1935951, -5, 8)
-    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 2579277, -5, 8)
+    # eta' = eta/xi^3 at the floor (the export's bracket is now the pi bracket of one value of c):
+    # 4.36175, the quoted 4.4; the floor itself rounds to the quoted 5.2e-4
+    ok = ok and root_rounds_to(eta ** 8 / f_hi ** 3, 436175, -5, 8)
+    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 436175, -5, 8)
+    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 44, -1, 8)
+    ok = ok and root_rounds_to(f_lo, 52, -5, 8) and root_rounds_to(f_hi, 52, -5, 8)
     h4 = k["xi_hot4"]
     # at the hot deposit eta' = 0.00801638 (the quoted 0.008) and eta'/eta = xi^-3 = 1.307862e7, the
     # smallest over the interval, above the quoted 1e7
@@ -131,7 +144,7 @@ def check_eta_prime_and_radiation_over_the_interval():
     # Delta N_eff = 7.447 xi^4 below the cap 0.3 by 1.24130e8 at the hot end (the largest xi of the
     # interval): at least eight orders
     ok = ok and all(rounds_to(F(3, 10) / (m * h4), 124130, 3) for m in k["mirror"])
-    GA.check("prop:charge(iii): eta in (6.1, 6.2)e-10, eta^(1/3) in (8.4, 8.6)e-4; eta' from (19, 26) at the floor to "
+    GA.check("prop:charge(iii): eta in (6.1, 6.2)e-10, eta^(1/3) in (8.4, 8.6)e-4; eta' from 4.4 at the floor to "
              "(0.007, 0.009) at the hot deposit; eta'/eta > 1e7; Delta N_eff eight orders below the cap", ok)
     return ok
 

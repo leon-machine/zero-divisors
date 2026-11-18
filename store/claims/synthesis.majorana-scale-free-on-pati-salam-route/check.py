@@ -229,8 +229,9 @@ def check_stored_inequalities_leave_an_interval():
         GA.check("interval nonempty at m_t(M_I) = %s" % m_t, lower < upper_min)
         GA.check("width exceeds a factor 83 for m_t(M_I) <= 100", upper_min / lower > 83)
     GA.check("lower end 5.49e9 GeV at m_t = 91", F(549, 100) * 10 ** 9 < lo_of(F(91)) < F(550, 100) * 10 ** 9)
-    # the seeding window (M_3 > 1.36e12 GeV, quoted, not used) lies above 4 pi v_R < (22/7) 4 v_R = 5.28e11
-    GA.check("seeding window disjoint from the interval", F(22, 7) * 4 * v_R < F(136, 100) * 10 ** 12)
+    # the seeding window (M_3 > 8.3e11 GeV with the derived production coefficients, quoted, not used) lies above
+    # 4 pi v_R < (22/7) 4 v_R = 5.28e11
+    GA.check("seeding window disjoint from the interval", F(22, 7) * 4 * v_R < F(83, 100) * 10 ** 12)
     return True
 
 

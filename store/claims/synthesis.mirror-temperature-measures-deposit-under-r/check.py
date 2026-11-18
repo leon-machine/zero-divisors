@@ -1,8 +1,10 @@
 """synthesis.mirror-temperature-measures-deposit-under-r: exact arithmetic.
 
 xi = T'/T is the mirror-to-visible temperature ratio. Inputs (stored, decimal values written as
-exact rationals): the mirror's gravitational floor 2.8e-4 to 3.2e-4 at T_ref = 6e14 GeV and the
-nine-vector tower's 3.5e-4 there; floor^4 scales as T^3; Premise (R) caps T_desc at alpha, at most
+exact rationals): the mirror's gravitational floor, at most 5.2e-4 at T_ref = 6e14 GeV, and the
+nine-vector tower's, at most 6.4e-4 there (the coefficients proposition's values at the derived
+production coefficients, 5.199e-4 and 6.375e-4, each below the rounded figure used here; the export
+is compared with the two figures below); floor^4 scales as T^3; Premise (R) caps T_desc at alpha, at most
 1e13 GeV at either end of Hypothesis (U); baryons per entropy Y_B = 8.7e-11; helium interval
 3e-3 <= xi <= 2e-2; Neff cap xi < 0.448. With g = 106.75 in both towers above the electroweak
 scale, rho = (pi^2/30) g T^4 and s = (2 pi^2/45) g T^3, so a deposit eps*T per unit charge gives
@@ -16,7 +18,7 @@ from tp_premise import premise
 def check_mirror_temperature_measures_deposit():
     premise("neutrino.r-descent-reheats-below-lower-heavy")
     premise("dark-matter.seeding-gravity-floor-dark-towers-temperature")
-    premise("dark-matter.coefficients-floors-they-give-what-gravity")
+    co = premise("dark-matter.coefficients-floors-they-give-what-gravity")["cosmo"]()
     premise("dark-matter.stored-asymmetry-charge-not-number")
     premise("dark-tower-matter.mirrors-composition")
     premise("dark-matter.open-channels-their-costs")
@@ -24,8 +26,11 @@ def check_mirror_temperature_measures_deposit():
 
     t_ref = F(6) * 10 ** 14
     t_cap = F(10) ** 13
-    mirror_floor_hi = F(32, 100000)
-    five_dim_floor = F(35, 100000)
+    mirror_floor_hi = F(52, 100000)
+    five_dim_floor = F(64, 100000)
+    # the two figures bound the exported floors from above (xi^8 brackets of the coefficients proposition)
+    assert co["floor8"][1] < mirror_floor_hi ** 8
+    assert co["seeding"]["xi8_bracket"](co["c_nine"][1], F(18))[1] < five_dim_floor ** 8
     yb = F(87, 10 ** 12)
     he_lo, he_hi = F(3, 1000), F(2, 100)
     cap = F(448, 1000)
@@ -34,13 +39,13 @@ def check_mirror_temperature_measures_deposit():
     scale = (t_cap / t_ref) ** 3
     fm4 = mirror_floor_hi ** 4 * scale
     f5_4 = five_dim_floor ** 4 * scale
-    assert fm4 < F(15, 10 ** 6) ** 4 and f5_4 < F(17, 10 ** 6) ** 4
-    assert (200 ** 4) * fm4 < he_lo ** 4
-    # the nine-vector tower's floor sits 184 to 185 times below 3e-3, not 200
-    assert (184 ** 4) * f5_4 < he_lo ** 4 < (185 ** 4) * f5_4
-    # without (R): the ceiling floor shifts xi^4 at the helium edge by 1.2e-4 to 1.3e-4
+    assert fm4 < F(25, 10 ** 6) ** 4 and f5_4 < F(30, 10 ** 6) ** 4
+    assert (120 ** 4) * fm4 < he_lo ** 4
+    # the nine-vector tower's floor sits 101 to 102 times below 3e-3, not 120
+    assert (101 ** 4) * f5_4 < he_lo ** 4 < (102 ** 4) * f5_4
+    # without (R): the ceiling floor shifts xi^4 at the helium edge by 9.0e-4 to 9.1e-4
     rel = mirror_floor_hi ** 4 / he_lo ** 4
-    assert F(12, 10 ** 5) < rel < F(13, 10 ** 5)
+    assert F(90, 10 ** 5) < rel < F(91, 10 ** 5)
     assert mirror_floor_hi ** 4 * (F(4, 10 ** 13) / t_ref) ** 3 < fm4  # monotone in T
 
     # (ii) deposit law: xi^4 = (4/3) Y_B eps (pi cancels between rho and s)

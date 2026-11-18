@@ -35,7 +35,7 @@ derivations:
   - standard-model.majorana-element@7
   - standard-model.invariant-pairing-five-modes@5
   - standard-model.imported-anomaly-coefficients@1
-  - dark-tower-matter.mirrors-composition@3
+  - dark-tower-matter.mirrors-composition@4
   - synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch@5
   - synthesis.rung-field-coupling-to-its-conjugate-is-the-second-family-matrix@4
   - synthesis.imported-anomalous-weak-process-changes-b-plus-l-and-keeps-b-minus-l@1

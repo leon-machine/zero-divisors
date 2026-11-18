@@ -1,12 +1,14 @@
 ---
 id: transport.obstructions-are-moved-never-destroyed
 kind: claim
-version: 3
+version: 4
 title: Obstructions are moved, never destroyed
-status: conjectured
+status: refuted
 region: transport
 subject: zero-divisors
-tags: [degenerate-algebras, obstruction-types]
+tags: [degenerate-algebras, obstruction-types, refutation]
+refuted_by:
+- synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
 proposed_by:
   kind: extraction
   session: pilot-2026-10-20
@@ -21,7 +23,14 @@ credit:
   role: 'restatement: completion read strictly, hypothesis moved beyond the tame corank-one case, note on the rung count'
   version: 3
   source: 'maintainer pass of 2026-11-11 (run 2026-11-11-contradictions)'
+- name: Claude Fable 5.2
+  role: 'status: refuted as stated, by the result that decides it; a dated note at every level says which parts are false, which true and what replaces the conjecture'
+  version: 4
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate), at Leon''s decision'
 amendments:
+- version: 4
+  kind: restatement
+  defect: 'the conjecture was open; it is decided: its general assertion is false in each of the three ways tameness can fail, its displaced-locus clause is false even where the signature jumps, and its invariant is not built from the residues modulo eight'
 - version: 3
   kind: restatement
   defect: 'the hypothesis (degenerating tamely) was the case already proved while the text said the pattern is not an artefact of the tame case, and completion was undefined: read loosely the statement is contradicted on tame walls by clauses (2) and (3) of synthesis.wall-class-one-rung-obstruction'
@@ -42,6 +51,10 @@ locators:
   label: conj:conservation
   line: 1555
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 3 -> 4, at Leon''s decision of 18 November 2026: status conjectured -> refuted (as stated), refuted_by the result that decides it; the conjecture''s text is kept, with a dated note at every level. What is still open is op.eigenbundle-class-of-degenerations.'
   maintainer_pass_2026_11_11:
     by: maintainer-2026-11-11
     date: '2026-11-11'
@@ -69,13 +82,19 @@ Proposition \claimref{transport.no-transport-terminates} is the zero-dimensional
 
 \emph{Note (what is not conjectured, 2026-11-11).} The deposited wording (T1, Conjecture 7.9, kept under source\_formal) states its hypothesis as ``degenerating tamely'', which is the proved case, while asserting that the pattern is not an artefact of the tame case, and it does not say what a completion is. Read loosely, with the exterior model allowed to change across the wall, the statement would be false on tame walls: clauses (2) and (3) of Theorem \claimref{synthesis.wall-class-one-rung-obstruction} give forms nondegenerate at every point and of one signature. There the obstruction is not destroyed either, but it is paid for in rungs and not in a displaced wall: a completion by $k$ hyperbolic planes needs $w_{1}(\shL)^{k} = 0$ (Theorem \claimref{synthesis.wall-rung-count-is-height-of-dying-line-class}), the class of the dying line is conserved along the wall sequence (Theorem \claimref{synthesis.twisted-wall-induction-conserves-dying-line-class}), and the stored counts on lens walls grow with the dimension. The sheaf-level form of the question is Conjecture \claimref{sheaf.wall-class}.
 
+\emph{Decided (2026-11-18): refuted as stated.} Theorem \claimref{synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump} decides the conjecture for every continuous family. (i) Its general assertion is false: $x^{2}$ (not first order), $\operatorname{diag}(x,-x)$ (corank two) and $x^{2} + y^{2}$ (a point locus) each have a completion with one fixed exterior form that is nondegenerate everywhere. (ii) Where the signature of the family jumps, no completion of one exterior signature is nondegenerate everywhere, with no tameness assumed; but the degeneration need not lie on a displaced locus on the other side: its place depends on the adjoined form and can be the original locus or either side. (iii) The invariant is not built from the residues modulo $8$: a family of rank four jumping from $(4,0)$ to $(0,4)$ has equal residues and is obstructed. What holds for every family is a transfer statement: a completion that is nondegenerate everywhere carries on its complement the opposite of the class of the family's eigenbundles, so the obstruction is moved into what is adjoined. The classification of that class is open problem op.eigenbundle-class-of-degenerations.
+
 ## technical
 Conjectured, in the strict reading: a completion is $G \perp K$ with one signature of $K$ on every region where $G$ is nondegenerate. For families degenerating beyond the tame corank-one case, any such completion that is nondegenerate of constant signature on one side of the locus degenerates on a displaced locus on the other, and a cohomological invariant, presumably built from the mod-8 residues on the two sides, measures it. The tame corank-one case is proved (the one-sided completion theorem and the shadow wall; the obstruction is the clock mismatch $2 \in \mathbb{Z}_{8}$).
 
 With the exterior model allowed to change across the wall the statement would be false on tame walls, where nondegenerate forms of one signature exist; the obstruction is then paid for in rungs, counted by the class of the dying line.
 
+Decided on 18 November 2026: refuted as stated. Three families outside the tame case ($x^{2}$, $\operatorname{diag}(x,-x)$, $x^{2}+y^{2}$) have completions with one fixed exterior form that are nondegenerate everywhere; where the signature jumps no completion of one exterior signature is, but its degeneration need not be displaced to the other side; and the class of the family's eigenbundles is an obstruction (in degree zero the integer signature), where a residue modulo $8$ is not. The true general statement is the transfer clause of the deciding theorem.
+
 ## lay
 Each repair of a failure of division seems to create a new failure somewhere else. This conjecture proposes that the same holds when the geometry varies from place to place: fixing a degeneration on one side of a boundary pushes it to a new boundary on the other side. That is proved in the simplest case, and conjectured beyond it. If the repair may use different extra structure on the two sides, the failure can be removed, but only by adding more structure, and how much must be added is itself a measure of the obstruction.
 
+This conjecture has now been decided, and as first stated it is false. Some failures of the kind it describes can be repaired everywhere with nothing left over. Where the geometry changes its signature the repair is impossible, as conjectured, though the failure does not have to reappear on the far side. What is always true is a sharper statement: a repair that works everywhere has to carry, inside what it adds, the mirror image of the twist the broken geometry had. The obstruction is moved into the added structure, not removed.
+
 ## one-liner
-Conjecturally, beyond the tame corank-one case (where it is proved), no standard completion $G \perp K$ of a degenerating family of quadratic forms is nondegenerate globally: completion relocates the degeneration; with the exterior model allowed to change, the obstruction is instead paid for in rungs.
+Refuted as stated (18 November 2026): beyond the tame corank-one case a completion $G \perp K$ with one exterior form can be nondegenerate globally ($x^{2}$, $\operatorname{diag}(x,-x)$, $x^{2}+y^{2}$); a signature jump does obstruct, without tameness and without a displaced locus; what holds always is transfer, the complement carrying the opposite of the family's eigenbundle class.

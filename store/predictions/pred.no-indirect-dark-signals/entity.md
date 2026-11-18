@@ -1,7 +1,7 @@
 ---
 id: pred.no-indirect-dark-signals
 kind: prediction
-version: 5
+version: 6
 title: No indirect dark-sector signals
 status: live
 subject: dark-matter
@@ -25,6 +25,14 @@ credit:
   role: 'pointer to the open problem on the imported graviton-exchange rate; prediction unchanged'
   version: 5
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'the sentence on graviton exchange reworded: the pair-to-pair transition and its rate are now derived in the store without a quantum of the gravitational field; prediction, kill condition and status unchanged'
+  version: 6
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+amendments:
+- version: 6
+  kind: restatement
+  defect: 'the formal and technical levels said that graviton exchange imports a process the series does not hold and left open whether the classical gauge field gives an annihilation channel at that rate, at another or at none; the pair-to-pair transition through the gravitational field is now derived in the store from the operator source, with corrected coefficients for the thermal rate'
 review: typed
 kill_condition:
   threshold: Any confirmed indirect signal
@@ -50,6 +58,10 @@ locators:
   number: T17 stance 8
   label: tab:stances
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 5 -> 6, at Leon''s decision of 18 November 2026. The sentence of 10 November pointing to open problem op.graviton-rate-as-classical-field-process is replaced, at the formal and technical levels, by one saying that the pair-to-pair transition through the gravitational field and its rate are derived in the store (synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, clauses (ii) and (v)), under that result''s hypothesis (OS) or on the standard account. The prediction, its status, its kill condition and its threshold are unchanged. The basis pin to dark-matter.stored-asymmetry-charge-not-number moves to its version of the same day (the charge reading used here is unchanged).'
   maintainer_pass_2026_11_10_graviton:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -80,14 +92,14 @@ derivations:
 - name: basis
   uses:
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - dark-matter.stored-asymmetry-charge-not-number@11
+  - dark-matter.stored-asymmetry-charge-not-number@12
 ---
 
 ## formal
-No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$, and for the mirror, a charge-asymmetric relic, further by its negligible anti-mirror density. The words ``graviton exchange'' import a process of a quantised gravitational field, which the series does not hold (conventions, section ``Gravity and the graviton''); whether the classical gauge field sourced by matter gives an annihilation channel at that rate, at another or at none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
+No indirect dark-sector signals: no decay products, since the tower charge is superselected, and annihilation products only at the rate of graviton exchange, suppressed by powers of $E/M_{P}$, and for the mirror, a charge-asymmetric relic, further by its negligible anti-mirror density. The words ``graviton exchange'' name the process as its sources compute it; the series holds no quantum of the gravitational field (conventions, section ``Gravity and the graviton''). The store now derives the transition of a pair of one species into a pair of another through the gravitational field from the operator source, with no such quantum, at a rate carrying $\bar{M}_{P}^{-4}$ and with corrected coefficients for the thermal rate (Theorem \claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}(ii) and (v), under its hypothesis (OS); the standard account gives the same tree-level rate), so the annihilation channel is the gravitationally suppressed one this stance assumes, and the prediction is unchanged.
 
 ## technical
-In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$; for the mirror it acts on a charge-asymmetric relic with negligible anti-mirror density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), while the odd towers' matter, if any, is a symmetric relic (Proposition \claimref{dark-matter.population-count-one-share-half-percent}(ii)) whose annihilation into this tower is held down by the graviton suppression alone. Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q). The words ``graviton exchange'' import a process of a quantised gravitational field, which the series does not hold (conventions, section ``Gravity and the graviton''); whether the classical gauge field sourced by matter gives an annihilation channel at that rate, at another or at none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
+In the framework dark matter couples to ordinary matter through gravity alone at first order. It cannot decay into ordinary particles, because its tower charge is superselected, and its only annihilation channel into them is graviton exchange, suppressed by powers of $E/M_{P}$; for the mirror it acts on a charge-asymmetric relic with negligible anti-mirror density (the mirror's stored asymmetry is a charge fixed by the descent, Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}), while the odd towers' matter, if any, is a symmetric relic (Proposition \claimref{dark-matter.population-count-one-share-half-percent}(ii)) whose annihilation into this tower is held down by the graviton suppression alone. Indirect-detection surveys, which look for such annihilation or decay products, should see no dark-sector signal. This is registered as a conditional stance: its basis, the superselection and exact-stability result, rests on the single-frozen-point premise P1 and on the wall-sequence theorem's hypotheses, and its gravity-only clause, a first-order coupling statement, on the series' acoustic no-go, which holds within the s-wave current algebra and is conditional on the Indifference premise and premise (Q). The words ``graviton exchange'' name the process as its sources compute it; the series holds no quantum of the gravitational field (conventions, section ``Gravity and the graviton''). The store now derives the transition of a pair of one species into a pair of another through the gravitational field from the operator source, with no such quantum, at a rate carrying $\bar{M}_{P}^{-4}$ and with corrected coefficients for the thermal rate (Theorem \claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}(ii) and (v), under its hypothesis (OS); the standard account gives the same tree-level rate), so the annihilation channel is the gravitationally suppressed one this stance assumes, and the prediction is unchanged.
 
 ## lay
 Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen (and that in the mirror world there is almost no anti-matter for its matter to meet), so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.

@@ -27,7 +27,7 @@ derivations:
   uses:
   - standard-model.majorana-element@7
   - mass.imported-frozen-point-tractor-connection@6
-  - synthesis.majorana-scale-free-on-pati-salam-route@5
+  - synthesis.majorana-scale-free-on-pati-salam-route@6
   proof: proof-main.tex
 checked_by:
 - kind: check

@@ -28,7 +28,7 @@ derivations:
   - families.doublet-direction-module-georgi-jarlskog-clebsch@6
   - standard-model.imported-clebsch-structure-seesaw@1
   - synthesis.majorana-scale-is-126-doublet-vev@3
-  - synthesis.majorana-scale-free-on-pati-salam-route@5
+  - synthesis.majorana-scale-free-on-pati-salam-route@6
   - standard-model.neutrino-dirac-matrix-charged-fermions@6
   - synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition@1
   - synthesis.residual-s2-fixes-120-family-form@1

@@ -407,6 +407,14 @@ field: the graviton does not exist here. Where stored text says graviton it name
 classical field, a counting convention, or prior art; no stored result is to be read as resting on a quantised
 gravitational field, and results that import such a process are flagged.
 
+Scope of that position (18 November 2026). At first order the field is fixed by its source at every non-null
+momentum, so processes there (the plasma's production of a gravitationally coupled species among them) need no
+state of the field, given the operator source of that result, (OS), which is kept as its hypothesis (a mean-field
+source gives no such process), and are stored as derived on that hypothesis. What the series says of the two components at null momentum that
+the source does not fix, and whether it requires its gravitational field to commute with matter observables at
+spacelike separation, is not decided: open problem op.gravitational-field-at-null-momentum. Until it is, no
+stored result is to be read as asserting or denying a free part of the field with states of its own.
+
 ## Working with the store
 
 - Start broad: `list_subjects`, `list_tags`, then `trail(subject)` for the

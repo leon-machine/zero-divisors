@@ -1,7 +1,7 @@
 ---
 id: synthesis.majorana-scale-free-on-pati-salam-route
 kind: claim
-version: 5
+version: 6
 title: 'The Majorana scale is free on the Pati-Salam route'
 status: proved
 region: synthesis
@@ -29,6 +29,15 @@ credit:
   role: 'GA rewrite (the complex field named by its unit)'
   version: 5
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Fable 5.2
+  role: 'quoted seeding window restated with the derived production coefficients (8.3e11 GeV in place of 1.36e12 GeV); conclusion unchanged'
+  version: 6
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+amendments:
+- version: 6
+  kind: restatement
+  defect: 'clause (iii) quoted the seeding window M_3 > 1.36e12 GeV, computed with the first imported production coefficients; with the derived coefficients the window of the restated seeding result is M_3 > 8.3e11 GeV'
+  evidence: check.py::check_stored_inequalities_leave_an_interval
 review: draft
 derivations:
 - name: main
@@ -62,6 +71,10 @@ lineage:
   - neutrino.m-framework-realises-majorana-term-scale
   - standard-model.what-angle-asks-neutrino-sector
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 5 -> 6: the quoted seeding window is restated from 1.36e12 GeV to 8.3e11 GeV, following the restated seeding result; it still lies above 4 pi v_R, so clause (iii) is otherwise unchanged.'
   maintainer_pass_ga_rewrite:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -87,7 +100,7 @@ Assume Fact \claimref{standard-model.imported-clebsch-structure-seesaw}: with $1
 \begin{enumerate}
 \item[(i)] \emph{(What moves.)} $M_{u}, M_{\nu}, M_{d}, M_{e}$ are invariant; $M_{R} \mapsto \lambda M_{R}$ and $m_{\nu} \mapsto \lambda^{-1}m_{\nu}$. Hence $m_{\nu}m_{\nu}^{\dagger} \mapsto |\lambda|^{-2}m_{\nu}m_{\nu}^{\dagger}$: the lepton mixing and every ratio of light masses are invariant, the heavy masses scale by $|\lambda|$ and the light ones by $|\lambda|^{-1}$.
 \item[(ii)] \emph{(What the store fixes is invariant.)} Premise (EW), $4w_{u}f_{33} = m_{t}$ with $(M_{\nu})_{33} = 0$, is invariant; so is Hypothesis (U) in its Dirac-eigenvalue reading, a condition on the singular values of $M_{\nu}$ (Theorem \claimref{synthesis.hypothesis-u-under-ew-is-a-charged-fermion-condition}). The chain (Proposition \claimref{standard-model.chain}) and the triplet vev $v_{R} = M_{I}/g_{R}$ it gives (Proposition \claimref{standard-model.what-angle-asks-neutrino-sector}) are determined by the gauge content and the gauge coefficients, so they are invariant. Of the eighteen observables the fits of Proposition \claimref{standard-model.fits-record-level} reproduce, seventeen (nine charged-fermion masses, four CKM numbers, three lepton angles, $m_{3}/m_{2}$) are invariant and one, $m_{3}$, scales by $|\lambda|^{-1}$.
-\item[(iii)] \emph{(The scale is valued, not derived.)} Consequently, if any one model of these relations reproduces the record, the orbit $\{g_{\lambda}\}$ of that model satisfies every stored equality except the value of $m_{3}$, and the stored relations determine the Majorana scale only through the observed $m_{3}$: the heavy-direction entry $(M_{R})_{33} = m_{t}v_{R}/(4w_{u})$ (Theorem \claimref{synthesis.majorana-scale-is-126-doublet-vev}) is a free input on the stored relations. Its admissible range is set by inequalities: perturbativity $|f_{33}| \le 4\pi$ and $|w_{u}| \le v$ give $m_{t}v_{R}/(4v) \le |(M_{R})_{33}| \le 4\pi v_{R}$, a range wider than a factor $83$ for $m_{t}(M_{I}) \le 100$ GeV, and the gravitational-seeding window for the odd towers under Premise (R), $M_{3} > 1.36 \times 10^{12}$ GeV, lies wholly above it.
+\item[(iii)] \emph{(The scale is valued, not derived.)} Consequently, if any one model of these relations reproduces the record, the orbit $\{g_{\lambda}\}$ of that model satisfies every stored equality except the value of $m_{3}$, and the stored relations determine the Majorana scale only through the observed $m_{3}$: the heavy-direction entry $(M_{R})_{33} = m_{t}v_{R}/(4w_{u})$ (Theorem \claimref{synthesis.majorana-scale-is-126-doublet-vev}) is a free input on the stored relations. Its admissible range is set by inequalities: perturbativity $|f_{33}| \le 4\pi$ and $|w_{u}| \le v$ give $m_{t}v_{R}/(4v) \le |(M_{R})_{33}| \le 4\pi v_{R}$, a range wider than a factor $83$ for $m_{t}(M_{I}) \le 100$ GeV, and the gravitational-seeding window for the odd towers under Premise (R), $M_{3} > 8.3 \times 10^{11}$ GeV at the largest content the seeding result considers (\claimref{synthesis.seeding-remainder-excludes-perturbative-pati-salam}, with the derived production coefficients), lies wholly above it.
 \item[(iv)] \emph{(One vev, two numbers.)} On this route the triplet vev sets $M_{I}$ through the gauge coupling and $M_{R}$ through the Yukawa coupling $f$. A derivation of $v_{R}$ would make $\sin^{2}\theta_{W}$ a prediction (one more equation for the chain's three unknowns) and would leave $M_{R}$ free; a derivation of $M_{R}$ alone fixes $\lambda$ and predicts nothing about $\sin^{2}\theta_{W}$. Only a relation fixing $f$ (or $w_{u}$) in terms of the gauge data would do both.
 \item[(v)] \emph{(Not a function of $N$ or $v/H$.)} Neither $N = M_{P}/H$ nor the rung unit $v/H$ appears in any relation of (i) to (iii), so $g_{\lambda}$, composed as above when the electroweak normalisation is imposed, acts at fixed $N$ and $v/H$: on the stored relations the Majorana scale is an input beside them, not a function of them.
 \end{enumerate}

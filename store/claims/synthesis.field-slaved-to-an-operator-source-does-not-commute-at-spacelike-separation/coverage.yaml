@@ -1,0 +1,26 @@
+functions:
+  check_matter_factor_is_nonzero_when_paths_source_differently:
+    kind: complete
+    clauses:
+    - '(1) the path projectors, recombiner and detection in Cl(1,1), and [J, O] = (c1 - c2) p q e2 at one parameter set with two controls'
+    omits: 'one rational parameter set; the identity for all parameters is the proof''s'
+  check_free_field_keeps_its_form_and_the_response_is_minus_the_commutator:
+    kind: complete
+    clauses:
+    - '(3) the free field''s commutation form over seven steps; G = -Delta for t > t'', G = 0 for t <= t'' and outside the forward cone, on the whole grid'
+    omits: 'the grid |n| <= 18, t <= 18 with six source times'
+  check_slaved_field_does_not_commute_at_spacelike_separation:
+    kind: complete
+    clauses:
+    - '(2) the sum of G is nonzero at 172 of the 502 spacelike events, with named events; the slaved field''s own bracket vanishes'
+    omits: 'the statement on an instantaneous field is the proof''s one-line remark'
+  check_free_part_restores_commutation_at_spacelike_separation:
+    kind: complete
+    clauses:
+    - '(4) the sum of G + Delta vanishes at all 502 spacelike events, is supported in the past cones of the source events, and is nonzero at timelike events'
+    omits: 'the sign with which the two terms combine is derived in the proof, not by the check; first order in g'
+  check_einstein_map_kernels_at_non_null_and_null_momentum:
+    kind: sampled
+    clauses:
+    - '(5) rank 6 at four non-null momenta and rank 4 at two null momenta'
+    omits: 'the invariance argument that extends the six momenta to all is the proof''s'

@@ -2,15 +2,15 @@ functions:
   check_boltzmann_yield:
     kind: sampled
     clauses: ["Y = c T_desc^3 / (3 kappa_s M_P^3)"]
-    omits: "Gamma/(H T s) = c T^2/(kappa_s M^3) is checked at nine rational (h, sigma, T) samples with H = h T^2/M, s = sigma T^3 assumed; the antiderivative T^3/3 is exact but the Riemann-sum bracket is a numerical sanity check; the Boltzmann equation dY/dT = -Gamma/(H T s) itself is taken"
+    omits: "Gamma/(H T s) = c T^2/(kappa_s M^3) is checked at nine rational (h, sigma, T) samples with H = h T^2/M, s = sigma T^3 assumed; the antiderivative T^3/3 is exact but the Riemann-sum bracket is a numerical sanity check; the Boltzmann equation dY/dT = -Gamma/(H T s) itself is taken; that the rate counts events of two quanta is taken from the pair-production theorem (its check exports nothing), and the yield 2Y of quanta is the same identity with source 2 Gamma"
   check_kappa_and_convention:
     kind: exact
     clauses: ["kappa_s = 145.3 at g_* = g_s = 100"]
     omits: ""
   check_floor_prefactor_and_scaling:
     kind: sampled
-    clauses: ["xi_floor = 9.6e-4 c^(1/4) (16/g_d)^(1/4) (T_desc/6e14 GeV)^(3/4)"]
-    omits: "the prefactor is an exact bracket at one point (c = 1, g_d = 16, T = 6e14, M_P = 2.435e18); the scaling in c, g_d, T_desc is checked at three samples; the energy fraction 4Y is taken as input"
+    clauses: ["xi_floor = 9.6e-4 c^(1/4) (16/g_d)^(1/4) (T_desc/6e14 GeV)^(3/4)", "energy fraction 4Y at 3T per event, 8Y at 3T for each of the two quanta, ratio larger by 2^(1/4) = 1.19"]
+    omits: "the prefactor is an exact bracket at one point (c = 1, g_d = 16, T = 6e14, M_P = 2.435e18); the scaling in c, g_d, T_desc is checked at three samples; the energy fraction is the rational identity 3 (2/45) 30 = 4 at g* = g_s, with the energy per event (3T, the stored convention) an input and not derived from the rate"
   check_ceiling_range_factor:
     kind: exact
     clauses: ["(3.5e11/6e14)^(3/4) = 3.75e-3, about 4e-3"]
@@ -23,4 +23,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "the numbers 145.3, 9.6e-4 and 3.75e-3 are bracketed exactly; the closing remarks (floor is a lower bound, deposit energy undetermined) have no computable content. 2026-10-23 (weak checks): check_kappa_and_convention pins kappa_s = 145.25993 and sqrt(8 pi^3/90) = 1.6601547 by hand (which pins the 8 and the 90); check_floor_prefactor_and_scaling pins xi_floor = 9.625149e-4; the quoted brackets are implied and were removed; scaling samples moved to module level."
+  note: "the numbers 145.3, 9.6e-4 and 3.75e-3 are bracketed exactly; the closing remarks (floor is a lower bound, deposit energy undetermined) have no computable content. 2026-10-23 (weak checks): check_kappa_and_convention pins kappa_s = 145.25993 and sqrt(8 pi^3/90) = 1.6601547 by hand (which pins the 8 and the 90); check_floor_prefactor_and_scaling pins xi_floor = 9.625149e-4; the quoted brackets are implied and were removed; scaling samples moved to module level. 2026-11-18 (maintainer pass, version 5): the two changed functions touch the pair-production theorem; the added clause (events of two quanta: yield 2Y of quanta, energy fraction 8Y against the stored 4Y, 2^(1/4) in (1.189, 1.190)) is checked exactly; not judged again by an independent judge."

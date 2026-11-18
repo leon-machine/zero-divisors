@@ -2433,7 +2433,7 @@
 ""
 ]
 ],
-"key": "9467dd2358a9ddc4",
+"key": "99337a562b4d6776",
 "result": "pass",
 "runs": [
 {
@@ -2443,7 +2443,8 @@
 "quantities": [],
 "touched": [
 "dark-matter.imported-massless-graviton-production-rate",
-"dark-matter.seeding-gravity-floor-dark-towers-temperature"
+"dark-matter.seeding-gravity-floor-dark-towers-temperature",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 },
 {
@@ -2454,7 +2455,8 @@
 "touched": [
 "dark-matter.imported-massless-graviton-production-rate",
 "dark-matter.mirror-tower-copy-one",
-"dark-matter.seeding-gravity-floor-dark-towers-temperature"
+"dark-matter.seeding-gravity-floor-dark-towers-temperature",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 },
 {
@@ -2919,7 +2921,7 @@
 "dark-matter.imported-massless-graviton-production-rate": {
 "failed": false,
 "findings": [],
-"key": "a4062f8f25324b91",
+"key": "948883f51594d414",
 "result": "none",
 "runs": []
 },
@@ -2940,7 +2942,7 @@
 "dark-matter.mirror-share-assembled": {
 "failed": false,
 "findings": [],
-"key": "e6f35a384a5e8493",
+"key": "8245a085fe5fc3e4",
 "result": "pass",
 "runs": [
 {
@@ -2976,7 +2978,7 @@
 ""
 ]
 ],
-"key": "31ea9b4632a2f5db",
+"key": "ae6745a30fdf0612",
 "result": "pass",
 "runs": [
 {
@@ -3463,7 +3465,7 @@
 ""
 ]
 ],
-"key": "2ca8070cf0bad112",
+"key": "e4780abf2f73c3ff",
 "result": "pass",
 "runs": [
 {
@@ -3595,7 +3597,7 @@
 ""
 ]
 ],
-"key": "4e1850a5850d7bc5",
+"key": "a67795f7e28bfac9",
 "result": "pass",
 "runs": [
 {
@@ -3605,7 +3607,8 @@
 "quantities": [],
 "touched": [
 "dark-matter.imported-massless-graviton-production-rate",
-"dark-matter.superselected-hence-dark-exactly-stable"
+"dark-matter.superselected-hence-dark-exactly-stable",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 },
 {
@@ -3621,7 +3624,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"dark-matter.imported-massless-graviton-production-rate"
+"dark-matter.imported-massless-graviton-production-rate",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 },
 {
@@ -3695,7 +3699,7 @@
 ""
 ]
 ],
-"key": "4cf183d907c9ae14",
+"key": "44292a43616d7859",
 "result": "pass",
 "runs": [
 {
@@ -4666,7 +4670,7 @@
 "dark-tower-matter.mirrors-composition": {
 "failed": false,
 "findings": [],
-"key": "6c5ad48e372791f6",
+"key": "f246e56196113f0c",
 "result": "pass",
 "runs": [
 {
@@ -4690,7 +4694,7 @@
 ""
 ]
 ],
-"key": "eae30916edf9e92f",
+"key": "fad6d65be0f9303b",
 "result": "pass",
 "runs": [
 {
@@ -15851,6 +15855,13 @@
 "result": "none",
 "runs": []
 },
+"note.synthesis.precedents-number-from-geometry": {
+"failed": false,
+"findings": [],
+"key": "6fac2bd0265134e1",
+"result": "none",
+"runs": []
+},
 "note.synthesis.residue-and-the-prediction": {
 "failed": false,
 "findings": [],
@@ -19677,7 +19688,7 @@
 "pred.no-dark-radiation": {
 "failed": false,
 "findings": [],
-"key": "4ab94869d787c2ed",
+"key": "1021efae2955cfdc",
 "result": "none",
 "runs": []
 },
@@ -19691,7 +19702,7 @@
 "pred.no-indirect-dark-signals": {
 "failed": false,
 "findings": [],
-"key": "b701fa6cbc63522f",
+"key": "c3f4fa2f595870b4",
 "result": "none",
 "runs": []
 },
@@ -24180,7 +24191,7 @@
 "simulations.halo-shapes": {
 "failed": false,
 "findings": [],
-"key": "443dc4e5b403cdbc",
+"key": "2cbf0ca79efd5fb1",
 "result": "none",
 "runs": []
 },
@@ -24215,7 +24226,7 @@
 "simulations.imported-mirror": {
 "failed": false,
 "findings": [],
-"key": "2115a00491cfd67d",
+"key": "565586adc583a562",
 "result": "pass",
 "runs": [
 {
@@ -24299,7 +24310,7 @@
 "simulations.merger": {
 "failed": false,
 "findings": [],
-"key": "46a96845b0d32c62",
+"key": "57620b1695318cd8",
 "result": "none",
 "runs": []
 },
@@ -24327,7 +24338,7 @@
 "simulations.s3-mirror-cluster": {
 "failed": false,
 "findings": [],
-"key": "cc18ee604e57b987",
+"key": "ea2828a75fb5b9d3",
 "result": "none",
 "runs": []
 },
@@ -31650,7 +31661,7 @@
 "synthesis.abelian-charges-of-the-sixteen-and-the-terms-that-break-them": {
 "failed": false,
 "findings": [],
-"key": "b29be9c249561da2",
+"key": "b37d511e59bd65e8",
 "result": "pass",
 "runs": [
 {
@@ -31699,7 +31710,7 @@
 "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
 "failed": false,
 "findings": [],
-"key": "90ee8937cab13cf7",
+"key": "c49bfb3156b6fa4d",
 "result": "pass",
 "runs": [
 {
@@ -31819,7 +31830,7 @@
 "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
 "failed": false,
 "findings": [],
-"key": "9e3a31abe16dee30",
+"key": "8c3f1776cb0a5e1c",
 "result": "pass",
 "runs": [
 {
@@ -34047,7 +34058,7 @@
 "synthesis.cold-mirror-needs-non-equilibrium-descent": {
 "failed": false,
 "findings": [],
-"key": "0b64427084f6bfcd",
+"key": "e4ee229df7998f2a",
 "result": "pass",
 "runs": [
 {
@@ -34403,7 +34414,7 @@
 "synthesis.colour-angle-term-under-the-stored-maps-and-no-colour-anomalous-phase-of-the-rung-coupling": {
 "failed": false,
 "findings": [],
-"key": "e46e0cd33b01d275",
+"key": "1c9c93da125b2442",
 "result": "pass",
 "runs": [
 {
@@ -34831,7 +34842,7 @@
 "synthesis.conditional-inheritance-of-b-minus-l-and-the-conversion-coefficient-as-a-gram-ratio": {
 "failed": false,
 "findings": [],
-"key": "0c89803b99c15ac8",
+"key": "b75e965df7f0523c",
 "result": "pass",
 "runs": [
 {
@@ -37425,7 +37436,7 @@
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
-"key": "fe4ebc687d68fee0",
+"key": "48ba83965347afe0",
 "result": "pass",
 "runs": [
 {
@@ -37695,6 +37706,59 @@
 "quantities": [],
 "touched": [
 "synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum"
+]
+}
+]
+},
+"synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation": {
+"failed": false,
+"findings": [],
+"key": "6352546edd27ef9f",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_matter_factor_is_nonzero_when_paths_source_differently",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling",
+"synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane"
+]
+},
+{
+"derivation": null,
+"func": "check_free_field_keeps_its_form_and_the_response_is_minus_the_commutator",
+"ok": true,
+"quantities": [],
+"touched": []
+},
+{
+"derivation": null,
+"func": "check_slaved_field_does_not_commute_at_spacelike_separation",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_free_part_restores_commutation_at_spacelike_separation",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.locality-of-the-attached-free-fields-fixes-their-statistics"
+]
+},
+{
+"derivation": null,
+"func": "check_einstein_map_kernels_at_non_null_and_null_momentum",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.no-canonical-commutation-relations-tower",
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
 ]
 }
 ]
@@ -39238,7 +39302,7 @@
 "synthesis.georgi-jarlskog-weight-free-on-the-stored-relations": {
 "failed": false,
 "findings": [],
-"key": "de0c2617726c91df",
+"key": "dae95e18ffe8142c",
 "result": "pass",
 "runs": [
 {
@@ -39286,6 +39350,59 @@
 "standard-model.imported-clebsch-structure-seesaw",
 "synthesis.residual-s2-fixes-120-family-form"
 ]
+}
+]
+},
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order": {
+"failed": false,
+"findings": [],
+"key": "87d91b469d9e542b",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_first_order_field_at_non_null_momentum_is_fixed_by_the_source",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.imported-einstein-cartan-matter-coupling",
+"synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel"
+]
+},
+{
+"derivation": null,
+"func": "check_bilinear_is_normalised_by_the_stored_newtonian_coupling",
+"ok": true,
+"quantities": [],
+"touched": [
+"field-theory.operator-newtonian-coupling"
+]
+},
+{
+"derivation": null,
+"func": "check_pair_sources_and_their_brackets",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity",
+"synthesis.imported-maxwell-stress-spacetime-algebra"
+]
+},
+{
+"derivation": null,
+"func": "check_channel_weights_are_products_of_the_spin_two_weights",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.electron-positron-to-muon-pairs-in-the-spacetime-algebra-lsz-tree-cross-section-and-one-loop-unitarity"
+]
+},
+{
+"derivation": null,
+"func": "check_rate_coefficients_and_the_published_values",
+"ok": true,
+"quantities": [],
+"touched": []
 }
 ]
 },
@@ -39830,7 +39947,7 @@
 "synthesis.holographic-thermal-fluctuations-fall-short-in-the-descent-window": {
 "failed": false,
 "findings": [],
-"key": "ac1d6ea6c9c2913b",
+"key": "6a6e1a20bdd6e7f1",
 "result": "pass",
 "runs": [
 {
@@ -40950,7 +41067,7 @@
 "synthesis.indifference-is-curie-plus-single-valuedness": {
 "failed": false,
 "findings": [],
-"key": "776073d0c86f22ff",
+"key": "25134e2f153e75af",
 "result": "pass",
 "runs": [
 {
@@ -41369,7 +41486,7 @@
 "synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
 "failed": false,
 "findings": [],
-"key": "badbaaed840b5aae",
+"key": "e64432d67f6a2f64",
 "result": "pass",
 "runs": [
 {
@@ -43033,7 +43150,7 @@
 "synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
 "failed": false,
 "findings": [],
-"key": "798042b12097c8e5",
+"key": "77a7e3da4c33eb99",
 "result": "pass",
 "runs": [
 {
@@ -43779,7 +43896,7 @@
 "synthesis.majorana-element-is-null-blade-no-frozen-point-condition": {
 "failed": false,
 "findings": [],
-"key": "db7d206aa3605091",
+"key": "44b9f2e8a17666e2",
 "result": "pass",
 "runs": [
 {
@@ -43823,7 +43940,7 @@
 "synthesis.majorana-scale-free-on-pati-salam-route": {
 "failed": false,
 "findings": [],
-"key": "65563230e816cf7c",
+"key": "54f4c756456f997b",
 "result": "pass",
 "runs": [
 {
@@ -43909,7 +44026,7 @@
 "synthesis.majorana-scale-not-carried-by-rung-frame-boost": {
 "failed": false,
 "findings": [],
-"key": "db1f71ef46716b0a",
+"key": "5551a02184add90f",
 "result": "pass",
 "runs": [
 {
@@ -44324,7 +44441,7 @@
 "synthesis.mirror-asymmetry-route-one": {
 "failed": false,
 "findings": [],
-"key": "a1b8e97969ee1f53",
+"key": "c4cdc66233851799",
 "result": "pass",
 "runs": [
 {
@@ -44370,7 +44487,7 @@
 "synthesis.mirror-temperature-measures-deposit-under-r": {
 "failed": false,
 "findings": [],
-"key": "3334054aa41ecf6e",
+"key": "b060146bd32f1b47",
 "result": "pass",
 "runs": [
 {
@@ -44775,7 +44892,7 @@
 "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
 "failed": false,
 "findings": [],
-"key": "3cb8691b85e81d98",
+"key": "8a66b8184d363f40",
 "result": "pass",
 "runs": [
 {
@@ -46275,7 +46392,7 @@
 "synthesis.pati-salam-chain-defects-cannot-source-spectrum": {
 "failed": false,
 "findings": [],
-"key": "72228ce14b04bba4",
+"key": "b89652f087bbb332",
 "result": "pass",
 "runs": [
 {
@@ -46345,7 +46462,7 @@
 "synthesis.pati-salam-monopoles-bound-descent-history": {
 "failed": false,
 "findings": [],
-"key": "1eac902fca69dc2f",
+"key": "6915f92e8d74d652",
 "result": "pass",
 "runs": [
 {
@@ -49246,7 +49363,7 @@
 "synthesis.seeding-remainder-excludes-perturbative-pati-salam": {
 "failed": false,
 "findings": [],
-"key": "0e9e636e063bda99",
+"key": "059527a919ef9401",
 "result": "pass",
 "runs": [
 {
@@ -49263,7 +49380,8 @@
 "neutrino.r-descent-reheats-below-lower-heavy",
 "standard-model.chain",
 "standard-model.what-angle-asks-neutrino-sector",
-"synthesis.gauge-algebra-by-tower"
+"synthesis.gauge-algebra-by-tower",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 }
 ]
@@ -50679,6 +50797,69 @@
 }
 ]
 },
+"synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump": {
+"failed": false,
+"findings": [],
+"key": "c7c3740004f8e18c",
+"result": "pass",
+"runs": [
+{
+"derivation": null,
+"func": "check_double_squares_to_a_positive_form_and_is_split",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.wall-class-one-rung-obstruction"
+]
+},
+{
+"derivation": null,
+"func": "check_counter_models_for_each_tameness_clause",
+"ok": true,
+"quantities": [],
+"touched": [
+"synthesis.wall-class-one-rung-obstruction"
+]
+},
+{
+"derivation": null,
+"func": "check_signature_jump_obstructs_with_matched_clocks",
+"ok": true,
+"quantities": [],
+"touched": [
+"sheaf.conservation-degeneracy-absolute-form",
+"std-algebra.periodicity"
+]
+},
+{
+"derivation": null,
+"func": "check_one_added_direction_and_the_corank_bound",
+"ok": true,
+"quantities": [],
+"touched": [
+"odd-extensions.imported-minimal-completion-degenerate-algebra-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_constant_model_for_corank_two_and_the_twisted_eigenline",
+"ok": true,
+"quantities": [],
+"touched": [
+"sheaf.conservation-degeneracy-absolute-form"
+]
+},
+{
+"derivation": null,
+"func": "check_clifford_multiplication_families_and_the_added_generator",
+"ok": true,
+"quantities": [],
+"touched": [
+"std-algebra.periodicity"
+]
+}
+]
+},
 "synthesis.sudden-descent-feature-not-tilt": {
 "failed": false,
 "findings": [],
@@ -50960,7 +51141,7 @@
 "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": {
 "failed": false,
 "findings": [],
-"key": "291d82a5909b59da",
+"key": "ef88938782ff7d5a",
 "result": "pass",
 "runs": [
 {
@@ -51262,7 +51443,7 @@
 "synthesis.tower-charge-sector-label-temperature-not": {
 "failed": false,
 "findings": [],
-"key": "7ec272d2ec39bf2d",
+"key": "61f88c974ee35984",
 "result": "pass",
 "runs": [
 {
@@ -52095,7 +52276,7 @@
 "synthesis.two-loop-running-cannot-fix-majorana-coupling": {
 "failed": false,
 "findings": [],
-"key": "1a43cbfa10ff67c9",
+"key": "acc131f023bb5049",
 "result": "pass",
 "runs": [
 {
@@ -52575,7 +52756,7 @@
 "synthesis.untuned-fit-caps-lightest-heavy-neutrino": {
 "failed": false,
 "findings": [],
-"key": "700fb7e5fe99bbf2",
+"key": "f1b565fd22c35e1e",
 "result": "pass",
 "runs": [
 {
@@ -52587,7 +52768,8 @@
 "dark-matter.imported-massless-graviton-production-rate",
 "neutrino.r-descent-reheats-below-lower-heavy",
 "standard-model.chain",
-"standard-model.fits-record-level"
+"standard-model.fits-record-level",
+"synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
 ]
 }
 ]
@@ -53227,7 +53409,7 @@
 "synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
 "failed": false,
 "findings": [],
-"key": "7f735fb8b5f8f781",
+"key": "f5e7c0330dab55ca",
 "result": "pass",
 "runs": [
 {
@@ -55227,7 +55409,7 @@
 "transport.obstructions-are-moved-never-destroyed": {
 "failed": false,
 "findings": [],
-"key": "be6e5c3f505f0bfb",
+"key": "c3678a15bdd7e146",
 "result": "none",
 "runs": []
 },

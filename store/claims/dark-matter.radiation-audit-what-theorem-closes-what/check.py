@@ -10,8 +10,10 @@
   is no chirality grading; in (1,3) the pseudoscalar anticommutes with every generator (control).
 - Closing margins on the interval (premises: seeding floor, stored-asymmetry hot deposit; mirror content):
   the hot deposit xi^4 = 4 (n_B/s) g*/g_d (n_B/s = 0.1413 x 2.74e-8 x 0.02237, g* = 100, g_d = 106.75);
-  the floor's xi^8 from the seeding export at the mirror's larger coefficient 0.078. Mirror channel
-  (7.447 xi^4): more than 1e12 below the cap at the floor and 1e8 at the hot deposit; a five-dimensional
+  the floor's xi^8 from the seeding export at the mirror's coefficient 1519247 pi^3/82944000 = 0.568
+  (the coefficients proposition's value at the derived production coefficients; pi by Machin, both
+  ends of its bracket), where the floor is 5.2e-4. Mirror channel (7.447 xi^4): more than 1e11 and
+  less than 1e12 below the cap at the floor (5.5e11), and more than 1e8 at the hot deposit; a five-dimensional
   tower with three light polarisations (2.2 x 3 xi^4) more than 1e8 at the hot deposit; a nine-vector
   tower (2.202 x 18 xi^4) at the hot deposit is between 10^7.3 and 10^7.4 below the cap (the one case
   below eight, "7.4").
@@ -83,9 +85,10 @@ NNU = F(3044, 1000)
 # g_d = 106.75
 NB_OVER_S = F(1413, 10 ** 4) * F(274, 10 ** 10) * F(2237, 10 ** 5)
 G_STAR, G_D = 100, F(10675, 100)
-# the mirror's larger graviton-rate coefficient (the seeding export's input): 4 x 1.9e-4 + 45 x 1.1e-3
-# + 12 x 2.3e-3
-MIRROR_COEFF_HI = 4 * F(19, 10 ** 5) + 45 * F(11, 10 ** 4) + 12 * F(23, 10 ** 4)
+# the mirror's production coefficient (the seeding export's input), a copy of the Standard Model's
+# content at the derived per-species coefficients: (4 x 5789 + 45 x 16087 + 12 x 4 x 16087) pi^3/82944000
+MIRROR_COEFF_OVER_PI3 = F(4 * 5789 + 45 * 16087 + 12 * 4 * 16087, 82944000)
+MIRROR_COEFF_LO, MIRROR_COEFF_HI = MIRROR_COEFF_OVER_PI3 * PI_LO ** 3, MIRROR_COEFF_OVER_PI3 * PI_HI ** 3
 
 
 def anticommuting_dim(p, q):
@@ -132,12 +135,16 @@ def check_closing_margins_on_the_interval():
     mirror_hi = p_hi + NNU
     per_hi, per_lo = p_hi / 2, p_lo / 2
     hot4 = 4 * NB_OVER_S * G_STAR / G_D
-    # the coefficient is 0.07786, the quoted 0.078
-    ok = rounds_to(MIRROR_COEFF_HI, 7786, -5) and rounds_to(MIRROR_COEFF_HI, 78, -3)
+    # the coefficient is 1519247 pi^3/82944000 = 0.56793, the quoted 0.568
+    ok = MIRROR_COEFF_OVER_PI3 == F(1519247, 82944000)
+    ok = ok and all(rounds_to(c, 56793, -5) and rounds_to(c, 568, -3) for c in (MIRROR_COEFF_LO, MIRROR_COEFF_HI))
     floor8 = s["xi8_bracket"](MIRROR_COEFF_HI, G_D)[1]
-    ok = ok and (mirror_hi * 10 ** 12) ** 2 * floor8 < CAP ** 2
-    # by hand (decimal evaluation): at the floor the cap exceeds the mirror's 7.447 xi^4 by 4.0219e12
-    ok = ok and root_rounds_to(CAP ** 2 / (mirror_hi ** 2 * floor8), 40219, 8)
+    # the floor is the quoted 5.2e-4
+    ok = ok and root_rounds_to(floor8, 52, -5, 8)
+    # eleven orders at the floor, and not twelve
+    ok = ok and (mirror_hi * 10 ** 11) ** 2 * floor8 < CAP ** 2 < (mirror_hi * 10 ** 12) ** 2 * floor8
+    # by hand (decimal evaluation): at the floor the cap exceeds the mirror's 7.447 xi^4 by 5.5138e11
+    ok = ok and root_rounds_to(CAP ** 2 / (mirror_hi ** 2 * floor8), 55138, 7)
     ok = ok and mirror_hi * hot4 * 10 ** 8 < CAP
     # at the hot deposit: by 1.241301e8 (mirror) and 1.400640e8 (2.2 x 3 xi^4)
     ok = ok and rounds_to(CAP / (mirror_hi * hot4), 1241301, 2)
@@ -148,7 +155,7 @@ def check_closing_margins_on_the_interval():
     ok = ok and F(10) ** 73 < (CAP / nine_hi) ** 10 and (CAP / nine_lo) ** 10 < F(10) ** 74
     ok = ok and all(rounds_to(CAP / x, 233270, 2) for x in (nine_lo, nine_hi))
     ok = ok and F(10) ** 147 < (CAP / nine_hi) ** 20
-    GA.check("prop:audit: mirror twelve orders below the cap at the floor and eight at the hot deposit; 5D towers "
+    GA.check("prop:audit: mirror eleven orders below the cap at the floor and eight at the hot deposit; 5D towers "
              "eight; a nine-vector tower 7.3-7.4 orders at the hot deposit", ok)
     return ok
 

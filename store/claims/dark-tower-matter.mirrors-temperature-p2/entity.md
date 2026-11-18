@@ -30,8 +30,8 @@ derivations:
 - name: main
   uses:
   - dark-matter.mirror-tower-copy-one@11
-  - dark-matter.stored-asymmetry-charge-not-number@11
-  - dark-matter.seeding-gravity-floor-dark-towers-temperature@4
+  - dark-matter.stored-asymmetry-charge-not-number@12
+  - dark-matter.seeding-gravity-floor-dark-towers-temperature@5
   proof: proof-main.tex
 checked_by:
 - kind: proof

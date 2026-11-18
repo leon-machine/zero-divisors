@@ -10,4 +10,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: Every number in (i)-(iii) is recomputed exactly from the stored floors and Y_B; the rounded window edges are slightly looser than the exact ones.
+  note: 'Every number in (i)-(iii) is recomputed exactly from the stored floors and Y_B; the rounded window edges are slightly looser than the exact ones. 2026-11-18 (maintainer pass, version 2): the floors are 5.2e-4 and 6.4e-4, compared with the coefficients proposition''s export; clause (i) and the accuracy without (R) recomputed; not judged again by an independent judge.'
