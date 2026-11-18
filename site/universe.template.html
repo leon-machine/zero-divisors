@@ -406,7 +406,15 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   nav { order: 5; flex: 1 0 100%; }
   #sharebtn { margin-left: auto; }
   nav a { padding: 5px 8px; font-size: 13px; }
+  /* a presentation on a phone: the header shrinks to one row, the site menu behind a button, so the
+     slides get the height */
+  body.storymode header { padding-top: 6px; padding-bottom: 6px; }
+  body.storymode h1 { font-size: 17px; }
+  body.storymode nav, body.storymode #themebtn, body.storymode footer { display: none; }
+  body.storymode.navopen nav { display: flex; }
+  body.storymode #menubtn { display: inline-flex; }
 }
+#menubtn { display: none; padding: 5px 11px; font: 500 13px var(--sans); white-space: nowrap; flex: none; align-items: center; gap: 6px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -421,6 +429,7 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
   <div class="stats" id="stats"></div>
   <button class="btn" id="sharebtn" aria-label="Share this page" title="Share this page"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Share</span></button>
   <button class="btn" id="themebtn" aria-label="Switch between dark and light" title="Switch between dark and light"></button>
+  <button class="btn" id="menubtn" aria-expanded="false" aria-label="Show the site menu" title="Show the site menu"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Menu</span></button>
 </header>
 <div class="sharemenu" id="sharemenu" role="dialog" aria-label="Share" hidden></div>
 <div class="navmenu" id="intromenu" aria-label="Introductions" hidden>
@@ -2974,6 +2983,7 @@ function showView(v) {
   closeNavMenus();
   const cur = inGraph ? $id("graphgroup") : inIntro ? $id("introgroup") : document.querySelector(`nav a[data-view="${v}"]`); if (cur) { const n = cur.parentElement; n.scrollLeft = cur.offsetLeft - n.offsetLeft - Math.max(0, (n.clientWidth - cur.offsetWidth) / 2); }; navEdges();
   if (v === "universe") { resize(); }
+  document.body.classList.toggle("storymode", INTRO_VIEWS.includes(v)); document.body.classList.remove("navopen"); $id("menubtn").setAttribute("aria-expanded", "false");
   document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px");
   for (const [view, [id, src]] of Object.entries(STORY)) {
     const f = document.getElementById(id); if (v === view && !f.getAttribute("src")) f.setAttribute("src", src); }
@@ -2998,6 +3008,8 @@ function route() {
   showView(["ga", "principle", "singularity", "universe", "documents", "record", "problems", "releases", "contribute", "about"].includes(h) ? h : (h ? "universe" : "principle"));
 }
 window.addEventListener("hashchange", route);
+$id("menubtn").addEventListener("click", () => { const open = document.body.classList.toggle("navopen"); $id("menubtn").setAttribute("aria-expanded", String(open));
+  document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); if (open) navEdges(); });
 window.addEventListener("resize", () => { resize(); applyRW(); document.documentElement.style.setProperty("--hdrh", document.querySelector("header").offsetHeight + "px"); });
 
 // ============================ RESIZING THE READER ======================

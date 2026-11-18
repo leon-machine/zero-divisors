@@ -110,7 +110,10 @@ body.atend #sky{touch-action:pan-y}
   .hud{bottom:calc(env(safe-area-inset-bottom,0px) + 60px)}
   .foot-note{display:none}
   .track button{font-size:.6rem;padding:5px 8px}
+  /* on a phone the subtitle sits on a dark plate, so it stays readable over the bright picture */
+  .cap .line{background:rgba(6,5,5,.7);border-radius:8px;padding:5px 9px;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 }
+@media (max-width:700px) and (max-height:760px){.cap .line{font-size:.86rem;line-height:1.3}}
 @media (prefers-reduced-motion:reduce){.cap,.title,.hud,.controls{transition:none}.ctl #next.pulse{animation:none}}
 /* the scoreboard of registered claims */
 .board{position:absolute;left:50%;top:46px;transform:translateX(-50%);width:min(860px,calc(100% - 28px));font-family:var(--mono);font-size:.72rem;color:var(--text-2);opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;pointer-events:none;background:rgba(16,14,13,.85);border:1px solid var(--line);padding:10px 14px}
@@ -564,6 +567,9 @@ function setCap(key, text, tags, acts){
 /* ---------- overlay: drawings anchored in the scene ---------- */
 const ov = $('#ov'), ox = ov.getContext('2d');
 let OW = 0, OH = 0;
+// portrait or landscape is the screen's shape: a scaled-to-fit canvas is wider than it looks, and must not
+// switch a phone to the landscape layout
+const PORTRAIT = () => innerWidth < innerHeight, WIDE = () => innerWidth > innerHeight * 1.1;
 const capMeas = (() => { const m = $('#cap').cloneNode(true); m.id = ''; m.classList.add('show'); m.style.visibility = 'hidden'; m.querySelectorAll('[id]').forEach(e => e.removeAttribute('id')); $('#cap').parentNode.appendChild(m); return m; })();
 const regionCache = new Map();
 function region(scene){
@@ -596,11 +602,17 @@ const envLog = (r, hi, lo) => { if (r > hi || r < lo) return 0; const a = Math.l
 const C = {text: '#ece5d9', t2: '#bfb5a6', t3: '#8d8377', red: '#e07a55', blue: '#93b4da', green: '#a6c497', plum: '#cf9bb5', gold: '#f0c27a'};
 // a dark plate behind labels that sit over the disc's glow
 function plate(x, y, w, h, a = 0.62){ ox.save(); ox.fillStyle = `rgba(6,5,5,${a})`; ox.beginPath(); ox.roundRect ? ox.roundRect(x, y, w, h, 8) : ox.rect(x, y, w, h); ox.fill(); ox.restore(); }
+// a label never runs off the side of the screen: wider than the room, it shrinks; near an edge, it moves in
+function keepIn(text, x, align, size, font){ let z = size; ox.font = font(z); let w = ox.measureText(text).width;
+  if (w > OW - 12) { z = Math.max(9, z * (OW - 12) / w); ox.font = font(z); w = ox.measureText(text).width; }
+  const lo = align === 'right' ? w + 6 : align === 'center' ? w / 2 + 6 : 6, hi = align === 'right' ? OW - 6 : align === 'center' ? OW - 6 - w / 2 : OW - 6 - w;
+  return {x: Math.min(Math.max(x, lo), Math.max(lo, hi)), z}; }
 function lab(text, x, y, col, align = 'left', size = 15){
+  ({x, z: size} = keepIn(text, x, align, size, z => `italic ${z}px "Source Serif 4", Georgia, serif`));
   ox.font = `italic ${size}px "Source Serif 4", Georgia, serif`; ox.textAlign = align; ox.textBaseline = 'middle';
   ox.lineWidth = 4; ox.strokeStyle = 'rgba(0,0,0,.75)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y);
 }
-function mono(text, x, y, col, align = 'center', size = 12){ ox.font = `${size}px "IBM Plex Mono", Consolas, monospace`; ox.textAlign = align; ox.textBaseline = 'middle'; ox.lineWidth = 3; ox.strokeStyle = 'rgba(0,0,0,.7)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y); }
+function mono(text, x, y, col, align = 'center', size = 12){ ({x, z: size} = keepIn(text, x, align, size, z => `${z}px "IBM Plex Mono", Consolas, monospace`)); ox.font = `${size}px "IBM Plex Mono", Consolas, monospace`; ox.textAlign = align; ox.textBaseline = 'middle'; ox.lineWidth = 3; ox.strokeStyle = 'rgba(0,0,0,.7)'; ox.strokeText(text, x, y); ox.fillStyle = col; ox.fillText(text, x, y); }
 function leader(x1, y1, x2, y2, col){ ox.strokeStyle = col; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x1, y1); ox.lineTo(x2, y2); ox.stroke(); ox.fillStyle = col; ox.fillRect(x1 - 2, y1 - 2, 4, 4); }
 function hash(i){ const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
 
@@ -654,7 +666,7 @@ function overlayFall(cx, cy, unit){
 }
 // move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13)
 function overlayMove(s){
-  const S = Math.min(OW, OH), narrow = OW < OH, sm = sm01, cx = OW / 2, {top, bot} = region('move');
+  const S = Math.min(OW, OH), narrow = PORTRAIT(), sm = sm01, cx = OW / 2, {top, bot} = region('move');
   const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return; ox.globalAlpha = a;
   const head = narrow ? 44 : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
   const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
@@ -718,7 +730,7 @@ function towerOf(k){ const h = hash(k * 7.7 + 2); return h < 0.18 ? 'us' : h < 0
 const RES = [ // residue: colour, short name, kind
   ['#8d8377', 'empty: two times', 'sterile'], ['#a6c497', '3D', 'd3'], ['#93b4da', 'the mirror', 'mirror'], ['#cf9bb5', '5D', 'd5'],
   ['#8d8377', 'empty: no time', 'sterile'], ['#cf9bb5', '5D', 'd5'], ['#f0c27a', 'ours', 'us'], ['#a6c497', '3D', 'd3']];
-function centreGeom(){ const narrow = OW < OH; return {narrow, hx: OW / 2, hy: OH * (narrow ? 0.44 : 0.4), Rb: narrow ? Math.min(OH * 0.18, OW * 0.36) : Math.min(OH * 0.23, OW * 0.36)}; }
+function centreGeom(){ const narrow = PORTRAIT(); return {narrow, hx: OW / 2, hy: OH * (narrow ? 0.44 : 0.4), Rb: narrow ? Math.min(OH * 0.18, OW * 0.36) : Math.min(OH * 0.23, OW * 0.36)}; }
 function nest(hx, hy, Rb, a, labels, narrow){
   const ry = Rb * 0.3, la = 0.62, lx = Rb * Math.cos(la), ly = ry * Math.sin(la);
   ox.globalAlpha = a;
@@ -779,9 +791,12 @@ function labFit(text, x, y, col, align, size){ let z = size; ox.font = `italic $
   const room = align === 'right' ? x - 10 : align === 'left' ? OW - 10 - x : 2 * Math.min(x - 10, OW - 10 - x);
   const w = ox.measureText(text).width; if (w > room) z = Math.max(10, Math.floor(z * room / w)); lab(text, x, y, col, align, z); }
 function overlayRatio(s, now){
-  const narrow = OW < OH;
-  const hx = narrow ? OW / 2 : OW * 0.3, hy = narrow ? OH * 0.39 : OH * 0.38, Rb = narrow ? Math.min(OH * 0.11, OW * 0.25) : Math.min(OH * 0.2, OW * 0.19);
+  const narrow = PORTRAIT();
   const px = narrow ? 20 : OW * 0.55, pw = narrow ? OW - 40 : Math.min(OW * 0.4, 500), py = narrow ? 118 : OH * 0.16;
+  // on a phone the ball sits between the working above (128px) and its labels and the measured values below
+  // (96px), shrinking if the room between the two is short
+  const bot = region('ratio').bot, Rb = narrow ? Math.max(40, Math.min(OH * 0.11, OW * 0.25, (bot - py - 210) / 2)) : Math.min(OH * 0.2, OW * 0.19);
+  const hx = narrow ? OW / 2 : OW * 0.3, hy = narrow ? py + 118 + Rb : OH * 0.38;
   const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
   // A: two unit balls, ours and the mirror's, slide together
   const m = sm(s / 0.07), squash = sm((s - 0.13) / 0.08), outer = sm((s - 0.16) / 0.07), inner = sm((s - 0.2) / 0.06);
@@ -922,11 +937,11 @@ function overlayCount(s, hx, hy, rs){
   let i = 0; for (let x = hx - R0; x <= hx + R0; x += g) for (let y = hy - R0; y <= hy + R0; y += g) { i++;
     if (hash(i) < Math.min(1, s * 1.6) / (4 * Math.LN2)) { ox.beginPath(); ox.arc(x + g / 2, y + g / 2, Math.max(2, g * 0.26), 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); } }
   ox.restore();
-  if (OW < OH) { lab('each square: one Planck area', hx, hy - rs * 1.25 - 26, C.t2, 'center', 14); lab('each dot: one switch, one per 2.8 on average', hx, hy - rs * 1.25 - 6, C.green, 'center', 14); }
+  if (PORTRAIT()) { lab('each square: one Planck area', OW / 2, hy - rs * 1.25 - 26, C.t2, 'center', 14); lab('each dot: one switch, one per 2.8 on average', OW / 2, hy - rs * 1.25 - 6, C.green, 'center', 14); }
   else { plate(hx + rs * 1.1 - 12, hy - rs * 1.55 - 18, 360, 58); lab('each square: one Planck area', hx + rs * 1.1, hy - rs * 1.55, C.t2); lab('each dot: one switch, one per 2.8 on average', hx + rs * 1.1, hy - rs * 1.55 + 22, C.green); }
 }
 function overlayEcho(s, hx, hy, rs){
-  const wide = OW > OH * 1.1; const x0 = wide ? hx + rs * 1.0 : OW * 0.06, x1 = wide ? OW - 36 : OW * 0.94, y0 = wide ? hy - rs * 1.95 : Math.min(hy + rs + OH * 0.12, OH * 0.62), A = Math.min(OH * 0.08, 60), xr = x0 + (x1 - x0) * Math.min(1, s * 1.5);
+  const wide = WIDE(); const x0 = wide ? hx + rs * 1.0 : OW * 0.06, x1 = wide ? OW - 36 : OW * 0.94, y0 = wide ? hy - rs * 1.95 : Math.min(hy + rs + OH * 0.12, OH * 0.62), A = Math.min(OH * 0.08, 60), xr = x0 + (x1 - x0) * Math.min(1, s * 1.5);
   const ring = t => t < 0 ? 0 : Math.exp(-t / 11.2) * Math.cos(0.3737 * t);
   const delay = 8 * Math.log(massSuns * Msun / mP), tEnd = delay * 3.3, split = 0.24;
   const X = t => t < 0 ? x0 + (x1 - x0) * split * (1 + t / 400) : x0 + (x1 - x0) * (split + (1 - split) * t / tEnd);
@@ -937,7 +952,7 @@ function overlayEcho(s, hx, hy, rs){
   for (let k = 0; k <= 1600; k++) { const t = -400 + (tEnd + 400) * k / 1600, x = X(t); if (x > xr) break; const y = y0 - sig(t) * A; first ? ox.moveTo(x, y) : ox.lineTo(x, y); first = false; }
   ox.stroke();
   if (echoA > 0) { ox.globalAlpha = echoA; ox.strokeStyle = C.red; ox.setLineDash([3, 3]); ox.lineWidth = 1.3;
-    for (let k = 1; k <= 3; k++) { const tk = k * delay, x = X(tk); if (x > xr) break; ox.beginPath(); for (let j = 0; j <= 120; j++) { const t = tk + j * 0.6; const y = y0 - 0.42 * Math.pow(0.55, k - 1) * ring(t - tk) * A; j ? ox.lineTo(X(t), y) : ox.moveTo(X(t), y); } ox.stroke(); mono('echo ' + k, x, y0 + A + 14, C.red, 'center', 11); }
+    for (let k = 1; k <= 3; k++) { const tk = k * delay, x = X(tk); if (x > xr) break; ox.beginPath(); for (let j = 0; j <= 120; j++) { const t = tk + j * 0.6; const y = y0 - 0.42 * Math.pow(0.55, k - 1) * ring(t - tk) * A; j ? ox.lineTo(X(t), y) : ox.moveTo(X(t), y); } ox.stroke(); mono('echo ' + k, x, PORTRAIT() ? y0 - 0.42 * A - 14 : y0 + A + 14, C.red, 'center', 11); }
     ox.setLineDash([]); ox.globalAlpha = 1; }
   if (s > 0.72) { const a = Math.min(1, (s - 0.72) * 6); ox.globalAlpha = a; lab('this framework: the ringing simply dies away', wide ? X(40) : OW * 0.06, y0 + A + 40, C.green); ox.globalAlpha = 1; }
   mono('inspiral', x0, y0 - A - 14, C.t3, 'left', 11); mono('merger', X(0), y0 - A - 14, C.t3, 'center', 11);
@@ -951,7 +966,7 @@ const EQF = z => `500 ${z}px "Source Serif 4", Georgia, serif`;
 // one line of mathematics: parts are [text, colour, 'sup' | 'sub' | '']
 function eqLine(parts, x, y, size, align = 'center'){
   let w = 0; parts.forEach(([t, , k]) => { ox.font = EQF(k ? size * 0.62 : size); w += ox.measureText(t).width; });
-  let xx = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  let xx = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x; xx = Math.min(Math.max(xx, 6), Math.max(6, OW - 6 - w));
   parts.forEach(([t, col, k, strike]) => { const z = k ? size * 0.62 : size, dy = k === 'sup' ? -size * 0.36 : k === 'sub' ? size * 0.18 : 0; texL(t, xx, y + dy, col, z, 'left'); ox.font = EQF(z); const tw = ox.measureText(t).width;
     if (strike > 0) { ox.strokeStyle = C.red; ox.lineWidth = Math.max(1.6, size * 0.08); ox.beginPath(); ox.moveTo(xx - 2, y - size * 0.05 + size * 0.22); ox.lineTo(xx - 2 + (tw + 4) * strike, y - size * 0.05 - size * 0.42 * strike + size * 0.22); ox.stroke(); }
     xx += tw; });
@@ -961,7 +976,7 @@ function eqLine(parts, x, y, size, align = 'center'){
 // the fall, inside: a ring of dust stretched and squeezed at the Kasner rates (T6 Lem 5.1, T4 Thm 8.7)
 function overlayKasner(){
   const a = envLog(R, 0.72, 0.21); if (a <= 0) return;
-  const narrow = OW < OH, x0 = narrow ? OW * 0.42 : OW * 0.13, y0 = narrow ? OH * 0.21 : OH * 0.46, r0 = narrow ? 19 : Math.min(OH * 0.055, 44);
+  const narrow = PORTRAIT(), x0 = narrow ? OW * 0.42 : OW * 0.13, y0 = narrow ? OH * 0.21 : OH * 0.46, r0 = narrow ? 19 : Math.min(OH * 0.055, 44);
   const k = Math.min(1, R / 0.72), along = Math.pow(k, -0.5), across = k;
   ox.globalAlpha = a;
   ox.setLineDash([2, 4]); ox.strokeStyle = C.t3; ox.lineWidth = 1; ox.beginPath(); ox.arc(x0, y0, r0, 0, 2 * Math.PI); ox.stroke(); ox.setLineDash([]);
@@ -986,7 +1001,7 @@ function fitCam(pts, x0, y0, w, h, elev, D, yaw){ const p1 = camS(1, 0, 0, elev,
   const k = Math.min(w / (bx1 - bx0), h / (by1 - by0)), ox_ = x0 + (w - (bx1 - bx0) * k) / 2 - bx0 * k, oy_ = y0 + (h - (by1 - by0) * k) / 2 - by0 * k;
   return p => { const v = p1(p); return [ox_ + v[0] * k, oy_ + v[1] * k]; }; }
 function overlayTwistor(s){
-  const narrow = OW < OH, cx = OW / 2, sm = sm01, {top, bot} = region('twistor');
+  const narrow = PORTRAIT(), cx = OW / 2, sm = sm01, {top, bot} = region('twistor');
   const eqK = 0, eqH = 0;           // room the equations take at the bottom
   const dTop = top + (narrow ? 26 : 34), dBot = bot - eqK * eqH - 8;
   const a0 = sm(s / 0.06), fade = 1 - 0.45 * eqK;
@@ -1051,7 +1066,7 @@ function overlayTwistor(s){
 const SCR_N = 48, SCR_ORDER = Array.from({length: SCR_N}, (_, i) => i).sort((a, b) => hash(a * 5.3 + 1) - hash(b * 5.3 + 1));
 function overlayScramble(s, hx, hy, rs){
   const a = env(s, 0.06, 1.3, 0.08); if (a <= 0) return; ox.globalAlpha = a;
-  const wide = OW > OH * 1.1, u = Math.max(0, Math.min(1, (s - 0.24) / 0.5)), reached = Math.max(1, Math.min(SCR_N, Math.round(Math.exp(u * Math.log(SCR_N))))), rr = rs * (wide ? 1.3 : 1.5);
+  const wide = WIDE(), u = Math.max(0, Math.min(1, (s - 0.24) / 0.5)), reached = Math.max(1, Math.min(SCR_N, Math.round(Math.exp(u * Math.log(SCR_N))))), rr = rs * (wide ? 1.3 : 1.5);
   const rank = new Array(SCR_N); SCR_ORDER.forEach((k, i) => rank[k] = i);
   for (let i = 0; i < SCR_N; i++) { const t = i / SCR_N * 2 * Math.PI, x = hx + rr * Math.cos(t), y = hy + rr * Math.sin(t), on = s > 0.12 && rank[i] < reached;
     ox.beginPath(); ox.arc(x, y, Math.max(2.5, Math.min(5, rs / 18)), 0, 2 * Math.PI); ox.fillStyle = on ? (rank[i] === 0 ? C.text : C.red) : 'rgba(16,14,13,.6)'; ox.strokeStyle = on ? C.red : C.t3; ox.lineWidth = 1.1; ox.fill(); ox.stroke(); }
@@ -1072,7 +1087,7 @@ function overlayScramble(s, hx, hy, rs){
 // the tower and the CAR limit (T3 Thm 4.2, 4.3, 5.6)
 function overlayCar(s){
   // the tower sits clear of Part IV's title, which stays over the first step
-  const narrow = OW < OH, W = narrow ? OW * 0.5 : Math.min(OW * 0.24, 300), tb = titleBottom(PART_OF.car), besideX = tb.right + 200 + W / 2;
+  const narrow = PORTRAIT(), W = narrow ? OW * 0.5 : Math.min(OW * 0.24, 300), tb = titleBottom(PART_OF.car), besideX = tb.right + 200 + W / 2;
   const beside = !narrow && besideX + W / 2 + 100 <= OW;                // room beside the title: the tower stands to its right
   const cx = beside ? Math.max(OW / 2, besideX) : OW / 2, yb = narrow ? OH * 0.56 : OH * 0.62, n = 4, H = narrow ? 20 : 28;
   // below the title only while it shows (the scene's first subtitle), rising with it as it fades; never so far
@@ -1087,9 +1102,9 @@ function overlayCar(s){
   for (let k = 0; k < shown; k++) { const y = yb - k * gap;
     ox.fillStyle = 'rgba(147,180,218,0.1)'; ox.strokeStyle = k ? 'rgba(147,180,218,0.7)' : C.gold; ox.lineWidth = 1.3; ox.fillRect(cx - W / 2, y - H / 2, W, H); ox.strokeRect(cx - W / 2, y - H / 2, W, H);
     for (let j = 0; j <= k; j++) { const x = cx + (j - k / 2) * Math.min(28, W / (k + 2)); ox.beginPath(); ox.arc(x, y, narrow ? 5 : 6.5, 0, 2 * Math.PI); ox.fillStyle = C.green; ox.fill(); }
-    if (narrow) mono(names[k], cx, y - H / 2 - 9, k ? C.t2 : C.gold, 'center', 10); else lab(names[k], cx - W / 2 - 16, y, k ? C.t2 : C.gold, 'right', 15);
+    if (narrow) mono(k === 1 ? '2 + 4: one more time, one more space' : names[k], cx, y - H / 2 - 9, k ? C.t2 : C.gold, 'center', 10); else lab(names[k], cx - W / 2 - 16, y, k ? C.t2 : C.gold, 'right', 15);
     lab((k + 1) + (k ? ' switches' : ' switch'), cx + W / 2 + (narrow ? 8 : 16), y, C.green, 'left', narrow ? 12 : 15);
-    if (k > 0) { const xa = cx - W / 2 + 14; arrowLine(xa, y + gap - H / 2 - 2, xa, y + H / 2 + 3, C.red, 1.6, 6); if (k === 1) mono('+1 time, +1 space', xa + 10, y + gap / 2, C.red, 'left', narrow ? 9 : 11); } }
+    if (k > 0) { const xa = cx - W / 2 + 14; arrowLine(xa, y + gap - H / 2 - 2, xa, y + H / 2 + 3, C.red, 1.6, 6); if (k === 1 && !narrow) mono('+1 time, +1 space', xa + 10, y + gap / 2, C.red, 'left', 11); } }
   if (s > 0.42) { ox.globalAlpha = carA * (Math.min(1, (s - 0.42) / 0.05)); mono('⋮', cx, yb - n * gap + gap * 0.42, C.t2, 'center', 18); ox.globalAlpha = carA * (1); }
   const aT = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
   if (aT > 0) { ox.globalAlpha = carA * (aT); const y = yt;
@@ -1100,14 +1115,14 @@ function overlayCar(s){
     else if (cx + W * 0.6 + 330 <= OW) { lab('the CAR limit: every floor at once', cx + W * 0.6 + 16, y - 9, C.plum, 'left', 16); mono('as many switches as you like: a free fermion field', cx + W * 0.6 + 16, y + 12, C.t2, 'left', 11); }
     else { lab('the CAR limit: every floor at once', cx, y + H * 0.6 + 16, C.plum, 'center', 14); }
     ox.globalAlpha = carA * (1); }
-  if (s > 0.3) { ox.globalAlpha = carA * (Math.min(1, (s - 0.3) / 0.05) * 0.9); const xl = narrow ? 14 : cx - W / 2 - 180;
+  if (s > 0.3) { ox.globalAlpha = carA * (Math.min(1, (s - 0.3) / 0.05) * 0.9); const xl = narrow ? 24 : cx - W / 2 - 180;
     ox.strokeStyle = C.green; ox.lineWidth = 1.2; ox.beginPath(); ox.moveTo(xl, yb + H / 2); ox.lineTo(xl, yt - H / 2); ox.stroke();
     ox.save(); ox.translate(xl - 7, (yb + yt) / 2); ox.rotate(-Math.PI / 2); mono('time minus space never changes on the way up', 0, 0, C.green, 'center', narrow ? 9 : 11); ox.restore(); ox.globalAlpha = carA * (1); }
 }
 
 // the orientation bit: matter and the arrow of time (T14 Prop 5.1, 5.2, Rem 5.3)
 function overlayArrow(s){
-  const narrow = OW < OH, S = Math.min(OW, OH), R0 = narrow ? Math.min(OW * 0.2, 78) : Math.min(S * 0.16, 125);
+  const narrow = PORTRAIT(), S = Math.min(OW, OH), R0 = narrow ? Math.min(OW * 0.2, 78) : Math.min(S * 0.16, 125);
   const pos = narrow ? [[OW / 2, OH * 0.27], [OW / 2, OH * 0.52]] : [[OW * 0.3, OH * 0.42], [OW * 0.7, OH * 0.42]];
   const aB = Math.min(1, Math.max(0, (s - 0.3) / 0.05)), pick = Math.min(1, Math.max(0, (s - 0.62) / 0.06));
   const panel = (k, x, y, a) => { if (a <= 0) return; ox.globalAlpha = a * (k === 1 ? 1 - 0.6 * pick : 1); const flip = k === 1;
@@ -1145,7 +1160,7 @@ function overlayParadox(s, hx, hy, rs, now){
 // where the message is: in the pairs, not in either half (T5 Thm 5.7, 7.27, 9.3; the one-time pad is an analogy)
 const ALPH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ', MSGI = MSG.split('').map(ch => ALPH.indexOf(ch));
 function overlayCorr(s, now){
-  const narrow = OW < OH, n = MSG.length, cw = Math.min(48, (OW - 36) / n), x0 = OW / 2 - cw * n / 2 + cw / 2;
+  const narrow = PORTRAIT(), n = MSG.length, cw = Math.min(48, (OW - 36) / n), x0 = OW / 2 - cw * n / 2 + cw / 2;
   const gap = narrow ? 78 : 100, y1 = narrow ? OH * 0.2 : OH * 0.2, y2 = y1 + gap, y3 = y2 + gap, fs = narrow ? 15 : 22, ch = fs * 1.55;
   const tick = reduce ? Math.floor(s * 60) : Math.floor((now - T0) / 450);
   const aP = sm01((s - 0.22) / 0.05), aL = sm01((s - 0.46) / 0.05), aD = sm01((s - 0.72) / 0.05);
@@ -1173,7 +1188,7 @@ function overlayCorr(s, now){
 
 // what happens to what falls in (T14 Prop 6.5)
 function overlayFate(s, hx, hy, rs){
-  const narrow = OW < OH, u = sm01((s - 0.02) / 0.24);
+  const narrow = PORTRAIT(), u = sm01((s - 0.02) / 0.24);
   if (u < 1) { const sx = narrow ? OW * 0.8 : Math.min(OW - 120, hx + rs * 3.6), sy = narrow ? hy - rs * 3 : hy - rs * 1.5, x = sx + (hx - sx) * u * u, y = sy + (hy - sy) * u * u, z = 1 - 0.85 * u;
     ox.globalAlpha = 1 - u * u; ox.fillStyle = 'rgba(240,194,122,0.2)'; ox.strokeStyle = C.gold; ox.lineWidth = 1.2; ox.fillRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z); ox.strokeRect(x - 70 * z, y - 16 * z, 140 * z, 32 * z);
     if (z > 0.45) mono('a star’s worth of matter', x, y, C.gold, 'center', Math.max(7, 12 * z)); ox.globalAlpha = 1; }
