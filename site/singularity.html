@@ -399,7 +399,7 @@ const PARTS = [
 ];
 const SCENES = [], PART_OF = {fall: 0}, TITLES = new Set();
 PARTS.forEach((pt, i) => { if (i) { SCENES.push(pt.k); TITLES.add(pt.k); PART_OF[pt.k] = i; } pt.scenes.forEach(k => { SCENES.push(k); PART_OF[k] = i; }); });
-const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 150, twistor: 210, where: 170, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
+const LEN = {paradox: 170, info: 330, fate: 210, sing: 90, move: 190, twistor: 210, where: 170, scramble: 180, car: 200, dark: 190, arrow: 200, ratio: 520, towers: 200, score: 200, ledger: 100};
 TITLES.forEach(k => LEN[k] = TITLE);
 const START = {fall: 0}; { let acc = FALL; SCENES.forEach(k => { START[k] = acc; acc += LEN[k] || SCENE; }); }
 const TOTAL = START.score + LEN.score + 100;
@@ -441,7 +441,8 @@ const FALLCAPS = [
   {hi: 0.235, lo: 0, t: 'In the papers’ description, the light cones fold flat onto a single line. The equations are about to divide by zero.', g: [['B'], 'T5 Prop 2.5, 2.7']},
 ];
 const SCAPS = {
-  move: [[0, 1.01, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction squaring to −1 and one squaring to +1. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4: one more direction of time and one more of space. The new time is not a second clock: the two are read as a pair, giving an origin, a point at infinity and the change of scale between them. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']]],
+  move: [[0, 0.6, 'The Transport Principle generalises the Riemann sphere: where an algebra divides by a light-like vector, move to the smallest larger space on whose points the reciprocal extends everywhere. The papers prove that space exists and is unique up to a change of axes: one more direction squaring to −1 and one squaring to +1. The singularity is of the light-like kind, so spacetime’s 1 + 3 becomes 2 + 4: one more direction of time and one more of space. Once the rule is set, nothing further is chosen.', [['A'], 'T1 Thm 4.10, 4.13', ['B'], 'T5 Prop 3.1']],
+         [0.6, 1.01, 'The new time is not a second clock: nothing moves along it. The two new directions are read as a pair. Their light-like combinations are an origin and a point at infinity, the two points the reciprocal swaps, and movement between them is a change of scale.', [['std'], 'conformal geometry', ['A'], 'T1 Thm 4.10']]],
   twistor: [[0, 0.3, 'The 2 + 4 space is not new. Roger Penrose used it in 1967 to describe rays of light, through its spinors: the conformal spinors (his twistors).', [['std'], 'Penrose 1967']],
          [0.3, 1.01, 'Up there the reciprocal is defined everywhere. The rule lifts every point of spacetime onto a light ray of the larger space and works with the rays instead. Written out, that lift is Penrose\u2019s founding equation of twistor theory, term for term: the classical Klein correspondence, reached from the other end.', [['A'], 'T1 Thm 4.10 \u00b7 \u00a78.1', ['AB'], 'T9 Thm 4.2']]],
   where: [[0, 1.01, 'So is the larger space extra room that opens at the centre? No. Spacetime keeps its four dimensions, and every point is lifted the same way: the six directions are in use everywhere. Away from the centre they add nothing: the familiar description sits inside the larger one unchanged, and Einstein’s vacuum equations are a single statement there. Only at the singularity do the two part: the familiar one breaks down and leaves a gap, and the larger one carries on.', [['A'], 'T4 Thm 4.4 · T4 Cor 4.5', ['AB'], 'T6 Thm 4.5', ['B'], 'T5 Prop 5.2']]],
@@ -665,25 +666,39 @@ function overlayFall(cx, cy, unit){
   ox.globalAlpha = 1;
   overlayKasner();
 }
-// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13)
+// move: spacetime's directions, and the one more of each kind that the transport principle adds (T1 Thm 4.13).
+// Then, on a step of its own: the two new directions turn to face us as a plane, with its two light-like lines (the
+// origin and the point at infinity, which the reciprocal swaps, T1 Thm 4.10) and the movement between them, a change of scale
 function overlayMove(s){
   const S = Math.min(OW, OH), narrow = PORTRAIT(), sm = sm01, cx = OW / 2, {top, bot} = region('move');
   const a = env(s, -0.2, 1.2, 0.06); if (a <= 0) return; ox.globalAlpha = a;
-  const head = narrow ? 44 : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 108) / 1.78)), cy = top + head + 30 + L;
+  const fs = Math.round(Math.min(S * 0.065, 56)), head = narrow ? Math.max(44, fs * 0.8 + 12) : 0, L = Math.max(40, Math.min(S * 0.24, (bot - top - head - 92) / 1.78)), cy = top + head + 30 + L;
   const base = [[0, -1, C.blue, 'time'], [0.94, 0.34, C.t2, 'space'], [-0.94, 0.34, C.t2, 'space'], [0.3, 0.75, C.t2, 'space']];
-  const add = [[-0.62, -0.78, C.red, '+ time'], [0.66, -0.75, C.red, '+ space']];
-  base.forEach(([dx, dy, col, t]) => { ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke(); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); });
-  const g = sm((s - 0.01) / 0.5);
-  add.forEach(([dx, dy, col, t]) => { if (g <= 0) return; ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L * g, cy + dy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + dx * (L + 22), cy + dy * (L + 22), col, 'center'); });
-  // the two new directions are one pair: its light-like combinations are an origin and a point at infinity, and movement in its plane is a change of scale
-  const pk = sm((s - 0.53) / 0.12);
-  if (pk > 0) { const a1 = Math.atan2(add[0][1], add[0][0]), a2 = Math.atan2(add[1][1], add[1][0]); ox.globalAlpha = a * pk; ox.setLineDash([3, 4]); ox.strokeStyle = C.red; ox.lineWidth = 1.3; ox.beginPath(); ox.arc(cx, cy, L * 0.62, a1, a1 + (a2 - a1) * pk); ox.stroke(); ox.setLineDash([]); ox.globalAlpha = a; }
-  const sig = g < 1 ? '1 + 3' : '2 + 4', fs = Math.round(Math.min(S * 0.065, 56));
+  const add = [[-0.62, -0.78, C.red, '+ time', 0, -1], [0.66, -0.75, C.red, '+ space', 1, 0]];
+  const g = sm((s - 0.01) / 0.36), m = sm((s - 0.6) / 0.14), dg = sm((s - 0.72) / 0.08), hy = sm((s - 0.78) / 0.08);
+  base.forEach(([dx, dy, col, t]) => { ox.globalAlpha = a * (1 - 0.85 * m); ox.strokeStyle = col; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + dx * L, cy + dy * L); ox.stroke();
+    if (m < 1) { ox.globalAlpha = a * (1 - m); lab(t, cx + dx * (L + 18), cy + dy * (L + 18), col, 'center'); } });
+  ox.globalAlpha = a;
+  // the plane's two light-like lines
+  if (dg > 0) { [[-1, 'origin'], [1, 'infinity']].forEach(([sg, t]) => { const ux = sg * Math.SQRT1_2, uy = -Math.SQRT1_2; ox.setLineDash([4, 4]); ox.strokeStyle = C.gold; ox.lineWidth = 1.4;
+      ox.globalAlpha = a * dg; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + ux * L * dg, cy + uy * L * dg); ox.stroke();
+      ox.globalAlpha = a * dg * 0.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx - ux * L * 0.7 * dg, cy - uy * L * 0.7 * dg); ox.stroke(); ox.setLineDash([]);
+      ox.globalAlpha = a * dg; texL(t, cx + ux * (L + 10), cy + uy * (L + 10), C.gold, narrow ? 14 : 16, sg < 0 ? 'right' : 'left'); }); ox.globalAlpha = a; }
+  // the two new directions; on the second step they turn to stand as the plane's two axes
+  add.forEach(([dx, dy, col, t, ex, ey]) => { if (g <= 0) return; let ux = dx + (ex - dx) * m, uy = dy + (ey - dy) * m; const n = Math.hypot(ux, uy); ux /= n; uy /= n;
+    if (m > 0) { ox.globalAlpha = a * 0.35 * m; ox.strokeStyle = col; ox.lineWidth = 1.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx - ux * L * 0.7, cy - uy * L * 0.7); ox.stroke(); ox.globalAlpha = a; }
+    ox.strokeStyle = col; ox.lineWidth = 2.4; ox.beginPath(); ox.moveTo(cx, cy); ox.lineTo(cx + ux * L * g, cy + uy * L * g); ox.stroke(); if (g > 0.9) lab(t, cx + ux * (L + 22), cy + uy * (L + 22), col, 'center'); });
+  // movement between the two light-like lines: a change of scale
+  if (hy > 0) { const rho = L * 0.44, T = 0.85, P = t => [cx + rho * Math.sinh(t), cy - rho * Math.cosh(t)]; ox.globalAlpha = a * hy; ox.strokeStyle = C.gold; ox.lineWidth = 1.6; ox.beginPath();
+    for (let i = 0; i <= 40; i++) { const [x, y] = P(-T + 2 * T * i / 40); i ? ox.lineTo(x, y) : ox.moveTo(x, y); } ox.stroke();
+    [-1, 1].forEach(d => { const [x, y] = P(d * T), n = Math.hypot(Math.cosh(T), Math.sinh(T)), tx = d * Math.cosh(T) / n, ty = -Math.sinh(T) / n; arrowLine(x - tx * 2, y - ty * 2, x + tx * 7, y + ty * 7, C.gold, 1.6, 7); });
+    const z = narrow ? 10 : 12, ly = cy - rho * Math.cosh(T) - 14; ox.font = `${z}px "IBM Plex Mono", Consolas, monospace`; const w = ox.measureText('change of scale').width;
+    plate(cx - w / 2 - 5, ly - z * 0.8, w + 10, z * 1.6, 0.92); mono('change of scale', cx, ly, C.gold, 'center', z); ox.globalAlpha = a; }
+  const sig = g < 1 ? '1 + 3' : '2 + 4';
   ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; ox.fillStyle = C.text;
   if (narrow) { ox.textAlign = 'center'; ox.fillText(sig, cx, top + fs * 0.8); }
   else { ox.textAlign = 'right'; ox.fillText(sig, cx - L * 1.25, cy - L * 0.35); mono(g < 1 ? 'time + space' : 'one more of each', cx - L * 1.25, cy - L * 0.35 + 24, C.t3, 'right', 11); }
-  mono(g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
-  if (pk > 0) { ox.globalAlpha = a * pk; mono('the new pair: origin, infinity, scale', cx, cy + L * 0.75 + 44 + (narrow ? 14 : 17), C.red, 'center', narrow ? 10 : 12); }
+  mono(m > 0.5 ? 'the two new directions, seen as a plane of their own' : g < 0.5 ? 'spacetime: one direction of time, three of space' : 'the smallest space in which the reciprocal is defined', cx, cy + L * 0.75 + 44, C.t2, 'center', narrow ? 10 : 12);
   ox.globalAlpha = 1;
 }
 // switches
