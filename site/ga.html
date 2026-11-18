@@ -75,6 +75,8 @@ button{font:inherit;color:inherit}
 .ctl .n{font:400 .72rem var(--mono);color:var(--text-3);min-width:4.5em;text-align:center}
 @media (max-width:700px){.track button{font-size:.6rem;padding:7px 8px}.cap{bottom:calc(env(safe-area-inset-bottom,0px) + 78px)}.ctl{bottom:calc(env(safe-area-inset-bottom,0px) + 18px)}}
 @media (max-height:620px) and (min-width:701px){.hero{padding-bottom:66px}.hero p{margin-top:16px}.end{bottom:58px}.cap{bottom:calc(env(safe-area-inset-bottom,0px) + 72px)}.ctl{bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}.ctl button{padding:6px 16px}.ctl #next{padding:6px 22px}}
+/* a phone with little height (a browser's bars showing): a smaller subtitle and controls, so the drawing keeps its room */
+@media (max-width:700px) and (max-height:760px){.cap .line{font-size:.86rem;line-height:1.3}.cap .tags{margin-bottom:5px}.cap{bottom:calc(env(safe-area-inset-bottom,0px) + 66px)}.ctl{bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}.ctl button{padding:6px 16px}.ctl #next{padding:6px 22px}}
 @media (prefers-reduced-motion:reduce){.cap,.hero,.end{transition:none}.ctl #next.pulse{animation:none}}
 </style>
 <style>/* KaTeX 0.16.9 stylesheet, fonts embedded (MIT licence) */
@@ -468,7 +470,7 @@ function panel(x, y, w, h, title, a = 1){ if (a <= 0 || !title) return; ox.save(
 function quoteCard(t, who, cx, cy, maxW, fs, col, a){ if (a <= 0) return; maxW = Math.min(maxW, W - 72); quote(t, who, cx, cy, maxW, fs, col, a); }
 function heading(t, sub){ const big = !NARROW && HF > 760; text(t, W / 2, NARROW ? 22 : big ? 34 : 30, C.text, NARROW ? 21 : big ? 34 : 29, 'center', SERIF, '600'); if (sub) { const ys = NARROW ? 48 : big ? 70 : 62; text(sub, W / 2, ys, C.t2, NARROW ? 14 : big ? 19 : 17, 'center', SERIF, 'italic'); ox.fillStyle = 'rgba(240,194,122,.6)'; ox.fillRect(W / 2 - 22, ys + (NARROW ? 14 : 18), 44, 1.5); } }
 const HEAD_OFF = () => NARROW ? 72 : HF > 760 ? 104 : 92;
-let NARROW = false;
+let NARROW = false, LZ = 1;   // LZ: the scale the current drawing is painted at
 
 /* ---------- the ladder, drawn beside every scene of the chapter from the bit ---------- */
 const LADDER = ['Distinction', 'Directions', 'Geometry', 'Algebra', 'Counting', 'Continuum', 'Physics'];
@@ -479,12 +481,15 @@ function ladder(active){
     text(`rung ${active + 1} of ${n}: ${LADDER[active]}`, W / 2, 25, C.gold, 11, 'center', MONO);
     return {x0: 0, y0: 38};
   }
-  const x = Math.max(22, W / 2 - 640), top = 26, bot = H - 22, step = (bot - top) / (LADDER.length - 1);
-  ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x + 5, top); ox.lineTo(x + 5, bot); ox.stroke();
+  // the drawing beside it may be scaled down to fit; the ladder's words keep a readable size on screen
+  const k = 1 / Math.max(0.45, LZ), x = Math.max(22, W / 2 - 640), top = 26 * Math.min(k, 1.6), bot = H - 22, step = (bot - top) / (LADDER.length - 1);
+  const fs = Math.min(15 * k, step * 0.55), fsOn = Math.min(17 * k, step * 0.62);
+  ox.strokeStyle = C.line; ox.lineWidth = 1.2 * Math.min(k, 1.6); ox.beginPath(); ox.moveTo(x + 5, top); ox.lineTo(x + 5, bot); ox.stroke();
   LADDER.forEach((t, i) => { const y = bot - i * step, on = i === active, col = on ? C.gold : i < active ? C.t2 : C.t3;
-    dot(x + 5, y, on ? 5 : 3, col); text(t, x + 18, y, col, on ? 15 : 13, 'left', SERIF, on ? '600' : ''); });
-  text('the ladder', x, 8, C.t3, 10, 'left', MONO);
-  return {x0: x + 128, y0: 0};
+    dot(x + 5, y, (on ? 5 : 3) * Math.min(k, 1.6), col); text(t, x + 18 * Math.min(k, 1.6), y, col, on ? fsOn : fs, 'left', SERIF, on ? '600' : ''); });
+  text('the ladder', x, 8 * Math.min(k, 1.6), C.t3, Math.min(12 * k, 16), 'left', MONO);
+  const lw = Math.max(...LADDER.map(t => textW(t, fsOn, SERIF, '600')));
+  return {x0: Math.max(x + 128, x + 18 * Math.min(k, 1.6) + lw + 24), y0: 0};
 }
 
 /* ---------- figures the reader can take hold of: a scene names one handle, and once its step has finished
@@ -578,7 +583,7 @@ function drawCrossIntro(s){
 function drawCross(s){ if (s < 0.5) drawCrossIntro(s); else drawMirror(cl((s - 0.5) / 0.44) * 0.46); }
 
 function drawComplex(s){
-  const nar = NARROW, u = Math.min(W * (nar ? 0.3 : 0.2), H * 0.4, 220), cx = nar ? W * 0.5 : W * 0.36, cy = nar ? H * 0.6 : H * 0.54;
+  const nar = NARROW, u = Math.min(W * (nar ? 0.3 : 0.2), H * (nar ? 0.32 : 0.4), 220), cx = nar ? W * 0.5 : W * 0.36, cy = nar ? H * 0.64 : H * 0.54;
   ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(cx - u * 1.2, cy); ox.lineTo(cx + u * 1.2, cy); ox.moveTo(cx, cy + u * 1.1); ox.lineTo(cx, cy - u * 1.1); ox.stroke();
   text('real', cx + u * 1.2, cy + 16, C.t3, 12, 'right', MONO); text('imaginary', cx + 8, cy - u * 1.1, C.t3, 12, 'left', MONO);
   text('1', cx + u * 0.62, cy + 14, C.t3, 13, 'center', SERIF); text('i', cx - 10, cy - u * 0.62, C.t3, 14, 'right', SERIF, 'italic');
@@ -1454,7 +1459,8 @@ function drawPhysics(s){
 // past the room the subtitles leave.
 const MINH = {all: 380, voices: 440, hamilton: 450, matrices: 500, maxwell: 450, toolkit: 420, derive: 460, product: 400, mirror: 400, dirac: 460, onefield: 440, rotor: 420, fermion: 430, dropout: 480, tensors: 450,
   departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, switch: 480, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
-const MINH_NARROW = {all: 300};
+// on a phone, scenes whose labels sit close together are laid out taller (and so wider) and scaled to fit
+const MINH_NARROW = {all: 300, complex: 420, derive: 470, quat: 400, fermion: 450, division: 450, continuum: 470, routes: 500, why: 500};
 const CHAP_OF = k => { let c = 0; CHAPTERS.forEach(([, , ck], i) => { if (START[k] >= START[ck]) c = i; }); return c; };
 const DRAWS = {allnumber: drawAllNumber, wall: drawWall, voices: drawVoices, derive: drawDerive, units: drawUnits, departs: drawDeparts, scalars: drawScalars, infinity: drawInfinity, readings: drawReadings, why: drawWhy, cross: s => drawCrossIntro(s * 0.55), complex: drawComplex, hamilton: drawHamilton, matrices: drawMatricesPlain, maxwell: drawMaxwell, toolkit: drawToolkit,
   product: drawProduct, plane: drawPlane, mirror: drawMirror, routes: drawRoutes, tkTitle: drawTkTitle, gaTitle: drawGaTitle, bitTitle: drawBitTitle, quat: () => drawInventions(0.2), dirac: s => drawInventions(0.5 + 0.47 * s), onefield: drawOneField, rotor: drawRotor, fermion: drawFermion, dropout: drawDropout, tensors: drawTensors,
@@ -1466,7 +1472,7 @@ function paint(k, s, need, probe){
   ox.save(); ox.translate(0, TOP); ox.globalAlpha = 1; H = Math.max(120, sceneCapTop(k) - 12 - TOP);
   try {
     if (T) { heading(T[0], T[1]); off = HEAD_OFF(); ox.translate(0, off); H = Math.max(60, H - off); }
-    const z = Math.min(1, H / need); if (z < 1) { ox.scale(z, z); W = W0 / z; H = need; }
+    const z = Math.min(1, H / need); LZ = z; if (z < 1) { ox.scale(z, z); W = W0 / z; H = need; }
     paint.hv = H; const sh = probe ? 0 : (shiftCache.get(k) || 0); ox.translate(sh, 0); CURSH = sh;
     EXT = 0; INTER = null; XLO = 8; XA = Infinity; XB = -Infinity; BASE = ox.getTransform(); TRACK = !!probe;
     DRAWS[k](s); TRACK = false; flushBoxes(k); over = EXT - H; Z = z; OFFY = off / z; SHIFTX = sh;
