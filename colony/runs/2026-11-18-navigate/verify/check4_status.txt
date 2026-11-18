@@ -1,0 +1,3 @@
+synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump exit 0
+synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation exit 0
+synthesis.gravitational-pair-production-from-the-operator-source-at-first-order exit 0

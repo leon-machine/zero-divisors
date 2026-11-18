@@ -1,0 +1,4 @@
+I405  synthesis.gravitational-pair-production-from-the-operator-source-at-first-order
+      synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness is declared and untouched, as expected: coverage.yaml: used only in clause (vii), which is argued in the proof text (the mean-field source); no check function computes it
+
+synthesis.gravitational-pair-production-from-the-operator-source-at-first-order: 0 error(s), 1 other finding(s); check result: pass

@@ -1,0 +1,4 @@
+W413  synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation
+      5 of 8 perturbations of check_slaved_field_does_not_commute_at_spacelike_separation's literals still pass: the check is weak
+
+synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation: 0 error(s), 1 other finding(s); check result: pass
