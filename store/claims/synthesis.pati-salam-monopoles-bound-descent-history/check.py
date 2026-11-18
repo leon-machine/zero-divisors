@@ -3,8 +3,10 @@
 pi is bounded by 3 < pi < 22/7. Inputs (exact rationals from decimal strings):
 - the stored chain: M_I = 1.95e10 GeV, g_R(M_I) = 0.469, v_R = M_I/g_R (standard-model.what-angle-asks-neutrino-sector);
   the (10,1,3) breaks Pati-Salam directly to the Standard Model at M_I (standard-model.majorana-element);
-- the seeding condition c T^4 >= A/2, A^(1/4) = 1.217e12 GeV, c = 0.312 for the four odd towers' vectors
-  (synthesis.seeding-remainder-excludes-perturbative-pati-salam);
+- the seeding condition c T^4 >= A/2, A^(1/4) = 1.217e12 GeV, at c <= 2.28, which covers the largest content
+  of synthesis.seeding-remainder-excludes-perturbative-pati-salam, four towers of Standard-Model content,
+  c = 1519247 pi^3/20736000 = 2.27 at the derived production coefficients (below 2.28 already with pi < 22/7);
+  the per-vector coefficient is 16087 pi^3/20736000 (at most 0.0241 with pi < 22/7);
 - T_0 = 2.7255 K (synthesis.imported-planck-2018-lcdm-parameters), k_B = 8.617333262e-5 eV/K,
   hbar c = 1.973269804e-5 eV cm, c = 2.99792458e10 cm/s, g_s(T_0) = 43/11, reduced Planck mass 2.435e18 GeV;
 - literature, cited from memory in the proof: the MACRO flux limit F < 1.4e-16 cm^-2 s^-1 sr^-1, the Kibble
@@ -28,7 +30,9 @@ GS0 = F(43, 11)
 M_I, G_R = F("1.95e10"), F("0.469")
 V_R = M_I / G_R
 A4 = F("1.217e12")
-C_ODD = F("0.312")
+C_MAX = F("2.28")
+C_FOUR_SM_OVER_PI3 = F(1519247, 20736000)     # four copies of 1519247/82944000
+A_VEC_OVER_PI3 = F(16087, 20736000)
 
 
 def kibble_sq_lo(T):
@@ -133,16 +137,21 @@ def check_annihilation_cannot_lower_it():
 
 def check_seeding_needs_cold_transition():
     premise("synthesis.seeding-remainder-excludes-perturbative-pati-salam")
-    # seeding: T_desc^4 >= A/(2c) with c = 0.312: T_desc > 1.36e12 GeV
-    t4 = A4 ** 4 / (2 * C_ODD)
-    GA.check("T_seed > 1.36e12 GeV", t4 > F("1.36e12") ** 4 and t4 < F("1.38e12") ** 4)
-    GA.check("T_seed > 32 v_R: the bath restores Pati-Salam unless non-restoration", t4 > (32 * V_R) ** 4)
+    # the contents of the seeding result lie below c = 2.28: four Standard-Model contents, with pi < 22/7
+    GA.check("four Standard-Model contents have c < 2.28 (pi < 22/7) and c > 2.265 (pi > 314/100): the quoted 2.27",
+             C_FOUR_SM_OVER_PI3 * PI_HI ** 3 < C_MAX and C_FOUR_SM_OVER_PI3 * F(314, 100) ** 3 > F("2.265"))
+    # seeding: T_desc^4 >= A/(2c) with c <= 2.28: T_desc > 8.3e11 GeV
+    t4 = A4 ** 4 / (2 * C_MAX)
+    GA.check("T_seed > 8.3e11 GeV", t4 > F("8.3e11") ** 4 and t4 < F("8.4e11") ** 4)
+    GA.check("T_seed > 20 v_R: the bath restores Pati-Salam unless non-restoration", t4 > (20 * V_R) ** 4)
+    GA.check("T_seed is more than forty times the threshold 2.0e10 GeV", t4 > (40 * F("2.0e10")) ** 4)
     # the transition then happens in the descended phase; with the flux limit it needs T_c < 0.48 v_R < 2.0e10 GeV
     GA.check("0.48 v_R < 2.0e10 GeV", F("0.48") * V_R < F("2.0e10"))
     # seeding below the transition, T_desc < 2.0e10, would need c > A/(2 T^4)
     c_needed = A4 ** 4 / (2 * F("2.0e10") ** 4)
-    GA.check("seeding at T_desc < 2e10 needs c > 6.8e6 (about 3e9 vectors at 2.3e-3 each)",
-             c_needed > F("6.8e6") and c_needed / F("2.3e-3") > F("2.9e9"))
+    GA.check("seeding at T_desc < 2e10 needs c > 6.8e6 (more than 2.8e8 vectors at 16087 pi^3/20736000 each)",
+             c_needed > F("6.8e6") and c_needed / (A_VEC_OVER_PI3 * PI_HI ** 3) > F("2.8e8")
+             and c_needed / (A_VEC_OVER_PI3 * PI_LO ** 3) < F("3.5e8"))
     # aligned-deposit clause: a deposit below T_c whose orientation is uncorrelated beyond its Hubble length
     # gives the same minimum at T_desc, excluded for T_desc > 0.48 v_R
     GA.check("deposit clause threshold is the same function", kibble_sq_lo(F("0.48") * V_R) > nmax_hi(BETA) ** 2)

@@ -2,24 +2,40 @@
 
 The floor formula, kappa_s^2 (a polynomial in pi, pi bracketed by Machin's formula) and the yield
 Y kappa_s = c T^3/(3 M_P^3) come from the seeding proposition's exports; every comparison of a root is
-made on an integer power (xi^8 against a bound^8, eta'^8 = eta^8/xi^24, cube roots by cubes). The
-per-species coefficients 1.9e-4, 1.1e-3, 2.3e-3 (scalar, fermion, vector) are the imported graviton
-rate's. eta = 2.74e-8 Omega_b h^2 with Omega_b h^2 = 0.02237; baryons per entropy n_B/s = 0.1413 eta.
-(i) Nine vectors: c = 9 x 2.3e-3 = 0.0207, g_d = 18, xi_floor in (3.5, 3.6) x 10^-4 at 6e14 GeV.
+made on an integer power (xi^8 against a bound^8, eta'^8 = eta^8/xi^24, cube roots by cubes).
+The per-species coefficients are those of clause (v) of the pair-production theorem (premise), for a
+bath of the Standard Model's content (4 real scalars, 45 chiral fermions, 12 vectors, curvature
+couplings zero), per creation event of two quanta: alpha = pi^3 times
+(1/17280)[(c_j (N_s + 12 N_v) + 5 tau_j N_s)/225 + 49 c_j N_w/4800], c_j = 1, 3, 12, tau_j = 1, 0, 0,
+that is 5789/82944000 (real scalar), 16087/82944000 (chiral fermion), 16087/20736000 (real massless
+vector), rounding to 2.164e-3, 6.0137e-3, 2.4055e-2; the earlier values 1.9e-4, 1.1e-3, 2.3e-3 of the
+imported Fact (premise, kept for the published values) were too small. pi^3 is never approximated:
+every coefficient is the exact rational times the cube of an end of the Machin bracket of pi, and the
+two ends are carried as (c_lo, c_hi); the earlier bracket between counting the fermions per Dirac and
+per Weyl species is gone (each of the 45 is weighted once).
+eta = 2.74e-8 Omega_b h^2 with Omega_b h^2 = 0.02237; baryons per entropy n_B/s = 0.1413 eta.
+(i) Nine vectors: c = 9 x 16087 pi^3/20736000 in (0.2164, 0.2165), g_d = 18, xi_floor in (6.3, 6.4) x 10^-4
+at 6e14 GeV, rounding to 6.4e-4.
 (ii) Mirror (premise: its content is the Standard Model's: 4 real scalars, 45 Weyl fermions, 12
-vectors): c in (0.053, 0.054) with 22.5 Dirac species and (0.077, 0.078) counting 45 singly;
-g_d = 4 + 45 x 7/4 + 24 = 106.75; xi_floor in (2.8, 3.2) x 10^-4 for both; eta' = eta/xi^3 in (19, 26);
-eta' > 1 at c = 4 and < 1 at c = 4.1 (decreasing in c).
-(iii) Y in (1.8, 2.7) x 10^-15 at the ceiling; n_B/s in (8.6, 8.7) x 10^-11; shortfall in (3, 5) x 10^4;
-the rescue temperature T_desc (n_B/(s Y))^(1/3) in (1.9, 2.2) x 10^16 GeV, 31.9 to 36.2 times the
-ceiling (each end of the range to that decimal);
+vectors): c = 1519247 pi^3/82944000 in (0.5679, 0.5680); g_d = 4 + 45 x 7/4 + 24 = 106.75; xi_floor in
+(5.1, 5.2) x 10^-4, rounding to 5.2e-4; eta' = eta/xi^3 in (4.3, 4.4);
+eta' > 1 at c = 4 and < 1 at c = 4.1 (decreasing in c), and c = 4 is more than 7 times the mirror's c.
+(iii) Y in (1.94, 1.96) x 10^-14 creation events per entropy at the ceiling; n_B/s in (8.6, 8.7) x 10^-11;
+shortfall in (4.4, 4.5) x 10^3 (half that, in (2.2, 2.3) x 10^3, against the 2Y quanta);
+the rescue temperature T_desc (n_B/(s Y))^(1/3) in (9.8, 9.9) x 10^15 GeV, between 16.4 and 16.5 times
+the ceiling;
 there the floor's xi^4 equals 4 (n_B/s) g*/g_d exactly, the hot-deposit value (energy 3T per unit of
 baryon number against (3/4) T s), with xi in (4.0, 4.5) x 10^-3, above eta^(1/3).
 (iv) Delta N_eff of the mirror, 7.447 xi^4 with 7.447 = (8/7)(11/4)^(4/3) + 3.044 bracketed exactly:
-below 1e-13 at the floor and 1e-8 at the hot deposit; per polarisation (4/7)(11/4)^(4/3) in
-(2.201, 2.203), and 2.202 x 18 xi^4 below 1e-12 at the nine-vector floor.
+in (5.4, 5.5) x 10^-13 at the floor, so below 1e-12 and no longer below 1e-13, and below 1e-8 at the hot
+deposit; per polarisation (4/7)(11/4)^(4/3) in (2.201, 2.203), and 2.202 x 18 xi^4 in (6.5, 6.6) x 10^-12
+at the nine-vector floor, so below 1e-11 and no longer below 1e-12.
+The floors are the seeding proposition's as stated (energy 3T per creation event). With 3T for each of
+the two quanta of an event xi^4 doubles: eta' at the mirror's floor falls by 2^(3/4) to (2.5, 2.6), still
+above one, and the two Delta N_eff values double to (1.0, 1.1) x 10^-12 and (1.3, 1.4) x 10^-11.
 EXPORTS: cosmo() returns the shared inputs and brackets (eta, n_B/s, xi^4 at the hot deposit, the
-Delta N_eff coefficients, the mirror floor's xi^8 bracket).
+Delta N_eff coefficients, the mirror floor's xi^8 bracket, the mirror's c as (c_lo, c_hi), the ends of
+its pi bracket, and the nine-vector c as c_nine); species() returns the exact rationals alpha/pi^3.
 """
 from fractions import Fraction as F
 import GA
@@ -76,7 +92,44 @@ def exp_bracket(x, terms=40):
 
 
 PI_LO, PI_HI = pi_bracket()
-A_S, A_F, A_V = F(19, 10 ** 5), F(11, 10 ** 4), F(23, 10 ** 4)
+THEOREM = "synthesis.gravitational-pair-production-from-the-operator-source-at-first-order"
+BATH = (4, 45, 12)        # real scalars, chiral fermions, vectors of the Standard Model's content
+SPIN_TWO_WEIGHT = {"scalar": 1, "weyl": 3, "vector": 12}
+TRACE_WEIGHT = {"scalar": 1, "weyl": 0, "vector": 0}       # (1 - 6 xi)^2 at xi = 0 on scalars
+
+
+def alpha_over_pi3(kind):
+    """alpha/pi^3 of clause (v) of the pair-production theorem for one produced species, per creation event:
+    (1/17280)[(c_j (N_s + 12 N_v) + 5 tau_j N_s)/225 + 49 c_j N_w/4800], bath scalars at xi = 0."""
+    n_s, n_w, n_v = BATH
+    cj, tj = SPIN_TWO_WEIGHT[kind], TRACE_WEIGHT[kind]
+    return (F(cj * (n_s + 12 * n_v) + 5 * tj * n_s, 225) + F(49 * cj * n_w, 4800)) / 17280
+
+
+def species():
+    """The exact rationals alpha/pi^3: real scalar, chiral fermion, real massless vector, and their sum over
+    a produced copy of the Standard Model's content (4, 45, 12)."""
+    r_s, r_w, r_v = (alpha_over_pi3(k) for k in ("scalar", "weyl", "vector"))
+    n_s, n_w, n_v = BATH
+    return dict(scalar=r_s, weyl=r_w, vector=r_v, mirror=n_s * r_s + n_w * r_w + n_v * r_v)
+
+
+def pi3(r):
+    """(lo, hi) for r pi^3, r a positive rational, from the Machin bracket of pi."""
+    return r * PI_LO ** 3, r * PI_HI ** 3
+
+
+def coefficients_ok():
+    """The closed form gives the theorem's printed rationals, and they round to the quoted decimals."""
+    sp = species()
+    ok = sp["scalar"] == F(5789, 82944000) and sp["weyl"] == F(16087, 82944000)
+    ok = ok and sp["vector"] == F(16087, 20736000) and sp["mirror"] == F(1519247, 82944000)
+    for r, m, e in ((sp["scalar"], 2164, -6), (sp["weyl"], 60137, -7), (sp["vector"], 24055, -6),
+                    (sp["mirror"], 56793, -5), (9 * sp["vector"], 21649, -5)):
+        ok = ok and all((2 * m - 1) * F(10) ** e / 2 < x < (2 * m + 1) * F(10) ** e / 2 for x in pi3(r))
+    return ok
+
+
 OMEGA_B = F(2237, 10 ** 5)
 ETA = F(274, 10 ** 10) * OMEGA_B
 NB_S = ETA * F(1413, 10 ** 4)
@@ -97,42 +150,61 @@ def seeding():
 
 def cosmo():
     s = seeding()
-    c_lo = 4 * A_S + F(45, 2) * A_F + 12 * A_V
-    c_hi = 4 * A_S + 45 * A_F + 12 * A_V
+    sp = species()
+    # one value of c for the mirror; (c_lo, c_hi) are the two ends of its pi bracket
+    c_lo, c_hi = pi3(sp["mirror"])
     photon, mirror, per_pol = neff_coeffs()
     xi_hot4 = 4 * NB_S * s["GSTAR"] / GD_MIRROR
     return dict(eta=ETA, nb_s=NB_S, c_lo=c_lo, c_hi=c_hi, gd=GD_MIRROR, xi_hot4=xi_hot4,
                 floor8=(s["xi8_bracket"](c_lo, GD_MIRROR)[0], s["xi8_bracket"](c_hi, GD_MIRROR)[1]),
-                photon=photon, mirror=mirror, per_pol=per_pol, seeding=s)
+                photon=photon, mirror=mirror, per_pol=per_pol, seeding=s,
+                c_nine=pi3(9 * sp["vector"]), species=sp)
 
 
 def check_nine_vector_floor():
+    premise(THEOREM)
     premise("dark-matter.imported-massless-graviton-production-rate")
     s = seeding()
-    c = 9 * A_V
-    lo, hi = s["xi8_bracket"](c, F(18))
-    ok = c == F(207, 10 ** 4) and F(35, 10 ** 5) ** 8 < lo and hi < F(36, 10 ** 5) ** 8
-    GA.check("prop:coefficients(i): c = 0.0207, g_d = 18, xi_floor in (3.5, 3.6)e-4", ok)
+    c_lo, c_hi = pi3(9 * species()["vector"])
+    lo, hi = s["xi8_bracket"](c_lo, F(18))[0], s["xi8_bracket"](c_hi, F(18))[1]
+    ok = coefficients_ok() and F(2164, 10 ** 4) < c_lo and c_hi < F(2165, 10 ** 4)
+    ok = ok and F(63, 10 ** 5) ** 8 < lo and hi < F(64, 10 ** 5) ** 8
+    # the quoted 6.4e-4: both ends round to 64 x 10^-5
+    ok = ok and F(635, 10 ** 6) ** 8 < lo and hi < F(645, 10 ** 6) ** 8
+    GA.check("prop:coefficients(i): c = 9 x 16087 pi^3/20736000 in (0.2164, 0.2165), g_d = 18, xi_floor in "
+             "(6.3, 6.4)e-4, 6.4e-4 at two figures", ok)
     return ok
 
 
 def check_mirror_floor_and_eta_prime():
     premise("dark-matter.imported-massless-graviton-production-rate")
     premise("dark-matter.mirror-tower-copy-one")
+    premise(THEOREM)
     s = seeding()
     k = cosmo()
-    ok = F(53, 1000) < k["c_lo"] < F(54, 1000) and F(77, 1000) < k["c_hi"] < F(78, 1000)
+    ok = coefficients_ok() and F(5679, 10 ** 4) < k["c_lo"] <= k["c_hi"] < F(5680, 10 ** 4)
     ok = ok and k["gd"] == F(10675, 100)
     lo_a, hi_a = s["xi8_bracket"](k["c_lo"], k["gd"])
     lo_b, hi_b = s["xi8_bracket"](k["c_hi"], k["gd"])
-    ok = ok and F(28, 10 ** 5) ** 8 < lo_a and hi_b < F(32, 10 ** 5) ** 8
+    ok = ok and F(51, 10 ** 5) ** 8 < lo_a and hi_b < F(52, 10 ** 5) ** 8
+    # the quoted 5.2e-4: both ends round to 52 x 10^-5; the lay level's "about two thousand times colder":
+    # 1/xi between 1900 and 2000
+    ok = ok and F(515, 10 ** 6) ** 8 < lo_a and hi_b < F(525, 10 ** 6) ** 8
+    ok = ok and F(1, 2000) ** 8 < lo_a and hi_b < F(1, 1900) ** 8
     # eta'^8 = eta^8 / xi^24
-    ok = ok and F(19) ** 8 < ETA ** 8 / hi_b ** 3 and ETA ** 8 / lo_a ** 3 < F(26) ** 8
+    ok = ok and F(43, 10) ** 8 < ETA ** 8 / hi_b ** 3 and ETA ** 8 / lo_a ** 3 < F(44, 10) ** 8
     hi4 = s["xi8_bracket"](F(4), k["gd"])[1]
     lo41 = s["xi8_bracket"](F(41, 10), k["gd"])[0]
     ok = ok and ETA ** 8 / hi4 ** 3 > 1 and ETA ** 8 / lo41 ** 3 < 1
-    GA.check("prop:coefficients(ii): mirror c in (0.053, 0.054) / (0.077, 0.078), g_d = 106.75, xi in (2.8, 3.2)e-4, "
-             "eta' in (19, 26), eta' = 1 between c = 4 and 4.1", ok)
+    # the mirror's c is below the crossover by a factor above 7 (and below 8)
+    ok = ok and 7 * k["c_hi"] < 4 < 8 * k["c_lo"]
+    # with 3T for each of the two quanta of an event xi^8 is multiplied by 2^2: eta' in (2.5, 2.6), above one
+    q = s["QUANTA_PER_EVENT"]
+    ok = ok and q == 2
+    ok = ok and F(25, 10) ** 8 < ETA ** 8 / (q ** 2 * hi_b) ** 3 and ETA ** 8 / (q ** 2 * lo_a) ** 3 < F(26, 10) ** 8
+    GA.check("prop:coefficients(ii): mirror c = 1519247 pi^3/82944000 in (0.5679, 0.5680), g_d = 106.75, xi in "
+             "(5.1, 5.2)e-4, eta' in (4.3, 4.4) (in (2.5, 2.6) on the two-quanta energy count), eta' = 1 between "
+             "c = 4 and 4.1", ok)
     return ok
 
 
@@ -144,22 +216,23 @@ def check_yield_shortfall_and_rescue():
     yk_lo, yk_hi = s["y_kappa"](k["c_lo"], s["TCEIL"]), s["y_kappa"](k["c_hi"], s["TCEIL"])
     # Y^2 = (Y kappa)^2 / kappa^2
     Y2_lo, Y2_hi = yk_lo ** 2 / k2hi, yk_hi ** 2 / k2lo
-    ok = F(18, 10 ** 16) ** 2 < Y2_lo and Y2_hi < F(27, 10 ** 16) ** 2
+    ok = F(194, 10 ** 16) ** 2 < Y2_lo and Y2_hi < F(196, 10 ** 16) ** 2
     ok = ok and F(86, 10 ** 12) < NB_S < F(87, 10 ** 12)
     short2_lo, short2_hi = NB_S ** 2 / Y2_hi, NB_S ** 2 / Y2_lo
-    ok = ok and F(3 * 10 ** 4) ** 2 < short2_lo and short2_hi < F(5 * 10 ** 4) ** 2
-    # rescue: (T/Tceil)^3 = n_B/(s Y), so (T/Tceil)^6 = shortfall^2; the factor runs from 31.9 to 36.2
-    # (each end to the stated decimal: lower end in (31.85, 31.95), upper end in (36.15, 36.25))
-    ok = ok and F(3185, 100) ** 6 < short2_lo < F(3195, 100) ** 6
-    ok = ok and F(3615, 100) ** 6 < short2_hi < F(3625, 100) ** 6
-    ok = ok and (F(19) * 10 ** 15 / s["TCEIL"]) ** 6 < short2_lo and short2_hi < (F(22) * 10 ** 15 / s["TCEIL"]) ** 6
+    ok = ok and F(44 * 10 ** 2) ** 2 < short2_lo and short2_hi < F(45 * 10 ** 2) ** 2
+    # Y counts creation events; against the 2Y quanta the shortfall is halved, in (2.2, 2.3)e3
+    q = s["QUANTA_PER_EVENT"]
+    ok = ok and F(22 * 10 ** 2) ** 2 < short2_lo / q ** 2 and short2_hi / q ** 2 < F(23 * 10 ** 2) ** 2
+    # rescue: (T/Tceil)^3 = n_B/(s Y), so (T/Tceil)^6 = shortfall^2; the factor lies in (16.4, 16.5)
+    ok = ok and F(164, 10) ** 6 < short2_lo and short2_hi < F(165, 10) ** 6
+    ok = ok and (F(98) * 10 ** 14 / s["TCEIL"]) ** 6 < short2_lo and short2_hi < (F(99) * 10 ** 14 / s["TCEIL"]) ** 6
     # at the rescue temperature Y = n_B/s, so xi^4 = 4 (n_B/s) g*/g_d: the hot-deposit value
     floor_at_rescue = 4 * NB_S * s["GSTAR"] / k["gd"]
     hot = 3 * NB_S / F(3, 4) * s["GSTAR"] / k["gd"]
     ok = ok and floor_at_rescue == hot == k["xi_hot4"]
     ok = ok and F(40, 10 ** 4) ** 4 < hot < F(45, 10 ** 4) ** 4 and ETA ** 4 < hot ** 3
-    GA.check("prop:coefficients(iii): Y in (1.8, 2.7)e-15 against 8.7e-11; shortfall (3, 5)e4; rescue at 31.9 to 36.2 times "
-             "the ceiling, (1.9, 2.2)e16 GeV, where the floor equals the hot deposit, xi in (4.0, 4.5)e-3", ok)
+    GA.check("prop:coefficients(iii): Y in (1.94, 1.96)e-14 against 8.7e-11; shortfall (4.4, 4.5)e3; rescue at 16.4 to "
+             "16.5 times the ceiling, (9.8, 9.9)e15 GeV, where the floor equals the hot deposit, xi in (4.0, 4.5)e-3", ok)
     return ok
 
 
@@ -170,13 +243,27 @@ def check_neff_contributions():
     photon, mirror, per_pol = neff_coeffs()
     ok = F(7446, 1000) < mirror[0] and mirror[1] < F(7448, 1000)
     ok = ok and F(2201, 1000) < per_pol[0] and per_pol[1] < F(2203, 1000)
-    ok = ok and mirror[1] ** 2 * k["floor8"][1] < F(1, 10 ** 13) ** 2
+    # mirror at its floor: 7.447 xi^4 in (5.4, 5.5)e-13, so below 1e-12 and not below 1e-13
+    ok = ok and F(54, 10 ** 14) ** 2 < mirror[0] ** 2 * k["floor8"][0]
+    ok = ok and mirror[1] ** 2 * k["floor8"][1] < F(55, 10 ** 14) ** 2 < F(1, 10 ** 12) ** 2
+    ok = ok and mirror[0] ** 2 * k["floor8"][0] > F(1, 10 ** 13) ** 2
     ok = ok and mirror[1] * k["xi_hot4"] < F(1, 10 ** 8)
-    nine = s["xi8_bracket"](9 * A_V, F(18))[1]
-    ok = ok and (per_pol[1] * 18) ** 2 * nine < F(1, 10 ** 12) ** 2
-    GA.check("prop:coefficients(iv): 7.447 xi^4 below 1e-13 at the floor and 1e-8 at the hot deposit; 2.202 x 18 xi^4 "
-             "below 1e-12 at the nine-vector floor", ok)
+    # nine vectors at their floor: 2.202 x 18 xi^4 in (6.5, 6.6)e-12, so below 1e-11 and not below 1e-12
+    nine_lo = s["xi8_bracket"](k["c_nine"][0], F(18))[0]
+    nine_hi = s["xi8_bracket"](k["c_nine"][1], F(18))[1]
+    ok = ok and F(65, 10 ** 13) ** 2 < (per_pol[0] * 18) ** 2 * nine_lo
+    ok = ok and (per_pol[1] * 18) ** 2 * nine_hi < F(66, 10 ** 13) ** 2 < F(1, 10 ** 11) ** 2
+    ok = ok and (per_pol[0] * 18) ** 2 * nine_lo > F(1, 10 ** 12) ** 2
+    # with 3T for each of the two quanta of an event xi^4 doubles: (1.0, 1.1)e-12 and (1.3, 1.4)e-11
+    q = s["QUANTA_PER_EVENT"]
+    ok = ok and F(10, 10 ** 13) ** 2 < q ** 2 * mirror[0] ** 2 * k["floor8"][0]
+    ok = ok and q ** 2 * mirror[1] ** 2 * k["floor8"][1] < F(11, 10 ** 13) ** 2
+    ok = ok and F(13, 10 ** 12) ** 2 < q ** 2 * (per_pol[0] * 18) ** 2 * nine_lo
+    ok = ok and q ** 2 * (per_pol[1] * 18) ** 2 * nine_hi < F(14, 10 ** 12) ** 2
+    GA.check("prop:coefficients(iv): 7.447 xi^4 in (5.4, 5.5)e-13 at the floor (below 1e-12, not below 1e-13) and "
+             "below 1e-8 at the hot deposit; 2.202 x 18 xi^4 in (6.5, 6.6)e-12 at the nine-vector floor (below 1e-11, "
+             "not below 1e-12)", ok)
     return ok
 
 
-EXPORTS = {"cosmo": cosmo, "neff_coeffs": neff_coeffs}
+EXPORTS = {"cosmo": cosmo, "neff_coeffs": neff_coeffs, "species": species, "pi3": pi3}

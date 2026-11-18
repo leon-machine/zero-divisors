@@ -1,7 +1,7 @@
 ---
 id: simulations.s3-mirror-cluster
 kind: claim
-version: 2
+version: 3
 title: 'S3: the mirror in a cluster (model specification)'
 status: postulate
 region: simulations
@@ -23,6 +23,14 @@ credit:
   role: 'typed as model specification; the window of xi on which the helium composition is the stored estimate stated'
   version: 2
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'the neutron-rich composition stated at the temperature ratio where it was computed, which is no longer the gravitational floor'
+  version: 3
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+amendments:
+- version: 3
+  kind: restatement
+  defect: 'two sentences placed the neutron-rich composition at the gravitational floor; it was computed at xi = 2.8 to 3.2e-4, the floor with the first imported coefficients, and is not recomputed at the present floor, 5.2e-4'
 review: typed
 locators:
   paper: T14b
@@ -30,6 +38,10 @@ locators:
   label: prem:S3
   line: 138
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version raised by one: the neutron-rich composition is stated at xi = 2.8 to 3.2e-4, where it was computed.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -54,12 +66,12 @@ extraction:
 ## formal
 Mirror matter in a cluster is a fully ionised helium plasma, $\gamma = 5/3$, cooling by bremsstrahlung alone (below about $10^{6}$ K He$^{+}$ line cooling would in reality dominate, so settling would come sooner; Cost K3). Gas that cools below about $7 \times 10^{4}$ K becomes collisionless (the settled phase). There is no mirror star formation and no feedback.
 
-\emph{Type: model specification.} This is a clause of the specification of the numerical model of the cluster simulations (Premises S1 to S5 and C), not a hypothesis of the series about nature; it is kept with the premises so that the two simulation results show it among their conditions. Its window: the helium composition is the stored decimal estimate's only for a mirror temperature ratio $\xi = T'/T$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ (Computation \claimref{dark-tower-matter.mirrors-composition}); at the gravitational floor that estimate gives a neutron-rich mirror and towards the $\Neff$ cap a hydrogen-rich one, and outside the window S3 is not the stored composition. Nothing stored fixes $\xi$.
+\emph{Type: model specification.} This is a clause of the specification of the numerical model of the cluster simulations (Premises S1 to S5 and C), not a hypothesis of the series about nature; it is kept with the premises so that the two simulation results show it among their conditions. Its window: the helium composition is the stored decimal estimate's only for a mirror temperature ratio $\xi = T'/T$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ (Computation \claimref{dark-tower-matter.mirrors-composition}); at $\xi = 2.8$ to $3.2 \times 10^{-4}$ (the gravitational floor's value with the production coefficients first imported; not recomputed at the present floor) that estimate gives a neutron-rich mirror and towards the $\Neff$ cap a hydrogen-rich one, and outside the window S3 is not the stored composition. Nothing stored fixes $\xi$.
 
 ## technical
 A modelling premise: mirror matter in a cluster is a fully ionised helium plasma with $\gamma = 5/3$, cooling by bremsstrahlung alone. Gas that cools below about $7 \times 10^{4}$ K becomes collisionless (the settled phase), and there is no mirror star formation and no feedback. Below about $10^{6}$ K, He$^{+}$ line cooling would in reality dominate and bring settling sooner, a cost the model records.
 
-Type: model specification. S3 holds on the window of the mirror's temperature ratio where the stored estimate gives a helium mirror, $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$; outside it the stored composition is neutron-rich (at the floor) or hydrogen-rich (towards the cap), and nothing stored fixes $\xi$.
+Type: model specification. S3 holds on the window of the mirror's temperature ratio where the stored estimate gives a helium mirror, $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$; outside it the stored composition is neutron-rich (at $\xi = 2.8$ to $3.2 \times 10^{-4}$, the floor's former value) or hydrogen-rich (towards the cap), and nothing stored fixes $\xi$.
 
 ## lay
 In the cluster simulations the mirror matter is a hot, fully ionised helium gas that loses heat only through the simplest radiation process. Gas that cools enough is treated as settled and no longer collides. The model has no mirror stars, so nothing heats the gas back up. It is part of the set-up of a computer model, not a claim of the theory about nature. The helium composition is what the series' own estimate gives only if the mirror world's temperature lies in a certain range, which nothing in the series fixes.

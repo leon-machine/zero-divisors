@@ -33,7 +33,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@8
+  - dark-matter.mirror-share-one-how-fragile@9
   - dark-matter.mirror-tower-copy-one@11
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3

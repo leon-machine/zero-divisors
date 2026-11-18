@@ -1,7 +1,7 @@
 ---
 id: dark-matter.mirror-share-one-how-fragile
 kind: claim
-version: 8
+version: 9
 title: The mirror share is one, and how fragile that is
 status: proved
 region: dark-matter
@@ -25,7 +25,14 @@ credit:
   role: 'restatement of clauses (i) and (ii) at the maintainer''s decision: exactness is of the mass factor; f_2 = 1 holds under the hypothesis of equal conversion'
   version: 8
   source: maintainer pass 2026-11-12 (asymmetry)
+- name: Claude Fable 5.2
+  role: 'the neutron-rich composition stated at the temperature ratio where it was computed, which is no longer the gravitational floor'
+  version: 9
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
 amendments:
+- version: 9
+  kind: restatement
+  defect: 'two sentences placed the neutron-rich composition at the gravitational floor; it was computed at xi = 2.8 to 3.2e-4, the floor with the first imported coefficients, and the floor is now 5.2e-4, where the composition is not computed'
 - version: 8
   kind: restatement
   defect: 'clauses (i) and (ii) stated f_2 = 1 as following from the equal asymmetry per mode; by the maintainer''s decision of 12 November 2026 the inherited charge is B - L, the copy equates the two towers'' B - L and not their baryon number, so the share of one needs in addition that the mirror''s ratio of baryon number to B - L equals this tower''s, which is not shown. Restated as conditional on that hypothesis; no number changed. The word exact applies to the mass factor.'
@@ -58,6 +65,10 @@ locators:
   label: prop:massbound
   line: 439
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version raised by one: the neutron-rich composition is stated at xi = 2.8 to 3.2e-4, where it was computed, and marked as not recomputed at the present floor.'
   maintainer_pass_2026_11_12:
     by: maintainer-2026-11-12
     date: '2026-11-12'
@@ -131,7 +142,7 @@ extraction:
 ## formal
 Write $m_{r} = c_{r}\Lambda_{r}$, with $\Lambda_{r}$ the confinement scale of tower $r$'s non-abelian sector and $c_{r}$ the constituent factor of its lightest charge-carrying composite.
 \begin{enumerate}
-\item[(i)] \emph{(The mirror.)} By Theorem \claimref{dark-matter.mirror-tower-copy-one}(iii), with the common ceiling and coupling of Premise \claimref{synthesis.common-ceiling-coupling-premise}, $\Lambda_{2} = \Lambda_{6}$ and $c_{2} = c_{6}$ exactly, hence $f_{2} = 1$ under P4, which Theorem \claimref{dark-matter.mirror-tower-copy-one}(v) discharges for the mirror as an equality of the charge $B - L$, and under Hypothesis (equal conversion) stated below; the equality of $\Lambda$ and $c$ is an isomorphism of theories rather than a one-loop statement. As a ratio of mass densities it is a ratio of mean mass per baryon: ours is about $936.7$ MeV after helium, a mirror burnt entirely to helium (the completion limit of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}'s burning branch) gives $931.8$ MeV, so $f_{2}$ is $0.995$ in that limit and $1$ on the proton-only branch, a one-sided systematic of half a percent at assembly level. Caveat (T14c): the two branches bracket the share where the mirror is helium or protons; at the gravitational floor the mirror is degenerate and, for a copied lepton number $L \leq 0$, ends $96$ to $100$ percent neutrons, a composition neither branch describes, and it is helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ (Computation \claimref{dark-tower-matter.mirrors-composition}); the half-percent bracket is established there and not at the floor.
+\item[(i)] \emph{(The mirror.)} By Theorem \claimref{dark-matter.mirror-tower-copy-one}(iii), with the common ceiling and coupling of Premise \claimref{synthesis.common-ceiling-coupling-premise}, $\Lambda_{2} = \Lambda_{6}$ and $c_{2} = c_{6}$ exactly, hence $f_{2} = 1$ under P4, which Theorem \claimref{dark-matter.mirror-tower-copy-one}(v) discharges for the mirror as an equality of the charge $B - L$, and under Hypothesis (equal conversion) stated below; the equality of $\Lambda$ and $c$ is an isomorphism of theories rather than a one-loop statement. As a ratio of mass densities it is a ratio of mean mass per baryon: ours is about $936.7$ MeV after helium, a mirror burnt entirely to helium (the completion limit of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}'s burning branch) gives $931.8$ MeV, so $f_{2}$ is $0.995$ in that limit and $1$ on the proton-only branch, a one-sided systematic of half a percent at assembly level. Caveat (T14c): the two branches bracket the share where the mirror is helium or protons; at $\xi = 2.8$ to $3.2 \times 10^{-4}$, the gravitational floor's value with the production coefficients first imported (not recomputed at the present floor, $5.2 \times 10^{-4}$), the mirror is degenerate and, for a copied lepton number $L \leq 0$, ends $96$ to $100$ percent neutrons, a composition neither branch describes, and it is helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ (Computation \claimref{dark-tower-matter.mirrors-composition}); the half-percent bracket is established there and not at the floor.
 \item[(ii)] \emph{(Fragility.)} The equality is unstable to any departure from the copy. Suppose the two towers shared a ceiling $M$ and coupling but differed in light content by $\Delta b$ over the running range, with $b_{6} \leq 11$; then at one loop
 \[
 \ln\frac{\Lambda_{2}}{\Lambda_{6}} \;\geq\; \frac{\Delta b}{b_{6} + \Delta b}\,\ln\frac{M}{\Lambda_{6}}.
@@ -144,7 +155,7 @@ One Dirac flavour is $\Delta b = 2/3$, which with $\Lambda_{6} = 0.3$ GeV moves 
 Level: (i) is Theorem \claimref{dark-matter.mirror-tower-copy-one}, with the Hypothesis; (ii) is one-loop arithmetic under its stated assumptions, flagged; (iii) is a scope statement.
 
 ## technical
-Write $m_{r} = c_{r}\Lambda_{r}$, with $\Lambda_{r}$ the confinement scale and $c_{r}$ the constituent factor of the lightest charge-carrying composite. For the mirror, the copy theorem with the common-ceiling-coupling premise gives $\Lambda_{2} = \Lambda_{6}$ and $c_{2} = c_{6}$ exactly, so $f_{2} = 1$ under the hypothesis of equal conversion (the mirror's ratio of baryon number to $B - L$ equals this tower's, which is not shown), the democracy of the asymmetry being discharged for the mirror by the copy theorem as an equality of $B - L$; the equality of scales is an isomorphism of theories rather than a one-loop statement; as a ratio of mass densities it is $0.995$ for a mirror burnt entirely to helium and $1$ on the proton-only branch. The T14c note finds the mirror helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ and neutron-rich at the gravitational floor (Computation \claimref{dark-tower-matter.mirrors-composition}), so this bracket does not cover the floor.
+Write $m_{r} = c_{r}\Lambda_{r}$, with $\Lambda_{r}$ the confinement scale and $c_{r}$ the constituent factor of the lightest charge-carrying composite. For the mirror, the copy theorem with the common-ceiling-coupling premise gives $\Lambda_{2} = \Lambda_{6}$ and $c_{2} = c_{6}$ exactly, so $f_{2} = 1$ under the hypothesis of equal conversion (the mirror's ratio of baryon number to $B - L$ equals this tower's, which is not shown), the democracy of the asymmetry being discharged for the mirror by the copy theorem as an equality of $B - L$; the equality of scales is an isomorphism of theories rather than a one-loop statement; as a ratio of mass densities it is $0.995$ for a mirror burnt entirely to helium and $1$ on the proton-only branch. The T14c note finds the mirror helium only for $\xi$ between about $3 \times 10^{-3}$ and $2 \times 10^{-2}$ and neutron-rich at $\xi = 2.8$ to $3.2 \times 10^{-4}$, the floor's value with the coefficients first imported and not recomputed at the present floor (Computation \claimref{dark-tower-matter.mirrors-composition}), so this bracket does not cover the floor.
 
 The equality is fragile. If the two towers shared ceiling and coupling but differed in light content by $\Delta b$, then at one loop $\ln(\Lambda_{2}/\Lambda_{6}) \ge \frac{\Delta b}{b_{6} + \Delta b}\ln(M/\Lambda_{6})$; one Dirac flavour moves the share by a factor between $4.89$ and $21.4$ across the ceiling range, valued in the ceiling proposition under Hypothesis (U). With identical content a ceiling difference $\delta$ in $\alpha^{-1}$ moves $\Lambda_{2}/\Lambda_{6}$ by $e^{-2\pi\delta/b}$, so the share stays within ten percent of one only for $|\delta| < 0.106$: the mass factor of the share is exactly as strong as the premise that equates the ceiling couplings, and the share of one needs the hypothesis of equal conversion as well; the mirror's unit of the observed $5.364$ is conditional on it. For the odd towers the coupling is dimensionful and sets the confinement scale itself, so nothing about their $\Lambda$ follows without a coupling rule the series does not derive.
 

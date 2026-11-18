@@ -3,22 +3,27 @@
 Exact rationals throughout; pi is bracketed by Machin's formula with alternating-series bounds and
 never approximated. Square roots are avoided by squaring: kappa_s^2 = (pi^2 g*/90)(2 pi^2/45)^2 g_s^2
 is a polynomial in pi, and xi^8 = (4 Y g*/g_d)^2 with Y kappa_s rational.
-- Boltzmann step: with Gamma = c T^8/M^4 (premise: the imported graviton rate), H = h T^2/M and
+- Boltzmann step: with Gamma = c T^8/M^4 (premises: the rate derived in the store, clause (v) of the
+  pair-production theorem, and the imported Fact for its published values), H = h T^2/M and
   s = sigma T^3 for arbitrary positive h, sigma (h sigma = kappa_s), Gamma/(H T s) = c T^2/(kappa_s M^3)
   identically (checked at sample T, h, sigma); the yield from T_desc down to 0 is the integral
   c T_desc^3/(3 kappa_s M^3): the antiderivative T^3/3 is checked by exact differentiation, and lies
   strictly between the lower and upper Riemann sums with 200 steps (the sums within two percent).
+  Gamma counts creation events of two quanta each, so Y is the yield of events and the quanta obey the
+  same equation with source 2 Gamma (yield 2 Y, checked at the same samples).
   Gravitational production is the only source (premise: superselection leaves only the metric).
 - kappa_s in (145.25, 145.30) at g* = g_s = 100 ("145.3"); 1.66 = sqrt(8 pi) sqrt(pi^2/90) to three
   figures (the two Planck-mass conventions give one rate).
 - the floor formula: xi^4 = 4 Y g*/g_d, and at c = 1, g_d = 16, T_desc = 6e14 GeV, M_P = 2.435e18 GeV,
   xi in (9.6, 9.7) x 10^-4; the scaling xi^4 proportional to c (16/g_d) (T/6e14)^3 holds exactly at
-  sample inputs (kappa cancels).
+  sample inputs (kappa cancels). The energy fraction 3T n/rho is 4Y at g* = g_s (3 x (2/45) x 30 = 4),
+  the stored convention of 3T per event; with 3T for each of the two quanta of an event it is 8Y, and the
+  ratio is larger by 2^(1/4), which lies in (1.189, 1.190) and rounds to 1.19.
 - the ceiling range (premise: 3.5e11 to 6e14 GeV): (3.5e11/6e14)^(3/4) lies in (3.745, 3.755) x 10^-3,
   the stated 3.75 x 10^-3, about 4 x 10^-3 at one figure.
 - later evolution: with g_d T_d^3 a^3 and g_s T^3 a^3 separately conserved, (T_d/T)^3 changes by
   (g_d_seed/g_d)(g_s/g_s_seed), checked at sample histories.
-EXPORTS: kappa2_bracket(), xi8_bracket(c, gd, T), y_kappa(c, T), MPRED, TCEIL, GSTAR.
+EXPORTS: kappa2_bracket(), xi8_bracket(c, gd, T), y_kappa(c, T), MPRED, TCEIL, GSTAR, PI, QUANTA_PER_EVENT.
 """
 from fractions import Fraction as F
 import GA
@@ -79,6 +84,7 @@ PI_LO, PI_HI = pi_bracket()
 MPRED = F(2435, 1000) * 10 ** 18
 TCEIL = F(6) * 10 ** 14
 GSTAR = F(100)
+QUANTA_PER_EVENT = 2      # the rate of the pair-production theorem counts creation events of two quanta
 H_SAMPLES = [(F(3), F(7, 2)), (F(5, 4), F(11)), (F(9, 2), F(2, 3))]
 T_SAMPLES = [F(2), F(7, 5), F(10) ** 3]
 HISTORIES = [(F(1, 1000), F(10675, 100), F(100), F(375, 100), F(6175, 100)),
@@ -105,6 +111,7 @@ def xi8_bracket(c, gd, T=TCEIL):
 
 
 def check_boltzmann_yield():
+    premise("synthesis.gravitational-pair-production-from-the-operator-source-at-first-order")
     premise("dark-matter.imported-massless-graviton-production-rate")
     premise("dark-matter.superselected-hence-dark-exactly-stable")
     ok = True
@@ -114,6 +121,8 @@ def check_boltzmann_yield():
             Gamma = c * T ** 8 / M ** 4
             H, s = h * T ** 2 / M, sigma * T ** 3
             ok = ok and Gamma / (H * T * s) == c * T ** 2 / (h * sigma * M ** 3)
+            # the rate counts events of QUANTA_PER_EVENT quanta: the quanta have source 2 Gamma, yield 2 Y
+            ok = ok and QUANTA_PER_EVENT * Gamma / (H * T * s) == 2 * c * T ** 2 / (h * sigma * M ** 3)
     ok = ok and GA.pderiv([F(0), F(0), F(0), F(1, 3)]) == [F(0), F(0), F(1)]
     N = 200
     lower = sum(F(k, N) ** 2 for k in range(N)) / N
@@ -137,6 +146,7 @@ def check_kappa_and_convention():
 
 
 def check_floor_prefactor_and_scaling():
+    premise("synthesis.gravitational-pair-production-from-the-operator-source-at-first-order")
     premise("dark-matter.imported-massless-graviton-production-rate")
     lo, hi = xi8_bracket(F(1), F(16))
     # by hand: xi^4 = 4 (6e14)^3 100/(3 (2.435e18)^3 16 x 145.25993), xi = 9.625149e-4, in the quoted
@@ -146,8 +156,16 @@ def check_floor_prefactor_and_scaling():
     for c, gd, T in SCALING_SAMPLES:
         val = 4 * y_kappa(c, T) * GSTAR / gd
         ok = ok and val / base == c * (16 / gd) * (T / TCEIL) ** 3
+    # energy fraction 3T n/rho with n = Y s, s = (2 pi^2/45) g T^3, rho = (pi^2/30) g T^4: 3 (2/45) 30 Y = 4 Y
+    # per event at 3T (the stored convention); 3T for each of the two quanta of an event gives 8 Y
+    per_event = 3 * F(2, 45) * 30
+    ok = ok and per_event == 4 and QUANTA_PER_EVENT * per_event == 8
+    # so xi^4 doubles and xi grows by 2^(1/4), in (1.189, 1.190): the quoted 1.19
+    ratio4 = QUANTA_PER_EVENT * per_event / per_event
+    ok = ok and F(1189, 1000) ** 4 < ratio4 < F(1190, 1000) ** 4 and root_rounds_to(ratio4, 119, -2, 4)
     GA.check("prop:gravseed: xi_floor = 9.6e-4 c^(1/4) (16/g_d)^(1/4) (T/6e14)^(3/4): prefactor in (9.6, 9.7)e-4 "
-             "and the scaling exact", ok)
+             "and the scaling exact; energy fraction 4Y at 3T per event, 8Y and a factor 2^(1/4) in (1.189, 1.190) "
+             "at 3T for each of the two quanta", ok)
     return ok
 
 
@@ -173,4 +191,5 @@ def check_later_evolution_of_the_ratio():
 
 
 EXPORTS = {"kappa2_bracket": kappa2_bracket, "xi8_bracket": xi8_bracket, "y_kappa": y_kappa,
-           "MPRED": MPRED, "TCEIL": TCEIL, "GSTAR": GSTAR, "PI": (PI_LO, PI_HI)}
+           "MPRED": MPRED, "TCEIL": TCEIL, "GSTAR": GSTAR, "PI": (PI_LO, PI_HI),
+           "QUANTA_PER_EVENT": QUANTA_PER_EVENT}

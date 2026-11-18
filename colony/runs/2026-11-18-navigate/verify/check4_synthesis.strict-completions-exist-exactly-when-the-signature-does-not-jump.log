@@ -1,0 +1,6 @@
+W413  synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
+      5 of 8 perturbations of check_double_squares_to_a_positive_form_and_is_split's literals still pass: the check is weak
+W413  synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
+      5 of 8 perturbations of check_one_added_direction_and_the_corank_bound's literals still pass: the check is weak
+
+synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump: 0 error(s), 2 other finding(s); check result: pass

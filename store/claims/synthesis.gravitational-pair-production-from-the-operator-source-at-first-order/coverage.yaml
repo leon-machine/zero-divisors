@@ -1,0 +1,31 @@
+functions:
+  check_first_order_field_at_non_null_momentum_is_fixed_by_the_source:
+    kind: sampled
+    clauses:
+    - '(i) the Einstein map of T - 1/2 id tr T is 1/2 Q(k) T for conserved T at four non-null momenta (two timelike, two spacelike), one case in full, and a displacement is in the kernel'
+    - '(i) rank 6 on the ten symmetric maps at the non-null momenta and rank 4 at two null momenta'
+    omits: 'sampled momenta and sources; the statement for every momentum is the proof''s (the gauge argument); the plane-wave reading of the stored quadratic profile is not checked'
+  check_bilinear_is_normalised_by_the_stored_newtonian_coupling:
+    kind: sampled
+    clauses:
+    - '(ii) B is symmetric, equals the pairing with the reduced source, and is m1 m2 / 2 for two sources at rest; 8 B = 4 m1 m2 (the factor of the transform of the Newtonian potential)'
+    omits: 'the transform of 1/r and the Born relation are in the proof; the stored coupling is touched, not recomputed'
+  check_pair_sources_and_their_brackets:
+    kind: sampled
+    clauses:
+    - '(iii) scalar bracket -tu, its spin-two and trace parts at three pairs of curvature couplings, the trace (1 - 6 xi) s'
+    - '(iii) vector sources trace-free and conserved, summed square 2 t^2 u^2; one helicity pair of a massless fermion gives (t - u)^2 tu / 4; the spin sum as a scalar part'
+    omits: 'four rational centre-of-mass configurations at s = 4; the two-quantum matrix elements of the stress maps are taken as stated in (iii), not derived from field operators'
+  check_channel_weights_are_products_of_the_spin_two_weights:
+    kind: sampled
+    clauses:
+    - '(iv) the nine channel weights, both relative helicities of fermion to fermion, and the conformally coupled scalar'
+    omits: 'seven rational angles determine a polynomial of degree four in the cosine (the degree argument is the proof''s); the vanishing of the coefficients of degrees five and six is checked'
+  check_rate_coefficients_and_the_published_values:
+    kind: complete
+    clauses:
+    - '(v) the coefficient from the computed channel weights and the closed form at four contents; 5789/82944000, 16087/82944000 and the total 1519247/82944000 over pi^3'
+    - '(vi) 3997/41472000 and 11351/20736000 with Dirac weights; the stored value as one sixteenth; the ratio 46312/3997'
+    omits: 'the thermal integrals enter as the rationals 1/15 and 7/120 times pi^4; the collision integral and its prefactor 1/(1024 pi^6) are the proof''s; what the sources print is read, not checked'
+untouched_premises:
+  synthesis.imported-conformal-covariance-of-massless-fields-and-local-conformal-flatness: "used only in clause (vii), which is argued in the proof text (the mean-field source); no check function computes it"

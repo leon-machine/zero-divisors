@@ -6,6 +6,12 @@
     A = c T_seed^4 rederived from the imported rate, with kappa_s from its formula, and against
     M_I = 1.9e10 GeV. Record inputs (Planck 2018 densities, rho_c/h^2 and s_0 from the PDG) are
     taken at the ends that weaken the conclusion.
+(c) Which contents meet c <= 1, at the coefficients of clause (v) of the pair-production theorem
+    (premise; per creation event of two quanta), computed from its closed form at the bath (4, 45, 12):
+    16087 pi^3/20736000 per real massless vector, 1519247 pi^3/82944000 for a Standard-Model content.
+    pi^3 is not approximated by a decimal: pi is taken between 333/106 (the bound part (b) already
+    uses) and 355/113, at the end that weakens each statement. The factor 2 in A/2 is the two quanta of
+    each creation event.
 """
 from fractions import Fraction as F
 import GA
@@ -29,9 +35,16 @@ def frob2(X):
     return sum(x * x for r in X for x in r)
 
 
+def alpha_over_pi3(cj, tj, n_s=4, n_w=45, n_v=12):
+    """alpha/pi^3 of the pair-production theorem's clause (v) for one produced species, per creation event:
+    (1/17280)[(c_j (N_s + 12 N_v) + 5 tau_j N_s)/225 + 49 c_j N_w/4800], bath scalars at zero curvature coupling."""
+    return (F(cj * (n_s + 12 * n_v) + 5 * tj * n_s, 225) + F(49 * cj * n_w, 4800)) / 17280
+
+
 def check_untuned_fit_caps_lightest_heavy_neutrino():
     premise("standard-model.fits-record-level")
     premise("standard-model.chain")
+    premise("synthesis.gravitational-pair-production-from-the-operator-source-at-first-order")
     premise("dark-matter.imported-massless-graviton-production-rate")
     premise("neutrino.r-descent-reheats-below-lower-heavy")
     E = F(10)
@@ -72,6 +85,19 @@ def check_untuned_fit_caps_lightest_heavy_neutrino():
     assert floor(alpha_max / E ** 6) == 729
     assert floor(A / (2 * alpha_max ** 4) / E ** 11) == 39
     assert A / 2 > (1400 * alpha_max) ** 4                 # c <= 1: more than a thousandfold
+    # (c) which contents meet c <= 1, at the derived coefficients
+    pi_hi = F(355, 113)
+    r_v = alpha_over_pi3(12, 0)
+    r_sm = 4 * alpha_over_pi3(1, 1) + 45 * alpha_over_pi3(3, 0) + 12 * r_v
+    assert r_v == F(16087, 20736000) and r_sm == F(1519247, 82944000)
+    a_vec_lo, a_vec_hi = r_v * pi_lo ** 3, r_v * pi_hi ** 3
+    assert F(2405, 10 ** 5) < a_vec_lo < a_vec_hi < F(2406, 10 ** 5)
+    assert 41 * a_vec_hi < 1 < 42 * a_vec_lo               # forty-one vector species, not forty-two
+    assert F(5291, 10 ** 4) < 22 * a_vec_lo < 22 * a_vec_hi < F(5293, 10 ** 4)     # the odd towers' vectors
+    c_sm_lo, c_sm_hi = r_sm * pi_lo ** 3, r_sm * pi_hi ** 3
+    assert F(5678, 10 ** 4) < c_sm_lo < c_sm_hi < F(568, 10 ** 3) < 1              # one Standard-Model content
+    assert F(2271, 1000) < 4 * c_sm_lo < 4 * c_sm_hi < F(2272, 1000)               # four: 2.27, above 1
+    assert A / (2 * F(2272, 1000)) > (1100 * alpha_max) ** 4                       # still more than 1100-fold
     M_I = F(19, 10) * E ** 10
     assert floor(M_I / alpha_max) == 26
     m3 = F(494, 10) / E ** 12

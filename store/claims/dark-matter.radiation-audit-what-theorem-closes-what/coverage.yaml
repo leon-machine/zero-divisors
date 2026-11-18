@@ -9,7 +9,7 @@ functions:
     omits: "all six populated representatives are covered; Polyakov confinement, the phases (C) and (T), the parity anomaly and the closure of the 3D photon channel are not computed"
   check_closing_margins_on_the_interval:
     kind: exact
-    clauses: ["the mirror channel closes by twelve orders at the floor and eight at the hot deposit", "five-dimensional towers close by eight orders", "a nine-vector tower at the hot end is at 7.4"]
+    clauses: ["the mirror channel closes by eleven orders at the floor and eight at the hot deposit", "five-dimensional towers close by eight orders", "a nine-vector tower at the hot end is at 7.4"]
     omits: "the 7.4 is bracketed between 10^7.35 and 10^7.4, which pins the rounding (the margin itself is pinned to 2.33270e7); the five-dimensional case is checked with three light polarisations for one species; the deposit estimate and floor are inputs from the premises"
   check_mirror_atomic_cross_section:
     kind: exact
@@ -23,4 +23,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "the computable parts are bracketed exactly; items 2 (closure mechanism), 3 (qualitative) and 4 (Goldstones) and the self-interaction remarks for the 3D and 5D towers are declared uncomputed. 2026-10-23 (weak checks): check_closing_margins_on_the_interval pins the coefficient 0.07786 and each margin by hand (4.0219e12 at the floor, 1.241301e8 and 1.400640e8 at the hot deposit, 2.33270e7 for the nine-vector tower, above 10^7.35 so the 7.4 rounding is pinned); check_mirror_atomic_cross_section pins pi (2 a_0)^2 and both per-mass figures to six figures. Inputs moved to module level."
+  note: "the computable parts are bracketed exactly; items 2 (closure mechanism), 3 (qualitative) and 4 (Goldstones) and the self-interaction remarks for the 3D and 5D towers are declared uncomputed. 2026-10-23 (weak checks): check_closing_margins_on_the_interval pins the coefficient 0.07786 and each margin by hand (4.0219e12 at the floor, 1.241301e8 and 1.400640e8 at the hot deposit, 2.33270e7 for the nine-vector tower, above 10^7.35 so the 7.4 rounding is pinned); check_mirror_atomic_cross_section pins pi (2 a_0)^2 and both per-mass figures to six figures. Inputs moved to module level. 2026-11-18 (maintainer pass, version 9): the coefficient is now 1519247 pi^3/82944000 = 0.56793 and the margin at the floor 5.5138e11, eleven orders and not twelve; the other pins are unchanged; not judged again by an independent judge."

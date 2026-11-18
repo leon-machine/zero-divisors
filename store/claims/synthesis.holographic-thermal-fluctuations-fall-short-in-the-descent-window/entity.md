@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - singularity.area-law-test@5
-  - synthesis.untuned-fit-caps-lightest-heavy-neutrino@1
+  - synthesis.untuned-fit-caps-lightest-heavy-neutrino@2
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum@3
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.imported-string-gas-thermal-spectrum-and-conversion@1

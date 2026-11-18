@@ -4,8 +4,8 @@ functions:
     clauses: ["(i) copied lepton number: our tower's sphaleron value L/B = -51/28"]
     omits: "everything else in the statement: the Fermi-energy ratios 49 to 84 and 18 to 23, the 96 to 100 percent neutrons, the helium fractions Y' of (ii) and (iii), the xi intervals and the closing remark on eta' come from supplementary MIR and CHECK_COS scripts that are not in the lab"
 untouched_premises:
-  dark-matter.stored-asymmetry-charge-not-number: "supplies the xi interval and the eta' floor value 19 to 26 quoted in the statement; the decimal results built on them are not computed here (the docstring says so)"
-  dark-matter.seeding-gravity-floor-dark-towers-temperature: "supplies the gravitational floor 2.8 to 3.2e-4; not computed in this check"
+  dark-matter.stored-asymmetry-charge-not-number: "supplies the xi interval, the present floor 5.2e-4 and the eta' floor value (19 to 26 as printed, 4.4 now) quoted in the statement; the decimal results built on them are not computed here (the docstring says so)"
+  dark-matter.seeding-gravity-floor-dark-towers-temperature: "supplies the gravitational floor (2.8 to 3.2e-4 when clause (i) was computed, 5.2e-4 through its use in the stored-asymmetry proposition now) and its scaling with the reheating temperature; not computed in this check"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

@@ -38,7 +38,7 @@ derivations:
   - hawking.imported-quasi-free-states-car-algebra@2
   - hawking.i-state@4
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - dark-matter.stored-asymmetry-charge-not-number@11
+  - dark-matter.stored-asymmetry-charge-not-number@12
   - synthesis.cold-mirror-needs-non-equilibrium-descent@3
   - synthesis.mirror-asymmetry-route-one@4
   - dark-matter.mirror-tower-copy-one@11

@@ -6,7 +6,7 @@ functions:
   check_mirror_floor_and_eta_prime:
     kind: exact
     clauses: ["(ii)"]
-    omits: "species content (4 scalars, 45 Weyl fermions, 12 vectors) taken from the mirror premise; the charge reading of the cited stored-asymmetry proposition is not tested; the crossover 'about 4' is bracketed between c = 4 and 4.1"
+    omits: "species content (4 scalars, 45 Weyl fermions, 12 vectors) taken from the mirror premise; the per-species coefficients are computed from the closed form of the pair-production theorem's clause (v), coded here and compared with its printed rationals (that theorem's check exports nothing); the charge reading of the cited stored-asymmetry proposition is not tested; the crossover 'about 4' is bracketed between c = 4 and 4.1; the two-quanta energy count is the factor 4 on xi^8"
   check_yield_shortfall_and_rescue:
     kind: exact
     clauses: ["(iii)"]
@@ -19,4 +19,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "each numerical claim is bracketed by exact rational interval arithmetic"
+  note: "each numerical claim is bracketed by exact rational interval arithmetic. 2026-11-18 (maintainer pass, version 5): all four functions recomputed with the derived coefficients (rational multiples of pi^3, pi bracketed by Machin); the new bounds and the values on the two-quanta energy count are bracketed the same way; not judged again by an independent judge."

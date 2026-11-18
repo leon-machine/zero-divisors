@@ -1,7 +1,7 @@
 ---
 id: pred.no-dark-radiation
 kind: prediction
-version: 4
+version: 5
 title: No dark radiation
 status: live
 subject: dark-matter
@@ -25,6 +25,14 @@ credit:
   role: 'pointer to the open problem on the imported graviton-exchange rate; prediction unchanged'
   version: 4
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'the sentence on the seeding floor''s rate reworded: the rate is now derived in the store with corrected coefficients; prediction, kill condition and status unchanged'
+  version: 5
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+amendments:
+- version: 5
+  kind: restatement
+  defect: 'the formal and technical levels said the seeding floor imports a rate that is flagged as a process the series does not hold and pointed to the open problem; the rate is now derived in the store without a quantum of the gravitational field, with corrected coefficients, and the audit''s margin at the mirror''s floor is eleven orders where twelve stood'
 review: typed
 kill_condition:
   threshold: One confirmed massless dark species
@@ -48,6 +56,10 @@ locators:
   number: T17 stance 9
   label: tab:stances
 extraction:
+  maintainer_pass_2026_11_18:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 4 -> 5, at Leon''s decision of 18 November 2026. The sentence of 10 November pointing to open problem op.graviton-rate-as-classical-field-process is replaced, at the formal and technical levels, by one saying that the rate is derived in the store (synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, clause (v)) with corrected coefficients, and what that does to the audit behind this stance (floor 5.2e-4, eleven orders at the floor). The prediction, its status, its kill condition and its threshold are unchanged. The basis is repinned to the audit''s version of the same day.'
   maintainer_pass_2026_11_10_graviton:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -82,14 +94,14 @@ extraction:
 derivations:
 - name: basis
   uses:
-  - dark-matter.radiation-audit-what-theorem-closes-what@8
+  - dark-matter.radiation-audit-what-theorem-closes-what@9
 ---
 
 ## formal
-No dark radiation: $\Delta N_{\mathrm{eff}} \approx 0$, conditionally on the dark towers\' open channels closing, which holds if the descent\'s deposit is no hotter than the dark-matter paper\'s estimate, and only with the mirror\'s seeded temperature taken as a free datum: applied with the reach of the copy theorem, P2 gives the mirror $\xi = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}), so the stance rests on an exception to P2 for the mirror. This is an exception to P2 at its version-1 reach; P2 as scoped leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit imports a rate computed with a quantised gravitational field (Fact \claimref{dark-matter.imported-massless-graviton-production-rate}, flagged), which the series does not hold; whether the classical gauge field gives that rate, another or none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
+No dark radiation: $\Delta N_{\mathrm{eff}} \approx 0$, conditionally on the dark towers\' open channels closing, which holds if the descent\'s deposit is no hotter than the dark-matter paper\'s estimate, and only with the mirror\'s seeded temperature taken as a free datum: applied with the reach of the copy theorem, P2 gives the mirror $\xi = 1$ and $\Delta N_{\mathrm{eff}} = 7.45$ (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}), so the stance rests on an exception to P2 for the mirror. This is an exception to P2 at its version-1 reach; P2 as scoped leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit uses the rate of gravitational pair production, which is now derived in the store, with corrected coefficients and with no quantum of the gravitational field (Theorem \claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}(v), under its hypothesis (OS), or on the standard account of Fact \claimref{dark-matter.imported-massless-graviton-production-rate}); with the corrected coefficients the mirror's floor is $5.2 \times 10^{-4}$ and its channel closes by eleven orders there, where twelve stood (Proposition \claimref{dark-matter.radiation-audit-what-theorem-closes-what}), and the prediction is unchanged.
 
 ## technical
-The prediction is $\Delta\Neff \approx 0$: the dark towers add no relativistic species to the radiation content measured in the cosmic microwave background. It is conditional on the dark towers' open channels closing, which holds if the descent's deposit is no hotter than the dark-matter paper's estimate. It also needs the mirror to be cold, which the T14c note shows is an exception to indifference (P2): applied with the copy theorem's reach, P2 makes the mirror as hot as our tower, $\Delta N_{\mathrm{eff}} = 7.45$, which would meet the kill condition. That is an exception to indifference at its version-1 reach; indifference as scoped (labels, not states) leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit imports a rate computed with a quantised gravitational field (Fact \claimref{dark-matter.imported-massless-graviton-production-rate}, flagged), which the series does not hold; whether the classical gauge field gives that rate, another or none is open problem op.graviton-rate-as-classical-field-process, and the prediction is unchanged until that is settled.
+The prediction is $\Delta\Neff \approx 0$: the dark towers add no relativistic species to the radiation content measured in the cosmic microwave background. It is conditional on the dark towers' open channels closing, which holds if the descent's deposit is no hotter than the dark-matter paper's estimate. It also needs the mirror to be cold, which the T14c note shows is an exception to indifference (P2): applied with the copy theorem's reach, P2 makes the mirror as hot as our tower, $\Delta N_{\mathrm{eff}} = 7.45$, which would meet the kill condition. That is an exception to indifference at its version-1 reach; indifference as scoped (labels, not states) leaves $\xi$ free (Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}), and the cold mirror then needs a non-equilibrium descent (Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}). The seeding floor behind the radiation audit uses the rate of gravitational pair production, which is now derived in the store, with corrected coefficients and with no quantum of the gravitational field (Theorem \claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}(v), under its hypothesis (OS), or on the standard account of Fact \claimref{dark-matter.imported-massless-graviton-production-rate}); with the corrected coefficients the mirror's floor is $5.2 \times 10^{-4}$ and its channel closes by eleven orders there, where twelve stood (Proposition \claimref{dark-matter.radiation-audit-what-theorem-closes-what}), and the prediction is unchanged.
 
 ## lay
 The afterglow of the early universe records how many kinds of light, fast-moving particles existed at the time. The framework predicts that the dark towers add none, provided the remaining ways of heating them stay closed, which holds if the descent left them no hotter than the paper estimates. It also needs the mirror world to have started cold, which a later note (T14c) shows is an unstated exception to the framework's own indifference principle; applied evenly, that principle would make the mirror as hot as our world and the prediction would fail. As the principle is now scoped, it applies to labels such as charges and not to temperatures, so it leaves the mirror's temperature free; a cold mirror then needs the descent to have left the towers out of equilibrium.

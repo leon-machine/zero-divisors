@@ -1,7 +1,9 @@
 """simulations.imported-mirror: exact checks of the computable figures.
 
-Inputs are T14's (legacy/verify_T14.py, prop:coefficients and prop:charge): per-species
-gravitational yield coefficients A_S = 1.9e-4, A_F = 1.1e-3, A_V = 2.3e-3; the mirror's g_d =
+Inputs are T14's (legacy/verify_T14.py, prop:coefficients and prop:charge), except the per-species
+gravitational production coefficients, which are the derived ones the stored propositions now use
+(per creation event, over pi^3: 5789/82944000 for a real scalar, 16087/82944000 for a chiral fermion,
+16087/20736000 for a real massless vector; T14's 1.9e-4, 1.1e-3, 2.3e-3 were too small); the mirror's g_d =
 4 + 45 x 1.75 + 24 = 106.75; g* = 100; reduced Planck mass 2.435e18 GeV; ceiling 6e14 GeV;
 eta = 2.74e-8 x 0.02237; n_gamma/s = 0.1413; m_p = 938.272, m_He4 = 3727.379 MeV; a_0 = 0.529e-8 cm,
 m_H = 1.67e-24 g, m_He = 6.64e-24 g. Everything is exact rational interval arithmetic: pi from
@@ -11,13 +13,14 @@ by comparing powers.
     against ours 0.75 m_p + 0.25 m_He4/4 (75/25 by baryon number), ratio in (0.994, 0.996) (the
     proton-only branch is the ratio 1 by definition).
 (2) The temperature ratio: the gravitational floor xi^4 = 4 Y g*/g_d with Y = c (T/M_P)^3/(3 kappa),
-    kappa = sqrt(pi^2 g*/90)(2 pi^2/45) g*, c = 0.05311 (Dirac counting) to 0.07786 (Weyl counting),
-    gives xi from (2.8, 2.9) to (3.1, 3.2) x 10^-4 (so "2.8 to 3.2" is the tightest one-decimal enclosure);
+    kappa = sqrt(pi^2 g*/90)(2 pi^2/45) g*, c = 1519247 pi^3/82944000 in (0.5679, 0.5680) (each of the
+    45 chiral fermions weighted once; pi from its Machin bounds), gives xi in (5.1, 5.2) x 10^-4, rounding
+    to the stated 5.2 x 10^-4 (T14 printed 2.8 to 3.2 x 10^-4);
     the hot deposit xi^4 = 3 (n_B/s)/(3/4) g*/g_d, n_B/s = 8.66081394e-11, gives xi in (4.2, 4.3) x 10^-3
     ("about 4 x 10^-3"), above the floor and inside the helium window (3 x 10^-3, 2 x 10^-2) stated from T14c.
 (3) eta' = eta/xi^3 (equal baryon number, photon number proportional to T^3): checked as the identity
-    n_b / (xi^3 n_gamma) at sample xi (eta = 6.12938e-10), and at the computed floor ends eta' in (25, 26)
-    and (19, 20), at the hot deposit in (0.0080, 0.0081).
+    n_b / (xi^3 n_gamma) at sample xi (eta = 6.12938e-10), and at the computed floor eta' in (4.3, 4.4),
+    at the hot deposit in (0.0080, 0.0081).
 (4) Neutral-atom cross-section per mass: sigma = pi (2 a_0)^2 in (3.5, 3.6) x 10^-16 cm^2, so sigma/m in
     (2.1, 2.2) x 10^8 cm^2/g for hydrogen and (5.2, 5.3) x 10^7 for helium: of order 2 x 10^8 and 5 x 10^7.
 Not computable here: the helium/neutron composition (the burning network is not modelled), and the
@@ -28,7 +31,7 @@ from fractions import Fraction as F
 import GA
 from tp_premise import premise
 
-A_S, A_F, A_V = F(19, 10 ** 5), F(11, 10 ** 4), F(23, 10 ** 4)
+A_S, A_F, A_V = F(5789, 82944000), F(16087, 82944000), F(16087, 20736000)     # over pi^3, per creation event
 GD = 4 + 45 * F(175, 100) + 24
 GSTAR = F(100)
 MPRED = F(2435, 1000) * 10 ** 18
@@ -38,9 +41,8 @@ NGS = F(1413, 10 ** 4)
 M_P, M_HE4 = F(938272, 1000), F(3727379, 1000)
 A0 = F(529, 1000) * F(1, 10 ** 8)
 M_H, M_HE = F(167, 100) * F(1, 10 ** 24), F(664, 100) * F(1, 10 ** 24)
-# yield coefficient c = 4 A_S + w A_F + 12 A_V with fermion weight w = 45/2 (Dirac counting) or 45 (Weyl)
-C_DIRAC = 4 * A_S + F(45, 2) * A_F + 12 * A_V
-C_WEYL = 4 * A_S + 45 * A_F + 12 * A_V
+# yield coefficient over pi^3: c/pi^3 = 4 A_S + 45 A_F + 12 A_V, each chiral fermion weighted once
+C_OVER_PI3 = 4 * A_S + 45 * A_F + 12 * A_V
 # T14c's helium window for xi (a cited input)
 HELIUM_WINDOW = (F(3, 10 ** 3), F(2, 10 ** 2))
 # a common photon-number normalisation and sample xi for the identity eta' = n_b / (xi^3 n_gamma)
@@ -109,10 +111,20 @@ def _kappa_bounds():
     return plo ** 3 * slo * c, phi ** 3 * shi * c
 
 
+def _c_bounds():
+    plo, phi = _pi_bounds()
+    return C_OVER_PI3 * plo ** 3, C_OVER_PI3 * phi ** 3
+
+
 def _xi4_floor(cc):
     klo, khi = _kappa_bounds()
     base = 4 * cc * (M_CEIL / MPRED) ** 3 * GSTAR / (3 * GD)
     return base / khi, base / klo
+
+
+def _xi4_floor_interval():
+    c_lo, c_hi = _c_bounds()
+    return _xi4_floor(c_lo)[0], _xi4_floor(c_hi)[1]
 
 
 def check_mirror_share_from_mass_per_baryon():
@@ -132,17 +144,16 @@ def check_temperature_ratio_interval():
     premise("dark-matter.stored-asymmetry-charge-not-number")
     premise("dark-matter.radiation-audit-what-theorem-closes-what")
     ok = True
-    c_lo, c_hi = C_DIRAC, C_WEYL
-    # by hand: 4(1.9e-4) + 22.5(1.1e-3) + 12(2.3e-3) = 0.05311, and 0.07786 with 45 in place of 22.5
-    ok = ok and c_lo == F(5311, 10 ** 5) and c_hi == F(7786, 10 ** 5)
+    c_lo, c_hi = _c_bounds()
+    # by hand: (4 x 5789 + 45 x 16087 + 48 x 16087)/82944000 = 1519247/82944000, times pi^3 = 0.56793
+    ok = ok and C_OVER_PI3 == F(1519247, 82944000)
+    ok = ok and F(5679, 10 ** 4) < c_lo <= c_hi < F(5680, 10 ** 4)
     ok = ok and GD == F(10675, 100)
-    floor_lo = _xi4_floor(c_lo)
-    floor_hi = _xi4_floor(c_hi)
-    _, hi_hi = floor_hi
-    # the stated floor "2.8 to 3.2 x 10^-4" is the tightest one-decimal enclosure: the lower end lies in
-    # (2.8, 2.9) and the upper end in (3.1, 3.2), x 10^-4
-    ok = ok and inside4(scaled4(floor_lo, 10 ** 5), 28, 29)
-    ok = ok and inside4(scaled4(floor_hi, 10 ** 5), 31, 32)
+    floor = _xi4_floor_interval()
+    _, hi_hi = floor
+    # the stated floor "5.2 x 10^-4": xi lies in (5.1, 5.2) x 10^-4 and rounds to 5.2 (in (5.15, 5.25))
+    ok = ok and inside4(scaled4(floor, 10 ** 5), 51, 52)
+    ok = ok and inside4(scaled4(floor, 10 ** 6), 515, 525)
     nbs = ETA * NGS
     # by hand: 612938e-18 x 0.1413 = 866081394e-19 (= 8.66e-11)
     ok = ok and nbs == F(866081394, 10 ** 19)
@@ -151,7 +162,7 @@ def check_temperature_ratio_interval():
     ok = ok and inside4(scaled4((xi4_hot, xi4_hot), 10 ** 4), 42, 43)
     ok = ok and hi_hi < xi4_hot
     ok = ok and inside4((xi4_hot, xi4_hot), *HELIUM_WINDOW)
-    GA.check("floor xi in (2.8, 3.2)e-4, hot deposit in (4.0, 4.5)e-3, inside (3e-3, 2e-2)", ok)
+    GA.check("floor xi in (5.1, 5.2)e-4, hot deposit in (4.0, 4.5)e-3, inside (3e-3, 2e-2)", ok)
     return ok
 
 
@@ -164,14 +175,13 @@ def check_eta_prime():
         ok = ok and n_b / (xi ** 3 * n_gamma) == ETA / xi ** 3
     # by hand: 2.74e-8 x 0.02237 = 612938e-18 (= 6.13e-10)
     ok = ok and ETA == F(612938, 10 ** 15)
-    # eta' = eta/xi^3 at the floor ends, through fourth powers: in (25, 26) at the lower end (by hand
-    # 6.129e-10 / (2.875e-4)^3 = 25.8) and in (19, 20) at the upper end (6.129e-10 / (3.164e-4)^3 = 19.4)
-    ok = ok and inside4(eta_prime4(_xi4_floor(C_DIRAC)), 25, 26)
-    ok = ok and inside4(eta_prime4(_xi4_floor(C_WEYL)), 19, 20)
+    # eta' = eta/xi^3 at the floor, through fourth powers: in (4.3, 4.4) (by hand
+    # 6.129e-10 / (5.199e-4)^3 = 4.36)
+    ok = ok and inside4(scaled4(eta_prime4(_xi4_floor_interval()), 10), 43, 44)
     xi4_hot = 3 * ETA * NGS / F(3, 4) * GSTAR / GD
     # at the hot deposit, by hand 6.129e-10 / (4.244e-3)^3 = 8.02e-3: in (8.0, 8.1) x 10^-3
     ok = ok and inside4(scaled4(eta_prime4((xi4_hot, xi4_hot)), 10 ** 4), 80, 81)
-    GA.check("eta' = eta/xi^3: (19, 26) at the floor, (0.007, 0.009) at the hot deposit", ok)
+    GA.check("eta' = eta/xi^3: (4.3, 4.4) at the floor, (0.007, 0.009) at the hot deposit", ok)
     return ok
 
 

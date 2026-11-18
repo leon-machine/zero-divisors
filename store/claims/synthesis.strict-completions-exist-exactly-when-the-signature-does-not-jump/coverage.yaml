@@ -1,0 +1,32 @@
+functions:
+  check_double_squares_to_a_positive_form_and_is_split:
+    kind: sampled
+    clauses:
+    - '(2) the double squares to g^2 + b^2 on each copy, has signature (n,n) unless g is singular and b = 0, and is G (+) (-G) at b = 0'
+    omits: 'eight forms of rank one to four and four couplings; the statement for every family is the proof''s'
+  check_counter_models_for_each_tameness_clause:
+    kind: sampled
+    clauses:
+    - '(3), (6) x^2, diag(x,-x), x^2+y^2 and [[x,y],[y,-x]]: one signature off the degeneration set and the coupled double nondegenerate at every grid point'
+    omits: 'rational grids; that the double of [[x,y],[y,-x]] has a twisted K is in check_constant_model_for_corank_two_and_the_twisted_eigenline'
+  check_signature_jump_obstructs_with_matched_clocks:
+    kind: sampled
+    clauses:
+    - '(1), (7) x id in rank four: signatures (4,0) and (0,4), equal residues, exterior totals differ for fifteen signatures of K, a strict sample degenerates at x = +-1'
+    omits: 'one strict sample completion; that every strict completion degenerates is the proof''s'
+  check_one_added_direction_and_the_corank_bound:
+    kind: sampled
+    clauses:
+    - '(6)(a) x^2 with one added negative direction; (1) the place of the degeneration follows the sign of K; (9) instances of the rank and sign bounds'
+    omits: 'instances only for (9); the bound is the cited Fact and the proof''s Witt-index step'
+  check_constant_model_for_corank_two_and_the_twisted_eigenline:
+    kind: sampled
+    clauses:
+    - '(6)(b) diag(x,-x) with the constant form diag(1,-1): Schur determinant and signature (2,2)'
+    - '(5) the positive and negative eigenvectors of [[x,y],[y,-x]] at nine half-angle points, reversed after one turn'
+    omits: 'the topological step of (5) (a bundle on the plane is orientable on the circle) is the proof''s'
+  check_clifford_multiplication_families_and_the_added_generator:
+    kind: sampled
+    clauses:
+    - '(8) symmetric anticommuting generators for m = 1 to 4 on modules of dimension 1, 2, 4, 8; g^2 = Q(x); no further symmetric anticommuting map for m = 1, 2, 3, a line of them for m = 4; g + b E5 squares to Q(x) + b^2'
+    omits: 'the least-module dimensions for m up to 10 are entered from the stored classification, not computed; m >= 5 is the proof''s argument; the cited periodicity theorem is not checked'

@@ -5,12 +5,12 @@ functions:
     omits: "the ratio Q_2 m/(Q_6 m) = 1 is obtained by setting Q_6 = Q_2 = eps N (the same eps and N under P1), so it holds by construction at the sample xi and tests the equal B - L only; that f_2 = 1 as an equality of baryon number needs the mirror's ratio of baryon number to B - L to equal this tower's, which clause (i) at version 11 states as not shown and the check does not touch (coverage line edited 2026-11-12; the judge below has not re-agreed); exact content is the bracket 0.448^3 in (0.0899, 0.0900) and xi_hot^3 < 1e-7; the cap 0.448 itself is an input"
   check_origin_gravity_cannot_supply_the_charge:
     kind: partial
-    clauses: ["(ii) gravitational production more than four orders short of n_B/s = 8.7e-11"]
-    omits: "n_B/s in (8.6, 8.7)e-11 and the ratio above 1e4 are bracketed exactly using the upper coefficient; the quoted yield 1.8 to 2.7e-15 per unit entropy is not itself asserted, only its upper bound; the black-hole sink clause is not touched"
+    clauses: ["(ii) gravitational production, 3.9e-14 quanta per unit entropy, more than three orders short of n_B/s = 8.7e-11"]
+    omits: "n_B/s in (8.6, 8.7)e-11, the yield (1.95e-14 events, 3.9e-14 quanta, by rounding) and the ratio between 1e3 and 1e4 are bracketed exactly at the mirror's derived coefficient; that an event has two quanta is the seeding export, taken from the pair-production theorem; the black-hole sink clause is not touched"
   check_eta_prime_and_radiation_over_the_interval:
     kind: exact
-    clauses: ["(iii) eta = 6.1e-10", "(iii) crossover eta^(1/3) = 8.5e-4", "(iii) eta' from 19 to 26 at the floor, about 0.008 at the hot deposit", "(iii) at least 10^7 times ours", "(iii) Delta N_eff eight orders below the cap"]
-    omits: "the floor values xi = 2.8 to 3.2e-4, the hot-deposit xi = 4e-3 and the cap 0.448 are not asserted directly; they enter through the cosmo() export of the coefficients proposition"
+    clauses: ["(iii) eta = 6.1e-10", "(iii) crossover eta^(1/3) = 8.5e-4", "(iii) eta' = 4.4 at the floor, about 0.008 at the hot deposit", "(iii) at least 10^7 times ours", "(iii) Delta N_eff eight orders below the cap"]
+    omits: "the floor xi = 5.2e-4 is pinned by rounding from the cosmo() export of the coefficients proposition; the hot-deposit xi = 4e-3 and the cap 0.448 are not asserted directly; the degeneracy and neutron fraction quoted at xi = 2.8 to 3.2e-4 are not computed here"
   check_bottom_of_ceiling_range_factor:
     kind: exact
     clauses: ["(iii) four parts in a thousand of this at the bottom of the ceiling range"]
@@ -23,4 +23,4 @@ judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: "the arithmetic of (ii) to (iv) is bracketed exactly; the nucleosynthesis caveat, the boundary-mode count and the f_2 = 1 charge reading itself are not computed, as the docstring says. 2026-10-23 (weak checks): check_eta_prime_and_radiation_over_the_interval pins eta exactly (6.12938e-10), the crossover 8.494520e-4, eta' at both floor ends (19.35951, 25.79277) and at the hot deposit (0.00801638), eta'/eta there (1.307862e7) and the Delta N_eff margin (1.24130e8) by hand; the quoted windows and one-sided bounds are implied and were removed."
+  note: "the arithmetic of (ii) to (iv) is bracketed exactly; the nucleosynthesis caveat, the boundary-mode count and the f_2 = 1 charge reading itself are not computed, as the docstring says. 2026-10-23 (weak checks): check_eta_prime_and_radiation_over_the_interval pins eta exactly (6.12938e-10), the crossover 8.494520e-4, eta' at both floor ends (19.35951, 25.79277) and at the hot deposit (0.00801638), eta'/eta there (1.307862e7) and the Delta N_eff margin (1.24130e8) by hand; the quoted windows and one-sided bounds are implied and were removed. 2026-11-18 (maintainer pass, version 12): the pins of (ii) and of eta' at the floor follow the coefficients proposition's version 5 (4.36175 at the floor; yield 3.9e-14 quanta, between three and four orders short); not judged again by an independent judge."

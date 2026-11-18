@@ -6,10 +6,10 @@ functions:
     - (i)
     - (ii)
     - (iii)
-    - closing margin 2.5 and one-loop remark
-    omits: Exact rational arithmetic on the recorded inputs, each taken at the end of its error interval that weakens the conclusion (v_R = 4.25e10, remainder 4.364 - 0.065, pi < 355/113); every number is a floor or a fourth-power comparison; the yield bound c T_desc^4 >= A/2 and the formula for A (3 kappa M_P^3 times mass per unit entropy) are taken from the cited premises and not derived; the one-loop remark is checked as 3.2e11 / 1.9e10 floored to 16 against the tolerance 2.56, with 1.9e10 not defined in the statement; c*/0.0023 floors to 5867, stated as "about 5900"
+    - closing margin 1.5 and one-loop remark
+    omits: Exact rational arithmetic on the recorded inputs, each taken at the end of its error interval that weakens the conclusion (v_R = 4.25e10, remainder 4.364 - 0.065, pi between 333/106 and 355/113); every number is a floor or a fourth-power comparison; the yield bound c T_desc^4 >= A/2 and the formula for A (3 kappa M_P^3 times mass per unit entropy) are taken from the cited premises and not derived; the per-species coefficients are computed from the closed form of the pair-production theorem's clause (v), coded in the check and compared with its printed rationals (that theorem's check exports nothing), and that the rate counts events of two quanta is taken from it; the one-loop remark is checked as 3.2e11 / 1.9e10 floored to 16 against the tolerance 1.56, with 1.9e10 not defined in the statement; c* over the per-vector coefficient lies between 560 and 562, stated as "about 560"; the satisfied direction of (iii) uses A at the same (lower) ends as the exclusion
 judge:
   by: fix-round-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: 'Formal and technical statements restated: "about 5800" vector species corrected to "about 5900", matching the computed floor 5867 of c*/0.0023.'
+  note: 'Formal and technical statements restated: "about 5800" vector species corrected to "about 5900", matching the computed floor 5867 of c*/0.0023. 2026-11-18 (maintainer pass, version 3): recomputed with the derived coefficients (c* is about 560 vector species; contents 0.529 and 2.27; margins 2.24 and 1.56; f_J above 19.6; m_D above 6.4 GeV); not judged again by an independent judge.'
