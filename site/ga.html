@@ -470,7 +470,7 @@ function panel(x, y, w, h, title, a = 1){ if (a <= 0 || !title) return; ox.save(
 function quoteCard(t, who, cx, cy, maxW, fs, col, a){ if (a <= 0) return; maxW = Math.min(maxW, W - 72); quote(t, who, cx, cy, maxW, fs, col, a); }
 function heading(t, sub){ const big = !NARROW && HF > 760; text(t, W / 2, NARROW ? 22 : big ? 34 : 30, C.text, NARROW ? 21 : big ? 34 : 29, 'center', SERIF, '600'); if (sub) { const ys = NARROW ? 48 : big ? 70 : 62; text(sub, W / 2, ys, C.t2, NARROW ? 14 : big ? 19 : 17, 'center', SERIF, 'italic'); ox.fillStyle = 'rgba(240,194,122,.6)'; ox.fillRect(W / 2 - 22, ys + (NARROW ? 14 : 18), 44, 1.5); } }
 const HEAD_OFF = () => NARROW ? 72 : HF > 760 ? 104 : 92;
-let NARROW = false;
+let NARROW = false, LZ = 1;   // LZ: the scale the current drawing is painted at
 
 /* ---------- the ladder, drawn beside every scene of the chapter from the bit ---------- */
 const LADDER = ['Distinction', 'Directions', 'Geometry', 'Algebra', 'Counting', 'Continuum', 'Physics'];
@@ -481,12 +481,15 @@ function ladder(active){
     text(`rung ${active + 1} of ${n}: ${LADDER[active]}`, W / 2, 25, C.gold, 11, 'center', MONO);
     return {x0: 0, y0: 38};
   }
-  const x = Math.max(22, W / 2 - 640), top = 26, bot = H - 22, step = (bot - top) / (LADDER.length - 1);
-  ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(x + 5, top); ox.lineTo(x + 5, bot); ox.stroke();
+  // the drawing beside it may be scaled down to fit; the ladder's words keep a readable size on screen
+  const k = 1 / Math.max(0.45, LZ), x = Math.max(22, W / 2 - 640), top = 26 * Math.min(k, 1.6), bot = H - 22, step = (bot - top) / (LADDER.length - 1);
+  const fs = Math.min(15 * k, step * 0.55), fsOn = Math.min(17 * k, step * 0.62);
+  ox.strokeStyle = C.line; ox.lineWidth = 1.2 * Math.min(k, 1.6); ox.beginPath(); ox.moveTo(x + 5, top); ox.lineTo(x + 5, bot); ox.stroke();
   LADDER.forEach((t, i) => { const y = bot - i * step, on = i === active, col = on ? C.gold : i < active ? C.t2 : C.t3;
-    dot(x + 5, y, on ? 5 : 3, col); text(t, x + 18, y, col, on ? 15 : 13, 'left', SERIF, on ? '600' : ''); });
-  text('the ladder', x, 8, C.t3, 10, 'left', MONO);
-  return {x0: x + 128, y0: 0};
+    dot(x + 5, y, (on ? 5 : 3) * Math.min(k, 1.6), col); text(t, x + 18 * Math.min(k, 1.6), y, col, on ? fsOn : fs, 'left', SERIF, on ? '600' : ''); });
+  text('the ladder', x, 8 * Math.min(k, 1.6), C.t3, Math.min(12 * k, 16), 'left', MONO);
+  const lw = Math.max(...LADDER.map(t => textW(t, fsOn, SERIF, '600')));
+  return {x0: Math.max(x + 128, x + 18 * Math.min(k, 1.6) + lw + 24), y0: 0};
 }
 
 /* ---------- figures the reader can take hold of: a scene names one handle, and once its step has finished
@@ -1469,7 +1472,7 @@ function paint(k, s, need, probe){
   ox.save(); ox.translate(0, TOP); ox.globalAlpha = 1; H = Math.max(120, sceneCapTop(k) - 12 - TOP);
   try {
     if (T) { heading(T[0], T[1]); off = HEAD_OFF(); ox.translate(0, off); H = Math.max(60, H - off); }
-    const z = Math.min(1, H / need); if (z < 1) { ox.scale(z, z); W = W0 / z; H = need; }
+    const z = Math.min(1, H / need); LZ = z; if (z < 1) { ox.scale(z, z); W = W0 / z; H = need; }
     paint.hv = H; const sh = probe ? 0 : (shiftCache.get(k) || 0); ox.translate(sh, 0); CURSH = sh;
     EXT = 0; INTER = null; XLO = 8; XA = Infinity; XB = -Infinity; BASE = ox.getTransform(); TRACK = !!probe;
     DRAWS[k](s); TRACK = false; flushBoxes(k); over = EXT - H; Z = z; OFFY = off / z; SHIFTX = sh;
