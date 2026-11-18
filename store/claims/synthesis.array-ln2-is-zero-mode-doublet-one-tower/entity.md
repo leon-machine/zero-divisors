@@ -35,7 +35,7 @@ derivations:
   - hawking.imported-s-wave-bosonic-sector@6
   - hawking.current-commutator-exactly-edge-split@4
   - synthesis.residue-from-mode-entropy@4
-  - hawking.helicity-lift-joints-itemised@7
+  - hawking.helicity-lift-joints-itemised@8
   - synthesis.capacity-per-mode-independent-of-helicity@2
   - synthesis.imported-jacobi-triple-product@1
   proof: proof-main.tex

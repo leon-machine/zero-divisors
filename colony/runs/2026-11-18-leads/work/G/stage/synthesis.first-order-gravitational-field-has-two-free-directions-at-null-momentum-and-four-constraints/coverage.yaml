@@ -1,0 +1,40 @@
+functions:
+  check_kernel_at_null_momentum_is_displacements_plus_two_transverse_trace_free_maps:
+    kind: sampled
+    clauses:
+    - '(i) kernel of dimension six at three null momenta, equal to the displacements plus the two transverse trace-free maps, cut out by h(k) = tr(h) k / 2; kernel four at four non-null momenta'
+    - '(vi) the counts in Cl(1,2) (no free direction, two null momenta) and Cl(1,4) (five, one null momentum)'
+    omits: 'sampled momenta; the statement for every null momentum is the proof''s'
+  check_image_at_null_momentum_is_the_sources_without_transverse_trace_free_part:
+    kind: sampled
+    clauses:
+    - '(ii) the Einstein map is symmetric for the pairing at seven momenta; at three null momenta its image is conserved, pairs to zero with the two maps and has dimension four'
+    omits: 'the symmetry for every momentum and the annihilator argument are the proof''s'
+  check_pole_at_the_null_cone_is_in_the_transverse_trace_free_part:
+    kind: sampled
+    clauses:
+    - '(iii) for a basis of the conserved sources at three null momenta, T - id tr T / 2 minus the transverse trace-free part is a displacement and has zero curvature on the six bivectors'
+    - '(iv) B on conserved sources at null momentum is the sum of the two squared pairings, signature (2,0) with radical four; signature (5,1) at two timelike and (3,3) at two spacelike momenta'
+    omits: 'the divisibility of the remainder by Q(k) along a line of frequencies is the proof''s polynomial argument, checked here only at the two null points of one direction'
+  check_constraint_components_carry_no_second_power_of_the_frequency:
+    kind: complete
+    clauses:
+    - '(v) the degrees 0, 1, 2 in the frequency of the three kinds of component, on the ten symmetric maps at one spatial momentum and five frequencies'
+    omits: 'one spatial momentum; the general statement is the proof''s, from conservation and symmetry'
+  check_free_directions_are_exchanged_by_the_pseudoscalar:
+    kind: sampled
+    clauses:
+    - '(vi) I4 R[n+] = -(handedness) R[nx], I4 R[nx] = (handedness) R[n+], and R[n](I4 B) = I4 R[n](B), on the six bivectors at three null momenta'
+    omits: 'three null momenta; the comparison with the photon''s mode space is a reading, not a check'
+  check_static_coupling_does_not_separate_the_channels_and_pair_production_does:
+    kind: sampled
+    clauses:
+    - '(vii) the split 2/3, -1/6 of the static coupling and its equality with the trace-only bilinear; the scalar pair''s bracket and trace part; the conformally coupled pair'
+    - '(vii) the trace-only weights 45 against 5, the coefficients 1/21600 and 1/5400 over pi^3 and the ratios 3840/5789 and 15360/1519247'
+    omits: 'one static configuration and one pair configuration; the rate coefficients are arithmetic on the stored closed form, whose collision integral is not recomputed; that a trace-only source has this bilinear is the proof''s'
+  check_burst_ratio_under_the_options_for_the_gravitational_term:
+    kind: complete
+    clauses:
+    - '(viii) the ratios 99/50, 49/25 and 2 at g = 2/98, o = 0, and the difference g/(1 + g) at four values of o'
+    omits: 'the value 2 percent is read from a published abstract, not checked; the stored theorem is touched, not recomputed'
+untouched_premises:

@@ -1,7 +1,7 @@
 ---
 id: synthesis.gravitational-pair-production-from-the-operator-source-at-first-order
 kind: claim
-version: 1
+version: 2
 title: Gravitational pair production from the operator source at first order
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5.2
   role: proposal and drafting
   source: run 2026-11-18-navigate
+- name: Claude Fable 5.2
+  role: 'a dated remark at the end of the proof pointing to two later results: the channel weights rederived without angular integration, and the coefficients on the chain''s bath; no clause, level or check changed'
+  version: 2
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
+amendments:
+- version: 2
+  kind: correction
+  defect: 'the proof gave the channel weights of clause (iv) only by integration over the sphere and the coefficients of clause (v) only for the bath (4, 45, 12), with no pointer to the derivation from rotation weights or to the values on the chain''s bath, which are now stored'
 review: draft
 derivations:
 - name: main
@@ -48,6 +56,10 @@ lineage:
   - dark-matter.seeding-gravity-floor-dark-towers-temperature
   - dark-matter.coefficients-floors-they-give-what-gravity
 extraction:
+  maintainer_pass_2026_11_18_leads:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 1 -> 2. One remark of two dated sentences appended to proof-main.tex, citing synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight (iv) and synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath (iii) in the text only. Both results use this theorem, so no uses edge is added (it would be a cycle) and the remark says the two results are used nowhere in the proof. The formal level, the other levels, clauses (i) to (vii), the check and the coverage are unchanged; the amendment is a correction (the statement stands).'
   open_problem: op.graviton-rate-as-classical-field-process
   note: >-
     Filed against the first two attack items of the problem. Hypothesis (OS) is a hypothesis of this result

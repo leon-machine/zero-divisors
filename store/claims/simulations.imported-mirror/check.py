@@ -12,14 +12,18 @@ by comparing powers.
 (1) Omega_b' / Omega_b = 0.995 to 1: a mirror burnt to helium has mean mass per baryon m_He4/4
     against ours 0.75 m_p + 0.25 m_He4/4 (75/25 by baryon number), ratio in (0.994, 0.996) (the
     proton-only branch is the ratio 1 by definition).
-(2) The temperature ratio: the gravitational floor xi^4 = 4 Y g*/g_d with Y = c (T/M_P)^3/(3 kappa),
-    kappa = sqrt(pi^2 g*/90)(2 pi^2/45) g*, c = 1519247 pi^3/82944000 in (0.5679, 0.5680) (each of the
-    45 chiral fermions weighted once; pi from its Machin bounds), gives xi in (5.1, 5.2) x 10^-4, rounding
-    to the stated 5.2 x 10^-4 (T14 printed 2.8 to 3.2 x 10^-4);
+(2) The temperature ratio: the gravitational floor xi^4 = (4/3)(E/T) Y g*/g_d with
+    Y = c (T/M_P)^3/(3 kappa), kappa = sqrt(pi^2 g*/90)(2 pi^2/45) g*, c = 1519247 pi^3/82944000 in
+    (0.5679, 0.5680) (each of the 45 chiral fermions weighted once; pi from its Machin bounds), and E the
+    mean energy per creation event of the stored seeding proposition, E/T = (8 B + (60/7) F)/(B + F) x
+    90 zeta(5)/pi^4 with B = 41964/225 and F = 283 x 2205/4800 the Bose and Fermi parts of 17280 c/pi^3
+    (zeta(5) from its partial sum to 60 terms with integral bounds on the tail), in (7.889, 7.890); this
+    gives xi in (6.6, 6.7) x 10^-4, rounding to the stated 6.6 x 10^-4 (T14 printed 2.8 to 3.2 x 10^-4,
+    with energy 3T per event and coefficients since corrected);
     the hot deposit xi^4 = 3 (n_B/s)/(3/4) g*/g_d, n_B/s = 8.66081394e-11, gives xi in (4.2, 4.3) x 10^-3
     ("about 4 x 10^-3"), above the floor and inside the helium window (3 x 10^-3, 2 x 10^-2) stated from T14c.
 (3) eta' = eta/xi^3 (equal baryon number, photon number proportional to T^3): checked as the identity
-    n_b / (xi^3 n_gamma) at sample xi (eta = 6.12938e-10), and at the computed floor eta' in (4.3, 4.4),
+    n_b / (xi^3 n_gamma) at sample xi (eta = 6.12938e-10), and at the computed floor eta' in (2.1, 2.2),
     at the hot deposit in (0.0080, 0.0081).
 (4) Neutral-atom cross-section per mass: sigma = pi (2 a_0)^2 in (3.5, 3.6) x 10^-16 cm^2, so sigma/m in
     (2.1, 2.2) x 10^8 cm^2/g for hydrogen and (5.2, 5.3) x 10^7 for helium: of order 2 x 10^8 and 5 x 10^7.
@@ -43,6 +47,11 @@ A0 = F(529, 1000) * F(1, 10 ** 8)
 M_H, M_HE = F(167, 100) * F(1, 10 ** 24), F(664, 100) * F(1, 10 ** 24)
 # yield coefficient over pi^3: c/pi^3 = 4 A_S + 45 A_F + 12 A_V, each chiral fermion weighted once
 C_OVER_PI3 = 4 * A_S + 45 * A_F + 12 * A_V
+# Bose and Fermi parts of 17280 c/pi^3 for a copy of the bath (4, 45, 12): per species
+# (c_j 148 + 20 tau_j)/225 and 49 x 45 c_j/4800 with c_j = 1, 3, 12 and tau_j = 1, 0, 0
+BOSE_PART = F(4 * (148 + 20) + (45 * 3 + 12 * 12) * 148, 225)
+FERMI_PART = F((4 + 45 * 3 + 12 * 12) * 49 * 45, 4800)
+ZETA_TERMS = 60
 # T14c's helium window for xi (a cited input)
 HELIUM_WINDOW = (F(3, 10 ** 3), F(2, 10 ** 2))
 # a common photon-number normalisation and sample xi for the identity eta' = n_b / (xi^3 n_gamma)
@@ -116,10 +125,25 @@ def _c_bounds():
     return C_OVER_PI3 * plo ** 3, C_OVER_PI3 * phi ** 3
 
 
+def _zeta5_bounds():
+    s = sum(F(1, n ** 5) for n in range(1, ZETA_TERMS + 1))
+    return s + F(1, 4 * (ZETA_TERMS + 1) ** 4), s + F(1, 4 * ZETA_TERMS ** 4)
+
+
+def _energy_bounds():
+    """Mean energy per creation event over T: a Bose pair carries 8 zeta(5)/zeta(4), a Fermi pair
+    (60/7) zeta(5)/zeta(4), zeta(4) = pi^4/90, weighted by the Bose and Fermi parts of the rate."""
+    plo, phi = _pi_bounds()
+    zlo, zhi = _zeta5_bounds()
+    w = (8 * BOSE_PART + F(60, 7) * FERMI_PART) / (BOSE_PART + FERMI_PART)
+    return w * 90 * zlo / phi ** 4, w * 90 * zhi / plo ** 4
+
+
 def _xi4_floor(cc):
     klo, khi = _kappa_bounds()
-    base = 4 * cc * (M_CEIL / MPRED) ** 3 * GSTAR / (3 * GD)
-    return base / khi, base / klo
+    elo, ehi = _energy_bounds()
+    base = F(4, 3) * cc * (M_CEIL / MPRED) ** 3 * GSTAR / (3 * GD)
+    return elo * base / khi, ehi * base / klo
 
 
 def _xi4_floor_interval():
@@ -151,9 +175,13 @@ def check_temperature_ratio_interval():
     ok = ok and GD == F(10675, 100)
     floor = _xi4_floor_interval()
     _, hi_hi = floor
-    # the stated floor "5.2 x 10^-4": xi lies in (5.1, 5.2) x 10^-4 and rounds to 5.2 (in (5.15, 5.25))
-    ok = ok and inside4(scaled4(floor, 10 ** 5), 51, 52)
-    ok = ok and inside4(scaled4(floor, 10 ** 6), 515, 525)
+    # the Bose and Fermi parts sum to the coefficient, and the mean energy per event is in (7.889, 7.890) T
+    ok = ok and BOSE_PART + FERMI_PART == 17280 * C_OVER_PI3
+    ok = ok and BOSE_PART == F(41964, 225) and FERMI_PART == F(283 * 2205, 4800)
+    ok = ok and inside(_energy_bounds(), F(7889, 1000), F(7890, 1000))
+    # the stated floor "6.6 x 10^-4": xi lies in (6.6, 6.7) x 10^-4 and rounds to 6.6 (in (6.55, 6.65))
+    ok = ok and inside4(scaled4(floor, 10 ** 5), 66, 67)
+    ok = ok and inside4(scaled4(floor, 10 ** 6), 655, 665)
     nbs = ETA * NGS
     # by hand: 612938e-18 x 0.1413 = 866081394e-19 (= 8.66e-11)
     ok = ok and nbs == F(866081394, 10 ** 19)
@@ -162,7 +190,7 @@ def check_temperature_ratio_interval():
     ok = ok and inside4(scaled4((xi4_hot, xi4_hot), 10 ** 4), 42, 43)
     ok = ok and hi_hi < xi4_hot
     ok = ok and inside4((xi4_hot, xi4_hot), *HELIUM_WINDOW)
-    GA.check("floor xi in (5.1, 5.2)e-4, hot deposit in (4.0, 4.5)e-3, inside (3e-3, 2e-2)", ok)
+    GA.check("floor xi in (6.6, 6.7)e-4, hot deposit in (4.2, 4.3)e-3, inside (3e-3, 2e-2)", ok)
     return ok
 
 
@@ -175,13 +203,13 @@ def check_eta_prime():
         ok = ok and n_b / (xi ** 3 * n_gamma) == ETA / xi ** 3
     # by hand: 2.74e-8 x 0.02237 = 612938e-18 (= 6.13e-10)
     ok = ok and ETA == F(612938, 10 ** 15)
-    # eta' = eta/xi^3 at the floor, through fourth powers: in (4.3, 4.4) (by hand
-    # 6.129e-10 / (5.199e-4)^3 = 4.36)
-    ok = ok and inside4(scaled4(eta_prime4(_xi4_floor_interval()), 10), 43, 44)
+    # eta' = eta/xi^3 at the floor, through fourth powers: in (2.1, 2.2) (by hand
+    # 6.129e-10 / (6.621e-4)^3 = 2.11)
+    ok = ok and inside4(scaled4(eta_prime4(_xi4_floor_interval()), 10), 21, 22)
     xi4_hot = 3 * ETA * NGS / F(3, 4) * GSTAR / GD
     # at the hot deposit, by hand 6.129e-10 / (4.244e-3)^3 = 8.02e-3: in (8.0, 8.1) x 10^-3
     ok = ok and inside4(scaled4(eta_prime4((xi4_hot, xi4_hot)), 10 ** 4), 80, 81)
-    GA.check("eta' = eta/xi^3: (4.3, 4.4) at the floor, (0.007, 0.009) at the hot deposit", ok)
+    GA.check("eta' = eta/xi^3: (2.1, 2.2) at the floor, (0.0080, 0.0081) at the hot deposit", ok)
     return ok
 
 

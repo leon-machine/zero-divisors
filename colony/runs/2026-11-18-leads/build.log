@@ -1,0 +1,134 @@
+built 2412 entities, 8299 edges; 0 error(s); see build/report.md
+build EXIT 0
+{
+ "random": {
+  "edge_length_ratio": 1.0012,
+  "neighbours_recovered": 0.0053,
+  "two_step_in_nearest_10": 0.0532,
+  "same_subject_in_nearest_10": 0.0563,
+  "global_order": -0.0064
+ },
+ "spectral": {
+  "edge_length_ratio": 0.1854,
+  "neighbours_recovered": 0.2079,
+  "two_step_in_nearest_10": 0.4832,
+  "same_subject_in_nearest_10": 0.4618,
+  "global_order": 0.4203
+ },
+ "stress": {
+  "edge_length_ratio": 0.2889,
+  "neighbours_recovered": 0.1655,
+  "two_step_in_nearest_10": 0.4936,
+  "same_subject_in_nearest_10": 0.4698,
+  "global_order": 0.6695
+ },
+ "chosen": {
+  "edge_length_ratio": 0.2542,
+  "neighbours_recovered": 0.5724,
+  "two_step_in_nearest_10": 0.8739,
+  "same_subject_in_nearest_10": 0.7972,
+  "global_order": 0.4481,
+  "method": "t-SNE (perplexity 10) on graph distance, started from stress majorisation, subject cohesion 0.2, equal-volume ball"
+ },
+ "communities": {
+  "modularity_subjects": 0.5381,
+  "modularity_louvain": 0.6908,
+  "louvain_communities": 69,
+  "nmi_subjects_vs_louvain": 0.5607
+ },
+ "foundations": {
+  "edge_length_ratio": 0.3207,
+  "neighbours_recovered": 0.2821,
+  "two_step_in_nearest_10": 0.6551,
+  "same_subject_in_nearest_10": 0.6575,
+  "global_order": 0.5196,
+  "method": "directions of the chosen layout; radius by premise steps to the algebra core, equal volume per point with gaps between shells; results resting on postulates and imports but no core result in an outer zone",
+  "shells": [
+   {
+    "d": 0,
+    "lo": 0.0,
+    "hi": 0.2946,
+    "n": 81
+   },
+   {
+    "d": 1,
+    "lo": 0.3268,
+    "hi": 0.4436,
+    "n": 166
+   },
+   {
+    "d": 2,
+    "lo": 0.4589,
+    "hi": 0.5582,
+    "n": 245
+   },
+   {
+    "d": 3,
+    "lo": 0.568,
+    "hi": 0.6359,
+    "n": 234
+   },
+   {
+    "d": 4,
+    "lo": 0.6435,
+    "hi": 0.6879,
+    "n": 187
+   },
+   {
+    "d": 5,
+    "lo": 0.6944,
+    "hi": 0.7041,
+    "n": 45
+   },
+   {
+    "d": 6,
+    "lo": 0.7103,
+    "hi": 0.7144,
+    "n": 20
+   },
+   {
+    "d": 7,
+    "lo": 0.7205,
+    "hi": 0.7211,
+    "n": 3
+   },
+   {
+    "d": 8,
+    "lo": 0.727,
+    "hi": 0.7278,
+    "n": 4
+   },
+   {
+    "d": 9,
+    "lo": 0.7337,
+    "hi": 0.7341,
+    "n": 2
+   },
+   {
+    "d": 10,
+    "lo": 0.7398,
+    "hi": 0.74,
+    "n": 1
+   },
+   {
+    "d": -1,
+    "lo": 0.8,
+    "hi": 1.0,
+    "n": 572
+   }
+  ]
+ },
+ "core": {
+  "core": 81,
+  "reach_core": 988,
+  "reach_core_by_premises_only": 986,
+  "unconnected": 572,
+  "entities": 1560,
+  "max_distance": 10
+ }
+}
+layout EXIT 0
+site/index.html
+site EXIT 0
+lock written
+lock EXIT 0

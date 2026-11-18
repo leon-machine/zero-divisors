@@ -46,7 +46,7 @@ derivations:
   - hawking.imported-ideal-fermi-gas-uniqueness@2
   - angle.imported-theorems-deliver-their-hypotheses@3
   assumes:
-  - hawking.joint-j3-s-wave-reduction@3
+  - hawking.joint-j3-s-wave-reduction@4
   proof: proof-main.tex
 checked_by:
 - kind: check

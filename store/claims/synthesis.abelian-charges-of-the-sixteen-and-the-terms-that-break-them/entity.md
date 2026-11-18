@@ -31,9 +31,9 @@ derivations:
   - standard-model.majorana-element@7
   - standard-model.proton-decay-only-through-slot-pair@5
   - standard-model.imported-anomaly-coefficients@1
-  - dark-tower-matter.mirrors-composition@4
+  - dark-tower-matter.mirrors-composition@5
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - dark-matter.stored-asymmetry-charge-not-number@12
+  - dark-matter.stored-asymmetry-charge-not-number@13
   - standard-model.bidoublet-complex@11
   proof: proof-main.tex
 checked_by:

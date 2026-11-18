@@ -1,0 +1,28 @@
+functions:
+  check_rotation_homotopy_joins_f_plus_f_inverse_to_the_identity:
+    kind: sampled
+    clauses:
+    - '(2) Phi_t = (F + 1) R_t (1 + F^-1) R_t^-1 is orthogonal, equals F + F^-1 at t = 0 and the identity at the quarter turn'
+    omits: 'eight orthogonal F of rank four and seven angles; the identity for every F and t is the proof''s'
+  check_two_copies_of_the_plane_family_complete_with_a_fixed_form:
+    kind: sampled
+    clauses:
+    - '(2), (5) for two copies of [[x,y],[y,-x]]: polynomial frames of both eigenbundles; the form of (2) on R^8 has signature (6,2), equals G + 1 outside the ball of radius 3, is constant inside radius 1, and its pieces agree at the three seams; conjugated by a constant change of basis of the added directions it is a completion for the fixed form L^T L'
+    omits: 'nineteen angles and twelve radii; continuity and nondegeneracy at every point are the proof''s; the general construction is exercised on this one family'
+  check_winding_two_family_needs_one_added_direction:
+    kind: sampled
+    clauses:
+    - '(4) eigenvectors (x,y) and (-y,x) of the winding-two family; the positive line turns twice in the circle of lines; the reflection along (-b y, b x, 1 - b) has signature (2,1) and equals G + 1 far out'
+    omits: 'a 13 by 13 rational grid and twenty points of the circle; that no completion of rank two exists is the proof''s (the lifting lemma), not checked'
+  check_one_copy_has_no_frame:
+    kind: sampled
+    clauses:
+    - '(5) for one copy the unit eigenvector in the half angle reverses after one turn'
+    omits: 'ten half-angle points; the topological step is the stored clause (5) of the cited theorem'
+  check_double_lift_of_the_winding_two_loop:
+    kind: sampled
+    clauses:
+    - '(4) the rotor cos b + sin b f1f2 induces the rotation through -2b; the boundary loop of the winding-two family lifts to a closed loop of rotors, and that loop, read as a loop of rotations, lifts to one that ends at -1'
+    omits: 'nine points of the loop; the lifting lemma itself and the extension over the disc are the proof''s'
+untouched_premises:
+  synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two: 'its clause (L), the lifting through the double cover, is used in the proof of (4); it is a statement about continuous maps and no check function can exercise it (check_double_lift_of_the_winding_two_loop tests the two rotor lifts the proof feeds to it)'

@@ -1,0 +1,128 @@
+{
+ "front_matter": {
+  "id": "synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them",
+  "kind": "claim",
+  "version": 1,
+  "title": "No two-valued weights on the rational atoms of two modes; the even subalgebra admits them",
+  "status": "proved",
+  "region": "synthesis",
+  "subject": "clifford-structure",
+  "tags": [
+   "entanglement",
+   "finite-models",
+   "classical-theorem",
+   "measurement-and-records"
+  ],
+  "proposed_by": {
+   "kind": "ai",
+   "session": "2026-11-10-phase2"
+  },
+  "ai_involved": "yes",
+  "credit": [
+   {
+    "name": "Leon Butler",
+    "role": "direction"
+   },
+   {
+    "name": "Claude Fable 5.2",
+    "role": "proposal and drafting",
+    "source": "run 2026-11-10-phase2"
+   }
+  ],
+  "review": "draft",
+  "derivations": [
+   {
+    "name": "main",
+    "uses": [
+     "synthesis.signed-directions-and-the-integer-clifford-algebra@2",
+     "tower.ladder-pairs-satisfy-car-vectors@4",
+     "tower.commuting-copies@5",
+     "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate@1",
+     "synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1",
+     "synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects@1"
+    ],
+    "proof": "proof-main.tex"
+   }
+  ],
+  "checked_by": [
+   {
+    "kind": "check",
+    "ref": "check.py::check_eighteen_atoms_in_nine_contexts_admit_no_two_valued_weight"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_square_of_nine_blades_has_no_multiplicative_sign_assignment"
+   },
+   {
+    "kind": "check",
+    "ref": "check.py::check_even_subalgebra_of_two_modes_has_a_two_valued_weight"
+   },
+   {
+    "kind": "proof",
+    "derivation": "main"
+   }
+  ],
+  "lineage": {
+   "motivated_by": [
+    "synthesis.premise-positivity-of-values",
+    "one-relation.measure-indifference-borns-rule-located"
+   ]
+  },
+  "extraction": {
+   "maintainer_pass_2026_11_10": {
+    "by": "maintainer-2026-11-10",
+    "date": "2026-11-10",
+    "note": "Version kept at 1 (lineage and notes only). The lineage entry for the imported envariance Fact, retired on 10 November 2026, is dropped; the stored Born account stays in lineage. The citations of the stored results on the Born weights under (P) (definition of an atom) and on weights on effects (size 2) are uses edges with claimrefs, as stored. No assumes edge to (P): nothing here is under it."
+   },
+   "open_problem": "op.positivity-of-values",
+   "note": "Placement in the series' algebra of the Kochen-Specker theorem, asked for by the question which statements of Gleason and Kochen-Specker type hold in the stored finite algebras over the rationals. Kill condition registered before computing: an assignment of $0$ and $1$ to the eighteen idempotents with exactly one $1$ in each of the nine contexts, or the eighteen not lying in the algebra over $\\Q$; neither occurred (exhaustive search over $2^{18}$ assignments). The eighteen vectors are those of Cabello, Estebaranz and Garcia-Alcaine, Bell-Kochen-Specker theorem: a proof with 18 vectors, Phys. Lett. A 212 (1996) 183, arXiv:quant-ph/9706009 (title and existence confirmed on the web by the referee; the table of vectors is from memory and verified here by enumeration), and the square of nine observables is that of Peres, Phys. Lett. A 151 (1990) 107, and Mermin, Phys. Rev. Lett. 65 (1990) 3373 (both from memory), with every property used recomputed here. Prior art over the rationals: D. A. Meyer, Finite precision measurement nullifies the Kochen-Specker theorem, Phys. Rev. Lett. 83 (1999) 3751, arXiv:quant-ph/9905080 (abstract checked on the web by the referee): the unit vectors with rational coordinates in dimension three can be coloured. Clause (i) does not conflict with it: its atoms are all rank-one projectors with rational coefficients, a larger set that contains rays whose unit vectors are not rational; Kent's extension of Meyer's result to all dimensions is from memory only. What is proved: over $\\Q$, with no premise about values, the weights of the stored residual postulate that weights exist and add (one-relation.measure-indifference-borns-rule-located) cannot all be $0$ or $1$ on the atoms of two modes if they do not depend on the context; and on the even subalgebra of two modes such weights exist, so a statement of this type about parity-even elements needs more than two modes (whether three suffice is not shown). No statement of Gleason type (non-negative additive weights are linear) is proved here for size $4$ over $\\Q$: a search for additive weights depending only on the residue of the integer vector modulo $2$, $3$ or $4$ found only the constant one (computed, in the run's scratch, not part of this result), and the question is left open. Size $2$ is clause (iii) of the stored result on weights on effects and the definition of an atom is that of the stored result on the Born weights under (P); both are cited (for a definition and a comparison; nothing here is under (P)). (P) is named in the Reading as plain text; nothing is assumed and no edge to it is wanted beyond lineage."
+  }
+ },
+ "levels": {
+  "formal": "Let $\\Cl_{\\Q}(2,2)$ be the algebra of two modes: generators $e_{j}$, $f_{j}$, $Q(e_{j}) = 1$, $Q(f_{j}) = -1$, $p_{j} = f_{j}e_{j}$, the adjoint $\\dagger$ the linear extension of the inverse on blades (Theorem \\claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}), and $v_{j} = \\tfrac12(e_{j} + f_{j})$, $w_{j} = \\tfrac12(e_{j} - f_{j}) = v_{j}^{\\dagger}$ the ladder pairs of Proposition \\claimref{tower.ladder-pairs-satisfy-car-vectors}. An \\emph{atom} is an atom in the sense of Theorem \\claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional} (a nonzero projector whose corner has only the multiples of the projector self-adjoint); the atoms exhibited here are of the special form named in its Definitions, $\\Pi x\\Pi = 4\\langle\\Pi x\\rangle_{0}\\Pi$ for all $x$ (corner $\\Q\\Pi$, $\\langle\\Pi\\rangle_{0} = \\tfrac14$), and are atoms of the orbit of clause (ii) of that theorem; a \\emph{context} is a set of four atoms with pairwise products $0$ and sum $1$. No premise about values is assumed.\n\\begin{enumerate}\n\\item[(i)] \\emph{(No two-valued weight on the atoms; proved, the search complete.)} Let $P_{0} = w_{1}v_{1}w_{2}v_{2} = \\tfrac14(1 - p_{1})(1 - p_{2})$, the projector annihilated by $w_{1}$, $w_{2}$ on the left (the fully occupied projector in the convention in which $v_{j}$ annihilates $\\prod_{j}\\tfrac12(1 + p_{j})$; not the vacuum projector of that convention), $s_{0} = P_{0}$, $s_{1} = v_{1}P_{0}$, $s_{2} = v_{2}P_{0}$, $s_{3} = v_{1}v_{2}P_{0}$. Then $s_{i}^{\\dagger}s_{j} = \\delta_{ij}P_{0}$ and $\\sum_{i}s_{i}s_{i}^{\\dagger} = 1$, and for every nonzero $r \\in \\Z^{4}$ the element $\\Pi_{r} = y_{r}y_{r}^{\\dagger}/(r \\cdot r)$, $y_{r} = \\sum_{i}r_{i}s_{i}$, is an atom with rational coefficients; $\\Pi_{r}\\Pi_{r'} = 0$ when $r \\cdot r' = 0$, and four pairwise orthogonal vectors give a context. For the eighteen vectors with entries in $\\{0, \\pm 1\\}$ listed in the proof, which form nine contexts with every vector in exactly two of them, there is no function $g$ from the eighteen atoms to $\\{0, 1\\}$ with $\\sum_{\\Pi \\in c}g(\\Pi) = 1$ for each of the nine contexts $c$. Hence there is no function from the atoms of $\\Cl_{\\Q}(2,2)$ to $\\{0, 1\\}$ that sums to $1$ on every context.\n\\item[(ii)] \\emph{(No multiplicative signs on nine blades; proved.)} With $X_{1} = e_{1}$, $Z_{1} = p_{1}$, $X_{2} = e_{2}p_{1}$, $Z_{2} = p_{2}$ ($X_{2}$ the twisted generator of Theorem \\claimref{tower.commuting-copies}), the nine elements\n\\[\n\\begin{array}{ccc} X_{1} & X_{2} & X_{1}X_{2} \\\\ Z_{2} & Z_{1} & Z_{1}Z_{2} \\\\ X_{1}Z_{2} & Z_{1}X_{2} & X_{1}X_{2}Z_{1}Z_{2} \\end{array}\n\\]\nare self-adjoint blades up to sign, of square $1$; the three of each row commute and the three of each column commute; the product of each column and of the first two rows is $1$ and the product of the third row is $-1$. So there is no assignment $\\nu$ of $\\pm 1$ to the nine with $\\nu(a)\\nu(b)\\nu(c) = abc$ on every row and column.\n\\item[(iii)] \\emph{(The even subalgebra of two modes admits a two-valued weight; proved.)} Let $\\mathcal{A}^{+}$ be the even subalgebra of $\\Cl_{k}(2,2)$, $k$ a subfield of $\\R$. There is a function $g$ from the self-adjoint idempotents of $\\mathcal{A}^{+}$ to $\\{0, 1\\}$ with $g(1) = 1$ and $g(E + E') = g(E) + g(E')$ whenever $EE' = 0$. The eighteen atoms of (i) are not all even.\n\\end{enumerate}\n\\emph{Reading.} (i) and (ii) are statements about the algebra over $\\Q$ and need no linearity and no positivity: weights that exist, add within each context and do not depend on the context cannot all be $0$ or $1$ on two modes. The statement is about all atoms with rational coefficients, which include rays such as $(1,1,0,0)$ whose unit vector needs $\\sqrt{2}$ (nine of the eighteen vectors have $r \\cdot r = 2$): no square root is needed for the projectors, and one is needed for those unit vectors. For the smaller set of atoms of rational unit vectors two-valued weights are known to exist in dimension three (Meyer 1999), and the case of dimension four is not treated here. In size $2$ (one mode) no such obstruction exists: clause (iii) of Theorem \\claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects} gives a non-negative weight on the projectors of one mode that is additive on every pair with sum $1$ and is not linear. (i) and (ii) do not show that such weights are linear in the element; that is the content of the premise of positivity of values, (P), which assumes it and is not assumed here. (iii) says that for parity-even elements of two modes no statement of this type holds: the even subalgebra is a sum of two corners in each of which every context has two members.",
+  "technical": "The stored account of the Born rule isolates a residual postulate, that weights exist and add. A classical question is how far that postulate goes without assuming, as (P) does, that values are linear across elements that do not commute. In the algebra of two modes over the rationals the answer has a negative and a positive part. Negative: eighteen self-adjoint primitive idempotents with rational coefficients, built from the ladder pairs, fall into nine sets of four orthogonal ones with sum $1$, each idempotent in two sets, and no assignment of $0$ or $1$ to them gives exactly one $1$ per set; nine blades arranged in a square, commuting along rows and columns, have row products $1, 1, -1$ and column products $1, 1, 1$, so no assignment of signs respects the products. Weights that add and do not depend on the context are therefore not two-valued on the atoms with rational coefficients; the projectors need no square root of $2$ and no continuum, though the unit vectors of nine of the eighteen rays do, and on rational unit vectors alone two-valued weights are known to exist in dimension three (Meyer 1999). Positive: on the parity-even elements of two modes a two-valued additive weight exists, because the even subalgebra splits into two corners in which an idempotent has only one orthogonal partner. So an argument of this type for parity-even elements needs at least three modes; whether three suffice is not shown here. Whether non-negative additive weights on the atoms of two modes over the rationals are forced to be linear is not decided here.",
+  "lay": "Can every yes-or-no question about a system have a definite answer fixed in advance, the same whichever other questions are asked together with it? For the series' algebra of two modes the answer is no, already when the questions are described with rational numbers and with no assumption about how averages behave: eighteen yes-or-no questions are arranged in nine groups of four, exactly one answer in each group must be yes, each question lies in two groups, and a count shows this is impossible (nine yes answers would have to be an even number). A second arrangement, nine quantities in a square, gives the same conclusion from signs. If only the quantities that are even under the parity of the modes are allowed, the obstruction disappears for two modes: definite answers can then be assigned. This is a known theorem of quantum theory placed in the series' algebra; it does not show that the series' rule for averages is forced.",
+  "one-liner": "In $\\Cl_{\\Q}(2,2)$, eighteen atoms with rational coefficients (rank-one projectors, not only those of rational unit vectors) built from the ladder pairs form nine contexts with each atom in two, so no function to $\\{0,1\\}$ sums to $1$ on every context, and nine blades in a square have row products $1, 1, -1$ and column products $1, 1, 1$; the even subalgebra of two modes admits a two-valued additive weight on its self-adjoint idempotents."
+ },
+ "proofs": {
+  "main": "\\emph{Preliminaries.} The blades are a basis (Theorem \\claimref{synthesis.signed-directions-and-the-integer-clifford-algebra}); the adjoint and the scalar part are those of Theorem \\claimref{synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate}, with $\\langle xy\\rangle_{0} = \\langle yx\\rangle_{0}$. By Proposition \\claimref{tower.ladder-pairs-satisfy-car-vectors}, $Q(v_{j}) = Q(w_{j}) = 0$, $v_{j}w_{j} + w_{j}v_{j} = 1$, and ladder elements of different modes anticommute; $w_{j} = v_{j}^{\\dagger}$ since $\\dagger$ fixes $e_{j}$ and negates $f_{j}$.\n\n\\emph{(i).} $w_{j}v_{j}$ is a self-adjoint idempotent ($w_{j}v_{j}w_{j}v_{j} = w_{j}(1 - w_{j}v_{j})v_{j} = w_{j}v_{j}$), the two commute, so $P_{0}$ is a self-adjoint idempotent with $w_{j}P_{0} = 0$ and $P_{0}v_{j} = 0$; since $w_{j}v_{j} = \\tfrac12(1 - p_{j})$ (verified by the check), $P_{0} = \\tfrac14(1 - p_{1})(1 - p_{2})$. The relations $s_{i}^{\\dagger}s_{j} = \\delta_{ij}P_{0}$ and $\\sum_{i}s_{i}s_{i}^{\\dagger} = 1$ follow from these and are verified by the check. Hence $y_{r}^{\\dagger}y_{r'} = (r \\cdot r')P_{0}$ and $y_{r}P_{0} = y_{r}$, so $\\Pi_{r}\\Pi_{r'} = (r \\cdot r')\\,y_{r}y_{r'}^{\\dagger}/((r \\cdot r)(r' \\cdot r'))$: $\\Pi_{r}$ is a self-adjoint idempotent, and $\\Pi_{r}\\Pi_{r'} = 0$ for orthogonal vectors. $P_{0}xP_{0}$ is a multiple of $P_{0}$ for every $x$ (verified on the blades, with $\\langle P_{0}\\rangle_{0} = \\tfrac14$), so $\\Pi_{r}x\\Pi_{r}$ is a multiple of $y_{r}P_{0}y_{r}^{\\dagger}$, that is of $\\Pi_{r}$, and taking scalar parts with $\\langle\\Pi_{r}\\rangle_{0} = \\langle y_{r}^{\\dagger}y_{r}\\rangle_{0}/(r \\cdot r) = \\tfrac14$ gives the factor $4\\langle\\Pi_{r}x\\rangle_{0}$. So $\\Pi_{r}$ is a projector with corner $\\Q\\Pi_{r}$, an atom by the Definitions of Theorem \\claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional} (it is the atom $(P_{0})_{y_{r}}$ of the orbit of $P_{0}$ in its clause (ii)). The remark on size $2$ in the Reading is clause (iii) of Theorem \\claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects} and is not used in the proof. For four pairwise orthogonal vectors the sum $S$ of the four atoms satisfies $Sy_{r} = y_{r}$ for each of them; the four vectors are a basis of $\\Q^{4}$, so $Ss_{i} = s_{i}$ and $S = S\\sum_{i}s_{i}s_{i}^{\\dagger} = 1$. The nine contexts are the rows of\n\\[\n\\begin{array}{llll}\n(0,0,0,1) & (0,0,1,0) & (1,1,0,0) & (1,-1,0,0) \\\\\n(0,0,0,1) & (0,1,0,0) & (1,0,1,0) & (1,0,-1,0) \\\\\n(1,-1,1,-1) & (1,-1,-1,1) & (1,1,0,0) & (0,0,1,1) \\\\\n(1,-1,1,-1) & (1,1,1,1) & (1,0,-1,0) & (0,1,0,-1) \\\\\n(0,0,1,0) & (0,1,0,0) & (1,0,0,1) & (1,0,0,-1) \\\\\n(1,-1,-1,1) & (1,1,1,1) & (1,0,0,-1) & (0,1,-1,0) \\\\\n(1,1,-1,1) & (1,1,1,-1) & (1,-1,0,0) & (0,0,1,1) \\\\\n(1,1,-1,1) & (-1,1,1,1) & (1,0,1,0) & (0,1,0,-1) \\\\\n(1,1,1,-1) & (-1,1,1,1) & (1,0,0,1) & (0,1,-1,0)\n\\end{array}\n\\]\nEach row is an orthogonal set, there are eighteen distinct vectors, and each occurs in exactly two rows (verified by the check, together with the idempotent, orthogonality and sum relations for the eighteen atoms themselves). If $g$ took values in $\\{0, 1\\}$ with sum $1$ on each row, the sum of $g$ over all nine rows would be $9$; it is also twice the sum of $g$ over the eighteen atoms, an even number. The check confirms this by trying all $2^{18}$ assignments. A function on all atoms summing to $1$ on every context would restrict to such a $g$.\n\n\\emph{(ii).} $X_{1}, Z_{1}, X_{2}, Z_{2}$ are self-adjoint blades up to sign of square $1$ with $X_{j}Z_{j} = -Z_{j}X_{j}$ and each of $X_{1}, Z_{1}$ commuting with each of $X_{2}, Z_{2}$ (Theorem \\claimref{tower.commuting-copies} and clause (vii) of the CHSH theorem). Products of commuting self-adjoint elements of square $1$ are self-adjoint of square $1$; the entries of each row and each column commute pairwise (for the third row and column this uses two anticommutations). Row products: $X_{1}X_{2}(X_{1}X_{2}) = 1$, $Z_{2}Z_{1}(Z_{1}Z_{2}) = 1$, $(X_{1}Z_{2})(Z_{1}X_{2})(X_{1}X_{2}Z_{1}Z_{2}) = -1$; column products: $X_{1}Z_{2}(X_{1}Z_{2}) = 1$, $X_{2}Z_{1}(Z_{1}X_{2}) = 1$, $(X_{1}X_{2})(Z_{1}Z_{2})(X_{1}X_{2}Z_{1}Z_{2}) = 1$; all six are computed by the check. Multiplying the six conditions on $\\nu$, each $\\nu(a)$ occurs twice, so the left side is $1$, and the right side is $-1$.\n\n\\emph{(iii).} $\\Gamma = p_{1}p_{2}$ is self-adjoint of square $1$ and commutes with every even element, so $Q_{\\pm} = \\tfrac12(1 \\pm \\Gamma)$ are self-adjoint idempotents central in $\\mathcal{A}^{+}$. $s_{1} = p_{1}$ and $s_{2} = e_{1}f_{2}$ are even self-adjoint blades of square $1$ that anticommute, and $s_{1}s_{2}$ is anti-self-adjoint. The corner $Q_{+}\\mathcal{A}^{+}$ has dimension $4$ and basis $Q_{+}, Q_{+}s_{1}, Q_{+}s_{2}, Q_{+}s_{1}s_{2}$ (computed by the check). Its self-adjoint elements are $c = Q_{+}(t + xs_{1} + zs_{2})$, with $c^{2} = Q_{+}(t^{2} + x^{2} + z^{2} + 2t(xs_{1} + zs_{2}))$; so its self-adjoint idempotents are $0$, $Q_{+}$ and the elements $c(x, z) = Q_{+}(\\tfrac12 + xs_{1} + zs_{2})$ with $x^{2} + z^{2} = \\tfrac14$. Define $h(0) = 0$, $h(Q_{+}) = 1$, and $h(c(x, z)) = 1$ if $z > 0$, or $z = 0$ and $x > 0$, and $0$ otherwise; then $h(c(x, z)) + h(c(-x, -z)) = 1$. For a self-adjoint idempotent $E$ of $\\mathcal{A}^{+}$ the element $Q_{+}E$ is a self-adjoint idempotent of the corner; put $g(E) = h(Q_{+}E)$, so $g(1) = 1$. If $EE' = 0$ then $Q_{+}E$ and $Q_{+}E'$ are self-adjoint idempotents of the corner with product $0$ and their sum is one too. If one of them is $0$ additivity is clear. If one is $Q_{+}$ the other is $0$. If both are of the form $c(x, z)$, $c(x', z')$, the sum has $t = 1$, so it is $Q_{+}$ and $(x', z') = (-x, -z)$: the values of $h$ add to $1 = h(Q_{+})$. Finally the atom $\\Pi_{(1,1,1,1)}$ has a nonzero coefficient on the odd blade $e_{1}$ (computed), so the eighteen atoms are not all even.\n"
+ },
+ "notes": [],
+ "derived": {
+  "trust": "ai-proposed",
+  "disputed": false,
+  "reviews": [],
+  "effective_status": "proved",
+  "basis_status": null,
+  "namesakes": [],
+  "restates": [],
+  "restated_by": [],
+  "rests_on": [
+   "synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional",
+   "synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational-certificate",
+   "synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects",
+   "synthesis.signed-directions-and-the-integer-clifford-algebra",
+   "tower.commuting-copies",
+   "tower.ladder-pairs-satisfy-car-vectors"
+  ],
+  "used_by": [
+   "synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight"
+  ],
+  "ledger": "absent",
+  "programme": "transport-papers",
+  "holds_given": [
+   "singularity.c1-curvature-cutoff",
+   "singularity.c2-cell-density",
+   "singularity.c3-counted-epoch",
+   "singularity.l-boundary-mode-locality",
+   "singularity.p-univalence",
+   "singularity.r-regularity-fixed-locus",
+   "singularity.rate-models-kinematic-inputs-l-u",
+   "synthesis.premise-positivity-of-values"
+  ],
+  "evidence": "pass",
+  "check_command": "python -m tp check-one synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them --store store",
+  "past_cone_size": 121,
+  "future_cone_size": 5
+ }
+}

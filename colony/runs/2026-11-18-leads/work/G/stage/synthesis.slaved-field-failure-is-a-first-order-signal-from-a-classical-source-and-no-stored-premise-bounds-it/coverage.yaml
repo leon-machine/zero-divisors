@@ -1,0 +1,30 @@
+functions:
+  check_matter_algebra_has_a_central_unit_and_the_device_is_a_unit:
+    kind: complete
+    clauses:
+    - '(1) the central pseudoscalar of Cl(1,2), the path projectors, two states, the detection, and the device''s unit with inverse its conjugate, at one rational angle'
+    omits: 'one angle (half-angle (4/5, 3/5)) and one recombiner; the statement for every angle is the proof''s'
+  check_classical_source_shifts_the_detection_probability_at_first_order:
+    kind: complete
+    clauses:
+    - '(2) V^-1 e1 V, the change of the detection probability in two states (one with b = 0, where the first-order term vanishes), the value 72/125 within the bound 3/5, and the first-order coefficient from the commutator at two spacelike events at the detection time'
+    omits: 'the bound |sin(th/2)| for all states and recombiners is the proof''s; one angle'
+  check_signal_exists_at_172_of_502_spacelike_events:
+    kind: complete
+    clauses:
+    - '(3) the coefficient is nonzero at 172 of 502 spacelike events, 32 of the 252 not later than the detection and 140 later ones, all in the forward cone of a source event'
+    omits: 'the stored grid; the reading of the later events is the proof''s'
+  check_gravitational_size_of_the_phase_in_the_window:
+    kind: complete
+    clauses:
+    - '(5) the geometry factors, the phase for the proposed experiments within rational enclosures of the constants, the number of runs, the kilogram and the tonne, and the product of masses at which the phase is one'
+    omits: 'the estimate itself (that the phase within the window is bounded by this expression) is argued in the proof and not checked; the constants are entered as enclosures'
+  check_curvature_level_of_the_cutoff_premise_is_not_reached_outside_the_bodies:
+    kind: complete
+    clauses:
+    - '(6) the level 2M/r^3 for a tonne at ten centimetres, the radius at which it is one, and its position inside the radius 2M'
+    omits: 'what the premises state is read from their texts, not checked'
+untouched_premises:
+  synthesis.locality-of-the-attached-free-fields-fixes-their-statistics: "used only in the survey (S), a reading of its text"
+  synthesis.imported-dimock-dirac-car-algebra-on-a-gravitational-field: "used only in the survey (S), a reading of its text"
+  synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number: "used only in the survey (S), a reading of its text"

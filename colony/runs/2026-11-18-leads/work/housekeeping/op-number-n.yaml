@@ -1,0 +1,66 @@
+- id: op.the-number-n
+  title: "The number N: a counting rule and a selection that fix it, or a proof that it is free"
+  area: dark-energy
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "T12 and T17 (the number N); the decisions of 10 November 2026 on the number N; the survey of 18 November 2026, which found its claims held by no problem"
+  statement: >-
+    The large number $N = M_{P}/H$, about $10^{61}$, with $G\Lambda = 3N^{-2}$, is a registered free input
+    (Premise \claimref{synthesis.number-n-registered-free-input}). Six claims discuss it at observation level
+    and stay conjectured: what it is, why it is large, that one number is to be explained, that its largeness
+    and the size of the horizon's mode space are one question, what kind of number it is, and the claim that
+    its largeness is a mystery, once recorded as refuted and returned to open on 10 November. The one
+    conjectured answer reads the tower exponentially; made precise that reading is the iterated Fock
+    construction, which is not a step of the proved ascent, and it is one of at least two counting rules,
+    $3, 8, 256, 2^{256}$ and $3, 4, 8, 128, 2^{127}$, of which nothing stored selects one (argued). Decide
+    what the store can decide: whether stored structure selects a counting rule; whether a selection among
+    descents can be stated and derived, so that a horizon count of order $10^{122}$ is typical or is not;
+    and whether $N$ is a function of the other registered numbers.
+  why: >-
+    The cosmological-constant problem and the weakness of gravity are both $N^{-2}$ in the series' terms
+    (\claimref{standard-model.one-number-explain}), so this is the series' statement of both. The premise
+    says what would refute it; no problem recorded the routes by which that could happen.
+  known: >-
+    The exponential reading is the iterated Fock construction and not the ascent
+    (\claimref{synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent}); a
+    second rule through an invariant symmetric form gives different counts
+    (\claimref{synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level}). On the
+    stored relations $N$ is free at a fixed D-term level
+    (\claimref{synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations}, argued on a pattern
+    search). Under the promotion the series adopts $N$ is initial data of the descent
+    (\claimref{programme.n-parameter-of-the-laws}). The horizon count
+    $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$ is of registered units and compares with the rules' counts
+    in size only.
+  attack:
+    - >-
+      The counting rule: find a stored structure that selects one of the two rules (or a third), or prove
+      that both are consistent with every stored result on the tower, replacing ``argued'' by a proof on a
+      stated scope.
+    - >-
+      The selection: state the claim that observers of the observed kind exist only in descents near the
+      base case as a statement about automorphism structures of the levels, and prove or refute it on the
+      stored tower.
+    - >-
+      Freedom: replace the pattern search behind
+      \claimref{synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations} by a two-model argument
+      over the registered premises, in the manner of the stored independence results.
+    - >-
+      The kind of number: with the promotion adopted, decide whether any stored result still uses $N$ as a
+      parameter of the laws, and restate it if so.
+  success: >-
+    A derivation of $N$ or of a relation tying it to another registered number, which refutes the premise as
+    registered; or a proof on a stated scope that the stored structure selects no counting rule and fixes no
+    such relation, after which the six claims are restated on that result.
+  entities:
+    - synthesis.number-n-registered-free-input
+    - standard-model.what
+    - standard-model.why-large
+    - standard-model.one-number-explain
+    - standard-model.largeness-number-universes-boundary-modes
+    - programme.n-parameter-of-the-laws
+    - refuted.the-number-n-is-a-mystery-of-largeness
+    - synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent
+    - synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level
+    - synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations
+  added: 2026-11-18

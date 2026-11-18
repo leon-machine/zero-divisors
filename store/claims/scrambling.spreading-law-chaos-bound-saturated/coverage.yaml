@@ -1,18 +1,26 @@
 functions:
+  check_affine_cell_count_is_log_n:
+    kind: sampled
+    clauses: ["(a) at e^{kappa t} = N, in the direction of time in which the flow dilates, the mode operator of one affine cell is spread uniformly over the N cells Nj, ..., Nj + N - 1", "(a) the cell at the edge covers the first N cells, and a cell j >= 1 covers N cells further out", "(a) every anticommutator with a fixed cell operator is at most N^{-1/2} (as squared amplitude 1/N)", "(a) the lapse kappa^{-1} ln N, with the doubling count n ln 2 = ln 2^n"]
+    omits: "five integer dilations and three starting cells on 512 unit cells, with squared amplitudes in place of amplitudes; that the dilation is the boost time evolution on a horizon generator is the cited theorems', touched and not recomputed"
   check_boost_flow_scales_ladders_exponentially:
     kind: sampled
-    clauses: ["a quadratic generator containing the boost scales ladder operators by e^{+-kappa t}", "boost-hyperbolic one-body dynamics expands amplitudes as e^{kappa t}"]
-    omits: "checked at four sample rapidities x in Cl(1,1) and two in Cl(2,2), not symbolically in x; the generic quadratic coupling and the claim that this is the window's translation clock are not tested"
+    clauses: ["(b) the boost rotor scales the ladder operators of every mode by e^{-+kappa t}, with one rapidity for all modes, as a one-parameter group"]
+    omits: "checked at four sample rapidities x in Cl(1,1) and two in Cl(2,2), not symbolically in x (the identity for every rapidity is the proof's); that the rotor flow is the KMS-strip continuation and not a time evolution is the cited theorem's"
   check_spreading_threshold_is_log_n:
     kind: sampled
-    clauses: ["t_* = kappa^{-1} ln N", "support spans the N-mode window when e^{kappa t} ~ N"]
-    omits: "only N = 4, 9, 25, 49 (perfect squares) and three masses; the 1/N initial suppression is an input, and N ~ S over an epoch of order M is not tested"
+    clauses: ["(b) an amplitude 1/N carried by the rotor reaches one exactly when e^{kappa t} = N", "(c) t_* = (beta/2 pi) ln N with beta/2 pi = 4M"]
+    omits: "only N = 4, 9, 25, 49 (perfect squares) and three masses; the reading on a window's counted modes with N of the order of S, clause (e), is the estimate the entity records and is not tested"
   check_rate_is_modular_rate:
     kind: sampled
-    clauses: ["kappa^{-1} = beta/2 pi, beta/2 pi = 4M", "expansion rate is exactly 2 pi T"]
-    omits: "three sample masses only; the equality kappa = 2 pi T is arithmetic given beta = 2 pi/kappa, so it restates premise (R) and says nothing about chaos or the MSS bound"
+    clauses: ["(c) kappa^{-1} = beta/2 pi, beta/2 pi = 4M for the Schwarzschild field", "(c) the support dilates at the rate 2 pi T"]
+    omits: "three sample masses only; the equality kappa = 2 pi T is arithmetic given beta = 2 pi/kappa, which under (N+) is the cited theorem's; it says nothing about chaos or the Maldacena-Shenker-Stanford bound, clause (d), which is the cited theorem's"
+untouched_premises:
+  synthesis.number-diagonal-dynamics-spreads-nothing: "cited only in clause (e), the estimate, as the stored result that bears on the window reading; no check function computes with it"
+  synthesis.phase-flow-is-time-rotor-flow-kms-continuation: "supplies the statement of clause (b) that the rotor flow is the KMS-strip continuation and not a time evolution; a structural statement with no finite computation here"
+  synthesis.positive-null-energy-gives-r-premises: "supplies kappa beta = 2 pi under (N+) in clause (c); the check does the arithmetic that follows from it and does not recompute the thermal state"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'
   verdict: agrees
-  note: The three checks test the computable core (boost rotor scaling, threshold e^(kappa t)=N, kappa=1/(4M)=2 pi T) at sample points; the generic-coupling spreading model and the MSS bound are declared tier and untested.
+  note: "The three checks test the computable core (boost rotor scaling, threshold e^(kappa t)=N, kappa=1/(4M)=2 pi T) at sample points; the generic-coupling spreading model and the MSS bound are declared tier and untested. (18 November 2026, proposed version 7: the clauses above are those of the restated statement and a fourth check is added; they were not judged again, the verdict is the earlier judge's on the earlier clauses. The status stays conjectured: clauses (a) to (d) restate stored theorems and clause (e), the estimate, has no check.)"

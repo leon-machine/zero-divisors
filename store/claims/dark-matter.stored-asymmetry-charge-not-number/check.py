@@ -11,7 +11,8 @@ the same eps and N in both towers, checked at sample xi), the thermal reading f_
 seeding export QUANTA_PER_EVENT), is 3.9e-14 per unit entropy and falls short of n_B/s by more than
 1e3 and less than 1e4 (it was more than 1e4 with the coefficients first imported).
 (iii) eta in (6.1, 6.2) x 10^-10; the crossover eta^(1/3) in (8.4, 8.6) x 10^-4 ("8.5e-4"); eta' = eta/xi^3
-is 4.36 ("4.4") at the floor and in (0.007, 0.009) at the hot deposit, and eta'/eta = xi^-3 above 1e7
+is 2.112 ("2.1") at the floor (the coefficients proposition's floor at the mean energy per creation
+event, 6.6e-4) and in (0.007, 0.009) at the hot deposit, and eta'/eta = xi^-3 above 1e7
 throughout; Delta N_eff = 7.447 xi^4 at least eight orders below the cap 0.3 on the whole interval;
 the bottom of the ceiling range lowers the floor by a factor in (3.7, 3.8) x 10^-3 ("four parts in a
 thousand").
@@ -130,12 +131,14 @@ def check_eta_prime_and_radiation_over_the_interval():
     # crossover eta^(1/3) = 8.494520e-4, the quoted 8.5e-4
     ok = ok and root_rounds_to(eta, 8494520, -10, 3) and root_rounds_to(eta, 85, -5, 3)
     f_lo, f_hi = k["floor8"]
-    # eta' = eta/xi^3 at the floor (the export's bracket is now the pi bracket of one value of c):
-    # 4.36175, the quoted 4.4; the floor itself rounds to the quoted 5.2e-4
-    ok = ok and root_rounds_to(eta ** 8 / f_hi ** 3, 436175, -5, 8)
-    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 436175, -5, 8)
-    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 44, -1, 8)
-    ok = ok and root_rounds_to(f_lo, 52, -5, 8) and root_rounds_to(f_hi, 52, -5, 8)
+    # eta' = eta/xi^3 at the floor (the export's bracket carries the pi and zeta(5) brackets of one value of
+    # c and of the mean energy per event): 2.11213, the quoted 2.1; the floor itself rounds to the quoted
+    # 6.6e-4 and lies below the crossover eta^(1/3)
+    ok = ok and root_rounds_to(eta ** 8 / f_hi ** 3, 211213, -5, 8)
+    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 211213, -5, 8)
+    ok = ok and root_rounds_to(eta ** 8 / f_lo ** 3, 21, -1, 8)
+    ok = ok and root_rounds_to(f_lo, 66, -5, 8) and root_rounds_to(f_hi, 66, -5, 8)
+    ok = ok and f_hi ** 3 < eta ** 8
     h4 = k["xi_hot4"]
     # at the hot deposit eta' = 0.00801638 (the quoted 0.008) and eta'/eta = xi^-3 = 1.307862e7, the
     # smallest over the interval, above the quoted 1e7
@@ -144,7 +147,7 @@ def check_eta_prime_and_radiation_over_the_interval():
     # Delta N_eff = 7.447 xi^4 below the cap 0.3 by 1.24130e8 at the hot end (the largest xi of the
     # interval): at least eight orders
     ok = ok and all(rounds_to(F(3, 10) / (m * h4), 124130, 3) for m in k["mirror"])
-    GA.check("prop:charge(iii): eta in (6.1, 6.2)e-10, eta^(1/3) in (8.4, 8.6)e-4; eta' from 4.4 at the floor to "
+    GA.check("prop:charge(iii): eta in (6.1, 6.2)e-10, eta^(1/3) in (8.4, 8.6)e-4; eta' from 2.1 at the floor to "
              "(0.007, 0.009) at the hot deposit; eta'/eta > 1e7; Delta N_eff eight orders below the cap", ok)
     return ok
 

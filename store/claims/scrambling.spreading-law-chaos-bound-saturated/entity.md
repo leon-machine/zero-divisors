@@ -1,7 +1,7 @@
 ---
 id: scrambling.spreading-law-chaos-bound-saturated
 kind: claim
-version: 6
+version: 7
 title: The spreading law, and the chaos bound met, not saturated
 status: conjectured
 region: scrambling
@@ -25,16 +25,32 @@ credit:
   role: 'maintainer pass, status lowered to conjectured at Leon''s decisions'
   version: 6
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Fable 5.2
+  role: 'restatement with the scope made explicit: the proved statements the estimate rests on are cited as stored theorems, the window law is named as the estimate; one check added; status unchanged'
+  version: 7
+  source: run 2026-11-18-leads
+amendments:
+- version: 7
+  kind: restatement
+  defect: 'the accepted statement gives the spreading of support over the window''s N counted modes at t_* = (beta/2 pi) ln S as following from amplitudes growing as e^(kappa t) under a generic quadratic coupling, without separating what the store proves from what is estimated. By the stored phase-flow and number-diagonal theorems that growth is the rotor flow''s and has no real-time reading on the windows; what the store proves is narrower and lies in other entities: the boost spreads one affine cell of a horizon generator over N cells in a lapse kappa^-1 ln N of Killing time, with falling amplitudes (the affine-cell and one-unitary-group theorems), and the rotor reaches the same count in rapidity on the ladder operators. The statement is restated so that those are cited as stored theorems and the window law with N of the order of S is named as the estimate this entity records. The status stays conjectured.'
+  evidence: check.py::check_affine_cell_count_is_log_n
 review: typed
 derivations:
 - name: main
-  note: the argument as stored, an order-of-magnitude estimate; its 'follows from' text is kept in proof-main.tex, no longer attached as a proof since the status is conjectured
   uses:
+  - synthesis.affine-cell-boost-spreads-without-scrambling@4
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group@6
+  - synthesis.phase-flow-is-time-rotor-flow-kms-continuation@4
+  - synthesis.positive-null-energy-gives-r-premises@9
+  - synthesis.number-diagonal-dynamics-spreads-nothing@3
   - scrambling.area-law-test@5
   - scrambling.clock-inventory-boundary-modes@6
   - scrambling.imported-modes-modular-inventory@5
   - scrambling.mode-count@3
+  note: the window law is an order-of-magnitude estimate and the status is conjectured, so no proof is attached; the premises are the stored theorems that prove the statements (a) to (d) the estimate rests on, and those that bear on its unproved steps; proof-main.tex is kept as a record of where each cited statement is proved
 checked_by:
+- kind: check
+  ref: check.py::check_affine_cell_count_is_log_n
 - kind: legacy
   script: verify_T08.py
   tags:
@@ -47,6 +63,8 @@ checked_by:
   ref: check.py::check_rate_is_modular_rate
 lineage:
   motivated_by:
+  - synthesis.affine-cell-boost-spreads-without-scrambling
+  - synthesis.boost-evolution-on-generators-is-one-unitary-group
   - scrambling.clock-inventory-boundary-modes
   - scrambling.imported-modes-modular-inventory
   - scrambling.mode-count
@@ -56,6 +74,10 @@ locators:
   label: asm:spreading
   line: 910
 extraction:
+  restatement_2026_11_18:
+    by: run 2026-11-18-leads
+    date: '2026-11-18'
+    note: 'Version 6 -> 7, a restatement with the status kept at conjectured. A first draft of this version raised the status to proved on clauses (a) to (d); on review those clauses are stored theorems word for word (the affine-cell theorem, the phase-flow theorem, the (N+)-to-(R) theorem and the one-unitary-group theorem, whose closing paragraph already states the count and "met, not saturated"), so nothing new is proved here, and a status of proved on the entity that the paper''s Assembly points to would read as a proof of the window law, which is clause (e) and is not proved. The entity therefore records the paper''s estimate together with the proved statements it rests on, each cited as a stored theorem. Tested before restating: circularity (the past cones of the cited theorems do not contain this entity; their former edges to it are text mentions since version 6); object (the proved count is about affine cells of a horizon generator, not about the window''s counted modes, and only the cell at the edge covers the first N cells); mechanism (the accepted derivation''s growth step is the rotor flow''s, a count in rapidity, while the proved real-time count has amplitudes falling as e^(-kappa t/2)); orientation (the affine-cell theorem and the one-unitary-group theorem use opposite signs of the time parameter for the same dilation group, a difference between the two stored theorems; the count is the same). The word "saturated" survives only in the id, which is historical; the title says met, not saturated. No listed open problem holds the estimate; the settled problem on the two boost flows lists chaotic dynamics of the windows as not covered. The dependant scrambling.return-delay-scrambling-log-recovered (conjectured) cites this entity at version 6 and is to be read against the new statement before its pin moves.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -106,22 +128,34 @@ extraction:
 ---
 
 ## formal
-Three framework-internal facts fix the window's internal dynamics. First, the intrinsic flows of a Clifford boundary-mode algebra are bivector-generated, quadratic in the pair operators (Lemma \claimref{scrambling.clock-inventory-boundary-modes}(i)). Second, the distinguished bivector flow is the boost (Fact \claimref{scrambling.imported-modes-modular-inventory}). Third, the boost is the translation clock of the window itself: the Killing flow that displaces modes along the window is the boost at rate $\kappa$, with the accrual rate of Theorem \claimref{scrambling.mode-count}. Boost-hyperbolic one-body dynamics expands operator amplitudes as $e^{\kappa t}$, so support deposited on a single mode spans the $N$-mode window at
+\emph{What this entity records.} The spreading law of the scrambling paper (its Assembly on spreading), $t_{*} = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$ for the $N$ counted modes of a window, is an estimate: it is stated in (e) and it is what is conjectured here. It rests on four statements that are proved elsewhere in the store, (a) to (d), which are cited as stored theorems; this entity adds nothing to them.
+\begin{enumerate}
+\item[(a)] \emph{(Real-time count on a generator; stored, Theorem \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}(i), (ii).)} On the continuum mode space of one generator of a Killing horizon of surface gravity $\kappa$, with affine parameter $U > 0$, let $(D_{t}f)(U) = e^{-\kappa t/2}f(e^{-\kappa t}U)$ be the unitary dilation group and $\chi_{j}$ the normalised indicators of the affine cells $[j\delta, (j+1)\delta)$. For $e^{\kappa t} = N$ an integer, $D_{t}\chi_{j} = N^{-1/2}\sum_{l=0}^{N-1}\chi_{Nj+l}$. The boost time evolution on the generator is this group (Theorem \claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}, which writes it $a(f) \mapsto a(D_{-\lambda}f)$, with the time parameter reversed relative to the theorem just cited, and notes that at a Killing horizon the flow acts on the affine parameter as $u \mapsto e^{\pm\kappa t}u$). So the mode operator of one cell covers $N$ cells after a lapse of Killing time
 \[
-t_* \;=\; \kappa^{-1}\ln N \;=\; \frac{\beta}{2\pi}\,\ln S :
+|t_{*}| \;=\; \kappa^{-1}\ln N
 \]
-the fast-scrambling law, with the logarithm the signature of hyperbolic dynamics rather than an assumption. Every intrinsic clock it has runs at the modular rate, and the expansion rate is exactly $2\pi T$: the boost group's support-dilation rate equals its KMS rate, $\kappa\beta = 2\pi$, which holds under (N$_{+}$) (\claimref{synthesis.n-plus-null-ground-state}). The real-time Lyapunov exponent of this quasi-free dynamics is $0$: the one unitary group that dilates the support has bounded anticommutators on linear elements (Theorem \claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}). So the Maldacena-Shenker-Stanford chaos bound is met, not saturated. \emph{Tier, declared:} what is derived is the free-fermion operator-spreading timescale under a generic quadratic coupling, in the rate-model normalisation; genuine chaotic saturation beyond free-fermion spreading is open, and is named as such in Section \ref{sec:scope}.
-
-\smallskip
-\noindent\emph{The derivation, step by step.} The inventory clauses are Lemma \claimref{scrambling.clock-inventory-boundary-modes} (proved) and its import (Fact \claimref{scrambling.imported-modes-modular-inventory}). The expansion computation: a quadratic generator containing the boost scales ladder operators by $e^{\pm\kappa t}$ (Fact \claimref{scrambling.imported-modes-modular-inventory}'s weight clause, exponentiated), so under a generic quadratic coupling the amplitude reaching a mode at mode distance $d$ grows as $e^{\kappa t}$ against an initial suppression of order $1/N$; support spans all the boundary modes when $e^{\kappa t} \sim N$, i.e.\ at $t_* = \kappa^{-1}\ln N$, and $N \sim S$ over an epoch of order $M$ (Proposition \claimref{scrambling.area-law-test}). The identification $\kappa^{-1} = \beta/2\pi$ is arithmetic ($\beta = 2\pi/\kappa$), checked by the script along with the Schwarzschild value $\beta/2\pi = 4M$. The MSS statement that no system exceeds the growth rate $2\pi T$ is the point of contact \cite{MSS2016}: the rate $\kappa$ at which support dilates is one group's rate set against its own KMS period $2\pi/\kappa$, while the out-of-time-order growth that the bound limits is absent from the quasi-free dynamics, so the bound is met and not saturated.
+in the direction of time in which the flow dilates the affine parameter of that generator; in the other direction the same flow compresses the cell. The lapse does not depend on the sign convention. The cell at the edge, $j = 0$, covers the first $N$ cells, and a cell $j \ge 1$ covers $N$ cells further out. The amplitudes fall: every anticommutator of the evolved mode operator with a fixed cell operator is at most $N^{-1/2}$.
+\item[(b)] \emph{(Count in rapidity on the ladder; stored.)} The intrinsic flows of a Clifford boundary-mode algebra are bivector-generated (Lemma \claimref{scrambling.clock-inventory-boundary-modes}(i)), and the boost rotor $\exp(\kappa t\,\sigma/2)$, $\sigma = e_{+}e_{-}$, scales the ladder operators of every mode by $e^{\mp\kappa t}$, with one rapidity for all modes, as a one-parameter group (the weight clause of Fact \claimref{scrambling.imported-modes-modular-inventory}); an amplitude $1/N$ carried by it reaches one exactly when $e^{\kappa t} = N$. This rotor flow is not a time evolution of the windows: it is the continuation of the phase flow to the KMS strip (Theorem \claimref{synthesis.phase-flow-is-time-rotor-flow-kms-continuation}). In this reading $\kappa t_{*} = \ln N$ counts rapidity, not Killing time.
+\item[(c)] \emph{(The rate; stored, under (N$_{+}$).)} Under (N$_{+}$) the state of the generator's modes is thermal for the boost at rapidity period $2\pi$ (Theorem \claimref{synthesis.positive-null-energy-gives-r-premises}), that is $\kappa\beta = 2\pi$ in Killing time. So in both readings the lapse is $(\beta/2\pi)\ln N$, with $\beta/2\pi = 4M$ for the Schwarzschild field, and the rate at which the support of (a) dilates is $2\pi T$.
+\item[(d)] \emph{(The chaos bound is met, not saturated; stored.)} The real-time Lyapunov exponent of the dynamics of (a) is $0$: it is one unitary group with bounded anticommutators on linear elements (Theorem \claimref{synthesis.boost-evolution-on-generators-is-one-unitary-group}(v), whose closing paragraph states the count of (a) and this conclusion). The equality of the dilation rate with $2\pi T$ is the equality of one group's rate with its own KMS rate, not growth of the out-of-time-order correlators that the Maldacena-Shenker-Stanford bound limits \cite{MSS2016}.
+\item[(e)] \emph{(The estimate; conjectured.)} For the $N$ counted modes of a window (Theorem \claimref{scrambling.mode-count}), support deposited on one mode spans the window at $t_{*} = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$, the fast-scrambling form. This is the paper's law. It needs three steps beyond (a) to (d), none of which is proved. First, that the window's modes are the affine cells of (a): the count depends on that basis, since on boost-adapted cells the same flow displaces without spreading (clause (iii) of Theorem \claimref{synthesis.affine-cell-boost-spreads-without-scrambling}), and every dynamics that Premise (L$_{E}$) admits on the windows spreads nothing along chains in real time (Theorem \claimref{synthesis.number-diagonal-dynamics-spreads-nothing}). Second, that $N$ equals $S$ up to a factor of order one, which Proposition \claimref{scrambling.area-law-test} gives only for an epoch of order $M$, with a calibration. Third, that covering the cells is scrambling, which by (d) it is not in the sense of the chaos bound. The paper's own step, an amplitude growing as $e^{\kappa t}$ under a generic quadratic coupling against a suppression of order $1/N$, is reading (b) and not a real-time mechanism. Chaotic dynamics beyond the quasi-free flow is open.
+\end{enumerate}
 
 ## technical
-Three facts fix the window's internal dynamics: the intrinsic flows of the boundary-mode algebra are bivector-generated, quadratic in the pair operators; the distinguished bivector flow is the boost; and the boost is the translation clock of the window, at rate $\kappa$. Boost-hyperbolic one-body dynamics grows operator amplitudes as $e^{\kappa t}$, so support on one mode spans the $N$-mode window at $t_* = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$, with $N \sim S$ over an epoch of order $M$.
+This entity records the spreading law of the scrambling paper, which is an estimate, together with the proved statements it rests on; those are stored theorems, cited here, and nothing new is proved.
 
-Since every intrinsic clock runs at the modular rate, the expansion rate is exactly $2\pi T$: the boost group's support-dilation rate equals its KMS rate ($\kappa\beta = 2\pi$, under (N$_{+}$)), an equality that restates premise (R) (the rotor rate and the temperature are fixed by the same regularity condition; on the continuum, the rapidity period $2\pi$ that (N$_{+}$) gives), not a chaos result. The real-time Lyapunov exponent of the quasi-free dynamics is $0$, so the Maldacena-Shenker-Stanford chaos bound is met, not saturated. What is derived is the free-fermion operator-spreading timescale under a generic quadratic coupling, in the rate-model normalisation; genuine chaotic saturation beyond that is open.
+The estimate: support deposited on one of a window's $N$ counted modes spans the window at $t_{*} = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$, the fast-scrambling form.
+
+What the store proves. On one generator of a Killing horizon the boost acts in real time as a unitary dilation of the affine parameter, and in the basis of affine cells it spreads the mode of one cell uniformly over $N$ cells in a lapse $\kappa^{-1}\ln N$ of Killing time, in the direction of time in which the flow dilates, with amplitudes falling as $N^{-1/2}$. On the ladder operators of a boundary-mode algebra the boost rotor scales every mode by $e^{\mp\kappa t}$, so an amplitude $1/N$ reaches one at the same value of $\kappa t$; but that rotor flow is the KMS-strip continuation of the time evolution, so there the count is in rapidity. Under (N$_{+}$), $\kappa\beta = 2\pi$, so the lapse is $(\beta/2\pi)\ln N$ and the support dilates at the rate $2\pi T$. The real-time Lyapunov exponent of this quasi-free dynamics is $0$, so the Maldacena-Shenker-Stanford chaos bound is met, not saturated.
+
+What the estimate adds, unproved: that the window's modes are the affine cells (on boost-adapted cells nothing spreads, and under the locality premise (L$_{E}$) the windows' admissible dynamics does not spread along chains), that $N$ is of the order of $S$ (an epoch of order $M$, with a calibration), and that covering cells is scrambling. Chaotic dynamics beyond the quasi-free flow is open.
 
 ## lay
-A disturbance entering the black hole's interior modes spreads through them exponentially fast, because the modes' only clock is a stretching motion. Assuming a generic coupling between the modes, it reaches every mode after a time that grows with the logarithm of the entropy, the fast-scrambling time. Under the series' premise that the modes on each light ray are in their lowest-energy state, the spreading rate equals the rate named by a known general bound on chaos, but the dynamics is not chaotic: disturbances spread without growing in real time, so the bound is met rather than saturated.
+This entry records an estimate made in the series' paper on scrambling, and the proved facts behind it. The estimate is that a disturbance entering a black hole's interior modes reaches all of them after a time that grows with the logarithm of the entropy, the fast-scrambling time. It is not proved.
+
+What is proved, in other entries of the store, concerns a single light ray of the horizon. There the hole's own stretching motion spreads a disturbance that starts in one small cell over more and more cells, doubling their number at a steady pace, so that after a time growing with the logarithm of the number of cells it covers that many. The pace equals the rate named by a known general bound on chaos, under the series' premise that the modes on each light ray are in their lowest-energy state. But the spreading is not chaos: the disturbance thins out as it spreads and nothing grows, so the bound is met rather than saturated.
+
+The step from that picture to the interior modes is where the estimate lies: it depends on how the interior modes are identified with cells along the ray, and under the series' locality premise those modes do not pass disturbances along in ordinary time at all.
 
 ## one-liner
-Boost-hyperbolic spreading covers the whole window at $t_* = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$; the support dilates at the chaos-bound rate $2\pi T$ ($\kappa\beta = 2\pi$, under (N$_{+}$)) while the real-time Lyapunov exponent of the quasi-free dynamics is $0$, so the bound is met, not saturated.
+Records the scrambling paper's estimate that support spans a window's $N$ counted modes at $t_{*} = \kappa^{-1}\ln N = (\beta/2\pi)\ln S$ (conjectured), with the stored theorems it rests on: the boost spreads one affine cell of a horizon generator over $N$ cells in a lapse $\kappa^{-1}\ln N$ of Killing time with falling amplitudes, its rotor reaches the same count in rapidity, $\kappa\beta = 2\pi$ under (N$_{+}$), and the real-time Lyapunov exponent is $0$, so the chaos bound is met, not saturated.

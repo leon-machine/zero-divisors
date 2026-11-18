@@ -67,8 +67,6 @@ extraction:
     note: 'Version 5 -> 6, by Leon''s decision of 10 November 2026 (flag now, derive later): one sentence added to the formal and technical levels pointing to open problem op.graviton-rate-as-classical-field-process. The prediction, its status, its kill condition and every number are unchanged.'
   env: table row
   source: T17 tab:stances
-  flags:
-  - 'basis not linked: no store claim clearly carries it yet'
   typing:
     by: ai-typing-pass
     note: 'No derivations to review; the basis is the infall proposition on parallel boundary mode spaces, which

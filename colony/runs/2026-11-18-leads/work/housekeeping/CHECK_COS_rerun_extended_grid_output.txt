@@ -1,0 +1,14 @@
+xi=2.80e-04 seed: T'/T_naive=0.321 mu/T'=23.4 s/n_B=1.259 (naive thermal 0.269) rhoF/rho_th=84 | at T'~0.4 GeV: mu_q/T'=23.4 eta'=1.08e+04 (naive-sigma: mu/T=109.9 eta'=1.11e+06)
+xi=3.20e-04 seed: T'/T_naive=0.367 mu/T'=17.8 s/n_B=1.645 (naive thermal 0.402) rhoF/rho_th=49 | at T'~0.4 GeV: mu_q/T'=17.8 eta'=4.87e+03 (naive-sigma: mu/T=73.6 eta'=3.32e+05)
+xi=5.20e-04 seed: T'/T_naive=0.597 mu/T'=6.3 s/n_B=4.339 (naive thermal 1.725) rhoF/rho_th=7.1 | at T'~0.4 GeV: mu_q/T'=6.4 eta'=272 (naive-sigma: mu/T=17.0 eta'=4.22e+03)
+xi=6.60e-04 seed: T'/T_naive=0.745 mu/T'=3.5 s/n_B=7.003 (naive thermal 3.528) rhoF/rho_th=2.7 | at T'~0.4 GeV: mu_q/T'=3.7 eta'=71.5 (naive-sigma: mu/T=8.1 eta'=500)
+xi=8.10e-04 seed: T'/T_naive=0.852 mu/T'=2.0 s/n_B=10.712 (naive thermal 6.521) rhoF/rho_th=1.2 | at T'~0.4 GeV: mu_q/T'=2.2 eta'=26.7 (naive-sigma: mu/T=4.0 eta'=86.4)
+xi=8.50e-04 seed: T'/T_naive=0.868 mu/T'=1.8 s/n_B=11.891 (naive thermal 7.535) rhoF/rho_th=0.99 | at T'~0.4 GeV: mu_q/T'=1.9 eta'=21.8 (naive-sigma: mu/T=3.4 eta'=59.3)
+xi=3.00e-03 seed: T'/T_naive=0.892 mu/T'=0.0 s/n_B=373.728 (naive thermal 331.293) rhoF/rho_th=0.0064 | at T'~0.4 GeV: mu_q/T'=0.1 eta'=0.45 (naive-sigma: mu/T=0.1 eta'=0.507)
+xi=4.30e-03 seed: T'/T_naive=0.891 mu/T'=0.0 s/n_B=1096.720 (naive thermal 975.560) rhoF/rho_th=0.0015 | at T'~0.4 GeV: mu_q/T'=0.0 eta'=0.153 (naive-sigma: mu/T=0.0 eta'=0.172)
+MIR-style thermal: xi=2.8e-04 g_s'=61.75 eta'=439
+MIR-style thermal: xi=2.8e-04 g_s'=64.00 eta'=455
+MIR-style thermal: xi=2.8e-04 g_s'=69.00 eta'=490
+MIR-style thermal: xi=3.2e-04 g_s'=61.75 eta'=294
+MIR-style thermal: xi=3.2e-04 g_s'=64.00 eta'=305
+MIR-style thermal: xi=3.2e-04 g_s'=69.00 eta'=329

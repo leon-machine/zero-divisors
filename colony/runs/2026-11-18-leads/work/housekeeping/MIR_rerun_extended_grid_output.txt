@@ -1,0 +1,132 @@
+==============================================================================
+A. Units, real forms, the complexified identification, the mirror's orientation
+==============================================================================
+PASS  A1 Q(omega) = (-1)^{n(n-1)/2}(-1)^q on all 27 signatures with n <= 6; Q(I4) = -1 in Cl(1,3) and in Cl(3,1); Q(I6) = -1 in Cl(2,4) and in Cl(4,2): the field unit and the twistor unit both transpose
+PASS  A2 in Cl(1,3), Cl(3,1), Cl(2,4), Cl(4,2) the centre of the even subalgebra is spanned by 1 and the pseudoscalar (even blades commuting with every bivector), and the pseudoscalar anticommutes with every vector: in both towers it is the complex unit of Cl^0 (Mat(2,C), Mat(4,C)) and not of the Clifford module
+PASS  A3 ground level: with P a primitive idempotent of Cl^0 (Cl^0 P = C^2, the Weyl spinor, in both), P Cl P is 4-dimensional in both, and the quadratic form y -> y^2 on its odd part is negative definite in Cl(1,3) (P Cl P = H: quaternionic, intrinsic group Sp(1)) and positive definite in Cl(3,1) (P Cl P = split quaternions = Mat(2,R): real, Majorana)
+PASS  A4 conformal level: one idempotent P (two commuting grade-4 blades, self-reverse) is primitive in Cl^0 of both Cl(2,4) and Cl(4,2) (twistor Cl^0 P = C^4, real dimension 8); Cl P has dimension 16 in both; the odd part of P Cl P is negative definite for Cl(2,4) (quaternionic) and positive definite for Cl(4,2) (real): the towers differ in the sign of the antilinear structure, j^2 = -1 against c^2 = +1
+PASS  A5 in the mirror an odd y in P Cl P with y^2 = +P exists, E = (P +- y)/2 are orthogonal idempotents, and Cl(4,2) P = Cl E+ (+) Cl E- splits into two real 8-dimensional Clifford modules (the conformal Majorana spinors), each projecting isomorphically onto the twistor half; right multiplication by y is an antilinear (anticommutes with J) real structure; in Cl(2,4) no such y exists (A4: negative definite)
+PASS  A6 with the mirror realised as e'_a = i e_a in Cl(2,4) (x) C: Q(e'_a) = -Q(e_a), they anticommute, e'_a e'_b = -e_a e_b, every even product is a real even blade (Cl^0(4,2) = Cl^0(2,4) and Spin(4,2) = Spin(2,4) as the same real sets) and every odd product is i times a real blade (the mirror's real form is ours twisted by the grade involution); under the shared frame orientation I4' = +I4 and I6' = -I6
+PASS  A7 the metric-free null pair fixes the conformal pair's orientation (n_inf ^ n_0 = e4 ^ e5 for g and -g); with it and the shared frame, the momentum doublet ker(n_0) in the twistor half T = Cl^0 P is E = +1 with J = +I4 in Cl(2,4) (SMC C6b) and E = -1 with J = -I4 in Cl(4,2): under one flag the mirror carries the opposite relative sign of twistor unit and field unit, the opposite orientation in SMC's sense (got ours (8, 4, {Fraction(1, 1)}, {Fraction(1, 1)}), mirror (8, 4, {Fraction(-1, 1)}, {Fraction(-1, 1)}))
+PASS  A8 the rotor of the physical rotation e1 -> e2 is the same element in Cl(1,3) and Cl(3,1) under A6's identification (intrinsic bivector coefficient opposite, e'1e'2 = -e1e2), and on the massless spinors ker(e0 + e3) it acts as c - s I4 in both: helicity relative to I4 is identical; what flips (A7) is the twistor unit relative to I4, not the Lorentz helicity
+PASS  A9 Pin: a spatial reflection lifts to an element squaring to -1 in Cl(1,3) and +1 in Cl(3,1), a time reflection to +1 and -1: Pin(1,3) and Pin(3,1) differ only in these lifts (imported: Berg, DeWitt-Morette, Gwo, Kramer 2001), with Spin(1,3) = Spin(3,1)
+PASS  A10 the flag bit transposes: in Cl(4,2) (and Cl(2,4)) a complex Witt basis with v_i w_j + w_j v_i = delta_ij gives the null blade f (annihilated by W) and the top state as I6-eigenstates with eigenvalue ratio (-1)^3 = -1: opposite families, the choice of W a bit in both towers (T14 thm:paritybit)
+PASS  A11 (supervisor note) on the twistor T = Cl^0 P the reversion form reverse(x) y = a P + b P I6 is a J-Hermitian form, J-invariant, whose real part has signature (4, 4, 0) in Cl(2,4) and (4, 4, 0) in Cl(4,2): complex signature (2,2) in both, the SU(2,2) helicity form; the mirror's constituents are complex (J commutes with the spin action), so its ladder is U(n) as ours, whatever its real ground type
+==============================================================================
+B. The content: a copy
+==============================================================================
+PASS  B1 the mirror's generation is T12's: the 16 even states of Lambda(C^2 + C^3) carry Y = (3 n_rung - 2 n_pair)/6 = nu^c 0, e^c 1, Q 1/6 (x6), u^c -2/3 (x3), d^c 1/3 (x3), L -1/2 (x2); grav, cubic, SU(2)^2 Y, SU(3)^2 Y and [SU(3)]^3 all vanish, and also for the conjugate listing (the 16bar, hypercharges negated) that the opposite orientation (A7) would name matter
+PASS  B2 sin^2 theta_W = Tr T3^2 / Tr Q^2 = 3/8 on the mirror's 16; mirror proton charge 2q_u + q_d = 1, neutron 0, electron -1; the ten's rung vectors carry Y = +-1/2 and pair vectors -+1/3 (T12 prop:ten): mirror Higgs doublet, hadrons and atoms are ours
+==============================================================================
+C. The frozen point under the reversal (T12 prop:lift, cor:read)
+==============================================================================
+PASS  C1 the frozen point is not on T14's input list and is not reversal-invariant: Q'(I) = -Lambda/3; each lift is null in its own tower and its O(Lambda) admixture has the same magnitude, but the two lifts together give Dirac entries 1 + Lambda/3 in ours (T12 cor:read) and 1 - Lambda/3 in the mirror; a non-copy of relative size 2 Lambda/3 in the lift's unit (exact, three values of Lambda)
+==============================================================================
+D. P2 and the temperature; the composition algebra
+==============================================================================
+PASS  D1 Delta N_eff of a copied mirror is 7.447 xi^4 (bracket [7.44720, 7.44720]); P2 applied to the deposit energy per unit charge as T14 applies it to epsilon and to the ceiling coupling gives xi = 1, Delta N_eff = 7.447, over 24 times the Planck cap 0.3; the cap is xi < 0.448
+PASS  D2 linear chemical equilibrium at a quark-phase weak freeze-out (u, d, s, e, mu, three nu, massless; B, Q = 0, L_e = L_mu = L_tau fixed): the hadronic charge is exactly Q_h = L_e (lepton number per flavour) and the net strangeness N_s = B - L_e/2; so after the strong decays (s -> d, Q_h conserved) a fraction f_lep of strangeness leaving leptonically gives p/B = L_e/B + f_lep (1 - L_e/(2B)): the floor's n/p is set by the copied lepton number and by the hadronic fate of strangeness, not by Delta m / T
+==============================================================================
+E. DECIMAL cosmology and astrophysics (standard formulas; estimates, not proofs)
+==============================================================================
+DECIMAL g_s(10 TeV) = 106.75, g_s(10 MeV) = 10.76, g_s(300 MeV) = 64.15, g_s(100 MeV) = 16.67
+PASS  E0 DECIMAL thermal tables: g_s = 106.75 at 10 TeV and 10.75 at 10 MeV to 1%
+DECIMAL calibration: Gamma = c_w G_F^2 T^5 with c_w = 3.58 reproduces our T_f = 0.8 MeV
+
+DECIMAL E1: the interval T14 carries (floor 1.1e-6 at the bottom of the ceiling range to 3.2e-4 at the top;
+hot deposit 4.3e-3; N_eff cap 0.448). eta'_late = eta/xi^3 before burning; eta'(T'_f) = n_B/n_gamma' at T'_f.
+Thermal-rate freeze-out (T14's method: Gamma = c_w G_F^2 T'^5) and the quark chemical potential there.
+  xi        eta'_late   T'_f(c_w=1) T'_f(c_w=3.6) eta'(T'_f)  mu_q/T' there
+  1.10e-06  4.58e+08    19.58       12.75         1.02e+10    2.9e+03
+  2.80e-04  27.8        0.46        0.297         457         10
+  3.20e-04  18.6        0.4196      0.2711        303         8.64
+  5.20e-04  4.34        0.3008      0.1952        69          4.9
+  6.60e-04  2.12        0.2557      0.1259        9.5         1.76
+  8.10e-04  1.15        0.2226      0.1094        5           1.09
+  8.50e-04  0.993       0.2155      0.1058        4.3         0.958
+  1.50e-03  0.181       0.1114      0.07156       0.722       0.175
+  4.30e-03  0.00767     0.05355     0.03407       0.0253      0.00616
+  2.00e-02  7.62e-05    0.01835     0.01195       0.000211    5.14e-05
+  1.00e-01  6.1e-07     0.00679     0.004465      1.68e-06    4.1e-07
+  3.00e-01  2.26e-08    0.003314    0.002166      6.23e-08    1.52e-08
+  4.48e-01  6.78e-09    0.002536    0.001658      1.87e-08    4.55e-09
+PASS  E1 DECIMAL T14's floor is a degenerate, charge-dominated plasma: at xi = 2.8 to 3.2e-4 the thermal-rate freeze-out falls at T' = 0.27 to 0.46 GeV where n_B/n_gamma' is 300 to 460 (g_s = 64, not the late 3.91) and the quark chemical potential is about 9 T': the 'thermal up-down ratio' premise of T14's burning branch does not hold there; at the hot deposit (4.3e-3) mu/T' is below 0.02
+
+DECIMAL E2: degeneracy-aware weak freeze-out in the hadron phase (rate c_w G_F^2 E^5, E = max(T', |mu_e|, |mu_nu|));
+composition Y' = 2 min(X_n, X_p) after free-neutron decay before the bottleneck; X_n > 1/2 is the neutron branch
+  xi=2.8e-04  sphaleron L/B = -51/28   T'_f=   5.69 MeV  mu_e/T'=  0.02  mu_nu/T'= -8.38  n/p= 3.54e+03  X_n=1.000  Y'=0.001  NEUTRON BRANCH
+  xi=2.8e-04  L = 0                    T'_f=  64.38 MeV  mu_e/T'=  1.27  mu_nu/T'= -2.07  n/p=     27.7  X_n=0.965  Y'=0.070  NEUTRON BRANCH
+  xi=2.8e-04  L_e/B = +0.875           T'_f=   8.64 MeV  mu_e/T'=  6.32  mu_nu/T'=  6.51  n/p=    0.709  X_n=0.415  Y'=0.830  
+  xi=3.2e-04  sphaleron L/B = -51/28   T'_f=   6.72 MeV  mu_e/T'=  0.03  mu_nu/T'= -7.24  n/p= 1.19e+03  X_n=0.999  Y'=0.002  NEUTRON BRANCH
+  xi=3.2e-04  L = 0                    T'_f=  67.13 MeV  mu_e/T'=  1.15  mu_nu/T'= -1.91  n/p=     20.9  X_n=0.954  Y'=0.091  NEUTRON BRANCH
+  xi=3.2e-04  L_e/B = +0.875           T'_f=  10.21 MeV  mu_e/T'=  5.37  mu_nu/T'=  5.63  n/p=    0.683  X_n=0.406  Y'=0.812  
+  xi=5.2e-04  sphaleron L/B = -51/28   T'_f=  12.59 MeV  mu_e/T'=  0.14  mu_nu/T'= -4.08  n/p=     61.3  X_n=0.984  Y'=0.032  NEUTRON BRANCH
+  xi=5.2e-04  L = 0                    T'_f=  89.97 MeV  mu_e/T'=  0.74  mu_nu/T'= -1.33  n/p=     7.81  X_n=0.887  Y'=0.227  NEUTRON BRANCH
+  xi=5.2e-04  L_e/B = +0.875           T'_f=  18.35 MeV  mu_e/T'=  2.69  mu_nu/T'=  3.20  n/p=    0.562  X_n=0.360  Y'=0.719  
+  xi=6.6e-04  sphaleron L/B = -51/28   T'_f=  18.35 MeV  mu_e/T'=  0.18  mu_nu/T'= -3.00  n/p=     22.3  X_n=0.957  Y'=0.086  NEUTRON BRANCH
+  xi=6.6e-04  L = 0                    T'_f= 110.91 MeV  mu_e/T'=  0.56  mu_nu/T'= -1.05  n/p=     4.96  X_n=0.832  Y'=0.336  NEUTRON BRANCH
+  xi=6.6e-04  L_e/B = +0.875           T'_f=  26.74 MeV  mu_e/T'=  1.73  mu_nu/T'=  2.42  n/p=    0.478  X_n=0.324  Y'=0.647  
+  xi=8.1e-04  sphaleron L/B = -51/28   T'_f=  25.64 MeV  mu_e/T'=  0.17  mu_nu/T'= -2.27  n/p=     10.9  X_n=0.916  Y'=0.168  NEUTRON BRANCH
+  xi=8.1e-04  L = 0                    T'_f= 106.36 MeV  mu_e/T'=  0.42  mu_nu/T'= -0.80  n/p=     3.36  X_n=0.771  Y'=0.459  NEUTRON BRANCH
+  xi=8.1e-04  L_e/B = +0.875           T'_f=  35.84 MeV  mu_e/T'=  1.09  mu_nu/T'=  1.84  n/p=    0.453  X_n=0.312  Y'=0.624  
+  xi=8.5e-04  sphaleron L/B = -51/28   T'_f=  27.88 MeV  mu_e/T'=  0.17  mu_nu/T'= -2.12  n/p=     9.34  X_n=0.903  Y'=0.193  NEUTRON BRANCH
+  xi=8.5e-04  L = 0                    T'_f= 102.00 MeV  mu_e/T'=  0.39  mu_nu/T'= -0.75  n/p=     3.07  X_n=0.754  Y'=0.491  NEUTRON BRANCH
+  xi=8.5e-04  L_e/B = +0.875           T'_f=  38.96 MeV  mu_e/T'=  0.96  mu_nu/T'=  1.73  n/p=     0.45  X_n=0.310  Y'=0.620  
+  xi=1.5e-03  sphaleron L/B = -51/28   T'_f=  70.00 MeV  mu_e/T'=  0.09  mu_nu/T'= -0.76  n/p=     2.29  X_n=0.696  Y'=0.607  NEUTRON BRANCH
+  xi=1.5e-03  L = 0                    T'_f=  70.00 MeV  mu_e/T'=  0.12  mu_nu/T'= -0.23  n/p=     1.39  X_n=0.582  Y'=0.837  NEUTRON BRANCH
+  xi=1.5e-03  L_e/B = +0.875           T'_f=  70.00 MeV  mu_e/T'=  0.17  mu_nu/T'=  0.56  n/p=     0.66  X_n=0.398  Y'=0.795  
+  xi=4.3e-03  sphaleron L/B = -51/28   T'_f=  32.96 MeV  mu_e/T'=  0.01  mu_nu/T'= -0.03  n/p=        1  X_n=0.500  Y'=1.000  
+  xi=4.3e-03  L = 0                    T'_f=  32.96 MeV  mu_e/T'=  0.01  mu_nu/T'= -0.01  n/p=    0.979  X_n=0.495  Y'=0.989  
+  xi=4.3e-03  L_e/B = +0.875           T'_f=  32.96 MeV  mu_e/T'=  0.01  mu_nu/T'=  0.02  n/p=    0.948  X_n=0.487  Y'=0.973  
+  xi=2.0e-02  sphaleron L/B = -51/28   T'_f=  11.58 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.895  X_n=0.472  Y'=0.944  
+  xi=2.0e-02  L = 0                    T'_f=  11.58 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.895  X_n=0.472  Y'=0.944  
+  xi=2.0e-02  L_e/B = +0.875           T'_f=  11.58 MeV  mu_e/T'=  0.00  mu_nu/T'=  0.00  n/p=    0.894  X_n=0.472  Y'=0.944  
+  xi=1.0e-01  sphaleron L/B = -51/28   T'_f=   4.42 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.746  X_n=0.426  Y'=0.853  
+  xi=1.0e-01  L = 0                    T'_f=   4.42 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.746  X_n=0.426  Y'=0.853  
+  xi=1.0e-01  L_e/B = +0.875           T'_f=   4.42 MeV  mu_e/T'=  0.00  mu_nu/T'=  0.00  n/p=    0.746  X_n=0.426  Y'=0.853  
+  xi=3.0e-01  sphaleron L/B = -51/28   T'_f=   2.08 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.537  X_n=0.340  Y'=0.680  
+  xi=3.0e-01  L = 0                    T'_f=   2.08 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=    0.537  X_n=0.340  Y'=0.680  
+  xi=3.0e-01  L_e/B = +0.875           T'_f=   2.08 MeV  mu_e/T'=  0.00  mu_nu/T'=  0.00  n/p=    0.537  X_n=0.340  Y'=0.680  
+  xi=4.5e-01  sphaleron L/B = -51/28   T'_f=   1.62 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=     0.45  X_n=0.290  Y'=0.581  
+  xi=4.5e-01  L = 0                    T'_f=   1.62 MeV  mu_e/T'=  0.00  mu_nu/T'= -0.00  n/p=     0.45  X_n=0.290  Y'=0.581  
+  xi=4.5e-01  L_e/B = +0.875           T'_f=   1.62 MeV  mu_e/T'=  0.00  mu_nu/T'=  0.00  n/p=     0.45  X_n=0.290  Y'=0.581  
+  calibration, our sector (sudden freeze-out at 0.8 MeV, bottleneck 0.072 MeV): Y = 0.247 (observed 0.245)
+PASS  E2 DECIMAL at the floor the electrons are degenerate (mu_e several T'), weak equilibrium lasts into the hadron phase and beta equilibrium makes the mirror neutron-rich (X_n > 0.7) for L/B = -51/28 and L = 0: the floor is a neutron branch, not T14's burning branch; the helium branch holds across xi = 4.3e-3 to 0.02 (Y' > 0.94); at the N_eff cap end (0.448) Y' < 0.7, a hydrogen-rich mirror
+
+DECIMAL E3: the helium branch's BBN conditions, burning reheat, primordial carbon (triple alpha)
+  xi=2.8e-04  T'_D=0.246 MeV  n_B=1.32e+31 cm^-3  t=2.52e-06 s  eta'(T'_D)=27.9  reheat x3.23  X_C: 6.2e-03 (no reheat), 3.3e-04 (reheated)
+  xi=3.2e-04  T'_D=0.234 MeV  n_B=7.57e+30 cm^-3  t=3.64e-06 s  eta'(T'_D)=18.7  reheat x2.96  X_C: 3.1e-03 (no reheat), 2.7e-04 (reheated)
+  xi=5.2e-04  T'_D=0.198 MeV  n_B=1.08e+30 cm^-3  t=5.82e-06 s  eta'(T'_D)=4.36  reheat x2.16  X_C: 1.1e-04 (no reheat), 4.6e-05 (reheated)
+  xi=6.6e-04  T'_D=0.185 MeV  n_B=4.26e+29 cm^-3  t=1.05e-05 s  eta'(T'_D)=2.13  reheat x1.86  X_C: 3.2e-05 (no reheat), 1.8e-05 (reheated)
+  xi=8.1e-04  T'_D=0.175 MeV  n_B=1.94e+29 cm^-3  t=3.36e-05 s  eta'(T'_D)=1.15  reheat x1.64  X_C: 2.2e-05 (no reheat), 1.5e-05 (reheated)
+  xi=8.5e-04  T'_D=0.172 MeV  n_B=1.62e+29 cm^-3  t=3.78e-05 s  eta'(T'_D)=0.997  reheat x1.60  X_C: 1.7e-05 (no reheat), 1.3e-05 (reheated)
+  xi=1.5e-03  T'_D=0.150 MeV  n_B=1.95e+28 cm^-3  t=1.52e-04 s  eta'(T'_D)=0.182  reheat x1.21  X_C: 1.0e-06 (no reheat), 9.9e-07 (reheated)
+  xi=4.3e-03  T'_D=0.122 MeV  n_B=4.39e+26 cm^-3  t=1.82e-03 s  eta'(T'_D)=0.0077  reheat x1.01  X_C: 5.5e-09 (no reheat), 5.6e-09 (reheated)
+PASS  E3 DECIMAL on the helium branch at the floor the bottleneck opens at T' = 0.23 to 0.24 MeV with n_B ~ 1e31 cm^-3 at microseconds and burning reheats the mirror by about 3 (T14's figures reproduced), and triple alpha in the dense mirror plasma leaves a primordial carbon mass fraction of order 1e-4 to 1e-3 at the floor and below 1e-8 at the hot deposit
+
+DECIMAL E4: the neutron branch: the leftover free neutrons decay into a dense gas and are captured
+  floor, L/B = -51/28: X_n = 1.000 -> He-4 at the bottleneck Y' = 0.001; leftover neutrons 0.999 end as
+  mass fractions X_H 0.032, X_D 0.775, X_T(-> He-3) 0.193, free n -6.7e-20; energy released 1.41 MeV per baryon, reheating the mirror photons to ~0.37 keV at t ~ tau_n
+PASS  E4 DECIMAL on the neutron branch the leftover neutrons decay at ~900 s in a gas of n_B ~ 1e18 to 1e19 cm^-3; the protons capture neutrons barrier-free (n p -> D gamma, then n D -> T gamma) faster than the expansion, so the remainder ends as deuterium and tritium more than as hydrogen; the released binding energy reheats the photon-poor mirror to of order a keV, where D-T burning is possible: the endpoint is a hydrogen-isotope and helium mix not computed here
+
+DECIMAL E5: recombination (Saha, x_e = 1/2)
+  xi=2.8e-04 He branch: eta'=0.824, T'_rec=1.13 eV, visible T=1.24 keV, z=5.30e+06
+  xi=2.8e-04 H  branch: eta'=27.8, T'_rec=0.85 eV, visible T=3.04 keV, z=1.29e+07
+  xi=4.3e-03 He branch: eta'=0.00734, T'_rec=0.91 eV, visible T=0.21 keV, z=8.93e+05
+  xi=2.0e-02 He branch: eta'=7.62e-05, T'_rec=0.78 eV, visible T=0.04 keV, z=1.65e+05
+PASS  E5 DECIMAL the mirror recombines at T' of order 0.5 to 2 eV, at a visible temperature of 0.04 to a few keV (z ~ 1e5 to 1e7), long before our recombination: CDM-like for the CMB on every branch
+
+DECIMAL E6: cooling of mirror gas in a Milky-Way halo (bremsstrahlung only, an upper bound on t_cool)
+  T = 1e6 K, rho = 1e-3 m_p cm^-3: t_cool(H) = 7.1 Gyr, t_cool(He) = 5.3 Gyr, t_cool(X=0.75) = 6.9 Gyr
+PASS  E6 DECIMAL at the density of the inner hot halo (1e-3 m_p cm^-3, T = 1e6 K) bremsstrahlung alone cools pure helium, pure hydrogen and our primordial mix within the Hubble time, helium slightly faster per unit mass (ratio 0.75): the mirror is dissipative on every branch (line and metal cooling only shorten this)
+
+DECIMAL E7: the 1 Oct semi-analytic model's phases, re-expressed as fractions of the mirror's halo share
+  H branch, F = 1                settled at R_sun  47.0- 56.0 Msun/pc^2 -> settled 31.8-37.9% of the mirror's halo share; Widmark 95% thin-disk bound 4.1-5.6 Msun/pc^2 (h = 20-100 pc)
+  He, no star formation          settled at R_sun  48.0-117.0 Msun/pc^2 -> settled 32.5-79.1% of the mirror's halo share; Widmark 95% thin-disk bound 4.1-5.6 Msun/pc^2 (h = 20-100 pc)
+  He, F = 1                      settled at R_sun  23.1- 41.9 Msun/pc^2 -> settled 15.6-28.3% of the mirror's halo share; Widmark 95% thin-disk bound 4.1-5.6 Msun/pc^2 (h = 20-100 pc)
+  He, F = 3.6-4.1 (our IMF)      settled at R_sun   8.5- 20.1 Msun/pc^2 -> settled  5.7-13.6% of the mirror's halo share; Widmark 95% thin-disk bound 4.1-5.6 Msun/pc^2 (h = 20-100 pc)
+  He, F = 6.4-7.3 (shifted IMF)  settled at R_sun   5.6- 13.5 Msun/pc^2 -> settled  3.8- 9.1% of the mirror's halo share; Widmark 95% thin-disk bound 4.1-5.6 Msun/pc^2 (h = 20-100 pc)
+PASS  E7 DECIMAL (imported model): our settled baryons are 32% of our halo share; the helium mirror with helium-star feedback settles 4 to 14% of its share, still above Widmark's thin-disk bound unless thick, while every other branch settles 15% or more
+
+==============================================================================
+24 checks, 0 failures

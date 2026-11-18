@@ -1,0 +1,16 @@
+functions:
+  check_twisted_wall_and_its_eigenbundles:
+    kind: sampled
+    clauses:
+    - '(1), (4) the wall G = 1 + (s-1) l l^T on the cylinder: signatures (2,0), corank one, (1,1); eigenvalue s on l and 1 on l_perp; the form is a function of the point; the unit section of the kernel line reverses after one turn'
+    omits: 'eleven half-angle points and fifteen values of s; clause (1) for a general wall is the proof''s (spectral projections and compactness)'
+  check_two_rung_completion_moves_the_twist_into_the_far_form:
+    kind: sampled
+    clauses:
+    - '(4) the form 1 - 2(n n^T + b b^T) joined to G + K_ph and G + K_far has signature (4,2) at every sample point, is single valued, equals G + K_ph for s >= 2 and G + K_far for s <= -2; K_ph has signature (2,2), K_far has signature (3,1) with negative line n'
+    omits: 'eleven half-angle points and fifteen values of s; nondegeneracy at every point is the proof''s; that one rung with a constant hyperbolic plane fails is the proof''s (determinant lines), not checked'
+  check_transfer_bookkeeping_for_k_rungs:
+    kind: complete
+    clauses:
+    - '(3) the far form has signature (k+1, k-1) and N rank k - 1, for seven signatures and k up to eight; (1+x) w(N) = 1 gives every coefficient of w(N) equal to one; the coefficient of t^k in (1+t)^k/(1+xi t) is (1-xi)^k = 2^(k-1)(1-xi) when xi^2 = 1'
+    omits: 'the isomorphisms of bundles in (2) and (3) are the proof''s; the Whitney formula is imported and the dimension axiom it is used with is classical and not in the Fact''s text; the exterior-power operations behind the K-theory identity are not in the store and the identity is stated in the Reading only; nothing here tests the stored one-sided rung count'

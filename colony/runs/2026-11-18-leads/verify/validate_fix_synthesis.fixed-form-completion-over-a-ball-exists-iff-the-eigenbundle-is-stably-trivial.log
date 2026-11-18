@@ -1,0 +1,54 @@
+{
+ "ok": false,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "E214",
+   "severity": "error",
+   "entity": "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial",
+   "message": "formal: \\claimref{synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two} names no entity",
+   "fix": "correct the id (see tombstones.yaml for retired ones)"
+  },
+  {
+   "code": "E214",
+   "severity": "error",
+   "entity": "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial",
+   "message": "technical: \\claimref{synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two} names no entity",
+   "fix": "correct the id (see tombstones.yaml for retired ones)"
+  },
+  {
+   "code": "E214",
+   "severity": "error",
+   "entity": "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial",
+   "message": "proof main: \\claimref{synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two} names no entity",
+   "fix": "correct the id (see tombstones.yaml for retired ones)"
+  },
+  {
+   "code": "E201",
+   "severity": "error",
+   "entity": "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial",
+   "message": "uses -> synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two: no such entity",
+   "fix": ""
+  },
+  {
+   "code": "E204",
+   "severity": "error",
+   "entity": "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial@1",
+   "message": "declared status 'proved' exceeds effective status 'unsupported'\n      cause: derivation 'main' uses synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two@1 (missing)",
+   "fix": "lower status, prove the premise, or name the condition as a postulate and assume it"
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 15 entities; 27 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was not run (validate_draft never runs code). Put the folder under store/ in your copy and run `python -m tp check-one <id> --store store`; the pull request's checks run it again"
+}

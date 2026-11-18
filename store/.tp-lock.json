@@ -2108,18 +2108,23 @@
     "Claude Fable 5.2",
     "restatement: every number recomputed with the derived production coefficients, the Dirac-or-Weyl bracket closed, the two bounds on the radiation at the floors weakened by a factor ten, and the energy convention behind the floors stated",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision of 18 November 2026: the floors take the mean energy per creation event computed in the seeding proposition; floors, the mirror's baryon-to-photon ratio at the floor, the crossover coefficient, the floor at the rescue temperature and the radiation values recomputed; the convention qualifiers removed",
+    6
    ]
   ],
-  "hash": "44efdad4fb5e31e0",
+  "hash": "56bd2d8b9cef6b3b",
   "ledger": null,
   "parts": {
-   "checks": "fd5428fda8032516",
-   "proofs": "60b2c643a914f2bf",
+   "checks": "b847dae210531d59",
+   "proofs": "c80bc894a500ab14",
    "rest": "d3b65c89b700e77b",
-   "statement": "9132041e822cd601"
+   "statement": "6037342204d92c7a"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.contact-mechanism-returns-r3": {
   "assumes": [
@@ -2761,18 +2766,23 @@
     "Claude Fable 5.2",
     "the neutron-rich composition stated at the temperature ratio where it was computed, which is no longer the gravitational floor",
     9
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted present floor (5.2e-4 -> 6.6e-4) in the composition caveat, after the floor was defined with the mean energy per creation event; then the composition at the present floor stated from the rerun recorded in the composition Computation (83 to 96 percent neutrons for L <= 0)",
+    10
    ]
   ],
-  "hash": "643969688a4a89c9",
+  "hash": "21959661ba6c71d3",
   "ledger": null,
   "parts": {
    "checks": "392eeb7b189db1c4",
    "proofs": "1a88a00aac0edf2a",
    "rest": "d3b65c89b700e77b",
-   "statement": "9b682e7dc13ebc00"
+   "statement": "b2cb5ccb171d1a83"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "dark-matter.mirror-tower-copy-one": {
   "assumes": [
@@ -2960,18 +2970,23 @@
     "Claude Opus 5.5",
     "maintainer pass on Leon's decisions, the coefficient with the heaviest neutrino non-relativistic corrected to 6.43 with its check, and the cold-mirror exception sentence (correction)",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted gravitational floor (about three -> about seven parts in ten thousand; 1.1e-3 -> 1.4e-3 at a coefficient of ten), a quote left at its first value when the production coefficients were corrected and now also behind the mean energy per creation event; the burning reheat of 3.0 to 3.2 stated at the temperature ratio where it was computed; then the burning reheat at the present floor stated from the rerun recorded in the composition Computation (1.9)",
+    7
    ]
   ],
-  "hash": "6ae69de3ff0fe92b",
+  "hash": "edc6350b6061545e",
   "ledger": null,
   "parts": {
    "checks": "f4d68c8a3acb60fe",
    "proofs": "c6f257c53be6fb06",
    "rest": "d3b65c89b700e77b",
-   "statement": "bb12186874448f39"
+   "statement": "66736839f7bc8e8d"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-matter.orientation-arrow-seventeenth-refutation": {
   "assumes": [
@@ -3182,18 +3197,23 @@
     "Claude Fable 5.2",
     "Premise P4 retired: the assumes edge removed, the equal asymmetry of the mirror cited from the copy theorem's clause (v)",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted gravitational floor for a nine-vector content (about three and a half -> about eight parts in ten thousand), a quote left at its first value when the production coefficients were corrected and now also behind the mean energy per creation event",
+    8
    ]
   ],
-  "hash": "c525f825187cba57",
+  "hash": "a983891089e5c667",
   "ledger": null,
   "parts": {
    "checks": "14780d1b322a10fb",
    "proofs": "5163cd50956ea48e",
    "rest": "d3b65c89b700e77b",
-   "statement": "672252eaa35bfae0"
+   "statement": "580dbb1705c5b88c"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "dark-matter.premise-cpt-covariance": {
   "assumes": [],
@@ -3414,18 +3434,23 @@
     "Claude Fable 5.2",
     "restatement of two quoted figures after the production coefficients were corrected: the floor in parts per ten thousand, and the mirror channel's margin at the floor (eleven orders, not twelve)",
     9
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of two quoted figures after the floor was defined with the mean energy per creation event: the floor in parts per ten thousand, and the mirror channel's margin at the floor (2.1e11, still eleven orders)",
+    10
    ]
   ],
-  "hash": "9f3b42bc8ac7ce8c",
+  "hash": "10f9e227cc3490fe",
   "ledger": null,
   "parts": {
-   "checks": "8ad63bf83ae318e5",
+   "checks": "cbc718b9d8338244",
    "proofs": "0afef9ccdcf58565",
    "rest": "18da17b7316b08f7",
-   "statement": "a609e666af84336a"
+   "statement": "0d3a75588b810e4a"
   },
   "status": "proved",
-  "version": 9
+  "version": 10
  },
  "dark-matter.reduced-response-gravity-needs-supporting-stress": {
   "assumes": [],
@@ -3504,18 +3529,23 @@
     "Claude Fable 5.2",
     "restatement: the rate is cited from the result that derives it, with its hypothesis; the rate counts creation events of two quanta, so the yield is of events and the energy convention behind the floor is stated; formulas unchanged",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement at the maintainer's decision of 18 November 2026: the floor is defined with the mean energy per creation event, computed from the rate integral and checked here, in place of the convention of 3T per event; prefactor 9.6e-4 -> 1.23e-3",
+    6
    ]
   ],
-  "hash": "f2a82d83540a9432",
+  "hash": "035f07313fbf050a",
   "ledger": null,
   "parts": {
-   "checks": "afe8a1077d47046f",
-   "proofs": "3faff2cef2653632",
+   "checks": "12642c2912ff6649",
+   "proofs": "e569aba50fa020d7",
    "rest": "d3b65c89b700e77b",
-   "statement": "d12a5699069bae1f"
+   "statement": "c89f6aa41b19fed9"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.single-ideal-at-residues-zero-and-four": {
   "assumes": [],
@@ -3642,18 +3672,23 @@
     "Claude Fable 5.2",
     "restatement of the quoted numbers after the production coefficients were corrected: the gravitational yield, the shortfall (three orders, not four), the floor and the mirror's baryon-to-photon ratio at it; the composition at the floor marked as computed at the earlier floor only",
     12
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted floor and of the mirror's baryon-to-photon ratio at the floor, after the floor was defined with the mean energy per creation event; the charge reading, the yield comparison and the hot deposit unchanged; then the composition at the present floor stated from the rerun recorded in the composition Computation (moderately degenerate, 83 to 96 percent neutrons for L <= 0)",
+    13
    ]
   ],
-  "hash": "34e1458cd5925f84",
+  "hash": "23c164e99fc51c82",
   "ledger": null,
   "parts": {
-   "checks": "523f551a48a0a561",
-   "proofs": "f119f3107f1c14a2",
+   "checks": "a3b4807cd9a66727",
+   "proofs": "c3d758041d04e34c",
    "rest": "d3b65c89b700e77b",
-   "statement": "061a1b38969e85f8"
+   "statement": "bfcc3b4907d8c5e3"
   },
   "status": "proved",
-  "version": 12
+  "version": 13
  },
  "dark-matter.superselected-hence-dark-exactly-stable": {
   "assumes": [
@@ -4446,18 +4481,23 @@
     "Claude Fable 5.2",
     "restatement: clause (i) is stated at the temperature ratio at which it was computed, which was the gravitational floor with the first imported production coefficients and is below the present floor; the quoted floor and its eta-prime corrected",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted present floor (5.2e-4 -> 6.6e-4) and of the quoted baryon-to-photon ratio at the floor (4.4 -> 2.1), after the floor was defined with the mean energy per creation event; no number of clauses (i) to (iii) changed; then clause (i) restated at the present floor from a second run of the supplementary scripts (still neutron-rich for L <= 0, 83 to 96 percent neutrons, only moderately degenerate)",
+    5
    ]
   ],
-  "hash": "8937a644d528e1d6",
+  "hash": "450ce4e00a1afd31",
   "ledger": null,
   "parts": {
    "checks": "b9fa1ff9bb8b0663",
-   "proofs": "29875f6ebaae44da",
+   "proofs": "029664033cdfb149",
    "rest": "d3b65c89b700e77b",
-   "statement": "1bcede9c4a1aeb7a"
+   "statement": "1b459cb78f5487d7"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "dark-tower-matter.mirrors-temperature-p2": {
   "assumes": [],
@@ -6870,7 +6910,7 @@
  },
  "hawking.helicity-lift-joints-itemised": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@3"
+   "hawking.joint-j3-s-wave-reduction@4"
   ],
   "credit": [
    [
@@ -6892,18 +6932,23 @@
     "Claude Fable 5.2",
     "restatement of Joint J3 to the premise as narrowed again, channel reduction assumed for even-parity spin 2 only, the reduction worded per partial-wave channel",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "dated sentence in joint J3 at every level and in the proof: the channel reduction for even-parity spin 2 is now derived in the store on oscillating channels given (C1) and (C2); the premise and the composite statement are unchanged",
+    8
    ]
   ],
-  "hash": "817cfbb0836ad9bf",
+  "hash": "7d553818acc177f5",
   "ledger": null,
   "parts": {
    "checks": "969842d81cbde4d8",
-   "proofs": "b3b01267d12fbf83",
+   "proofs": "67e02ee7563f3452",
    "rest": "22cd46a92ec6fa2c",
-   "statement": "b23f2f39881daf41"
+   "statement": "b41353d3ab8fe304"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "hawking.homogeneity-ordering-shift": {
   "assumes": [],
@@ -7357,18 +7402,23 @@
     "Claude Fable 5.2",
     "restatement of the premise, the channel-reduction clause narrowed to even-parity spin 2, the reduction worded per partial-wave channel, and the identification recorded as not injective",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "dated note at every level: the channel reduction for even-parity spin 2 is now derived in the store on oscillating channels, given the cited facts (C1) and (C2); the premise's clauses are not changed",
+    4
    ]
   ],
-  "hash": "d5c84bdd03e83cdc",
+  "hash": "99b78955f4e52a30",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "8897b3ba37b9da21"
+   "statement": "a476f20395ec025a"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "hawking.kms-restricts-invariant-subalgebras": {
   "assumes": [],
@@ -7577,18 +7627,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "dated note at the formal, technical and lay levels: on a reading computed in a working file, the winding three is the degree of the field strength in the square root of the ring's normal coordinate and only its parity is a class of a degenerating form; the conjecture is not reworded",
+    6
    ]
   ],
-  "hash": "5f907f7919b8e8da",
+  "hash": "7592c05dba5e6df4",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "2fb5ff3e36c13966",
-   "statement": "f59c61d94dd39aba"
+   "statement": "3449b3ca44570020"
   },
   "status": "conjectured",
-  "version": 5
+  "version": 6
  },
  "interior.exact-parallelism-convergence-rate": {
   "assumes": [],
@@ -35664,18 +35719,23 @@
     "Claude Fable 5.2",
     "scope sentence: the prediction is about the phase only, with no claim about a mediator or a quantised gravitational field; observation row",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "basis linked to the operator Newtonian coupling, which derives the phase and its sign; the reading and premises stay outside the store; prediction unchanged",
+    3
    ]
   ],
-  "hash": "9e287519cc799aa0",
+  "hash": "3e70a03ca42f6998",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
-   "proofs": "2ced0a75ebab5a10",
+   "proofs": "ef37375ad7d653b3",
    "rest": "8ce288cee17c88d1",
    "statement": "3955eeca3fa657a8"
   },
   "status": "live",
-  "version": 2
+  "version": 3
  },
  "pred.leptonic-cp-trivial": {
   "assumes": [
@@ -35768,18 +35828,23 @@
     "Claude Fable 5.2",
     "the sentence on the seeding floor's rate reworded: the rate is now derived in the store with corrected coefficients; prediction, kill condition and status unchanged",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "the sentence quoting the seeding floor restated (5.2e-4 -> 6.6e-4, still eleven orders at the floor); prediction, kill condition, threshold and status unchanged",
+    6
    ]
   ],
-  "hash": "0f55c55936172f17",
+  "hash": "48b9e27e2eea01d8",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "810492be45b734c1",
    "rest": "826b6ad9b83750df",
-   "statement": "3a4707b603d6ea76"
+   "statement": "f64fee7cb7137a68"
   },
   "status": "live",
-  "version": 5
+  "version": 6
  },
  "pred.no-gravitational-settling": {
   "assumes": [],
@@ -39135,18 +39200,23 @@
     "Claude Opus 5.5",
     "maintainer pass, status lowered to conjectured and restated as a modular-time estimate at Leon's decisions",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "dated note at every level: the estimate has no proved core as a statement about the return of information, the stored theorems behind the spreading law not reaching it; status unchanged",
+    4
    ]
   ],
-  "hash": "2d3d00e8571b5eeb",
+  "hash": "7fa508b77a12cd1f",
   "ledger": null,
   "parts": {
    "checks": "f30b8cccb5ee8e24",
    "proofs": "9f8d46d14389cfca",
    "rest": "85079d304d5cbecd",
-   "statement": "a0878b889e477d4b"
+   "statement": "0b5b939c747cd98d"
   },
   "status": "conjectured",
-  "version": 3
+  "version": 4
  },
  "scrambling.scheme-robustness-cutoff": {
   "assumes": [],
@@ -39225,18 +39295,23 @@
     "Claude Opus 5.5",
     "maintainer pass, status lowered to conjectured at Leon's decisions",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement with the scope made explicit: the proved statements the estimate rests on are cited as stored theorems, the window law is named as the estimate; one check added; status unchanged",
+    7
    ]
   ],
-  "hash": "8960258bc49e298b",
+  "hash": "f1f823fa688ec8d9",
   "ledger": null,
   "parts": {
-   "checks": "f82476a802e3dada",
-   "proofs": "4428fa54d5abb8ff",
+   "checks": "d0333e675d746d43",
+   "proofs": "96208bb666113e78",
    "rest": "85079d304d5cbecd",
-   "statement": "767c1cd612a207ea"
+   "statement": "efa1bb25ec16da26"
   },
   "status": "conjectured",
-  "version": 6
+  "version": 7
  },
  "scrambling.uniqueness-internal-scaling": {
   "assumes": [],
@@ -40484,18 +40559,23 @@
     "Claude Opus 5.5",
     "maintainer pass, restatement of clause (a) as the one-rung completion and clock wording of (b) at Leon's decisions",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of clauses (a) and (c) at Leon's decision: the coarse part named as the signature jump with the clock mismatch as its residue, clause (c) as the wall's instance of the eigenbundle class of the transfer clause, with what is proved towards it",
+    4
    ]
   ],
-  "hash": "b7f41a4e22813e70",
+  "hash": "571d284e92d496e8",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "ed03efdf88102b2c",
-   "statement": "cf1c660b860e93b6"
+   "statement": "fb586a5d21362e04"
   },
   "status": "conjectured",
-  "version": 3
+  "version": 4
  },
  "sheaf.wall-fibre-black-hole": {
   "assumes": [],
@@ -40762,7 +40842,7 @@
    "simulations.c-odd-towers-collisionless@3",
    "simulations.s1-one-species-per-tower@3",
    "simulations.s2-sheet-fluid@3",
-   "simulations.s3-mirror-cluster@3",
+   "simulations.s3-mirror-cluster@4",
    "simulations.s4-our-matter@2",
    "simulations.s5-halos@2"
   ],
@@ -40911,18 +40991,23 @@
     "Claude Fable 5.2",
     "restatement of the quoted gravitational floor after the production coefficients were corrected, with the composition at the floor marked as computed at the printed floor only",
     7
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the quoted gravitational floor (5.2e-4 -> 6.6e-4) after the floor was defined with the mean energy per creation event; share, hot deposit, helium interval and cross-sections unchanged; then the composition at the present floor stated from the rerun recorded in the composition Computation (still neutron-rich for L <= 0, 83 to 96 percent neutrons)",
+    8
    ]
   ],
-  "hash": "885489c41b69a8c8",
+  "hash": "9022aa05ca993975",
   "ledger": null,
   "parts": {
-   "checks": "fb6bcec0edbf7d81",
-   "proofs": "495cac302315993b",
+   "checks": "7890b222df259ef8",
+   "proofs": "ca636647d3194720",
    "rest": "d3b65c89b700e77b",
-   "statement": "af0057ecb12983f0"
+   "statement": "5d7f789f8af4ceda"
   },
   "status": "proved",
-  "version": 7
+  "version": 8
  },
  "simulations.imported-unit-ball-rule-family": {
   "assumes": [
@@ -40958,7 +41043,7 @@
    "simulations.c-odd-towers-collisionless@3",
    "simulations.s1-one-species-per-tower@3",
    "simulations.s2-sheet-fluid@3",
-   "simulations.s3-mirror-cluster@3",
+   "simulations.s3-mirror-cluster@4",
    "simulations.s4-our-matter@2",
    "simulations.s5-halos@2"
   ],
@@ -41092,18 +41177,23 @@
     "Claude Fable 5.2",
     "the neutron-rich composition stated at the temperature ratio where it was computed, which is no longer the gravitational floor",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "the present gravitational floor named in the window clause (6.6e-4), after the floor was defined with the mean energy per creation event; then the neutron-rich composition stated at the present floor as well, from the rerun recorded in the composition Computation",
+    4
    ]
   ],
-  "hash": "2fb88902e58640c2",
+  "hash": "a5fc7c1e01746032",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "4432b875fe8ae652"
+   "statement": "f165a7441bc3178d"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "simulations.s4-our-matter": {
   "assumes": [],
@@ -47511,6 +47601,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "07b391136c0d9542",
+  "ledger": null,
+  "parts": {
+   "checks": "f7b1e278c434f33a",
+   "proofs": "552a4c3b54b10b44",
+   "rest": "d3b65c89b700e77b",
+   "statement": "758dd5ca650fe53c"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.adiabatic-deposit-modulation-is-a-time-shift": {
   "assumes": [],
   "credit": [
@@ -47533,18 +47648,23 @@
     "Claude Fable 5.2",
     "restatement of one quoted bound: the mirror's gravitational floor under (R), neglected in the deposit law, is below 2.5e-5 and not 1.5e-5",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of one quoted bound: the mirror's gravitational floor under (R), neglected in the deposit law, is below 3.1e-5 and not 2.5e-5",
+    5
    ]
   ],
-  "hash": "b49725e43423c124",
+  "hash": "fe3a67b2b5be0135",
   "ledger": null,
   "parts": {
    "checks": "c7bd6081f3c7a8dd",
-   "proofs": "3356a2bf7c9a6408",
+   "proofs": "dd7afcca29563934",
    "rest": "d3b65c89b700e77b",
-   "statement": "915891a578f14b5a"
+   "statement": "902e06d5a7c8fe06"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.admissible-decay-does-not-control-tangential-derivatives": {
   "assumes": [],
@@ -48746,18 +48866,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the last sentence of clause (v) restated: the running maxima of the pure-state values are the Pell values for every denominator, citing the theorem that proves it, in place of the computed range up to 400",
+    2
    ]
   ],
-  "hash": "7cdd6c620f77ec45",
+  "hash": "8b77657f9510a9b1",
   "ledger": null,
   "parts": {
    "checks": "bbcefd010be7aae0",
-   "proofs": "2d6bef5464bc0ba5",
+   "proofs": "d0b5c765d30db8be",
    "rest": "d3b65c89b700e77b",
-   "statement": "7805e782ef361427"
+   "statement": "7fd285f86d4bffb2"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist": {
   "assumes": [
@@ -49065,7 +49190,7 @@
  },
  "synthesis.collapse-in-vacuum-regular-at-future-horizon-selects-hawking-temperature": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@3"
+   "hawking.joint-j3-s-wave-reduction@4"
   ],
   "credit": [
    [
@@ -49112,7 +49237,7 @@
  },
  "synthesis.collapsing-hole-flux-from-ground-state-on-the-ingoing-sheet": {
   "assumes": [
-   "hawking.joint-j3-s-wave-reduction@3"
+   "hawking.joint-j3-s-wave-reduction@4"
   ],
   "credit": [
    [
@@ -50099,7 +50224,7 @@
  },
  "synthesis.de-sitter-field-fixes-the-observer-tube-point": {
   "assumes": [
-   "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries@2"
+   "synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries@3"
   ],
   "credit": [
    [
@@ -50121,18 +50246,23 @@
     "Claude Opus 5.5",
     "consistency pass, the normalisation of K against the cited theorem stated in the formal level",
     4
+   ],
+   [
+    "Claude Fable 5.2",
+    "correction of the quoted reach of the adopted clause in the technical level, the lay level, the one-liner and the proof's reading (the clause as restated: rotations, the boost being the horizon's flow; silent on black-hole fields); clauses (i) to (viii) and the formal level unchanged",
+    5
    ]
   ],
-  "hash": "2d8f7475ff89388e",
+  "hash": "bb9b646f399bce6f",
   "ledger": null,
   "parts": {
    "checks": "eab519d26744a9f9",
-   "proofs": "b8262a05fa7c852f",
+   "proofs": "81c76a764060ad00",
    "rest": "d3b65c89b700e77b",
    "statement": "3eadd8b059aa7b45"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "synthesis.de-sitter-horizon-translation-is-conformal-null-rotation": {
   "assumes": [],
@@ -50617,6 +50747,31 @@
   "status": "proved",
   "version": 3
  },
+ "synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "41e522e49db0ec98",
+  "ledger": null,
+  "parts": {
+   "checks": "0a9368365d64dcb7",
+   "proofs": "c8cc2137f64c4f50",
+   "rest": "d3b65c89b700e77b",
+   "statement": "fb42288496e860ff"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.einstein-condition-is-infinity-vacuum-incidence": {
   "assumes": [],
   "credit": [
@@ -50872,6 +51027,31 @@
    "proofs": "9bde3575027f7ba8",
    "rest": "33009deb10105397",
    "statement": "f405eab4bf92f211"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "c1332648240f85c8",
+  "ledger": null,
+  "parts": {
+   "checks": "0639314c1734d969",
+   "proofs": "b4395f43d3cc6b17",
+   "rest": "36880587349d3e5c",
+   "statement": "ddf8cb9bd52a3b8d"
   },
   "status": "proved",
   "version": 1
@@ -51456,6 +51636,31 @@
   "status": "proved",
   "version": 6
  },
+ "synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "21ee28c1d8ec2f44",
+  "ledger": null,
+  "parts": {
+   "checks": "aa85797d72e08d2d",
+   "proofs": "c265695edf543d5a",
+   "rest": "d3b65c89b700e77b",
+   "statement": "1eee31df70a244fb"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst": {
   "assumes": [],
   "credit": [
@@ -51485,6 +51690,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7b4065c17df70f2a",
+  "ledger": null,
+  "parts": {
+   "checks": "9db6643f68f48563",
+   "proofs": "e632079080fd7cf8",
+   "rest": "d3b65c89b700e77b",
+   "statement": "f39f99909c8158e5"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.flag-conjugate-antilinear-on-one-chirality-and-conjugation-reverses-jarlskog": {
   "assumes": [],
@@ -52214,18 +52444,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "a dated remark at the end of the proof pointing to two later results: the channel weights rederived without angular integration, and the coefficients on the chain's bath; no clause, level or check changed",
+    2
    ]
   ],
-  "hash": "6f85e755bc42d459",
+  "hash": "951a1d6d25a5abd0",
   "ledger": null,
   "parts": {
    "checks": "309d088b25496b8c",
-   "proofs": "6abf244007dee21b",
+   "proofs": "5d1f4b1e185df5c9",
    "rest": "d3b65c89b700e77b",
    "statement": "d6330fee09b2a90b"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.gtg-tractor-gauge-field-reproduces-tractor-connection": {
   "assumes": [],
@@ -52447,6 +52682,31 @@
   "status": "proved",
   "version": 1
  },
+ "synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "98cb28d4b4d6345e",
+  "ledger": null,
+  "parts": {
+   "checks": "60f22aa254aee96b",
+   "proofs": "07ddfc441cd15edf",
+   "rest": "d3b65c89b700e77b",
+   "statement": "7d4ac60939f2bed4"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.helicity-one-pair-modes-on-a-null-generator-are-quasi-spins": {
   "assumes": [],
   "credit": [
@@ -52589,18 +52849,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "dated note at every level: the cited fact (C3) is proved by the even-parity result, what is still cited is (C1) and (C2), clause (3) is superseded on oscillating channels only, and clause (1) no longer depends on the degree bound; no clause reworded",
+    2
    ]
   ],
-  "hash": "65d1535fd8c3f53f",
+  "hash": "4e0fe4faa4c85e4a",
   "ledger": null,
   "parts": {
    "checks": "631accaefbb6543f",
    "proofs": "25a9d83276bd39a0",
    "rest": "36880587349d3e5c",
-   "statement": "824f5dd9bf82b7ae"
+   "statement": "ac8c25cba883076e"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.hypothesis-u-readings-on-the-rung-coupling-line": {
   "assumes": [],
@@ -55871,18 +56136,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (iv) added: the dimension axiom of Stiefel-Whitney classes, with provenance",
+    2
    ]
   ],
-  "hash": "3606b154cb21b1bb",
+  "hash": "49824b6749e63a18",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "157e57289dfc2fd5",
-   "statement": "fc1985c901b65cdf"
+   "statement": "2053bf2867b403ad"
   },
   "status": "imported",
-  "version": 1
+  "version": 2
  },
  "synthesis.imported-wilson-lattice-gauge-theory-and-strong-coupling-confinement": {
   "assumes": [],
@@ -58179,18 +58449,23 @@
     "Claude Fable 5.2",
     "restatement of the bounds on the floor under (R) and of the accuracy without (R), from the floors at the derived production coefficients; the deposit law and its window unchanged",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the bounds on the floor under (R) and of the accuracy with and without (R), from the floors at the mean energy per creation event; the convention qualifier removed; the deposit law and its window unchanged",
+    3
    ]
   ],
-  "hash": "c3006492e49e1480",
+  "hash": "1910e6503ebdd7a3",
   "ledger": null,
   "parts": {
-   "checks": "1616a60ac4800621",
-   "proofs": "3d47d3dc57f4d44c",
+   "checks": "905b14a5480ec6b9",
+   "proofs": "44b2818ce3b975c4",
    "rest": "d3b65c89b700e77b",
-   "statement": "e3460e5193d63509"
+   "statement": "0cd04753705b57d3"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product": {
   "assumes": [],
@@ -59509,6 +59784,31 @@
   "status": "proved",
   "version": 2
  },
+ "synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "1d14617fd8777f5e",
+  "ledger": null,
+  "parts": {
+   "checks": "37888e32cef8f6b1",
+   "proofs": "9b8ba6e6c4953cb5",
+   "rest": "d3b65c89b700e77b",
+   "statement": "15372ee881623d46"
+  },
+  "status": "proved",
+  "version": 1
+ },
  "synthesis.phase-flow-is-time-rotor-flow-kms-continuation": {
   "assumes": [],
   "credit": [
@@ -59708,6 +60008,31 @@
   },
   "status": "proved",
   "version": 5
+ },
+ "synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "3d6dfc5c64c7031a",
+  "ledger": null,
+  "parts": {
+   "checks": "de505b32cdc9280b",
+   "proofs": "1ce5703bc2b1bc51",
+   "rest": "d3b65c89b700e77b",
+   "statement": "877adc034a5d3d2f"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.positive-conformal-energy-gives-positive-null-translations": {
   "assumes": [],
@@ -61019,6 +61344,31 @@
    "proofs": "e2ffc94e5590aa1f",
    "rest": "6a0d4959093a994c",
    "statement": "688bbba803dad8c5"
+  },
+  "status": "proved",
+  "version": 1
+ },
+ "synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "d45d58c0bdda7728",
+  "ledger": null,
+  "parts": {
+   "checks": "cdaf98c3c95e0db0",
+   "proofs": "89e60504c7bd5fcb",
+   "rest": "d3b65c89b700e77b",
+   "statement": "01d77cc3252f9999"
   },
   "status": "proved",
   "version": 1
@@ -63279,18 +63629,48 @@
     "Claude Opus 5.5",
     "notation pass, every imaginary unit resolved as a geometric-algebra pseudoscalar (unit principle)",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "restatement of the clause at Leon's decision: invariance under the rotations commuting with the wedge's boost, the boost generating a positive multiple of the horizon's Killing flow; silent on black-hole fields",
+    3
    ]
   ],
-  "hash": "324465014097c07e",
+  "hash": "1dc7f913d43303ed",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "bac6642d19709165",
-   "statement": "6bce8419caea6696"
+   "statement": "d6a34df0c1ce9d06"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
+ },
+ "synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "7ed8fcb33f612ca4",
+  "ledger": null,
+  "parts": {
+   "checks": "de8f12399efd05bf",
+   "proofs": "a2af4d1a615e7b7d",
+   "rest": "36880587349d3e5c",
+   "statement": "ebb02d09186218c4"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.twisted-wall-induction-conserves-dying-line-class": {
   "assumes": [
@@ -63378,6 +63758,31 @@
   },
   "status": "proved",
   "version": 2
+ },
+ "synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "4a796426189584fc",
+  "ledger": null,
+  "parts": {
+   "checks": "3166349a49a1f5fb",
+   "proofs": "7d657bbb22dcfc9c",
+   "rest": "d3b65c89b700e77b",
+   "statement": "2935f0eb33bba95d"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.two-frozen-points-conformally-flat": {
   "assumes": [],
@@ -64183,6 +64588,31 @@
   },
   "status": "postulate",
   "version": 3
+ },
+ "synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    null
+   ]
+  ],
+  "hash": "1345e84667410696",
+  "ledger": null,
+  "parts": {
+   "checks": "8fd98d0beda8e602",
+   "proofs": "0333eaf7b373e1d9",
+   "rest": "d3b65c89b700e77b",
+   "statement": "0ba89f9c01873f6a"
+  },
+  "status": "proved",
+  "version": 1
  },
  "synthesis.z-adapted-witt-flags-energy-sign-follows-the-flag-bit": {
   "assumes": [],

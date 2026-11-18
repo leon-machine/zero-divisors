@@ -1,0 +1,30 @@
+functions:
+  check_conserved_sources_split_and_rotation_invariants_are_one_line:
+    kind: complete
+    clauses:
+    - '(i) six conserved sources at k = 2 e0, P of trace 3 and norm 3, five trace-free'
+    - '(ii) no invariant trace-free source; the invariance equations on the tensor square have rank 24 of 25; the pairing is invariant'
+    omits: 'one momentum (others by covariance, the proof''s); the step from the Lie algebra to the group and the mean over rotors are the proof''s'
+  check_pair_sources_have_rotation_weights_zero_one_and_two:
+    kind: complete
+    clauses:
+    - '(iii) scalar source weight zero, trace (1 - 6 xi) s and trace-free norm s^2/6 at five couplings'
+    - '(iii) chiral pair: the spin sum as two squares, L T_1 = T_2 and L T_2 = -T_1, trace-free, orthogonal to P and to each other, norm s^2/4'
+    - '(iii) vector pair: the weight-zero combinations vanish, the others have L L T = -4 T, trace-free, norm 2 s^2; <F1 F2>_0 on equal polarisations only'
+    - '(iv) 12 sigma N / s^2 = 1, 3, 12'
+    - '(v) the weight-one pair is trace-free and orthogonal to P (the instance; the rule is the proof''s)'
+    omits: 'the reference configuration p = e0 +- e3 (others by covariance, the proof''s)'
+  check_channel_weights_follow_from_norms_and_traces:
+    kind: sampled
+    clauses:
+    - '(iv) the nine weights by exact integration equal 4 sigma sigma (N N/5 + theta theta/36)/s^4 and (c c + 5 tau tau)/180, at two pairs of couplings'
+    - '(iv) the summed square does not depend on the azimuth; the fermion mixed product integrates to zero'
+    omits: 'seven rational angles fix a polynomial of degree four (degrees five and six checked to vanish); three azimuths; the prefactor pi is formal'
+  check_scalar_curvature_term_changes_only_the_trace_channel:
+    kind: sampled
+    clauses:
+    - '(vi) (a.k) k - Q a = -Q P; the stated field solves the modified equation, with scalar curvature -gamma tr T, at four values of mu and four sources'
+    - '(vi) the interaction is <T1_tf, T2_tf> - gamma tr T1 tr T2/6, equal to B when one source is trace-free'
+    - '(vi) pinned values: gamma = 1, 7/19, -5/19, 1/37 at mu = 0, 1/7, -2/5, 3 and s = 4; the modified bilinear of two scalar sources at each'
+    omits: 'one momentum and four values of mu; uniqueness up to a displacement is the proof''s; the reading of the stored anomaly term as such a term is argued, not checked'
+untouched_premises: {}

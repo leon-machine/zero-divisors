@@ -33,7 +33,7 @@ derivations:
   - standard-model.fits-record-level@6
   - standard-model.chain@8
   - dark-matter.imported-massless-graviton-production-rate@4
-  - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@1
+  - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@2
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex

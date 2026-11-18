@@ -1,7 +1,7 @@
 ---
 id: synthesis.adiabatic-deposit-modulation-is-a-time-shift
 kind: claim
-version: 4
+version: 5
 title: 'A deposit modulation is adiabatic only as a local time shift'
 status: proved
 region: synthesis
@@ -25,7 +25,14 @@ credit:
   role: 'restatement of one quoted bound: the mirror''s gravitational floor under (R), neglected in the deposit law, is below 2.5e-5 and not 1.5e-5'
   version: 4
   source: 'maintainer pass of 2026-11-18 (run 2026-11-18-navigate)'
+- name: Claude Fable 5.2
+  role: 'restatement of one quoted bound: the mirror''s gravitational floor under (R), neglected in the deposit law, is below 3.1e-5 and not 2.5e-5'
+  version: 5
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
 amendments:
+- version: 5
+  kind: restatement
+  defect: 'the hypothesis list quoted the floor neglected in the deposit law as below 2.5e-5 in xi, the bound of the mirror-temperature result at the convention of energy 3T per creation event; at the mean energy per event that bound is 3.1e-5'
 - version: 3
   kind: restatement
   defect: 'the statement read each patch as an unperturbed descended universe on a slice of uniform time, and the proof took that slice flat (psi = 0), without naming the flatness as a hypothesis. A patch has a fourth local datum, its curvature (equivalently the expansion datum of the descent slice), which no stored premise fixes and which the series leaves free; the result sets it to zero. The hypothesis is now named, (LC), local criticality, with a pointer to the result on the descent slice''s constraints. No clause, number or premise changed.'
@@ -36,8 +43,8 @@ review: draft
 derivations:
 - name: main
   uses:
-  - synthesis.mirror-temperature-measures-deposit-under-r@2
-  - dark-matter.stored-asymmetry-charge-not-number@12
+  - synthesis.mirror-temperature-measures-deposit-under-r@3
+  - dark-matter.stored-asymmetry-charge-not-number@13
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.quasi-free-deposit-is-vacuum-plus-shot-noise@5
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@6
@@ -63,6 +70,10 @@ lineage:
   - synthesis.cold-mirror-needs-non-equilibrium-descent
   - dark-matter.p1-single-frozen-point
 extraction:
+  maintainer_pass_2026_11_18_energy:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 4 -> 5, at Leon''s decision of 18 November 2026, 14:04 (adopt the computed mean energy per creation event in the gravitational floor). One quoted bound corrected in the formal level and the proof: the floor neglected in the deposit law is below 3.1e-5 in xi (synthesis.mirror-temperature-measures-deposit-under-r (i), version 3), where 2.5e-5 stood. The floor is still neglected (it changes xi^4 at the helium edge by less than 2e-8) and nothing else changes; no check of this entity uses the bound, so no amendment evidence is named. The two premises restated the same day are repinned (the deposit law (ii) and the charge reading (i) are unchanged).'
   maintainer_pass_2026_11_18:
     by: maintainer-2026-11-18
     date: '2026-11-18'
@@ -114,7 +125,7 @@ extraction:
 ---
 
 ## formal
-Assume Premise (R) through Proposition \claimref{synthesis.mirror-temperature-measures-deposit-under-r}, whose deposit law gives the mirror an energy $\varepsilon T_{\mathrm{desc}}$ per unit of its charge ($\varepsilon$ is that proposition's deposit per unit charge, not the asymmetry $\epsilon$ of $Q = \epsilon N$), thermalised at once, with $\xi^{4} = \tfrac43 Y_{B}\varepsilon$ up to a floor below $2.5 \times 10^{-5}$ in $\xi$; and the charge reading of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}, under which the deposited charge is fixed by the descent's data independently of the tower's temperature and the mirror carries the same baryon charge as this tower. Read a classical modulation of the deposit on scales outside the descent's Hubble length in the separate-universe sense: each patch is an unperturbed descended universe with local data on a slice of uniform time at the deposit, namely the visible bath's temperature $T_{d}$, the charge density $n_{Q}$ (the same in this tower and the mirror) and $\varepsilon$, and the towers do not exchange energy afterwards. The slice is taken flat in each patch: this is Hypothesis (LC), local criticality, of Proposition \claimref{synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit}, a hypothesis of this result and not a premise. A patch has a fourth local datum, its curvature (equivalently the expansion datum of the descent slice, which the series leaves free), and this result sets it to zero by that hypothesis. Write $v = (\delta\ln T_{d}, \delta\ln n_{Q}, \delta\ln\varepsilon)$. Each decoupled population keeps its curvature perturbation outside the Hubble length: $\zeta_{\gamma} = \delta\ln T_{d}$ for the visible radiation, $\zeta_{Q} = \tfrac13\delta\ln n_{Q}$ for every population whose number is fixed by the deposited charge (baryons, the mirror's baryons), $\zeta_{m} = \tfrac14\delta\ln(\varepsilon T_{d}n_{Q})$ for the mirror's radiation; write $S_{Q} = 3(\zeta_{Q} - \zeta_{\gamma})$ and $S_{m} = 3(\zeta_{m} - \zeta_{\gamma})$.
+Assume Premise (R) through Proposition \claimref{synthesis.mirror-temperature-measures-deposit-under-r}, whose deposit law gives the mirror an energy $\varepsilon T_{\mathrm{desc}}$ per unit of its charge ($\varepsilon$ is that proposition's deposit per unit charge, not the asymmetry $\epsilon$ of $Q = \epsilon N$), thermalised at once, with $\xi^{4} = \tfrac43 Y_{B}\varepsilon$ up to a floor below $3.1 \times 10^{-5}$ in $\xi$; and the charge reading of Proposition \claimref{dark-matter.stored-asymmetry-charge-not-number}, under which the deposited charge is fixed by the descent's data independently of the tower's temperature and the mirror carries the same baryon charge as this tower. Read a classical modulation of the deposit on scales outside the descent's Hubble length in the separate-universe sense: each patch is an unperturbed descended universe with local data on a slice of uniform time at the deposit, namely the visible bath's temperature $T_{d}$, the charge density $n_{Q}$ (the same in this tower and the mirror) and $\varepsilon$, and the towers do not exchange energy afterwards. The slice is taken flat in each patch: this is Hypothesis (LC), local criticality, of Proposition \claimref{synthesis.descent-slice-constraints-and-the-three-readings-of-a-white-deposit}, a hypothesis of this result and not a premise. A patch has a fourth local datum, its curvature (equivalently the expansion datum of the descent slice, which the series leaves free), and this result sets it to zero by that hypothesis. Write $v = (\delta\ln T_{d}, \delta\ln n_{Q}, \delta\ln\varepsilon)$. Each decoupled population keeps its curvature perturbation outside the Hubble length: $\zeta_{\gamma} = \delta\ln T_{d}$ for the visible radiation, $\zeta_{Q} = \tfrac13\delta\ln n_{Q}$ for every population whose number is fixed by the deposited charge (baryons, the mirror's baryons), $\zeta_{m} = \tfrac14\delta\ln(\varepsilon T_{d}n_{Q})$ for the mirror's radiation; write $S_{Q} = 3(\zeta_{Q} - \zeta_{\gamma})$ and $S_{m} = 3(\zeta_{m} - \zeta_{\gamma})$.
 \begin{enumerate}
 \item[(i)] \emph{(The adiabatic direction, for the three local data listed; further deposited populations not fixed by the charge would add entropy directions.)} $S_{Q} = \delta\ln n_{Q} - 3\,\delta\ln T_{d} = \delta\ln Y_{B}$ and $S_{m} = \tfrac34(\delta\ln\varepsilon + S_{Q}) = \tfrac34\,\delta\ln\xi^{4}$. The map $v \mapsto (S_{Q}, S_{m})$ has rank $2$ and kernel spanned by $(1, 3, 0)$: a modulation is adiabatic exactly when the charge per unit entropy and the deposit per unit charge are uniform and only $T_{d}$ varies with $n_{Q} \propto T_{d}^{3}$, which is a local shift of the time of the descent; then $\zeta_{\gamma} = \zeta_{Q} = \zeta_{m} = \delta\ln T_{d}$.
 \item[(ii)] \emph{(The three parameters one at a time.)} (a) $T_{d}$ at fixed $n_{Q}$: $S_{Q} = -3\zeta_{\gamma}$ and $S_{m} = -\tfrac94\zeta_{\gamma}$. (b) $\varepsilon$ alone: $\zeta_{\gamma} = \zeta_{Q} = 0$ and $S_{m} = \tfrac34\delta\ln\varepsilon$; the photons, the baryons and every charge carrier have no curvature perturbation of their own outside the Hubble length, and the mode is a pure isocurvature mode of the mirror's radiation (which perturbs the photons only gravitationally, after re-entry), which is below $0.0388$ of the radiation at the deposit under the dark-radiation cap $\xi < 0.448$ and below $1.7 \times 10^{-7}$ of it for a helium mirror. (c) $n_{Q}$ alone: $\zeta_{\gamma} = 0$ and $S_{Q} = \delta\ln n_{Q}$.

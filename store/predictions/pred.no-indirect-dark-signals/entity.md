@@ -92,7 +92,7 @@ derivations:
 - name: basis
   uses:
   - dark-matter.superselected-hence-dark-exactly-stable@5
-  - dark-matter.stored-asymmetry-charge-not-number@12
+  - dark-matter.stored-asymmetry-charge-not-number@13
 ---
 
 ## formal

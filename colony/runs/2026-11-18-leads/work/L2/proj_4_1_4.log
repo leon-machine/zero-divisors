@@ -1,0 +1,6 @@
+n 4 S bound 1 T bound 4 rays 2928 frames 8756 rays of S 40
+rank 2361 rank outside S 2330 projection dimension onto S and w: 10 quadratic forms: 10
+
+real	1m14.907s
+user	0m46.609s
+sys	0m5.229s

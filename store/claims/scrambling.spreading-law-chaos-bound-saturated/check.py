@@ -1,8 +1,15 @@
 """scrambling.spreading-law-chaos-bound-saturated: exact checks of the computable core.
 
-Checked: the boost flow's exponential action on the ladder operators, the threshold e^{kappa t_*} = N, and
-the rate arithmetic. Not checked (no finite exact content): the generic-coupling operator-spreading model
-itself and the Maldacena-Shenker-Stanford bound, which enter as the declared rate-model tier.
+Checked: the boost flow's exponential action on the ladder operators, the threshold e^{kappa t_*} = N, the
+rate arithmetic, and (version 7) the real-time count on affine cells of a horizon generator; these restate
+stored theorems that the entity cites. Not checked (no finite exact content): the law on a window's counted
+modes, which is the estimate the entity records (status conjectured), and the Maldacena-Shenker-Stanford bound.
+(0) Affine cells, in the convention of the stored affine-cell theorem and for the direction of time in which
+    the boost dilates the affine parameter (the stored one-unitary-group theorem writes the same group with the
+    time parameter reversed; in the other direction a cell is compressed): on functions constant on unit
+    cells the dilation by an integer N sends cell j to the cells
+    Nj, ..., Nj + N - 1 with squared amplitude 1/N (norm one); dilations compose; the cell at the edge covers
+    the first N cells and no other cell does; n doublings cover 2^n cells and n ln 2 = ln 2^n.
 (1) In the atom Cl(1,1) (GA), sigma = e+ e- squares to 1 and the rotor R(x) = (x + 1/x)/2 + (x - 1/x)/2 sigma
     (x = e^{lambda/2}, lambda = kappa t the rapidity) has inverse (x + 1/x)/2 - (x - 1/x)/2 sigma, scales
     the ladder operators f = (e+ + e-)/2, f* = (e+ - e-)/2 by x^{-2} and x^2, that is e^{-+kappa t}, and obeys
@@ -203,3 +210,43 @@ def check_rate_is_modular_rate():
         assert beta_over_pi / 2 == 1 / kappa == 4 * M
         T_times_pi = 1 / beta_over_pi                         # pi T = 1/(beta/pi)
         assert kappa == 2 * T_times_pi
+
+
+CELLS = 512                                    # cells kept
+DILATIONS = [2, 3, 4, 6, 12]
+START_CELLS = [0, 1, 5]
+DOUBLINGS = 8
+
+
+def dilate_sq(f, N):
+    """Squared amplitudes after the dilation by the integer N: (D f)(U)^2 = f(U/N)^2 / N on unit cells."""
+    return [f[l // N] / N for l in range(CELLS)]
+
+
+def check_affine_cell_count_is_log_n():
+    premise("synthesis.affine-cell-boost-spreads-without-scrambling")
+    premise("synthesis.boost-evolution-on-generators-is-one-unitary-group")
+    for N in DILATIONS:
+        for j in START_CELLS:
+            f = [F(0)] * CELLS
+            f[j] = F(1)
+            g = dilate_sq(f, N)
+            supp = [l for l in range(CELLS) if g[l] != 0]
+            assert supp == list(range(N * j, N * j + N))            # N consecutive cells
+            assert all(g[l] == F(1, N) for l in supp)               # squared amplitude e^{-kappa t} = 1/N
+            assert sum(g) == 1                                      # norm one
+            assert max(g) == F(1, N) < 1                            # every fixed-cell overlap squared is 0 or 1/N
+            # only the cell at the edge covers the first N cells
+            assert (supp == list(range(N))) == (j == 0)
+            for M in DILATIONS[:3]:
+                assert dilate_sq(g, M) == dilate_sq(f, N * M)       # the flow property: rapidities add
+    # doublings: after n steps of rapidity ln 2 one cell covers 2^n cells, so kappa t = n ln 2 = ln N
+    f = [F(0)] * CELLS
+    f[1] = F(1)
+    for n in range(1, DOUBLINGS + 1):
+        f = dilate_sq(f, 2)
+        assert len([x for x in f if x != 0]) == 2 ** n
+        assert LogVec.ln_int(2) * n == LogVec.ln_int(2 ** n)
+    for M in MASSES:
+        for N in DILATIONS:
+            assert LogVec.ln_int(N) * (4 * M) * (1 / (4 * M)) == LogVec.ln_int(N)    # t_* = 4M ln N, kappa = 1/(4M)

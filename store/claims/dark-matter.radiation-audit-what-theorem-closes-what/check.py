@@ -12,8 +12,9 @@
   the hot deposit xi^4 = 4 (n_B/s) g*/g_d (n_B/s = 0.1413 x 2.74e-8 x 0.02237, g* = 100, g_d = 106.75);
   the floor's xi^8 from the seeding export at the mirror's coefficient 1519247 pi^3/82944000 = 0.568
   (the coefficients proposition's value at the derived production coefficients; pi by Machin, both
-  ends of its bracket), where the floor is 5.2e-4. Mirror channel (7.447 xi^4): more than 1e11 and
-  less than 1e12 below the cap at the floor (5.5e11), and more than 1e8 at the hot deposit; a five-dimensional
+  ends of its bracket) and at the seeding proposition's mean energy per creation event for a copy of
+  the bath's content (7.889 T, its export), where the floor is 6.6e-4. Mirror channel (7.447 xi^4): more
+  than 1e11 and less than 1e12 below the cap at the floor (2.1e11), and more than 1e8 at the hot deposit; a five-dimensional
   tower with three light polarisations (2.2 x 3 xi^4) more than 1e8 at the hot deposit; a nine-vector
   tower (2.202 x 18 xi^4) at the hot deposit is between 10^7.3 and 10^7.4 below the cap (the one case
   below eight, "7.4").
@@ -138,13 +139,15 @@ def check_closing_margins_on_the_interval():
     # the coefficient is 1519247 pi^3/82944000 = 0.56793, the quoted 0.568
     ok = MIRROR_COEFF_OVER_PI3 == F(1519247, 82944000)
     ok = ok and all(rounds_to(c, 56793, -5) and rounds_to(c, 568, -3) for c in (MIRROR_COEFF_LO, MIRROR_COEFF_HI))
-    floor8 = s["xi8_bracket"](MIRROR_COEFF_HI, G_D)[1]
-    # the floor is the quoted 5.2e-4
-    ok = ok and root_rounds_to(floor8, 52, -5, 8)
+    energy = s["EVENT_ENERGY"]["mirror"]
+    ok = ok and all(rounds_to(u, 7889, -3) for u in energy)
+    floor8 = s["xi8_bracket"](MIRROR_COEFF_HI, G_D, energy)[1]
+    # the floor is the quoted 6.6e-4
+    ok = ok and root_rounds_to(floor8, 66, -5, 8)
     # eleven orders at the floor, and not twelve
     ok = ok and (mirror_hi * 10 ** 11) ** 2 * floor8 < CAP ** 2 < (mirror_hi * 10 ** 12) ** 2 * floor8
-    # by hand (decimal evaluation): at the floor the cap exceeds the mirror's 7.447 xi^4 by 5.5138e11
-    ok = ok and root_rounds_to(CAP ** 2 / (mirror_hi ** 2 * floor8), 55138, 7)
+    # by hand (decimal evaluation): at the floor the cap exceeds the mirror's 7.447 xi^4 by 2.0967e11
+    ok = ok and root_rounds_to(CAP ** 2 / (mirror_hi ** 2 * floor8), 20967, 7)
     ok = ok and mirror_hi * hot4 * 10 ** 8 < CAP
     # at the hot deposit: by 1.241301e8 (mirror) and 1.400640e8 (2.2 x 3 xi^4)
     ok = ok and rounds_to(CAP / (mirror_hi * hot4), 1241301, 2)

@@ -433,6 +433,17 @@
       whether the deck action on the limit section is the sheet connection the
       conjecture asserts; or restate the conjecture with that fibre
       ($\mathfrak n$ on tangential directions) and that deck action.
+      (18 November; a reading computed in a working file, not stored and not refereed.) The same negative
+      reading as in op.eigenbundle-class-of-degenerations. The forced double cover is the class of degree one of
+      the plane family $\begin{psmallmatrix} x & y \\ y & -x\end{psmallmatrix}$ pulled back by the ring's normal
+      coordinate $w$: it is the orientation cover of that family's eigenline, and the Kerr-Schild potential is
+      linear in the unit eigenvector. The winding number three is the degree of the field strength in the ring
+      coordinate, and only its parity, the stored holonomy $-1$, is a class of a degenerating form (argued on
+      stored statements); so three is an invariant neither of the cover nor of a completion, and no completion
+      statement applies, the Kerr cometric not degenerating at the ring. This does not decide the item, which
+      concerns the connection's limit algebra, to which the eigenbundle class does not speak. A first step:
+      decide whether the conjecture's ``winding number three as an invariant'' is to be restated as the parity
+      together with the degree of the field.
     - >-
       Answered (10 November;
       \claimref{synthesis.stretched-horizon-count-on-kerr-is-a-multiple-of-the-area-by-construction},
@@ -1321,7 +1332,7 @@
     A quantised rung field on the branch with a level, with its one-loop effective potential
     computed in the formalism and a second doublet consistent with flavour and collider limits, or a
     proof it must be composite.
-  entities: [synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch, synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev, synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus, synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy, synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet]
+  entities: [synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.covariant-rung-coupling-gives-the-normal-pair-tree-level-b-meson-mixing-that-excludes-the-transmutation-branch, synthesis.rung-field-quartics-run-to-strong-coupling-within-a-few-tev-on-the-transmutation-branch, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, synthesis.transmutation-of-the-rung-field-needs-a-charged-pair-near-450-gev, synthesis.rung-field-d-term-action-and-tree-masses-on-the-lift-locus, synthesis.tower-pairing-gap-at-fixed-charges-is-twice-the-quasiparticle-energy, synthesis.rung-field-is-odd-in-the-tower-and-its-modes-carry-no-even-doublet, standard-model.configuration-sector-carries-higgs-doublets-quantum]
   added: 2026-11-01
 
 - id: op.qft-on-gtg-fields
@@ -1442,7 +1453,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "Leon's aim of 22 October (a field theory from the series' own objects that yields Einstein's equations) and the review of 1 November; the twistor-flat, induced-gravity and attachment-transport results and Leon's decision naming the whole-stress clause, 1 November; the Weyl-flat channel, induced-gravity and Krein-quartet results and Leon's decisions of 2 November (the clause recorded as: the trace-free stress is a source)"
+  source: "Leon's aim of 22 October (a field theory from the series' own objects that yields Einstein's equations) and the review of 1 November; the twistor-flat, induced-gravity and attachment-transport results and Leon's decision naming the whole-stress clause, 1 November; the Weyl-flat channel, induced-gravity and Krein-quartet results and Leon's decisions of 2 November (the clause recorded as: the trace-free stress is a source); the null-momentum result accepted 18 November (which stored results test the trace-free channel)"
   statement: >-
     Einstein's equations come from Clausius with (C$_{\mathrm{loc}}$), (N$_{+}$)
     and (Loc) (\claimref{synthesis.einstein-equations-from-c-loc-and-clausius}),
@@ -1511,14 +1522,27 @@
     The doublets' curvature coupling $\xi_{R}$ is an open datum.
   attack:
     - "The state on Weyl-curved fields: a Hadamard state where the Weyl curvature is nonzero, derived or imported, from which the renormalised stress, the source, can be built (shared with op.qft-on-gtg-fields)."
-    - "The trace-free channel: derive from the series' field theory that the trace-free stress is a source, that is, that the gravitational field is varied off the Weyl-flat class, or show that clause independent of the series' premises."
+    - >-
+      The trace-free channel: derive from the series' field theory that the trace-free stress is a source, that
+      is, that the gravitational field is varied off the Weyl-flat class, or show that clause independent of the
+      series' premises. Narrowed (18 November;
+      \claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints},
+      clause (vii)): the operator source of the stored rate result
+      (\claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}, hypothesis
+      (OS)) takes the whole stress map as source, so it assumes the clause at the level of operators and does
+      not derive it. Among the stored results the static coupling and the registered entangling phase do not
+      test the clause: for two bodies at rest the stored bilinear splits as $\tfrac23 - \tfrac16$ between its
+      trace-free and trace parts and equals the trace-only bilinear normalised to Newton's law (proved). The
+      production rate does test it: with a trace-only source a copy of the Standard Model's content would be
+      produced at $15360/1519247$, about one percent, of the stored rate, and massless vectors not at all
+      (computed, given (OS)). Neither a derivation of the clause nor its independence is obtained.
     - "Induced gravity without a fit: a series datum fixing the cut-off in Planck units, together with the doublets' curvature coupling xi_R (an open datum) and the gauge on which the quadratic coefficient depends."
     - "The modular flow of the matter field theory as the source of (N+) and (Loc)."
   success: >-
     Einstein's equations from the field theory's consistency with fewer
     premises than the present routes, or a proof that no algebra of the
     series' objects does it.
-  entities: [synthesis.einstein-equations-from-c-loc-and-clausius, synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel, synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off, synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike, synthesis.twistor-flat-fields-give-nordstrom-not-einstein, synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations, synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians, synthesis.field-space-premise-parallel-frozen-point]
+  entities: [synthesis.einstein-equations-from-c-loc-and-clausius, synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel, synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off, synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike, synthesis.twistor-flat-fields-give-nordstrom-not-einstein, synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations, synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians, synthesis.field-space-premise-parallel-frozen-point, synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints]
   added: 2026-11-01
 
 - id: op.qft-structural-inputs
@@ -1662,7 +1686,7 @@
   success: >-
     A derivation of one structural input in the field theory, or an
     independence proof.
-  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content, synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free, synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac, synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element]
+  entities: [synthesis.interacting-fields-of-causal-perturbation-theory-keep-the-spin-statistics-connection-at-even-ghost-number, synthesis.wedge-reflections-compose-to-the-two-pi-rotor-so-geometric-modular-conjugations-give-interacting-spin-statistics, synthesis.slot-module-makes-the-faces-separate-composites-and-leaves-the-generation-number-free, synthesis.one-doublet-field-is-pure-gauge-on-the-null-lift-locus-so-two-doublets-need-the-exact-constraint, field-theory.imported-standard-field-theory, synthesis.locality-of-the-attached-free-fields-fixes-their-statistics, synthesis.faces-of-one-slot-space-are-not-three-generations-under-one-gauge-group, synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum, synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays, synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content, synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free, synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac, synthesis.order-four-elements-with-square-the-grading-and-the-majorana-element, standard-model.places-outside-state-space, standard-model.configuration-sector-carries-higgs-doublets-quantum]
   added: 2026-11-01
 
 - id: op.curvature-coupling-across-subjects
@@ -1671,7 +1695,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "The capacity and induced-gravity result and the cross-subject review of 9 November; Leon's decision of 9 November to register the question; the curvature-coupling result accepted 10 November and Leon's decisions of 9 November (the gauge parameter fixed at one by clause K1 of the Krein premise; the tree-level value 0 as the stored reading for the rung doublets)"
+  source: "The capacity and induced-gravity result and the cross-subject review of 9 November; Leon's decision of 9 November to register the question; the curvature-coupling result accepted 10 November and Leon's decisions of 9 November (the gauge parameter fixed at one by clause K1 of the Krein premise; the tree-level value 0 as the stored reading for the rung doublets); the heating-coefficients result accepted 18 November"
   statement: >-
     The curvature coupling $\xi_{R}$ of a scalar field enters three stored results in three subjects: the
     induced quadratic (Sakharov) coefficient, $B = 16n_{g} - 48 + N_{S}(1 - 6\xi_{R})$ minimal-scalar units for
@@ -1741,6 +1765,26 @@
     as arithmetic not yet stored are confirmed on review: at three generations $B$ lies between $-66.31$ and
     $-65.08$ over the tilt window, and the zero of $B$ sits at $7.07$ to $7.14$ generations, at no integer. That
     the three stored statements are about different fields is a reading of their texts (argued).
+
+    (18 November.) The heating of the dark towers
+    (\claimref{synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath}). The scalar
+    channels of the stored production rate carry $\tau = (1 - 6\xi_{R})^{2}$, and the couplings enter a summed
+    coefficient only through the product of the trace sums of the bath and of the produced content (proved);
+    vectors and fermions are blind to them. The heating does not constrain the open datum (computed). For the
+    Standard Model's bath and a copy of its content the two stored readings, $0$ and $\tfrac16$, differ by
+    $0.11$ percent in the coefficient and move no stated figure. The tilt window's coupling on every doublet
+    would raise the coefficient about sixfold and leave the four-content clause of the stored Pati-Salam
+    exclusion (\claimref{synthesis.seeding-remainder-excludes-perturbative-pati-salam}) undecided, the crossing
+    of its threshold lying inside the window while at central inputs the threshold is not reached; that case is
+    the one-field reading, which the result of 10 November excludes on other grounds. On the bath of the stored
+    chain between the intermediate and unification scales ($188$ real scalars, $48$ Weyl fields and $21$ vectors
+    under Hypothesis (S)) the bath enters twice, in the coefficient and in the threshold through the expansion
+    rate and the entropy, and the margins of the stored exclusion rise, from above $2.2$ and $1.5$ to about
+    $2.83$ and $1.96$. So the stored exclusion, computed with the Standard Model's bath, is conservative on its
+    own chain, and the curvature couplings of the chain's scalars do not decide it at either stored assignment,
+    $0$ or $\tfrac16$, even for four copies of the chain's own content, a case constructed in that result. Not
+    treated: the tilt window's coupling on the chain's scalars. The chain's scalars above the intermediate scale
+    have no stored coupling.
   attack:
     - >-
       Answered in part (10 November;
@@ -1773,6 +1817,7 @@
     - synthesis.linear-rung-field-has-a-neutral-normal-pair-in-the-scalon-sum
     - synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt
     - synthesis.krein-form-premise-indefinite-inner-product-for-gauge-fields
+    - synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath
   added: "2026-11-09"
 
 - id: op.deposit-state-is-hadamard
@@ -1982,7 +2027,7 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions; the lens-space cohomology result, the imported Atiyah-Hirzebruch filtration and Leon's decisions of 9 November (second pass); the lens-wall rung-count results accepted 10 November (three rungs, the definite side of the L^5(4) walls, the cup-one computation), the imported Steenrod Fact and the tameness edges, by Leon's decisions of 9 November"
+  source: "T04, Conj 7.2 (the wall class); T01, Conj 7.9; seed/SYNTHESIS_GAPS.md, examined and not pursued; the wall results of 26 and 31 October; the lens-space test case settled 31 October; the 9 November results and Leon's decisions; the lens-space cohomology result, the imported Atiyah-Hirzebruch filtration and Leon's decisions of 9 November (second pass); the lens-wall rung-count results accepted 10 November (three rungs, the definite side of the L^5(4) walls, the cup-one computation), the imported Steenrod Fact and the tameness edges, by Leon's decisions of 9 November; the eigenbundle-class result on corank-one walls accepted 18 November and Leon's decision of that day (the wall-class conjecture restated, clauses (a) and (c))"
   statement: >-
     The invariant of tame walls is $W(\Sigma) = (w(\Sigma), w_{1}(\mathcal
     L))$, and the number $k(\Sigma)$ of adjoined hyperbolic planes (rungs) a
@@ -2160,6 +2205,25 @@
     $2$, and clause (c) of Conjecture \claimref{sheaf.wall-class} now refers to a refuted conjecture: its
     rewording around the transfer clause is left with op.eigenbundle-class-of-degenerations. Nothing in that
     result bears on the rung counts of tame walls asked for here.
+
+    (18 November, second pass.) The comparison left with op.eigenbundle-class-of-degenerations is made
+    (\claimref{synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line}, proved). What it says of
+    tame walls: for a compact wall with a product collar under the hypotheses of the one-rung theorem, the class
+    of the cometric's eigenbundles relative across the collar is the dying line, with rank the signature jump
+    and isomorphism class $w_{1}(\mathcal L)$, exactly the information of $W(\Sigma)$ with $w(\Sigma)$ read as
+    the clock mismatch; every two-sided completion that is nondegenerate everywhere, with no condition along the
+    wall, carries the opposite on its exterior forms; and with $k$ rungs on the physical side that gives lower
+    bounds on the two-sided number of rungs of the same form as the stored ones ($w_{1}(\mathcal L)^{j} = 0$ for
+    $j \ge k$; for two rungs, $\mathcal L \oplus \mathcal L$ trivial after adding the negative eigenbundle of
+    the form induced on the wall). What it does not say: anything about the one-sided count $k(\Sigma)$ asked
+    for here (the one-sided necessity clause, the sufficiency clauses, the twisted-rung clause and the
+    lens-space counts do not follow from it, and no new rung count is obtained); whether the two-sided count
+    equals $k(\Sigma)$; the class relative to the whole base; naturality and conservation under wall induction,
+    clauses (b) and (c) of the conjecture. By Leon's decision of 18 November Conjecture
+    \claimref{sheaf.wall-class} is restated: in clause (a) the coarse part is the signature jump $(1,-1)$, whose
+    residue is the clock mismatch $2$, and clause (c) refers to the eigenbundle class of the transfer clause in
+    place of the refuted conjecture of the first paper. It stays conjectured; the comparison across the collar
+    is its proved part.
   attack:
     - >-
       Answered in the negative (9 November) on lens-space walls, given the
@@ -2242,6 +2306,7 @@
     - synthesis.no-quarter-turn-odd-map-from-the-five-sphere-to-four-components
     - synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation
     - synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
+    - synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -2326,7 +2391,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side); the six results on positivity and the Born rule accepted 10 November and Leon's decision 4 of that day (the stored Born account rests on (P) and sharpness in place of the imported envariance argument)"
+  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side); the six results on positivity and the Born rule accepted 10 November and Leon's decision 4 of that day (the stored Born account rests on (P) and sharpness in place of the imported envariance argument); the additive-weights and running-maxima results accepted 18 November"
   statement: >-
     Premise (P), positivity of values (\claimref{synthesis.premise-positivity-of-values}), says that values are
     given by a state: a $k$-linear $\omega$ on the Clifford algebra $\Cl_{k}(p,q)$ over an ordered field with
@@ -2428,6 +2493,32 @@
     or of sharpness on an atom, from the measurement premises; which observables are physical; what fixes the
     null pairs within their isotropic subspaces; and whether non-negative additive weights on the rational
     projectors of size four are linear (a statement of Gleason type over $\Q$), which is undecided.
+
+    (18 November.) Two items are settled. Additive weights
+    (\claimref{synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear}; proved, with four
+    finite exact computations carried by its check): on the algebra of two modes over $\Q$ every function on the
+    self-adjoint idempotents that adds on orthogonal pairs, with values in any rational vector space and with no
+    sign, normalisation or continuity condition, is the restriction of a linear functional. So the question of
+    Gleason type is answered positively and in a stronger form: linearity does not need the sign condition. With
+    non-negativity and normalisation the weights are exactly the restrictions of the states of (P) to the
+    projectors, so of what (P) asserts about projectors only the sign is not implied by additivity. (P) also
+    gives values to elements whose spectral projectors are not rational, the CHSH element among them, and that
+    those values are the linear extension remains part of (P). The stored functional of value $4$ restricts to
+    an additive weight and takes the value $-\tfrac14$ on one atom. On the atoms of rational unit vectors alone
+    the statement fails (a parity weight, proved there; a two-valued one is prior art). No premise about values
+    is used, nothing in it derives (P), and more than two modes are not treated. Prior art, read through
+    abstracts and a summary only and to be confirmed from the papers: Mushtari (2001) poses the question for
+    non-negative measures on the rational orthogonal projections of $\Q^{n}$ as open (his Problem G) and gives a
+    two-valued measure on the unit atoms of $\Q^{4}$; Mushtari (1995, 1998) proves the trace form for signed
+    measures on all rational idempotents, a larger domain from which the statement does not follow. Running
+    maxima
+    (\claimref{synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals};
+    proved): for every $D \ge 1$ the largest pure-state value of denominator at most $D$ is the Pell value whose
+    denominator is the largest Pell denominator not above $D$, attained only there, so the running maxima of the
+    pure-state values are exactly $2, \tfrac{14}{5}, \tfrac{82}{29}, \tfrac{478}{169}, \tfrac{2786}{985}, \dots$
+    for every denominator. This is a statement about pure states at the stored settings; among all state values
+    the Pell values are not the running maxima (stored). The sentence above that linearity is undecided is
+    superseded.
   attack:
     - >-
       Derive (P) from the series' structure, for instance from the record-chain account of measurement
@@ -2470,14 +2561,38 @@
       value $2\sqrt{2}$ of $C$ fix the functional on self-adjoint elements as $4\langle Px\rangle_{0}$, $P$ the saturating idempotent, and
       reality fixes it on all elements (clause (viii)); its reading as a Born rule is argued.
     - >-
-      Decide whether non-negative additive weights on the projectors with rational coefficients of two modes
-      (size four over $\Q$) are restrictions of linear functionals, a statement of Gleason type; two-valued
-      weights are excluded there (\claimref{synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them}), linearity is undecided.
+      Done (18 November;
+      \claimref{synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear}): yes, and
+      without the sign condition. Every weight on the projectors with rational coefficients of two modes that
+      adds on orthogonal projectors is the restriction of a linear functional; with non-negativity and
+      normalisation it is the restriction of exactly one state of (P). The item as posed: decide whether
+      non-negative additive weights on the projectors with rational coefficients of two modes (size four over
+      $\Q$) are restrictions of linear functionals, a statement of Gleason type; two-valued weights are excluded
+      there
+      (\claimref{synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them}).
+      Not done: more than two modes; other ordered fields.
     - >-
-      Decide whether the pure-state values of the sector that meet the denominator law with equality are the
-      running maxima among pure-state values for every denominator. Computed: for denominators up to $400$ in
-      the stored check and below $1200$ in a separate computation, the running maxima are exactly the Pell
-      values; not proved.
+      Done (18 November;
+      \claimref{synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals}):
+      the Pell values are the running maxima of the pure-state values for every denominator (proved). The item
+      as posed: decide whether the pure-state values of the sector that meet the denominator law with equality
+      are the running maxima among pure-state values for every denominator; this had been computed for
+      denominators up to $400$ in the stored check and below $1200$ in a separate computation.
+    - >-
+      New (18 November). Which projectors can label a record: every projector with rational coefficients that is
+      self-adjoint for the split, or only products of local outcomes? On the first reading, with weights that
+      are non-negative, do not depend on the context and add on orthogonal projectors, the weights on two modes
+      are the restriction of one state of (P), by the result on additive weights, and what (P) still assumes
+      there is the value of elements whose spectral projectors are not rational. On the second, (P) is not fixed
+      by such weights on two modes, by the stored one-parameter family
+      (\claimref{synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values}). The choice
+      is a reading of the residual postulate and is Leon's; it is tied to the parity item above, since the
+      theorem uses projectors that are odd under the total parity (argued). With it: more than two modes, where
+      a first step is to show that any two rational vectors of $\Q^{2^{\ell}}$ lie in a four-dimensional
+      rational subspace similar to the standard one, which needs an imported fact on the representation of
+      positive rationals by positive definite rational forms of dimension at least four (named as the candidate,
+      not checked); and the prior art, to be read before the result is described as new: Mushtari, Lobachevskii
+      J. Math. 9 (2001) 47, so far read through a summary only.
   success: >-
     (P) derived from the series' structure, or shown independent of the full premise set; with the split that
     defines the adjoint traced to a stored premise (or shown to be a further datum), and the status of
@@ -2492,6 +2607,8 @@
     - synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values
     - synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables
     - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them
+    - synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear
+    - synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals
   added: "2026-11-10"
 
 # ---------------------------------------------------------------- completion
@@ -2502,22 +2619,23 @@
   kind: research
   difficulty: substantial
   status: reformulated
-  source: "T16, successor problems (1) and (2); maintainer decision of 23 October; restated by Leon's decision of 26 October after the tube-point results; decided for one-horizon fields under the costed tube-point clause adopted by Leon's decision of 31 October"
+  source: "T16, successor problems (1) and (2); maintainer decision of 23 October; restated by Leon's decision of 26 October after the tube-point results; decided for one-horizon fields under the costed tube-point clause adopted by Leon's decision of 31 October; the black-hole tube-point result and Leon's decision of 18 November (the clause restated: the rotations commuting with the wedge's boost, the boost being the horizon's Killing flow; silent on black-hole fields)"
   statement: >-
-    A wedge's boost-KMS data together with the ascent pair fix the compatible
-    tube point up to one scale $\rho$, and the capacity a state reads is the
-    same at every tube point. Under the adopted costed clause, that a state's
-    tube point is invariant under the symmetries of the gravitational field
-    that commute with its wedge's boost, $\rho$ is decided for fields with one
-    horizon: in the de Sitter field $\rho^{2} = 12/\Lambda$, and for
-    $\Lambda \le 0$ it stays free (see below). Open: (a) fields with more than
-    one horizon, where the clause does not say which horizon's boost is the
-    observer's: decide whether an observer's tube point is assigned per
-    observer or per horizon, for example in a static region of
-    Schwarzschild-de Sitter bounded by a black-hole and a cosmological horizon
-    with $\kappa_{b}/\kappa_{c} = 8/5$; (b) the Schwarzschild field, where the
-    clause is not computed. Or show that the present premises leave $\rho$
-    free there.
+    Restated 18 November, after the black-hole result and Leon's decision of that day. A wedge's boost-KMS data
+    together with the ascent pair fix the compatible tube point up to one scale $\rho$, and the capacity a state
+    reads is the same at every tube point. The adopted costed clause, as restated, asks that a state's tube
+    point be invariant under the rotations commuting with its wedge's boost, the boost being a positive multiple
+    of the horizon's Killing flow. In the de Sitter field it gives $\rho^{2} = 12/\Lambda$, and that result
+    stands on this reading. For $\Lambda \le 0$ no tube point is fixed and $\rho$ stays free, as before. On the
+    Schwarzschild exterior and on the static region of Schwarzschild-de Sitter no observer meets the condition:
+    the clause is silent there and $\rho$ stays free. So the two cases that were posed, the Schwarzschild field
+    and a field with two horizons in the form of the static region of Schwarzschild-de Sitter, are answered
+    under the present premises: $\rho$ is a free datum there, and the choice between a tube point per observer
+    and per horizon is not reached. Other fields with more than one horizon are not computed. What is left:
+    whether a further premise is to fix $\rho$ on those fields. The candidates that coincide with the clause in
+    the de Sitter field, the largest normalised norm of the boost generator and free fall, are one condition on
+    these fields; they select no observer on Schwarzschild and one radius, $r_{0}^{3} = 3M/\Lambda$, in
+    Schwarzschild-de Sitter, with one scale per horizon. They are not adopted.
   why: >-
     The vacuum-line reading of spacetime and the measurement account of T16
     both rest on one state reading the right capacity at one tube point; with
@@ -2566,28 +2684,66 @@
     Killing norm normalised by $\kappa = 1/4M$ reaches $1$ only at infinity,
     so the analogue of the norm rule selects the asymptotic observer (argued,
     not computed).
+
+    (18 November.) The black-hole fields
+    (\claimref{synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent},
+    proved). The boost itself fixes no compatible tube point in any field, so the condition is read for the
+    rotations among the symmetries commuting with the boost. Every $\so(3)$ of bivectors commuting with the
+    boost is the transverse rotation algebra of one de Sitter tractor, and a compatible tube point is fixed by
+    it exactly when its observer is a fixed point of those rotations. In a gauge in which the wedge's boost
+    generates a positive multiple of the horizon's Killing flow and the rotations act by bivectors, a region
+    whose rotation orbits are two-spheres has no such observer: on the Schwarzschild exterior, and on the static
+    region of Schwarzschild-de Sitter for either horizon, the condition is met by no observer. The clause as
+    first worded asked only that the boost generate a symmetry. In a gauge twisted by a rotation about one axis
+    that grows with the rapidity the boost generates the horizon's flow plus a rotation, and the observers on
+    the axis meet the condition at every scale, in these fields (given that they have no symmetries beyond the
+    horizon's flow and the rotations, which is cited from memory) and in the de Sitter field too; so the outcome
+    depended on a reading that the wording did not fix. Under a third reading, in which only symmetries acting
+    by bivectors count, the condition can be made empty (argued, not computed). The norm and free-fall
+    candidates are one condition, a stationary lapse, $f' = 0$: it has no solution on Schwarzschild, where the
+    normalised norm increases to its supremum $1/\kappa$ and attains it at no radius (the store had argued this
+    without computing it); in Schwarzschild-de Sitter it holds at one radius $r_{0} = (3M/\Lambda)^{1/3}$, the
+    same for both horizons, where the two horizons give scales in the ratio $\kappa_{b}/\kappa_{c}$ ($\tfrac85$
+    in the stored sample), neither equal to the inverse surface gravity. Leon's decision of 18 November: the
+    clause is restated to the first reading, invariance under the rotations commuting with the wedge's boost,
+    the boost being a positive multiple of the horizon's Killing flow
+    (\claimref{synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries}, as restated); the de
+    Sitter result stands on that reading; on the Schwarzschild exterior and on the static region of
+    Schwarzschild-de Sitter no observer meets the condition, the clause is silent there, and $\rho$ stays free.
+    The sentences above that the clause decides fields with one horizon are superseded: Schwarzschild is a field
+    with one horizon that the clause does not decide.
   attack:
     - >-
-      Two horizons: compute, in Schwarzschild-de Sitter, the tube points the
-      clause fixes for each horizon's wedge, and decide between assigning the
-      observer's tube point per observer and per horizon (for example by the
-      Tolman reading, under which the selected observer is the coldest and the
-      free-fall one), or show that the premises leave the choice free.
+      Answered (18 November;
+      \claimref{synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent},
+      clause (vi), with Leon's decision of that day). The item asked to compute, in Schwarzschild-de Sitter, the
+      tube points the clause fixes for each horizon's wedge, and to decide between assigning the observer's tube
+      point per observer and per horizon, or to show that the premises leave the choice free. Under the clause
+      as restated no observer of the static region has a tube point fixed by the rotations, for either horizon:
+      the clause is silent, $\rho$ stays free, and the choice between per observer and per horizon is not
+      reached. What remains: the norm and free-fall candidates select the one radius $r_{0}^{3} = 3M/\Lambda$,
+      the same for both horizons, with one scale per horizon in the ratio of the surface gravities (a foot per
+      observer and a scale per horizon); by the Tolman relation, cited from memory, that observer is also the
+      coldest for each horizon. They are not adopted, and adopting them would be a further premise.
     - >-
-      Schwarzschild: compute the compatible tube points fixed by the field's
-      symmetries commuting with the horizon's boost (time translation and
-      rotations) in a gauge adapted to the tube-point machinery, and test
-      whether a finite $\rho$ is selected.
+      Answered (18 November; the same result, clause (v)). The item asked to compute the compatible tube points
+      fixed by the Schwarzschild field's symmetries commuting with the horizon's boost (time translation and
+      rotations) in a gauge adapted to the tube-point machinery, and to test whether a finite $\rho$ is
+      selected. In every gauge adapted to the horizon's flow no observer of the exterior has a tube point fixed
+      by the rotations, and neither the clause nor the norm and free-fall candidates select a finite scale: each
+      is met only in the limit $r \to \infty$. Under the clause as restated $\rho$ is free on the Schwarzschild
+      exterior.
     - >-
       Derive the compatibility condition (unitarity of the Wick-rotated boost)
       as a property of the continuum I-state rather than as the
       finite-dimensional image of the Osterwalder-Schrader and
       Bisognano-Wichmann structure.
   success: >-
-    A premise of the series, or a derivation, fixing the observer's tube point
-    in fields with more than one horizon and in the Schwarzschild field, or a
-    proof that $\rho$ is a free datum of the state there under the present
-    premises.
+    Restated 18 November. Under the present premises $\rho$ is a free datum of the state on the Schwarzschild
+    exterior and on the static region of Schwarzschild-de Sitter, which is one of the three outcomes first asked
+    for. What would close the problem: a decision, with its grounds, on whether a further premise fixes the tube
+    point on black-hole fields (the norm and free-fall rule is the stored candidate), or a derivation of such a
+    rule; and the compatibility condition derived as a property of the continuum I-state.
   entities:
     - synthesis.de-sitter-field-fixes-the-observer-tube-point
     - synthesis.tube-point-clause-invariant-under-boost-commuting-symmetries
@@ -2597,6 +2753,7 @@
     - synthesis.positive-structure-and-natural-scale-actions-do-not-select-the-almost-einstein-scale
     - one-relation.two-capacities-three-consequences
     - one-relation.spacetime-manifold-vacuum-lines
+    - synthesis.tube-point-clause-on-black-hole-fields-empty-for-the-horizon-flow-and-reading-dependent
   added: "2026-10-22"
 
 
@@ -3022,16 +3179,19 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October; the 9 November results and Leon's decisions; the spin-2 horizon-channel result and Leon's decisions of 9 November (second pass)"
+  source: "T07, successor problems (2) and (6); maintainer decision of 23 October (array offset); the light-ray result and Leon's count-unit decision, 26 October; the slot-module light-ray result, 31 October; the 9 November results and Leon's decisions; the spin-2 horizon-channel result and Leon's decisions of 9 November (second pass); the even-parity spin-2 result accepted 18 November"
   statement: >-
     Under Premise (Q) version 3 one registered boundary mode carries two
     s-wave arrays. With the count taken per light ray (decision of 26
     October), the arrays of a light ray are the complex canonical channels of
     its spinor fields, one per chirality. The counted content is now known:
     the Weyl components per light ray, sixteen per generation (see below).
-    What is open is joint J3: convert the helicity lift from an assembly to a
-    theorem by proving the identification of each $(\omega, \ell, m, s)$
-    channel with a two-dimensional mode, at the horizon.
+    What is open is joint J3: convert the helicity lift from an assembly to a theorem. Its channel-reduction
+    part, the identification of each $(\omega, \ell, m, s)$ channel with a two-dimensional mode at the horizon,
+    is derived for spins $0$, $\tfrac12$ and $1$ and, since 18 November, for both parities of spin $2$ on
+    oscillating channels with $\ell \ge 2$, in the static frame and given facts of harmonic analysis that are
+    cited from memory. What remains of J3: the current-boson identification and the partial-wave lift, which
+    stay premise, and those cited facts.
   why: >-
     The channel count per registered mode fixes how the boundary modes map
     onto the matter fields that radiate, and J3 is the step that turns the
@@ -3129,24 +3289,48 @@
     static (Killing) frame and its null coordinates; in Kruskal-type coordinates the coupling at the horizon
     is nonzero (stated in both horizon-channel results), while the reduction of each channel to a field in
     two dimensions does not depend on the frame.
+
+    (18 November.) Spin $2$, even parity, is proved in both directions
+    (\claimref{synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations}). The
+    first-order Ricci vectors of the even-parity field in the Regge-Wheeler gauge are computed in closed form as
+    identities in the radius and the polar angle together, for an arbitrary angular function; the same
+    computation makes the stored odd-parity closed forms identities in both variables, so the degree bound
+    argued there is no longer needed. From any function $\Phi$ a field is written down whose vacuum equations
+    are explicit differential operators applied to the Zerilli operator on $\Phi$, with Zerilli-Moncrief
+    function $(\lambda + 1)\Phi$: every solution of the Zerilli equation is the master function of a vacuum
+    solution, with no condition on its time dependence. That is the cited fact (C3) of
+    \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}, now proved.
+    On a channel with $\partial_{t}^{2} = -\omega^{2}$, $\omega^{2} \ne 0$, the vacuum equations amount to a
+    first-order system and one algebraic relation, they imply the Zerilli equation identically, and the field is
+    the one rebuilt from its own master function; so the master function is a bijection between the even-parity
+    vacuum solutions of the channel in the Regge-Wheeler gauge and the solutions of the Zerilli equation in the
+    channel. Hence each even-parity channel with $\ell \ge 2$ and real nonzero frequency is a two-dimensional
+    mode at the horizon in the static frame, as the odd-parity ones are, given the cited facts (C1)
+    (completeness of the tensor harmonics, and that the axisymmetric representative suffices) and (C2)
+    (reachability of the Regge-Wheeler gauge), which stay cited from memory. The sample-point clause (3) of the
+    stored result is superseded on oscillating channels only: off them the implication from the vacuum equations
+    to the Zerilli equation stays as stored, computed at sample points. With this the channel-reduction clause
+    of J3 (\claimref{hawking.joint-j3-s-wave-reduction}) is no longer needed for the even-parity channels of
+    spin $2$ on oscillating channels, once (C1) and (C2) are granted; the current-boson identification and the
+    partial-wave lift are not derived and stay premise. Not attempted: $\ell = 0, 1$, charts regular across the
+    horizon, and the identification of the partial waves from the fuzzy sphere.
   attack:
     - >-
-      Spin $2$, what remains (restated 9 November, second pass; the
+      Spin $2$, what remains (restated 18 November; the even-parity reduction is proved in both directions,
+      \claimref{synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations}, the
       odd-parity reduction is derived,
-      \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional},
-      and the reductions for spins $0$, $\tfrac12$ and $1$,
-      \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}):
-      the even-parity converse, that every solution of the Zerilli equation
-      in an oscillating channel is the master function of a vacuum solution,
-      with the implication proved identically and not only at sample points,
-      which would take the channel-reduction clause out of J3; the
-      harmonic-analysis inputs cited from memory (completeness of tensor
-      harmonics and reachability of the Regge-Wheeler gauge for spin $2$,
-      completeness of spherical and spinor harmonics and the exact/co-exact
-      split of one-forms on $S^{2}$ for the lower spins) and a proof of the
-      degree bound of the odd-parity identity; the cases $\ell = 0, 1$
-      (changes of mass, spin and gauge); and the statement in charts
-      regular across the horizon. The current-boson identification and the
+      \claimref{synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional}, and the
+      reductions for spins $0$, $\tfrac12$ and $1$,
+      \claimref{synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional}). Done since
+      the restatement of 9 November: the even-parity converse, that every solution of the Zerilli equation in an
+      oscillating channel is the master function of a vacuum solution, with the implication from the vacuum
+      equations proved identically on oscillating channels; and the degree bound of the odd-parity identity,
+      which is no longer needed. What remains: the harmonic-analysis inputs cited from memory, to be derived or
+      imported as Facts ((C1) completeness of tensor harmonics and (C2) reachability of the Regge-Wheeler gauge
+      for spin $2$; completeness of spherical and spinor harmonics and the exact/co-exact split of one-forms on
+      $S^{2}$ for the lower spins); the implication from the vacuum equations to the Zerilli equation off
+      oscillating channels, which stays at sample points; the cases $\ell = 0, 1$ (changes of mass, spin and
+      gauge); and the statement in charts regular across the horizon. The current-boson identification and the
       partial-wave lift stay premise.
     - >-
       Derive the partial-wave identification from the fuzzy sphere of the
@@ -3164,6 +3348,7 @@
     - singularity.q-joint-quasi-freeness-s-wave
     - synthesis.horizon-channels-of-scalar-dirac-and-maxwell-fields-are-two-dimensional
     - synthesis.horizon-channels-of-the-linearised-gravitational-field-are-two-dimensional
+    - synthesis.even-parity-gravity-channels-zerilli-equation-equivalent-to-the-vacuum-equations
   added: "2026-10-22"
 
 - id: op.residue-killing-weights
@@ -3610,6 +3795,12 @@
     (\claimref{synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist}, clause (iv);
     \claimref{synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two}, clause (v)); with parity-even
     observables one mode on each side gives at most $2$.
+
+    (18 November.) The return delay $T_{\mathrm{return}} \approx 4M\ln S$
+    (\claimref{scrambling.return-delay-scrambling-log-recovered}) is listed here as the timing half of the
+    question of how information returns: it stays conjectured, an estimate in modular time with no proved core
+    as a statement about the return of information, since the stored theorems that the spreading law rests on
+    (\claimref{scrambling.spreading-law-chaos-bound-saturated}) do not reach it.
   attack:
     - >-
       Compute the Renyi comparison at nonzero weight: the island side needs
@@ -3641,6 +3832,7 @@
     - synthesis.mode-split-of-the-clifford-algebra-and-its-klein-twist-to-the-tensor-product
     - synthesis.finite-normaliser-averages-leave-the-haar-moments-at-order-four-and-on-a-parity-sector
     - synthesis.imported-haar-moments-of-random-pure-state
+    - scrambling.return-delay-scrambling-log-recovered
   added: '2026-10-22'
 
 # ---------------------------------------------------------------- dark energy
@@ -3899,6 +4091,7 @@
   - standard-model.no-spectator-slots
   - standard-model.quarks-leptons-two-level-fermion-content
   - synthesis.joint-clifford-clause-is-an-instance-of-the-signed-direction-postulates
+  - lepton.what-self-conjugacy-says-about-thirteenth
   added: '2026-10-22'
 
 - id: op.pair-sector-current
@@ -4309,6 +4502,11 @@
       anomaly statement and on a gauged $\omega$, and no stored result puts fields of the slot module on a
       six-dimensional space or identifies the wall's order-four element with $\omega$. That a reading without
       the Majorana term is excluded by a stored premise is not shown.
+      (18 November: a link from this count to the eigenbundle class of op.eigenbundle-class-of-degenerations
+      through real K-theory was tested and is a resemblance, not a derivation: the eigenbundle class of the
+      projective wall $\mathbb{RP}^{5}$ has order eight, order sixteen first occurring on $\mathbb{RP}^{8}$
+      (computed, not stored), while the sixteen here is the stored $\tfrac{1}{16} = \tfrac12 \cdot \tfrac18$,
+      the eight a spinor count in six dimensions and not the order of that class (argued).)
     - >-
       The one live question: decide whether $\omega$ is gauged at a stage whose continuous gauge group does not
       contain it, without the Majorana element. It is a question of a premise, not a computation: with such a
@@ -4988,7 +5186,7 @@
   kind: research
   difficulty: substantial
   status: partial
-  source: "Leon's decisions of 10 November 2026 (the graviton does not exist in the series; flag the imported rate now and derive it later; the position stated in the conventions); the search of the store for the word made the same day"
+  source: "Leon's decisions of 10 November 2026 (the graviton does not exist in the series; flag the imported rate now and derive it later; the position stated in the conventions); the search of the store for the word made the same day; the operator-source rate result of 18 November 2026 and, accepted later that day, the rotation-weights result (no trace part of the fermion channel from the stored trace statement)"
   statement: >-
     The store imports the rate $R(T) = \alpha\,T^{8}/\bar{M}_{P}^{4}$ at which the Standard-Model plasma
     produces a species that couples to it through gravity alone
@@ -5082,6 +5280,28 @@
     kept as a hypothesis of the result, not a stored premise (Leon, 18 November). Not decided by the result:
     the field at null momentum, which the rate does not probe; that is op.gravitational-field-at-null-momentum,
     and the burst baseline (the term $g$) follows it.
+
+    (18 November, second pass.) The trace part of the fermion channel at the next order
+    (\claimref{synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight}).
+    The tree-level source of a particle and antiparticle of one chiral fermion has rotation weight one about the
+    pair's axis, and a source of nonzero weight has no trace (proved; the rule is elementary and all its content
+    is the hypothesis on the weight). A term of the field equation built from the scalar curvature changes only
+    the product of two traces (proved), and the stored trace-anomaly statement takes that form at first order
+    (argued). So the part of the next-order correction that comes from the stored trace statement gives the
+    fermion channel, and the vector channel, no trace part; its first effect is on the trace term of scalars to
+    scalars, at relative order $s/\bar{M}_{P}^{2}$, which is third order in $G$ in the rate ($G^{3}T^{10}$), an
+    order that no stored result uses (argued). The fermion coefficient is not thereby unchanged at that order:
+    the trace-free part of the vacuum's response rescales every spin-two weight by one common factor and is not
+    computed. That the two-quantum element of the stress of an interacting theory keeps weight one is argued
+    from the helicity of the state, not proved. The same decomposition gives the nine channel weights
+    $(\pi/180)(c_{i}c_{j} + 5\tau_{i}\tau_{j})$ from one norm and one trace per source, with no angular
+    integration, in agreement with the stored weights (proved). The burst baseline: the ratio under each option
+    is computed
+    (\claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints},
+    clause (viii)). If the hole does not emit into the two free directions the ratio against the standard
+    expectation is $(2 + o)/(1 + g)$; the value $D = 2 + o$ given above for $g = 0$ is the ratio to a baseline
+    from which the term has also been removed, which is not the standard expectation. Which option holds is with
+    op.gravitational-field-at-null-momentum.
   attack:
     - >-
       First computation: the operator source beyond the static limit. Replace the Newtonian potential of the
@@ -5105,6 +5325,10 @@
       The burst baseline: decide from the result whether emission into the helicity-2 channels of the
       classical field by an evaporating hole is kept ($g > 0$) or dropped ($g = 0$, $D = 2 + o$), and restate
       the dimmed-burst result accordingly. No change before that.
+      (18 November: the ratio under each option is computed; with no emission into the two free directions it is
+      $(2 + o)/(1 + g)$ against the standard expectation, and $D = 2 + o$ only against a baseline from which the
+      term has also been removed. The decision between the options is with
+      op.gravitational-field-at-null-momentum, item 4.)
     - >-
       Work through the note's groups (e) and (f): for each entity say whether its statement survives with the
       classical field alone, in the three readings of the conventions, or needs restating.
@@ -5113,7 +5337,7 @@
     temperature law and coefficients compared with the imported ones; or a proof that it vanishes, with the
     temperature floor and the two predictions restated. In either case the flag on the imported Fact is
     replaced by a citation of the result.
-  entities: [dark-matter.imported-massless-graviton-production-rate, dark-matter.seeding-gravity-floor-dark-towers-temperature, dark-matter.coefficients-floors-they-give-what-gravity, pred.no-dark-radiation, pred.no-indirect-dark-signals, pred.dimmed-evaporation-bursts, field-theory.operator-newtonian-coupling, note.synthesis.where-stored-text-names-a-graviton, synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation]
+  entities: [dark-matter.imported-massless-graviton-production-rate, dark-matter.seeding-gravity-floor-dark-towers-temperature, dark-matter.coefficients-floors-they-give-what-gravity, pred.no-dark-radiation, pred.no-indirect-dark-signals, pred.dimmed-evaporation-bursts, field-theory.operator-newtonian-coupling, note.synthesis.where-stored-text-names-a-graviton, synthesis.gravitational-pair-production-from-the-operator-source-at-first-order, synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation, synthesis.rotation-weights-of-pair-sources-fix-the-channel-weights-and-give-no-trace-at-nonzero-weight]
   added: 2026-11-10
 
 - id: op.window-p3
@@ -5268,7 +5492,7 @@
     The stored asymmetry is a charge, not a number, and the deposit energy sets the temperature above the
     floor (\claimref{dark-matter.stored-asymmetry-charge-not-number}); P1 is the single frozen point
     (\claimref{dark-matter.p1-single-frozen-point}). Under Premise (R) the mirror's gravitational floor is
-    below $2.5 \times 10^{-5}$ (restated 18 November; $1.5 \times 10^{-5}$ before), so its temperature measures only the deposit per unit charge, $\xi^{4} =
+    below $3.1 \times 10^{-5}$ (restated 18 November; $1.5 \times 10^{-5}$ before), so its temperature measures only the deposit per unit charge, $\xi^{4} =
     \tfrac43 Y_{B}\varepsilon$, and the reheating temperature drops out; a helium mirror needs $0.70 \le
     \varepsilon \le 1.4 \times 10^{3}$ (\claimref{synthesis.mirror-temperature-measures-deposit-under-r}). A
     representative untuned Pati-Salam fit under (EW) puts the lightest heavy neutrino below $7.3 \times
@@ -5579,8 +5803,9 @@
       (d) The mirror: with $B - L$ the inherited charge, the copy theorem equates the two towers' $B - L$, and
       the mirror share $f_{2} = 1$, an equality of baryon number, needs in addition that the mirror's ratio of
       baryon number to $B - L$ equals this tower's. That is not shown: $c$ is a linear-response number for a hot
-      plasma, and the stored computation finds the mirror's plasma degenerate from the moment it is seeded at
-      the floor. Compute the mirror's ratio over the stored interval of its temperature, or state the premise
+      plasma, and the stored computation finds the mirror's plasma degenerate at the floor, with a chemical
+      potential about $3.5$ times its temperature at seeding at the present floor ($18$ to $23$ at the floor first
+      computed), outside linear response in either case. Compute the mirror's ratio over the stored interval of its temperature, or state the premise
       under which the two ratios agree; until then $f_{2} = 1$ is conditional, and the stored results that state
       it carry that condition.
     - >-
@@ -5977,17 +6202,23 @@
   area: walls
   kind: research
   difficulty: substantial
-  status: open
-  source: "The decision of Conjecture 7.9 of the first paper and Leon's decision of 18 November 2026 (the conjecture refuted as stated; this problem for what is still open)"
+  status: reformulated
+  source: "The decision of Conjecture 7.9 of the first paper and Leon's decision of 18 November 2026 (the conjecture refuted as stated; this problem for what is still open); the three results on the class accepted 18 November (codimension three, sufficiency over a ball, corank-one walls) and Leon's decisions of that day (the wall-class conjecture restated around the transfer class; the periodicity theorem not imported)"
   statement: >-
-    For a continuous family $G$ of symmetric forms degenerating on a closed set $\Sigma$, every completion that
-    is nondegenerate everywhere carries on its complement, outside a neighbourhood $U$ of $\Sigma$, the opposite of
-    the class of the positive and negative eigenbundles of $G$ relative to the base
-    (\claimref{synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump}, clause (4)). Its part
-    of degree zero is the integer signature jump; a part of degree one is shown by one example. Determine this
-    class in the store's own terms: say when its vanishing is sufficient for a completion with one fixed
-    exterior form, classify it for an isolated degeneration in codimension $m$, and relate it to the wall class
-    and the rung count of tame walls.
+    Restated 18 November. For a continuous family $G$ of symmetric forms degenerating on a closed set $\Sigma$,
+    every completion that is nondegenerate everywhere carries on its complement, outside a neighbourhood $U$ of
+    $\Sigma$, the opposite of the class of the positive and negative eigenbundles of $G$ relative to the base
+    (\claimref{synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump}, clause (4)). Three
+    of the four questions first asked are answered. For a degeneration confined to a ball of $\R^{m}$, a
+    completion with a fixed exterior form exists exactly when the positive eigenbundle is stably trivial on the
+    bounding sphere, flat directions being added. For the position vector in codimension three on the least
+    module the class has order two. Across the collar of a compact corank-one wall the class is the dying line,
+    with exactly the information of the stored pair $W(\Sigma)$. What is open: the class of an isolated
+    degeneration in codimension five and beyond, where the store cites the classical periodicity and proves
+    nothing, and whether the stored clock of period eight governs it; the class relative to the whole base,
+    which can carry information from the exterior that the comparison across a collar does not see; and whether
+    the two-sided number of rungs of a wall, bounded below through the transfer, equals the stored one-sided
+    count $k(\Sigma)$.
   why: >-
     It is what remains of the conservation conjecture of the first paper after its first wording was refuted:
     the candidate for the invariant that conjecture asked for. Multiplication by the position vector, the family that fails
@@ -6006,28 +6237,110 @@
     completion with a fixed exterior form exists (the periodicity theorem of Bott in the form of Atiyah, Bott
     and Shapiro, cited from memory in the result and not imported); that vanishing of the class suffices.
     The obstruction of the plane example depends on $U$: it needs a loop around the origin in the exterior.
+
+    (18 November, second pass.) Three results, all proved. Codimension three
+    (\claimref{synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two}): for the
+    position vector of $\R^{3}$ on $k$ copies of the least module of $\Cl(3,0)$ the clutching function of the
+    positive eigenbundle over the two-sphere is one full turn in $k$ planes, and its lift to rotors ends at
+    $(-1)^{k}$. For $k$ odd the eigenbundles are not stably trivial and no completion with a fixed exterior
+    form, with any added directions, is nondegenerate everywhere; for $k$ even the fourth generator of
+    $\Cl(4,0)$ repairs the family with no added direction. So in the group of stable classes of real vector
+    bundles over the two-sphere the class on the least module has order exactly two, and it is a class of degree
+    two, not seen on any circle. No characteristic class is imported: the proof lifts a contracted loop of
+    rotations through the stored double cover (its clause (L)). With the stored cases this proves that the
+    degeneration cannot be removed on the least modules for $m = 1, 2, 3$; the residues $m \equiv 1, 2, 3, 5
+    \pmod 8$ beyond $m = 3$ stay cited (the periodicity theorem, from memory; by the decision of 18 November it
+    is not imported). Sufficiency
+    (\claimref{synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial}): for a
+    family over $\R^{m}$ whose degeneration set lies in an open ball, a completion with some fixed exterior
+    form, standard outside the ball and nondegenerate everywhere, exists if and only if the positive eigenbundle
+    is stably trivial on the bounding sphere (the negative one then is too). For such families the transfer
+    clause is an equivalence and the stable class on the sphere is the whole obstruction. The completion is
+    explicit and continuous, does not restrict to the family inside the ball, and uses a number of added
+    directions that is an upper bound, not claimed least. The added directions are needed: for
+    $\begin{psmallmatrix} x^{2} - y^{2} & 2xy \\ 2xy & y^{2} - x^{2}\end{psmallmatrix}$ the eigenlines are
+    trivial on every circle about the origin, no completion on the same bundle of rank two exists, and one added
+    direction gives one; so triviality of the eigenbundles together with those of a given exterior form does not
+    suffice for that form. Not treated: bases other than $\R^{m}$, neighbourhoods that are not balls (a ring
+    with a solid torus around it), completions that restrict to the family inside the ball. Corank-one walls
+    (\claimref{synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line}): for a compact wall with a
+    product collar, corank one on the wall and signatures $(p,q)$ and $(p-1,q+1)$ on the two sides (every wall
+    under the hypotheses of the one-rung theorem, with the collar thin enough and given the homotopy invariance
+    of bundles, which is cited from memory; the first-order clause of tameness and smoothness are not used), the
+    positive eigenbundle loses and the negative one gains exactly the dying line $\mathcal L$ across the wall.
+    Relative across the collar the class is $\mathcal L$: its rank is the signature jump, whose residue is the
+    clock mismatch $2$, and its isomorphism class is $w_{1}(\mathcal L)$, so it carries exactly the information
+    of the stored pair $W(\Sigma)$ with $w(\Sigma)$ read as the clock mismatch, neither finer nor coarser. Every
+    two-sided completion that is nondegenerate everywhere, with no condition along the wall, carries the
+    opposite on its exterior forms; with $k$ hyperbolic planes on the physical side the far form's negative
+    eigenbundle $N$, of rank $k - 1$, satisfies $\overline G_{-} \oplus \mathcal L \oplus N \cong \overline
+    G_{-} \oplus \underline{\R}^{k}$, with $\overline G_{-}$ the negative eigenbundle of the form induced on the
+    wall: a necessary condition of the same form as the stored one-sided necessity clause of the rung count.
+    That clause concerns one-sided completions that restrict to $G$ along the wall and have no far form; neither
+    statement is derived from the other, and whether the two-sided count equals $k(\Sigma)$ is not decided. On
+    the twisted wall of the cylinder one rung, with a constant hyperbolic plane, fails and an explicit two-rung
+    form is nondegenerate everywhere. Not shown: the class relative to the whole base, naturality, and
+    conservation under wall induction. By Leon's decision of 18 November Conjecture \claimref{sheaf.wall-class}
+    is restated around the transfer class (its clauses (a) and (c)) and stays conjectured. The Kerr ring (a
+    reading computed in a working file; not stored, not refereed): in the stored normal coordinate $w$ of the
+    ring, with $z^{2} = w$, the plane family $\begin{psmallmatrix} x & y \\ y & -x\end{psmallmatrix}$ in the
+    coordinates $(\operatorname{Re} w, \operatorname{Im} w)$ has positive eigenline $\R z$, the stored double
+    cover is the orientation cover of that eigenline, and the Kerr-Schild potential is linear in the unit
+    eigenvector, hence odd under the deck map. So the forced cover is the class of degree one of the plane
+    example pulled back by $w$; a punctured plane has one nontrivial double cover, so parity alone forces that
+    identification. The winding number three is the degree of the field strength in the ring coordinate, and
+    only its parity, the stored holonomy $-1$, is a class of a degenerating form (argued on stored statements).
+    No completion statement applies, because the Kerr cometric does not degenerate at the ring.
   attack:
     - >-
-      The case $m = 3$ on the least module (dimension four): show in the store's cell model that the positive
-      eigenbundle of the position vector over the two-sphere is not stably trivial (a class of degree two),
-      or import the statement as one Fact.
+      Answered (18 November;
+      \claimref{synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two}). The item
+      asked for the case $m = 3$ on the least module (dimension four): to show in the store's cell model that
+      the positive eigenbundle of the position vector over the two-sphere is not stably trivial (a class of
+      degree two), or to import the statement as one Fact. It is proved in the store's own terms, by the rotor
+      lift of the clutching function and with no import: the class has order two, and the family is repaired
+      exactly on the even multiples of the least module. What remains: codimension five and beyond ($m \equiv 1,
+      2, 3, 5 \pmod 8$, $m \ge 5$). In codimension five the class is of infinite order (classical, from memory),
+      and a proof in these terms needs an integer invariant of a three-sphere of rotations that the store does
+      not hold; the periodicity theorem is not imported.
     - >-
-      Tame walls: compute the relative class of the eigenbundles of a tame corank-one wall and compare it
-      with the pair $(w(\Sigma), w_{1}(L))$ of Theorem \claimref{synthesis.wall-class-one-rung-obstruction};
-      if they agree, restate Conjecture \claimref{sheaf.wall-class} around the transfer clause.
+      Answered (18 November; \claimref{synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line}):
+      agreement, for two-sided completions only. The item asked to compute the relative class of the
+      eigenbundles of a tame corank-one wall, to compare it with the pair $(w(\Sigma), w_{1}(L))$ of Theorem
+      \claimref{synthesis.wall-class-one-rung-obstruction}, and if they agree to restate Conjecture
+      \claimref{sheaf.wall-class} around the transfer clause. Relative across the collar the class is the dying
+      line and carries exactly the information of the pair, with $w(\Sigma)$ read as the clock mismatch; the
+      conjecture is restated (Leon's decision of 18 November, clauses (a) and (c); it stays conjectured). The
+      transfer gives a necessary condition on two-sided completions of the same form as the stored one-sided
+      necessity clause, and lower bounds on the two-sided number of rungs of the same form as the stored ones;
+      the stored one-sided rung counts are not rederived and no new rung count is obtained. What remains:
+      whether the two-sided count equals the one-sided $k(\Sigma)$; the class relative to the whole base;
+      naturality and conservation under wall induction.
     - >-
-      The Kerr ring: a degeneration in codimension two. Test whether the forced double cover of
-      \claimref{synthesis.kerr-ring-double-cover-data} is the class of degree one found here, and whether the
-      winding number three is an invariant of the completion or only of the family of rank two (a class of
-      degree one is stable only modulo two once directions are added).
+      Closed negatively as posed (18 November; computed, not stored). The item asked whether the forced double
+      cover of \claimref{synthesis.kerr-ring-double-cover-data} is the class of degree one found here, and
+      whether the winding number three is an invariant of the completion or only of the family of rank two. The
+      cover is the class of degree one of the plane example pulled back by the ring's normal coordinate, an
+      identification that parity alone forces. The winding number three is the degree of the field strength in
+      the ring coordinate; only its parity is a class of a degenerating form, and three is an invariant neither
+      of the cover nor of a completion (argued on stored statements). No completion statement applies, since the
+      Kerr cometric does not degenerate at the ring. There is no stored result; what is left of the ring is with
+      op.kerr-ring.
     - >-
-      Sufficiency: for a contractible base and an isolated degeneration, is a completion with a fixed exterior
-      form available whenever the class of the eigenbundles on the surrounding sphere vanishes after adding
-      the form's eigenspaces?
+      Answered (18 November;
+      \claimref{synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial}). The
+      item asked: for a contractible base and an isolated degeneration, is a completion with a fixed exterior
+      form available whenever the class of the eigenbundles on the surrounding sphere vanishes after adding the
+      form's eigenspaces? Over $\R^{m}$ with the degeneration set in a ball: yes once flat directions are added,
+      and not in general for the given form on the given bundle (the family whose eigenline winds twice). What
+      remains: bases other than $\R^{m}$, neighbourhoods that are not balls, completions that restrict to the
+      family inside the ball, and the least number of added directions.
   success: >-
-    The class identified and computed for isolated degenerations in every codimension, with the stored clock
-    of period eight derived for it or shown not to govern it; and its value on tame walls compared with the
-    stored wall class.
+    The class identified and computed for isolated degenerations in every codimension, with the stored clock of
+    period eight derived for it or shown not to govern it (done for codimension three; open from codimension
+    five). On tame walls the comparison across the collar is done (agreement with the stored wall class); what
+    would complete it is the class relative to the whole base, and the two-sided number of rungs shown equal to
+    the stored one-sided count or shown to differ.
   entities:
     - synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
     - transport.obstructions-are-moved-never-destroyed
@@ -6036,26 +6349,35 @@
     - sheaf.conservation-degeneracy-absolute-form
     - std-algebra.periodicity
     - synthesis.kerr-ring-double-cover-data
+    - synthesis.position-vector-eigenbundle-in-codimension-three-has-a-class-of-order-two
+    - synthesis.fixed-form-completion-over-a-ball-exists-iff-the-eigenbundle-is-stably-trivial
+    - synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line
   added: 2026-11-18
 - id: op.gravitational-field-at-null-momentum
   title: "The gravitational gauge field at null momentum, and commutation with matter at spacelike separation"
   area: quantum-fields
   kind: research
   difficulty: frontier
-  status: open
-  source: "The lattice-model result of 18 November 2026, the working notes of 12 October 2026 behind the registered entanglement prediction, and Leon's decision of 18 November (record as open; no position changed)"
+  status: reformulated
+  source: "The lattice-model result of 18 November 2026, the working notes of 12 October 2026 behind the registered entanglement prediction, and Leon's decision of 18 November (record as open; no position changed); the three results on the field accepted later on 18 November (the free directions at null momentum, the lattice Maxwell model, the first-order signal) and Leon's decision of that day (the series requires no signal outside the light cone; how the requirement is met is this problem)"
   statement: >-
-    The series holds no quantum of the gravitational gauge field (conventions, section ``Gravity and the
-    graviton''), and its registered entanglement prediction treats the field of a body, in the static limit,
-    as an operator built from the matter's commuting numbers
-    (\claimref{field-theory.operator-newtonian-coupling}). At first order the field is fixed by its source at
-    every non-null momentum, and at null momentum two components are not
-    (\claimref{synthesis.gravitational-pair-production-from-the-operator-source-at-first-order}, clause (i)).
-    Decide what the series says of those two components, and whether it requires its gravitational field to
-    commute with the observables of matter at spacelike separation: a condition the store does not state, and
-    which, in a scalar lattice model, a field with no variable of its own fails and a free part with canonical
-    commutators restores
-    (\claimref{synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation}).
+    Restated 18 November, after Leon's decision of that day. The series requires that no signal pass outside the
+    light cone (conventions, section ``Gravity and the graviton'', the requirement of 18 November 2026). In the
+    stored lattice model a field with no variables of its own, slaved to the matter's operator source, fails to
+    commute with the source's later detection at spacelike separation
+    (\claimref{synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation}), and
+    under the hypothesis that a classical device couples to such a field the failure is a signal of first order
+    (\claimref{synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound};
+    its transfer to the gravitational field is argued). So, by that decision, a gravitational field with no
+    variables of its own is not the full account of the field. The series holds no quantum of the gravitational
+    gauge field and posits none. At first order the field is fixed by its source at every non-null momentum; at
+    a null momentum two directions, the transverse trace-free ones, are not, and four of the ten first-order
+    equations are constraints
+    (\claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}).
+    Open: how the requirement is met. Whether the two free directions carry states or variables of their own is
+    not decided, in either sense, and no other way of meeting the requirement is stored. Say how the series'
+    gravitational field meets the requirement, and restate the burst baseline and the stored readings that name
+    a graviton to match.
   why: >-
     The third addendum to the entanglement registration (12 October 2026) says that the full theory needs a
     radiative sector with quantum states; the conventions (10 November 2026) say the field has no quantum.
@@ -6075,26 +6397,107 @@
     localisation at the Planck length, which they did not derive, and that the tower cannot supply canonical
     commutators for a field in the bulk (\claimref{field-theory.no-canonical-commutation-relations-tower});
     those notes are not stored results.
+
+    (18 November, second pass.) A decision and three results. The decision (Leon, 18 November): the series
+    requires no signal outside the light cone, so the slaved field is not the full account of the gravitational
+    field; how the requirement is met is this problem, and no quantum is posited. The field at null momentum
+    (\claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}):
+    at every nonzero null momentum the kernel of the first-order Einstein map is the displacements together with
+    the two transverse trace-free maps (proved); the map is symmetric for the stored pairing, so the first-order
+    equation is solvable there exactly for sources with no transverse trace-free part; the pole of the
+    first-order curvature on the cone lies in those two components only, and the stored bilinear restricted to
+    the cone is a sum of two squares, one for each; four of the ten equations carry no second derivative in the
+    time of a frame, the constraints (all proved); the pseudoscalar exchanges the curvatures of the two
+    directions, so they are one mode over $\mathrm{span}\{1, I_{4}\}$ per null momentum, as for the stored
+    photon (computed). Nothing in it decides whether the series gives those solutions any existence of their
+    own. The lattice Maxwell model, as restated after review
+    (\claimref{synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes}):
+    a lattice Maxwell field in two space dimensions with a Gauss constraint and a scalar charge, exactly
+    solvable, and not a model of spin two. With no variable of its own the constraint fixes only the divergence
+    of the field: the static slaved field, the Coulomb one, fails to commute with the detection on $76$ of the
+    $82$ links off the string (proved); a string-shaped slaved field satisfies the constraint and commutes off
+    the string at one time, but is not a static solution (proved); with an exact cone the retarded slaved field
+    fails at $878$ of $2750$ spacelike events, every one in the forward cone of the source event and none
+    spacelike to the source (computed); and a slaved field obeying the field equation and fitted to one
+    detection's time commutes with that detection at all spacelike events and fails for a detection at another
+    time (computed for two detection times). With transverse variables and canonical commutators a detection
+    dressed by one Weyl operator commutes with the field exactly off the support of the dressing: the string
+    dressing gives commutation at all $2750$ spacelike events and the Coulomb dressing does not; dressings by
+    sums of such operators are not treated. In one space dimension there is no transverse part and no failure
+    outside the interval between the two sites. For the gravitational field the reading is argued by analogy and
+    settles nothing. The signal
+    (\claimref{synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound}):
+    under its hypothesis (D), that a classical device couples to the field by the model's own coupling with
+    unitary evolution, the stored commutator is a change of the detection probability of first order in the
+    device's strength (proved); its coefficient is nonzero at $172$ of the $502$ spacelike events of the stored
+    grid, and at the $32$ of them not later than the detection the device changes the detection probability
+    (computed). The slaved model with the device is unitary, so unitarity does not imply commutation (proved);
+    with the free part of the stored model the first-order term vanishes (proved). The device is a number, so no
+    floor on localisation hides the signal. Its gravitational size within the light-crossing time is at most
+    $\Phi_{w} = (Gm_{A}m_{B}/\hbar c)\,D\,|1/r_{1} - 1/r_{2}|$, half of that in the formulation that does not
+    count the pair's energy twice (argued, its numbers computed): about $1.3 \times 10^{-13}$ in the proposed
+    experiments, ten orders below the registered threshold, and of order one for a source of about $190$ kg at
+    one metre against a superposed mass of $10^{-14}$ kg. A survey of the stored locality statements and of the
+    cutoff and local-horizon premises, with its scope listed, found none that implies commutation for the
+    gravitational field, none that bounds the failure or makes it unobservable, and no other condition in its
+    place; that is the outcome of a survey, not a theorem about the store.
   attack:
     - >-
-      State the condition: does any stored premise, or the unitarity behind the registered prediction, imply
-      that the gravitational field commutes with matter observables at spacelike separation? If not, say what
-      the series puts in its place (no signalling stated on dressed observables, for instance).
+      Answered (18 November;
+      \claimref{synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound}).
+      The item asked whether any stored premise, or the unitarity behind the registered prediction, implies that
+      the gravitational field commutes with matter observables at spacelike separation, and if not what the
+      series puts in its place. No stored premise was found that implies it (a survey with its scope listed, not
+      a theorem about the store). Unitarity does not: the slaved model with a coupled device is unitary
+      (proved), and under the hypothesis (D) of that result the failure is then a signal of first order. What
+      the series puts in its place is decided (Leon, 18 November; stated in the conventions): no signal outside
+      the light cone. What remains is how that requirement is met, the statement above.
     - >-
-      The localisation floor: do the cutoff premises (C1) and (C2), or the finite count of boundary modes,
-      supply a bound on localisation under which the model's failure cannot be observed? A derivation, or a
-      counter-model.
+      Answered (18 November; the same result). The item asked whether the cutoff premises (C1) and (C2), or the
+      finite count of boundary modes, supply a bound on localisation under which the model's failure cannot be
+      observed. No floor on localisation is relevant: the first-order signal needs no probe with a wave packet,
+      the device being a number, and a floor at the Planck length would change it only at the relative order of
+      that length over the separation of the paths; the floor of the working notes of 12 October belongs to a
+      different effect of second order, the reading of the which-path record by a probe. No stored bound was
+      found: the cutoff premises place modes on a surface that does not exist in the configuration of the
+      experiment (computed), clause (Loc) of the local-horizon premise is an entropy density with no mode count,
+      and the survey found no stored statement on the localisation of a body or on a product of two masses. The
+      signal's size is set by $Gm_{A}m_{B}/\hbar c$: about $10^{-13}$ in the proposed experiments, and of order
+      one near $190$ kg at a metre against a superposed mass of $10^{-14}$ kg (argued, under (D)).
     - >-
-      Repeat the model with the constraint structure of the gauge field: a field whose instantaneous part is
-      fixed by a constraint and whose observables are dressed, in the spacetime algebra, at first order.
+      Answered (18 November;
+      \claimref{synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes},
+      as restated after review). The item asked to repeat the model with the constraint structure of the gauge
+      field: an instantaneous part fixed by a constraint, and dressed observables. Done in an exact lattice
+      Maxwell model in two space dimensions with a scalar charge; it has no spin two. With no variable of its
+      own, the constraint does not fix the field: the Coulomb slaved field fails at equal time, the retarded
+      slaved field fails at spacelike events in the source's forward cone, and a slaved field obeying the field
+      equation that is fitted to one detection's time commutes with that detection and fails for a detection at
+      another time (computed). With transverse variables, a detection dressed by one Weyl operator along a
+      string commutes with the field at every spacelike event. What remains: the same question for the
+      gravitational constraints, where the reading is argued by analogy only.
     - >-
-      If a free part is admitted: is it the palatial storey on the two null-momentum components, and does the
-      convention on the graviton then read ``no quantum is posited, the free part of the field carries
-      states''? If it is not admitted: restate the burst baseline with $g = 0$.
+      Restated (18 November;
+      \claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}).
+      The count is made: two free directions at each null momentum, the transverse trace-free ones, forming one
+      mode over $\mathrm{span}\{1, I_{4}\}$, and four constraint equations. If the two directions were given
+      states in the way the photon is, the construction would be that of the stored photon modes
+      (\claimref{field-theory.fock-space-maxwell-modes}), a canonical pair on polynomials and not an element of
+      a floor of the tower (argued); whether they are given states is not decided. The burst ratio is $D = (2 +
+      g_{\mathrm{h}} + o)/(1 + g_{\mathrm{s}})$, with $g_{\mathrm{h}}$ the hole's emission into the two
+      directions and $g_{\mathrm{s}}$ that of the standard expectation: $(2 + g + o)/(1 + g)$ if the two
+      components emit as in standard physics, and $(2 + o)/(1 + g)$ if they do not (computed from
+      \claimref{synthesis.dimmed-burst-time-rescaled-copy}). So the earlier wording of this item, ``restate the
+      burst baseline with $g = 0$'', is corrected: $D = 2 + o$ is the ratio to a baseline from which the term
+      has also been removed, which is not the standard expectation. The two options differ by $g/(1 + g)$, about
+      $0.02$ at $g = 2/98$ (a hole emitting only massless neutrinos, photons and the two components; the
+      fraction is read from the abstract of Page's 1976 paper), and the prediction's kill condition, an undimmed
+      burst, does not distinguish them. What remains: which option holds, which follows from how the requirement
+      is met; then the wording of the burst prediction and of the conventions.
   success: >-
-    A stored statement of what the series requires of its gravitational field at spacelike separation, with
-    the two null-momentum components either given states or shown to need none, and the burst baseline and
-    the conventions restated to match.
+    A stored statement of how the series' gravitational field meets the requirement of no signal outside the
+    light cone, derived or adopted as a premise with its grounds; with it the status of the two free directions
+    at null momentum, and the burst baseline and the conventions restated to match.
   entities:
     - synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation
     - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order
@@ -6103,4 +6506,73 @@
     - field-theory.operator-newtonian-coupling
     - field-theory.no-canonical-commutation-relations-tower
     - note.synthesis.where-stored-text-names-a-graviton
+    - synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints
+    - synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes
+    - synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound
+  added: 2026-11-18
+- id: op.the-number-n
+  title: "The number N: a counting rule and a selection that fix it, or a proof that it is free"
+  area: dark-energy
+  kind: research
+  difficulty: frontier
+  status: open
+  source: "T12 and T17 (the number N); the decisions of 10 November 2026 on the number N; the survey of 18 November 2026, which found its claims held by no problem"
+  statement: >-
+    The large number $N = M_{P}/H$, about $10^{61}$, with $G\Lambda = 3N^{-2}$, is a registered free input
+    (Premise \claimref{synthesis.number-n-registered-free-input}). Six claims discuss it at observation level
+    and stay conjectured: what it is, why it is large, that one number is to be explained, that its largeness
+    and the size of the horizon's mode space are one question, what kind of number it is, and the claim that
+    its largeness is a mystery, once recorded as refuted and returned to open on 10 November. The one
+    conjectured answer reads the tower exponentially; made precise that reading is the iterated Fock
+    construction, which is not a step of the proved ascent, and it is one of at least two counting rules,
+    $3, 8, 256, 2^{256}$ and $3, 4, 8, 128, 2^{127}$, of which nothing stored selects one (argued). Decide
+    what the store can decide: whether stored structure selects a counting rule; whether a selection among
+    descents can be stated and derived, so that a horizon count of order $10^{122}$ is typical or is not;
+    and whether $N$ is a function of the other registered numbers.
+  why: >-
+    The cosmological-constant problem and the weakness of gravity are both $N^{-2}$ in the series' terms
+    (\claimref{standard-model.one-number-explain}), so this is the series' statement of both. The premise
+    says what would refute it; no problem recorded the routes by which that could happen.
+  known: >-
+    The exponential reading is the iterated Fock construction and not the ascent
+    (\claimref{synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent}); a
+    second rule through an invariant symmetric form gives different counts
+    (\claimref{synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level}). On the
+    stored relations $N$ is free at a fixed D-term level
+    (\claimref{synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations}, argued on a pattern
+    search). Under the promotion the series adopts $N$ is initial data of the descent
+    (\claimref{programme.n-parameter-of-the-laws}). The horizon count
+    $\pi N^{2}/\ln 2 \approx 4.8 \times 10^{122}$ is of registered units and compares with the rules' counts
+    in size only.
+  attack:
+    - >-
+      The counting rule: find a stored structure that selects one of the two rules (or a third), or prove
+      that both are consistent with every stored result on the tower, replacing ``argued'' by a proof on a
+      stated scope.
+    - >-
+      The selection: state the claim that observers of the observed kind exist only in descents near the
+      base case as a statement about automorphism structures of the levels, and prove or refute it on the
+      stored tower.
+    - >-
+      Freedom: replace the pattern search behind
+      \claimref{synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations} by a two-model argument
+      over the registered premises, in the manner of the stored independence results.
+    - >-
+      The kind of number: with the promotion adopted, decide whether any stored result still uses $N$ as a
+      parameter of the laws, and restate it if so.
+  success: >-
+    A derivation of $N$ or of a relation tying it to another registered number, which refutes the premise as
+    registered; or a proof on a stated scope that the stored structure selects no counting rule and fixes no
+    such relation, after which the six claims are restated on that result.
+  entities:
+    - synthesis.number-n-registered-free-input
+    - standard-model.what
+    - standard-model.why-large
+    - standard-model.one-number-explain
+    - standard-model.largeness-number-universes-boundary-modes
+    - programme.n-parameter-of-the-laws
+    - refuted.the-number-n-is-a-mystery-of-largeness
+    - synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent
+    - synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level
+    - synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations
   added: 2026-11-18

@@ -1,7 +1,7 @@
 ---
 id: pred.gravity-entangles-standard-phase
 kind: prediction
-version: 2
+version: 3
 title: Gravity entangles two masses by the standard phase
 status: live
 subject: one-relation
@@ -20,6 +20,10 @@ credit:
   role: 'scope sentence: the prediction is about the phase only, with no claim about a mediator or a quantised gravitational field; observation row'
   version: 2
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'basis linked to the operator Newtonian coupling, which derives the phase and its sign; the reading and premises stay outside the store; prediction unchanged'
+  version: 3
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
 review: draft
 kill_condition:
   threshold: A null result at a sensitivity that resolves the standard phase on the experiment's geometry,
@@ -59,6 +63,10 @@ locators:
   number: registration 2026-10-09, third addendum
   label: ''
 extraction:
+  maintainer_pass_2026_11_18_basis:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 2 -> 3. The basis derivation now uses field-theory.operator-newtonian-coupling, the stored proposition that derives the registered phase with its sign from a coupling built from commuting conserved numbers and that already carried a supports link to this prediction. The element reading and premises P-i to P-vi, under which that coupling is the gravitational one, remain a working note outside the store, and no premise is added for them (the operator source is kept as a local hypothesis of the results that use it, decision of 18 November 2026). One sentence of the technical level reworded to say so. The prediction, its status and its kill condition are unchanged.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -66,7 +74,7 @@ extraction:
   env: registration
   source: 'Project: claude/QG_entanglement_prediction_registration.md'
   flags:
-  - 'basis not linked: rests on the working note "Value or Element", which is not a series paper'
+  - 'basis linked in part: the phase is derived in the store from the operator coupling; the element reading and premises P-i to P-vi rest on the working note "Value or Element", which is not a series paper'
   typing:
     by: ai-levels-pass
     note: 'Levels pass: wrote the technical and lay levels, which were pending, keeping the element reading
@@ -79,6 +87,10 @@ extraction:
     added_about: []
     verdict: standalone
     note: 'Rests on the element reading and premises P-i to P-vi of a working note outside the store; the operator Newtonian coupling already supports it, and no store definition concerns the element reading.'
+derivations:
+- name: basis
+  uses:
+  - field-theory.operator-newtonian-coupling@4
 ---
 
 ## formal
@@ -91,7 +103,7 @@ Registered prediction (registered 2026-10-09; reading chosen 2026-10-12, third a
 $$\Phi = \frac{G m_A m_B}{\hbar}\int \left(\frac{1}{r_{11}} + \frac{1}{r_{22}} - \frac{1}{r_{12}} - \frac{1}{r_{21}}\right)dt,$$
 with $r_{ij}$ the distance between branch $i$ of the first mass and branch $j$ of the second.
 
-The prediction was first registered under the other reading of the same equations, the value reading (a single grade-two connection with real coefficients), as no entanglement; choosing the element reading inverted it. A null result at a sensitivity that resolves the standard phase on the experiment's geometry, with coherence kept for the duration, refutes the element reading together with P-i to P-vi. The basis is a working note, not a series paper.
+The prediction was first registered under the other reading of the same equations, the value reading (a single grade-two connection with real coefficients), as no entanglement; choosing the element reading inverted it. A null result at a sensitivity that resolves the standard phase on the experiment's geometry, with coherence kept for the duration, refutes the element reading together with P-i to P-vi. The phase and its sign are derived in the store from a coupling built from commuting conserved numbers (Proposition \claimref{field-theory.operator-newtonian-coupling}); the element reading and the premises, under which that coupling is the gravitational one, are a working note, not a series paper, and are not stored premises.
 
 The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it.
 

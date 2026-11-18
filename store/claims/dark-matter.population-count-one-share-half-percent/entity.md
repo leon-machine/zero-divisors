@@ -1,7 +1,7 @@
 ---
 id: dark-matter.population-count-one-share-half-percent
 kind: claim
-version: 7
+version: 8
 title: 'The population count: one share to half a percent, and a symmetric remainder'
 status: proved
 region: dark-matter
@@ -29,11 +29,19 @@ credit:
   role: 'Premise P4 retired: the assumes edge removed, the equal asymmetry of the mirror cited from the copy theorem''s clause (v)'
   version: 7
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'restatement of the quoted gravitational floor for a nine-vector content (about three and a half -> about eight parts in ten thousand), a quote left at its first value when the production coefficients were corrected and now also behind the mean energy per creation event'
+  version: 8
+  source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
+amendments:
+- version: 8
+  kind: restatement
+  defect: 'clause (iii) quoted the odd towers'' gravitational floor for a nine-vector content as about three and a half parts in ten thousand of our temperature, the value 3.5e-4 of the coefficients proposition with the production coefficients first imported and energy 3T per creation event; with the derived coefficients and the mean energy per event it is 8.1e-4'
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-matter.mirror-share-one-how-fragile@9
+  - dark-matter.mirror-share-one-how-fragile@10
   - dark-matter.mirror-tower-copy-one@11
   - dark-matter.no-coupling-rule-odd-towers-follows@6
   - dark-matter.projection-every-towers-content-dilutes-ones@3
@@ -64,6 +72,10 @@ locators:
   label: prop:count
   line: 377
 extraction:
+  maintainer_pass_2026_11_18_energy:
+    by: maintainer-2026-11-18
+    date: '2026-11-18'
+    note: 'Version 7 -> 8, at Leon''s decision of 18 November 2026, 14:04 (adopt the computed mean energy per creation event in the gravitational floor). One quoted number in clause (iii) of the formal level: the floor for a nine-vector content about three and a half -> about eight parts in ten thousand (8.1e-4, dark-matter.coefficients-floors-they-give-what-gravity (i), version 6). The quote had not been restated when the production coefficients were corrected earlier the same day (it was not in that pass''s list). Nothing else changes. No check of this entity bears on the change, so no amendment evidence is named.'
   maintainer_pass_2026_11_12:
     by: maintainer-2026-11-12
     date: '2026-11-12'
@@ -129,7 +141,7 @@ for the tower factor. Under Premises \claimref{dark-matter.p1-single-frozen-poin
 \end{equation}
 the one holding to half a percent on the burning branch (Proposition \claimref{dark-matter.mirror-share-one-how-fragile}(i)).
 \item[(ii)] \emph{(Symmetric.)} The remainder, $4.364\,\Omega_{b}$, that is $\Omega h^{2} = 0.0976 \pm 0.0012$, is not asymmetric relic of anything in the framework. An odd tower's matter, if any, is what the descent deposited, heated afterwards only through gravity, the one channel superselection leaves open (Proposition \claimref{dark-matter.superselected-hence-dark-exactly-stable}, Appendix \ref{app:seeding}): a symmetric relic whose density is set by the sector's own dynamics (its lightest stable state, its number-changing rates, its temperature relative to ours), not by a conserved number.
-\item[(iii)] \emph{(Scope: the remainder is not derived here.)} No rule relating an odd tower's dimensionful coupling to this tower's dimensionless one is derived in the series, which derives no coupling value, and neither premise that equates across towers reaches the odd towers (Proposition \claimref{dark-matter.no-coupling-rule-odd-towers-follows}(b), (c)); this paper supplies none: its derived claim on the ratio is the one share of (i). What it says about the remainder is the unit-ball rule of Section \ref{sec:rule}, a fitted relation at observation level on three premises of its own, returning $4.364$ as $2 \cdot \tfrac{4}{3} + 2 \cdot \tfrac{8}{3\pi}$; nothing in this proposition depends on it. Beyond this the framework fixes only a floor on the odd towers' temperature, from gravitational heating after the descent (Appendix \ref{app:seeding}: about three and a half parts in ten thousand of ours at the ceiling reheating for a nine-vector content, the deposit possibly more), which closes their radiation channels near the floor and says nothing about their matter density; supplying the coupling rule is successor problem (3).
+\item[(iii)] \emph{(Scope: the remainder is not derived here.)} No rule relating an odd tower's dimensionful coupling to this tower's dimensionless one is derived in the series, which derives no coupling value, and neither premise that equates across towers reaches the odd towers (Proposition \claimref{dark-matter.no-coupling-rule-odd-towers-follows}(b), (c)); this paper supplies none: its derived claim on the ratio is the one share of (i). What it says about the remainder is the unit-ball rule of Section \ref{sec:rule}, a fitted relation at observation level on three premises of its own, returning $4.364$ as $2 \cdot \tfrac{4}{3} + 2 \cdot \tfrac{8}{3\pi}$; nothing in this proposition depends on it. Beyond this the framework fixes only a floor on the odd towers' temperature, from gravitational heating after the descent (Appendix \ref{app:seeding}: about eight parts in ten thousand of ours at the ceiling reheating for a nine-vector content, the deposit possibly more), which closes their radiation channels near the floor and says nothing about their matter density; supplying the coupling rule is successor problem (3).
 \end{enumerate}
 The profile: the mirror's dark matter is mirror baryons at the proton mass, cold and dissipative within its own sector; the odd towers' is symmetric, of undetermined mass; both couple to this tower by gravity alone. Two conditional stances are registered at the premises' level: permanent null results in direct detection, and no indirect-detection signal from dark decays or visible annihilation products. Observation level on the flagged premises; the observed ratio is the survey record's \cite{Planck2018}.
 

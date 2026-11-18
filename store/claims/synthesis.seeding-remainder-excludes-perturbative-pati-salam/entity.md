@@ -30,15 +30,15 @@ review: draft
 derivations:
 - name: main
   uses:
-  - dark-matter.seeding-gravity-floor-dark-towers-temperature@5
+  - dark-matter.seeding-gravity-floor-dark-towers-temperature@6
   - dark-matter.imported-massless-graviton-production-rate@4
-  - dark-matter.population-count-one-share-half-percent@7
-  - dark-matter.coefficients-floors-they-give-what-gravity@5
+  - dark-matter.population-count-one-share-half-percent@8
+  - dark-matter.coefficients-floors-they-give-what-gravity@6
   - standard-model.what-angle-asks-neutrino-sector@4
   - dark-matter.ceiling-valued-inherited-success@5
   - synthesis.gauge-algebra-by-tower@1
   - standard-model.chain@8
-  - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@1
+  - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@2
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1
   proof: proof-main.tex
