@@ -164,7 +164,7 @@ const CAPS = {
   tkTitle: [[0.03, 1.01, 'To test the claim, start where every physicist starts: with the tools as they are taught. There are five, each invented separately for a job of its own.', []]],
   gaTitle: [[0.03, 1.01, 'Now the alternative: a single product, derived from one geometric rule, from which all five tools drop out.', []]],
   cross: [[0.03, 1.01, 'The first tool gives arrows two products. The dot product $a\\cdot b$ is a number; the cross product $a\\times b$ is a new arrow at right angles to both. That second product belongs to three dimensions (and, by a quirk of the octonions, seven): a plane has no room for it, and four dimensions offer too many.', [], 'textbook']],
-  complex: [[0.03, 1.01, 'Waves and quantum states are written with complex numbers. Multiplying by $i$ is a quarter turn, and doing it twice is a half turn, which is why $i^2=-1$. The rule works, but nothing in it says where $i$ lives or what it is.', [], 'textbook']],
+  complex: [[0.03, 1.01, 'Waves and quantum states are written with complex numbers. Multiplying by $i$ is a quarter turn, and doing it twice is a half turn, which is why $i^2=-1$. The rule works, but nothing in it says where $i$ lives or what it is. Gauss said as much in 1825: politely put, the imaginary unit works and no one knows why.', ['Gauss (1825)'], 'textbook']],
   hamilton: [[0.03, 1.01, 'For rotations in space, William Rowan Hamilton found three square roots of $-1$ in 1843 and cut their rule into Broom Bridge in Dublin. They do not commute: $ij=k$ but $ji=-k$, just as two quarter turns of a book end differently in a different order.', [], 'textbook']],
   matrices: [[0.03, 1.01, 'Quantum theory added matrices. A beam of silver atoms in a magnet splits in two, never in between. In 1927 Wolfgang Pauli described that two-valued spin with three arrays of complex numbers, and in 1928 Paul Dirac needed four larger ones. What the arrays represent was left open.', [], 'textbook']],
   maxwell: [[0.03, 1.01, 'Electromagnetism completes the set of five. In Oliver Heaviside’s vector notation, Maxwell’s theory is four equations for two fields, $E$ and $B$, with two kinds of derivative and the cross product built into one of them.', [], 'textbook']],
@@ -583,7 +583,8 @@ function drawCrossIntro(s){
 function drawCross(s){ if (s < 0.5) drawCrossIntro(s); else drawMirror(cl((s - 0.5) / 0.44) * 0.46); }
 
 function drawComplex(s){
-  const nar = NARROW, u = Math.min(W * (nar ? 0.3 : 0.2), H * (nar ? 0.32 : 0.4), 220), cx = nar ? W * 0.5 : W * 0.36, cy = nar ? H * 0.64 : H * 0.54;
+  const nar = NARROW, gq = nar ? 13 : 20, gw = nar ? W - 40 : Math.min(W * 0.3, 420), gh = wrap('“' + GAUSS + '”', gw, gq).length * gq * 1.35, top = H * 0.02 + 88 + gh + gq * 0.9 + 26;
+  const u = nar ? Math.min(W * 0.3, (H - top) / 2.25) : Math.min(W * 0.2, H * 0.4, 220), cx = nar ? W * 0.5 : W * 0.36, cy = nar ? top + u * 1.1 : H * 0.54;
   ox.strokeStyle = C.line; ox.lineWidth = 1; ox.beginPath(); ox.moveTo(cx - u * 1.2, cy); ox.lineTo(cx + u * 1.2, cy); ox.moveTo(cx, cy + u * 1.1); ox.lineTo(cx, cy - u * 1.1); ox.stroke();
   text('real', cx + u * 1.2, cy + 16, C.t3, 12, 'right', MONO); text('imaginary', cx + 8, cy - u * 1.1, C.t3, 12, 'left', MONO);
   text('1', cx + u * 0.62, cy + 14, C.t3, 13, 'center', SERIF); text('i', cx - 10, cy - u * 0.62, C.t3, 14, 'right', SERIF, 'italic');
@@ -595,12 +596,15 @@ function drawComplex(s){
     if (step1 > 0.95) text('iz', cx + u * 1.1 * Math.cos(a1), cy - u * 1.1 * Math.sin(a1), C.blue, 17, 'center', SERIF, 'italic'); }
   if (step2 > 0) { const b0 = a0 + Math.PI / 2, b1 = b0 + Math.PI / 2 * step2; arcArrow(cx, cy, u * 0.9, b0 + 0.05, b1 - 0.05, C.red, 1.4, 7); vec(b1, C.red, 2.2);
     if (step2 > 0.95) text('i²z = −z', cx + u * 1.14 * Math.cos(b1), cy - u * 1.14 * Math.sin(b1) + 14, C.red, 17, 'center', SERIF, 'italic'); }
-  const px = nar ? W * 0.5 : W * 0.68, py = nar ? H * 0.02 : H * 0.36, fs = nar ? 15 : 28;
+  const px = nar ? W * 0.5 : W * 0.68, py = nar ? H * 0.02 : H * 0.27, fs = nar ? 15 : 28;
   if (!nar) boxStart('the rule');
   text('z = x + iy', px, py, C.text, fs, 'center', SERIF, 'italic');
   if (s >= 0.5) { const a = sm((s - 0.86) / 0.08); ox.globalAlpha = a; text('i² = −1', px, py + (nar ? 24 : 50), C.red, fs, 'center', SERIF, 'italic');
-    text('a rule for a symbol', px, py + (nar ? 46 : 94), C.t3, fs * (nar ? 0.75 : 0.66), 'center', SERIF, 'italic'); text('but what is i?', px, py + (nar ? 66 : 132), C.gold, fs * (nar ? 0.85 : 0.78), 'center', SERIF, '600'); ox.globalAlpha = 1; }
+    text('a rule for a symbol', px, py + (nar ? 46 : 94), C.t3, fs * (nar ? 0.75 : 0.66), 'center', SERIF, 'italic'); text('but what is i?', px, py + (nar ? 66 : 132), C.gold, fs * (nar ? 0.85 : 0.78), 'center', SERIF, '600'); ox.globalAlpha = 1;
+    // Gauss, as he is usually quoted in English; the remark is from 1825
+    quote(GAUSS, 'Carl Friedrich Gauss, 1825, as usually quoted', px, py + (nar ? 88 : 178) + gh / 2, gw, gq, C.text, sm((s - 0.88) / 0.05)); }
 }
+const GAUSS = 'The true metaphysics of the square root of −1 is elusive.';
 
 const HAM = [['×', '1', 'i', 'j', 'k'], ['1', '1', 'i', 'j', 'k'], ['i', 'i', '−1', 'k', '−j'], ['j', 'j', '−k', '−1', 'i'], ['k', 'k', 'j', '−i', '−1']];
 // a book, given quarter turns about one axis and then another: turns = [[axis, progress 0..1], ...].
@@ -1460,7 +1464,7 @@ function drawPhysics(s){
 const MINH = {all: 380, voices: 440, hamilton: 450, matrices: 500, maxwell: 450, toolkit: 420, derive: 460, product: 400, mirror: 400, dirac: 460, onefield: 440, rotor: 420, fermion: 430, dropout: 480, tensors: 450,
   departs: 460, bit: 430, cube: 420, sign: 460, scalars: 500, algebra: 430, count: 420, switch: 480, division: 430, continuum: 500, infinity: 430, physics: 440, readings: 400, why: 470, allnumber: 480, beyond: 460};
 // on a phone, scenes whose labels sit close together are laid out taller (and so wider) and scaled to fit
-const MINH_NARROW = {all: 300, complex: 420, derive: 470, quat: 400, fermion: 450, division: 450, continuum: 470, routes: 500, why: 500};
+const MINH_NARROW = {all: 300, complex: 450, derive: 470, quat: 400, fermion: 450, division: 450, continuum: 470, routes: 500, why: 500};
 const CHAP_OF = k => { let c = 0; CHAPTERS.forEach(([, , ck], i) => { if (START[k] >= START[ck]) c = i; }); return c; };
 const DRAWS = {allnumber: drawAllNumber, wall: drawWall, voices: drawVoices, derive: drawDerive, units: drawUnits, departs: drawDeparts, scalars: drawScalars, infinity: drawInfinity, readings: drawReadings, why: drawWhy, cross: s => drawCrossIntro(s * 0.55), complex: drawComplex, hamilton: drawHamilton, matrices: drawMatricesPlain, maxwell: drawMaxwell, toolkit: drawToolkit,
   product: drawProduct, plane: drawPlane, mirror: drawMirror, routes: drawRoutes, tkTitle: drawTkTitle, gaTitle: drawGaTitle, bitTitle: drawBitTitle, quat: () => drawInventions(0.2), dirac: s => drawInventions(0.5 + 0.47 * s), onefield: drawOneField, rotor: drawRotor, fermion: drawFermion, dropout: drawDropout, tensors: drawTensors,
