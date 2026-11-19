@@ -469,12 +469,12 @@ const SCAPS = {
          [0.25, 0.38, 'Now three assumptions, none derived: every quantum weighs the same; each tower holds one quantum per unit ball of its own space; and each counts through one unit of the direction we lack or it lacks.', [['prem'], 'T14 R1, R2, R3']],
          [0.38, 0.445, 'One quantum each, but different volumes: the disc has area \u03c0, our ball volume 4\u03c0/3, the four-ball \u03c0\u00b2/2. Density is what to compare: gravity responds to mass per volume, not to mass alone, and what Planck measures is a ratio of densities. Every tower acts on our gravity through our three directions of space, so its density counts in our volume.', [['C'], 'T14 Lem 6.1, Prop 7.6, 7.24']],
          [0.445, 0.52, 'Compare any tower\u2019s density with ours and the mass m appears top and bottom, so it cancels. Only the volume is left.', [['C'], 'T14 Prop 7.6, 7.12']],
-         [0.52, 0.79, 'So each tower’s share, against ours, is our ball divided by its own: 4/3 for the three-dimensional towers, 8/(3\u03c0) for the five-dimensional ones, 1 for the mirror. Computed: add the five dark shares, 1 + 2 \u00d7 4/3 + 2 \u00d7 8/(3\u03c0) = (11\u03c0 + 16)/(3\u03c0) = 5.364.', [['C'], 'T14 Prop 7.6']],
-         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The rule was found by fitting this number, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['C'], 'T14 Obs 7.31']]],
+         [0.52, 0.79, 'So each tower’s share, against ours, is our ball divided by its own: 4/3 for the three-dimensional towers, 8/(3\u03c0) for the five-dimensional ones, and V\u2083/V\u2083 = 1 for the mirror, whose ball is the same as ours. Computed: add the five dark shares, 1 + 2 \u00d7 4/3 + 2 \u00d7 8/(3\u03c0) = (11\u03c0 + 16)/(3\u03c0) = 5.364.', [['C'], 'T14 Prop 7.6']],
+         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The computed value relies on the three assumptions stated, and on two more on record: that the three- and five-dimensional towers hold matter, and the other two none. The rule was found by fitting this number, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['prem'], 'T14 R1, R2, R3 \u00b7 Pop, SI', ['C'], 'T14 Obs 7.31']]],
   towers: [[0, 0.32, 'All the towers feel one gravitational field, so a black hole\u2019s centre is shared by all of them.', [['C'], 'T14 Prop 6.5']],
          [0.32, 0.66, 'What falls in gives its energy back as radiation into every populated tower; its information, and for small holes its charge, comes back in its own.', [['C'], 'T14 Prop 6.5']],
          [0.66, 1.01, 'So the last flash of an evaporating black hole, if small ones exist, is dimmed by a factor between 2 and about 5.5. A registered prediction for the searches.', [['pred'], 'T14 Prop 6.5 \u00b7 T17']]],
-  count: [[0, 1.01, 'If the papers’ count is right, one switch for every 4 ln 2, about 2.8, Planck areas of horizon, each cycle of the hole’s clock: for this black hole, {S} of them. That density is set by matching the area law, not derived, and it rests on a flagged premise. (The guide G00 says one per four Planck cells, crediting each switch one unit of entropy rather than ln 2: the same count.)', [['C'], 'T8 Cor 4.4', ['prem'], 'T8 Prin 4.1 · (IC)']]],
+  count: [[0, 1.01, 'If the papers’ count is right, one switch for every 4 ln 2, about 2.8, Planck areas of horizon, each cycle of the hole’s clock: for this black hole, {S} of them. That density is set by matching the area law, not derived, and it rests on a flagged premise. The papers also quote it as one per four Planck areas: that bookkeeping credits each switch a whole unit of entropy, where a two-state switch can hold only ln 2, so 2.8 is the figure that compares like with like.', [['C'], 'T8 Cor 4.4 · T8 Prop 4.12', ['prem'], 'T8 Prin 4.1 · (IC)']]],
   scramble: [[0, 0.28, 'Drop a message in. How fast does the hole mix it through all its switches?', [['std'], 'Hayden & Preskill 2007']],
          [0.28, 1.01, 'A touch on one switch spreads to more and more of them, at the rate 2\u03c0T: the hole\u2019s own clock, set by the same premise as its temperature. At that rate the hole mixes a message through all its switches in {scr}. The rate meets the chaos bound, but the switches are not chaotic: real chaos is left open.', [['C'], 'T8 Asm 6.1', ['std'], 'Maldacena, Shenker, Stanford 2016']]],
   score: [[0, 1.01, 'This framework predicts no echoes; none confirmed so far, and one would refute it. Wherever the papers touch data, they state what would prove them wrong: {npred} predictions are on record. {pressed}', [['pred'], 'T8 Rec 7.1, 7.2 \u00b7 T17 \u00a74'], 'end']],
@@ -813,9 +813,9 @@ function labFit(text, x, y, col, align, size){ let z = size; ox.font = `italic $
 function overlayRatio(s, now){
   const narrow = PORTRAIT();
   const px = narrow ? 20 : OW * 0.55, pw = narrow ? OW - 40 : Math.min(OW * 0.4, 500), py = narrow ? 118 : OH * 0.16;
-  // on a phone the ball sits between the working above (128px) and its labels and the measured values below
-  // (96px), shrinking if the room between the two is short
-  const bot = region('ratio').bot, Rb = narrow ? Math.max(40, Math.min(OH * 0.11, OW * 0.25, (bot - py - 210) / 2)) : Math.min(OH * 0.2, OW * 0.19);
+  // on a phone the ball sits under the working (118px: the equations, then on the last step the two values and the
+  // number line in their place) and above its own labels (52px), shrinking if the room between the two is short
+  const bot = region('ratio').bot, Rb = narrow ? Math.max(40, Math.min(OH * 0.11, OW * 0.25, (bot - py - 170) / 2)) : Math.min(OH * 0.2, OW * 0.19);
   const hx = narrow ? OW / 2 : OW * 0.3, hy = narrow ? py + 118 + Rb : OH * 0.38;
   const sm = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
   // A: two unit balls, ours and the mirror's, slide together
@@ -855,6 +855,7 @@ function overlayRatio(s, now){
     [['R1', 'every quantum has the same mass'], ['R2', 'one quantum per unit ball of a tower’s own space'], ['R3', 'each counts through one unit of a missing direction']]
       .forEach(([k, t], i) => { mono(k, px, py + 30 + i * 28, C.gold, 'left', 12); lab(t, px + 36, py + 30 + i * 28, C.text, 'left', 16); });
     mono('R1 has no mechanism in the odd towers, about 81% of the dark matter (T14c Prop 9.4)', px, py + 30 + 3 * 28 + 4, C.t3, 'left', 10);
+    mono('also on record as premises: the 3D and 5D towers hold matter; the other two hold none', px, py + 30 + 3 * 28 + 22, C.t3, 'left', 10);
     ox.globalAlpha = 1; }
   // C2: compare densities, and watch the mass cancel (T14 Prop 7.6 and its proof)
   // the density working fades out, then the shares fade in, where they stood
@@ -872,30 +873,29 @@ function overlayRatio(s, now){
   const aS = Math.min(1, Math.max(0, (s - 0.545) / 0.03)) * (s > 0.79 ? Math.max(0, 1 - (s - 0.79) / 0.03) : 1);   // the sum gives way to the comparison
   if (aS > 0) { ox.globalAlpha = aS; const fs = narrow ? 17 : 24, x0 = narrow ? OW / 2 : px, al = narrow ? 'center' : 'left', y0 = narrow ? py + 14 : py + 10;
     texL('dark matter  ∕  ordinary matter', x0, y0, C.t2, fs * 0.75, al);
-    const t1 = true, t2 = true, t3 = true;   // shown whole, at once
-    if (!narrow) {
-      texL('=  1  +  2 × V₃/V₂  +  2 × V₃/V₄', x0, y0 + fs * 1.7, C.text, fs, 'left');   // the shares as volumes, then their values
-      let x = x0; const y = y0 + fs * 3.2, under = [];
-      const piece = (t, col, note) => { texL(t, x, y, col, fs, 'left'); const w = ox.measureText(t).width; if (note) under.push([note, x + w / 2, col]); x += w; };
-      piece('=  ', C.text); piece('1', C.text, 'mirror'); if (t1) { piece('  +  2 × ', C.text); piece('4/3', C.text, 'two 3D towers'); } if (t2) { piece('  +  2 × ', C.text); piece('8/(3π)', C.text, 'two 5D towers'); }
-      under.forEach(([t, cx]) => mono(t, cx, y + fs * 0.7, C.t3, 'center', 10));
-      if (t3) { texL('=  (11π + 16) / (3π)', x0, y + fs * 2.0, C.text, fs, 'left'); texL('=  5.364', x0, y + fs * 3.6, C.gold, fs * 1.25, 'left', 600); }
-    } else {
-      texL('= 1 + 2×V₃/V₂ + 2×V₃/V₄', x0, y0 + fs * 1.5, C.text, fs, al);
-      texL('= 1 ' + (t1 ? '+ 2×4/3 ' : '') + (t2 ? '+ 2×8/(3π)' : ''), x0, y0 + fs * 2.9, C.text, fs, al);
-      if (t3) texL('= (11π+16)/(3π) = 5.364', x0, y0 + fs * 4.3, C.gold, fs, al, 600); }
+    // the shares as volumes first (the mirror's ball is ours, so its share is V3/V3), each part named underneath;
+    // then their values, each under its own part
+    const terms = [['V₃/V₃', '1', 'the mirror'], ['2 × V₃/V₂', '2 × 4/3', 'two 3D towers'], ['2 × V₃/V₄', '2 × 8/(3π)', 'two 5D towers']], eq = narrow ? '= ' : '=  ', plus = narrow ? ' + ' : '  +  ';
+    ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; const wd = t => ox.measureText(t).width, colW = terms.map(([a, b]) => Math.max(wd(a), wd(b)));
+    const total = wd(eq) + colW.reduce((a, b) => a + b, 0) + 2 * wd(plus), xs = narrow ? x0 - total / 2 : x0, y1 = y0 + fs * 1.7, y2 = y1 + fs * (narrow ? 1.75 : 1.85);
+    [[y1, 0], [y2, 1]].forEach(([y, k]) => { let x = xs; texL(eq, x, y, C.text, fs, 'left'); x += wd(eq);
+      terms.forEach((tm, n) => { ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; const c = x + colW[n] / 2; texL(tm[k], c, y, C.text, fs, 'center');
+        if (!k) mono(tm[2], c, y + fs * 0.66, C.t2, 'center', narrow ? 9 : 11);
+        x += colW[n]; if (n < 2) { texL(plus, x, y, C.text, fs, 'left'); ox.font = `500 ${fs}px "Source Serif 4", Georgia, serif`; x += wd(plus); } }); });
+    if (!narrow) { texL('=  (11π + 16) / (3π)', x0, y2 + fs * 1.5, C.text, fs, 'left'); texL('=  5.364', x0, y2 + fs * 3.1, C.gold, fs * 1.25, 'left', 600); }
+    else texL('= (11π+16)/(3π) = 5.364', x0, y2 + fs * 1.4, C.gold, fs, al, 600);
     ox.globalAlpha = 1; }
   // E: computed against measured, side by side, then both on one number line with the measurement's error band
   const aM = Math.min(1, Math.max(0, (s - 0.79) / 0.04));
   if (aM > 0) { ox.globalAlpha = aM;
-    const lx0 = narrow ? 24 : px, lw = narrow ? OW - 48 : pw, by = narrow ? hy + Rb + 34 : py + 20, ly0 = narrow ? by + 92 : by + Math.min(230, Math.max(170, OH * 0.27)), lo = 4.95, hi = 5.75, X = v => lx0 + (v - lo) / (hi - lo) * lw;
+    const lx0 = narrow ? 24 : px, lw = narrow ? OW - 48 : pw, by = narrow ? py - 8 : py + 20, ly0 = narrow ? by + 90 : by + Math.min(246, Math.max(188, OH * 0.27)), lo = 4.95, hi = 5.75, X = v => lx0 + (v - lo) / (hi - lo) * lw;
     const mu = 5.364, sd = 0.065, r = 5.3643;
     // the two numbers
     const bw = narrow ? (OW - 48) / 2 - 6 : lw / 2 - 8, bh = narrow ? 58 : 96, b2 = lx0 + bw + (narrow ? 12 : 16);
-    [[lx0, C.gold, 'COMPUTED · THE RULE', '5.3643'], [b2, C.blue, 'MEASURED · PLANCK 2018', '5.364 ± 0.065']].forEach(([x, col, k, v]) => {
+    [[lx0, C.gold, 'COMPUTED · THE RULE', '5.364'], [b2, C.blue, 'MEASURED · PLANCK 2018', '5.364 ± 0.065']].forEach(([x, col, k, v]) => {
       ox.fillStyle = 'rgba(16,14,13,0.72)'; ox.strokeStyle = col; ox.lineWidth = 1.2; ox.beginPath(); ox.roundRect ? ox.roundRect(x, by, bw, bh, 8) : ox.rect(x, by, bw, bh); ox.fill(); ox.stroke();
       mono(k, x + bw / 2, by + (narrow ? 15 : 22), col, 'center', narrow ? 9 : 12); texL(v, x + bw / 2, by + (narrow ? 40 : 62), col, narrow ? 19 : Math.min(34, bw * 0.15), 'center', 600); });
-    if (!narrow) mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 24, C.t3, 'left', 11);
+    if (!narrow) { mono('computed on R1, R2, R3 and two premises on which towers hold matter', lx0, by + bh + 22, C.t3, 'left', 11); mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 38, C.t3, 'left', 11); }
     // the number line
     ox.fillStyle = 'rgba(147,180,218,0.16)'; ox.fillRect(X(mu - 2 * sd), ly0 - 22, X(mu + 2 * sd) - X(mu - 2 * sd), 44);
     ox.fillStyle = 'rgba(147,180,218,0.38)'; ox.fillRect(X(mu - sd), ly0 - 22, X(mu + sd) - X(mu - sd), 44);
@@ -1008,7 +1008,7 @@ function overlayKasner(){
   ox.globalAlpha = 1;
 }
 
-// where: is the larger space extra room at the centre? No. Two drawings. The first, struck out: a bulb of extra room
+// where: is the larger space extra room at the centre? No. Two drawings. The first, crossed out: a bulb of extra room
 // opening at one point. The second: the same six directions carried at every point (T4 Thm 4.4); away from the centre
 // the familiar four sit inside them unchanged and each reads as the other (T4 Cor 4.5, T6 Thm 4.5); at the singularity
 // the four fold flat and the way back fails (T5 Prop 5.2), and a switch is forced exactly there (T4 Cor 4.5)
@@ -1044,8 +1044,12 @@ function overlayWhere(s){
     ox.strokeStyle = C.blue; ox.lineWidth = 2; ox.beginPath(); ox.moveTo(xa0, ya); ox.lineTo(bx - rb * bulb, ya); ox.stroke();
     if (bulb > 0) { ox.fillStyle = 'rgba(224,122,85,0.16)'; ox.strokeStyle = C.red; ox.lineWidth = 1.6; ox.beginPath(); ox.arc(bx, ya, rb * bulb, 0, 2 * Math.PI); ox.fill(); ox.stroke(); }
     mono('four', xa0 + (bx - rb - xa0) * 0.3, ya - 13, C.blue, 'center', narrow ? fz(10) : fz(11)); if (bulb >= 1) mono('six', bx, ya, C.red, 'center', narrow ? fz(11) : fz(12));
-    if (strike > 0) { const sx0 = xa0 + 6, sy0 = ya + rb + pad, sx1 = xa1, sy1 = ya - rb - pad;
-      ox.globalAlpha = a * fa; ox.strokeStyle = C.red; ox.lineWidth = 3; ox.lineCap = 'round'; ox.beginPath(); ox.moveTo(sx0, sy0); ox.lineTo(sx0 + (sx1 - sx0) * strike, sy0 + (sy1 - sy0) * strike); ox.stroke(); ox.lineCap = 'butt'; } }
+    // crossed out: a red cross over the bulb and the line beside it, drawn one stroke after the other
+    if (strike > 0) { const hh = rb + pad, hw = Math.min((xa1 - xa0) / 2, hh * 2.2), xc = xa1 - hw, k1 = Math.min(1, strike * 2), k2 = Math.max(0, strike * 2 - 1);
+      ox.globalAlpha = a * fa; ox.strokeStyle = C.red; ox.lineWidth = narrow ? 3 : 4; ox.lineCap = 'round';
+      ox.beginPath(); ox.moveTo(xc - hw, ya - hh); ox.lineTo(xc - hw + 2 * hw * k1, ya - hh + 2 * hh * k1); ox.stroke();
+      if (k2 > 0) { ox.beginPath(); ox.moveTo(xc + hw, ya - hh); ox.lineTo(xc + hw - 2 * hw * k2, ya - hh + 2 * hh * k2); ox.stroke(); }
+      ox.lineCap = 'butt'; } }
   // ---- the second drawing: this
   const fb = sm((s - 0.19) / 0.05); if (fb <= 0) { ox.globalAlpha = 1; return; }
   const base = sm((s - 0.2) / 0.1), six = sm((s - 0.31) / 0.1), arr = sm((s - 0.42) / 0.08), fold = sm((s - 0.51) / 0.09), cut = sm((s - 0.57) / 0.05), pair = sm((s - 0.61) / 0.05);
