@@ -10,6 +10,8 @@ functions:
 untouched_premises:
   dark-tower-matter.five-dimensional-content: "cited for the species (including N) in (iii) to (vi), which the docstring says are not checked here"
   dark-tower-matter.u-transposition-rule: "premise invoked in (vi) for the open branch of both five-dimensional towers; no computable content in this check"
+  dark-matter.r1-equal-mass-per-quantum: "with R2, the reason the depth of the fifth direction is this world's baryon spacing; the check takes that depth as an input and does not derive it"
+  dark-matter.r2-one-quantum-per-unit-ball: "with R1, the reason the depth of the fifth direction is this world's baryon spacing; the check takes that depth as an input and does not derive it"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

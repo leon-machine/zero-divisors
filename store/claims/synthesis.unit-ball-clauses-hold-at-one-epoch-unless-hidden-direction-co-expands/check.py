@@ -138,3 +138,19 @@ def check_unit_ball_clauses_epoch():
     f5_lo, f5_hi = F(16) / (11 * hi + 16), F(16) / (11 * lo + 16)
     assert int(1000 * f5_lo) == 316 and int(1000 * f5_hi) == 316
     return True
+
+
+def check_premise_e_epoch():
+    premise("dark-matter.projection-every-towers-content-dilutes-ones")
+    premise("dark-matter.e-equal-mass-per-unit-ball")
+    for beta in BETAS:
+        ratios_sq = []
+        for a in SAMPLES:
+            nb, n3, n5_sq, b2 = densities(a, beta)
+            d_sheet = n3 / nb                      # rho_2 V_2/(rho_3 V_3), up to the constant V_2/V_3
+            d_five_sq = nb * nb / n5_sq            # (rho_3 V_3/(rho_4 V_4))^2, up to a constant
+            assert d_sheet == a                    # goes as a for every beta
+            assert d_five_sq == b2                 # goes as b
+            ratios_sq.append(d_five_sq / (d_sheet * d_sheet))
+        assert constant(ratios_sq) == (beta == 1)  # one length at every epoch exactly under co-expansion
+    return True

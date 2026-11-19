@@ -1,0 +1,8 @@
+I405  dark-matter.unit-ball-rule
+      dark-matter.odd-towers-populated is declared and untouched, as expected: coverage.yaml: premise that the four odd towers hold matter; the list of dark towers is an input of the check, as its docstring says
+I405  dark-matter.unit-ball-rule
+      dark-matter.projection-every-towers-content-dilutes-ones is declared and untouched, as expected: coverage.yaml: the sourcing rule in which the shares are read (a reading of P1); the check codes the densities per unit three-volume and does not derive the rule
+I405  dark-matter.unit-ball-rule
+      dark-matter.single-ideal-at-residues-zero-and-four is declared and untouched, as expected: coverage.yaml: premise that residues 0 and 4 are empty; the check sums over the five listed towers and does not compute the alternative totals
+
+dark-matter.unit-ball-rule: 0 error(s), 3 other finding(s); check result: pass

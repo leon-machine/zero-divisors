@@ -4890,13 +4890,15 @@
   status: partial
   source: "T14, successor problem (7); the dark-matter results and maintainer decisions of 26 October; the findings of 31 October; the 9 November results and Leon's decisions; the premise audit and Leon's decisions of 10 November"
   statement: >-
-    The unit-ball rule turns on R3, one cell radius of the unseen direction on
-    one side, and R2 and R3 are deposit clauses, set at the descent. Find a
-    rule for the descent's deposit that fixes that cell radius at the
-    deposit epoch: the one rule P2 licenses, equal filling per rung on the
-    shared wall, gives every share one and the ratio $5.000$, so the rule
-    needs democracy in each tower's own cells (R2 and R3 together), with a
-    reason for equal filling.
+    The unit-ball rule turns on Premise E, equal mass per ball of one common
+    radius, and on R3, one such radius of the unseen direction on one side;
+    both are deposit clauses, set at the descent. Find a rule for the
+    descent's deposit that gives equal mass per ball in towers of different
+    dimension and fixes that radius at the deposit epoch: the one rule P2
+    licenses, equal filling per rung on the shared wall, gives every share
+    one and the ratio $5.000$, so the rule needs democracy in balls of each
+    tower's own space (E and R3 together; R2 and R3 in the particle model in
+    which the problem was first stated), with a reason for equal filling.
   why: >-
     The dark-to-baryon ratio $(11\pi + 16)/3\pi = 5.364$ is a fit, not a
     prediction, until the thickness is derived; and the self-interacting
@@ -4996,6 +4998,27 @@
     edges the closed form's past cone now holds R1, R2, R3, P1, P2, P3 and these two; the democracy premise D
     belongs to the de Sitter reading, which cannot be held with R1 and R2 at more than one quantum per de Sitter
     ball (argued), and is not among them. The total remains a fit of two shares against one measured number.
+    (19 November, premises of the total.) By the decision of 19 November the fixed-common-length reading of R3
+    is adopted, reversing that of 10 November: R3's unit is one length common to all towers, the length of a new
+    premise E, equal mass per unit ball (\claimref{dark-matter.e-equal-mass-per-unit-ball}), and the closed form
+    rests on E and R3 (\claimref{dark-matter.unit-ball-rule}, version 7). R1 and R2 are one model of E and are no
+    longer premises of the total; they remain premises of the results that use a quantum's mass or number by
+    itself. The contact mechanism returns R3 with its clauses read on E's ball, using no quantum's mass or number;
+    read on a quantum's own cell it gives a five-dimensional tower its own cell radius as the thickness, as the
+    earlier reading of R3 did, and a three-dimensional tower's sheets this world's own cell radius as their
+    spacing, which is not that reading (\claimref{dark-matter.contact-mechanism-returns-r3}, version 4). On E's
+    ball the contact and indivisibility clauses restate R3, and the side and reciprocity clauses carry what the
+    mechanism adds. What the adoption costs is stated in the
+    rule: E with R3, for some length, holds exactly when the shares hold tower by tower (the mirror's included)
+    with the two thicknesses equal, and a three-dimensional tower's share holds by the definition of the length,
+    so the premises restate the closed form's shares, add only that the two thicknesses are equal, and give the
+    fit no independent support; the total remains a fit. E does not say what its length is beyond tying it to
+    densities that are not observed: it is tied to this world's baryon spacing only through R1 and R2 together,
+    and to the de Sitter radius only through the democracy premise, which is E at that radius given the stored
+    reading of the sphere form; with the odd towers populated E holds in one length only. Across epochs E behaves as R2 did
+    (\claimref{synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands}(v)). On the
+    stored edges the closed form's past cone now holds E, R3, P1, P2, P3, the single-ideal clause and the
+    population of the odd towers. The second attack item now reads: what, at the deposit, fixes E's length.
   attack:
     - >-
       Done on the orbit reading of licensing (9 November;
@@ -5008,9 +5031,11 @@
       defect-count route is closed for the three-dimensional towers.
     - >-
       Under the deposit reading, ask whether anything at $T_{\mathrm{desc}}$
-      fixes one cell radius of the hidden direction: the deposit's own
-      correlation length, as for defects formed by a causal process, is the
-      natural candidate; it must be found without the observed ratio.
+      fixes the length of Premise E, the one radius in which the towers hold
+      equal mass and through which the hidden direction counts (in the
+      particle model, one cell radius): the deposit's own correlation length,
+      as for defects formed by a causal process, is the natural candidate; it
+      must be found without the observed ratio.
     - >-
       For the three-dimensional towers, derive the sheets' displacement from
       the towers' own dynamics
@@ -5021,7 +5046,7 @@
       computed, a burst break or crossover would fix $L_{f}$ independently of
       the dark-to-baryon ratio.
   success: >-
-    R3 derived from a deposit rule, turning $5.364$ into a prediction; or a
+    Premise E and R3 derived from a deposit rule, turning $5.364$ into a prediction; or a
     proof that no rule P2 licenses gives it, leaving the ratio a fit.
   entities:
     - dark-matter.unit-ball-rule
@@ -5037,6 +5062,7 @@
     - synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball
     - dark-matter.single-ideal-at-residues-zero-and-four
     - dark-matter.odd-towers-populated
+    - dark-matter.e-equal-mass-per-unit-ball
   added: "2026-10-22"
 
 - id: op.odd-towers

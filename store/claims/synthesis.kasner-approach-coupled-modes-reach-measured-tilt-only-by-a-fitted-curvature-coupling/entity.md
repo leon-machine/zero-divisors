@@ -33,7 +33,7 @@ derivations:
   - synthesis.scalar-kasner-wall-is-reduced-five-dimensional-vacuum-wall@2
   - interior.kasner-form-interior@7
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
-  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
+  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@2
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3
   - synthesis.imported-einstein-cartan-matter-coupling@1
   - synthesis.imported-planck-2018-lcdm-parameters@3

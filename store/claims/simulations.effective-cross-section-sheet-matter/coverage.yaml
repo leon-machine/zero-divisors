@@ -11,6 +11,9 @@ functions:
     kind: sampled
     clauses: ["spacing between d_b Delta^-1/(1+z) and d_b/(1+z)", "s = d_b Delta^(-1/3)/(1+z) for isotropic compression"]
     omits: "perfect-cube Delta at four redshifts for the isotropic value and three sample splits; general Delta only through the cube inequality at Delta = 2, 5, 10"
+untouched_premises:
+  dark-matter.r1-equal-mass-per-quantum: "with R2, the reason the mean sheet spacing is this world's baryon spacing d_b; the check takes d_b as a symbol and does not derive it"
+  dark-matter.r2-one-quantum-per-unit-ball: "with R1, the reason the mean sheet spacing is this world's baryon spacing d_b; the check takes d_b as a symbol and does not derive it"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

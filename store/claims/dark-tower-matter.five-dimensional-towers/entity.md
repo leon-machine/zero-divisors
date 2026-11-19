@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.five-dimensional-towers
 kind: claim
-version: 4
+version: 5
 title: The five-dimensional towers in cosmology and halos
 status: proved
 region: dark-tower-matter
@@ -17,6 +17,14 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Fable 5.2
+  role: 'the depth of the fifth direction named as the particle model''s length; R1 and R2 assumed'
+  version: 5
+  source: maintainer pass of 2026-11-19
+amendments:
+- version: 5
+  kind: restatement
+  defect: 'the statement took the fifth direction one cell radius deep, about a metre, on R3 alone; R3''s unit is the length of Premise E, which is this world''s baryon spacing only under R1 and R2'
 review: typed
 derivations:
 - name: main
@@ -25,7 +33,9 @@ derivations:
   - dark-tower-matter.five-dimensional-content@5
   assumes:
   - dark-tower-matter.u-transposition-rule@3
-  - dark-matter.r3-one-cell-per-unshared-direction@2
+  - dark-matter.r1-equal-mass-per-quantum@1
+  - dark-matter.r2-one-quantum-per-unit-ball@3
+  - dark-matter.r3-one-cell-per-unshared-direction@3
   proof: proof-main.tex
 checked_by:
 - kind: proof
@@ -46,6 +56,10 @@ locators:
   label: prop:fiveD
   line: 821
 extraction:
+  maintainer_pass_2026_11_19:
+    by: maintainer-2026-11-19
+    date: '2026-11-19'
+    note: 'Version 4 -> 5. Leon''s decision of 19 November 2026 (R3''s unit is the length of Premise E): the statement used a depth of about a metre, this world''s baryon spacing, on R3 alone. Assumes edges to R1 and R2 are added, since that value is the particle model''s, and a marked note says so. No number changed.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -74,7 +88,7 @@ extraction:
 ---
 
 ## formal
-Decimal, with imports as stated. With the fifth direction one cell radius deep and co-expanding (R3; \cite[Rem.~7.9, Rem.~7.14]{ButlerT14}):
+Decimal, with imports as stated. With the fifth direction one cell radius deep and co-expanding (R3; \cite[Rem.~7.9, Rem.~7.14]{ButlerT14}), the cell radius being this world's baryon spacing, about a metre today (\emph{note, 19 November 2026:} R3's unit is the length of Premise E, \claimref{dark-matter.e-equal-mass-per-unit-ball}, which is the baryon spacing in the particle model, R1 and R2, assumed here for that value; under E alone the depth has no stated value and the numbers below are conditional on it):
 \begin{enumerate}
 \item[(i)] $LT$ runs from about $390$ (at $g_{s} = 106.75$) to $1170$ today: the Kaluza-Klein spacing is always below $T/120$, so the towers are five-dimensional at the visible temperature and at their matter's mass scale (K5); at T14's small dark temperatures the dark bath itself is only a few Kaluza-Klein levels deep.
 \item[(ii)] Five-dimensional gauge theory is infrared free; reducing to four dimensions gives a confinement scale below $\pi/L$ by a factor smaller than $e^{-250}$ even at strong coupling (K7), and the $1/r^{2}$ potential binds nothing unless the theory is within a factor of about eight of strong coupling at the quark mass (supplementary \file{D5C}, H3; \cite{CLP2000}). There are no dark hadrons and no dark atoms.
@@ -86,7 +100,7 @@ Decimal, with imports as stated. With the fifth direction one cell radius deep a
 The relic is a symmetric gas of free spin-$\tfrac{1}{2}$ dark quarks and leptons, or of $N$ alone. The lightest species is stable by fermion parity, the lightest quark and lepton by species numbers broken only at the rung scale.
 
 ## technical
-Decimal estimates with imported physics, taking the fifth direction one cell radius deep and co-expanding (premise R3). (i) $LT$ runs from about $390$ to $1170$, so the Kaluza-Klein spacing stays below $T/120$ and the towers are five-dimensional at the visible temperature and at their matter's mass scale, while at small dark temperatures the dark bath is only a few levels deep. (ii) Five-dimensional gauge theory is infrared free: the reduced confinement scale lies below $\pi/L$ by a factor smaller than $e^{-250}$ even at strong coupling, and the $1/r^2$ potential binds nothing unless the theory is within about a factor eight of strong coupling, so there are no dark hadrons or atoms. (iii) With the Kaluza-Klein tower populated, $\Delta\Neff < 0.3$ needs $T_D/T_\gamma < 0.085$ for the nine vectors of $\uu(3)$, not the zero-mode $0.46$ to $0.51$; a sector decoupled at a GeV would give about $670$.
+Decimal estimates with imported physics, taking the fifth direction one cell radius deep and co-expanding (premise R3), the cell radius being this world's baryon spacing of about a metre, which is the particle model's value (R1 and R2) and not fixed by equal mass per unit ball alone. (i) $LT$ runs from about $390$ to $1170$, so the Kaluza-Klein spacing stays below $T/120$ and the towers are five-dimensional at the visible temperature and at their matter's mass scale, while at small dark temperatures the dark bath is only a few levels deep. (ii) Five-dimensional gauge theory is infrared free: the reduced confinement scale lies below $\pi/L$ by a factor smaller than $e^{-250}$ even at strong coupling, and the $1/r^2$ potential binds nothing unless the theory is within about a factor eight of strong coupling, so there are no dark hadrons or atoms. (iii) With the Kaluza-Klein tower populated, $\Delta\Neff < 0.3$ needs $T_D/T_\gamma < 0.085$ for the nine vectors of $\uu(3)$, not the zero-mode $0.46$ to $0.51$; a sector decoupled at a GeV would give about $670$.
 
 (iv) Two-body scattering is collisionless by geometry, $\sigma_{\mathrm{eff}}/m < 10^{-8}\ \mathrm{cm^2\,g^{-1}}$. (v) With no boundary term a four-dimensional zero mode survives and the charged species form a neutral dark plasma, an exposure to plasma-instability limits, not an exclusion. (vi) If the neutral species $N$ carries R2's count and the charged species annihilate at weak coupling, the tower is collisionless; under Premise U this branch is open to both towers. The relic is a symmetric gas of free spin-$\tfrac12$ species, or of $N$ alone.
 

@@ -28,7 +28,7 @@ derivations:
   - dark-matter.population-count-one-share-half-percent@8
   - dark-matter.projection-every-towers-content-dilutes-ones@3
   assumes:
-  - dark-matter.odd-towers-populated@1
+  - dark-matter.odd-towers-populated@2
   - dark-matter.p2-indifference@2
   - dark-matter.r1-equal-mass-per-quantum@1
   - dark-matter.r2-one-quantum-per-unit-ball@3

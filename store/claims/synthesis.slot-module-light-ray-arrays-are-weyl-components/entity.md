@@ -40,7 +40,7 @@ derivations:
   - synthesis.spin10-clause-content-is-the-neutral-singlet-choice@2
   - synthesis.half-integer-weight-array-carries-half-ln2@5
   - standard-model.majorana-element@7
-  - synthesis.lowest-causal-residues-zero-four-content@1
+  - synthesis.lowest-causal-residues-zero-four-content@2
   proof: proof-main.tex
 checked_by:
 - kind: check

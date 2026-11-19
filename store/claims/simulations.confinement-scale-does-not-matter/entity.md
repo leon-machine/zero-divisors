@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - simulations.cluster-bound-two-dimensions@4
-  - simulations.effective-cross-section-sheet-matter@3
+  - simulations.effective-cross-section-sheet-matter@4
   - simulations.imported-low-energy-scattering-two-dimensions@1
   proof: proof-main.tex
 checked_by:

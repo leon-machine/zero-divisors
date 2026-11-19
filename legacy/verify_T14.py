@@ -67,6 +67,15 @@ identity sigma = (1-g) psi, the metric feedback solved for psi, and the
 orientation average 2/3 of the source factor, all exact).  The Boltzmann
 computation of rem:isotropy (CLASS) is a deposited record, not a check
 here.  198 checks (195 prior + 3).
+v2.3 (2026-11-19): Part M.L added for Premise E, equal mass per unit ball,
+which with R3 replaces R1 and R2 as the premise of the unit-ball rule
+(prop:rule (ii) to (iv), prop:thickness (iv), rem:coexpand): the shares with
+the length d written out, fillings that keep E and break R1 and R2, the
+equivalence of E with R3 and the closed form's shares on all six towers in
+both directions (with the mirror and split-pair counterexamples), the one
+length, the two own-cell readings and the total, and the two scalings of
+rem:coexpand.  All exact.  213 checks (200 prior, the 198 above and the two
+floating-point checks of Section 7.7, + 13).
 """
 
 from fractions import Fraction as F
@@ -2076,6 +2085,137 @@ direct_quarter = mmul(m(F(1, 4)), direct_full)
 g.check("Section 7, K22 double nesting: R3 composes to rho_5D/rho_3D = V_2/V_4 = 2/pi, while the direct contact count gives V_2^2/V_4 = 2, 1 (half-disc) or 1/2 (quadrant): none agrees, the mechanism does not compose",
       chained == m(F(2, 1), -1) and direct_full == m(2) and direct_half == m(1) and direct_quarter == m(F(1, 2))
       and chained not in (direct_full, direct_half, direct_quarter))
+
+
+# ........ Part M.L
+print("Part M.L: Premise E (prop:rule (ii) to (iv), prop:thickness (iv), rem:coexpand)")
+# Premise E with its length written out: every populated tower holds the mass mu
+# per ball of radius d of its own space, rho_D V_D d^D = mu.  Densities are
+# monomials q pi^k; lengths and masses are rationals.
+def e_dens(D, mu, d):
+    """Premise E: the mass per unit D-volume, mu/(V_D d^D)"""
+    return mdiv(m(F(mu) / F(d) ** D), V[D])
+
+def e_ball(rho, D, d):
+    """the mass in a ball of radius d of a D-dimensional space at density rho"""
+    return mmul(mmul(rho, V[D]), m(F(d) ** D))
+
+def e_share(rho, rho3, D, length):
+    """the sourcing rule on given densities: rho * length^(D-3) / rho3"""
+    return mdiv(mmul(rho, m(F(length) ** (D - 3))), rho3)
+
+E_MU = [F(1), F(938, 7), F(5, 11)]
+E_D = [F(1), F(49, 50), F(7, 3)]
+g.check("Section 7, L1  prop:rule(i) with d written out: under E and R3 the shares are 4/3 and 8/(3 pi) for every sample mu and d (both cancel)",
+        all(e_share(e_dens(2, mu, d), e_dens(3, mu, d), 2, d) == f3
+            and e_share(e_dens(4, mu, d), e_dens(3, mu, d), 4, d) == f5
+            for mu in E_MU for d in E_D))
+
+def _filling(k2, k4, mq, d):
+    """quanta of mass k mq, one per k balls of radius d: (density, mass of a quantum, quanta per ball)"""
+    out = {}
+    for D, k in ((2, k2), (3, F(1)), (4, k4)):
+        number = mdiv(m(1 / (k * d ** D)), V[D])
+        out[D] = (mmul(m(k * mq), number), k * mq, mmul(mmul(number, V[D]), m(d ** D)))
+    return out
+_fills = [_filling(k2, k4, F(938, 7), F(49, 50)) for k2, k4 in ((F(5), F(16)), (F(1, 3), F(7, 2)))]
+g.check("Section 7, L2  prop:rule(ii): fillings whose quanta are heavier and rarer by factors 5 and 16, or 1/3 and 7/2, keep E, break R1 and R2, and have the shares 4/3 and 8/(3 pi)",
+        all(all(e_ball(fl[D][0], D, F(49, 50)) == m(F(938, 7)) for D in (2, 3, 4))
+            and all(fl[D][1] != F(938, 7) and fl[D][2] != m(1) for D in (2, 4))
+            and e_share(fl[2][0], fl[3][0], 2, F(49, 50)) == f3
+            and e_share(fl[4][0], fl[3][0], 4, F(49, 50)) == f5
+            for fl in _fills))
+_pm = _filling(F(1), F(1), F(938, 7), F(49, 50))
+g.check("Section 7, L3  prop:rule(ii): R1 with R2 in the length d is E with mu = m",
+        all(_pm[D][1] == F(938, 7) and _pm[D][2] == m(1) and e_ball(_pm[D][0], D, F(49, 50)) == m(F(938, 7))
+            for D in (2, 3, 4)))
+
+_DIM = {1: 2, 7: 2, 2: 3, 3: 4, 5: 4}                  # the dark residues and their space dimensions
+_TARGET = {1: f3, 7: f3, 2: m(1), 3: f5, 5: f5}
+
+def _dens_from(shares, s, rho6):
+    """the sourcing rule solved for the densities: f_r = rho_r s^(D_r - 3) / rho_6"""
+    return {r: mmul(mmul(shares[r], rho6), m(F(s) ** (3 - _DIM[r]))) for r in _DIM}
+
+def _e_holds(rho, rho6, d):
+    return all(e_ball(rho[r], _DIM[r], d) == e_ball(rho6, 3, d) for r in _DIM)
+
+_conv, _mirror, _split = [], [], []
+for s_, rho6_ in [(F(1), m(F(3, 7), -1)), (F(49, 50), m(F(11, 2), -1)), (F(5, 3), m(F(2), -1))]:
+    rho_ = _dens_from(_TARGET, s_, rho6_)
+    _conv.append(_e_holds(rho_, rho6_, s_) and all(e_share(rho_[r], rho6_, _DIM[r], s_) == _TARGET[r] for r in _DIM))
+    bad_ = dict(_TARGET); bad_[2] = m(2)                # the mirror at twice our density
+    rb_ = _dens_from(bad_, s_, rho6_)
+    _mirror.append(all(e_ball(rb_[2], 3, L_) == mmul(m(2), e_ball(rho6_, 3, L_)) and not _e_holds(rb_, rho6_, L_)
+                       for L_ in (s_, s_ / 2, 2 * s_, s_ + 1, F(7, 3))))
+    sp_ = dict(_TARGET); sp_[1] = mmul(f3, m(F(3, 2))); sp_[7] = mmul(f3, m(F(1, 2)))   # the pair's sum kept at 8/3
+    rs_ = _dens_from(sp_, s_, rho6_)
+    _split.append(sp_[1][0] + sp_[7][0] == 2 * f3[0] and sp_[1][1] == sp_[7][1] == f3[1]
+                  and all(not _e_holds(rs_, rho6_, L_) for L_ in (s_, s_ / 2, 2 * s_, F(3, 2) * s_)))
+g.check("Section 7, L4  prop:rule(iii): on all six towers, s = t with the five shares (4/3, 4/3, 1, 8/(3 pi), 8/(3 pi)) is E at d = s, and E at d with s = t = d gives each share; with the mirror at twice our density, or the sheet pair split 3/2 and 1/2 with its sum kept, E fails at every sample length",
+        all(_conv) and all(_mirror) and all(_split))
+
+_part, _five = [], []
+for rho2_, rho3_ in [(F(1), F(1)), (F(7, 5), F(2, 9)), (F(1, 100), F(31))]:
+    d_ = F(3) * rho2_ / (F(4) * rho3_)                # rho_2 V_2/(rho_3 V_3) with V_2 = pi, V_3 = 4 pi/3
+    _part.append(e_ball(m(rho2_), 2, d_) == e_ball(m(rho3_), 3, d_)
+                 and all(e_ball(m(rho2_), 2, o) != e_ball(m(rho3_), 3, o) for o in (d_ / 2, 2 * d_, d_ + 1))
+                 and e_share(m(rho2_), m(rho3_), 2, d_) == f3)
+    on = mdiv(mmul(m(rho3_), V[3]), mmul(V[4], m(d_)))
+    off = mmul(on, m(F(9, 10)))
+    _five.append(e_ball(on, 4, d_) == e_ball(m(rho3_), 3, d_) and e_share(on, m(rho3_), 4, d_) == f5
+                 and e_ball(off, 4, d_) != e_ball(m(rho3_), 3, d_)
+                 and e_share(off, m(rho3_), 4, d_) == mmul(f5, m(F(9, 10))))
+g.check("Section 7, L5  prop:rule(iii): d = rho_2 V_2/(rho_3 V_3) equalises the mass per ball of a 3D tower and ours (d/2, 2d, d + 1 do not), and with sheets that far apart f_3D = 4/3 for three unrelated pairs of densities",
+        all(_part))
+g.check("Section 7, L6  prop:rule(iii): at that d, E for the 5D towers holds exactly when f_5D = 8/(3 pi); a 5D density nine tenths of it breaks E and gives nine tenths of the share",
+        all(_five))
+_r3 = m(F(1), -1)
+_r2, _r4 = mmul(mmul(f3, m(1)), _r3), mmul(mmul(f5, _r3), m(F(1, 2)))     # s = 1, t = 2
+g.check("Section 7, L7  prop:rule(iii): with s = 1 and t = 2 the sheets ask for the length 1 and the 5D towers for the length 2, so E holds at no d",
+        mdiv(mmul(_r2, V[2]), mmul(_r3, V[3])) == m(1) and mdiv(mmul(_r3, V[3]), mmul(_r4, V[4])) == m(2))
+g.check("Section 7, L8  prop:rule(iv): in a ball of radius k d the mass is k^2, k^3, k^4 times mu at D = 2, 3, 4, three different numbers for k = 2, 3, 1/2: E holds in one length only",
+        all([mdiv(e_ball(e_dens(D, mu, d), D, k * d), m(mu)) for D in (2, 3, 4)] == [m(k ** 2), m(k ** 3), m(k ** 4)]
+            and len({k ** 2, k ** 3, k ** 4}) == 3
+            for mu in E_MU for d in E_D for k in (F(2), F(3), F(1, 2))))
+
+_mu, _d = F(938, 7), F(49, 50)
+_slab = mmul(e_dens(4, _mu, _d), m(_d))                 # int_0^d mu dh/(V_4 d^4)
+g.check("Section 7, L9  prop:thickness(i), (ii) with d written out: the one-sided slab holds mu/(V_4 d^3) per unit three-volume, a share 8/(3 pi); sheets s apart give V_3 d/(s V_2), equal to V_3/V_2 only at s = d",
+        mdiv(_slab, e_dens(3, _mu, _d)) == f5
+        and all((mdiv(mmul(e_dens(2, _mu, _d), m(1 / s_)), e_dens(3, _mu, _d)) == f3) == (s_ == _d)
+                for s_ in (_d, _d / 2, 2 * _d, F(1))))
+_k, _a = 16, 2 * _d
+_own5 = mdiv(mmul(e_dens(4, _mu, _d), m(_a)), e_dens(3, _mu, _d))
+_own3 = mdiv(mmul(e_dens(2, _mu, _d), m(1 / _a)), e_dens(3, _mu, _d))
+_own_total = [m(1), mmul(m(2), f3), mmul(m(2), _own5)]
+g.check("Section 7, L10 prop:thickness(iv): quanta sixteen times heavier and rarer have own cell radius a = 2d (a^4 = 16 d^4); read on that cell the 5D share is 2 V_3/V_4 = 16/(3 pi) and a 3D tower's would be (V_3/V_2)(d/a) = 2/3",
+        _a ** 4 == _k * _d ** 4 and _own5 == mmul(m(2), f5) == m(F(16, 3), -1) and _own3 == m(F(2, 3)))
+g.check("Section 7, L11 prop:thickness(iv): with the 5D share doubled and the others unchanged the total is 11/3 + 32/(3 pi), in (7.06, 7.07), more than twenty standard deviations from the record",
+        between(_own_total, F(706, 100), F(707, 100)) and sigmas_away(_own_total)[1] > 20)
+
+_sheet_ok = []
+for a6_ in (_d, 2 * _d, _d / 3):                         # this world's own cell radius
+    for ar_ in (_d, 2 * _d, 5 * _d):                     # the sheet tower's own cell radius: it does not enter
+        on_plane_ = mdiv(mmul(e_dens(3, _mu, _d), m(a6_)), e_dens(2, _mu, _d))     # rho_us/rho_3D on the plane
+        share_ = mdiv(mmul(e_dens(2, _mu, _d), m(1 / a6_)), e_dens(3, _mu, _d))
+        _sheet_ok.append(on_plane_ == mmul(mdiv(V[2], V[3]), m(a6_ / _d))
+                         and all((mmul(mdiv(mmul(e_dens(2, _mu, _d), m(1 / s_)), e_dens(3, _mu, _d)), on_plane_) == m(1)) == (s_ == a6_)
+                                 for s_ in (a6_, _d, ar_, 2 * a6_))
+                         and share_ == mmul(f3, m(_d / a6_))
+                         and (share_ == mmul(f3, m(_d / ar_))) == (ar_ == a6_))
+g.check("Section 7, L13 prop:thickness(iv): for a sheet tower the count on own cells is made on this world's cells: the sheets come out a_6 apart and the share is (V_3/V_2)(d/a_6), whatever the tower's own cell radius (a_6 = d, 2d, d/3; a_r = d, 2d, 5d)",
+        all(_sheet_ok))
+
+def _lengths(a, b):
+    """the two lengths of rem:coexpand at scale factors a, b: densities go as a^-2, a^-3, (a^3 b)^-1"""
+    r2, r3, r4 = m(F(7, 5) / a ** 2), m(F(2, 9) / a ** 3), m(F(3, 4) / (a ** 3 * b), -1)
+    return mdiv(mmul(r2, V[2]), mmul(r3, V[3])), mdiv(mmul(r3, V[3]), mmul(r4, V[4]))
+_s0, _f0 = _lengths(F(1), F(1))
+g.check("Section 7, L12 rem:coexpand: the length equalising a 3D tower with us scales as a and the length equalising a 5D tower with us scales as b; their ratio is constant exactly when b follows a (samples a = 2, 5, 1/3; b = a and b fixed)",
+        all(_lengths(a, b)[0] == mmul(_s0, m(a)) and _lengths(a, b)[1] == mmul(_f0, m(b))
+            and ((mdiv(_lengths(a, b)[0], _lengths(a, b)[1]) == mdiv(_s0, _f0)) == (a == b))
+            for a in (F(2), F(5), F(1, 3)) for b in (a, F(1))))
 
 
 # ---------------------------------------------------------------------------

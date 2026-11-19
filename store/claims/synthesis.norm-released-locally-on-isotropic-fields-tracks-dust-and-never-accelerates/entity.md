@@ -31,7 +31,7 @@ derivations:
   - dark-energy.imported-henneaux-teitelboim-promotion@6
   - dark-energy.vacuum-region-registration-condition@8
   - synthesis.frozen-phase-spectrum-not-red@4
-  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
+  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@2
   proof: proof-main.tex
 checked_by:
 - kind: check

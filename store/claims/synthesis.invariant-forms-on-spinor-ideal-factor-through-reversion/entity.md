@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - synthesis.reversion-pairing-vanishes-residues-zero-four@1
-  - synthesis.lowest-causal-residues-zero-four-content@1
+  - synthesis.lowest-causal-residues-zero-four-content@2
   - dark-tower-matter.where-mass-begins@2
   proof: proof-main.tex
 about:
