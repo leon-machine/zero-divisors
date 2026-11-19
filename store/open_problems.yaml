@@ -4996,6 +4996,22 @@
     edges the closed form's past cone now holds R1, R2, R3, P1, P2, P3 and these two; the democracy premise D
     belongs to the de Sitter reading, which cannot be held with R1 and R2 at more than one quantum per de Sitter
     ball (argued), and is not among them. The total remains a fit of two shares against one measured number.
+    (19 November, premises of the total.) By the decision of 19 November the fixed-common-length reading of R3
+    is adopted, reversing that of 10 November: R3's unit is one length common to all towers, the length of a new
+    premise E, equal mass per unit ball (\claimref{dark-matter.e-equal-mass-per-unit-ball}), and the closed form
+    rests on E and R3 (\claimref{dark-matter.unit-ball-rule}, version 7). R1 and R2 are one model of E and are no
+    longer premises of the total; they remain premises of the results that use a quantum's mass or number by
+    itself. The contact mechanism returns R3 with its clauses read on E's ball, using no quantum's mass or number;
+    read on a quantum's own cell it gives the earlier reading
+    (\claimref{dark-matter.contact-mechanism-returns-r3}, version 4). What the adoption costs is stated in the
+    rule: E with R3, for some length, holds exactly when the two shares hold with the two thicknesses equal, and
+    the three-dimensional share holds by the definition of the length, so the premises carry no content beyond
+    the closed form and the total remains a fit. E does not say what its length is: it is tied to this world's
+    baryon spacing only through R2, and to the de Sitter radius only through the democracy premise, which is E at
+    that radius; E holds in one length only. Across epochs E behaves as R2 did
+    (\claimref{synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands}(v)). On the
+    stored edges the closed form's past cone now holds E, R3, P1, P2, P3, the single-ideal clause and the
+    population of the odd towers. The second attack item now reads: what, at the deposit, fixes E's length.
   attack:
     - >-
       Done on the orbit reading of licensing (9 November;
@@ -5037,6 +5053,7 @@
     - synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball
     - dark-matter.single-ideal-at-residues-zero-and-four
     - dark-matter.odd-towers-populated
+    - dark-matter.e-equal-mass-per-unit-ball
   added: "2026-10-22"
 
 - id: op.odd-towers

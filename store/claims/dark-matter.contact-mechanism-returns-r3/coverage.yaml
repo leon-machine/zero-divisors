@@ -2,7 +2,7 @@ functions:
   check_five_dimensional_count:
     kind: exact
     clauses: ["(i) f_5D = V_3/V_4"]
-    omits: "the contact criterion (a unit ball at height h meets the hyperplane iff h^2 <= 1) is checked at sample heights and foot points; the postulates C, I, S and O are assumed"
+    omits: "the contact criterion (a ball of radius d at height h meets the hyperplane iff h^2 <= d^2, in the unit d) is checked at sample heights and foot points; the postulates C, I, S and O are assumed"
   check_side_is_immaterial:
     kind: exact
     clauses: ["(iii) the one side S"]
@@ -13,10 +13,14 @@ functions:
     omits: ""
   check_total_and_alternatives:
     kind: exact
-    clauses: ["(iii) the total is the unit-ball rule's", "d_b cancels"]
+    clauses: ["(iii) the total is the unit-ball rule's", "d cancels"]
     omits: "the cancellation of d is checked at the sample lengths in UNITS; the comparison with observation (more than 5.5 sigma without S) uses the check's own OBS and SIG constants"
+  check_own_cell_reading_differs:
+    kind: exact
+    clauses: ["(iv) on a quantum's own cell the thickness is the own cell radius and the share is (V_3/V_4)(a/d); at sixteen times heavier and rarer, a = 2d and the share doubles"]
+    omits: "the five-dimensional tower only, at k = 1, 16, 81; the three-dimensional towers' own-cell share is the proof's"
 judge:
-  by: coverage-judge-2026-10-23
-  date: '2026-10-23'
+  by: maintainer-2026-11-19
+  date: '2026-11-19'
   verdict: agrees
   note: "the arithmetic and geometry derived from the postulates are exact in Q(pi); the postulates themselves are not tested"

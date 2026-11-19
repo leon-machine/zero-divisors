@@ -1,22 +1,34 @@
 functions:
   check_shares:
     kind: exact
-    clauses: ["f = V_3/V_D, with values 4/3 at D = 2, 1 at D = 3, 8/(3 pi) at D = 4"]
-    omits: "D = 2, 3, 4 only, the dimensions that occur; the densities m/V_D and the unit-cell factor of R3 are coded as the rules, so the check computes their consequences and does not derive them; m cancels at two sample masses"
+    clauses: ["(i) f = V_3/V_D, with values 4/3 at D = 2, 1 at D = 3, 8/(3 pi) at D = 4"]
+    omits: "D = 2, 3, 4 only, the dimensions that occur; the densities mu/(V_D d^D) of Premise E and the thickness d of R3 are coded as the rules, so the check computes their consequences and does not derive them; mu and d cancel at two sample masses and two sample lengths"
   check_dark_towers_and_dimensions:
     kind: partial
-    clauses: ["sum over dark r with D_r = 2, 2, 4, 4, 3"]
+    clauses: ["(i) sum over dark r with D_r = 2, 2, 4, 4, 3"]
     omits: "the five representatives (2,1), (1,2), (4,1), (1,4), (3,1) are typed in; it verifies their residues 1, 7, 3, 5, 2, causality and dimensions, not that these are exactly the populated dark towers"
   check_total:
     kind: exact
-    clauses: ["Omega_dark/Omega_b = (11 pi + 16)/(3 pi) = 5.36432", "within the error bar of 5.364 +- 0.065"]
+    clauses: ["(i) Omega_dark/Omega_b = (11 pi + 16)/(3 pi) = 5.36432", "within the error bar of 5.364 +- 0.065"]
     omits: "that the agreement is a fit chosen with the value known, and the count of fourteen candidates, have no computable content here"
+  check_quanta_do_not_enter:
+    kind: exact
+    clauses: ["(ii) a filling that keeps E has the shares of (i) whatever its quanta weigh", "(ii) R1 and R2 in E's length imply E"]
+    omits: "three sample fillings, with the factor different in the three- and five-dimensional towers; the general statement is the proof's"
+  check_e_and_r3_are_the_closed_form:
+    kind: exact
+    clauses: ["(iii) E with s = t = d if and only if s = t and the two shares", "(iii) d = rho_2 V_2/(rho_3 V_3) is the only length, and f_3D = V_3/V_2 identically", "(iii) E for the five-dimensional towers exactly when f_5D = V_3/V_4"]
+    omits: "sample densities and lengths, exact in Q(pi); uniqueness of the length is checked against three other lengths per sample, the proof gives it in general; the equalities within a pair of odd towers and for the mirror are not coded"
+  check_one_length_only:
+    kind: exact
+    clauses: ["(iv) (d'/d)^D takes different values at D = 2, 3, 4"]
+    omits: "three ratios d'/d at two masses and two lengths"
 untouched_premises:
   dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the list of dark towers is an input of the check, as its docstring says"
   dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; the check sums over the five listed towers and does not compute the alternative totals"
   dark-matter.projection-every-towers-content-dilutes-ones: "the sourcing rule in which the shares are read (a reading of P1); the check codes the densities per unit three-volume and does not derive the rule"
 judge:
-  by: coverage-judge-2026-10-23
-  date: '2026-10-23'
+  by: maintainer-2026-11-19
+  date: '2026-11-19'
   verdict: agrees
-  note: "the closed form and its decimal are exact in pi; the list of dark towers is an input, as the docstring says"
+  note: "the closed form and its decimal are exact in pi; clauses (ii) to (iv) are checked at sample fillings, densities and lengths, exactly; the list of dark towers is an input, as the docstring says"

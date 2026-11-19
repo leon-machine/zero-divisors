@@ -3,3 +3,7 @@ functions:
     kind: sampled
     clauses: ["(i) cell-radius ratios: sheets constant, five-dimensional a^((beta-1)/4), constant only at beta = 1", "(ii) standing R3: w = (beta - 1)/4, dust only at beta = 1, drift integer parts 189 and 168, fraction 0.316", "(iii) deposit R3: dust for every beta", "(iv) counted thickness 2.397e-10 m and decimal order 5 under the 40 micrometre bound"]
     omits: "exponent laws are verified at four sample scale factors and four sample exponents, not symbolically; the entropy-conservation bound on a_dep and the observational dust bound are in the proof text; the reading of R2 and R3 as standing or deposit clauses is not computable"
+  check_premise_e_epoch:
+    kind: sampled
+    clauses: ["(v) E's length goes as a for the sheet towers and as b for the five-dimensional towers; one length at more than one epoch exactly when beta = 1"]
+    omits: "four sample scale factors and four sample exponents, not symbolic; the constants V_2/V_3 and V_3/V_4 are dropped since only the dependence on a is tested; that clause (iv) does not carry over is a statement about what E leaves open and is not computed"

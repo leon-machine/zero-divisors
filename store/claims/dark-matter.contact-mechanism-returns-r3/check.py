@@ -4,12 +4,15 @@ Numbers of Q(pi) are Laurent polynomials in pi, {k: c} for sum c pi^k (pi transc
 polynomial equality is equality of reals); decimals use rational bounds on pi. Unit-ball volumes
 come from the recursion V_0 = 1, V_1 = 2, V_D = (2 pi / D) V_(D-2). The clauses C, I, S and O are
 postulated; what is checked is the arithmetic and geometry the proposition derives from them.
+Premise E gives the mass densities mu/(V_D d^D); the unit of length in (i) to (iii) is d, and the
+last check puts d back and finds it cancels. No quantum's mass or number is used.
 
-(i)   C: the unit ball about a centre at height h above the hyperplane x_4 = 0 meets it exactly when
-      h^2 <= 1 (the squared distance from the centre to the hyperplane, computed as the minimum of
-      |c - x|^2 over the hyperplane, is h^2); with density 1/V_4 (R2) and one side (S), the count
-      per unit three-volume is int_0^1 dh / V_4 = 1/V_4, and f_5D = (m/V_4)/(m/V_3) = V_3/V_4 =
-      8/(3 pi) (R1: m cancels). Two-sided contact gives 2/V_4, so S is the factor one half.
+(i)   C: the ball of radius d (here 1) about a mass element at height h above the hyperplane
+      x_4 = 0 meets it exactly when h^2 <= 1 (the squared distance from the centre to the
+      hyperplane, computed as the minimum of |c - x|^2 over the hyperplane, is h^2); with mass
+      density mu/V_4 (E) and one side (S), the mass per unit three-volume is int_0^1 mu dh / V_4 =
+      mu/V_4, and f_5D = (mu/V_4)/(mu/V_3) = V_3/V_4 = 8/(3 pi) (mu cancels). Two-sided contact
+      gives twice that, so S is the factor one half.
       Which side is immaterial: in Cl(1,4) the components (1 +- omega)/2 are central orthogonal
       idempotents on which e_4 acts as +-P^-1 (the sign names a side), and two components at half
       density, each sourcing its own side, give the one-component count 1/V_4.
@@ -18,8 +21,12 @@ postulated; what is checked is the arithmetic and geometry the proposition deriv
       f_3D = V_3/V_2 = 4/3. A sheet holding both modules would be sourced at 2/V_3.
 (iii) The total 1 + 2 f_3D + 2 f_5D is the unit-ball rule's (11 pi + 16)/(3 pi), 5.36432 to five
       places; the unit d_b cancels from every ratio (checked at two lengths); without S the total is
-      T(2) = 5.729 (three places), more than 5.5 sigma high; cubic cells give 5; the mean
-      spacing V_3^(1/3) lies in (1.61, 1.62).
+      T(2) = 5.729 (three places), more than 5.5 sigma high; cubic cells give 5; the side
+      V_3^(1/3) of a cube of the ball's volume lies in (1.61, 1.62).
+(iv)  Read on a quantum's own cell with R2 dropped: a five-dimensional tower that keeps E with
+      quanta k times heavier and rarer has own cell radius a with a^4 = k d^4; at k = 16, a = 2d,
+      the slab has width 2d and the share is 2 V_3/V_4 = 16/(3 pi), not 8/(3 pi); the total with
+      both five-dimensional towers so filled is 11/3 + 32/(3 pi), about 7.06.
 """
 from fractions import Fraction as F
 
@@ -31,7 +38,7 @@ OBS = F(1200, 10000) / F(2237, 100000)
 SIG = F(65, 1000)
 HEIGHTS = [F(0), F(1, 3), F(-3, 4), F(1), F(-1), F(7, 6), F(-5, 2), F(2)]
 FOOT_SAMPLES = [[F(0), F(0), F(0)], [F(1, 2), F(-1, 3), F(2)], [F(-3), F(1), F(1, 5)]]
-UNITS = [F(1), F(49, 50)]                       # two choices of the common length d_b
+UNITS = [F(1), F(49, 50)]                       # two choices of the common length d
 MASS = F(938, 7)
 
 
@@ -89,8 +96,7 @@ def prod(gens, sq):
 
 def check_five_dimensional_count():
     premise("dark-matter.nesting")
-    premise("dark-matter.r1-equal-mass-per-quantum")
-    premise("dark-matter.r2-one-quantum-per-unit-ball")
+    premise("dark-matter.e-equal-mass-per-unit-ball")
     met = 0
     for h in HEIGHTS:
         # squared distance from (0,0,0,h) to points (x,0) of the hyperplane; minimum at the foot x = 0
@@ -112,7 +118,7 @@ def check_five_dimensional_count():
 
 def check_side_is_immaterial():
     premise("dark-matter.direction-nesting-adds-algebra")
-    premise("dark-matter.r2-one-quantum-per-unit-ball")
+    premise("dark-matter.e-equal-mass-per-unit-ball")
     sq = GA.sig(1, 4)
     P, w = prod([0, 1, 2, 3], sq), prod([0, 1, 2, 3, 4], sq)
     Pinv = GA.scal(-1, P)                                   # P^2 = -1
@@ -130,8 +136,7 @@ def check_side_is_immaterial():
 
 def check_three_dimensional_sheets():
     premise("dark-matter.nesting")
-    premise("dark-matter.r1-equal-mass-per-quantum")
-    premise("dark-matter.r2-one-quantum-per-unit-ball")
+    premise("dark-matter.e-equal-mass-per-unit-ball")
     premise("dark-matter.projection-every-towers-content-dilutes-ones")
     down = lmul(linv(ball(3)), linv(linv(ball(2))))          # (1/V_3)/(1/V_2)
     assert down == {0: F(3, 4)}
@@ -147,8 +152,7 @@ def check_three_dimensional_sheets():
 
 
 def check_total_and_alternatives():
-    premise("dark-matter.r1-equal-mass-per-quantum")
-    premise("dark-matter.r2-one-quantum-per-unit-ball")
+    premise("dark-matter.e-equal-mass-per-unit-ball")
     f3 = lmul(ball(3), linv(ball(2)))
     f5 = lmul(ball(3), linv(ball(4)))
     total = ladd(lp(1), lmul(lp(2), f3), lmul(lp(2), f5))
@@ -170,4 +174,29 @@ def check_total_and_alternatives():
     assert sum(cube) == 5
     lo, hi = bounds(ball(3))
     assert F(161, 100) ** 3 < lo and hi < F(162, 100) ** 3
+    return True
+
+
+def check_own_cell_reading_differs():
+    premise("dark-matter.e-equal-mass-per-unit-ball")
+    d = F(49, 50)
+    f5 = lmul(ball(3), linv(ball(4)))
+    ru = lmul(lp(MASS / d ** 3), linv(ball(3)))                 # ours, by E
+    for k, root in [(F(16), F(2)), (F(81), F(3)), (F(1), F(1))]:
+        assert root ** 4 == k
+        # the tower keeps E: quanta of mass k MASS, one per k balls of radius d
+        number = lmul(lp(1 / (k * d ** 4)), linv(ball(4)))
+        rho4 = lmul(lp(k * MASS), number)
+        assert lmul(rho4, ball(4), lp(d ** 4)) == {0: MASS}
+        a = root * d                                            # own cell radius: one quantum per ball of radius a
+        assert lmul(number, ball(4), lp(a ** 4)) == {0: F(1)}
+        on_common = lmul(rho4, lp(d), linv(ru))                 # contact read on E's ball
+        on_own = lmul(rho4, lp(a), linv(ru))                    # contact read on the quantum's own cell
+        assert on_common == f5
+        assert on_own == lmul(f5, lp(root))
+        assert (on_own == on_common) == (k == 1)
+    total = ladd(lp(1), lmul(lp(2), ball(3), linv(ball(2))), lmul(lp(2), f5, lp(2)))
+    assert total == {0: F(11, 3), -1: F(32, 3)}
+    lo, hi = bounds(total)
+    assert F(706, 100) < lo and hi < F(707, 100)
     return True
