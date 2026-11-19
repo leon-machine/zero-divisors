@@ -2348,7 +2348,7 @@
 ""
 ]
 ],
-"key": "487c0104e3a5b8ec",
+"key": "becc6e6fa9212c70",
 "result": "pass",
 "runs": [
 {
@@ -2390,7 +2390,7 @@
 ""
 ]
 ],
-"key": "3e07ca471d526f63",
+"key": "33a0b060b6fdb0a2",
 "result": "pass",
 "runs": [
 {
@@ -2433,7 +2433,7 @@
 ""
 ]
 ],
-"key": "b6786fb0730cc770",
+"key": "dc749d7b5b760247",
 "result": "pass",
 "runs": [
 {
@@ -2483,7 +2483,7 @@
 "dark-matter.contact-mechanism-returns-r3": {
 "failed": false,
 "findings": [],
-"key": "41501fbba741571b",
+"key": "ce1add8902416623",
 "result": "pass",
 "runs": [
 {
@@ -2492,9 +2492,8 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"dark-matter.nesting",
-"dark-matter.r1-equal-mass-per-quantum",
-"dark-matter.r2-one-quantum-per-unit-ball"
+"dark-matter.e-equal-mass-per-unit-ball",
+"dark-matter.nesting"
 ]
 },
 {
@@ -2504,7 +2503,7 @@
 "quantities": [],
 "touched": [
 "dark-matter.direction-nesting-adds-algebra",
-"dark-matter.r2-one-quantum-per-unit-ball"
+"dark-matter.e-equal-mass-per-unit-ball"
 ]
 },
 {
@@ -2513,10 +2512,9 @@
 "ok": true,
 "quantities": [],
 "touched": [
+"dark-matter.e-equal-mass-per-unit-ball",
 "dark-matter.nesting",
-"dark-matter.projection-every-towers-content-dilutes-ones",
-"dark-matter.r1-equal-mass-per-quantum",
-"dark-matter.r2-one-quantum-per-unit-ball"
+"dark-matter.projection-every-towers-content-dilutes-ones"
 ]
 },
 {
@@ -2525,8 +2523,25 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"dark-matter.r1-equal-mass-per-quantum",
-"dark-matter.r2-one-quantum-per-unit-ball"
+"dark-matter.e-equal-mass-per-unit-ball"
+]
+},
+{
+"derivation": null,
+"func": "check_own_cell_reading_differs",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball"
+]
+},
+{
+"derivation": null,
+"func": "check_own_cell_sheets_use_our_cell",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball"
 ]
 }
 ]
@@ -2534,14 +2549,14 @@
 "dark-matter.d-democracy-total-mass": {
 "failed": false,
 "findings": [],
-"key": "6f33b433c6a2950f",
+"key": "f81ac64497b074ca",
 "result": "none",
 "runs": []
 },
 "dark-matter.democracy-de-sitter-radius-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "fbe308a7db7186b0",
+"key": "5e68eaf865c95d60",
 "result": "pass",
 "runs": [
 {
@@ -2621,6 +2636,13 @@
 }
 ]
 },
+"dark-matter.e-equal-mass-per-unit-ball": {
+"failed": false,
+"findings": [],
+"key": "be06684e569e3227",
+"result": "none",
+"runs": []
+},
 "dark-matter.flag-bit-exists-exactly-tower-dimension": {
 "failed": false,
 "findings": [
@@ -2631,7 +2653,7 @@
 ""
 ]
 ],
-"key": "9e9922179004349f",
+"key": "accd83890f1f2e28",
 "result": "pass",
 "runs": [
 {
@@ -2674,7 +2696,7 @@
 ""
 ]
 ],
-"key": "6c0be8c67323fa43",
+"key": "d001eae88cb18439",
 "result": "pass",
 "runs": [
 {
@@ -2865,7 +2887,7 @@
 ""
 ]
 ],
-"key": "4d9ea6efdc4ab74b",
+"key": "050b72d3e912d17e",
 "result": "pass",
 "runs": [
 {
@@ -2978,7 +3000,7 @@
 ""
 ]
 ],
-"key": "45029c9baba00931",
+"key": "8b6fbc0089fa9961",
 "result": "pass",
 "runs": [
 {
@@ -3026,7 +3048,7 @@
 ""
 ]
 ],
-"key": "1b35bfadc3b50bc0",
+"key": "eca5c59147477658",
 "result": "pass",
 "runs": [
 {
@@ -3079,7 +3101,7 @@
 ""
 ]
 ],
-"key": "0a9ad1ebbbbb5459",
+"key": "d6c4dc1ba049b1a0",
 "result": "pass",
 "runs": [
 {
@@ -3180,7 +3202,7 @@
 "dark-matter.odd-towers-populated": {
 "failed": false,
 "findings": [],
-"key": "e895b14b388c8684",
+"key": "2715103d3e6506b3",
 "result": "none",
 "runs": []
 },
@@ -3194,7 +3216,7 @@
 ""
 ]
 ],
-"key": "1b1ee8ee422d5025",
+"key": "8e0c9a3ac9081e97",
 "result": "pass",
 "runs": [
 {
@@ -3232,7 +3254,7 @@
 ""
 ]
 ],
-"key": "11e41e9434227a36",
+"key": "398813a67e91945c",
 "result": "pass",
 "runs": [
 {
@@ -3309,7 +3331,7 @@
 ""
 ]
 ],
-"key": "e7553865849ca417",
+"key": "077e40cbe406fd3e",
 "result": "pass",
 "runs": [
 {
@@ -3350,7 +3372,7 @@
 ""
 ]
 ],
-"key": "ad5abce5d01e8c8c",
+"key": "0c06f36310c1449d",
 "result": "pass",
 "runs": [
 {
@@ -3411,7 +3433,7 @@
 ""
 ]
 ],
-"key": "4ba48be86356a8c7",
+"key": "86e3c0af555b8c20",
 "result": "pass",
 "runs": [
 {
@@ -3451,7 +3473,7 @@
 "dark-matter.r3-one-cell-per-unshared-direction": {
 "failed": false,
 "findings": [],
-"key": "d1e06641989cbf37",
+"key": "4a8d10b3614e157b",
 "result": "none",
 "runs": []
 },
@@ -3465,7 +3487,7 @@
 ""
 ]
 ],
-"key": "22f336025a83bd7b",
+"key": "b11767e9337dd17b",
 "result": "pass",
 "runs": [
 {
@@ -3559,7 +3581,7 @@
 ""
 ]
 ],
-"key": "e28379f4ebba30be",
+"key": "b3642706ca784b88",
 "result": "pass",
 "runs": [
 {
@@ -3597,7 +3619,7 @@
 ""
 ]
 ],
-"key": "840ceee02af1ba3c",
+"key": "0183650b11273fc3",
 "result": "pass",
 "runs": [
 {
@@ -3694,7 +3716,7 @@
 "dark-matter.status-rule": {
 "failed": false,
 "findings": [],
-"key": "2672c5faea9ca78d",
+"key": "52efef7aad532d7d",
 "result": "none",
 "runs": []
 },
@@ -3708,7 +3730,7 @@
 ""
 ]
 ],
-"key": "2a4e5f3b802bd8fa",
+"key": "829d8ffb662b96c1",
 "result": "pass",
 "runs": [
 {
@@ -3887,7 +3909,7 @@
 ""
 ]
 ],
-"key": "6c76772b36b40ac1",
+"key": "f629f4e120ef261f",
 "result": "pass",
 "runs": [
 {
@@ -3941,7 +3963,7 @@
 ""
 ]
 ],
-"key": "aa6291b2c063a920",
+"key": "5d518809f3dc1e30",
 "result": "pass",
 "runs": [
 {
@@ -4064,7 +4086,7 @@
 ""
 ]
 ],
-"key": "fcb01c5ae2043ba1",
+"key": "07092bcdc9459b07",
 "result": "pass",
 "runs": [
 {
@@ -4108,7 +4130,7 @@
 "dark-matter.unit-ball-rule": {
 "failed": false,
 "findings": [],
-"key": "99af65271df769d2",
+"key": "47dbae959e32524a",
 "result": "pass",
 "runs": [
 {
@@ -4117,8 +4139,7 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"dark-matter.r1-equal-mass-per-quantum",
-"dark-matter.r2-one-quantum-per-unit-ball",
+"dark-matter.e-equal-mass-per-unit-ball",
 "dark-matter.r3-one-cell-per-unshared-direction"
 ]
 },
@@ -4137,10 +4158,48 @@
 "ok": true,
 "quantities": [],
 "touched": [
-"dark-matter.r1-equal-mass-per-quantum",
-"dark-matter.r2-one-quantum-per-unit-ball",
+"dark-matter.e-equal-mass-per-unit-ball",
 "dark-matter.r3-one-cell-per-unshared-direction",
 "dark-matter.towers-are-residues-single-clock-filter"
+]
+},
+{
+"derivation": null,
+"func": "check_quanta_do_not_enter",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball",
+"dark-matter.r3-one-cell-per-unshared-direction"
+]
+},
+{
+"derivation": null,
+"func": "check_e_and_r3_are_the_closed_form",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball",
+"dark-matter.r3-one-cell-per-unshared-direction"
+]
+},
+{
+"derivation": null,
+"func": "check_equivalence_is_per_tower",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball",
+"dark-matter.r3-one-cell-per-unshared-direction"
+]
+},
+{
+"derivation": null,
+"func": "check_one_length_only",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball"
 ]
 }
 ]
@@ -4162,7 +4221,7 @@
 ""
 ]
 ],
-"key": "58edd95920df62af",
+"key": "b687a3219e8d1111",
 "result": "pass",
 "runs": [
 {
@@ -4352,7 +4411,7 @@
 ""
 ]
 ],
-"key": "d79adb91373418a0",
+"key": "747c162b6e8fe2d0",
 "result": "pass",
 "runs": [
 {
@@ -4559,7 +4618,7 @@
 ""
 ]
 ],
-"key": "c16ddcee279b8db4",
+"key": "93868bcb24790635",
 "result": "pass",
 "runs": [
 {
@@ -4771,7 +4830,7 @@
 "dark-tower-matter.population": {
 "failed": false,
 "findings": [],
-"key": "27a6e51a74a0f92c",
+"key": "b6cd4abe2fd5189c",
 "result": "proof-only",
 "runs": []
 },
@@ -4785,7 +4844,7 @@
 ""
 ]
 ],
-"key": "74e8a1abea8dff8c",
+"key": "e5986a1b92be9fc8",
 "result": "pass",
 "runs": [
 {
@@ -4936,7 +4995,7 @@
 ""
 ]
 ],
-"key": "94eedb2fb72ca688",
+"key": "5f0786414a7c60f9",
 "result": "pass",
 "runs": [
 {
@@ -11359,7 +11418,7 @@
 "note.dark-matter.setting-dark-matter-ratio-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "037bd6bb5b4354b3",
+"key": "810b07b8aeacb465",
 "result": "none",
 "runs": []
 },
@@ -24177,7 +24236,7 @@
 "simulations.effective-cross-section-sheet-matter": {
 "failed": false,
 "findings": [],
-"key": "8cd4d822408e48ee",
+"key": "fad60c3f8b577cca",
 "result": "pass",
 "runs": [
 {
@@ -24210,7 +24269,7 @@
 "simulations.halo-shapes": {
 "failed": false,
 "findings": [],
-"key": "e16d651225e05a08",
+"key": "23d6c3b03cca29aa",
 "result": "none",
 "runs": []
 },
@@ -24291,7 +24350,7 @@
 "simulations.imported-unit-ball-rule-family": {
 "failed": false,
 "findings": [],
-"key": "23e5268b86698b6a",
+"key": "3b50bbb68d46801c",
 "result": "pass",
 "runs": [
 {
@@ -24329,7 +24388,7 @@
 "simulations.merger": {
 "failed": false,
 "findings": [],
-"key": "95944efeb84adb51",
+"key": "0068efc79bdfac57",
 "result": "none",
 "runs": []
 },
@@ -31938,7 +31997,7 @@
 "synthesis.antiperiodic-array-against-the-light-ray-continuum-at-window-length-r": {
 "failed": false,
 "findings": [],
-"key": "72fd31727c35dab2",
+"key": "8b1eeadd7e8e632b",
 "result": "pass",
 "runs": [
 {
@@ -32097,7 +32156,7 @@
 "synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations": {
 "failed": false,
 "findings": [],
-"key": "8bc9c1819eb8866d",
+"key": "c3b01876076b561e",
 "result": "pass",
 "runs": [
 {
@@ -33217,7 +33276,7 @@
 "synthesis.capacity-and-sakharov-readings-leave-the-generation-number-free": {
 "failed": false,
 "findings": [],
-"key": "4fcf97ee819c0102",
+"key": "61de7efaecf2bacb",
 "result": "pass",
 "runs": [
 {
@@ -35682,7 +35741,7 @@
 "synthesis.d-term-level-free-at-fixed-n": {
 "failed": false,
 "findings": [],
-"key": "2eb06c9934189681",
+"key": "68805e86adc9ab5e",
 "result": "pass",
 "runs": [
 {
@@ -35712,7 +35771,7 @@
 "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
 "failed": false,
 "findings": [],
-"key": "7dec9e8b9c7b808a",
+"key": "822bdb168eee9d3f",
 "result": "pass",
 "runs": [
 {
@@ -37636,7 +37695,7 @@
 "synthesis.exponential-reading-of-the-tower-is-the-iterated-fock-functor-not-the-ascent": {
 "failed": false,
 "findings": [],
-"key": "bdbe3d12e6919066",
+"key": "bee3b08045146aa6",
 "result": "pass",
 "runs": [
 {
@@ -38075,7 +38134,7 @@
 "synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio": {
 "failed": false,
 "findings": [],
-"key": "db5026085a3de832",
+"key": "b612e0fcb2f1501b",
 "result": "pass",
 "runs": [
 {
@@ -38300,7 +38359,7 @@
 "synthesis.five-dimensional-tower-kaluza-klein-channels-steepen-burst": {
 "failed": false,
 "findings": [],
-"key": "85dc421aea459af4",
+"key": "a02cd48fe4a377e9",
 "result": "pass",
 "runs": [
 {
@@ -39407,7 +39466,7 @@
 "synthesis.gauge-factor-sugawara-parts-satisfy-virasoro-relations-on-the-band": {
 "failed": false,
 "findings": [],
-"key": "1b8b4be867d592fc",
+"key": "71ed7500a660e754",
 "result": "pass",
 "runs": [
 {
@@ -40098,7 +40157,7 @@
 "synthesis.heating-coefficients-across-curvature-couplings-and-on-the-chains-bath": {
 "failed": false,
 "findings": [],
-"key": "4547cc3c79eba163",
+"key": "0acb23f2bc7fb76b",
 "result": "pass",
 "runs": [
 {
@@ -41821,7 +41880,7 @@
 "synthesis.invariant-forms-on-spinor-ideal-factor-through-reversion": {
 "failed": false,
 "findings": [],
-"key": "28c0c352e32c6434",
+"key": "c6c0a0503015b22e",
 "result": "pass",
 "runs": [
 {
@@ -41858,7 +41917,7 @@
 "synthesis.invariant-forms-on-the-fock-module-and-the-pair-counts-of-a-next-level": {
 "failed": false,
 "findings": [],
-"key": "bd03274abf56eef2",
+"key": "8340f398443dde8b",
 "result": "pass",
 "runs": [
 {
@@ -42112,7 +42171,7 @@
 "synthesis.kasner-approach-coupled-modes-reach-measured-tilt-only-by-a-fitted-curvature-coupling": {
 "failed": false,
 "findings": [],
-"key": "d8992977da5df42a",
+"key": "47c8cc50fec17216",
 "result": "pass",
 "runs": [
 {
@@ -42179,7 +42238,7 @@
 "synthesis.kasner-approach-gives-horizon-exit-and-index-three": {
 "failed": false,
 "findings": [],
-"key": "f55d706051d9ef70",
+"key": "0a831fe630507cff",
 "result": "pass",
 "runs": [
 {
@@ -42303,7 +42362,7 @@
 "synthesis.kasner-exit-needs-a-contracting-metric-stage-and-a-wall-matching": {
 "failed": false,
 "findings": [],
-"key": "7c537a2eced68414",
+"key": "f2cbb468431eb535",
 "result": "pass",
 "runs": [
 {
@@ -42340,7 +42399,7 @@
 "synthesis.kasner-field-is-weyl-flat-only-at-the-milne-and-isotropic-points": {
 "failed": false,
 "findings": [],
-"key": "deaf1d7e6180b706",
+"key": "68bcc4ec3784f0a6",
 "result": "pass",
 "runs": [
 {
@@ -42386,7 +42445,7 @@
 "synthesis.kasner-hidden-scale-coupled-scalars-stay-blue": {
 "failed": false,
 "findings": [],
-"key": "125fc71d5eb1ccc0",
+"key": "effdd741dd625671",
 "result": "pass",
 "runs": [
 {
@@ -43169,7 +43228,7 @@
 "synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike": {
 "failed": false,
 "findings": [],
-"key": "41a830e33ff6685b",
+"key": "9317bad37215dbfb",
 "result": "pass",
 "runs": [
 {
@@ -43522,7 +43581,7 @@
 "synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages": {
 "failed": false,
 "findings": [],
-"key": "3a0f9622f7a346be",
+"key": "7cf7cfc384d0f719",
 "result": "pass",
 "runs": [
 {
@@ -43571,7 +43630,7 @@
 "synthesis.light-ray-gauge-currents-of-a-generation-do-not-see-its-anomaly-cancellation": {
 "failed": false,
 "findings": [],
-"key": "a990aea1f21a5503",
+"key": "a998e08a73dc8282",
 "result": "pass",
 "runs": [
 {
@@ -43697,7 +43756,7 @@
 "synthesis.light-ray-recurrence-test-verdict-on-generations-is-set-by-the-scalar-content": {
 "failed": false,
 "findings": [],
-"key": "4bb1375f568f162c",
+"key": "c41fe1aafab9df24",
 "result": "pass",
 "runs": [
 {
@@ -44113,7 +44172,7 @@
 "synthesis.lowest-causal-residues-zero-four-content": {
 "failed": false,
 "findings": [],
-"key": "512709620189d497",
+"key": "85d383d6688991e8",
 "result": "pass",
 "runs": [
 {
@@ -44590,7 +44649,7 @@
 "synthesis.mass-terms-are-pair-terms-of-the-arrays-and-only-the-charge-separates-majorana-from-dirac": {
 "failed": false,
 "findings": [],
-"key": "1abe2699ca0990b7",
+"key": "607211d7eb5e1c3d",
 "result": "pass",
 "runs": [
 {
@@ -45264,7 +45323,7 @@
 "synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3": {
 "failed": false,
 "findings": [],
-"key": "57ea5588a44730ee",
+"key": "66ba4cfa0d6a3e59",
 "result": "pass",
 "runs": [
 {
@@ -45312,7 +45371,7 @@
 "synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
 "failed": false,
 "findings": [],
-"key": "011425de3efcca93",
+"key": "24099c678f31819c",
 "result": "pass",
 "runs": [
 {
@@ -45551,7 +45610,7 @@
 "synthesis.norm-released-locally-on-isotropic-fields-tracks-dust-and-never-accelerates": {
 "failed": false,
 "findings": [],
-"key": "e817a374a187b537",
+"key": "c1a9634c41297535",
 "result": "pass",
 "runs": [
 {
@@ -45918,7 +45977,7 @@
 "synthesis.number-n-free-at-fixed-d-term-level-on-the-stored-relations": {
 "failed": false,
 "findings": [],
-"key": "6ca473d8da503635",
+"key": "15b0a03619862bb2",
 "result": "pass",
 "runs": [
 {
@@ -46293,7 +46352,7 @@
 "synthesis.one-window-parity-recurrence-of-the-light-ray-sea-needs-twenty-four-arrays": {
 "failed": false,
 "findings": [],
-"key": "0127281266372d16",
+"key": "bd8f14c2c686344d",
 "result": "pass",
 "runs": [
 {
@@ -48574,7 +48633,7 @@
 "synthesis.red-tilt-criterion-on-power-law-stages-and-the-index-ledger-of-the-stored-sources": {
 "failed": false,
 "findings": [],
-"key": "7b669cdde5ec4753",
+"key": "dc8b89d29810540d",
 "result": "pass",
 "runs": [
 {
@@ -48914,7 +48973,7 @@
 "synthesis.reversion-pairing-vanishes-residues-zero-four": {
 "failed": false,
 "findings": [],
-"key": "8b29d7b97e581551",
+"key": "48f3c78bd501d810",
 "result": "pass",
 "runs": [
 {
@@ -49669,7 +49728,7 @@
 "synthesis.scalar-sector-at-the-isotropic-scalar-kasner-point-obeys-the-spectator-equation": {
 "failed": false,
 "findings": [],
-"key": "70a359e9873e1ea7",
+"key": "73beb0b5cd5a20af",
 "result": "pass",
 "runs": [
 {
@@ -50037,7 +50096,7 @@
 "synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off": {
 "failed": false,
 "findings": [],
-"key": "07fd8ddc971494ff",
+"key": "4a1a2a8db9122a41",
 "result": "pass",
 "runs": [
 {
@@ -50461,7 +50520,7 @@
 "synthesis.slot-module-light-ray-arrays-are-weyl-components": {
 "failed": false,
 "findings": [],
-"key": "a36c928700351f44",
+"key": "c915ed5de75d137f",
 "result": "pass",
 "runs": [
 {
@@ -50910,7 +50969,7 @@
 "synthesis.standard-model-currents-of-the-sixteen-channels-levels-and-window-sugawara-split": {
 "failed": false,
 "findings": [],
-"key": "8b079e4ba5932a92",
+"key": "178e7209772aefb1",
 "result": "pass",
 "runs": [
 {
@@ -51673,7 +51732,7 @@
 "synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping": {
 "failed": false,
 "findings": [],
-"key": "c866e876505eaa01",
+"key": "d704455c389b1213",
 "result": "pass",
 "runs": [
 {
@@ -52377,7 +52436,7 @@
 "synthesis.tree-level-curvature-couplings-stay-blue-at-the-isotropic-kasner-point": {
 "failed": false,
 "findings": [],
-"key": "75fb6309039e3ba0",
+"key": "7f83401f6573973b",
 "result": "pass",
 "runs": [
 {
@@ -53192,7 +53251,7 @@
 "synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands": {
 "failed": false,
 "findings": [],
-"key": "b010d0fd8bf24d3d",
+"key": "f93a77dfd1a47fae",
 "result": "pass",
 "runs": [
 {
@@ -53205,6 +53264,16 @@
 "dark-matter.projection-every-towers-content-dilutes-ones",
 "dark-matter.thickness-not-gravitational-quantity",
 "dark-matter.unit-ball-rule"
+]
+},
+{
+"derivation": null,
+"func": "check_premise_e_epoch",
+"ok": true,
+"quantities": [],
+"touched": [
+"dark-matter.e-equal-mass-per-unit-ball",
+"dark-matter.projection-every-towers-content-dilutes-ones"
 ]
 }
 ]
@@ -54023,7 +54092,7 @@
 "synthesis.window-energy-of-one-generation-is-exactly-the-so10-sugawara-energy": {
 "failed": false,
 "findings": [],
-"key": "1a95166b424c1752",
+"key": "e55e8be95c5f7844",
 "result": "pass",
 "runs": [
 {
@@ -54071,7 +54140,7 @@
 "synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter": {
 "failed": false,
 "findings": [],
-"key": "506a19611eb1835b",
+"key": "62bb275604811622",
 "result": "pass",
 "runs": [
 {

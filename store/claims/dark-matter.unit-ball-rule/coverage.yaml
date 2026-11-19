@@ -13,16 +13,20 @@ functions:
     omits: "that the agreement is a fit chosen with the value known, and the count of fourteen candidates, have no computable content here"
   check_quanta_do_not_enter:
     kind: exact
-    clauses: ["(ii) a filling that keeps E has the shares of (i) whatever its quanta weigh", "(ii) R1 and R2 in E's length imply E"]
+    clauses: ["(ii) a filling that keeps E has the shares of (i) whatever its quanta weigh", "(ii) R1 and R2 in R2's common length imply E in that length"]
     omits: "three sample fillings, with the factor different in the three- and five-dimensional towers; the general statement is the proof's"
   check_e_and_r3_are_the_closed_form:
     kind: exact
-    clauses: ["(iii) E with s = t = d if and only if s = t and the two shares", "(iii) d = rho_2 V_2/(rho_3 V_3) is the only length, and f_3D = V_3/V_2 identically", "(iii) E for the five-dimensional towers exactly when f_5D = V_3/V_4"]
-    omits: "sample densities and lengths, exact in Q(pi); uniqueness of the length is checked against three other lengths per sample, the proof gives it in general; the equalities within a pair of odd towers and for the mirror are not coded"
+    clauses: ["(iii) on a sheet tower, this world and a five-dimensional tower: E with s = t = d if and only if s = t and the two shares", "(iii) d = rho_1 V_2/(rho_6 V_3) is the only length, and that tower's share is V_3/V_2 identically", "(iii) E for a five-dimensional tower exactly when its share is V_3/V_4"]
+    omits: "one tower of each dimension, written rho_2, rho_3, rho_4 by space dimension; sample densities and lengths, exact in Q(pi); uniqueness of the length is checked against three other lengths per sample, the proof gives it in general; the mirror and the pairs are in check_equivalence_is_per_tower"
+  check_equivalence_is_per_tower:
+    kind: exact
+    clauses: ["(iii) the five shares with s = t if and only if E on all six towers", "(iii) the mirror's share is needed", "(iii) the total fixes only the sum of the shares"]
+    omits: "three sample spacings and densities; the mirror counterexample at five sample lengths (the proof gives every length); one unequal split of the sheet pair"
   check_one_length_only:
     kind: exact
     clauses: ["(iv) (d'/d)^D takes different values at D = 2, 3, 4"]
-    omits: "three ratios d'/d at two masses and two lengths"
+    omits: "three ratios d'/d at two masses and two lengths; the check evaluates k^D on the coded density, so it restates the proof's one line and adds no independent evidence"
 untouched_premises:
   dark-matter.odd-towers-populated: "premise that the four odd towers hold matter; the list of dark towers is an input of the check, as its docstring says"
   dark-matter.single-ideal-at-residues-zero-and-four: "premise that residues 0 and 4 are empty; the check sums over the five listed towers and does not compute the alternative totals"

@@ -54,7 +54,7 @@ A populated tower whose space has $D$ dimensions (under P3, \claimref{dark-matte
 ## technical
 A populated tower whose space has $D$ dimensions (under P3, $D = 2, 3, 4$) holds one quantum per unit ball $\mathrm{B}^{D}$ of that space, in one unit of length common to all towers, so every tower has the same Wigner-Seitz radius. The rule presupposes that all six towers are populated, which for the four odd towers is an inference from the observed remainder rather than a result.
 
-With R1 it implies Premise E, equal mass per unit ball, which is what the dark-to-baryon total uses; since the decision of 19 November 2026 the total rests on E and not on R2, and R3's unit is E's length and not a cell radius. R2 remains a premise of the stored results that use a tower's number of quanta by itself.
+With R1 it implies Premise E, equal mass per unit ball, which is what the dark-to-baryon total uses; since the decision of 19 November 2026 the total rests on E and not on R2, and R3's unit is E's length, which is R2's cell radius only when R1 holds with it. R2 remains a premise of the stored results that use a tower's number of quanta by itself.
 
 ## lay
 This assumption says that in every hidden sector the particles are packed at the same typical spacing: one per ball of a fixed size, measured in that sector's own number of dimensions. It also takes for granted that every sector contains matter at all. The formula for the amount of dark matter was first stated with it, and no longer needs it: it needs only the mass per ball, not the number of particles. The assumption is kept for the results that do count particles.

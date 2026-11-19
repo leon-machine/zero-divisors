@@ -26,7 +26,7 @@ derivations:
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.anomalies@3
   - dark-tower-matter.survival-sheets@5
-  - dark-tower-matter.five-dimensional-towers@4
+  - dark-tower-matter.five-dimensional-towers@5
   - dark-tower-matter.imported-unit-ball-rule@4
   proof: proof-main.tex
 checked_by:

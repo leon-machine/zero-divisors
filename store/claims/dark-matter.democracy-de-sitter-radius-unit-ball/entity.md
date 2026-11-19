@@ -1,7 +1,7 @@
 ---
 id: dark-matter.democracy-de-sitter-radius-unit-ball
 kind: claim
-version: 5
+version: 6
 title: Democracy at the de Sitter radius is the unit-ball rule
 status: proved
 region: dark-matter
@@ -21,13 +21,21 @@ credit:
   role: 'the two registered conditions assumed; note on R3''s unit in the de Sitter reading'
   version: 5
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'the note on the unit restated: with R3''s unit the length of Premise E, the thickness of this result is R3''s own'
+  version: 6
+  source: maintainer pass of 2026-11-19
+amendments:
+- version: 6
+  kind: restatement
+  defect: 'the note said Premise R3 takes each tower''s own cell radius as its unit; since 19 November 2026 the unit is the length of Premise E, and D is E at the de Sitter radius'
 review: typed
 derivations:
 - name: main
   assumes:
-  - dark-matter.d-democracy-total-mass@3
-  - dark-matter.odd-towers-populated@1
-  - dark-matter.r3-one-cell-per-unshared-direction@2
+  - dark-matter.d-democracy-total-mass@4
+  - dark-matter.odd-towers-populated@2
+  - dark-matter.r3-one-cell-per-unshared-direction@3
   - dark-matter.single-ideal-at-residues-zero-and-four@1
   proof: proof-main.tex
 checked_by:
@@ -45,6 +53,10 @@ locators:
   label: prop:democracy
   line: 1045
 extraction:
+  maintainer_pass_2026_11_19:
+    by: maintainer-2026-11-19
+    date: '2026-11-19'
+    note: 'Version 5 -> 6. Leon''s decision of 19 November 2026 (R3''s unit is the one common length of Premise E): the note on the unit, which said R3 takes each tower''s own cell radius, is restated. The statement and its proof are unchanged.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -82,7 +94,7 @@ extraction:
 ---
 
 ## formal
-Under D, with the thickness set to $\ell$ (R3 with $\ell$ as the unit), the shares are $\tfrac{|\Sph^{4}|}{|\Sph^{n}|}$, the sphere form of Remark \ref{rem:forms}, and the total is that of Proposition \claimref{dark-matter.unit-ball-rule}, summed as there over the mirror and the four odd towers (populated by Premise \claimref{dark-matter.odd-towers-populated}, residues $0$ and $4$ empty by Premise \claimref{dark-matter.single-ideal-at-residues-zero-and-four}). \emph{Note (the unit).} Premise R3 takes each tower's own cell radius as its unit; the thickness $\ell$ used here is that unit only if each tower holds one quantum per de Sitter ball, which is what D gives when held with R1 and R2 (Premise \claimref{dark-matter.d-democracy-total-mass}, note); otherwise it is R3's form with another unit, as stated. D belongs to this reading and is not counted with R1 to R3 among the premises of the fitted total.
+Under D, with the thickness set to $\ell$ (R3 with $\ell$ as the unit), the shares are $\tfrac{|\Sph^{4}|}{|\Sph^{n}|}$, the sphere form of Remark \ref{rem:forms}, and the total is that of Proposition \claimref{dark-matter.unit-ball-rule}, summed as there over the mirror and the four odd towers (populated by Premise \claimref{dark-matter.odd-towers-populated}, residues $0$ and $4$ empty by Premise \claimref{dark-matter.single-ideal-at-residues-zero-and-four}). \emph{Note (the unit; restated 19 November 2026).} Premise R3 takes as its unit the length of Premise E (\claimref{dark-matter.e-equal-mass-per-unit-ball}). D is E at the de Sitter radius, given the stored reading of the sphere form (Theorem \claimref{synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball}(ii)), so under D the unit of R3 is $\ell$ and the thickness used here is R3's own; E holds in one length only, so this reading and the fitted total with E at another length are alternatives. Held with R1 and R2, D gives each tower one quantum per de Sitter ball (Premise \claimref{dark-matter.d-democracy-total-mass}, note). D is not among the premises of the fitted total, which are E and R3.
 
 ## technical
 Assume every populated tower carries the same total mass $M_{\mathrm{tot}}$ on its de Sitter sphere of radius $\ell$, and take the thickness rule with $\ell$ as its unit. A tower of dimension $n$ then has density $M_{\mathrm{tot}}/(|\Sph^{n}|\,\ell^{n})$ on its sphere; counting one thickness $\ell$ of the direction we cannot see, or sheets $\ell$ apart, turns this into a density per unit of our four-measure, and the share is

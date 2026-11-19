@@ -22,7 +22,7 @@ derivations:
 - name: main
   uses:
   - dark-tower-matter.where-mass-begins@2
-  - synthesis.lowest-causal-residues-zero-four-content@1
+  - synthesis.lowest-causal-residues-zero-four-content@2
   - synthesis.oriented-causal-towers-mirror-pair-every-window@2
   - dark-matter.imported-eight-towers-mod-8-clock@4
   proof: proof-main.tex

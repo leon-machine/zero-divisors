@@ -466,11 +466,11 @@ const SCAPS = {
          [0.62, 1.01, 'On the papers’ premises, the choice was made once, at the start. It decides which is matter and which antimatter, and the papers argue it is the direction of time: one bit, read twice.', [['C'], 'T14 Prop 5.2, Rem 5.3']]],
   ratio: [[0, 0.12, 'Our world and its mirror have the same shape, one the reflection of the other. Laid on top of each other they are one unit ball, holding two worlds.', [['C'], 'T14 Prop 7.1, Fig. 3']],
          [0.12, 0.25, 'The others nest around the same centre. Hide one dimension and our ball is a slice through the five-dimensional towers\u2019 four-ball, and the three-dimensional towers\u2019 disc is a slice through ours. Each shape again holds two towers.', [['C'], 'T14 Prop 7.1']],
-         [0.25, 0.38, 'Now three assumptions, none derived: every quantum weighs the same; each tower holds one quantum per unit ball of its own space; and each counts through one unit of the direction we lack or it lacks.', [['prem'], 'T14 R1, R2, R3']],
-         [0.38, 0.445, 'One quantum each, but different volumes: the disc has area \u03c0, our ball volume 4\u03c0/3, the four-ball \u03c0\u00b2/2. Density is what to compare: gravity responds to mass per volume, not to mass alone, and what Planck measures is a ratio of densities. Every tower acts on our gravity through our three directions of space, so its density counts in our volume.', [['C'], 'T14 Lem 6.1, Prop 7.6, 7.24']],
+         [0.25, 0.38, 'Now two assumptions, neither derived: every tower holds the same mass in a ball of one common radius, each in its own space; and each counts through that same length of the direction we lack or it lacks. What its particles weigh does not enter.', [['prem'], 'T14 E, R3', ['C'], 'T14 Prop 7.6']],
+         [0.38, 0.445, 'The same mass in each, but different volumes: the disc has area \u03c0, our ball volume 4\u03c0/3, the four-ball \u03c0\u00b2/2. Density is what to compare: gravity responds to mass per volume, not to mass alone, and what Planck measures is a ratio of densities. Every tower acts on our gravity through our three directions of space, so its density counts in our volume.', [['C'], 'T14 Lem 6.1, Prop 7.6, 7.24']],
          [0.445, 0.52, 'Compare any tower\u2019s density with ours and the mass m appears top and bottom, so it cancels. Only the volume is left.', [['C'], 'T14 Prop 7.6, 7.12']],
          [0.52, 0.79, 'So each tower’s share, against ours, is our ball divided by its own: 4/3 for the three-dimensional towers, 8/(3\u03c0) for the five-dimensional ones, and V\u2083/V\u2083 = 1 for the mirror, whose ball is the same as ours. Computed: add the five dark shares, 1 + 2 \u00d7 4/3 + 2 \u00d7 8/(3\u03c0) = (11\u03c0 + 16)/(3\u03c0) = 5.364.', [['C'], 'T14 Prop 7.6']],
-         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The computed value relies on the three assumptions stated, and on two more on record: that the three- and five-dimensional towers hold matter, and the other two none. The rule was found by fitting this number, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['prem'], 'T14 R1, R2, R3 \u00b7 Pop, SI', ['C'], 'T14 Obs 7.31']]],
+         [0.79, 1.01, 'Measured: Planck 2018 gives 5.364, give or take 0.065. The computed value relies on the two assumptions stated, and on two more on record: that the three- and five-dimensional towers hold matter, and the other two none. The rule was found by fitting this number, and the two assumptions only restate its shares, so the match is agreement, not an independent test.', [['std'], 'Planck 2018, with lensing', ['prem'], 'T14 E, R3 \u00b7 Pop, SI', ['C'], 'T14 Obs 7.31']]],
   towers: [[0, 0.32, 'All the towers feel one gravitational field, so a black hole\u2019s centre is shared by all of them.', [['C'], 'T14 Prop 6.5']],
          [0.32, 0.66, 'What falls in gives its energy back as radiation into every populated tower; its information, and for small holes its charge, comes back in its own.', [['C'], 'T14 Prop 6.5']],
          [0.66, 1.01, 'So the last flash of an evaporating black hole, if small ones exist, is dimmed by a factor between 2 and about 5.5. A registered prediction for the searches.', [['pred'], 'T14 Prop 6.5 \u00b7 T17']]],
@@ -849,13 +849,14 @@ function overlayRatio(s, now){
       leader(hx - lx, hy - ly, xr + 4, hy + 16, C.green); labFit(L.d3[stage], xr, hy + 16, C.green, 'right', sz); }
     if (!narrow && s < 0.38) mono('one centre · every shape a unit ball · one dimension hidden', hx, hy + Rb + 22, C.t3, 'center', 11);
     ox.globalAlpha = 1; }
-  // C: the three premises
+  // C: the two premises (E and R3; R1 and R2 are the particle model, not assumed by the total)
   const aP = env(s, 0.25, 0.4, 0.14);
-  if (aP > 0 && !narrow) { ox.globalAlpha = aP; mono('THE THREE ASSUMPTIONS (NOT DERIVED)', px, py, C.t3, 'left', 11);
-    [['R1', 'every quantum has the same mass'], ['R2', 'one quantum per unit ball of a tower’s own space'], ['R3', 'each counts through one unit of a missing direction']]
+  if (aP > 0 && !narrow) { ox.globalAlpha = aP; mono('THE TWO ASSUMPTIONS (NOT DERIVED)', px, py, C.t3, 'left', 11);
+    [['E', 'the same mass per ball of one common radius'], ['R3', 'each counts through that length of a missing direction']]
       .forEach(([k, t], i) => { mono(k, px, py + 30 + i * 28, C.gold, 'left', 12); lab(t, px + 36, py + 30 + i * 28, C.text, 'left', 16); });
-    mono('R1 has no mechanism in the odd towers, about 81% of the dark matter (T14c Prop 9.4)', px, py + 30 + 3 * 28 + 4, C.t3, 'left', 10);
-    mono('also on record as premises: the 3D and 5D towers hold matter; the other two hold none', px, py + 30 + 3 * 28 + 22, C.t3, 'left', 10);
+    mono('particle masses and numbers do not enter; the common radius is given no value (T14 Prop 7.6)', px, py + 30 + 2 * 28 + 4, C.t3, 'left', 10);
+    mono('together the two restate the rule’s shares, sector by sector: not support for it', px, py + 30 + 2 * 28 + 22, C.t3, 'left', 10);
+    mono('also on record as premises: the 3D and 5D towers hold matter; the other two hold none', px, py + 30 + 2 * 28 + 40, C.t3, 'left', 10);
     ox.globalAlpha = 1; }
   // C2: compare densities, and watch the mass cancel (T14 Prop 7.6 and its proof)
   // the density working fades out, then the shares fade in, where they stood
@@ -895,7 +896,7 @@ function overlayRatio(s, now){
     [[lx0, C.gold, 'COMPUTED · THE RULE', '5.364'], [b2, C.blue, 'MEASURED · PLANCK 2018', '5.364 ± 0.065']].forEach(([x, col, k, v]) => {
       ox.fillStyle = 'rgba(16,14,13,0.72)'; ox.strokeStyle = col; ox.lineWidth = 1.2; ox.beginPath(); ox.roundRect ? ox.roundRect(x, by, bw, bh, 8) : ox.rect(x, by, bw, bh); ox.fill(); ox.stroke();
       mono(k, x + bw / 2, by + (narrow ? 15 : 22), col, 'center', narrow ? 9 : 12); texL(v, x + bw / 2, by + (narrow ? 40 : 62), col, narrow ? 19 : Math.min(34, bw * 0.15), 'center', 600); });
-    if (!narrow) { mono('computed on R1, R2, R3 and two premises on which towers hold matter', lx0, by + bh + 22, C.t3, 'left', 11); mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 38, C.t3, 'left', 11); }
+    if (!narrow) { mono('computed on E, R3 and two premises on which towers hold matter', lx0, by + bh + 22, C.t3, 'left', 11); mono('the rule was fitted to this measurement: agreement, not a test', lx0, by + bh + 38, C.t3, 'left', 11); }
     // the number line
     ox.fillStyle = 'rgba(147,180,218,0.16)'; ox.fillRect(X(mu - 2 * sd), ly0 - 22, X(mu + 2 * sd) - X(mu - 2 * sd), 44);
     ox.fillStyle = 'rgba(147,180,218,0.38)'; ox.fillRect(X(mu - sd), ly0 - 22, X(mu + sd) - X(mu - sd), 44);

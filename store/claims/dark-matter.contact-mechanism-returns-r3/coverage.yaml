@@ -10,15 +10,19 @@ functions:
   check_three_dimensional_sheets:
     kind: exact
     clauses: ["(ii) f_3D = V_3/V_2", "sheet spacing s = 1 from O"]
-    omits: ""
+    omits: "in the unit d = 1; the dependence on d is checked only on the coded densities, in check_total_and_alternatives"
   check_total_and_alternatives:
     kind: exact
     clauses: ["(iii) the total is the unit-ball rule's", "d cancels"]
     omits: "the cancellation of d is checked at the sample lengths in UNITS; the comparison with observation (more than 5.5 sigma without S) uses the check's own OBS and SIG constants"
   check_own_cell_reading_differs:
     kind: exact
-    clauses: ["(iv) on a quantum's own cell the thickness is the own cell radius and the share is (V_3/V_4)(a/d); at sixteen times heavier and rarer, a = 2d and the share doubles"]
-    omits: "the five-dimensional tower only, at k = 1, 16, 81; the three-dimensional towers' own-cell share is the proof's"
+    clauses: ["(iv) for a five-dimensional tower, on a quantum's own cell the thickness is the own cell radius and the share is (V_3/V_4)(a/d); at sixteen times heavier and rarer, a = 2d and the share doubles"]
+    omits: "the five-dimensional tower only, at k = 1, 16, 81"
+  check_own_cell_sheets_use_our_cell:
+    kind: exact
+    clauses: ["(iv) for a three-dimensional tower the sheets come out this world's own cell radius a_6 apart and the share is (V_3/V_2)(d/a_6), whatever the tower's own quanta are", "(iv) this is not the own-cell reading of R3"]
+    omits: "three values of a_6 and three of the tower's own cell radius, on the coded densities of E; the step that the balls meeting the plane are this world's is the proof's"
 judge:
   by: maintainer-2026-11-19
   date: '2026-11-19'

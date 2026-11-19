@@ -2128,8 +2128,7 @@
  },
  "dark-matter.contact-mechanism-returns-r3": {
   "assumes": [
-   "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@3"
+   "dark-matter.e-equal-mass-per-unit-ball@1"
   ],
   "credit": [
    [
@@ -2141,18 +2140,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "restated on Premise E: the contact clauses read on the ball in which E counts mass; clause (iv) on what the count gives on a quantum's own cell",
+    4
    ]
   ],
-  "hash": "acd34268d5b028a4",
+  "hash": "07d7d3ca45460346",
   "ledger": null,
   "parts": {
-   "checks": "58ca673c2cca305a",
-   "proofs": "4ed9272cfd8963e4",
+   "checks": "7332aff8747bc8f0",
+   "proofs": "2acb0bd5b58f040e",
    "rest": "d3b65c89b700e77b",
-   "statement": "fda22f6fd197cdd9"
+   "statement": "a2b13d78e45bb348"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "dark-matter.d-democracy-total-mass": {
   "assumes": [],
@@ -2176,24 +2180,29 @@
     "Claude Fable 5.2",
     "note corrected: the one stored result with both D and R2 among its conditions is named",
     3
+   ],
+   [
+    "Claude Fable 5.2",
+    "a note: D is Premise E at the de Sitter radius, and E holds in one length only",
+    4
    ]
   ],
-  "hash": "4c45a751299ac2a3",
+  "hash": "1c67de1cad589d62",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "0a46e66686db0742"
+   "statement": "08d04608dbecbc0f"
   },
   "status": "postulate",
-  "version": 3
+  "version": 4
  },
  "dark-matter.democracy-de-sitter-radius-unit-ball": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@3",
-   "dark-matter.odd-towers-populated@1",
-   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-matter.d-democracy-total-mass@4",
+   "dark-matter.odd-towers-populated@2",
+   "dark-matter.r3-one-cell-per-unshared-direction@3",
    "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
@@ -2211,18 +2220,23 @@
     "Claude Fable 5.2",
     "the two registered conditions assumed; note on R3's unit in the de Sitter reading",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "the note on the unit restated: with R3's unit the length of Premise E, the thickness of this result is R3's own",
+    6
    ]
   ],
-  "hash": "e3323a3aa1af7056",
+  "hash": "fd4221c750457f44",
   "ledger": null,
   "parts": {
    "checks": "c5446f0924f9534c",
    "proofs": "aa01767cc24d889d",
    "rest": "d3b65c89b700e77b",
-   "statement": "cbf0a44ba0a254b2"
+   "statement": "efdbeb942ceee41e"
   },
   "status": "proved",
-  "version": 5
+  "version": 6
  },
  "dark-matter.direction-nesting-adds-algebra": {
   "assumes": [],
@@ -2248,6 +2262,31 @@
   },
   "status": "proved",
   "version": 3
+ },
+ "dark-matter.e-equal-mass-per-unit-ball": {
+  "assumes": [],
+  "credit": [
+   [
+    "Leon Butler",
+    "direction",
+    null
+   ],
+   [
+    "Claude Fable 5.2",
+    "proposal and drafting",
+    1
+   ]
+  ],
+  "hash": "7f06afef7f315968",
+  "ledger": null,
+  "parts": {
+   "checks": "c3f5c97be96adb97",
+   "proofs": "2ced0a75ebab5a10",
+   "rest": "5b63229ea6eed232",
+   "statement": "61340139e0df11c9"
+  },
+  "status": "postulate",
+  "version": 1
  },
  "dark-matter.flag-bit-exists-exactly-tower-dimension": {
   "assumes": [
@@ -2940,18 +2979,23 @@
     "Claude Fable 5.2",
     "proposal and drafting",
     1
+   ],
+   [
+    "Claude Fable 5.2",
+    "the sentence on which premises fix the amount: Premise E and R3",
+    2
    ]
   ],
-  "hash": "21557a25de80819f",
+  "hash": "80a5c4f61c9dc94b",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "1024b33453da4665"
+   "statement": "a7a9404055dfae31"
   },
   "status": "postulate",
-  "version": 1
+  "version": 2
  },
  "dark-matter.open-channels-their-costs": {
   "assumes": [],
@@ -3399,18 +3443,23 @@
     "Claude Fable 5.2",
     "the unit of thickness stated: each tower's own cell radius, so R2 also supplies R3's unit",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "the unit of thickness restated: the one common length of Premise E, not each tower's own cell radius",
+    3
    ]
   ],
-  "hash": "39f0c673d4f18752",
+  "hash": "a0c4262af6848c7c",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "5b63229ea6eed232",
-   "statement": "22647f4662efd5e5"
+   "statement": "3665588e2258d5bd"
   },
   "status": "postulate",
-  "version": 2
+  "version": 3
  },
  "dark-matter.radiation-audit-what-theorem-closes-what": {
   "assumes": [],
@@ -3619,18 +3668,23 @@
     "Claude Fable 5.2",
     "notes: the two conditions of the relation now registered premises; the de Sitter and unit-ball readings recorded as alternatives",
     5
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (viii): the relation rests on Premise E and R3 since 19 November 2026, and what that changes",
+    6
    ]
   ],
-  "hash": "85823d220794af4b",
+  "hash": "7e6161b6019d9503",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "85079d304d5cbecd",
-   "statement": "ed0f4f164496f207"
+   "statement": "a2a5b1d2e66c9603"
   },
   "status": "conjectured",
-  "version": 5
+  "version": 6
  },
  "dark-matter.stored-asymmetry-charge-not-number": {
   "assumes": [
@@ -3744,7 +3798,7 @@
  },
  "dark-matter.total-function-thickness": {
   "assumes": [
-   "dark-matter.odd-towers-populated@1",
+   "dark-matter.odd-towers-populated@2",
    "dark-matter.p2-indifference@2",
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
@@ -3838,7 +3892,7 @@
  },
  "dark-matter.two-reductions": {
   "assumes": [
-   "dark-matter.d-democracy-total-mass@3"
+   "dark-matter.d-democracy-total-mass@4"
   ],
   "credit": [
    [
@@ -3915,10 +3969,9 @@
  },
  "dark-matter.unit-ball-rule": {
   "assumes": [
-   "dark-matter.odd-towers-populated@1",
-   "dark-matter.r1-equal-mass-per-quantum@1",
-   "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-matter.e-equal-mass-per-unit-ball@1",
+   "dark-matter.odd-towers-populated@2",
+   "dark-matter.r3-one-cell-per-unshared-direction@3",
    "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
   "credit": [
@@ -3936,18 +3989,23 @@
     "Claude Fable 5.2",
     "the two registered conditions (single-ideal clause, population of the odd towers) assumed; the sourcing lemma used; statement of what the total rests on",
     6
+   ],
+   [
+    "Claude Fable 5.2",
+    "restated on Premise E in place of R1 and R2; clauses (ii) to (iv) on what the two premises say",
+    7
    ]
   ],
-  "hash": "0160d6c59f9a3023",
+  "hash": "97265471e0ebbbf2",
   "ledger": null,
   "parts": {
-   "checks": "8dc7b0c910fc08f2",
-   "proofs": "b801eb969d094bd9",
+   "checks": "e27b66411d9e5384",
+   "proofs": "c9ad5c1f3d7a7a74",
    "rest": "d3b65c89b700e77b",
-   "statement": "bebbb1ceaf6c4901"
+   "statement": "8e8cd2adfbf98a7c"
   },
   "status": "proved",
-  "version": 6
+  "version": 7
  },
  "dark-matter.which-towers-are-populated": {
   "assumes": [],
@@ -4118,7 +4176,9 @@
  },
  "dark-tower-matter.five-dimensional-towers": {
   "assumes": [
-   "dark-matter.r3-one-cell-per-unshared-direction@2",
+   "dark-matter.r1-equal-mass-per-quantum@1",
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
+   "dark-matter.r3-one-cell-per-unshared-direction@3",
    "dark-tower-matter.u-transposition-rule@3"
   ],
   "credit": [
@@ -4131,18 +4191,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the depth of the fifth direction named as the particle model's length; R1 and R2 assumed",
+    5
    ]
   ],
-  "hash": "4a829cf70946a984",
+  "hash": "78d28705ad9e2b75",
   "ledger": null,
   "parts": {
    "checks": "bf37c3f29975ab4e",
-   "proofs": "1306eccd468a59e4",
+   "proofs": "5bb2d4ab12d090a9",
    "rest": "d3b65c89b700e77b",
-   "statement": "7d3866a957888923"
+   "statement": "974973eb3daacf1c"
   },
   "status": "proved",
-  "version": 4
+  "version": 5
  },
  "dark-tower-matter.gauge-algebras": {
   "assumes": [
@@ -4359,7 +4424,7 @@
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@2"
+   "dark-matter.r3-one-cell-per-unshared-direction@3"
   ],
   "credit": [
    [
@@ -12040,18 +12105,23 @@
     "Claude Fable 5.2",
     "marked note on what the total rests on",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "marked note: since 19 November 2026 the store states the rule on Premise E and R3",
+    3
    ]
   ],
-  "hash": "46ed22cb9685a9a0",
+  "hash": "1574452a314b7026",
   "ledger": null,
   "parts": {
    "checks": "c3f5c97be96adb97",
    "proofs": "2ced0a75ebab5a10",
    "rest": "9f7a0560f2d0cbde",
-   "statement": "b09794e6ec3b27ba"
+   "statement": "161bd233994ad103"
   },
   "status": "setting",
-  "version": 2
+  "version": 3
  },
  "note.dark-matter.setting-dark-stable-counted": {
   "assumes": [],
@@ -40812,7 +40882,9 @@
  },
  "simulations.effective-cross-section-sheet-matter": {
   "assumes": [
-   "dark-matter.r3-one-cell-per-unshared-direction@2"
+   "dark-matter.r1-equal-mass-per-quantum@1",
+   "dark-matter.r2-one-quantum-per-unit-ball@3",
+   "dark-matter.r3-one-cell-per-unshared-direction@3"
   ],
   "credit": [
    [
@@ -40824,18 +40896,23 @@
     "Claude Fable 5",
     "mathematics and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "the mean sheet spacing named as the particle model's length; R1 and R2 assumed",
+    4
    ]
   ],
-  "hash": "4b135d0aa02077c5",
+  "hash": "d8fb29cb93554c10",
   "ledger": null,
   "parts": {
    "checks": "3e9fad583f27cc90",
-   "proofs": "d0c7dd2eb4f1e7a5",
+   "proofs": "96bdfa25c77321b8",
    "rest": "d3b65c89b700e77b",
-   "statement": "4f07140de6ea0cdd"
+   "statement": "b59206271f3275d0"
   },
   "status": "proved",
-  "version": 3
+  "version": 4
  },
  "simulations.halo-shapes": {
   "assumes": [
@@ -41013,7 +41090,7 @@
   "assumes": [
    "dark-matter.r1-equal-mass-per-quantum@1",
    "dark-matter.r2-one-quantum-per-unit-ball@3",
-   "dark-matter.r3-one-cell-per-unshared-direction@2"
+   "dark-matter.r3-one-cell-per-unshared-direction@3"
   ],
   "credit": [
    [
@@ -50160,7 +50237,7 @@
  },
  "synthesis.dark-to-baryon-total-uses-r1-r2-and-d-only-as-mass-per-unit-ball": {
   "assumes": [
-   "dark-matter.odd-towers-populated@1",
+   "dark-matter.odd-towers-populated@2",
    "dark-matter.p1-single-frozen-point@3",
    "dark-matter.single-ideal-at-residues-zero-and-four@1"
   ],
@@ -50179,18 +50256,23 @@
     "Claude Fable 5.2",
     "two stale sentences corrected (the reading of R3; the retired P4)",
     2
+   ],
+   [
+    "Claude Fable 5.2",
+    "the status of the reading: adopted on 19 November 2026, with Premise E registered",
+    3
    ]
   ],
-  "hash": "2b44c66ab0405780",
+  "hash": "3c44d5416ff7df5d",
   "ledger": null,
   "parts": {
    "checks": "8abf002e9563fc2a",
    "proofs": "ee5e0b51ad78337d",
    "rest": "d3b65c89b700e77b",
-   "statement": "7eaba5b333f0041f"
+   "statement": "b54943c3660e3c5b"
   },
   "status": "proved",
-  "version": 2
+  "version": 3
  },
  "synthesis.de-sitter-entropy-pi-n-squared": {
   "assumes": [],
@@ -57793,18 +57875,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (iv) cites the unit-ball rule under Premise E and R3",
+    2
    ]
   ],
-  "hash": "2b39302641fdfc42",
+  "hash": "cfaf97fd67f22b5c",
   "ledger": null,
   "parts": {
    "checks": "568ef5e16d8728c6",
    "proofs": "e218995dbbbf623e",
    "rest": "6a0d4959093a994c",
-   "statement": "a94367683e436bf9"
+   "statement": "174b95e943246ab3"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.macdowell-mansouri-is-the-frozen-point-reduction-of-five-dimensional-chern-simons": {
   "assumes": [],
@@ -58744,18 +58831,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (i) dates its list of the relation's premises and names Premise E",
+    2
    ]
   ],
-  "hash": "a3e91183e1c54a26",
+  "hash": "2cef1a6246925249",
   "ledger": null,
   "parts": {
    "checks": "5f8ca89fbb7030c8",
    "proofs": "e4d9156c5dfbe8b5",
    "rest": "d3b65c89b700e77b",
-   "statement": "6d1667579a74e0a5"
+   "statement": "311f9315458abe28"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.no-single-curvature-coupling-serves-the-sakharov-zero-and-the-kasner-tilt": {
   "assumes": [
@@ -63984,7 +64076,9 @@
   "version": 1
  },
  "synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands": {
-  "assumes": [],
+  "assumes": [
+   "dark-matter.e-equal-mass-per-unit-ball@1"
+  ],
   "credit": [
    [
     "Leon Butler",
@@ -63995,18 +64089,23 @@
     "Claude Opus 5.5",
     "proposal and drafting",
     null
+   ],
+   [
+    "Claude Fable 5.2",
+    "clause (v): the same test for Premise E",
+    2
    ]
   ],
-  "hash": "b3fb7f93ecf011cd",
+  "hash": "8528e6d17c37aa31",
   "ledger": null,
   "parts": {
-   "checks": "7c445708dc8aa769",
-   "proofs": "b4826c6dfcc88e69",
+   "checks": "f7eb46d430ae3cca",
+   "proofs": "e9550939f08bde02",
    "rest": "d3b65c89b700e77b",
-   "statement": "5024c7ab83a0c349"
+   "statement": "425b7c246cd199d4"
   },
   "status": "proved",
-  "version": 1
+  "version": 2
  },
  "synthesis.unit-boost-residue-needs-nonpositive-exponent": {
   "assumes": [],

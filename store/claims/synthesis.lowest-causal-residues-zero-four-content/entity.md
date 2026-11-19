@@ -1,7 +1,7 @@
 ---
 id: synthesis.lowest-causal-residues-zero-four-content
 kind: claim
-version: 1
+version: 2
 title: 'Mass content of the lowest causal signatures at residues 0 and 4'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: Co-Authored-By trailer of the commit that added it
+- name: Claude Fable 5.2
+  role: 'clause (iv) cites the unit-ball rule under Premise E and R3'
+  version: 2
+  source: maintainer pass of 2026-11-19
+amendments:
+- version: 2
+  kind: restatement
+  defect: 'clause (iv) cited the unit-ball rule as stated under R1 to R3; since 19 November 2026 it is stated under Premise E and R3, which R1 to R3 imply'
 review: draft
 derivations:
 - name: main
@@ -25,7 +33,7 @@ derivations:
   - dark-tower-matter.constituents-field@2
   - dark-matter.imported-eight-towers-mod-8-clock@4
   - dark-matter.towers-are-residues-single-clock-filter@5
-  - dark-matter.unit-ball-rule@6
+  - dark-matter.unit-ball-rule@7
   assumes:
   - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
@@ -37,6 +45,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_19:
+    by: maintainer-2026-11-19
+    date: '2026-11-19'
+    note: 'Version 1 -> 2. Wording only (Leon''s decision of 19 November 2026): clause (iv) cites the unit-ball rule under Premise E and R3. No number changed.'
   open_problem: op.window-p3
   note: >-
     Content test of the window question. P3 agrees with the lowest causal signature at the six
@@ -54,7 +66,7 @@ Use the constituent definitions of Definition \claimref{obj.dark-tower-matter.id
 \item[(i)] \emph{(Floors; proved.)} Along a tower of $(1,1)$ ascents over a definite ground $(m,0)$ or $(0,m)$, $\min(p,q)$ rises by one per floor, so the tower has exactly one causal floor, $(m+1,1)$ or $(1,m+1)$, while residue and Morita class are constant along it (Fact \claimref{dark-matter.imported-eight-towers-mod-8-clock}). The causal signatures of residue $r$ are therefore one per tower, of dimension $m + 2$ with $m \equiv r$ or $m \equiv -r \pmod 8$, and the lowest has dimension $\min(r, 8-r) + 2$. A rule reading only data constant along towers cannot choose among them; the causal filter chooses the floor, and the remaining choice is the tower.
 \item[(ii)] \emph{(Residue 0; computed, exact.)} At $(1,1)$, the lowest causal signature of residue $0$, $\Cl^{0}(V) \cong \R \oplus \R$, the spinor ideal $S$ is one-dimensional with field $\R$, and $j(\lambda f) = \lambda^{2} j(f)$ with $j(f)$ null. Every total momentum of constituents from $S$ is null: no number of constituents is massive. The single ideal is one of two chiralities: $\Cl^{0}(V)$ has two non-isomorphic simple modules, and $f = \tfrac12(1 + e_{t}e_{a})$ picks one by the orientation of $e_{a}$, a choice that is not canonical in dimension two (in dimensions three to five all such ideals are isomorphic). The complementary ideal $\Cl^{0}(V)(1-f)$ carries the opposite null ray, and one constituent from each ideal has $m^{2} = 1$: with both chiralities admitted, mass begins at two constituents at $(1,1)$ as well. The emptiness of residue $0$ is therefore a consequence of the single-ideal definition, not of the algebra alone.
 \item[(iii)] \emph{(Residue 4; computed, exact.)} At $(1,5)$ and at $(5,1)$, for either sign of the chiral factor, $S$ has real dimension $8$ and field $\HH$, $Q(j(\psi)) = 0$ identically on $S$, and two constituents are massive ($m^{2} = \tfrac{1}{4}$ on two basis elements): mass begins at two constituents, as in dimensions three and four (Theorem \claimref{dark-tower-matter.where-mass-begins}(i)).
-\item[(iv)] \emph{(The window; computed.)} Under the lowest-causal choice and the single-ideal definition, the absence of massive matter in residue $0$ follows from (ii); in residue $4$ it does not follow from content. Under R1 to R3 (Proposition \claimref{dark-matter.unit-ball-rule}) a populated tower of space dimension five adds $V_{3}/V_{5} = 5/(2\pi)$, giving $\tfrac{11}{3} + \tfrac{47}{6\pi}$, between $6.160$ and $6.161$, about $12$ standard errors above the observed $5.364 \pm 0.065$. The unit-ball value is a fit (Proposition \claimref{dark-matter.status-rule}: the relation was found by solving for the observed value, and its clauses were chosen with it known), and the emptiness of residue $4$ is one of the clauses that fit needs. Premise \claimref{dark-matter.p3-nearest-dimension-representatives} secures this by representing residue $4$ by the definite $(4,0)$ or $(0,4)$, a non-causal signature; no content result secures it at the causal $(1,5)$ or $(5,1)$.
+\item[(iv)] \emph{(The window; computed.)} Under the lowest-causal choice and the single-ideal definition, the absence of massive matter in residue $0$ follows from (ii); in residue $4$ it does not follow from content. Under Premise E and R3 (Proposition \claimref{dark-matter.unit-ball-rule}; under R1 to R3 when this was computed, which imply them) a populated tower of space dimension five adds $V_{3}/V_{5} = 5/(2\pi)$, giving $\tfrac{11}{3} + \tfrac{47}{6\pi}$, between $6.160$ and $6.161$, about $12$ standard errors above the observed $5.364 \pm 0.065$. The unit-ball value is a fit (Proposition \claimref{dark-matter.status-rule}: the relation was found by solving for the observed value, and its clauses were chosen with it known), and the emptiness of residue $4$ is one of the clauses that fit needs. Premise \claimref{dark-matter.p3-nearest-dimension-representatives} secures this by representing residue $4$ by the definite $(4,0)$ or $(0,4)$, a non-causal signature; no content result secures it at the causal $(1,5)$ or $(5,1)$.
 \end{enumerate}
 
 ## technical

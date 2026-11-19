@@ -44,3 +44,14 @@ K3 (the store stays true). A dependant whose statement becomes false under the r
 ## Not in scope, recorded for later
 The thickness function (Proposition 7.15) and the two restatements of the rule in other subjects stay on R1 to R3
 (true as stated). A statement of each on E is a follow-up.
+
+## Outcome of the kill conditions (written at close-out)
+- K1: passed. The four clauses go through on E's ball with no quantum's mass or number. The referee's qualification
+  stands in the stored text: on that ball C with I restates R3's five-dimensional clause, and S and O carry what
+  the mechanism adds.
+- K2: triggered. E with R3, for some length, is equivalent to the closed form's shares holding tower by tower with
+  the two thicknesses equal. The premises restate the fit. This is stated in the rule (iii), in premise E, in the
+  status observation (viii), in T14 and on the slides.
+- K3: three dependants needed more than a moved pin: the democracy proposition's note on the unit (restated), and
+  two results that took the counted length to be the baryon spacing on R3 alone (R1 and R2 edges added).
+

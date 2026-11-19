@@ -20,13 +20,17 @@ last check puts d back and finds it cancels. No quantum's mass or number is used
       s apart give V_3/(s V_2) read on our space, and O (equality with V_3/V_2) solves to s = 1, so
       f_3D = V_3/V_2 = 4/3. A sheet holding both modules would be sourced at 2/V_3.
 (iii) The total 1 + 2 f_3D + 2 f_5D is the unit-ball rule's (11 pi + 16)/(3 pi), 5.36432 to five
-      places; the unit d_b cancels from every ratio (checked at two lengths); without S the total is
+      places; the unit d cancels from every ratio (checked at two lengths); without S the total is
       T(2) = 5.729 (three places), more than 5.5 sigma high; cubic cells give 5; the side
       V_3^(1/3) of a cube of the ball's volume lies in (1.61, 1.62).
 (iv)  Read on a quantum's own cell with R2 dropped: a five-dimensional tower that keeps E with
       quanta k times heavier and rarer has own cell radius a with a^4 = k d^4; at k = 16, a = 2d,
       the slab has width 2d and the share is 2 V_3/V_4 = 16/(3 pi), not 8/(3 pi); the total with
       both five-dimensional towers so filled is 11/3 + 32/(3 pi), about 7.06.
+      For a sheet tower the balls that meet its plane are this world's: with this world's own
+      cell radius a_6 the downward count gives V_2 a_6/(V_3 d) on the plane, O gives the spacing
+      s = a_6 and the share (V_3/V_2)(d/a_6), independent of the sheet tower's own cell radius;
+      the own-cell reading of R3 would give (V_3/V_2)(d/a_r) instead.
 """
 from fractions import Fraction as F
 
@@ -199,4 +203,27 @@ def check_own_cell_reading_differs():
     assert total == {0: F(11, 3), -1: F(32, 3)}
     lo, hi = bounds(total)
     assert F(706, 100) < lo and hi < F(707, 100)
+    return True
+
+
+def check_own_cell_sheets_use_our_cell():
+    premise("dark-matter.e-equal-mass-per-unit-ball")
+    d = F(49, 50)
+    f3 = lmul(ball(3), linv(ball(2)))
+    ru = lmul(lp(MASS / d ** 3), linv(ball(3)))                 # ours per unit three-volume, by E
+    r2 = lmul(lp(MASS / d ** 2), linv(ball(2)))                 # a sheet tower's per unit area, by E
+    for a6 in (d, 2 * d, d / 3):                                # this world's own cell radius
+        for ar in (d, 2 * d, 5 * d):                            # the sheet tower's own cell radius: unused
+            on_plane = lmul(ru, lp(a6), linv(r2))               # downward count: rho_us/rho_3D on the plane
+            assert on_plane == lmul(ball(2), linv(ball(3)), lp(a6 / d))
+            # O: sheets s apart give rho_3D/rho_us = r2/(s ru) on our space; equal to 1/on_plane at s = a6 only
+            for s in (a6, d, ar, 2 * a6):
+                read_on_ours = lmul(r2, lp(1 / s), linv(ru))
+                assert (lmul(read_on_ours, on_plane) == {0: F(1)}) == (s == a6)
+            share = lmul(r2, lp(1 / a6), linv(ru))
+            assert share == lmul(f3, lp(d / a6))
+            r3_own_cell = lmul(f3, lp(d / ar))                  # R3 read on the tower's own cell radius
+            assert (share == r3_own_cell) == (ar == a6)
+    # the referee's case: this world at a_6 = d, the sheet tower refilled to a_r = 2d
+    assert lmul(r2, lp(1 / d), linv(ru)) == {0: F(4, 3)} and lmul(f3, lp(F(1, 2))) == {0: F(2, 3)}
     return True

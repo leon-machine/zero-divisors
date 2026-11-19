@@ -36,7 +36,7 @@ derivations:
   - interior.kasner-form-interior@7
   - sheaf.kasner-data-interior@3
   - synthesis.bkl-bounce-invariant-holonomy-and-bound@2
-  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@1
+  - synthesis.unit-ball-clauses-hold-at-one-epoch-unless-hidden-direction-co-expands@2
   - synthesis.finite-range-descent-deposit-cannot-seed-cmb@6
   - synthesis.imported-planck-2018-lcdm-parameters@3
   - synthesis.kasner-wall-matter-maxwell-bounces-stiff-moves-residue@3

@@ -22,6 +22,10 @@ Checked:
     d = s; for any rho_2, rho_3 the length d = rho_2 V_2/(rho_3 V_3) = 3 rho_2/(4 rho_3) is the one
     solution and the three-dimensional share is then 4/3 identically; a five-dimensional density off
     the condition breaks E and moves the share; s different from t leaves no common length.
+    The equivalence is per tower: on the five dark towers, the five shares with s = t give E on all
+    six; with the mirror at twice our density and the other four shares kept, the mirror's ball
+    holds twice ours at every sample length and E fails; with one sheet tower at another density
+    than its partner (the pair's sum kept at 8/3) the total is unchanged and E fails.
 (6) (iv) at d' = 2d, 3d the ratio (d'/d)^D is different at D = 2, 3, 4.
 Not checked: the sentence that the agreement is a fit is a statement about how the relation was
 found, with no computable content.
@@ -202,6 +206,41 @@ def check_e_and_r3_are_the_closed_form():
     d_sheets = lmul(r2, ball(2), linv(lmul(rho3, ball(3))))
     d_five = lmul(rho3, ball(3), linv(lmul(r4, ball(4))))
     assert d_sheets == {0: s} and d_five == {0: t} and d_sheets != d_five
+    return True
+
+
+def check_equivalence_is_per_tower():
+    premise("dark-matter.e-equal-mass-per-unit-ball")
+    premise("dark-matter.r3-one-cell-per-unshared-direction")
+    DIM = {1: 2, 7: 2, 2: 3, 3: 4, 5: 4}                     # the dark residues and their space dimensions
+    f3, f5 = lmul(ball(3), linv(ball(2))), lmul(ball(3), linv(ball(4)))
+    target = {1: f3, 7: f3, 2: {0: F(1)}, 3: f5, 5: f5}
+
+    def densities(shares, s, rho6):
+        # the sourcing rule solved for the densities: f_r = rho_r s^(D_r - 3) / rho_6
+        return {r: lmul(shares[r], rho6, lp(s ** (3 - DIM[r]))) for r in DIM}
+
+    def e_holds(rho, rho6, d):
+        mu = mass_per_ball(rho6, 3, d)
+        return all(mass_per_ball(rho[r], DIM[r], d) == mu for r in DIM)
+
+    for s, rho6 in [(F(1), lp(F(3, 7), -1)), (F(49, 50), lp(F(11, 2), -1)), (F(5, 3), lp(F(2), -1))]:
+        rho = densities(target, s, rho6)
+        assert e_holds(rho, rho6, s)                           # the five shares and s = t give E on all six
+        for r in DIM:                                          # and E at d with s = t = d gives each share
+            assert share_from(rho[r], rho6, DIM[r], s) == target[r]
+        # the mirror's share is needed: at twice our density E fails at every sample length
+        bad = dict(target); bad[2] = {0: F(2)}
+        rho_bad = densities(bad, s, rho6)
+        for length in (s, s / 2, 2 * s, s + 1, F(7, 3)):
+            assert mass_per_ball(rho_bad[2], 3, length) == lmul(lp(2), mass_per_ball(rho6, 3, length))
+            assert not e_holds(rho_bad, rho6, length)
+        # the pair equalities are needed: the sheet pair's sum kept at 8/3, the members unequal
+        split = dict(target); split[1] = lmul(f3, lp(F(3, 2))); split[7] = lmul(f3, lp(F(1, 2)))
+        assert ladd(*split.values()) == ladd(*target.values()) == {0: F(11, 3), -1: F(16, 3)}
+        rho_split = densities(split, s, rho6)
+        for length in (s, s / 2, 2 * s, F(3, 2) * s):
+            assert not e_holds(rho_split, rho6, length)
     return True
 
 

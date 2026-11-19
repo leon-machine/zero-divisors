@@ -1,7 +1,7 @@
 ---
 id: synthesis.no-rule-p2-licenses-gives-the-thickness-of-r3
 kind: claim
-version: 1
+version: 2
 title: 'No rule P2 licenses, on the orbit reading of licensing, gives the thickness of R3'
 status: proved
 region: synthesis
@@ -17,6 +17,14 @@ credit:
 - name: Claude Opus 5.5
   role: proposal and drafting
   source: run 2026-11-09-solvable
+- name: Claude Fable 5.2
+  role: 'clause (i) dates its list of the relation''s premises and names Premise E'
+  version: 2
+  source: maintainer pass of 2026-11-19
+amendments:
+- version: 2
+  kind: restatement
+  defect: 'clause (i) listed R1 and R2 among the premises of the unit-ball relation in the present tense; since 19 November 2026 Premise E stands in their place'
 review: draft
 derivations:
 - name: main
@@ -39,6 +47,10 @@ checked_by:
 - kind: proof
   derivation: main
 extraction:
+  maintainer_pass_2026_11_19:
+    by: maintainer-2026-11-19
+    date: '2026-11-19'
+    note: 'Version 1 -> 2. Wording only (Leon''s decision of 19 November 2026): the list of premises in clause (i) is dated, and Premise E, which does not name the thickness and is implied by R1 with R2, is named. The proof is unchanged: it works under R1 and R2, which are still assumed here.'
   open_problem: op.thickness-deposit-rule
   note: >-
     Attack item 1, second half, of op.thickness-deposit-rule: prove that no rule P2 licenses gives R3, which the
@@ -63,7 +75,7 @@ extraction:
 ## formal
 Let the five-dimensional towers' matter count through $\lambda$ cell radii of their extra direction and the three-dimensional towers' sheets be stacked $\mu$ cell radii apart ($\lambda, \mu > 0$, common within each reversal pair), with Premises \claimref{dark-matter.r1-equal-mass-per-quantum}, \claimref{dark-matter.r2-one-quantum-per-unit-ball} and the sourcing rule as stored; Premise \claimref{dark-matter.r3-one-cell-per-unshared-direction} is $\lambda = \mu = 1$.
 \begin{enumerate}
-\item[(i)] \emph{(Independence; proved.)} Every premise of the unit-ball relation other than R3 (F1 to F4, P1, P2, P3, R1, R2, the costed single-ideal clause and the imports) holds for every $(\lambda, \mu)$: R2's densities in each tower's own space, R1's common mass, every sector label the descent deposits (residues, orientability, the stored charge $\epsilon N$ of the oriented pair and zero for the odd towers) and P2's equalities along reversal orbits are the same for all of them. The other postulates of the cone do not name the thickness and hold alike: T14's (U) (rank-one eigenvalues at the ceiling), P4 (one asymmetry per mode on oriented towers), P5 (what boundary modes return), the interface premise (I), (P), (Q), (R), the rate inputs (L, U), the slot-module hypothesis (this tower's composites), the common-ceiling premise (the reversal pair), the indifference premise and tameness. The dark-to-baryon ratio is
+\item[(i)] \emph{(Independence; proved.)} Every premise of the unit-ball relation other than R3, as the relation stood when this was proved (F1 to F4, P1, P2, P3, R1, R2, the costed single-ideal clause and the imports; since 19 November 2026 Premise E, \claimref{dark-matter.e-equal-mass-per-unit-ball}, stands in place of R1 and R2, it does not name the thickness either, and R1 with R2 implies it), holds for every $(\lambda, \mu)$: R2's densities in each tower's own space, R1's common mass, every sector label the descent deposits (residues, orientability, the stored charge $\epsilon N$ of the oriented pair and zero for the odd towers) and P2's equalities along reversal orbits are the same for all of them. The other postulates of the cone do not name the thickness and hold alike: T14's (U) (rank-one eigenvalues at the ceiling), P4 (one asymmetry per mode on oriented towers), P5 (what boundary modes return), the interface premise (I), (P), (Q), (R), the rate inputs (L, U), the slot-module hypothesis (this tower's composites), the common-ceiling premise (the reversal pair), the indifference premise and tameness. The dark-to-baryon ratio is
 \[
 T(\lambda, \mu) \;=\; 1 + \frac{8}{3\mu} + \frac{16\lambda}{3\pi},
 \]

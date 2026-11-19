@@ -25,7 +25,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - simulations.effective-cross-section-sheet-matter@3
+  - simulations.effective-cross-section-sheet-matter@4
   - simulations.imported-low-energy-scattering-two-dimensions@1
   assumes:
   - dark-matter.r1-equal-mass-per-quantum@1
