@@ -41,7 +41,7 @@ locators:
   paper: T14c
   number: Prop 4.1
   label: prop:pairs
-  line: 435
+  line: 400
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

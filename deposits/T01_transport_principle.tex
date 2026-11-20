@@ -1,4 +1,14 @@
 % T1 of the Transport Papers series: the root paper.
+% 2026-11-20 (interactive session, Claude Opus 5.5, per Leon): T0's Section 14 became the companion note T0a. The closing sentence of Example 3.4 now cites T0a Theorem 7.2 (the switch theorem, T0 Thm 14.9 until today) in place of T0 Section 14, and bibitem ButlerT0a is added. No other change; printed version stays 3.1 (the sentence is still the change since the deposit). Recompiled in the session's workspace: pdflatex x3, 51pp (unchanged), 0 errors, 3 overfull (unchanged), no undefined references. verify_T01.py 115/115 as last recorded (not re-run: a citation changed, no computation).
+% 2026-11-19, later (interactive session, Claude Opus 5.5, per Leon, ahead of the Zenodo redeposit): printed version 3.0 -> 3.1 (rules 23 and 25: the content changed on 2026-11-12, the one sentence in Example 3.4 pointing to T0 Section 14). \date only; no other change. Recompiled in the session's workspace: pdflatex x3, 51pp (unchanged), 0 errors, 3 overfull (unchanged), no undefined references. verify_T01.py 115/115, re-run, script unchanged.
+% 2026-11-12 (derivation session with Leon, Fable 5.2). One sentence added at
+%   the end of Example 3.4 (ex:hyperbolic-idem): the hyperbolic pair read as
+%   set and clear on a bit, e = wv as the test for off, citing the new
+%   Section 14 of the primer (T0 v1.3), which points back to this example.
+%   Prose only, inside an existing environment: no mathematics, labels or
+%   numbering changed. verify_T01.py stands at 115/115 and was not re-run.
+%   Compile: pdflatex x3, 51 pages (unchanged), 0 errors, 0 undefined refs;
+%   the three overfull boxes are the ones already present before this edit.
 % 2026-09-10 (paperwork pass, Opus 5, ordered by Leon).  No mathematics, no
 %   labels and no numbering changed, so verify_T01.py stands unchanged at
 %   115/115 and was not re-run.  Sec 10 (sec:verification) gains a closing
@@ -363,7 +373,7 @@
 \title{\bfseries The Transport Principle\\[4pt]
   \large\itshape Total Division in Clifford Algebras via Minimal Completion}
 \author{Leon Butler\\ \normalsize\href{mailto:lbutler.math@gmail.com}{\texttt{lbutler.math@gmail.com}}\\ \normalsize ORCID: \href{https://orcid.org/0009-0006-4449-5617}{0009-0006-4449-5617}}
-\date{Version 3.0, September 2026 \textperiodcentered{} Transport Papers, T1}
+\date{Version 3.1, November 2026 \textperiodcentered{} Transport Papers, T1}
 
 \begin{document}
 \maketitle
@@ -592,7 +602,7 @@ Let $v$ be null and $(v, w)$ a hyperbolic pair, $vw + wv = 1$. Then $e = wv$ is 
 \[
 v(1 - e)\;=\;v - vwv \;=\; v - v \;=\; 0 , \qquad (1-e) \ne 0.
 \]
-Thus the abstract annihilator idempotent of Lemma \ref{lem:regular} is, for a type-N obstruction, realised by the geometry itself: the pseudo-inverse $w$ of Section \ref{subsec:null} produces it. Type N is in this sense a geometric refinement of type P: a null vector is a zero divisor \emph{whose annihilating idempotent comes from an isotropic line}. What Theorem \ref{thm:nogo} will prove is that this refinement carries an obstruction the generic type-P case does not: the choice of $w$, hence of $e$, is sheared by the null rotations, and no equivariant choice exists in any ascent.
+Thus the abstract annihilator idempotent of Lemma \ref{lem:regular} is, for a type-N obstruction, realised by the geometry itself: the pseudo-inverse $w$ of Section \ref{subsec:null} produces it. Type N is in this sense a geometric refinement of type P: a null vector is a zero divisor \emph{whose annihilating idempotent comes from an isotropic line}. What Theorem \ref{thm:nogo} will prove is that this refinement carries an obstruction the generic type-P case does not: the choice of $w$, hence of $e$, is sheared by the null rotations, and no equivariant choice exists in any ascent. Read from the other side, $v$ and $w$ are the two operations of a two-state system, set and clear, and $e = wv$ is the test for its off state, so that $v(1 - e) = 0$ says that setting what is already on gives nothing: the relations of a hyperbolic pair are those of setting and clearing a bit, which as operators on the bit hold over every commutative ring and with no fraction \cite[Theorem 7.2]{ButlerT0a}.
 \end{example}
 
 \begin{example}[Nilpotents without null vectors: the two loci differ]\label{ex:cl20}
@@ -1685,6 +1695,11 @@ A second layer of machine checking, of a different kind, is deposited alongside:
 L.~Butler,
 \emph{An Introduction to Geometric Algebra: A Primer for the Transport Papers},
 Transport Papers T0 (2026).
+
+\bibitem{ButlerT0a}
+L.~Butler,
+\emph{Geometry First: From the Bit to the Numbers},
+Transport Papers T0a (2026).
 
 \bibitem{ButlerT2}
 L.~Butler,

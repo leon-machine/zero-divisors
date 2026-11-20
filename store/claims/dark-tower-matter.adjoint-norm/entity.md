@@ -43,7 +43,7 @@ locators:
   paper: T14c
   number: Lem 3.4
   label: lem:norm
-  line: 293
+  line: 258
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

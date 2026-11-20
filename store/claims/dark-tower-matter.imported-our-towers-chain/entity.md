@@ -47,7 +47,7 @@ locators:
   paper: T14c
   number: Fact 2.3
   label: fact:chain
-  line: 206
+  line: 155
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

@@ -24,6 +24,11 @@ comments_on:
 - std-algebra.fock-representation
 - std-algebra.complex-numbers
 - transport.exceptional-division-algebras
+locators:
+  paper: T00a
+  number: Rem 7.6
+  label: rem:argued
+  line: 475
 extraction:
   note: >-
     From Leon's working document "From the Bit to the Numbers" (7 November 2026), the sections "Why

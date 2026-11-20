@@ -4298,11 +4298,11 @@
 [
 "I410",
 "dark-tower-matter.anomalies",
-"3 legacy checks pass in verify_T14c.py (premises untracked, no mutation test)",
+"2 legacy checks pass in verify_T14c.py (premises untracked, no mutation test)",
 ""
 ]
 ],
-"key": "3536ca9a8ba3e240",
+"key": "053e7a2576dcebff",
 "result": "pass",
 "runs": [
 {
@@ -4411,7 +4411,7 @@
 ""
 ]
 ],
-"key": "747c162b6e8fe2d0",
+"key": "5f47635ba19acd7c",
 "result": "pass",
 "runs": [
 {
@@ -4618,7 +4618,7 @@
 ""
 ]
 ],
-"key": "93868bcb24790635",
+"key": "a7aebfacb00c4e22",
 "result": "pass",
 "runs": [
 {
@@ -4830,7 +4830,7 @@
 "dark-tower-matter.population": {
 "failed": false,
 "findings": [],
-"key": "b6cd4abe2fd5189c",
+"key": "7a2a462a3174f41b",
 "result": "proof-only",
 "runs": []
 },
@@ -4844,7 +4844,7 @@
 ""
 ]
 ],
-"key": "e5986a1b92be9fc8",
+"key": "61d958d8d7ad01dc",
 "result": "pass",
 "runs": [
 {
@@ -4995,7 +4995,7 @@
 ""
 ]
 ],
-"key": "5f0786414a7c60f9",
+"key": "edbb3cb4ba2d2f06",
 "result": "pass",
 "runs": [
 {
@@ -5182,7 +5182,7 @@
 "dark-tower-matter.u-transposition-rule": {
 "failed": false,
 "findings": [],
-"key": "268c52b3bb93d53b",
+"key": "69943a4012507424",
 "result": "none",
 "runs": []
 },
@@ -11677,7 +11677,7 @@
 "note.dark-tower-matter.abstract": {
 "failed": false,
 "findings": [],
-"key": "f2b4d29bd3a0fd20",
+"key": "c4806c9eab03e742",
 "result": "none",
 "runs": []
 },
@@ -11691,7 +11691,7 @@
 "note.dark-tower-matter.four-dimensional-case-t11s-formula": {
 "failed": false,
 "findings": [],
-"key": "194511e410246d0a",
+"key": "91ff7a01e0aaed0b",
 "result": "none",
 "runs": []
 },
@@ -11712,14 +11712,14 @@
 "note.dark-tower-matter.r-5-unit-datum-or-field": {
 "failed": false,
 "findings": [],
-"key": "e63eb8f2bb558fa8",
+"key": "482c32d4e88e3be7",
 "result": "none",
 "runs": []
 },
 "note.dark-tower-matter.setting-constituents-momentum-where-mass-begins": {
 "failed": false,
 "findings": [],
-"key": "a3103ea6da073196",
+"key": "f0d0c5d077cefa25",
 "result": "none",
 "runs": []
 },
@@ -11733,21 +11733,21 @@
 "note.dark-tower-matter.setting-content-matter": {
 "failed": false,
 "findings": [],
-"key": "8af2f4bc877d2570",
+"key": "9c64a98254a95fc3",
 "result": "none",
 "runs": []
 },
 "note.dark-tower-matter.setting-contribution": {
 "failed": false,
 "findings": [],
-"key": "0ed79a925fbf7673",
+"key": "25317e38b95dbc63",
 "result": "none",
 "runs": []
 },
 "note.dark-tower-matter.setting-gauge-algebras": {
 "failed": false,
 "findings": [],
-"key": "b7a46a6cf859a5a1",
+"key": "b9c5e33be32bfb90",
 "result": "none",
 "runs": []
 },
@@ -11768,7 +11768,7 @@
 "note.dark-tower-matter.setting-machine-verification": {
 "failed": false,
 "findings": [],
-"key": "ab37188035835640",
+"key": "bc126e7c0ca6296b",
 "result": "none",
 "runs": []
 },
@@ -11789,7 +11789,7 @@
 "note.dark-tower-matter.setting-position-series": {
 "failed": false,
 "findings": [],
-"key": "76275ea2d8d59c92",
+"key": "e5a17768055cca7b",
 "result": "none",
 "runs": []
 },
@@ -11824,14 +11824,14 @@
 "note.dark-tower-matter.setting-what-note-depends-what-would": {
 "failed": false,
 "findings": [],
-"key": "dbffcd8874ee8848",
+"key": "a9292270c6b2b126",
 "result": "none",
 "runs": []
 },
 "note.dark-tower-matter.t14s-types-are-different-commutant": {
 "failed": false,
 "findings": [],
-"key": "eede3014be6884e7",
+"key": "eeeafe9bc40cad72",
 "result": "none",
 "runs": []
 },
@@ -11852,7 +11852,7 @@
 "note.dark-tower-matter.why-u": {
 "failed": false,
 "findings": [],
-"key": "7f3fc4382f86a3c5",
+"key": "791fd3b7145bca27",
 "result": "none",
 "runs": []
 },
@@ -12168,6 +12168,279 @@
 "failed": false,
 "findings": [],
 "key": "2e918f718037dd20",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.abstract": {
+"failed": false,
+"findings": [],
+"key": "f5700fc019720e16",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.ladder-needs-halves-set-bit": {
+"failed": false,
+"findings": [],
+"key": "90b91bb81be67ae2",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.one-rule-hand": {
+"failed": false,
+"findings": [],
+"key": "a6d468221702d539",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.roots-cl-0-1-hamiltons-relations": {
+"failed": false,
+"findings": [],
+"key": "c5631a9bd91816ac",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-bit-repetition": {
+"failed": false,
+"findings": [],
+"key": "60344c417f274201",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside": {
+"failed": false,
+"findings": [],
+"key": "390e49b9bb1c880c",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside-2": {
+"failed": false,
+"findings": [],
+"key": "1b8be2aa6811a7bf",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside-3": {
+"failed": false,
+"findings": [],
+"key": "4fcddb1fddf5a4d7",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside-4": {
+"failed": false,
+"findings": [],
+"key": "df0c8f41222709d6",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside-5": {
+"failed": false,
+"findings": [],
+"key": "17b693a59e51886e",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-completion-number-systems-inside-6": {
+"failed": false,
+"findings": [],
+"key": "6833318378aeb45d",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-division-rationals": {
+"failed": false,
+"findings": [],
+"key": "5971abc4e124f77f",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-division-rationals-2": {
+"failed": false,
+"findings": [],
+"key": "b39de8dcf9276c16",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-geometry-before-number": {
+"failed": false,
+"findings": [],
+"key": "ed09f41a2fdd80d7",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-geometry-before-number-2": {
+"failed": false,
+"findings": [],
+"key": "c9d5789e7227fe51",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-geometry-before-number-3": {
+"failed": false,
+"findings": [],
+"key": "30507f25bcbc425c",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-machine-verification": {
+"failed": false,
+"findings": [],
+"key": "cb56821142ab6d8f",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-order-arrival-sign": {
+"failed": false,
+"findings": [],
+"key": "52deb37b3062873d",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-order-arrival-sign-2": {
+"failed": false,
+"findings": [],
+"key": "fc6c066b01861447",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-order-arrival-sign-3": {
+"failed": false,
+"findings": [],
+"key": "040917116be5cb22",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-position-series": {
+"failed": false,
+"findings": [],
+"key": "13707c5fa1b26a9d",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-position-series-2": {
+"failed": false,
+"findings": [],
+"key": "5907e81f0a0e2f25",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-proofs": {
+"failed": false,
+"findings": [],
+"key": "dfa45c024e9bfad9",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-superposition-one-rule-theorem": {
+"failed": false,
+"findings": [],
+"key": "75d063875001b1c6",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-superposition-one-rule-theorem-2": {
+"failed": false,
+"findings": [],
+"key": "04c0fa780bc86dbd",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-superposition-one-rule-theorem-3": {
+"failed": false,
+"findings": [],
+"key": "04ea8919db27d456",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-switch-what-bit-does": {
+"failed": false,
+"findings": [],
+"key": "336a5d45d92d7b84",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-switch-what-bit-does-2": {
+"failed": false,
+"findings": [],
+"key": "6b1fc7d0b232d96b",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-switch-what-bit-does-3": {
+"failed": false,
+"findings": [],
+"key": "b72a587361df9474",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-switch-what-bit-does-4": {
+"failed": false,
+"findings": [],
+"key": "9088e6a4af1ab170",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-switch-what-bit-does-5": {
+"failed": false,
+"findings": [],
+"key": "6ebcbd1605917f2b",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-what-tests-leave-switch": {
+"failed": false,
+"findings": [],
+"key": "3baea6aea44fa45d",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-what-tests-leave-switch-2": {
+"failed": false,
+"findings": [],
+"key": "5bc0683843f8fb1a",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-what-tests-leave-switch-3": {
+"failed": false,
+"findings": [],
+"key": "da87d297af8d6f50",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.setting-what-tests-leave-switch-4": {
+"failed": false,
+"findings": [],
+"key": "074d28e0e4e48505",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.switch-two-two-tables": {
+"failed": false,
+"findings": [],
+"key": "4804b779eb2bf937",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.two-bits": {
+"failed": false,
+"findings": [],
+"key": "bd0014ea99f73901",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.two-orders-joined": {
+"failed": false,
+"findings": [],
+"key": "674bb1fb5b20ef9a",
+"result": "none",
+"runs": []
+},
+"note.geometry-first.vector-needs-half": {
+"failed": false,
+"findings": [],
+"key": "b71881cefe41df01",
 "result": "none",
 "runs": []
 },
@@ -38134,7 +38407,7 @@
 "synthesis.field-strength-heat-kernel-coefficients-of-the-dark-towers-fix-no-scale-ratio": {
 "failed": false,
 "findings": [],
-"key": "b612e0fcb2f1501b",
+"key": "05123dc90fef1735",
 "result": "pass",
 "runs": [
 {

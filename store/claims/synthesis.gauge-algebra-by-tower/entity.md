@@ -35,7 +35,7 @@ derivations:
   - dark-tower-matter.mirror-algebra@4
   assumes:
   - dark-tower-matter.h2-identification@1
-  - dark-tower-matter.u-transposition-rule@3
+  - dark-tower-matter.u-transposition-rule@4
   - dark-tower-matter.h1-momentum@2
   proof: proof-main.tex
 supports:

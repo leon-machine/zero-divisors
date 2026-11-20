@@ -29,7 +29,7 @@ locators:
   paper: T14c
   number: Obs 8.4
   label: obs:mirror
-  line: 799
+  line: 764
 extraction:
   maintainer_pass_decisions:
     by: maintainer-2026-11-07

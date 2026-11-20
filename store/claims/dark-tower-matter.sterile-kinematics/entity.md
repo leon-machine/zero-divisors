@@ -47,7 +47,7 @@ locators:
   paper: T14c
   number: Prop 10.1
   label: prop:sterile
-  line: 845
+  line: 810
 extraction:
   maintainer_pass_2026_11_08:
     by: ai-maintainer-pass

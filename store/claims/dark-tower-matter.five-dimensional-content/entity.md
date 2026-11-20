@@ -42,7 +42,7 @@ locators:
   paper: T14c
   number: Prop 6.3
   label: prop:content5
-  line: 603
+  line: 568
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

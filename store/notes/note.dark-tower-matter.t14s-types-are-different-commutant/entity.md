@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.t14s-types-are-different-commutant
 kind: note
-version: 2
+version: 3
 title: T14's types are a different commutant
 status: remark
 subject: dark-matter
@@ -15,6 +15,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'restated to the deposited text of T14c version 1.0 (10.5281/zenodo.24403592)'
+  version: 3
+  source: maintainer pass of 2026-11-20
 comments_on:
 - dark-tower-matter.constituents-field
 - dark-tower-matter.residue-seven-unit
@@ -24,8 +28,12 @@ locators:
   paper: T14c
   number: Rem 3.3
   label: rem:T14types
-  line: 289
+  line: 254
 extraction:
+  maintainer_pass:
+    by: maintainer-2026-11-20
+    date: '2026-11-20'
+    note: 'The formal level restated: T14c deposited as version 1.0 on 20 November 2026 (10.5281/zenodo.24403592), after an independent review: the remark follows the deposited paper. Version 2 -> 3.'
   maintainer_pass_2026_10_22:
     by: ai-maintainer-pass
     note: 'STRUCTURE L1: T14 Thm 3.4 assigns real type to r = 0, 1, 2 (two modules at r = 1), not r = 1, 2; the remark misquoted it.'
@@ -40,7 +48,7 @@ review: typed
 ---
 
 ## formal
-T14's Theorem 3.4 assigns real type to $r = 0, 1, 2$ (two inequivalent modules at $r = 1$), complex type with an intrinsic $U(1)$ to $r = 3, 7$, and quaternionic type to $r = 4, 5, 6$ \cite[Thm.~3.4]{ButlerT14}. That is the commutant of the full Clifford algebra $\Cl(V)$ on its irreducible module; Theorem \claimref{dark-tower-matter.constituents-field} is the commutant of the spin action on the constituent ideal. Both are correct and they answer different questions. T14's intrinsic $U(1)$ at $r = 3$ and $r = 7$ is the central pseudoscalar, which reappears here as structure the tower carries beside its constituent field: at $r = 7$ as a unit joining two real constituents (Proposition \claimref{dark-tower-matter.residue-seven-unit}), at $r = 3$ as the unit $I_{7}$ inside the quaternions (Theorem \claimref{dark-tower-matter.third-pairs-unit-five-dimensions}).
+T14's Theorem 3.4 assigns real type to $r = 1, 2$, complex type with an intrinsic $U(1)$ to $r = 3, 7$, and quaternionic type to $r = 4, 5, 6$ \cite[Thm.~3.4]{ButlerT14}. That is the commutant of the full Clifford algebra $\Cl(V)$ on its irreducible module; Theorem \claimref{dark-tower-matter.constituents-field} is the commutant of the spin action on the constituent ideal. Both are correct and they answer different questions. T14's intrinsic $U(1)$ at $r = 3$ and $r = 7$ is the central pseudoscalar, which reappears here as structure the tower carries beside its constituent field: at $r = 7$ as a unit joining two real constituents (Proposition \claimref{dark-tower-matter.residue-seven-unit}), at $r = 3$ as the unit $I_{7}$ inside the quaternions (Theorem \claimref{dark-tower-matter.third-pairs-unit-five-dimensions}).
 
 ## technical
 pending

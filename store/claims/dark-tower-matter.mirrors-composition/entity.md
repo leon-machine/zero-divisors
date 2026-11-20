@@ -54,7 +54,7 @@ locators:
   paper: T14c
   number: Comp 8.3
   label: comp:mirror
-  line: 770
+  line: 735
 extraction:
   maintainer_pass_2026_11_18_energy:
     by: maintainer-2026-11-18

@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: Introduction
-  line: 122
+  line: 71
 ---
 
 ## formal

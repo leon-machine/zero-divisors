@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: The ladder pairs and the complex unit
-  line: 431
+  line: 396
 ---
 
 ## formal

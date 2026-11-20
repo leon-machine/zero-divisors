@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: Setting, imports and premises
-  line: 218
+  line: 183
 ---
 
 ## formal

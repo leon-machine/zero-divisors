@@ -29,8 +29,8 @@ derivations:
   - dark-tower-matter.three-dimensional-phases@4
   - dark-matter.mirror-tower-copy-one@11
   - dark-matter.no-coupling-rule-odd-towers-follows@6
-  - dark-tower-matter.r1-has-no-mechanism-odd-towers@3
-  - dark-tower-matter.five-dimensional-towers@5
+  - dark-tower-matter.r1-has-no-mechanism-odd-towers@4
+  - dark-tower-matter.five-dimensional-towers@6
   proof: proof-main.tex
 checked_by:
 - kind: check

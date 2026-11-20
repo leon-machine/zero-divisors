@@ -1,5 +1,46 @@
 # Changelog: t01-regenerated
 
+## v10 (2026-11-20T21:04:48+00:00)
+
+- bump: major
+- note.transport.exotic-embedding-inertness: revised-substantive
+- note.transport.setting-euclidean-plane-inversion-circle-riemann: revised-substantive
+- note.transport.setting-quadratic-spaces-clifford-algebras: revised-substantive
+- note.transport.three-dimensions: revised-substantive
+- obj.transport.equivariance: revised-substantive
+- primer.centre: revised-substantive
+- primer.classification-real-clifford-algebras: revised-cosmetic
+- primer.commutation-rule: revised-substantive
+- primer.sign: revised-substantive
+- primer.splitting-along-hyperbolic-plane: revised-substantive
+- std-algebra.blade-basis: revised-cosmetic
+- std-algebra.complexification: revised-substantive
+- std-algebra.existence-uniqueness: revised-cosmetic
+- std-algebra.involution-properties: revised-cosmetic
+- std-algebra.morita-amplification: revised-cosmetic
+- std-algebra.orthogonal-anticommute: revised-cosmetic
+- std-algebra.reflection: revised-cosmetic
+- std-algebra.sylvester-inertia: removed
+- std-algebra.vector-squares: revised-cosmetic
+- std-algebra.witt-decomposition: revised-substantive
+- std-algebra.z2-grading: revised-cosmetic
+- synthesis.completion-recovers-the-real-clifford-algebras: added
+- transport.conformal-gram-matrix: revised-substantive
+- transport.corner-even-subalgebra: revised-substantive
+- transport.exhaustiveness-every-zero-divisor-annihilated-idempotent: revised-substantive
+- transport.group-null-rotations: revised-substantive
+- transport.minimality: revised-substantive
+- transport.no-go-level-elements: revised-substantive
+- transport.obstructions-are-moved-never-destroyed: refuted
+- transport.odd-lorentzian-dimension-exactly-one-real: revised-substantive
+- transport.one-generator-minimal-minimal-completions-classified: revised-substantive
+- transport.regularity-localises-zero-divisors-idempotents: revised-substantive
+- transport.rule-1-morita-trivial: revised-substantive
+- std-algebra.sylvester-inertia: left the document's dependency cone, removed
+- renumbered c:std-algebra.vector-squares: 67 -> 66
+- renumbered c:std-algebra.witt-decomposition: 68 -> 67
+- renumbered c:std-algebra.z2-grading: 69 -> 68
+
 ## v9 (2026-10-27T17:06:05+00:00)
 
 - bump: patch

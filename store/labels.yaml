@@ -383,6 +383,261 @@ T00:tk:tau:
   entity: primer.twisted-adjoint-action
   kind: theorem
   number: '9.2'
+T00a#outline:
+- level: section
+  line: 61
+  number: '1'
+  title: Geometry before number
+- level: section
+  line: 117
+  number: '2'
+  title: The bit and its repetition
+- level: section
+  line: 130
+  number: '3'
+  title: Order, and the arrival of the sign
+- level: section
+  line: 193
+  number: '4'
+  title: Superposition, and the one rule as a theorem
+- level: section
+  line: 236
+  number: '5'
+  title: Division, and the rationals
+- level: section
+  line: 263
+  number: '6'
+  title: Completion, and the number systems inside
+- level: section
+  line: 364
+  number: '7'
+  title: 'The switch: what a bit does'
+- level: section
+  line: 483
+  number: '8'
+  title: What the tests leave of a switch
+- level: section
+  line: 589
+  number: '9'
+  title: Position in the series
+- level: section
+  line: 599
+  number: '10'
+  title: Machine verification
+- level: section
+  line: 604
+  number: '11'
+  title: Proofs
+- level: subsection
+  line: 608
+  number: '11.1'
+  title: Proof of Theorem~\ref{thm:bitsign}
+- level: subsection
+  line: 630
+  number: '11.2'
+  title: Proof of Theorem~\ref{thm:bitclifford}
+- level: subsection
+  line: 644
+  number: '11.3'
+  title: Proof of Proposition~\ref{prop:bitdivision}
+- level: subsection
+  line: 650
+  number: '11.4'
+  title: Proof of Theorem~\ref{thm:bitinertia}
+- level: subsection
+  line: 682
+  number: '11.5'
+  title: Proof of Lemma~\ref{lem:bitpoly}
+- level: subsection
+  line: 694
+  number: '11.6'
+  title: Proof of Theorem~\ref{thm:bitroots}
+- level: subsection
+  line: 738
+  number: '11.7'
+  title: Proof of Theorem~\ref{thm:bitfrobenius}
+- level: subsection
+  line: 774
+  number: '11.8'
+  title: Proof of Theorem~\ref{thm:switch}
+- level: subsection
+  line: 786
+  number: '11.9'
+  title: Proof of Proposition~\ref{prop:planes}
+- level: subsection
+  line: 800
+  number: '11.10'
+  title: Proof of Theorem~\ref{thm:nobit}
+- level: subsection
+  line: 816
+  number: '11.11'
+  title: Proof of Proposition~\ref{prop:pinching}
+T00a:app:proofs:
+  kind: appendix
+  number: A
+  section: Proofs
+T00a:def:register:
+  kind: theorem
+  number: '8.1'
+T00a:def:switch:
+  kind: theorem
+  number: '7.1'
+T00a:ex:half:
+  entity: note.geometry-first.vector-needs-half
+  kind: example
+  number: C
+T00a:ex:halves:
+  entity: note.geometry-first.ladder-needs-halves-set-bit
+  kind: example
+  number: F
+T00a:ex:onerule:
+  entity: note.geometry-first.one-rule-hand
+  kind: example
+  number: B
+T00a:ex:pinch:
+  entity: note.geometry-first.one-switch-pinched
+  kind: example
+  number: G
+T00a:ex:roots:
+  entity: note.geometry-first.roots-cl-0-1-hamiltons-relations
+  kind: example
+  number: D
+T00a:ex:tables:
+  entity: note.geometry-first.switch-two-two-tables
+  kind: example
+  number: E
+T00a:ex:twobits:
+  entity: note.geometry-first.two-bits
+  kind: example
+  number: A
+T00a:fig:route:
+  kind: figure
+  number: '1'
+T00a:lem:bitpoly:
+  kind: theorem
+  number: '6.2'
+T00a:prf:lem:bitpoly:
+  kind: Proof of Lemma 6
+  number: A.5
+T00a:prf:prop:bitdivision:
+  kind: Proof of Proposition 5
+  number: A.3
+T00a:prf:prop:pinching:
+  kind: Proof of Proposition 8
+  number: A.11
+T00a:prf:prop:planes:
+  kind: Proof of Proposition 7
+  number: A.9
+T00a:prf:thm:bitclifford:
+  kind: Proof of Theorem 4
+  number: A.2
+T00a:prf:thm:bitfrobenius:
+  kind: Proof of Theorem 6
+  number: A.7
+T00a:prf:thm:bitinertia:
+  kind: Proof of Theorem 6
+  number: A.4
+T00a:prf:thm:bitroots:
+  kind: Proof of Theorem 6
+  number: A.6
+T00a:prf:thm:bitsign:
+  kind: Proof of Theorem 3
+  number: A.1
+T00a:prf:thm:nobit:
+  kind: Proof of Theorem 7
+  number: A.10
+T00a:prf:thm:switch:
+  kind: Proof of Theorem 7
+  number: A.8
+T00a:prop:bitdivision:
+  entity: synthesis.division-gives-the-rationals
+  kind: theorem
+  number: '5.1'
+T00a:prop:pinching:
+  kind: theorem
+  number: '8.2'
+T00a:prop:planes:
+  entity: synthesis.switch-planes-on-a-two-state-space
+  kind: theorem
+  number: '7.3'
+T00a:rem:argued:
+  entity: note.synthesis.geometric-algebra-as-the-algebra-of-physics
+  kind: theorem
+  number: '7.6'
+T00a:rem:joined:
+  entity: note.geometry-first.two-orders-joined
+  kind: theorem
+  number: '8.3'
+T00a:rem:twoorders:
+  entity: note.synthesis.two-orders-of-construction-ladder-and-switch
+  kind: theorem
+  number: '7.5'
+T00a:sec:bit:
+  kind: section
+  number: '1'
+  section: Geometry before number
+T00a:sec:completion:
+  kind: section
+  number: '6'
+  section: Completion, and the number systems inside
+T00a:sec:division:
+  kind: section
+  number: '5'
+  section: Division, and the rationals
+T00a:sec:position:
+  kind: section
+  number: '9'
+  section: Position in the series
+T00a:sec:repetition:
+  kind: section
+  number: '2'
+  section: The bit and its repetition
+T00a:sec:sign:
+  kind: section
+  number: '3'
+  section: Order, and the arrival of the sign
+T00a:sec:superposition:
+  kind: section
+  number: '4'
+  section: Superposition, and the one rule as a theorem
+T00a:sec:switch:
+  kind: section
+  number: '7'
+  section: 'The switch: what a bit does'
+T00a:sec:tests:
+  kind: section
+  number: '8'
+  section: What the tests leave of a switch
+T00a:sec:verification:
+  kind: section
+  number: '10'
+  section: Machine verification
+T00a:thm:bitclifford:
+  entity: synthesis.signed-directions-and-the-integer-clifford-algebra
+  kind: theorem
+  number: '4.1'
+T00a:thm:bitfrobenius:
+  entity: synthesis.frobenius-and-universality-in-clifford-algebras
+  kind: theorem
+  number: '6.4'
+T00a:thm:bitinertia:
+  entity: synthesis.completion-recovers-the-real-clifford-algebras
+  kind: theorem
+  number: '6.1'
+T00a:thm:bitroots:
+  kind: theorem
+  number: '6.3'
+T00a:thm:bitsign:
+  kind: theorem
+  number: '3.1'
+T00a:thm:nobit:
+  entity: synthesis.integer-clifford-algebras-contain-no-switch
+  kind: theorem
+  number: '7.4'
+T00a:thm:switch:
+  entity: synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane
+  kind: theorem
+  number: '7.2'
 T01#outline:
 - level: section
   line: 384
@@ -7970,7 +8225,7 @@ T14c:fig:grids:
 T14c:fig:mirror:
   kind: figure
   number: '3'
-T14c:lem:neutralrow:
+T14c:rem:neutralrow:
   entity: note.dark-tower-matter.neutral-row
   kind: theorem
   number: '6.2'

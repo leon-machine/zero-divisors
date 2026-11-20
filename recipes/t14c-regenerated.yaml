@@ -9,6 +9,9 @@ spine:
 - dark-tower-matter.imported-our-towers-chain
 - dark-tower-matter.imported-unit-ball-rule
 - dark-tower-matter.imported-cluster-simulations
+- rule2.imported-parity-anomaly
+- rule2.imported-five-dimensional-chern-simons-shift
+- dark-matter.mirror-tower-copy-one
 - obj.dark-tower-matter.ideals-fields-momentum
 - dark-tower-matter.constituents-field
 - dark-tower-matter.adjoint-norm
@@ -50,7 +53,7 @@ budget:
   - 250
 gate:
   phase: 3
-  original: ../Claude outputs/dark_tower_matter_2026-10-20/T14c_dark_tower_matter.tex
+  original: ../T14c_dark_tower_matter.tex
   note: Recreate T14c from the store
 cite: []
 prose: paper

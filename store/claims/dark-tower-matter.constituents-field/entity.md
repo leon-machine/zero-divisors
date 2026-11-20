@@ -44,7 +44,7 @@ locators:
   paper: T14c
   number: Thm 3.2
   label: thm:fields
-  line: 253
+  line: 218
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

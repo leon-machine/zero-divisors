@@ -24,7 +24,7 @@ locators:
   paper: T14c
   number: Rem 10.2
   label: rem:kleinian
-  line: 868
+  line: 833
 extraction:
   typing:
     by: ai-typing-pass

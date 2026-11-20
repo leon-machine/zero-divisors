@@ -32,6 +32,10 @@ lineage:
   motivated_by:
   - synthesis.nilpotent-steps-derivative-exponential-and-boost
   - synthesis.completion-recovers-the-real-clifford-algebras
+locators:
+  paper: T00a
+  number: Premise (F4)
+  line: 267
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

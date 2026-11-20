@@ -47,6 +47,11 @@ checked_by:
   ref: check.py::check_orthonormal_pair_from_the_switch
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Thm 7.2
+  label: thm:switch
+  line: 383
 extraction:
   note: >-
     From the session of 12 November 2026 on Leon's observation that defining the bit first leads to

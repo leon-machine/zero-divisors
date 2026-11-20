@@ -1,0 +1,40 @@
+doc: t00a-regenerated
+title: 'Geometry First: From the Bit to the Numbers (regenerated from the store)'
+author: Leon Butler
+level: formal
+spine:
+- synthesis.premise-the-bit
+- synthesis.premise-minimal-non-commutativity
+- synthesis.premise-superposition-over-the-integers
+- synthesis.signed-directions-and-the-integer-clifford-algebra
+- synthesis.division-gives-the-rationals
+- synthesis.continuum-completion-premise
+- synthesis.completion-recovers-the-real-clifford-algebras
+- synthesis.frobenius-and-universality-in-clifford-algebras
+- synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane
+- synthesis.switch-planes-on-a-two-state-space
+- synthesis.integer-clifford-algebras-contain-no-switch
+show: spine-only
+paper: T00a
+sections: paper
+include:
+  assumptions: always
+  refutations: in-cone
+  predictions: in-cone
+  notes: attached
+  settings: attached
+on_refuted: keep-as-refutation
+format: latex-series
+budget:
+  abstract_words:
+  - 150
+  - 250
+gate:
+  phase: 3
+  original: ../T00a_geometry_first.tex
+  note: Recreate T0a from the store
+cite: []
+prose: paper
+msc: Primary 15A66; Secondary 11E04, 16K20.
+keywords: geometric algebra; Clifford algebra; the bit; integer Clifford algebras;
+  Sylvester's law of inertia; Frobenius theorem; fermionic mode.

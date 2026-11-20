@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: The sterile towers
-  line: 872
+  line: 837
 ---
 
 ## formal

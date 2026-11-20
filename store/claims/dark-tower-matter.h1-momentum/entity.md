@@ -26,9 +26,9 @@ about:
 - obj.dark-tower-matter.ideals-fields-momentum
 locators:
   paper: T14c
-  number: Premise 2.6
+  number: Premise 2.10
   label: prem:H1
-  line: 220
+  line: 185
 extraction:
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10

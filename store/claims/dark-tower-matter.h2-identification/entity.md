@@ -20,9 +20,9 @@ credit:
 review: typed
 locators:
   paper: T14c
-  number: Premise 2.7
+  number: Premise 2.11
   label: prem:H2
-  line: 224
+  line: 189
 extraction:
   env: premise
   context_refs:

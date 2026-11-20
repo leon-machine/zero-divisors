@@ -45,6 +45,11 @@ checked_by:
   ref: check.py::check_switch_planes_and_pairs_of_states
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Prop 7.3
+  label: prop:planes
+  line: 424
 extraction:
   note: >-
     From the session of 12 November 2026 on Leon's observation about the bit and the on/off switch.

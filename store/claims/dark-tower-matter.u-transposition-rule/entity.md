@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.u-transposition-rule
 kind: claim
-version: 3
+version: 4
 title: 'Premise U: the transposition rule (a definition)'
 status: postulate
 region: dark-tower-matter
@@ -22,13 +22,21 @@ credit:
   role: 'marked as a definition at every level (the entity and its edges kept)'
   version: 3
   source: maintainer pass of 2026-11-10
+- name: Claude Opus 5.5
+  role: 'restated to the deposited text of T14c version 1.0 (10.5281/zenodo.24403592)'
+  version: 4
+  source: maintainer pass of 2026-11-20
 review: typed
 locators:
   paper: T14c
-  number: Premise 2.9
+  number: Premise 2.13
   label: prem:U
-  line: 232
+  line: 197
 extraction:
+  maintainer_pass:
+    by: maintainer-2026-11-20
+    date: '2026-11-20'
+    note: 'The formal level restated: T14c deposited as version 1.0 on 20 November 2026 (10.5281/zenodo.24403592), after an independent review: the norm clause of (U2) stated as part of the definition, with what rests on it. Version 3 -> 4. The technical level restated: as the formal level.'
   maintainer_pass_2026_11_10:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -48,12 +56,12 @@ about:
 ---
 
 ## formal
-(U1) A constituent is an element of the spin-irreducible even ideal of the conformal algebra, as T12 defines this tower's, and its field is the commutant of the spin action on it. (U2) The hierarchy's first factor counts constituents at mass onset, and its slot group is the momentum-preserving group of that many constituents; the pair group is the group of mixings of the ladder pairs that preserves their canonical relations and the field's positive norm, the unitary group over the pairs' scalars ($\R$, or $\C$ where a complex unit builds the pairs), as T12 takes $U(m) \times U(k)$ \cite[Thm.~4.1]{ButlerT12}. (U3) Every complex unit used to build a ladder pair is an element of the constituent's field that the real algebra supplies; no external imaginary unit is adjoined.
+(U1) A constituent is an element of the spin-irreducible even ideal of the conformal algebra, as T12 defines this tower's, and its field is the commutant of the spin action on it. (U2) The hierarchy's first factor counts constituents at mass onset, and its slot group is the momentum-preserving group of that many constituents; the pair group is the group of mixings of the ladder pairs that preserves their canonical relations and the field's positive norm, the unitary group over the pairs' scalars ($\R$, or $\C$ where a complex unit builds the pairs), as T12 takes $U(m) \times U(k)$ \cite[Thm.~4.1]{ButlerT12}. The norm clause is part of the definition: no positive form on the pair space is derived, and without it the group preserving the canonical relations is $GL(2,\R)$; the compactness of every gauge group stated under U rests on it. (U3) Every complex unit used to build a ladder pair is an element of the constituent's field that the real algebra supplies; no external imaginary unit is adjoined.
 
 \emph{Type: a definition.} The three clauses define what the series calls a constituent in another tower, its field, the slot and pair groups, and which complex units are admitted; they assert nothing about nature that could be derived or refuted, and can only be replaced by another definition (Remark \claimref{note.dark-tower-matter.branches-break-u-what-they-give} lists what other choices give). The definition has consequences through what it excludes: with it, the lowest-causal choice of Premise \claimref{dark-matter.p3-nearest-dimension-representatives} at residues $1$ and $7$ follows. Results stated under Premise U hold for the objects so defined; the entity keeps the status of a premise so that those results show the choice among their conditions.
 
 ## technical
-Premise U carries the Standard-Model construction to other towers in three clauses. (U1) A constituent is an element of the spin-irreducible even ideal of the conformal algebra, and its field is the commutant of the spin action on it. (U2) The hierarchy's first factor counts constituents at mass onset, with the momentum-preserving group of that many constituents as its slot group; the pair group is the group of mixings of the ladder pairs that preserve their canonical relations and the field's positive norm, the unitary group over the pairs' scalars ($\R$, or $\C$ where a complex unit builds the pairs). (U3) Every complex unit used to build a ladder pair is an element of the constituent's field that the real algebra supplies; no external imaginary unit is adjoined.
+Premise U carries the Standard-Model construction to other towers in three clauses. (U1) A constituent is an element of the spin-irreducible even ideal of the conformal algebra, and its field is the commutant of the spin action on it. (U2) The hierarchy's first factor counts constituents at mass onset, with the momentum-preserving group of that many constituents as its slot group; the pair group is the group of mixings of the ladder pairs that preserve their canonical relations and the field's positive norm, the unitary group over the pairs' scalars ($\R$, or $\C$ where a complex unit builds the pairs). The norm clause is part of the definition: no positive form on the pair space is derived, and without it the group preserving the canonical relations is $GL(2,\R)$, so the compactness of every gauge group stated under U rests on it. (U3) Every complex unit used to build a ladder pair is an element of the constituent's field that the real algebra supplies; no external imaginary unit is adjoined.
 
 Type: a definition. The clauses define the constituent, its field, the two groups and the admitted units in the other towers; they can be replaced by another definition, with other results, but not derived or refuted. The entity stays among the premises so that results stated under it show the choice.
 

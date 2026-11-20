@@ -1,0 +1,46 @@
+\newlabel{sec:bit}{{1}{3}{Geometry before number}{section.1}{}}
+\newlabel{fig:route}{{1}{4}{The route of this note. Left, in blue, the ladder: each step forced by the premise or demand named in it and the steps above. Right, in green, the switch: the two operations on one bit and the pair of directions they make. The two columns meet in $\Cl (1,1)$, which is the algebra of one bit once halves are allowed, and keeping only the tests of a register of switches, in plum, leaves the record of which state holds and nothing that changes it}{figure.1}{}}
+\newlabel{sec:repetition}{{2}{5}{The bit and its repetition}{section.2}{}}
+\newlabel{sec:sign}{{3}{5}{Order, and the arrival of the sign}{section.3}{}}
+\newlabel{thm:bitsign}{{3.1}{5}{The sign and the blades}{theorem.3.1}{}}
+\newlabel{ex:twobits}{{A}{6}{Two bits}{example.1}{}}
+\newlabel{sec:superposition}{{4}{6}{Superposition, and the one rule as a theorem}{section.4}{}}
+\newlabel{thm:bitclifford}{{4.1}{7}{The integer algebra is the Clifford algebra}{theorem.4.1}{}}
+\newlabel{ex:onerule}{{B}{7}{The one rule by hand}{example.2}{}}
+\newlabel{sec:division}{{5}{7}{Division, and the rationals}{section.5}{}}
+\newlabel{prop:bitdivision}{{5.1}{8}{Division produces the rationals}{theorem.5.1}{}}
+\newlabel{ex:half}{{C}{8}{A vector that needs a half}{example.3}{}}
+\newlabel{sec:completion}{{6}{8}{Completion, and the number systems inside}{section.6}{}}
+\newlabel{thm:bitinertia}{{6.1}{9}{Square roots and the law of inertia}{theorem.6.1}{}}
+\newlabel{lem:bitpoly}{{6.2}{9}{Two tools}{theorem.6.2}{}}
+\newlabel{thm:bitroots}{{6.3}{10}{Real polynomials have their roots in $\Cl (0,1)$}{theorem.6.3}{}}
+\newlabel{thm:bitfrobenius}{{6.4}{10}{Frobenius: where division never fails}{theorem.6.4}{}}
+\newlabel{ex:roots}{{D}{10}{Roots in $\Cl (0,1)$, and Hamilton's relations}{example.4}{}}
+\newlabel{sec:switch}{{7}{11}{The switch: what a bit does}{section.7}{}}
+\newlabel{def:switch}{{7.1}{11}{Bit, set, clear, switch}{theorem.7.1}{}}
+\newlabel{thm:switch}{{7.2}{11}{The switch generates the hyperbolic plane}{theorem.7.2}{}}
+\newlabel{ex:tables}{{E}{12}{The switch as two-by-two tables}{example.5}{}}
+\newlabel{prop:planes}{{7.3}{12}{Planes of directions on two states}{theorem.7.3}{}}
+\newlabel{thm:nobit}{{7.4}{13}{The integer algebra of the ladder contains no switch}{theorem.7.4}{}}
+\newlabel{ex:halves}{{F}{13}{The ladder needs halves to set a bit}{example.6}{}}
+\newlabel{rem:twoorders}{{7.5}{13}{Two orders of construction}{theorem.7.5}{}}
+\newlabel{rem:argued}{{7.6}{14}{Argued: the algebra of physics}{theorem.7.6}{}}
+\newlabel{sec:tests}{{8}{14}{What the tests leave of a switch}{section.8}{}}
+\newlabel{def:register}{{8.1}{15}{Register, tests, parities, pinching}{theorem.8.1}{}}
+\newlabel{prop:pinching}{{8.2}{15}{What the tests leave}{theorem.8.2}{}}
+\newlabel{ex:pinch}{{G}{16}{One switch, pinched}{example.7}{}}
+\newlabel{rem:joined}{{8.3}{17}{The two orders, joined}{theorem.8.3}{}}
+\newlabel{sec:position}{{9}{17}{Position in the series}{section.9}{}}
+\newlabel{sec:verification}{{10}{18}{Machine verification}{section.10}{}}
+\newlabel{app:proofs}{{A}{18}{Proofs}{appendix.A}{}}
+\newlabel{prf:thm:bitsign}{{A.1}{18}{\texorpdfstring {Proof of Theorem~\ref {thm:bitsign}}{Proof of Theorem 3.1}}{subsection.A.1}{}}
+\newlabel{prf:thm:bitclifford}{{A.2}{19}{\texorpdfstring {Proof of Theorem~\ref {thm:bitclifford}}{Proof of Theorem 4.1}}{subsection.A.2}{}}
+\newlabel{prf:prop:bitdivision}{{A.3}{19}{\texorpdfstring {Proof of Proposition~\ref {prop:bitdivision}}{Proof of Proposition 5.1}}{subsection.A.3}{}}
+\newlabel{prf:thm:bitinertia}{{A.4}{19}{\texorpdfstring {Proof of Theorem~\ref {thm:bitinertia}}{Proof of Theorem 6.1}}{subsection.A.4}{}}
+\newlabel{prf:lem:bitpoly}{{A.5}{20}{\texorpdfstring {Proof of Lemma~\ref {lem:bitpoly}}{Proof of Lemma 6.2}}{subsection.A.5}{}}
+\newlabel{prf:thm:bitroots}{{A.6}{21}{\texorpdfstring {Proof of Theorem~\ref {thm:bitroots}}{Proof of Theorem 6.3}}{subsection.A.6}{}}
+\newlabel{prf:thm:bitfrobenius}{{A.7}{22}{\texorpdfstring {Proof of Theorem~\ref {thm:bitfrobenius}}{Proof of Theorem 6.4}}{subsection.A.7}{}}
+\newlabel{prf:thm:switch}{{A.8}{23}{\texorpdfstring {Proof of Theorem~\ref {thm:switch}}{Proof of Theorem 7.2}}{subsection.A.8}{}}
+\newlabel{prf:prop:planes}{{A.9}{24}{\texorpdfstring {Proof of Proposition~\ref {prop:planes}}{Proof of Proposition 7.3}}{subsection.A.9}{}}
+\newlabel{prf:thm:nobit}{{A.10}{24}{\texorpdfstring {Proof of Theorem~\ref {thm:nobit}}{Proof of Theorem 7.4}}{subsection.A.10}{}}
+\newlabel{prf:prop:pinching}{{A.11}{25}{\texorpdfstring {Proof of Proposition~\ref {prop:pinching}}{Proof of Proposition 8.2}}{subsection.A.11}{}}

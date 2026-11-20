@@ -28,6 +28,10 @@ founded_on:
 lineage:
   motivated_by:
   - synthesis.signed-directions-and-the-integer-clifford-algebra
+locators:
+  paper: T00a
+  number: Premise (F3)
+  line: 197
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

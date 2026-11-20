@@ -45,7 +45,7 @@ locators:
   paper: T14c
   number: Thm 8.1
   label: thm:mirror
-  line: 723
+  line: 688
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

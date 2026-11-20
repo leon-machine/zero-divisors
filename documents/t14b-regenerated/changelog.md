@@ -1,5 +1,35 @@
 # Changelog: t14b-regenerated
 
+## v11 (2026-11-20T21:05:22+00:00)
+
+- bump: major
+- dark-matter.mirror-share-one-how-fragile: revised-substantive
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- dark-matter.r2-one-quantum-per-unit-ball: revised-substantive
+- dark-matter.r3-one-cell-per-unshared-direction: revised-substantive
+- dark-matter.radiation-audit-what-theorem-closes-what: revised-substantive
+- dark-matter.reduced-response-gravity-needs-supporting-stress: revised-cosmetic
+- dark-matter.stored-asymmetry-charge-not-number: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-cosmetic
+- dark-matter.total-function-thickness: revised-substantive
+- dark-matter.unit-ball-rule: revised-substantive
+- note.simulations.setting-introduction-5: revised-substantive
+- note.simulations.setting-sheet-fluid: revised-substantive
+- pred.no-dark-radiation: revised-substantive
+- pred.no-indirect-dark-signals: revised-substantive
+- simulations.averaged-pair-operator: revised-substantive
+- simulations.c-odd-towers-collisionless: revised-substantive
+- simulations.cluster-bound-two-dimensions: revised-substantive
+- simulations.effective-cross-section-sheet-matter: revised-substantive
+- simulations.imported-mirror: revised-substantive
+- simulations.s1-one-species-per-tower: revised-substantive
+- simulations.s2-sheet-fluid: revised-substantive
+- simulations.s3-mirror-cluster: revised-substantive
+- simulations.s4-our-matter: revised-substantive
+- simulations.s5-halos: revised-substantive
+- std-algebra.product-decomposition: revised-cosmetic
+- std-algebra.vector-squares: revised-cosmetic
+
 ## v10 (2026-10-27T17:09:58+00:00)
 
 - bump: patch

@@ -52,6 +52,11 @@ checked_by:
   ref: check.py::check_classification_by_gauss_sum
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Thm 4.1
+  label: thm:bitclifford
+  line: 209
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

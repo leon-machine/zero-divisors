@@ -26,6 +26,10 @@ foundation: true
 lineage:
   motivated_by:
   - synthesis.blade-square-signs-f2-quadratic-form
+locators:
+  paper: T00a
+  number: Premise (F1)
+  line: 119
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

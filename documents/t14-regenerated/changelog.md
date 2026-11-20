@@ -1,5 +1,207 @@
 # Changelog: t14-regenerated
 
+## v11 (2026-11-20T21:05:04+00:00)
+
+- bump: major
+- correspondence.fock-model-complexified-ascended-algebra: revised-substantive
+- correspondence.twistors-are-states-three-ladder-pairs: revised-cosmetic
+- dark-energy.acoustic-no-go-one-way-grip: revised-substantive
+- dark-energy.conclusion-does-not-depend-ontology-level: revised-cosmetic
+- dark-energy.four-alternatives-are-exhaustive-three-are: revised-cosmetic
+- dark-energy.frozen-point-makes-stelle-west-vector: revised-substantive
+- dark-energy.imported-frozen-point-geometry: revised-substantive
+- dark-energy.lift-inherits-no-go-steps-itemised: revised-cosmetic
+- dark-energy.under-action-written-norm-parameter-laws: revised-cosmetic
+- dark-energy.vacuum-region-registration-condition: revised-substantive
+- dark-matter.asymmetry-arrow-counted-fifteenth-refutation: revised-substantive
+- dark-matter.coefficients-floors-they-give-what-gravity: revised-substantive
+- dark-matter.contact-mechanism-returns-r3: revised-substantive
+- dark-matter.d-democracy-total-mass: revised-substantive
+- dark-matter.democracy-de-sitter-radius-unit-ball: revised-substantive
+- dark-matter.e-equal-mass-per-unit-ball: added
+- dark-matter.imported-composition-simulated-external: revised-substantive
+- dark-matter.imported-gravity-only-coupling: revised-substantive
+- dark-matter.imported-induced-equations-hypersurface: revised-substantive
+- dark-matter.imported-linear-momentum-equation-traceless-field: revised-substantive
+- dark-matter.imported-massless-graviton-production-rate: revised-substantive
+- dark-matter.imported-trichotomy-descents-data: revised-substantive
+- dark-matter.mirror-share-assembled: revised-substantive
+- dark-matter.mirror-share-one-how-fragile: revised-substantive
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- dark-matter.no-coupling-rule-odd-towers-follows: revised-substantive
+- dark-matter.odd-towers-populated: added
+- dark-matter.open-channels-their-costs: revised-substantive
+- dark-matter.orientation-arrow-seventeenth-refutation: revised-substantive
+- dark-matter.p1-single-frozen-point: revised-substantive
+- dark-matter.p3-nearest-dimension-representatives: revised-substantive
+- dark-matter.p4-democracy-asymmetry-over-oriented-towers: removed
+- dark-matter.population-count-one-share-half-percent: revised-substantive
+- dark-matter.premise-cpt-covariance: revised-substantive
+- dark-matter.premise-flag-as-datum: revised-substantive
+- dark-matter.r2-one-quantum-per-unit-ball: revised-substantive
+- dark-matter.r3-one-cell-per-unshared-direction: revised-substantive
+- dark-matter.radiation-audit-what-theorem-closes-what: revised-substantive
+- dark-matter.residue-soldered-invariant-not-algebraic-one: revised-substantive
+- dark-matter.seeding-gravity-floor-dark-towers-temperature: revised-substantive
+- dark-matter.single-ideal-at-residues-zero-and-four: added
+- dark-matter.sourcing-rule-forced-not-chosen: revised-substantive
+- dark-matter.status-rule: revised-substantive
+- dark-matter.stored-asymmetry-charge-not-number: revised-substantive
+- dark-matter.thickness-not-gravitational-quantity: revised-substantive
+- dark-matter.total-function-thickness: revised-substantive
+- dark-matter.two-families-are-two-chiralities: revised-substantive
+- dark-matter.unit-ball-rule: revised-substantive
+- dark-matter.which-towers-are-populated: revised-substantive
+- dark-matter.which-towers-can-carry-arrow: revised-substantive
+- families.alignment-computed-thirteenth-refutation-democracy-one: revised-cosmetic
+- hawking.greybody-inheritance-under-interface-premise: revised-cosmetic
+- interior.non-null-stabilisers-section-they-act: revised-substantive
+- interior.scale-tractor-leaves-cone: revised-substantive
+- interior.stabiliser-rotates-parabolic-reductive: revised-cosmetic
+- mass.mass-symplectic-area-two-twistor-formula: revised-cosmetic
+- note.dark-matter.forks-cost-restated-causal-criterion-theorem: revised-cosmetic
+- note.dark-matter.setting-dark-matter-ratio-unit-ball: revised-substantive
+- note.dark-matter.setting-dark-stable-counted: revised-substantive
+- note.dark-matter.setting-levels-results: revised-substantive
+- note.dark-matter.setting-predictions-collected: revised-substantive
+- note.synthesis.where-stored-text-names-a-graviton: added
+- pred.dark-energy-w-minus-one: revised-substantive
+- pred.dimmed-evaporation-bursts: revised-substantive
+- pred.no-dark-radiation: revised-substantive
+- pred.no-indirect-dark-signals: revised-substantive
+- primer.classification-real-clifford-algebras: revised-cosmetic
+- primer.twisted-adjoint-action: revised-substantive
+- refuted.the-particle-antiparticle-orientation-is-determi: revised-substantive
+- sheaf.infinite-wall-sequence: revised-cosmetic
+- standard-model.chirality-two-halves-spinor-module-conjugation: revised-cosmetic
+- standard-model.four-dimensions-forces-converse: revised-cosmetic
+- standard-model.hyp-s-slot-statistics: revised-substantive
+- standard-model.trichotomy-what-kind-number: revised-substantive
+- std-algebra.functoriality: revised-cosmetic
+- std-algebra.pseudoscalar-commutation: revised-cosmetic
+- std-algebra.sylvester-inertia: removed
+- std-algebra.witt-basis-car: revised-cosmetic
+- std-algebra.witt-extension: revised-substantive
+- synthesis.common-ceiling-coupling-premise: added
+- synthesis.completion-recovers-the-real-clifford-algebras: added
+- synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation: revised-substantive
+- synthesis.dimmed-burst-time-rescaled-copy: revised-substantive
+- synthesis.gravitational-pair-production-from-the-operator-source-at-first-order: added
+- tower.commuting-copies: revised-cosmetic
+- tower.fock-module-one-qubit-per-rung: revised-cosmetic
+- tower.rigidity-clock-frozen: revised-cosmetic
+- tower.witt-index-quantum-capacity: revised-substantive
+- std-algebra.sylvester-inertia: left the document's dependency cone, removed
+- dark-matter.p4-democracy-asymmetry-over-oriented-towers: left the document's dependency cone, removed
+- renumbered c:dark-matter.hyp-u-equal-rank-one-eigenvalues: 2 -> 3
+- renumbered c:dark-matter.p1-single-frozen-point: 3 -> 5
+- renumbered c:dark-matter.p2-indifference: 4 -> 6
+- renumbered c:dark-matter.p3-nearest-dimension-representatives: 5 -> 7
+- renumbered c:dark-matter.p5-boundary-modes-hold-entropy-not: 7 -> 8
+- renumbered c:dark-matter.premise-cpt-covariance: 8 -> 9
+- renumbered c:dark-matter.premise-flag-as-datum: 9 -> 10
+- renumbered c:dark-matter.r1-equal-mass-per-quantum: 10 -> 11
+- renumbered c:dark-matter.r2-one-quantum-per-unit-ball: 11 -> 12
+- renumbered c:dark-matter.r3-one-cell-per-unshared-direction: 12 -> 13
+- renumbered c:singularity.rate-models-kinematic-inputs-l-u: 13 -> 15
+- renumbered c:dark-matter.imported-eight-towers-mod-8-clock: 14 -> 17
+- renumbered c:dark-matter.imported-gravity-only-coupling: 15 -> 18
+- renumbered c:dark-matter.imported-trichotomy-descents-data: 16 -> 19
+- renumbered c:dark-matter.imported-derived-generation-flag: 17 -> 20
+- renumbered c:obj.dark-matter.witt-flag: 18 -> 21
+- renumbered c:dark-matter.imported-schwinger-discharge-charged-hole: 19 -> 22
+- renumbered c:dark-matter.towers-are-residues-single-clock-filter: 20 -> 23
+- renumbered c:dark-matter.flag-insensitive-residue-no-flag-level: 21 -> 24
+- renumbered c:obj.dark-matter.spinor-module-type: 22 -> 25
+- renumbered c:dark-matter.type-residue-what-each-tower-can: 23 -> 26
+- renumbered c:dark-matter.residue-soldered-invariant-not-algebraic-one: 24 -> 27
+- renumbered c:obj.dark-matter.frozen-phase-operators: 25 -> 28
+- renumbered c:obj.dark-matter.null-blades-fock-ideal-chirality: 26 -> 29
+- renumbered c:dark-matter.two-families-are-two-chiralities: 27 -> 30
+- renumbered c:dark-matter.flag-bit-exists-exactly-tower-dimension: 28 -> 31
+- renumbered c:dark-matter.which-towers-can-carry-arrow: 29 -> 32
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 30 -> 33
+- renumbered c:dark-matter.imported-inputs-standard-model-chain: 31 -> 34
+- renumbered c:dark-matter.mirror-tower-copy-one: 32 -> 35
+- renumbered c:dark-matter.mode-counts-two-modules-which-one: 33 -> 36
+- renumbered c:dark-matter.population-count-one-share-half-percent: 34 -> 37
+- renumbered c:dark-matter.stored-asymmetry-charge-not-number: 35 -> 38
+- renumbered c:dark-matter.mirror-share-one-how-fragile: 36 -> 39
+- renumbered c:dark-matter.mirror-share-assembled: 37 -> 40
+- renumbered c:dark-matter.which-towers-are-populated: 38 -> 41
+- renumbered c:dark-matter.asymmetry-arrow-counted-fifteenth-refutation: 39 -> 42
+- renumbered c:dark-matter.orientation-arrow-seventeenth-refutation: 40 -> 43
+- renumbered c:dark-matter.projection-every-towers-content-dilutes-ones: 41 -> 44
+- renumbered c:dark-matter.radiation-audit-what-theorem-closes-what: 42 -> 45
+- renumbered c:dark-matter.open-channels-their-costs: 43 -> 46
+- renumbered c:dark-matter.ceiling-valued-inherited-success: 44 -> 47
+- renumbered c:dark-matter.parallel-boundary-mode-spaces-one-wall: 45 -> 48
+- renumbered c:dark-matter.nesting: 46 -> 49
+- renumbered c:dark-matter.unit-ball-rule: 47 -> 50
+- renumbered c:dark-matter.direction-nesting-adds-algebra: 48 -> 51
+- renumbered c:dark-matter.contact-mechanism-returns-r3: 49 -> 52
+- renumbered c:dark-matter.total-function-thickness: 50 -> 53
+- renumbered c:dark-matter.two-roots-are-chord-arc-quarter: 51 -> 54
+- renumbered c:dark-matter.imported-frozen-point-de-sitter-radius: 52 -> 55
+- renumbered c:dark-matter.democracy-de-sitter-radius-unit-ball: 53 -> 56
+- renumbered c:dark-matter.imported-induced-equations-hypersurface: 54 -> 57
+- renumbered c:dark-matter.two-reductions: 55 -> 58
+- renumbered c:dark-matter.sourcing-rule-forced-not-chosen: 56 -> 59
+- renumbered c:dark-matter.imported-inverse-square-law-short-range: 57 -> 60
+- renumbered c:dark-matter.thickness-not-gravitational-quantity: 58 -> 61
+- renumbered c:dark-matter.imported-linear-momentum-equation-traceless-field: 59 -> 62
+- renumbered c:dark-matter.reduced-response-gravity-needs-supporting-stress: 60 -> 63
+- renumbered c:dark-matter.status-rule: 61 -> 64
+- renumbered c:dark-matter.imported-composition-simulated: 62 -> 65
+- renumbered c:dark-matter.imported-composition-simulated-external: 63 -> 66
+- renumbered c:dark-matter.imported-massless-graviton-production-rate: 64 -> 67
+- renumbered c:dark-matter.seeding-gravity-floor-dark-towers-temperature: 65 -> 68
+- renumbered c:dark-matter.coefficients-floors-they-give-what-gravity: 66 -> 69
+- renumbered c:dark-matter.no-coupling-rule-odd-towers-follows: 67 -> 70
+- renumbered c:pred.dark-matter-direct-detection-null: 68 -> 71
+- renumbered c:pred.dimmed-evaporation-bursts: 69 -> 72
+- renumbered c:pred.no-dark-radiation: 70 -> 73
+- renumbered c:pred.no-indirect-dark-signals: 71 -> 74
+- renumbered c:correspondence.fock-model-complexified-ascended-algebra: 72 -> 75
+- renumbered c:correspondence.twistors-are-states-three-ladder-pairs: 73 -> 76
+- renumbered c:dark-energy.acoustic-no-go-one-way-grip: 74 -> 77
+- renumbered c:dark-energy.conclusion-does-not-depend-ontology-level: 75 -> 78
+- renumbered c:dark-energy.four-alternatives-are-exhaustive-three-are: 76 -> 79
+- renumbered c:dark-energy.frozen-point-makes-stelle-west-vector: 77 -> 80
+- renumbered c:dark-energy.imported-frozen-point-geometry: 78 -> 81
+- renumbered c:dark-energy.lift-inherits-no-go-steps-itemised: 79 -> 82
+- renumbered c:dark-energy.under-action-written-norm-parameter-laws: 80 -> 83
+- renumbered c:dark-energy.vacuum-region-registration-condition: 81 -> 84
+- renumbered c:families.alignment-computed-thirteenth-refutation-democracy-one: 82 -> 85
+- renumbered c:hawking.greybody-inheritance-under-interface-premise: 83 -> 86
+- renumbered c:interior.non-null-stabilisers-section-they-act: 84 -> 87
+- renumbered c:interior.scale-tractor-leaves-cone: 85 -> 88
+- renumbered c:interior.stabiliser-rotates-parabolic-reductive: 86 -> 89
+- renumbered c:mass.mass-symplectic-area-two-twistor-formula: 87 -> 90
+- renumbered c:primer.classification-real-clifford-algebras: 88 -> 91
+- renumbered c:primer.twisted-adjoint-action: 89 -> 92
+- renumbered c:sheaf.infinite-wall-sequence: 90 -> 93
+- renumbered c:standard-model.chirality-two-halves-spinor-module-conjugation: 91 -> 94
+- renumbered c:standard-model.four-dimensions-forces-converse: 92 -> 95
+- renumbered c:standard-model.hyp-s-slot-statistics: 93 -> 96
+- renumbered c:standard-model.imported-fock-representation-clifford-algebra-bogoliubov: 94 -> 97
+- renumbered c:standard-model.trichotomy-what-kind-number: 95 -> 98
+- renumbered c:std-algebra.functoriality: 96 -> 99
+- renumbered c:std-algebra.pseudoscalar-commutation: 97 -> 100
+- renumbered c:std-algebra.witt-basis-car: 99 -> 101
+- renumbered c:std-algebra.witt-extension: 100 -> 102
+- renumbered c:synthesis.cpt-conjugation-pseudoscalar-rotor-times-complex-conjugation: 101 -> 104
+- renumbered c:synthesis.dimmed-burst-time-rescaled-copy: 102 -> 105
+- renumbered c:tower.commuting-copies: 103 -> 107
+- renumbered c:tower.fock-module-one-qubit-per-rung: 104 -> 108
+- renumbered c:tower.rigidity-clock-frozen: 105 -> 109
+- renumbered c:tower.witt-index-quantum-capacity: 106 -> 110
+- renumbered c:refuted.a-pre-descent-term-sources-the-matter-asymmetry: 107 -> 111
+- renumbered c:refuted.the-particle-antiparticle-orientation-is-determi: 108 -> 112
+- renumbered c:refuted.the-vacuum-omega-area-sets-the-weak-scale: 109 -> 113
+- renumbered c:refuted.twistors-are-the-ladder-operators: 110 -> 114
+- renumbered c:pred.dark-energy-w-minus-one: 111 -> 115
+
 ## v10 (2026-10-27T17:09:28+00:00)
 
 - bump: patch
