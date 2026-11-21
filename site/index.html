@@ -374,6 +374,8 @@ footer { flex: none; display: flex; align-items: center; justify-content: flex-e
 .aboutpage p { font-size: 16px; max-width: 680px; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .aboutpage a { color: var(--accent); }
 .aboutpage h3 { font: 600 20px/1.25 var(--serif); margin: 30px 0 8px; }
+.aboutpage .contactrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 8px 0 0; }
+.aboutpage .contactaddr { font: 500 16px var(--sans); }
 .aboutpage .aboutnote { margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
 footer .srclink { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; }
 footer .srclink:hover { color: var(--ink); }
@@ -526,6 +528,9 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
     <p>The graph was designed in collaboration with the AI, in the form it found easiest to navigate: separate results linked to what they rest on, read through tools rather than by searching long documents. That same design opens it to others, whether or not they work with an AI of their own.</p>
     <p>By design and where possible, all theorems and proofs are written in geometric algebra. The graph therefore also consolidates the physics it covers into one mathematical framework.</p>
     <p class="aboutnote">Leon Butler is an independent researcher and holds a BSc (Hons) in Mathematics from the University of Manchester.</p>
+    <h3>Contact</h3>
+    <p>To get in touch with Leon about the work, write to him by email.</p>
+    <div class="contactrow" id="contactrow"><button class="btn" type="button" id="contactbtn">Show email address</button></div>
   </div></section>
   <section class="view page" id="contributeview"><div class="inner" id="contribute"></div></section>
 </main>
@@ -2498,7 +2503,7 @@ const RCLS = { consistent: "good", confirms: "good", tension: "warn", contested:
 let recSel = {};
 function renderRecord() {
   const el = document.getElementById("record");
-  const tabs = [["predictions", "Predictions"], ["refutations", "Refutations"], ["notebook", "Research notebook"]];
+  const tabs = [["predictions", "Predictions"], ["refutations", "Refutations"], ["notebook", "Research runs"]];
   el.innerHTML = `<div class="eyebrow">What could prove it wrong, and what already has</div><h2>The record</h2>
     <p class="lead">The predictions with the measurements that would refute them, the natural conjectures that were tried and refuted, and the pre-registered research runs with their outcomes.</p>
     <div class="tabs">${tabs.map(([k, t]) => `<button data-tab="${k}" aria-pressed="${k === recTab}">${t}</button>`).join("")}</div><div id="recbody"></div>`;
@@ -2951,6 +2956,17 @@ const REPO_URL = null;   // "https://github.com/leon-machine/phys-graph"
 document.querySelectorAll(".repolink").forEach(a => {
   if (REPO_URL) { a.href = REPO_URL; a.target = "_blank"; a.rel = "noopener"; }
   else { a.title = "The source repository will be public soon"; a.setAttribute("aria-disabled", "true"); a.addEventListener("click", ev => ev.preventDefault()); }
+});
+// the contact address on About: kept out of the page as text (shifted character codes, reversed) and
+// put together only when a reader asks for it, so that scrapers reading the page do not find it
+$id("contactbtn")?.addEventListener("click", () => {
+  const a = [112, 114, 102, 49, 111, 108, 100, 112, 106, 67, 107, 119, 100, 112, 49, 117, 104, 111, 119, 120, 101, 111].reverse().map(c => String.fromCharCode(c - 3)).join("");
+  const row = $id("contactrow");
+  row.innerHTML = `<a class="contactaddr" href="mailto:${a}">${a}</a><button class="btn" type="button" id="contactcopy">Copy</button><span class="note" id="contactmsg" role="status"></span>`;
+  $id("contactcopy").onclick = async () => {
+    try { await navigator.clipboard.writeText(a); $id("contactmsg").textContent = "Copied."; }
+    catch (e) { $id("contactmsg").textContent = "Select the address to copy it."; }
+  };
 });
 function openNavMenu(k) {
   closeNavMenus();
