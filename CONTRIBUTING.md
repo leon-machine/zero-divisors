@@ -159,6 +159,12 @@ Every person credited in a contribution gives an ORCID iD, as a bare iD in their
 credit entry. An iD is free at [orcid.org](https://orcid.org). A pull request that
 credits a person without one is refused (E610); AI models need none.
 
+The iD must be yours. Before opening the pull request, add your GitHub profile
+(`https://github.com/<your login>`) to the Websites and social links on your ORCID
+record, visible to everyone. The checks read the public record and refuse the pull
+request if no person it credits lists the account that opened it (E611). A
+co-author whose record does not list it is flagged for the maintainer to confirm.
+
 ```yaml
 credit:
 - name: Ada Lovelace

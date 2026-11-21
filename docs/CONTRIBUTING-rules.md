@@ -73,7 +73,10 @@ with the server.
   with no entry for it; for maintainers these are the warnings W220 and W221). Every
   person a contribution credits gives `orcid`, a bare ORCID iD (`0000-0002-1825-0097`;
   E610 if it is missing from an entry a non-maintainer adds, E116 if malformed, E125 if
-  its check digit is wrong). An entry may add `kind` (`person` or `ai`; without it, a name of a known
+  its check digit is wrong). The public ORCID record of at least one person a pull
+  request credits must list the GitHub account that opened it among its websites and
+  social links (E611, checked on GitHub by `tp/orcid_link.py`; W613 for a co-author whose
+  record does not). An entry may add `kind` (`person` or `ai`; without it, a name of a known
   model family is read as an AI model). At each release every person credited is added
   to the Zenodo record's contributors, with the ORCID iD; AI models are not
   (RELEASING.md).
