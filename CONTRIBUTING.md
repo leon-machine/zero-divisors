@@ -159,6 +159,11 @@ Every person credited in a contribution gives an ORCID iD, as a bare iD in their
 credit entry. An iD is free at [orcid.org](https://orcid.org). A pull request that
 credits a person without one is refused (E610); AI models need none.
 
+A result that is an AI's work alone is welcome, but it still names the person who
+sends it, who answers for it at review: credit the model for the result, proof and
+check, and yourself, with your ORCID iD, as `role: submitted and checked`. A pull
+request that credits no person is refused (E614).
+
 The iD must be yours. Before opening the pull request, add your GitHub profile
 (`https://github.com/<your login>`) to the Websites and social links on your ORCID
 record, visible to everyone. The checks read the public record and refuse the pull
