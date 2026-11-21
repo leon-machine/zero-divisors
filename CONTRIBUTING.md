@@ -37,8 +37,8 @@ and added directly: one folder per result, `store/<kind>/<id>/`, containing
 
 - `entity.md`: the statement at four levels, its premises pinned to the versions
   read (`id@n`), who proposed it, whether an AI was involved, and a `credit`
-  list: your name as you want it shown (with your ORCID iD, if you have one), and
-  the AI model, with its version, that drafted the proof or amendment;
+  list: your name as you want it shown, with your ORCID iD, and the AI model,
+  with its version, that drafted the proof or amendment;
 - `proof-main.tex`: the proof, citing each premise with `\claimref{id}`;
 - `check.py`: a machine check in exact arithmetic, using `GA.py`.
 
@@ -150,11 +150,20 @@ on record the credit says so rather than guessing (`python -m tp credit`).
 
 The graph is archived on Zenodo at each release as "Zero Divisors: Physics Graph".
 Everyone credited in an accepted result is listed among the record's contributors
-from the next release on, with their ORCID iD when their credit entry gives one, and
+from the next release on, with their ORCID iD, and
 the release notes name everyone credited for the first time. The record's creator
 is the maintainer. AI models are named on each result and in the release notes but
-not in Zenodo's contributor list, which is for people. To have your ORCID iD on the
-record, add it to your credit entry as a bare iD:
+not in Zenodo's contributor list, which is for people.
+
+Every person credited in a contribution gives an ORCID iD, as a bare iD in their
+credit entry. An iD is free at [orcid.org](https://orcid.org). A pull request that
+credits a person without one is refused (E610); AI models need none.
+
+The iD must be yours. Before opening the pull request, add your GitHub profile
+(`https://github.com/<your login>`) to the Websites and social links on your ORCID
+record, visible to everyone. The checks read the public record and refuse the pull
+request if no person it credits lists the account that opened it (E611). A
+co-author whose record does not list it is flagged for the maintainer to confirm.
 
 ```yaml
 credit:

@@ -12,6 +12,7 @@ ai_involved: 'yes'
 credit:
 - name: A. Researcher
   role: idea and direction
+  orcid: 0000-0002-1825-0097
 - name: Claude Opus 5.5
   role: proof and drafting
 derivations:

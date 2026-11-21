@@ -1499,6 +1499,32 @@ def layer5(store: Store, rep: Report, threshold=0.92):
 # layer 6: people
 # ---------------------------------------------------------------------------
 
+def _uncredited_orcids(old_credit, new_credit):
+    """E610: the people a contributor newly credits who give no ORCID iD. AI models are exempt
+    (kind: ai, or a model family's name with no kind: person, as tp/releases.py reads them)."""
+    from .releases import MODEL_RE
+    key = lambda c: (c.get("name"), c.get("role"), c.get("version"))
+    # the lock keeps an accepted version's credit as [name, role, version] lists
+    before = {key(c) if isinstance(c, dict) else tuple(c[:3]) for c in (old_credit or [])
+              if isinstance(c, (dict, list, tuple))}
+    out = []
+    for c in new_credit or []:
+        if not isinstance(c, dict) or key(c) in before:
+            continue
+        kind = c.get("kind")
+        if kind == "ai" or (kind != "person" and MODEL_RE.match(str(c.get("name") or ""))):
+            continue
+        if not c.get("orcid"):
+            out.append(c.get("name") or "an unnamed entry")
+    return out
+
+
+def _orcid_finding(rep, eid, names):
+    for n in names:
+        rep.add("E610", eid, f"credit: {n} gives no ORCID iD; every person credited in a contribution needs one",
+                "add orcid: <your iD, 0000-0000-0000-0000> to the credit entry (free at orcid.org)")
+
+
 def layer6(store: Store, rep: Report, author: str | None):
     gov = store.config.get("governance") or {}
     # store names and the code host's logins (CI passes the login as the author)
@@ -1525,6 +1551,7 @@ def layer6(store: Store, rep: Report, author: str | None):
             if new["assumes"]:
                 rep.add("E601", eid, "only a maintainer may add a postulate dependency "
                         "(assumes)")
+            _orcid_finding(rep, eid, _uncredited_orcids([], e.meta.get("credit")))
             from .galang import unexcused
             hits = unexcused(e)
             if hits:
@@ -1542,6 +1569,7 @@ def layer6(store: Store, rep: Report, author: str | None):
             rep.add("E601", eid, "only a maintainer may remove an assumes edge")
         if new.get("ledger") != old.get("ledger"):
             rep.add("E601", eid, "only a maintainer may change a declared ledger class")
+        _orcid_finding(rep, eid, _uncredited_orcids(old.get("credit"), e.meta.get("credit")))
         if "credit" in old:
             from .credit import compare, describe
             removed, unclaimed = compare(old["credit"], new["credit"], old.get("version"), new["version"])
@@ -1613,6 +1641,7 @@ WARNING_ORDER = ("W413", "W408", "W125", "W510", "W414", "W306", "W411", "W503",
                  "W405", "W215", "W501", "W209", "W210", "W212", "W220", "W221", "W222")
 
 CODE_TITLES = {
+    "E610": "a person credited in a contribution gives no ORCID iD",
     "W220": "a credit entry of the accepted version is missing or changed",
     "W221": "an amendment with no credit entry of its own",
     "W222": "written outside geometric algebra without saying why",

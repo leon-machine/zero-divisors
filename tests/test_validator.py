@@ -640,6 +640,45 @@ class Layer6People(StoreCase):
         bad = {"E603", "E604", "E605", "E606", "E607", "E608", "W220", "W221"} & self.codes(rep)
         self.assertFalse(bad, "\n".join(f.render() for f in rep.findings))
 
+    # every person a contributor credits gives an ORCID iD (E610)
+    def test_E610_new_entity_credit_without_orcid(self):
+        write_lock(load_store(self.root))
+        shutil.copytree(self.folder("fx.boost.sigma"), E(self.root, "claims", "fx.boost.sigma-two"))
+        self.edit("fx.boost.sigma-two", "id: fx.boost.sigma", "id: fx.boost.sigma-two")
+        self.edit("fx.boost.sigma-two", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: New Person\n  role: the result\n"
+                  "- name: Claude Opus 5.5\n  role: drafting\n")
+        rep = self.assertFires("E610", (6,), author="contributor")
+        self.assertEqual(sum(f.code == "E610" for f in rep.findings), 1)    # the model is exempt
+
+    def test_E610_orcid_given_passes(self):
+        write_lock(load_store(self.root))
+        shutil.copytree(self.folder("fx.boost.sigma"), E(self.root, "claims", "fx.boost.sigma-two"))
+        self.edit("fx.boost.sigma-two", "id: fx.boost.sigma", "id: fx.boost.sigma-two")
+        self.edit("fx.boost.sigma-two", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: New Person\n  role: the result\n"
+                  "  orcid: 0000-0002-1825-0097\n")
+        self.assertNotIn("E610", self.codes(self.run_layers((6,), author="contributor")))
+
+    def test_E610_amendment_credit_needs_orcid_earlier_entries_do_not(self):
+        self.credited()
+        self.edit("fx.thermo.entropy-tick", "  role: the result\n",
+                  "  role: the result\n- name: Amender\n  role: correction\n  version: 2\n"
+                  + self.RESTATED)
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        rep = self.assertFires("E610", (6,), author="contributor")
+        self.assertEqual([f.message.split(" gives")[0] for f in rep.findings if f.code == "E610"],
+                         ["credit: Amender"])
+
+    def test_E610_maintainer_exempt(self):
+        write_lock(load_store(self.root))
+        shutil.copytree(self.folder("fx.boost.sigma"), E(self.root, "claims", "fx.boost.sigma-two"))
+        self.edit("fx.boost.sigma-two", "id: fx.boost.sigma", "id: fx.boost.sigma-two")
+        self.edit("fx.boost.sigma-two", "ai_involved: 'no'\n",
+                  "ai_involved: 'no'\ncredit:\n- name: New Person\n  role: the result\n")
+        self.assertNotIn("E610", self.codes(self.run_layers((6,), author="leon")))
+
     # amendments say what they fix (tp/amend.py)
     RESTATED = ("amendments:\n- version: 2\n  kind: restatement\n"
                 "  defect: the stated rate holds only for a non-rotating hole\n")

@@ -42,6 +42,14 @@ jobs:
           # the pull request's author; layer 6 maps it through governance.github_logins
           TP_AUTHOR: ${{ github.event.pull_request.user.login || github.actor }}
         run: python -m tp check --store store --layers 1,2,3,5,6 --keep-going
+      # The ORCID iD of a person the pull request credits must belong to whoever opened it: the
+      # public ORCID record lists their GitHub account (tp/orcid_link.py). It reads ORCID's public
+      # API, so it runs here, outside the validator and the sealed container.
+      - name: ORCID records link the pull request's account
+        if: github.event_name == 'pull_request'
+        env:
+          TP_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: python -m tp.orcid_link --store store --author "$TP_AUTHOR"
       # Layer 4 runs contributed check.py files and the series verify scripts (legacy/). It
       # always runs in full here: the layer-4 cache (store/.tp-layer4.json) comes from the
       # branch under test and is not trusted. It runs
