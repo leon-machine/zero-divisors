@@ -10,8 +10,8 @@ store/<kind>/<id>/. For a correction, say what changed and why. -->
 - [ ] `python -m tp check-one <id> --store store` passes for each new or changed result, and
       `python -m tp check --store store --keep-going` passes locally (the same checks run here)
 - [ ] Every new or changed claim states `proposed_by` and `ai_involved` truthfully
-- [ ] Every new claim has a `credit` list: your name as you want it shown, and the AI model,
-      with its version, that drafted the proof or amendment (shown as you give it)
+- [ ] Every new claim has a `credit` list: your name as you want it shown, with your ORCID iD,
+      and the AI model, with its version, that drafted the proof or amendment (shown as you give it)
 - [ ] Substantive edits (statement, derivations, status, evidence) bump `version`
 - [ ] A corrected result keeps every existing credit entry and adds its own, with `version:` set to
       the new version

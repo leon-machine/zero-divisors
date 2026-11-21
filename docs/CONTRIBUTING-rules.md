@@ -70,11 +70,12 @@ with the server.
   version) and what each did. The names are shown on the result. An amendment keeps
   every entry already there and adds its own, each with `version:` set to the version
   it made (E603 if an earlier entry is dropped or altered, E604 if the version is raised
-  with no entry for it; for maintainers these are the warnings W220 and W221). An entry
-  may add `orcid` (a bare ORCID iD, `0000-0002-1825-0097`; E116 if malformed, E125 if
-  its check digit is wrong) and `kind` (`person` or `ai`; without it, a name of a known
+  with no entry for it; for maintainers these are the warnings W220 and W221). Every
+  person a contribution credits gives `orcid`, a bare ORCID iD (`0000-0002-1825-0097`;
+  E610 if it is missing from an entry a non-maintainer adds, E116 if malformed, E125 if
+  its check digit is wrong). An entry may add `kind` (`person` or `ai`; without it, a name of a known
   model family is read as an AI model). At each release every person credited is added
-  to the Zenodo record's contributors, with the ORCID iD where given; AI models are not
+  to the Zenodo record's contributors, with the ORCID iD; AI models are not
   (RELEASING.md).
 - `outside_ga` (when the result is not written in geometric algebra): `{kind, why}`,
   `kind` one of `imported`, `complex-analysis`, `bridge`, `other`, and `why` the reason

@@ -694,6 +694,13 @@ class Lab:
                 credit_findings.append({"code": "E609", "severity": "error", "entity": eid,
                                         "message": f"written outside geometric algebra ({', '.join(_hits)}) without saying why",
                                         "fix": "translate it, or declare outside_ga: {kind: imported | complex-analysis | bridge | other, why: ...}"})
+            # every person a contributor credits gives an ORCID iD (E610): an error in a pull request
+            # from anyone but a maintainer, so the draft is warned here, where the author is not known
+            from .validate import _uncredited_orcids
+            for _n in _uncredited_orcids((old_state or {}).get("credit"), meta.get("credit")):
+                credit_findings.append({"code": "E610", "severity": "warning", "entity": eid,
+                                        "message": f"credit: {_n} gives no ORCID iD; a pull request from anyone but a maintainer is refused without one",
+                                        "fix": "add orcid: <the person's iD, 0000-0000-0000-0000> to the credit entry (free at orcid.org)"})
             if old_state:
                 # an amendment says what it fixes, and its kind matches what changed (E605-E608)
                 from .amend import findings as amendment_findings
