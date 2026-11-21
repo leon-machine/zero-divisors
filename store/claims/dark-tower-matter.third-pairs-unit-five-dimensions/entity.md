@@ -58,7 +58,7 @@ locators:
   paper: T14c
   number: Thm 4.2
   label: thm:unit
-  line: 452
+  line: 417
 extraction:
   maintainer_pass_consistency:
     by: maintainer-2026-11-07

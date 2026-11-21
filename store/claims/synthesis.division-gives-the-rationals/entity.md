@@ -45,6 +45,11 @@ checked_by:
   ref: check.py::check_null_vectors_and_zero_divisors_survive_division
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Prop 5.1
+  label: prop:bitdivision
+  line: 244
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

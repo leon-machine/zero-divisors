@@ -21,7 +21,7 @@ review: typed
 derivations:
 - name: main
   uses:
-  - dark-tower-matter.anomalies@3
+  - dark-tower-matter.anomalies@4
   - dark-tower-matter.three-dimensional-content@4
   - dark-tower-matter.residue-seven-unit@3
   proof: proof-main.tex
@@ -43,9 +43,9 @@ lineage:
   - dark-matter.radiation-audit-what-theorem-closes-what
 locators:
   paper: T14c
-  number: Prop 9.1
+  number: Obs 9.1
   label: prop:phases
-  line: 808
+  line: 773
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

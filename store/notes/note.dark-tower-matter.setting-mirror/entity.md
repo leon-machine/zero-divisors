@@ -22,7 +22,7 @@ locators:
   paper: T14c
   number: Setting
   section: The mirror
-  line: 755
+  line: 720
 ---
 
 ## formal

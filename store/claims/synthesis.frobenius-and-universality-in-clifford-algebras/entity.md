@@ -51,6 +51,11 @@ checked_by:
   ref: check.py::check_the_number_systems_inside
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Thm 6.4
+  label: thm:bitfrobenius
+  line: 328
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

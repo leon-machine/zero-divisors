@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.survival-sheets
 kind: claim
-version: 5
+version: 6
 title: Survival of sheet relics against annihilation
 status: proved
 region: dark-tower-matter
@@ -17,14 +17,19 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'restated to the deposited text of T14c version 1.0 (10.5281/zenodo.24403592)'
+  version: 6
+  source: maintainer pass of 2026-11-20
 review: typed
 derivations:
 - name: main
   uses:
-  - dark-tower-matter.imported-unit-ball-rule@4
+  - dark-tower-matter.imported-unit-ball-rule@5
   - dark-tower-matter.three-dimensional-phases@4
   - simulations.cluster-bound-two-dimensions@4
   assumes:
+  - dark-matter.r1-equal-mass-per-quantum@1
   - dark-matter.r2-one-quantum-per-unit-ball@3
   proof: proof-main.tex
 checked_by:
@@ -43,10 +48,14 @@ checked_by:
   ref: check.py::check_phase_t_threshold_and_collisionless
 locators:
   paper: T14c
-  number: Prop 9.2
+  number: Comp 9.2
   label: prop:sheetsurvival
-  line: 817
+  line: 782
 extraction:
+  maintainer_pass:
+    by: maintainer-2026-11-20
+    date: '2026-11-20'
+    note: 'The formal level restated: T14c deposited as version 1.0 on 20 November 2026 (10.5281/zenodo.24403592), after an independent review: stated at the particle model''s density with its edges to R1 and R2; the bounds given as the ranges the deposited computation finds (P below 1 to 2e-16, e^2/m above 7e7 to 9e7) and the surviving fraction set against T14''s estimate; renumbered Computation 9.2. Version 5 -> 6. The technical level restated: as the formal level. The lay level restated: as the formal level. The one-liner level restated: as the formal level.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'
@@ -72,15 +81,15 @@ extraction:
 ---
 
 ## formal
-Decimal. On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_{1}v = 2P/m$ ($P$ the absorption probability per encounter) depletes a symmetric population logarithmically, $1/N_{f} = 1/N_{0} + (2P/m)\ln(a_{f}/a_{i})/(a^{2}H)$. At R2's density a symmetric sheet relic keeps $99$ percent of its number only for $P \lesssim 2 \times 10^{-16}$; at $P = 1$ about $10^{-14}$ survives (K3). In phase (T) this needs $e^{2}/m > 7 \times 10^{7}$, which also makes the relic collisionless in clusters (threshold $5.9 \times 10^{6}$, from the in-sheet phase-shift bound $1.7 \times 10^{-7}$ of T14b's cluster computation \cite[Comp.~3.3, Prem.~2.12]{ButlerT14b}) (K4). Phase (C) fails R2 by itself.
+Decimal. On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_{1}v = 2P/m$ ($P$ the absorption probability per encounter) depletes a symmetric population logarithmically, $1/N_{f} = 1/N_{0} + (2P/m)\ln(a_{f}/a_{i})/(a^{2}H)$. At the particle model's density a symmetric sheet relic keeps $99$ percent of its number only for $P$ below $1$ to $2 \times 10^{-16}$, the range spanning the number of relativistic species; at $P = 1$ a fraction of order $10^{-14}$ survives ($1.2 \times 10^{-14}$ with the inputs here, K3; T14 gives about $3 \times 10^{-14}$ for the same estimate \cite[Sec.~7.7]{ButlerT14}). In phase (T) this needs $e^{2}/m$ above $7 \times 10^{7}$ to $9 \times 10^{7}$, which also makes the relic collisionless in clusters (threshold $5.9 \times 10^{6}$, from the in-sheet phase-shift bound $1.7 \times 10^{-7}$ of T14b's cluster computation \cite[Comp.~3.3, Prem.~2.12]{ButlerT14b}) (K4). Phase (C) fails the particle model's density by itself.
 
 ## technical
-Decimal, assuming R2's density. On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_1 v = 2P/m$, $P$ the absorption probability per encounter, depletes a symmetric population only logarithmically, $1/N_f = 1/N_0 + (2P/m)\ln(a_f/a_i)/(a^2H)$. At R2's density a symmetric sheet relic keeps $99$ percent of its number only for $P \lesssim 2 \times 10^{-16}$, and at $P = 1$ about $10^{-14}$ survives.
+Decimal, assuming the particle model's density (R1 and R2). On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_1 v = 2P/m$, $P$ the absorption probability per encounter, depletes a symmetric population only logarithmically, $1/N_f = 1/N_0 + (2P/m)\ln(a_f/a_i)/(a^2H)$. A symmetric sheet relic keeps $99$ percent of its number only for $P$ below $1$ to $2 \times 10^{-16}$, the range spanning the number of relativistic species, and at $P = 1$ a fraction of order $10^{-14}$ survives.
 
-In phase (T) this needs $e^2/m > 7 \times 10^7$, which also makes the relic collisionless in clusters (threshold $5.9 \times 10^6$, from the in-sheet phase-shift bound $1.7 \times 10^{-7}$ of the cluster computation). Phase (C) fails R2 by itself.
+In phase (T) this needs $e^2/m$ above $7 \times 10^7$ to $9 \times 10^7$, which also makes the relic collisionless in clusters (threshold $5.9 \times 10^6$, from the in-sheet phase-shift bound $1.7 \times 10^{-7}$ of the cluster computation). Phase (C) fails the particle model's density by itself.
 
 ## lay
-Matter and antimatter on the dark sheets annihilate when they meet, and in two dimensions this erodes them slowly but steadily. In these decimal estimates, assuming the unit-ball density premise R2, a symmetric population survives only if annihilation per encounter is almost impossible, which in the topologically massive phase needs a coupling far stronger than the mass; that also lets the matter pass through itself when clusters collide. The confining phase cannot keep the required density.
+Matter and antimatter on the dark sheets annihilate when they meet, and in two dimensions this erodes them slowly but steadily. In these decimal estimates, at the density of the dark-matter paper's particle model, a symmetric population survives only if annihilation per encounter is almost impossible, which in the topologically massive phase needs a coupling far stronger than the mass; that also lets the matter pass through itself when clusters collide. The confining phase cannot keep the required density.
 
 ## one-liner
-Assuming R2's density, in decimal estimates a symmetric sheet relic survives only for $P \lesssim 2 \times 10^{-16}$, which needs $e^2/m > 7 \times 10^7$ in phase (T), while phase (C) fails R2.
+Assuming the particle model's density, in decimal estimates, a symmetric sheet relic survives only for $P$ below $1$ to $2 \times 10^{-16}$, which needs $e^2/m$ above $7$ to $9 \times 10^7$ in phase (T), while phase (C) fails that density.

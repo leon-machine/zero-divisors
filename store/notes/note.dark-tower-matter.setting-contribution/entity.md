@@ -1,7 +1,7 @@
 ---
 id: note.dark-tower-matter.setting-contribution
 kind: note
-version: 2
+version: 3
 title: Contribution
 status: setting
 subject: dark-matter
@@ -19,6 +19,10 @@ credit:
   role: 'maintainer pass on Leon''s decisions, a dated bracket on the cold-mirror exception'
   version: 2
   source: maintainer pass 2026-11-07 (decisions)
+- name: Claude Opus 5.5
+  role: 'restated to the deposited text of T14c version 1.0 (10.5281/zenodo.24403592)'
+  version: 3
+  source: maintainer pass of 2026-11-20
 comments_on:
 - dark-tower-matter.constituents-field
 - dark-tower-matter.where-mass-begins
@@ -28,9 +32,13 @@ locators:
   paper: T14c
   number: Setting
   section: Introduction
-  line: 136
+  line: 85
   subsection: Contribution
 extraction:
+  maintainer_pass:
+    by: maintainer-2026-11-20
+    date: '2026-11-20'
+    note: 'The formal level restated: T14c deposited as version 1.0 on 20 November 2026 (10.5281/zenodo.24403592), after an independent review: the running text follows the deposited paper. Version 2 -> 3.'
   maintainer_pass_decisions:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -43,8 +51,8 @@ extraction:
 \item One identity of the reversion pairing gives where mass begins: at two constituents in three and four dimensions, where the pairing is alternating, and at one in five, where it is not (Theorem \claimref{dark-tower-matter.where-mass-begins}). The momentum-preserving mixings are $O(n)$, $U(n)$, $Sp(n)$ (Theorem \claimref{dark-tower-matter.ladder}).
 \item The third ladder pair of the five-dimensional towers needs a complex unit. At $r = 3$ the algebra supplies one, and every other quaternionic unit fails to commute with the pair structure; at $r = 5$ the units form a sphere (Theorem \claimref{dark-tower-matter.third-pairs-unit-five-dimensions}).
 \item Under T12's identification premise and one transposition rule (Premise \claimref{dark-tower-matter.u-transposition-rule}): $\so(2) \oplus \so(2)$ in both three-dimensional towers, $\uu(3)$ in both five-dimensional towers ($\su(2) \oplus \su(3) \oplus \uu(1)$ in both if the pair unit is external), the Standard Model in the mirror (Theorem \claimref{dark-tower-matter.gauge-algebras} and, for the mirror, T14's copy theorem), with the content of Propositions \claimref{dark-tower-matter.three-dimensional-content} and \claimref{dark-tower-matter.five-dimensional-content}.
-\item The towers of each odd dimension hold the same kind of matter (Corollary \claimref{dark-tower-matter.same-kind-matter}); the mirror's even algebras are this tower's under an explicit real isomorphism, which reverses the conformal pseudoscalar (Theorem \claimref{dark-tower-matter.mirror-algebra}).
-\item The physics: the matter of each tower in halos (Section \ref{sec:matter}); the equal-mass premise R1 has no mechanism in the odd towers (Proposition \claimref{dark-tower-matter.r1-has-no-mechanism-odd-towers}); a cold mirror is an exception to P2 (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}) (Status now, 7 November 2026: it is an exception to P2 at its version-1 reach; P2 as scoped, version 2, leaves $\xi$ free, Theorem \claimref{synthesis.tower-charge-sector-label-temperature-not}, and the cold mirror then needs a non-equilibrium descent, Proposition \claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}.); and the towers as built against the data (Observation \claimref{dark-tower-matter.towers-built}).
+\item The towers of each odd dimension hold the same kind of matter (Corollary \claimref{dark-tower-matter.same-kind-matter}); the classical isomorphism of the mirror's even algebras with this tower's is made explicit as a real map, which reverses the conformal pseudoscalar (Theorem \claimref{dark-tower-matter.mirror-algebra}).
+\item The physics: the matter of each tower in halos (Section \ref{sec:matter}); neither T14's premise E nor its particle model has a mechanism in the odd towers, whose quanta are elementary or unconfined with bare masses, not the confined composites T14's Section 8 describes (Observation \claimref{dark-tower-matter.r1-has-no-mechanism-odd-towers}); a cold mirror is an exception to P2 (Proposition \claimref{dark-tower-matter.mirrors-temperature-p2}); and the towers as built against the data (Observation \claimref{dark-tower-matter.towers-built}).
 \end{enumerate}
 
 Table \ref{tab:summary} and Figure \ref{fig:clock} collect the result.

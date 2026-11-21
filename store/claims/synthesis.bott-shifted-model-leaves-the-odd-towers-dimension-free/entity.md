@@ -31,7 +31,7 @@ derivations:
   - dark-tower-matter.constituents-field@2
   - dark-tower-matter.residue-seven-unit@3
   assumes:
-  - dark-tower-matter.u-transposition-rule@3
+  - dark-tower-matter.u-transposition-rule@4
   proof: proof-main.tex
 checked_by:
 - kind: check

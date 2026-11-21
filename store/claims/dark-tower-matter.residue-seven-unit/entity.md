@@ -45,7 +45,7 @@ locators:
   paper: T14c
   number: Prop 7.1
   label: prop:omega7
-  line: 663
+  line: 628
 extraction:
   maintainer_pass:
     by: maintainer-2026-10-26

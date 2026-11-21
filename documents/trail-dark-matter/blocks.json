@@ -18,15 +18,37 @@
   "hash": "7d3a64186fde"
  },
  {
-  "id": "c:dark-matter.p1-single-frozen-point",
+  "id": "c:dark-matter.e-equal-mass-per-unit-ball",
   "type": "postulate",
-  "claim": "dark-matter.p1-single-frozen-point@1",
-  "title": "P1: the single frozen point",
-  "text": "This assumption says the origin of the universe happened once, in one way, for everything. Every hidden sector feels the same gravity, and every sector that can have a handedness received the same one. It is assumed, not derived.",
+  "claim": "dark-matter.e-equal-mass-per-unit-ball@1",
+  "title": "E: equal mass per unit ball",
+  "text": "The formula for the amount of dark matter needs to know how much matter each hidden sector holds. This assumption says it in a weaker form than before: there is one length at which a ball of that radius holds the same mass in every sector, each ball taken in that sector's own number of dimensions. It does not say that particles in different sectors weigh the same, or that there are equally many of them, which the earlier form of the rule assumed. It is still an assumption, not a result, and it is little more than the formula itself put as a single rule: together with the assumption about how thick a slice counts, it holds exactly when each sector has the share the formula gives it and the two slices are equally thick.",
   "gap": false,
   "level": "lay",
-  "hash": "abf61f81153e",
+  "hash": "68ef5860a08d",
   "number": 1
+ },
+ {
+  "id": "c:dark-matter.odd-towers-populated",
+  "type": "postulate",
+  "claim": "dark-matter.odd-towers-populated@2",
+  "title": "Pop: the four odd towers are populated",
+  "text": "The formula for the amount of dark matter assumes that four of the hidden sectors actually contain matter. The series has no argument for that except the measurement itself: if they were empty, the dark matter would equal the ordinary matter, and it is about five times larger. So the assumption is read off from the very number the formula is meant to account for, and cannot count as separate evidence for it. This entry records it as an assumption in its own right.",
+  "gap": false,
+  "level": "lay",
+  "hash": "76b11da984ba",
+  "number": 2
+ },
+ {
+  "id": "c:dark-matter.p1-single-frozen-point",
+  "type": "postulate",
+  "claim": "dark-matter.p1-single-frozen-point@3",
+  "title": "P1: the single frozen point",
+  "text": "This assumption says the origin of the universe happened once, in one way, for everything. Every hidden sector feels the same gravity, and every sector that can have a handedness received the same one. It is assumed, not derived. The assumption has three parts of different standing: that all sectors feel one gravity (partly provable, partly a choice), that they share one handedness (replaceable by another assumption, and not needed for the dark-matter total), and that one large number is common to all of them (assumed, with no derivation).",
+  "gap": false,
+  "level": "lay",
+  "hash": "9a5f25f9dd08",
+  "number": 3
  },
  {
   "id": "c:dark-matter.p2-indifference",
@@ -37,72 +59,50 @@
   "gap": false,
   "level": "lay",
   "hash": "085dfd15545a",
-  "number": 2
+  "number": 4
  },
  {
   "id": "c:dark-matter.p3-nearest-dimension-representatives",
   "type": "postulate",
-  "claim": "dark-matter.p3-nearest-dimension-representatives@2",
+  "claim": "dark-matter.p3-nearest-dimension-representatives@3",
   "title": "P3: nearest-dimension representatives",
   "text": "Each hidden sector could in principle be realised with several different numbers of dimensions. This assumption picks, for each one, the number closest to our four, with a tie-break for the cases exactly in between. It is a choice the paper makes, not something it derives.",
   "gap": false,
   "level": "lay",
-  "hash": "5f709ff1f2e1",
-  "number": 3
- },
- {
-  "id": "c:dark-matter.p4-democracy-asymmetry-over-oriented-towers",
-  "type": "postulate",
-  "claim": "dark-matter.p4-democracy-asymmetry-over-oriented-towers@1",
-  "title": "P4: democracy of the asymmetry over the oriented towers",
-  "text": "The universe's slight excess of matter over antimatter is assumed to be imprinted equally, particle type by particle type, in every sector able to carry such an excess. For the mirror copy of our world this is proved separately, so the assumption does real work in only one remaining case.",
-  "gap": false,
-  "level": "lay",
-  "hash": "5325346b623b",
-  "number": 4
- },
- {
-  "id": "c:dark-matter.r1-equal-mass-per-quantum",
-  "type": "postulate",
-  "claim": "dark-matter.r1-equal-mass-per-quantum@1",
-  "title": "R1: equal mass per quantum",
-  "text": "This assumption says the basic particles in every hidden sector weigh the same. The paper needs it for its formula for the amount of dark matter and does not derive it.",
-  "gap": false,
-  "level": "lay",
-  "hash": "17eae6910742",
+  "hash": "2e866855c55d",
   "number": 5
- },
- {
-  "id": "c:dark-matter.r2-one-quantum-per-unit-ball",
-  "type": "postulate",
-  "claim": "dark-matter.r2-one-quantum-per-unit-ball@2",
-  "title": "R2: one quantum per unit ball",
-  "text": "This assumption says that in every hidden sector the particles are packed at the same typical spacing: one per ball of a fixed size, measured in that sector's own number of dimensions. It also takes for granted that every sector contains matter at all.",
-  "gap": false,
-  "level": "lay",
-  "hash": "ccba1ab19ae4",
-  "number": 6
  },
  {
   "id": "c:dark-matter.r3-one-cell-per-unshared-direction",
   "type": "postulate",
-  "claim": "dark-matter.r3-one-cell-per-unshared-direction@1",
+  "claim": "dark-matter.r3-one-cell-per-unshared-direction@3",
   "title": "R3: one cell per unshared direction",
-  "text": "When a hidden sector has a direction our world lacks, only a thin slice of it counts towards the gravity we feel, and this assumption fixes that slice at one particle spacing. A mechanism is offered that gives this value, but it explains the choice rather than proving it.",
+  "text": "When a hidden sector has a direction our world lacks, only a thin slice of it counts towards the gravity we feel, and this assumption fixes that slice at one unit of length. A mechanism is offered that gives this value, but it explains the choice rather than proving it. The unit is the same length for every sector: the radius of the ball in which another assumption (E) says every sector holds the same mass. It is not a sector's own particle spacing, which would bring the particles' masses and numbers back into the formula.",
   "gap": false,
   "level": "lay",
-  "hash": "b4ab4916a43a",
+  "hash": "0f2ddb36b581",
+  "number": 6
+ },
+ {
+  "id": "c:dark-matter.single-ideal-at-residues-zero-and-four",
+  "type": "postulate",
+  "claim": "dark-matter.single-ideal-at-residues-zero-and-four@1",
+  "title": "SI: a single chiral spinor ideal at residues 0 and 4",
+  "text": "The formula for the amount of dark matter counts five hidden sectors and leaves out two others. For that to be right, those two must hold no matter. The series arranges this by a choice in how a particle and its mass are defined in those two sectors, a choice made knowing that the formula needs it. With the other choices the formula gives about 6.2 or 8.3 in place of the measured 5.4. This entry records that choice as an assumption in its own right.",
+  "gap": false,
+  "level": "lay",
+  "hash": "703127e52b8f",
   "number": 7
  },
  {
   "id": "c:dark-tower-matter.h1-momentum",
   "type": "postulate",
-  "claim": "dark-tower-matter.h1-momentum@1",
+  "claim": "dark-tower-matter.h1-momentum@2",
   "title": "Premise H1: a constituent's momentum",
-  "text": "This is an assumption, not a result: a constituent's motion is read from a spinor in the tower's own algebra, linked to the constituent in the larger conformal algebra in a way that respects the tower's rotations. In our four-dimensional world this is already established; in three and five dimensions it is assumed.",
+  "text": "This is an assumption, not a result: a constituent's motion is read from a spinor in the tower's own algebra, linked to the constituent in the larger conformal algebra in a way that respects the tower's rotations. In our four-dimensional world this is already established; in three and five dimensions it is assumed. A later result shows that the formula itself is not a free choice: once the motion is read from such a spinor in a way that respects rotations and boosts, it is the only possibility up to an overall factor. What remains assumed is that the spinor exists, that the reading has that form, and that motions of several constituents add.",
   "gap": false,
   "level": "lay",
-  "hash": "cf53aeae6f72",
+  "hash": "992c2539e025",
   "number": 8
  },
  {
@@ -119,13 +119,24 @@
  {
   "id": "c:dark-tower-matter.u-transposition-rule",
   "type": "postulate",
-  "claim": "dark-tower-matter.u-transposition-rule@2",
-  "title": "Premise U: the transposition rule",
-  "text": "This is an assumption, not a result: it fixes how the steps that give our own particle physics are repeated in the other towers. It says what a constituent is, which mixings of constituents and of their internal pairs count as symmetries, and that any square root of minus one must come from the tower's own algebra rather than being added from outside.",
+  "claim": "dark-tower-matter.u-transposition-rule@4",
+  "title": "Premise U: the transposition rule (a definition)",
+  "text": "This is an assumption, not a result: it fixes how the steps that give our own particle physics are repeated in the other towers. It says what a constituent is, which mixings of constituents and of their internal pairs count as symmetries, and that any square root of minus one must come from the tower's own algebra rather than being added from outside. It is best read as a definition: it says what the words mean in the other towers, and a different definition would give different results; nothing in nature could prove it wrong.",
   "gap": false,
   "level": "lay",
-  "hash": "a4113a68b183",
+  "hash": "3ab10fd9b35d",
   "number": 10
+ },
+ {
+  "id": "c:synthesis.common-ceiling-coupling-premise",
+  "type": "postulate",
+  "claim": "synthesis.common-ceiling-coupling-premise@1",
+  "title": "Premise: the common ceiling coupling of the deposited dynamics",
+  "text": "The mirror world has exactly the same kinds of particles and forces as ours, but that does not by itself make its forces equally strong. For the mirror's matter to weigh exactly as much as ours, its forces must start out with the same strengths as ours at the highest energy the theory reaches. The series' indifference assumption, as now worded, only matches fixed labels such as a stored charge, not force strengths, so this assumption is added to say the two worlds start with equal strengths. It says nothing about how hot the mirror is, and nothing about the other hidden worlds. Its cost is plain: one of the 5.4 units of dark matter rests on it, and a small difference in starting strengths would change the mirror's share a great deal.",
+  "gap": false,
+  "level": "lay",
+  "hash": "3aa1a05a9f50",
+  "number": 11
  },
  {
   "id": "s:dark-matter",
@@ -164,7 +175,7 @@
    "dark-matter.p3-nearest-dimension-representatives"
   ],
   "hash": "44719ab1a670",
-  "number": 11
+  "number": 12
  },
  {
   "id": "t:dark-matter.towers-are-residues-single-clock-filter>dark-matter.mirror-tower-copy-one",
@@ -179,9 +190,9 @@
  {
   "id": "c:dark-matter.mirror-tower-copy-one",
   "type": "theorem",
-  "claim": "dark-matter.mirror-tower-copy-one@8",
+  "claim": "dark-matter.mirror-tower-copy-one@11",
   "title": "The mirror tower is a copy of this one",
-  "text": "Swapping which directions count as time and which as space turns our world into a mirror world, and this result shows that every ingredient used to derive our particle physics survives the swap. So the mirror world has its own copy of the Standard Model as the series derives it (under Hypothesis (S)), with mirror photons and mirror neutrinos. If the two worlds share one cutoff scale (a common ceiling), then under the framework's premises of a single frozen point (P1) and indifference (P2), which fix a common coupling there and an equal matter excess, it also has the same particle masses and the same matter excess, so its matter equals our ordinary matter to within half a percent, the gap coming from the two worlds' nuclear histories. A later note (T14c) shows that the same indifference principle, applied as widely, would also make the mirror world as hot as ours, which observations rule out, so the cold mirror world the series relies on is an unstated exception to that principle.",
+  "text": "Swapping which directions count as time and which as space turns our world into a mirror world, and this result shows that every ingredient used to derive our particle physics survives the swap. So the mirror world has its own copy of the Standard Model as the series derives it (under Hypothesis (S)), with mirror photons and mirror neutrinos. If the two worlds share one cutoff scale and start with equal force strengths there (an assumption of its own, the common ceiling coupling), and under the framework's premises of a single frozen point (P1) and indifference (P2), which give an equal matter excess once that excess is read as a quantity fixed at the origin and not by temperature, it also has the same particle masses and the same inherited excess, which by a decision of 12 November 2026 is the excess of baryons minus leptons. Its matter then equals our ordinary matter to within half a percent, the gap coming from the two worlds' nuclear histories, provided baryons make up the same fraction of that excess there as here, which has not been shown. A later note (T14c) shows that the indifference principle, applied as widely as the paper first applied it, would also make the mirror world as hot as ours, which observations rule out; as now worded it leaves the mirror's temperature open, and a cold mirror then needs a birth out of equilibrium.",
   "gap": false,
   "level": "lay",
   "derivation": "main",
@@ -189,10 +200,11 @@
    "dark-matter.imported-inputs-standard-model-chain",
    "dark-matter.type-residue-what-each-tower-can",
    "dark-matter.p1-single-frozen-point",
-   "dark-matter.p2-indifference"
+   "dark-matter.p2-indifference",
+   "synthesis.common-ceiling-coupling-premise"
   ],
-  "hash": "2f2cfb7451d1",
-  "number": 12
+  "hash": "29dd533a5bb2",
+  "number": 13
  },
  {
   "id": "t:dark-matter.mirror-tower-copy-one>dark-matter.superselected-hence-dark-exactly-stable",
@@ -221,7 +233,7 @@
    "dark-matter.p1-single-frozen-point"
   ],
   "hash": "d774e3751dba",
-  "number": 13
+  "number": 14
  },
  {
   "id": "t:dark-matter.superselected-hence-dark-exactly-stable>pred.dark-matter-direct-detection-null",
@@ -247,7 +259,7 @@
    "registered": "2026-08 (T17 stance table, row 7)"
   },
   "hash": "230286048dbd",
-  "number": 14
+  "number": 15
  },
  {
   "id": "t:pred.dark-matter-direct-detection-null>dark-matter.population-count-one-share-half-percent",
@@ -262,9 +274,9 @@
  {
   "id": "c:dark-matter.population-count-one-share-half-percent",
   "type": "theorem",
-  "claim": "dark-matter.population-count-one-share-half-percent@5",
+  "claim": "dark-matter.population-count-one-share-half-percent@8",
   "title": "The population count: one share to half a percent, and a symmetric remainder",
-  "text": "Astronomers find about 5.4 times as much dark matter as ordinary matter. Assuming the four premises P1 to P4 (a single frozen point, indifference, nearest-dimension representatives and a matter excess shared evenly across the oriented towers), and that every hidden sector's matter thins out with cosmic expansion as ours does, this result accounts for one of those units: a mirror copy of ordinary matter holding the same amount as ours to within half a percent. The other 4.4 units are not explained here; they would have to be a different, symmetric kind of matter in the other hidden sectors, felt by us only through gravity. The account is held at observation level on those premises.",
+  "text": "Astronomers find about 5.4 times as much dark matter as ordinary matter. Assuming the three premises P1 to P3 (a single frozen point, indifference and nearest-dimension representatives; a fourth, a matter excess shared evenly across the oriented towers, is needed only for the mirror, where it follows from the mirror being a copy) and that the mirror world starts with the same force strengths as ours (the common ceiling coupling), and that every hidden sector's matter thins out with cosmic expansion as ours does, this result accounts for one of those units: a mirror copy of ordinary matter holding the same amount as ours to within half a percent. The other 4.4 units are not explained here; they would have to be a different, symmetric kind of matter in the other hidden sectors, felt by us only through gravity. The account is held at observation level on those premises.",
   "gap": false,
   "level": "lay",
   "derivation": "main",
@@ -278,10 +290,10 @@
    "dark-matter.p1-single-frozen-point",
    "dark-matter.p2-indifference",
    "dark-matter.p3-nearest-dimension-representatives",
-   "dark-matter.p4-democracy-asymmetry-over-oriented-towers"
+   "synthesis.common-ceiling-coupling-premise"
   ],
-  "hash": "321c1e918461",
-  "number": 15
+  "hash": "a405adfb0c2c",
+  "number": 16
  },
  {
   "id": "t:dark-matter.population-count-one-share-half-percent>dark-matter.unit-ball-rule",
@@ -296,20 +308,22 @@
  {
   "id": "c:dark-matter.unit-ball-rule",
   "type": "theorem",
-  "claim": "dark-matter.unit-ball-rule@5",
+  "claim": "dark-matter.unit-ball-rule@7",
   "title": "The unit-ball rule",
-  "text": "This rule assigns every dark tower one particle of a common mass per unit-sized ball of its own space, and compares that density with ours. Towers with fewer or more spatial dimensions then contribute different amounts, fixed by the volumes of balls in two, three and four dimensions. Under its three premises the rule gives a dark-to-ordinary matter ratio of about 5.364, the observed value; but the relation was found by solving for that value, and many equally simple formulas land inside the measurement's error, so the agreement is a fit rather than a prediction.",
+  "text": "This rule says that there is one length at which a ball of that radius holds the same mass in every tower, each ball taken in that tower's own space, and it compares the resulting density with ours. Towers with fewer or more spatial dimensions then contribute different amounts, fixed by the volumes of balls in two, three and four dimensions. With the assumptions that the four odd hidden sectors hold matter and that two further sectors hold none, the rule gives a dark-to-ordinary matter ratio of about 5.364, the observed value. It no longer assumes that particles in different sectors weigh the same or are equally numerous: only the mass per ball matters. The price of that weaker assumption is plain to state: together with the assumption about how thick a slice counts, it holds exactly when each sector has the share the formula gives it and the two slices are equally thick, so it is the formula put as one rule and not a separate reason for it. The relation was found by solving for the measured value, and many equally simple formulas land inside the measurement's error, so the agreement is a fit rather than a prediction.",
   "gap": false,
   "level": "lay",
   "derivation": "main",
   "rests_on": [
+   "dark-matter.projection-every-towers-content-dilutes-ones",
    "dark-matter.towers-are-residues-single-clock-filter",
-   "dark-matter.r1-equal-mass-per-quantum",
-   "dark-matter.r2-one-quantum-per-unit-ball",
-   "dark-matter.r3-one-cell-per-unshared-direction"
+   "dark-matter.e-equal-mass-per-unit-ball",
+   "dark-matter.odd-towers-populated",
+   "dark-matter.r3-one-cell-per-unshared-direction",
+   "dark-matter.single-ideal-at-residues-zero-and-four"
   ],
-  "hash": "7afec1ad2d65",
-  "number": 16
+  "hash": "0bcc0526af99",
+  "number": 17
  },
  {
   "id": "t:dark-matter.unit-ball-rule>dark-matter.status-rule",
@@ -318,29 +332,54 @@
    "dark-matter.unit-ball-rule",
    "dark-matter.status-rule"
   ],
-  "text": "A close match calls for caution rather than celebration. [[t]]\n\nThe relation was found by fitting, and it is one of fourteen equally simple values within the error bar of one Planck column. [[c:dark-matter.status-rule]] It rests on premises R1 to R3 and on the costed clause that empties residues $0$ and $4$, so it is recorded as a fit at observation level, not a prediction. [[c:dark-matter.status-rule]]",
-  "hash": "aa5b417eb12d"
+  "text": "A close match calls for caution rather than celebration. [[t]]\n\nThe relation was found by fitting, and it is one of fourteen equally simple values within the error bar of one Planck column. [[c:dark-matter.status-rule]] It rests on Premise E (equal mass per unit ball) and R3, which together say no more than its shares, and on the costed clause that empties residues $0$ and $4$, so it is recorded as a fit at observation level, not a prediction. [[c:dark-matter.status-rule]]",
+  "hash": "69a044266dab"
  },
  {
   "id": "c:dark-matter.status-rule",
   "type": "conjecture",
-  "claim": "dark-matter.status-rule@4",
+  "claim": "dark-matter.status-rule@6",
   "title": "The status of the rule",
-  "text": "The paper's formula for the amount of dark matter matches the measured value closely, and this assessment explains why that match should not be over-read. The formula was found by working backwards from the measurement, and many equally simple formulas fit just as well. It rests on three unproved premises (R1 to R3), and on a further choice, made knowing the answer it needed, that two of the hidden families hold no matter; the match is to one Planck data set; another survey combination gives a lower value that no version of the formula can reach. So it is recorded as a fitted relation at observation level, not a prediction.",
+  "text": "The paper's formula for the amount of dark matter matches the measured value closely, and this assessment explains why that match should not be over-read. The formula was found by working backwards from the measurement, and many equally simple formulas fit just as well. It rests on two unproved premises (equal mass per unit ball, and the one-unit thickness; until 19 November 2026 it was stated with three, two of them about particles), which together say no more than the formula does, and on a further choice, made knowing the answer it needed, that two of the hidden families hold no matter; the match is to one Planck data set; another survey combination gives a lower value that no version of the formula can reach. So it is recorded as a fitted relation at observation level, not a prediction.",
   "gap": false,
   "level": "lay",
-  "hash": "46ec341c358c",
-  "number": 17
+  "hash": "305a20aba0a2",
+  "number": 18
  },
  {
-  "id": "t:dark-matter.status-rule>dark-tower-matter.gauge-algebras",
+  "id": "t:dark-matter.status-rule>dark-tower-matter.constituents-field",
   "type": "transition",
   "between": [
    "dark-matter.status-rule",
+   "dark-tower-matter.constituents-field"
+  ],
+  "text": "The counting rule says how much matter the dark towers hold, but not what that matter is made of. [[t]] Building it by our own construction, a constituent's scalars depend on the tower: the real numbers in the three-dimensional towers, the complex numbers in ours and the mirror, and the quaternions in the five-dimensional towers. [[c:dark-tower-matter.constituents-field]]",
+  "hash": "ae931d96b6ce"
+ },
+ {
+  "id": "c:dark-tower-matter.constituents-field",
+  "type": "theorem",
+  "claim": "dark-tower-matter.constituents-field@2",
+  "title": "The constituent's field in each tower",
+  "text": "Each of the eight towers has its own kind of number for its basic constituents: real numbers, complex numbers or quaternions. This theorem reads off which from the classification of real Clifford algebras: complex for our tower and its mirror, real for the three-dimensional towers and one sterile tower, quaternionic for the five-dimensional towers and the other sterile tower. The answer is the same in the larger conformal algebra and in the tower itself.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "dark-tower-matter.imported-clifford-structure"
+  ],
+  "hash": "54d585f63df8",
+  "number": 19
+ },
+ {
+  "id": "t:dark-tower-matter.constituents-field>dark-tower-matter.gauge-algebras",
+  "type": "transition",
+  "between": [
+   "dark-tower-matter.constituents-field",
    "dark-tower-matter.gauge-algebras"
   ],
-  "text": "The counting rule says how much matter the dark towers hold, but not what that matter is made of. [[t]] Repeating our own construction, mass begins at two constituents in dimensions three and four and at one constituent in dimension five. [[c:dark-tower-matter.where-mass-begins]]\n\nUnder premise H2 and Premise U the gauge algebra is \\[ \\so(2) \\oplus \\so(2) \\] in the three-dimensional towers and $\\uu(3) = \\su(3) \\oplus \\uu(1)$ in the five-dimensional towers. [[c:dark-tower-matter.gauge-algebras]] Reading a constituent's momentum from its spinor is established in our tower but a premise in three and five dimensions (premise H1). [[c:dark-tower-matter.h1-momentum]]",
-  "hash": "aeae831d07ae"
+  "text": "With those scalars, mass begins at two constituents in dimensions three and four and at one constituent in dimension five. [[c:dark-tower-matter.where-mass-begins]]\n\nUnder premise H2 and Premise U the gauge algebra is \\[ \\so(2) \\oplus \\so(2) \\] in the three-dimensional towers and $\\uu(3) = \\su(3) \\oplus \\uu(1)$ in the five-dimensional towers. [[c:dark-tower-matter.gauge-algebras]] Reading a constituent's momentum from its spinor is established in our tower but a premise in three and five dimensions (premise H1). [[c:dark-tower-matter.h1-momentum]]",
+  "hash": "05b78e619326"
  },
  {
   "id": "c:dark-tower-matter.gauge-algebras",
@@ -362,13 +401,46 @@
    "dark-tower-matter.h1-momentum"
   ],
   "hash": "38c3601ef6b8",
-  "number": 18
+  "number": 20
  },
  {
-  "id": "t:dark-tower-matter.gauge-algebras>pred.no-dark-radiation",
+  "id": "t:dark-tower-matter.gauge-algebras>dark-tower-matter.r1-has-no-mechanism-odd-towers",
   "type": "transition",
   "between": [
    "dark-tower-matter.gauge-algebras",
+   "dark-tower-matter.r1-has-no-mechanism-odd-towers"
+  ],
+  "text": "Those forces decide whether anything stands behind the counting rule's premise. [[t]] In the three-dimensional towers the coupling has a dimension and nothing confines in the viable phase, and in the five-dimensional towers nothing confines at all, so the odd towers' masses are bare parameters. [[c:dark-tower-matter.r1-has-no-mechanism-odd-towers]]\n\nTheir number is not fixed either, so nothing in their content sets the masses or densities that premise E equates, for about $81$ percent of the dark matter. [[c:dark-tower-matter.r1-has-no-mechanism-odd-towers]] Their quanta are elementary, not the confined composites the dark-matter paper reads them as. [[c:dark-tower-matter.r1-has-no-mechanism-odd-towers]]",
+  "hash": "e0363ab9d940"
+ },
+ {
+  "id": "c:dark-tower-matter.r1-has-no-mechanism-odd-towers",
+  "type": "theorem",
+  "claim": "dark-tower-matter.r1-has-no-mechanism-odd-towers@4",
+  "title": "Neither E nor the particle model has a mechanism in the odd towers",
+  "text": "The dark-matter paper's rule assumes every populated tower holds the same mass per unit ball, and its older particle picture assumes every dark particle has the same mass. In our tower and the mirror a particle's mass comes from a strong force, but this assembly-level argument shows that in the odd-dimensional towers, which hold about four fifths of the dark matter, masses are free parameters and nothing fixes how many particles there are. There, both assumptions are choices rather than consequences.",
+  "gap": false,
+  "level": "lay",
+  "derivation": "main",
+  "rests_on": [
+   "dark-matter.mirror-share-one-how-fragile",
+   "dark-tower-matter.gauge-algebras",
+   "dark-tower-matter.three-dimensional-content",
+   "dark-tower-matter.anomalies",
+   "dark-tower-matter.survival-sheets",
+   "dark-tower-matter.five-dimensional-towers",
+   "dark-tower-matter.imported-unit-ball-rule",
+   "dark-tower-matter.population",
+   "dark-matter.e-equal-mass-per-unit-ball"
+  ],
+  "hash": "b08e046cc848",
+  "number": 21
+ },
+ {
+  "id": "t:dark-tower-matter.r1-has-no-mechanism-odd-towers>pred.no-dark-radiation",
+  "type": "transition",
+  "between": [
+   "dark-tower-matter.r1-has-no-mechanism-odd-towers",
    "pred.no-dark-radiation"
   ],
   "text": "Abelian dark forces raise the question of dark radiation, which the early universe limits. [[t]] The three-dimensional towers' radiation channels close, while the mirror and five-dimensional channels stay open. [[c:dark-matter.radiation-audit-what-theorem-closes-what]]\n\nThe framework predicts \\[ \\Delta\\Neff \\approx 0 \\] conditionally on those open channels closing, which holds if the descent's deposit is no hotter than estimated, and on a cold mirror, an exception to P2. [[c:pred.no-dark-radiation]]",
@@ -377,9 +449,9 @@
  {
   "id": "c:pred.no-dark-radiation",
   "type": "prediction",
-  "claim": "pred.no-dark-radiation@2",
+  "claim": "pred.no-dark-radiation@6",
   "title": "No dark radiation",
-  "text": "The afterglow of the early universe records how many kinds of light, fast-moving particles existed at the time. The framework predicts that the dark towers add none, provided the remaining ways of heating them stay closed, which holds if the descent left them no hotter than the paper estimates. It also needs the mirror world to have started cold, which a later note (T14c) shows is an unstated exception to the framework's own indifference principle; applied evenly, that principle would make the mirror as hot as our world and the prediction would fail.",
+  "text": "The afterglow of the early universe records how many kinds of light, fast-moving particles existed at the time. The framework predicts that the dark towers add none, provided the remaining ways of heating them stay closed, which holds if the descent left them no hotter than the paper estimates. It also needs the mirror world to have started cold, which a later note (T14c) shows is an unstated exception to the framework's own indifference principle; applied evenly, that principle would make the mirror as hot as our world and the prediction would fail. As the principle is now scoped, it applies to labels such as charges and not to temperatures, so it leaves the mirror's temperature free; a cold mirror then needs the descent to have left the towers out of equilibrium.",
   "gap": false,
   "level": "lay",
   "kill_condition": {
@@ -387,8 +459,8 @@
    "data_source": "CMB constraints (Planck 2018)",
    "registered": "2026-08 (T17 stance table, row 9)"
   },
-  "hash": "54210f80dd3a",
-  "number": 19
+  "hash": "3ae89614f6c3",
+  "number": 22
  },
  {
   "id": "t:pred.no-dark-radiation>dark-tower-matter.towers-built",
@@ -403,13 +475,13 @@
  {
   "id": "c:dark-tower-matter.towers-built",
   "type": "conjecture",
-  "claim": "dark-tower-matter.towers-built@1",
+  "claim": "dark-tower-matter.towers-built@2",
   "title": "The dark towers as built, against the data",
   "text": "At the level of observation, this table checks the five dark towers, as the series builds them, against radiation limits, colliding galaxy clusters, the mirror's astrophysics and the equal-mass rule. No arrangement passes every test as it stands. The best one needs four extra choices that the series does not make, and even then remains in mild tension with one published limit.",
   "gap": false,
   "level": "lay",
-  "hash": "8fc67a2cf0b3",
-  "number": 20
+  "hash": "897bc4580fad",
+  "number": 23
  },
  {
   "id": "s:cited",
@@ -425,21 +497,21 @@
   "text": "Climbing the ladder of algebras by adding one plus-square direction and one minus-square direction never changes the difference between the two counts. Each step replaces the algebra by two-by-two matrices with entries in the old one, so nothing essential changes. The possible starting points therefore sort into eight separate towers, according to that difference counted modulo eight.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.imported-eight-towers-mod-8-clock, version 4 (T14 Fact 2.5)",
-  "hash": "f7699080f526",
-  "number": 21
+  "provenance": "Physics Graph result dark-matter.imported-eight-towers-mod-8-clock, version 4 (T14 Fact 2.5)",
+  "hash": "ca4244e15ed7",
+  "number": 24
  },
  {
   "id": "c:dark-matter.imported-gravity-only-coupling",
   "type": "fact",
-  "claim": "dark-matter.imported-gravity-only-coupling@3",
+  "claim": "dark-matter.imported-gravity-only-coupling@4",
   "title": "Gravity-only coupling at first order, restated from the acoustic no-go",
   "text": "In the framework's spherically averaged (s-wave) description of fields near horizons, with an assembled four-dimensional lift, and under two assumptions of earlier papers in the series (one about how the horizon's spherical structure is built, one about the joint state of the near-horizon modes), the series showed that the structure from which spacetime's geometry is made can be gripped, at first order, only by probes that carry no charge and do not change sign under charge conjugation, which the series reads as energy and momentum. So matter that feels gravity but shares none of our other forces can affect us through that structure only by its weight, to first order. If, as the dark-matter paper's single-frozen-point premise says, that structure is its only contact with us, it has no other effect we could observe at that order.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.imported-gravity-only-coupling, version 3 (T14 Fact 2.6)",
-  "hash": "bef8c8e608b5",
-  "number": 22
+  "provenance": "Physics Graph result dark-matter.imported-gravity-only-coupling, version 4 (T14 Fact 2.6)",
+  "hash": "19798bf9ab17",
+  "number": 25
  },
  {
   "id": "c:dark-matter.imported-inputs-standard-model-chain",
@@ -449,33 +521,33 @@
   "text": "The Standard-Model results of the series come from a chain of derivations. This entry lists every ingredient that chain uses, from the six-dimensional conformal geometry and its spinors to the mass formula, a counting rule for hypercharge, one structural hypothesis about the slots of the composite's spinor states (Hypothesis (S)) and a few textbook results. The point is that nothing else goes in, so later work can ask which ingredients survive in other settings. That the list is complete is a reading, carried as an assumption.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.imported-inputs-standard-model-chain, version 6 (T14 Fact 4.2)",
-  "hash": "264f0875a402",
-  "number": 23
+  "provenance": "Physics Graph result dark-matter.imported-inputs-standard-model-chain, version 6 (T14 Fact 4.2)",
+  "hash": "faa2be6555b0",
+  "number": 26
  },
  {
   "id": "c:dark-matter.mirror-share-one-how-fragile",
   "type": "fact",
-  "claim": "dark-matter.mirror-share-one-how-fragile@6",
+  "claim": "dark-matter.mirror-share-one-how-fragile@10",
   "title": "The mirror share is one, and how fragile that is",
-  "text": "The mirror world's matter weighs exactly as much as ours, because the mirror is an exact copy, with the same particles and the same force strengths at the start, and the copy theorem gives it the same matter excess, so the premise that the flag imprints one asymmetry on every tower (P4) is not needed for it. How exact that is depends on what the mirror's matter becomes; a later note (T14c) finds it mostly neutrons rather than helium at its coldest, a case this estimate does not cover. A rough one-loop estimate, over the ceiling range that rests on Hypothesis (U), shows that the equality is fragile: one extra kind of light quark or a slightly different starting strength of the strong force would change the mirror's share by large factors. For the odd-dimensional hidden worlds nothing of this kind can be said without a new rule.",
+  "text": "The mirror world's matter weighs exactly as much as ours, because the mirror is an exact copy, with the same particles and the same force strengths at the start, and the copy theorem gives it the same inherited excess, so the premise that the flag imprints one asymmetry on every tower (P4) is not needed for it. By a decision of 12 November 2026 the inherited excess is that of baryons minus leptons, so the equal weight also needs baryons to make up the same fraction of it there as here, which has not been shown. How exact that is depends on what the mirror's matter becomes; a later note (T14c) finds it mostly neutrons rather than helium at its coldest, a case this estimate does not cover. A rough one-loop estimate, over the ceiling range that rests on Hypothesis (U), shows that the equality is fragile: one extra kind of light quark or a slightly different starting strength of the strong force would change the mirror's share by large factors. For the odd-dimensional hidden worlds nothing of this kind can be said without a new rule.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.mirror-share-one-how-fragile, version 6 (T14 Prop 4.7)",
-  "hash": "5ace6a43ca5f",
-  "number": 24
+  "provenance": "Physics Graph result dark-matter.mirror-share-one-how-fragile, version 10 (T14 Prop 4.7)",
+  "hash": "383946d580ba",
+  "number": 27
  },
  {
   "id": "c:dark-matter.no-coupling-rule-odd-towers-follows",
   "type": "fact",
-  "claim": "dark-matter.no-coupling-rule-odd-towers-follows@4",
-  "title": "No coupling rule for the odd towers follows from the series",
-  "text": "Saying how strong the forces are in an odd-dimensional hidden world, compared with ours, would need an extra rule. The series supplies none: the strength there carries units, so comparing it needs a length the theory does not fix; the series does not predict our own force strengths either; and its indifference premise (P2), the assumption that treats worlds alike, only links worlds that are mirror images. Any such rule would be a new assumption. The argument is at structural level, not a proof in the series' strict sense.",
+  "claim": "dark-matter.no-coupling-rule-odd-towers-follows@6",
+  "title": "Three obstructions to a coupling rule for the odd towers",
+  "text": "Saying how strong the forces are in an odd-dimensional hidden world, compared with ours, would need an extra rule, and three facts stand in the way of getting one from the series: the strength there carries units, so comparing it needs a length the theory does not fix; the series does not predict our own force strengths either; and the assumptions that treat worlds alike (indifference, P2, and the equal starting strengths of the mirror world) only link our world with its mirror image. The natural reading, that any such rule would be a new assumption, is stated as a remark, not proved.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.no-coupling-rule-odd-towers-follows, version 4 (T14 Prop A.4)",
-  "hash": "cba705cd743f",
-  "number": 25
+  "provenance": "Physics Graph result dark-matter.no-coupling-rule-odd-towers-follows, version 6 (T14 Prop A.4)",
+  "hash": "68221069ce05",
+  "number": 28
  },
  {
   "id": "c:dark-matter.projection-every-towers-content-dilutes-ones",
@@ -485,33 +557,33 @@
   "text": "Hidden sectors with more or fewer dimensions than ours might thin out at a different rate as the universe expands, which would make them fade away or come to dominate. This result shows that, under the paper's rule for how such sectors feed gravity (its reading of Premise P1, one shared metric), provided any extra directions either grow with ours or stay fixed in size, and with a sector that lacks one of our directions counted as a family of evenly spaced sheets, their matter and radiation thin out exactly as ours do. Their share relative to ordinary matter therefore stays fixed over cosmic time.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.projection-every-towers-content-dilutes-ones, version 3 (T14 Lem 6.1)",
-  "hash": "973aaca9091c",
-  "number": 26
+  "provenance": "Physics Graph result dark-matter.projection-every-towers-content-dilutes-ones, version 3 (T14 Lem 6.1)",
+  "hash": "e2abbfbb6a51",
+  "number": 29
  },
  {
   "id": "c:dark-matter.radiation-audit-what-theorem-closes-what",
   "type": "fact",
-  "claim": "dark-matter.radiation-audit-what-theorem-closes-what@7",
+  "claim": "dark-matter.radiation-audit-what-theorem-closes-what@10",
   "title": "The radiation audit: what the type-by-residue theorem closes, and what stays open",
-  "text": "Each hidden sector could carry its own kind of light, and observations rule out much extra light in the early universe. This audit checks every sector: the three-dimensional ones lose their light either through a known confinement effect or, as a later note (T14c) shows for one of their two possible phases, because the force carrier gains a mass, while the mirror and five-dimensional ones could keep theirs. Any leftover massless particles in the confining sectors pick up small masses from those sectors' higher rungs, at a scale set under Hypothesis (U). The open sectors would still be harmless if they started out no hotter than the framework's estimate and their light is removed by one of the listed routes, for instance by their being cold enough; so the stance of no detectable extra radiation holds only under those conditions. The same later note points out that a cold mirror is an unstated exception to the paper's indifference principle.",
+  "text": "Each hidden sector could carry its own kind of light, and observations rule out much extra light in the early universe. This audit checks every sector: the three-dimensional ones lose their light either through a known confinement effect or, as a later note (T14c) shows for one of their two possible phases, because the force carrier gains a mass, while the mirror and five-dimensional ones could keep theirs. Any leftover massless particles in the confining sectors pick up small masses from those sectors' higher rungs, at a scale set under Hypothesis (U). The open sectors would still be harmless if they started out no hotter than the framework's estimate and their light is removed by one of the listed routes, for instance by their being cold enough; so the stance of no detectable extra radiation holds only under those conditions. The same later note points out that a cold mirror is an unstated exception to the paper's indifference principle. As the principle is now scoped, it applies to labels such as charges and not to temperatures, so it leaves the mirror's temperature free; a cold mirror then needs the descent to have left the towers out of equilibrium.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.radiation-audit-what-theorem-closes-what, version 7 (T14 Prop 6.2)",
-  "hash": "0c83cd05f3c4",
-  "number": 27
+  "provenance": "Physics Graph result dark-matter.radiation-audit-what-theorem-closes-what, version 10 (T14 Prop 6.2)",
+  "hash": "37a5db6199c4",
+  "number": 30
  },
  {
   "id": "c:dark-matter.residue-soldered-invariant-not-algebraic-one",
   "type": "fact",
-  "claim": "dark-matter.residue-soldered-invariant-not-algebraic-one@3",
+  "claim": "dark-matter.residue-soldered-invariant-not-algebraic-one@5",
   "title": "The residue is a soldered invariant, not an algebraic one",
   "text": "Each tower of possible matter is labelled by a number, its residue, which comes from how many directions are time-like and how many space-like. This result shows that the label only has meaning once the algebra is tied to the geometry of spacetime. As bare algebras, some different towers are exactly the same at the same dimension, for example our world's algebra and that of one dark tower. What tells them apart is which elements count as directions, and that is fixed by the metric.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.residue-soldered-invariant-not-algebraic-one, version 3 (T14 Thm 3.5)",
-  "hash": "a4131c181780",
-  "number": 28
+  "provenance": "Physics Graph result dark-matter.residue-soldered-invariant-not-algebraic-one, version 5 (T14 Thm 3.5)",
+  "hash": "14a64edeb286",
+  "number": 31
  },
  {
   "id": "c:dark-matter.type-residue-what-each-tower-can",
@@ -521,33 +593,69 @@
   "text": "Each tower's basic algebra decides what kind of numbers its matter states naturally use: real numbers, complex numbers or quaternions. That choice depends only on the tower's label, and it fixes which continuous symmetries a tower carries before any further structure is added. For the representatives the paper uses, and in its labelling convention (the opposite convention swaps the two members of each mirror pair), the mirror tower comes out with real spinors and no built-in continuous charge, two of the odd towers with exactly one built-in charge each, and our own world with quaternionic spinors.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.type-residue-what-each-tower-can, version 5 (T14 Thm 3.4)",
-  "hash": "d8df3f1a3bd8",
-  "number": 29
+  "provenance": "Physics Graph result dark-matter.type-residue-what-each-tower-can, version 5 (T14 Thm 3.4)",
+  "hash": "e04bda5ba097",
+  "number": 32
  },
  {
   "id": "c:dark-matter.which-towers-can-carry-arrow",
   "type": "fact",
-  "claim": "dark-matter.which-towers-can-carry-arrow@4",
+  "claim": "dark-matter.which-towers-can-carry-arrow@6",
   "title": "Which towers can carry the arrow",
   "text": "The excess of matter over antimatter needs an orientation, a choice the theory says can only be made in the towers with even labels. Among those, taken at the dimension nearest four (premise P3), only our world and the mirror tower have a single direction of time, so only they can carry the excess. A tower with two time directions could in principle host a copy of the Standard Model, carrying the same two conditions as the Standard-Model derivation, but the paper keeps it closed by importing the standard result that physics with two times is unstable.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-matter.which-towers-can-carry-arrow, version 4 (T14 Cor 3.11)",
-  "hash": "7cf3c4ea4f50",
-  "number": 30
+  "provenance": "Physics Graph result dark-matter.which-towers-can-carry-arrow, version 6 (T14 Cor 3.11)",
+  "hash": "7f539d912025",
+  "number": 33
  },
  {
-  "id": "c:dark-tower-matter.constituents-field",
+  "id": "c:dark-tower-matter.anomalies",
   "type": "fact",
-  "claim": "dark-tower-matter.constituents-field@2",
-  "title": "The constituent's field in each tower",
-  "text": "Each of the eight towers has its own kind of number for its basic constituents: real numbers, complex numbers or quaternions. This theorem reads off which from the classification of real Clifford algebras: complex for our tower and its mirror, real for the three-dimensional towers and one sterile tower, quaternionic for the five-dimensional towers and the other sterile tower. The answer is the same in the larger conformal algebra and in the tower itself.",
+  "claim": "dark-tower-matter.anomalies@4",
+  "title": "Chern-Simons levels of the odd towers' content",
+  "text": "Each charged particle in a three-dimensional tower shifts a topological term in its force by half a unit, and consistency then requires that term never to vanish, so these towers' forces distinguish left from right. In the five-dimensional towers the corresponding abelian term is a whole number for any choice of mass signs, for the particle content found there under the slot hypothesis. The non-abelian terms are not examined.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-tower-matter.constituents-field, version 2 (T14c Thm 3.2)",
-  "hash": "79e8023409bd",
-  "number": 31
+  "provenance": "Physics Graph result dark-tower-matter.anomalies, version 4 (T14c Prop 6.5)",
+  "hash": "062f264f5b5a",
+  "number": 34
+ },
+ {
+  "id": "c:dark-tower-matter.five-dimensional-towers",
+  "type": "fact",
+  "claim": "dark-tower-matter.five-dimensional-towers@6",
+  "title": "The five-dimensional towers in cosmology and halos",
+  "text": "Assuming, with premise R3, that the extra direction is about one particle spacing deep and grows with the universe, these decimal estimates describe what the five-dimensional towers' matter does. Their forces never confine, so there are no dark nuclei or atoms; their radiation is small enough for the temperatures the dark-matter paper estimates; and their particles barely scatter. Their charged particles could form a dark plasma, a possible weakness, unless only the neutral species survives in the needed numbers, a branch open to both towers under the transposition rule.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Physics Graph result dark-tower-matter.five-dimensional-towers, version 6 (T14c Comp 9.3)",
+  "hash": "4ee4991c6ca2",
+  "number": 35
+ },
+ {
+  "id": "c:dark-tower-matter.imported-clifford-structure",
+  "type": "fact",
+  "claim": "dark-tower-matter.imported-clifford-structure@1",
+  "title": "Imported: the structure of real Clifford algebras",
+  "text": "These are textbook facts about Clifford algebras, the algebras of directions that underlie the series. They say how the even part of such an algebra matches a smaller algebra, which kind of number (real, complex or quaternionic) each algebra is built over according to its signature, and that the symmetries of its basic spinor spaces form a number system of that kind.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "C. Chevalley, The Algebraic Theory of Spinors, Columbia University Press (1954).; P. Lounesto, Clifford Algebras and Spinors, 2nd ed., Cambridge University Press (2001).; H. B. Lawson and M.-L. Michelsohn, Spin Geometry, Princeton University Press (1989).",
+  "hash": "4d1bb11f583f",
+  "number": 36
+ },
+ {
+  "id": "c:dark-tower-matter.imported-unit-ball-rule",
+  "type": "fact",
+  "claim": "dark-tower-matter.imported-unit-ball-rule@5",
+  "title": "Imported: the unit-ball shares",
+  "text": "The dark-matter paper divides the dark matter among the five dark towers by assuming that, at one common length, every populated tower holds the same mass in a ball of that size, with a rule for how thick the lower- and higher-dimensional towers count. The mirror then holds under a fifth, each three-dimensional tower about a quarter and each five-dimensional tower about a sixth. The older picture, in which every dark particle has the nucleon's mass, also gives this, but the rule does not need it.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Physics Graph result dark-tower-matter.imported-unit-ball-rule, version 5 (T14c Fact 2.4)",
+  "hash": "a7bf0588047f",
+  "number": 37
  },
  {
   "id": "c:dark-tower-matter.ladder",
@@ -557,9 +665,9 @@
   "text": "Several constituents can be mixed into one another using the tower's own kind of number. This theorem shows that the mixings that keep their total momentum are exactly the unitary ones for that kind of number: rotations for real numbers, unitary matrices for complex numbers, and their quaternionic analogue for quaternions.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-tower-matter.ladder, version 2 (T14c Thm 3.7)",
-  "hash": "0e7aa1fb3990",
-  "number": 32
+  "provenance": "Physics Graph result dark-tower-matter.ladder, version 2 (T14c Thm 3.7)",
+  "hash": "5935fdb8c5c8",
+  "number": 38
  },
  {
   "id": "c:dark-tower-matter.pairs",
@@ -569,21 +677,57 @@
   "text": "Each constituent carries internal ladder pairs, pairs of creation and annihilation operations built from the directions of its conformal algebra. In the three-dimensional towers there are two, built from real numbers alone. In the four- and five-dimensional towers there are three, and the third can only be built with a square root of minus one; in our tower and the mirror that root is fixed up to sign.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-tower-matter.pairs, version 3 (T14c Prop 4.1)",
-  "hash": "658355d568b7",
-  "number": 33
+  "provenance": "Physics Graph result dark-tower-matter.pairs, version 3 (T14c Prop 4.1)",
+  "hash": "d41251f4f3f4",
+  "number": 39
+ },
+ {
+  "id": "c:dark-tower-matter.population",
+  "type": "fact",
+  "claim": "dark-tower-matter.population@3",
+  "title": "How the odd towers could be populated",
+  "text": "The odd-dimensional dark towers cannot store a surplus of matter over antimatter, so their matter and antimatter must survive in equal numbers. At assembly level, whatever density the dark-matter paper's premise E asks of them, that survival needs either a deposited population that something keeps from annihilating, or a freeze-out at weak coupling. The series derives neither.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Physics Graph result dark-tower-matter.population, version 3 (T14c Obs 9.5)",
+  "hash": "490534b16ba9",
+  "number": 40
+ },
+ {
+  "id": "c:dark-tower-matter.survival-sheets",
+  "type": "fact",
+  "claim": "dark-tower-matter.survival-sheets@6",
+  "title": "Survival of sheet relics against annihilation",
+  "text": "Matter and antimatter on the dark sheets annihilate when they meet, and in two dimensions this erodes them slowly but steadily. In these decimal estimates, at the density of the dark-matter paper's particle model, a symmetric population survives only if annihilation per encounter is almost impossible, which in the topologically massive phase needs a coupling far stronger than the mass; that also lets the matter pass through itself when clusters collide. The confining phase cannot keep the required density.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Physics Graph result dark-tower-matter.survival-sheets, version 6 (T14c Comp 9.2)",
+  "hash": "789e134a3f0b",
+  "number": 41
  },
  {
   "id": "c:dark-tower-matter.third-pairs-unit-five-dimensions",
   "type": "fact",
-  "claim": "dark-tower-matter.third-pairs-unit-five-dimensions@4",
+  "claim": "dark-tower-matter.third-pairs-unit-five-dimensions@5",
   "title": "The third pair's unit in five dimensions",
   "text": "The five-dimensional towers need a square root of minus one to build their third internal pair. In one of them the algebra itself provides exactly one such root, and every other candidate spoils the pair structure. In the other the algebra provides none, so any of a whole sphere of quaternionic roots will do, all equivalent to one another.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-tower-matter.third-pairs-unit-five-dimensions, version 4 (T14c Thm 4.2)",
-  "hash": "e6ee8da5c84a",
-  "number": 34
+  "provenance": "Physics Graph result dark-tower-matter.third-pairs-unit-five-dimensions, version 5 (T14c Thm 4.2)",
+  "hash": "835e7b63a6fd",
+  "number": 42
+ },
+ {
+  "id": "c:dark-tower-matter.three-dimensional-content",
+  "type": "fact",
+  "claim": "dark-tower-matter.three-dimensional-content@4",
+  "title": "The three-dimensional towers' content",
+  "text": "Each three-dimensional tower contains two kinds of charged particle, each feeling only one of its two forces, so the tower is like two separate copies of electromagnetism on a sheet. Assuming the slot hypothesis would add states that do not fit the towers' symmetry, so here the hypothesis and the symmetry are incompatible. The particles can have masses without a Higgs-like field, and there are no proton-like bound states.",
+  "gap": false,
+  "level": "lay",
+  "provenance": "Physics Graph result dark-tower-matter.three-dimensional-content, version 4 (T14c Prop 6.1)",
+  "hash": "cf78a144e6a7",
+  "number": 43
  },
  {
   "id": "c:dark-tower-matter.where-mass-begins",
@@ -593,9 +737,9 @@
   "text": "A single constituent in a three- or four-dimensional tower always moves like light; mass appears only when two combine, and then only if they are not aligned in a particular way. In five dimensions a single constituent can already be massive. In every tower with a time direction, collections of constituents never move faster than light.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim dark-tower-matter.where-mass-begins, version 2 (T14c Thm 3.5)",
-  "hash": "1d4212725903",
-  "number": 35
+  "provenance": "Physics Graph result dark-tower-matter.where-mass-begins, version 2 (T14c Thm 3.5)",
+  "hash": "47b862f3623b",
+  "number": 44
  },
  {
   "id": "c:sheaf.infinite-wall-sequence",
@@ -605,16 +749,16 @@
   "text": "Provided the wall is compact and each repair is done gently enough (a good coupling at every stage), repairing a degenerate wall on one side creates a new wall a little further away, and that wall can be repaired in the same way. Repeating this forever gives an infinite chain of walls, each carrying an algebra built on two more dimensions than the last. The degeneracy is never destroyed, only pushed further from the physical region at each step.",
   "gap": false,
   "level": "lay",
-  "provenance": "Transport Lab claim sheaf.infinite-wall-sequence, version 4 (T04 Cor 5.5)",
-  "hash": "e32d66114af2",
-  "number": 36
+  "provenance": "Physics Graph result sheaf.infinite-wall-sequence, version 4 (T04 Cor 5.5)",
+  "hash": "40a79e39c713",
+  "number": 45
  },
  {
   "id": "c:pred.no-indirect-dark-signals",
   "type": "prediction",
-  "claim": "pred.no-indirect-dark-signals@3",
+  "claim": "pred.no-indirect-dark-signals@6",
   "title": "No indirect dark-sector signals",
-  "text": "Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen, and that there is almost no anti-dark matter for it to meet, so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.",
+  "text": "Some searches look for the leftovers of dark-matter particles destroying each other or breaking down, such as unexpected gamma rays. This framework says dark matter can turn into ordinary particles only through gravity, far too weakly to be seen (and that in the mirror world there is almost no anti-matter for its matter to meet), so those searches should find nothing. This expectation is conditional: it rests on the framework's premise of a single frozen point, from which exact stability follows, and on a result carried over from earlier work for the gravity-only coupling, which holds in a spherically averaged description and under two further assumptions of that work.",
   "gap": false,
   "level": "lay",
   "kill_condition": {
@@ -622,13 +766,13 @@
    "data_source": "Indirect-detection surveys",
    "registered": "2026-08 (T17 stance table, row 8)"
   },
-  "hash": "a5a1fb587273",
-  "number": 37
+  "hash": "cedac9503538",
+  "number": 46
  },
  {
   "id": "conclusion",
   "type": "framing",
-  "text": "Along the trail, the dark matter is the content of hidden towers felt only through gravity, with the mirror supplying one unit of it and the symmetric remainder left underived. [[c:dark-matter.population-count-one-share-half-percent]] As built, no arrangement of the dark towers yet passes every test against the data. [[c:dark-tower-matter.towers-built]]\n\nThe trail rests on stated premises: a single frozen point (P1), indifference (P2), nearest-dimension representatives (P3), an evenly shared asymmetry (P4), Hypothesis (S) behind the mirror's copy, the counting premises R1 to R3, premises H1, H2 and U behind the odd towers' forces, and Hypothesis (U) behind the radiation audit. [[t]] The predictions of null searches and no extra radiation are conditional on those premises, and a confirmed signal would count against them. [[t]]",
-  "hash": "7ec2fc6d0d2d"
+  "text": "Along the trail, the dark matter is the content of hidden towers felt only through gravity, with the mirror supplying one unit of it and the symmetric remainder left underived. [[c:dark-matter.population-count-one-share-half-percent]] As built, no arrangement of the dark towers yet passes every test against the data. [[c:dark-tower-matter.towers-built]]\n\nThe trail rests on stated premises: a single frozen point (P1), indifference (P2), nearest-dimension representatives (P3), an evenly shared asymmetry (P4), Hypothesis (S) behind the mirror's copy, the counting premises E and R3, premises H1, H2 and U behind the odd towers' forces, and Hypothesis (U) behind the radiation audit. [[t]] The predictions of null searches and no extra radiation are conditional on those premises, and a confirmed signal would count against them. [[t]]",
+  "hash": "52dc399e63f6"
  }
 ]

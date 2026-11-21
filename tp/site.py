@@ -13,7 +13,7 @@ import yaml
 SIDES = [("metric", "Geometry and gravity", 0), ("algebra", "The algebra", 0),
          ("car", "The quantum side", 1), ("matter", "Matter and cosmology", 1),
          ("synthesis", "The programme", 1)]
-PAPER_ORDER = ["T00", "T01", "T02", "T03", "T04", "T05", "T05-pairing", "T05-angle",
+PAPER_ORDER = ["T00", "T00a", "T01", "T02", "T03", "T04", "T05", "T05-pairing", "T05-angle",
                "T05-descent-lift", "T05-state-selection", "T05-three-routes", "T06", "T07",
                "T08", "T09", "T10", "T11", "T12", "T12-lepton", "T12-rungs", "T13", "T14",
                "T14a", "T14b", "T14c", "T15", "T16", "T17", "T17-rule2", "FT"]
@@ -166,7 +166,7 @@ V2_INLINE = ("id", "kind", "version", "status", "effective", "ledger", "check", 
 # ... and in site/data/<subject>.json, fetched when the result is opened
 V2_DEFER = ("formal", "technical", "lay", "imported_from", "flags", "typing_note", "review")
 DATA_RESERVED = ("search", "documents")
-SHOWN_UNDEPOSITED = ("T14c",)            # undeposited papers the Documents page still lists
+SHOWN_UNDEPOSITED = ()                   # undeposited papers the Documents page still lists (T14c until its deposit, 2026-11-20)
 # unpublished companion notes left out of the Collections menu (their results stay in the graph)
 UNLISTED_COLLECTIONS = ("T05-pairing", "T05-angle", "T05-descent-lift", "T05-state-selection",
                         "T05-three-routes", "T17-rule2", "T12-lepton", "T12-rungs")
@@ -656,7 +656,8 @@ def _trails(docs_root):
                               "text": "\n\n".join(x for x in pending if x)})
                 pending = []
         outro = " ".join(strip(b["text"]) for b in blocks if b["id"] == "conclusion")
-        subject = d[len("trail-"):] if d.startswith("trail-") else None
+        # a trail is named for its subject, unless its recipe names the subject itself
+        subject = rec.get("subject") or (d[len("trail-"):] if d.startswith("trail-") else None)
         out.append({"id": d, "subject": subject, "theme": rec.get("theme") or subject,
                     "start": d == "tour",
                     "title": rec.get("title", d), "intro": intro, "outro": outro,
@@ -847,8 +848,8 @@ def main(build="build", site="site", store="store", template="universe.template.
                          "shade": k % 2})
     docs_root = os.path.join(os.path.dirname(os.path.abspath(store)), "documents")
     # one generated document per deposited paper: variants (results-only), companion notes and
-    # assembled documents that were never deposited stay in the store, off the page; T14c, a
-    # working note not yet deposited, is shown by Leon's decision of 2026-10-27
+    # assembled documents that were never deposited stay in the store, off the page (T14c was
+    # listed before its deposit by Leon's decision of 2026-10-27; it was deposited on 2026-11-20)
     documents = [d for d in _documents(docs_root, {n["id"]: n for n in g["nodes"]}, st, site)
                  if d["kind"] != "trail" and not d["id"].endswith("results-only")
                  and not d["id"].startswith("trail-")

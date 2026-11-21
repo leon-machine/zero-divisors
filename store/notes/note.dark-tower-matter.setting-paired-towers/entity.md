@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: The paired towers
-  line: 659
+  line: 624
 ---
 
 ## formal

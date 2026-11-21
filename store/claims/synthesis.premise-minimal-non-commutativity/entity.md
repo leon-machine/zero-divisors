@@ -28,6 +28,10 @@ founded_on:
 lineage:
   motivated_by:
   - synthesis.blade-square-signs-f2-quadratic-form
+locators:
+  paper: T00a
+  number: Premise (F2)
+  line: 134
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

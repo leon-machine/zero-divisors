@@ -29,8 +29,8 @@ comments_on:
 locators:
   paper: T14c
   number: Rem 6.2
-  label: lem:neutralrow
-  line: 599
+  label: rem:neutralrow
+  line: 564
 extraction:
   maintainer_pass_consistency:
     by: maintainer-2026-11-07

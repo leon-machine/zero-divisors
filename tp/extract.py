@@ -35,6 +35,9 @@ PAPERS = [
     ("T07", "T07_hawking_radiation.tex", "hawking", "verify_T07.py"),
     # added after the pilot: the rest of the series and its companion notes
     ("T00", "T00_ga_primer.tex", "primer", "verify_T00.py"),
+    # T0a, the primer's companion note (T0's former Section 14), deposited on 2026-11-20; its
+    # results were stored by the runs of 7 to 17 November, under synthesis ids, before it was a paper
+    ("T00a", "T00a_geometry_first.tex", "geometry-first", "verify_T00a.py"),
     ("T05-pairing", "T05_pairing_generator_note.tex", "pairing", "verify_T05_pairing.py"),
     ("T05-angle", "T05_angle_note.tex", "angle", "verify_T05_angle.py"),
     ("T05-descent-lift", "T05_descent_lift_note.tex", "descent-lift", "verify_T05_dilation.py"),
@@ -56,8 +59,8 @@ PAPERS = [
     ("T17", "T17_transport_programme.tex", "programme", "verify_T17.py"),
     ("T17-rule2", "T17_rule2_note.tex", "rule2", "verify_T17_rule2.py"),
     # working notes added after the build (21 October 2026); they live beside their runs
-    ("T14c", "Claude outputs/dark_tower_matter_2026-10-20/T14c_dark_tower_matter.tex",
-     "dark-tower-matter", "Claude outputs/dark_tower_matter_2026-10-20/verify_T14c.py"),
+    # T14c, deposited on 2026-11-20, moved to the suite root with T14c_supplement/ that day
+    ("T14c", "T14c_dark_tower_matter.tex", "dark-tower-matter", "verify_T14c.py"),
     ("FT", "Claude outputs/ga_field_theory_note_2026-10-16/FT_one_complex_unit.tex",
      "field-theory", "Claude outputs/ga_field_theory_note_2026-10-16/verify_FT.py"),
 ]

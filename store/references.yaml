@@ -489,6 +489,15 @@ ButlerT0:
     \emph{An Introduction to Geometric Algebra: A Primer for the Transport Papers},
 
     Transport Papers T0 (2026).'
+ButlerT0a:
+  citation: 'L. Butler, Geometry First: From the Bit to the Numbers, Transport Papers T0a (2026), doi:10.5281/zenodo.24402873.'
+  doi: 10.5281/zenodo.24402873
+  first_in: T17
+  latex: 'L.~Butler,
+
+    \emph{Geometry First: From the Bit to the Numbers},
+
+    Transport Papers T0a (2026), doi:\href{https://doi.org/10.5281/zenodo.24402873}{10.5281/zenodo.24402873}.'
 ButlerT1:
   citation: 'L. Butler, The Transport Principle: Total Division in Clifford Algebras via Minimal Completion,
     Transport Papers T1 (2026).'
@@ -583,6 +592,17 @@ ButlerT14b:
     deposited with its simulation code, run outputs and films; the films are also on YouTube, ``Galaxy
     clusters in collision'''' (\url{https://www.youtube.com/watch?v=0SvmSwInN0c}) and ``The Bullet moment''''
     (\url{https://www.youtube.com/watch?v=KQnZUVR7bCk}).'
+ButlerT14c:
+  citation: 'L. Butler, The Matter in the Dark Towers, Transport Papers T14c (2026), doi:10.5281/zenodo.24403592,
+    deposited with its verification script and supplementary computations.'
+  doi: 10.5281/zenodo.24403592
+  first_in: T17
+  latex: 'L.~Butler,
+
+    \emph{The Matter in the Dark Towers},
+
+    Transport Papers T14c (2026), doi:\href{https://doi.org/10.5281/zenodo.24403592}{10.5281/zenodo.24403592},
+    deposited with its verification script and supplementary computations.'
 ButlerT15:
   citation: 'L. Butler, Neutrino Masses: The Empty Twistor, the Seesaw Scale, and the Bet at the Floor,
     Transport Papers T15 (2026), doi:10.5281/zenodo.22723070.'

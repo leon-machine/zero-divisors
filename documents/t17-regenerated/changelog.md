@@ -1,5 +1,17 @@
 # Changelog: t17-regenerated
 
+## v9 (2026-11-20T21:05:39+00:00)
+
+- bump: major
+- note.programme.setting-machine-verification: revised-substantive
+- note.programme.setting-series-paper-paper-2: revised-substantive
+- note.programme.setting-seventeen-refutations: revised-substantive
+- programme.n-parameter-of-the-laws: revised-substantive
+- refuted.the-mass-dictionary-coupling-to-the-frozen-point: revised-substantive
+- refuted.the-number-n-is-a-mystery-of-largeness: revised-substantive
+- refuted.the-particle-antiparticle-orientation-is-determi: revised-substantive
+- refuted.the-three-twistor-hierarchy-carries-the-standard: revised-substantive
+
 ## v8 (2026-10-27T17:11:03+00:00)
 
 - bump: patch

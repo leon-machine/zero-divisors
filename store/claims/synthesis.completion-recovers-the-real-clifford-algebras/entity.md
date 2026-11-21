@@ -50,6 +50,11 @@ checked_by:
   ref: check.py::check_square_classes_survive_over_the_rationals
 - kind: proof
   derivation: main
+locators:
+  paper: T00a
+  number: Thm 6.1
+  label: thm:bitinertia
+  line: 279
 extraction:
   maintainer_pass_2026_11_08_foundation:
     by: ai-maintainer-pass

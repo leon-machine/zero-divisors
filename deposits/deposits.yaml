@@ -10,14 +10,21 @@ T00:
   recorded: '2026-10-27'
   sha256: b816762bc1222644eebc673d01ce37151b7ae030cc71ab34e2e0675554b20cc8
   version: '1.0'
+T00a:
+  doi: 10.5281/zenodo.24402873
+  file: T00a_geometry_first.tex
+  note: First deposit, 2026-11-20.
+  recorded: '2026-11-20'
+  sha256: f3616c0d57f2afdc144ec3ebf24a0bcdb0d41e4c03dedd32ae55bc79b5acb0c7
+  version: '1.0'
 T01:
   doi: 10.5281/zenodo.21743863
   file: T01_transport_principle.tex
-  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
-    line. Replace with the Zenodo file if they differ.
-  recorded: '2026-10-27'
-  sha256: 9cc9d1e607767a5419a763e12a1ad662cddc5aee708bb5930c0ec446081a09df
-  version: '3.0'
+  note: Copied from TP_Papers_Suite on 2026-11-20, the source deposited that day;
+    printed version read from its \date line.
+  recorded: '2026-11-20'
+  sha256: f10dabe852605027f5f7721cb940edb9c073b8b6d5304a2ed5038a85a88ace6e
+  version: '3.1'
 T02:
   doi: 10.5281/zenodo.22714886
   file: T02_projective_to_conformal.tex
@@ -117,11 +124,11 @@ T13:
 T14:
   doi: 10.5281/zenodo.22722953
   file: T14_dark_matter.tex
-  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
-    line. Replace with the Zenodo file if they differ.
-  recorded: '2026-10-27'
-  sha256: bc8f2fd6825e6c144949fba0ef042c6ab5d2d41b9680cb350bda26a932b9e830
-  version: '2.0'
+  note: Copied from TP_Papers_Suite on 2026-11-20, the source deposited that day;
+    printed version read from its \date line.
+  recorded: '2026-11-20'
+  sha256: 6c6f81091d53c945082d2f469faac31827c7c1a8419e0ca85a3922b23bbf5ce1
+  version: '2.1'
 T14a:
   doi: 10.5281/zenodo.23232104
   file: T14a_odd_extensions.tex
@@ -133,10 +140,17 @@ T14a:
 T14b:
   doi: 10.5281/zenodo.23234576
   file: T14b_simulations.tex
-  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
-    line. Replace with the Zenodo file if they differ.
-  recorded: '2026-10-27'
-  sha256: 4418081d3af5b92f23d2a2fd3f7a5791f7a6df3fe0156bf4825d371b4ce8ea86
+  note: Copied from TP_Papers_Suite on 2026-11-20, the source deposited that day;
+    printed version read from its \date line.
+  recorded: '2026-11-20'
+  sha256: cbff92ad3a5b72eef2b320847c0e2b0e7b7e8438500ac7c3347125b397111f25
+  version: '1.1'
+T14c:
+  doi: 10.5281/zenodo.24403592
+  file: T14c_dark_tower_matter.tex
+  note: First deposit, 2026-11-20.
+  recorded: '2026-11-20'
+  sha256: 5cbe768d9574d6cc9d50fad6a78db9fe980afe9b49859bb39d97cfc6a1ee43a2
   version: '1.0'
 T15:
   doi: 10.5281/zenodo.22723070
@@ -157,8 +171,8 @@ T16:
 T17:
   doi: 10.5281/zenodo.22723310
   file: T17_transport_programme.tex
-  note: Copied from TP_Papers_Suite on 2026-10-27; printed version read from its \date
-    line. Replace with the Zenodo file if they differ.
-  recorded: '2026-10-27'
-  sha256: 49db869fd16c551ca610b60356e1c49820e653ce0ee0f60f3ba850cd2e4c966a
-  version: '2.0'
+  note: Copied from TP_Papers_Suite on 2026-11-20, the source deposited that day;
+    printed version read from its \date line.
+  recorded: '2026-11-20'
+  sha256: e5d3b754afd3e00f092904e76b686ee355e7c6fe3dc8109382a83a39e131eb49
+  version: '2.1'

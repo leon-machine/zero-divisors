@@ -1,7 +1,7 @@
 ---
 id: dark-tower-matter.anomalies
 kind: claim
-version: 3
+version: 4
 title: Chern-Simons levels of the odd towers' content
 status: proved
 region: dark-tower-matter
@@ -17,6 +17,10 @@ credit:
 - name: Claude Fable 5
   role: mathematics and drafting
   source: 'authorship disclosure of T14c, the series'' standard disclaimer'
+- name: Claude Opus 5.5
+  role: 'restated to the deposited text of T14c version 1.0 (10.5281/zenodo.24403592)'
+  version: 4
+  source: maintainer pass of 2026-11-20
 review: typed
 derivations:
 - name: main
@@ -34,7 +38,6 @@ checked_by:
   tags:
   - id:G1
   - id:G2
-  - id:G3
 - kind: check
   ref: check.py::check_three_dimensional_parity_anomaly
 - kind: check
@@ -43,8 +46,12 @@ locators:
   paper: T14c
   number: Prop 6.5
   label: prop:anomaly
-  line: 636
+  line: 601
 extraction:
+  maintainer_pass:
+    by: maintainer-2026-11-20
+    date: '2026-11-20'
+    note: 'T14c deposited as version 1.0 on 20 November 2026 (10.5281/zenodo.24403592), after an independent review: the legacy tags follow the revised verify_T14c.py, whose checks G1 and G2 were merged into G1 (the old G3 is now G2). Version 3 -> 4.'
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests
     date: '2026-10-23'

@@ -10,7 +10,9 @@ spine:
 - dark-matter.population-count-one-share-half-percent
 - dark-matter.unit-ball-rule
 - dark-matter.status-rule
+- dark-tower-matter.constituents-field
 - dark-tower-matter.gauge-algebras
+- dark-tower-matter.r1-has-no-mechanism-odd-towers
 - pred.no-dark-radiation
 - dark-tower-matter.towers-built
 show: spine-only

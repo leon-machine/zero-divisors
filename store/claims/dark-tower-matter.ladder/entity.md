@@ -42,7 +42,7 @@ locators:
   paper: T14c
   number: Thm 3.7
   label: thm:ladder
-  line: 409
+  line: 374
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

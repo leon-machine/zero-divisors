@@ -42,7 +42,7 @@ locators:
   paper: T14c
   number: Fact 2.1
   label: fact:towers
-  line: 198
+  line: 147
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

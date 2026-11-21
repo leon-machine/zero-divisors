@@ -54,7 +54,7 @@ locators:
   paper: T14c
   number: Prop 8.2
   label: prop:P2
-  line: 757
+  line: 722
 extraction:
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07

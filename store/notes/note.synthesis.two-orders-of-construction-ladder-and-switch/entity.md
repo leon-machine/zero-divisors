@@ -27,6 +27,11 @@ comments_on:
 - synthesis.signed-directions-and-the-integer-clifford-algebra
 - synthesis.division-gives-the-rationals
 - std-algebra.witt-basis-car
+locators:
+  paper: T00a
+  number: Rem 7.5
+  label: rem:twoorders
+  line: 461
 extraction:
   note: >-
     From the session of 12 November 2026, on Leon's observation that defining the bit first (geometry

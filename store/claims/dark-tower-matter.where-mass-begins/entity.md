@@ -43,7 +43,7 @@ locators:
   paper: T14c
   number: Thm 3.5
   label: thm:onset
-  line: 359
+  line: 324
 extraction:
   maintainer_pass_tests:
     by: maintainer-2026-10-23-tests

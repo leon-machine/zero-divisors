@@ -30,7 +30,7 @@ locators:
   paper: T14c
   number: Fact 2.5
   label: fact:sims
-  line: 214
+  line: 163
 extraction:
   env: fact
   outside_pilot_cites:

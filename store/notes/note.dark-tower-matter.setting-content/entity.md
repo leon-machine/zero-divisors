@@ -21,7 +21,7 @@ locators:
   paper: T14c
   number: Setting
   section: Content
-  line: 571
+  line: 536
 ---
 
 ## formal

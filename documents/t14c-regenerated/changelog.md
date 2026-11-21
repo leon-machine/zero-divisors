@@ -1,5 +1,215 @@
 # Changelog: t14c-regenerated
 
+## v11 (2026-11-20T21:30:43+00:00)
+
+- bump: patch
+- dark-tower-matter.imported-unit-ball-rule: revised-cosmetic
+- dark-tower-matter.population: revised-cosmetic
+- dark-tower-matter.r1-has-no-mechanism-odd-towers: revised-cosmetic
+- dark-tower-matter.survival-sheets: revised-cosmetic
+
+## v10 (2026-11-20T21:11:32+00:00)
+
+- bump: minor
+- dark-tower-matter.five-dimensional-content: revised-cosmetic
+- note.dark-tower-matter.four-dimensional-case-t11s-formula: revised-substantive
+- note.dark-tower-matter.r-5-unit-datum-or-field: revised-substantive
+- note.dark-tower-matter.setting-constituents-momentum-where-mass-begins: revised-substantive
+- note.dark-tower-matter.setting-content-matter: revised-substantive
+- note.dark-tower-matter.setting-contribution: revised-substantive
+- note.dark-tower-matter.setting-gauge-algebras: revised-substantive
+- note.dark-tower-matter.setting-machine-verification: revised-substantive
+- note.dark-tower-matter.setting-position-series: revised-substantive
+- note.dark-tower-matter.setting-what-note-depends-what-would: revised-substantive
+- note.dark-tower-matter.t14s-types-are-different-commutant: revised-substantive
+- synthesis.completion-recovers-the-real-clifford-algebras: revised-cosmetic
+- c:dark-tower-matter.constituents-field: moved to s:paper-2
+- c:dark-tower-matter.five-dimensional-content: moved to s:paper-5
+- c:dark-tower-matter.five-dimensional-towers: moved to s:paper-8
+- c:dark-tower-matter.gauge-algebras: moved to s:paper-4
+- c:dark-tower-matter.imported-clifford-structure: moved to s:paper-1
+- c:dark-tower-matter.imported-cluster-simulations: moved to s:paper-1
+- c:dark-tower-matter.imported-our-towers-chain: moved to s:paper-1
+- c:dark-tower-matter.imported-towers-their-types: moved to s:paper-1
+- c:dark-tower-matter.imported-unit-ball-rule: moved to s:paper-1
+- c:dark-tower-matter.mirror-algebra: moved to s:paper-7
+- c:dark-tower-matter.pairs: moved to s:paper-3
+- c:dark-tower-matter.population: moved to s:paper-8
+- c:dark-tower-matter.r1-has-no-mechanism-odd-towers: moved to s:paper-8
+- c:dark-tower-matter.residue-seven-unit: moved to s:paper-6
+- c:dark-tower-matter.same-kind-matter: moved to s:paper-6
+- c:dark-tower-matter.sterile-kinematics: moved to s:paper-9
+- c:dark-tower-matter.survival-sheets: moved to s:paper-8
+- c:dark-tower-matter.third-pairs-unit-five-dimensions: moved to s:paper-3
+- c:dark-tower-matter.three-dimensional-content: moved to s:paper-5
+- c:dark-tower-matter.three-dimensional-phases: moved to s:paper-8
+- c:dark-tower-matter.towers-built: moved to s:paper-9
+- c:note.dark-tower-matter.kleinian-algebra: moved to s:paper-9
+- c:note.dark-tower-matter.neutral-row: moved to s:paper-5
+- c:note.dark-tower-matter.setting-constituents-momentum-where-mass-begins: moved to s:paper-2
+- c:note.dark-tower-matter.setting-content: moved to s:paper-5
+- c:note.dark-tower-matter.setting-content-matter: moved to s:paper-8
+- c:note.dark-tower-matter.setting-contribution: moved to s:dark-matter
+- c:note.dark-tower-matter.setting-gauge-algebras: moved to s:paper-4
+- c:note.dark-tower-matter.setting-introduction: moved to s:dark-matter
+- c:note.dark-tower-matter.setting-ladder-pairs-complex-unit: moved to s:paper-3
+- c:note.dark-tower-matter.setting-machine-verification: moved to s:paper-11
+- c:note.dark-tower-matter.setting-mirror: moved to s:paper-7
+- c:note.dark-tower-matter.setting-paired-towers: moved to s:paper-6
+- c:note.dark-tower-matter.setting-position-series: moved to s:paper-11
+- c:note.dark-tower-matter.setting-prior-art: moved to s:dark-matter
+- c:note.dark-tower-matter.setting-setting-imports-premises: moved to s:paper-1
+- c:note.dark-tower-matter.setting-setting-imports-premises-2: moved to s:paper-1
+- c:note.dark-tower-matter.setting-sterile-towers: moved to s:paper-9
+- c:note.dark-tower-matter.setting-what-note-depends-what-would: moved to s:paper-10
+- t:^>dark-tower-matter.imported-towers-their-types: moved to s:paper-1
+- t:dark-tower-matter.anomalies>dark-tower-matter.residue-seven-unit: moved to s:paper-6
+- t:dark-tower-matter.five-dimensional-towers>dark-tower-matter.r1-has-no-mechanism-odd-towers: moved to s:paper-8
+- t:dark-tower-matter.gauge-algebras>dark-tower-matter.three-dimensional-content: moved to s:paper-5
+- t:dark-tower-matter.imported-clifford-structure>dark-tower-matter.imported-our-towers-chain: moved to s:paper-1
+- t:dark-tower-matter.imported-our-towers-chain>dark-tower-matter.imported-unit-ball-rule: moved to s:paper-1
+- t:dark-tower-matter.imported-towers-their-types>dark-tower-matter.imported-clifford-structure: moved to s:paper-1
+- t:dark-tower-matter.imported-unit-ball-rule>dark-tower-matter.imported-cluster-simulations: moved to s:paper-1
+- t:dark-tower-matter.ladder>dark-tower-matter.pairs: moved to s:paper-3
+- t:dark-tower-matter.mirror-against-record>dark-tower-matter.three-dimensional-phases: moved to s:paper-8
+- t:dark-tower-matter.pairs>dark-tower-matter.third-pairs-unit-five-dimensions: moved to s:paper-3
+- t:dark-tower-matter.population>dark-tower-matter.sterile-kinematics: moved to s:paper-9
+- t:dark-tower-matter.r1-has-no-mechanism-odd-towers>dark-tower-matter.population: moved to s:paper-8
+- t:dark-tower-matter.residue-seven-unit>dark-tower-matter.same-kind-matter: moved to s:paper-6
+- t:dark-tower-matter.same-kind-matter>dark-tower-matter.mirror-algebra: moved to s:paper-7
+- t:dark-tower-matter.sterile-kinematics>dark-tower-matter.towers-built: moved to s:paper-9
+- t:dark-tower-matter.survival-sheets>dark-tower-matter.five-dimensional-towers: moved to s:paper-8
+- t:dark-tower-matter.third-pairs-unit-five-dimensions>dark-tower-matter.gauge-algebras: moved to s:paper-4
+- t:dark-tower-matter.three-dimensional-content>dark-tower-matter.five-dimensional-content: moved to s:paper-5
+- t:dark-tower-matter.three-dimensional-phases>dark-tower-matter.survival-sheets: moved to s:paper-8
+- renumbered c:dark-tower-matter.constituents-field: 16 -> 15
+- renumbered c:obj.dark-tower-matter.ideals-fields-momentum: 15 -> 16
+
+## v9 (2026-11-20T21:04:26+00:00)
+
+- bump: major
+- dark-matter.e-equal-mass-per-unit-ball: added
+- dark-matter.flag-bit-exists-exactly-tower-dimension: revised-cosmetic
+- dark-matter.mirror-share-one-how-fragile: revised-substantive
+- dark-matter.mirror-tower-copy-one: revised-substantive
+- dark-matter.p3-nearest-dimension-representatives: revised-substantive
+- dark-matter.r2-one-quantum-per-unit-ball: revised-substantive
+- dark-matter.r3-one-cell-per-unshared-direction: revised-substantive
+- dark-matter.seeding-gravity-floor-dark-towers-temperature: revised-substantive
+- dark-matter.stored-asymmetry-charge-not-number: revised-substantive
+- dark-matter.superselected-hence-dark-exactly-stable: revised-cosmetic
+- dark-matter.towers-are-residues-single-clock-filter: revised-cosmetic
+- dark-matter.two-families-are-two-chiralities: revised-substantive
+- dark-matter.type-residue-what-each-tower-can: revised-cosmetic
+- dark-matter.unit-ball-rule: revised-substantive
+- dark-tower-matter.anomalies: revised-substantive
+- dark-tower-matter.five-dimensional-towers: revised-substantive
+- dark-tower-matter.h1-momentum: revised-substantive
+- dark-tower-matter.imported-unit-ball-rule: revised-substantive
+- dark-tower-matter.mirror-against-record: revised-substantive
+- dark-tower-matter.mirrors-composition: revised-substantive
+- dark-tower-matter.mirrors-temperature-p2: revised-substantive
+- dark-tower-matter.population: revised-substantive
+- dark-tower-matter.r1-has-no-mechanism-odd-towers: revised-substantive
+- dark-tower-matter.sterile-kinematics: revised-substantive
+- dark-tower-matter.survival-sheets: revised-substantive
+- dark-tower-matter.third-pairs-unit-five-dimensions: revised-substantive
+- dark-tower-matter.towers-built: revised-substantive
+- dark-tower-matter.u-transposition-rule: revised-substantive
+- mass.mass-symplectic-area-two-twistor-formula: revised-cosmetic
+- note.dark-tower-matter.branches-break-u-what-they-give: revised-substantive
+- note.dark-tower-matter.neutral-row: revised-substantive
+- note.dark-tower-matter.setting-contribution: revised-substantive
+- note.dark-tower-matter.setting-what-note-depends-what-would: revised-substantive
+- pred.no-indirect-dark-signals: revised-substantive
+- primer.sign: revised-substantive
+- refuted.the-three-twistor-hierarchy-carries-the-standard: revised-substantive
+- simulations.cluster-bound-two-dimensions: revised-substantive
+- standard-model.gauge-algebra-minimal-massive-composite: revised-cosmetic
+- standard-model.global-form-quotient-determined: revised-substantive
+- standard-model.hypercharge-global-form-pair-counting-consistency: revised-cosmetic
+- standard-model.imported-pair-systems-two-chirality-halves: revised-cosmetic
+- standard-model.internal-symmetry-ladder: revised-substantive
+- standard-model.pair-count-dimension: revised-substantive
+- standard-model.quarks-leptons-two-level-fermion-content: revised-cosmetic
+- standard-model.ten-transported-ambient-space-doublets-are: revised-cosmetic
+- std-algebra.involution-properties: revised-cosmetic
+- std-algebra.pseudoscalar-commutation: revised-cosmetic
+- std-algebra.sylvester-inertia: removed
+- synthesis.completion-recovers-the-real-clifford-algebras: added
+- tower.ladder-pairs-satisfy-car-vectors: revised-cosmetic
+- tower.rigidity-clock-frozen: revised-cosmetic
+- std-algebra.sylvester-inertia: left the document's dependency cone, removed
+- renumbered c:dark-matter.p3-nearest-dimension-representatives: 1 -> 2
+- renumbered c:dark-matter.r1-equal-mass-per-quantum: 2 -> 3
+- renumbered c:dark-matter.r2-one-quantum-per-unit-ball: 3 -> 4
+- renumbered c:dark-matter.r3-one-cell-per-unshared-direction: 4 -> 5
+- renumbered c:dark-tower-matter.h1-momentum: 5 -> 6
+- renumbered c:dark-tower-matter.h2-identification: 6 -> 7
+- renumbered c:dark-tower-matter.hypothesis-s-slot-statistics: 7 -> 8
+- renumbered c:dark-tower-matter.u-transposition-rule: 8 -> 9
+- renumbered c:dark-tower-matter.imported-towers-their-types: 9 -> 10
+- renumbered c:dark-tower-matter.imported-clifford-structure: 10 -> 11
+- renumbered c:dark-tower-matter.imported-our-towers-chain: 11 -> 12
+- renumbered c:dark-tower-matter.imported-unit-ball-rule: 12 -> 13
+- renumbered c:dark-tower-matter.imported-cluster-simulations: 13 -> 14
+- renumbered c:obj.dark-tower-matter.ideals-fields-momentum: 14 -> 15
+- renumbered c:dark-tower-matter.constituents-field: 15 -> 16
+- renumbered c:dark-tower-matter.adjoint-norm: 16 -> 17
+- renumbered c:dark-tower-matter.where-mass-begins: 17 -> 18
+- renumbered c:dark-tower-matter.ladder: 18 -> 19
+- renumbered c:dark-tower-matter.pairs: 19 -> 20
+- renumbered c:dark-tower-matter.third-pairs-unit-five-dimensions: 20 -> 21
+- renumbered c:dark-tower-matter.gauge-algebras: 21 -> 22
+- renumbered c:dark-tower-matter.three-dimensional-content: 22 -> 23
+- renumbered c:dark-tower-matter.five-dimensional-content: 23 -> 24
+- renumbered c:dark-tower-matter.anomalies: 24 -> 25
+- renumbered c:dark-tower-matter.residue-seven-unit: 25 -> 26
+- renumbered c:dark-tower-matter.same-kind-matter: 26 -> 27
+- renumbered c:dark-tower-matter.mirror-algebra: 27 -> 28
+- renumbered c:dark-tower-matter.mirrors-temperature-p2: 28 -> 29
+- renumbered c:dark-tower-matter.mirrors-composition: 29 -> 30
+- renumbered c:dark-tower-matter.mirror-against-record: 30 -> 31
+- renumbered c:dark-tower-matter.three-dimensional-phases: 31 -> 32
+- renumbered c:dark-tower-matter.survival-sheets: 32 -> 33
+- renumbered c:dark-tower-matter.five-dimensional-towers: 33 -> 34
+- renumbered c:dark-tower-matter.r1-has-no-mechanism-odd-towers: 34 -> 35
+- renumbered c:dark-tower-matter.population: 35 -> 36
+- renumbered c:dark-tower-matter.sterile-kinematics: 36 -> 37
+- renumbered c:dark-tower-matter.towers-built: 37 -> 38
+- renumbered c:dark-matter.flag-bit-exists-exactly-tower-dimension: 38 -> 39
+- renumbered c:dark-matter.mirror-share-one-how-fragile: 39 -> 40
+- renumbered c:dark-matter.mirror-tower-copy-one: 40 -> 41
+- renumbered c:dark-matter.seeding-gravity-floor-dark-towers-temperature: 41 -> 42
+- renumbered c:dark-matter.stored-asymmetry-charge-not-number: 42 -> 43
+- renumbered c:dark-matter.superselected-hence-dark-exactly-stable: 43 -> 44
+- renumbered c:dark-matter.towers-are-residues-single-clock-filter: 44 -> 45
+- renumbered c:dark-matter.two-families-are-two-chiralities: 45 -> 46
+- renumbered c:dark-matter.type-residue-what-each-tower-can: 46 -> 47
+- renumbered c:dark-matter.unit-ball-rule: 47 -> 48
+- renumbered c:mass.mass-symplectic-area-two-twistor-formula: 48 -> 49
+- renumbered c:primer.sign: 49 -> 50
+- renumbered c:rule2.imported-five-dimensional-chern-simons-shift: 50 -> 51
+- renumbered c:rule2.imported-parity-anomaly: 51 -> 52
+- renumbered c:simulations.cluster-bound-two-dimensions: 52 -> 53
+- renumbered c:standard-model.gauge-algebra-minimal-massive-composite: 53 -> 54
+- renumbered c:standard-model.global-form-quotient-determined: 54 -> 55
+- renumbered c:standard-model.hypercharge-global-form-pair-counting-consistency: 55 -> 56
+- renumbered c:standard-model.imported-pair-systems-two-chirality-halves: 56 -> 57
+- renumbered c:standard-model.internal-symmetry-ladder: 57 -> 58
+- renumbered c:standard-model.pair-count-dimension: 58 -> 59
+- renumbered c:standard-model.quarks-leptons-two-level-fermion-content: 59 -> 60
+- renumbered c:standard-model.ten-transported-ambient-space-doublets-are: 60 -> 61
+- renumbered c:std-algebra.involution-properties: 61 -> 62
+- renumbered c:std-algebra.pseudoscalar-commutation: 62 -> 63
+- renumbered c:tower.ladder-pairs-satisfy-car-vectors: 64 -> 65
+- renumbered c:tower.rigidity-clock-frozen: 65 -> 66
+- renumbered c:refuted.the-raw-representation-content-matches-the-fermi: 66 -> 67
+- renumbered c:refuted.the-three-twistor-hierarchy-carries-the-standard: 67 -> 68
+- renumbered c:pred.dark-matter-direct-detection-null: 68 -> 69
+- renumbered c:pred.no-indirect-dark-signals: 69 -> 70
+- renumbered c:pred.z6-charge-lattice: 70 -> 71
+
 ## v8 (2026-10-27T17:10:14+00:00)
 
 - bump: patch

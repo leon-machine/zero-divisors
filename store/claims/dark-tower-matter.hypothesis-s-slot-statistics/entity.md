@@ -20,9 +20,9 @@ credit:
 review: typed
 locators:
   paper: T14c
-  number: Premise 2.8
+  number: Premise 2.12
   label: prem:S
-  line: 228
+  line: 193
 extraction:
   small_findings_pass:
     by: ai-small-findings-pass

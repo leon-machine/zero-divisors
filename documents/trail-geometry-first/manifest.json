@@ -1,0 +1,42 @@
+{
+ "doc": "trail-geometry-first",
+ "version": 3,
+ "claims": [
+  "conformal.minimal-nondegenerate-completion@6",
+  "std-algebra.blade-basis@1",
+  "std-algebra.complex-numbers@3",
+  "std-algebra.existence-uniqueness@1",
+  "std-algebra.fock-representation@1",
+  "std-algebra.functoriality@1",
+  "std-algebra.matrix-units@1",
+  "std-algebra.orthogonal-anticommute@1",
+  "std-algebra.polarisation@2",
+  "std-algebra.quaternions@1",
+  "std-algebra.witt-basis-car@1",
+  "synthesis.completion-recovers-the-real-clifford-algebras@2",
+  "synthesis.continuum-completion-premise@2",
+  "synthesis.division-gives-the-rationals@2",
+  "synthesis.frobenius-and-universality-in-clifford-algebras@2",
+  "synthesis.integer-clifford-algebras-contain-no-switch@1",
+  "synthesis.premise-minimal-non-commutativity@2",
+  "synthesis.premise-superposition-over-the-integers@2",
+  "synthesis.premise-the-bit@2",
+  "synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane@1",
+  "synthesis.signed-directions-and-the-integer-clifford-algebra@2",
+  "transport.exceptional-division-algebras@3"
+ ],
+ "recipe_hash": "36449557d709",
+ "generated": "2026-11-20T21:15:12+00:00",
+ "spine": [
+  "synthesis.premise-the-bit",
+  "synthesis.premise-minimal-non-commutativity",
+  "synthesis.premise-superposition-over-the-integers",
+  "synthesis.signed-directions-and-the-integer-clifford-algebra",
+  "synthesis.division-gives-the-rationals",
+  "synthesis.continuum-completion-premise",
+  "synthesis.completion-recovers-the-real-clifford-algebras",
+  "synthesis.frobenius-and-universality-in-clifford-algebras",
+  "synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane",
+  "synthesis.integer-clifford-algebras-contain-no-switch"
+ ]
+}

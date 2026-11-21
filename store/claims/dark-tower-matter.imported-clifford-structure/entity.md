@@ -29,7 +29,7 @@ locators:
   paper: T14c
   number: Fact 2.2
   label: fact:clifford
-  line: 202
+  line: 151
 extraction:
   env: fact
   typing:

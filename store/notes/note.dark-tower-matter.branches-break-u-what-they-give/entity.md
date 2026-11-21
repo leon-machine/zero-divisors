@@ -29,7 +29,7 @@ locators:
   paper: T14c
   number: Rem 5.2
   label: rem:branches
-  line: 566
+  line: 531
 extraction:
   maintainer_pass_consistency:
     by: maintainer-2026-11-07

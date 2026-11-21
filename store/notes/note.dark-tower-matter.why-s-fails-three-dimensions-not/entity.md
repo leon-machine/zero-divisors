@@ -24,7 +24,7 @@ locators:
   paper: T14c
   number: Rem 6.4
   label: rem:S35
-  line: 632
+  line: 597
 extraction:
   typing:
     by: ai-typing-pass
