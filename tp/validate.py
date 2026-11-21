@@ -1519,6 +1519,29 @@ def _uncredited_orcids(old_credit, new_credit):
     return out
 
 
+def _new_credit(old_credit, new_credit):
+    """The credit entries a change adds: those the accepted lock does not hold."""
+    key = lambda c: (c.get("name"), c.get("role"), c.get("version"))
+    before = {key(c) if isinstance(c, dict) else tuple(c[:3]) for c in (old_credit or [])
+              if isinstance(c, (dict, list, tuple))}
+    return [c for c in new_credit or [] if isinstance(c, dict) and key(c) not in before]
+
+
+def _no_person_finding(rep, eid, old_credit, new_credit, new_entity):
+    """E614: a contribution names someone who answers for it. A result that is an AI's work
+    alone still credits the person who submits it ("submitted and checked"), beside the model."""
+    from .releases import MODEL_RE
+    added = _new_credit(old_credit, new_credit)
+    if not added and not new_entity:
+        return
+    def person(c):
+        kind = c.get("kind")
+        return kind == "person" or (kind != "ai" and not MODEL_RE.match(str(c.get("name") or "")))
+    if not any(person(c) for c in added):
+        rep.add("E614", eid, "the contribution credits no person: every result names someone who answers for it",
+                "add your own credit entry, with your ORCID iD; for an AI's work alone, role: submitted and checked")
+
+
 def _orcid_finding(rep, eid, names):
     for n in names:
         rep.add("E610", eid, f"credit: {n} gives no ORCID iD; every person credited in a contribution needs one",
@@ -1552,6 +1575,7 @@ def layer6(store: Store, rep: Report, author: str | None):
                 rep.add("E601", eid, "only a maintainer may add a postulate dependency "
                         "(assumes)")
             _orcid_finding(rep, eid, _uncredited_orcids([], e.meta.get("credit")))
+            _no_person_finding(rep, eid, [], e.meta.get("credit"), True)
             from .galang import unexcused
             hits = unexcused(e)
             if hits:
@@ -1570,6 +1594,7 @@ def layer6(store: Store, rep: Report, author: str | None):
         if new.get("ledger") != old.get("ledger"):
             rep.add("E601", eid, "only a maintainer may change a declared ledger class")
         _orcid_finding(rep, eid, _uncredited_orcids(old.get("credit"), e.meta.get("credit")))
+        _no_person_finding(rep, eid, old.get("credit"), e.meta.get("credit"), False)
         if "credit" in old:
             from .credit import compare, describe
             removed, unclaimed = compare(old["credit"], new["credit"], old.get("version"), new["version"])
@@ -1642,6 +1667,7 @@ WARNING_ORDER = ("W413", "W408", "W125", "W510", "W414", "W306", "W411", "W503",
 
 CODE_TITLES = {
     "E610": "a person credited in a contribution gives no ORCID iD",
+    "E614": "a contribution credits no person",
     "W220": "a credit entry of the accepted version is missing or changed",
     "W221": "an amendment with no credit entry of its own",
     "W222": "written outside geometric algebra without saying why",

@@ -701,6 +701,13 @@ class Lab:
                 credit_findings.append({"code": "E610", "severity": "warning", "entity": eid,
                                         "message": f"credit: {_n} gives no ORCID iD; a pull request from anyone but a maintainer is refused without one",
                                         "fix": "add orcid: <the person's iD, 0000-0000-0000-0000> to the credit entry (free at orcid.org)"})
+            # a contribution credits at least one person (E614), the same way
+            from .validate import Report as _R, _no_person_finding
+            _r = _R()
+            _no_person_finding(_r, eid, (old_state or {}).get("credit"), meta.get("credit"), not old_state)
+            credit_findings += [{"code": f.code, "severity": "warning", "entity": eid,
+                                 "message": f.message + " (a pull request from anyone but a maintainer is refused)",
+                                 "fix": f.fix} for f in _r.findings]
             if old_state:
                 # an amendment says what it fixes, and its kind matches what changed (E605-E608)
                 from .amend import findings as amendment_findings
@@ -711,7 +718,8 @@ class Lab:
                            run_mutants=False)
         new = [f for f in rep.findings if (f.code, f.entity, f.message) not in base
                or f.entity.split("@")[0] == eid]
-        out = {"ok": not any(f.severity == "error" for f in new) and not credit_findings,
+        out = {"ok": not any(f.severity == "error" for f in new)
+                     and not any(c.get("severity") == "error" for c in credit_findings),
                "layers_run": list(layers), "replaces_existing": existing,
                "findings": credit_findings + [{"code": f.code, "severity": f.severity, "entity": f.entity,
                                                "message": f.message, "fix": f.fix} for f in new]}

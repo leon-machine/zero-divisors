@@ -679,6 +679,37 @@ class Layer6People(StoreCase):
                   "ai_involved: 'no'\ncredit:\n- name: New Person\n  role: the result\n")
         self.assertNotIn("E610", self.codes(self.run_layers((6,), author="leon")))
 
+    # a contribution credits at least one person (E614)
+    def new_result(self, credit):
+        write_lock(load_store(self.root))
+        shutil.copytree(self.folder("fx.boost.sigma"), E(self.root, "claims", "fx.boost.sigma-two"))
+        self.edit("fx.boost.sigma-two", "id: fx.boost.sigma", "id: fx.boost.sigma-two")
+        self.edit("fx.boost.sigma-two", "ai_involved: 'no'\n", "ai_involved: 'yes'\ncredit:\n" + credit)
+
+    def test_E614_ai_only_credit(self):
+        self.new_result("- name: Claude Opus 5.5\n  role: the result, proof and check\n")
+        self.assertFires("E614", (6,), author="contributor")
+
+    def test_E614_submitter_credited_beside_the_model_passes(self):
+        self.new_result("- name: Ada L\n  role: submitted and checked\n  orcid: 0000-0002-1825-0097\n"
+                        "- name: Claude Opus 5.5\n  role: the result, proof and check\n")
+        codes = self.codes(self.run_layers((6,), author="contributor"))
+        self.assertNotIn("E614", codes)
+        self.assertNotIn("E610", codes)
+
+    def test_E614_amendment_by_a_model_alone(self):
+        self.credited()
+        self.edit("fx.thermo.entropy-tick", "  role: the result\n",
+                  "  role: the result\n- name: Claude Opus 5.5\n  role: correction\n  version: 2\n"
+                  + self.RESTATED)
+        self.edit("fx.thermo.entropy-tick", "## formal\n", "## formal\nCorrected: ")
+        self.edit("fx.thermo.entropy-tick", "version: 1", "version: 2")
+        self.assertFires("E614", (6,), author="contributor")
+
+    def test_E614_maintainer_exempt(self):
+        self.new_result("- name: Claude Opus 5.5\n  role: the result, proof and check\n")
+        self.assertNotIn("E614", self.codes(self.run_layers((6,), author="leon")))
+
     # amendments say what they fix (tp/amend.py)
     RESTATED = ("amendments:\n- version: 2\n  kind: restatement\n"
                 "  defect: the stated rate holds only for a non-rotating hole\n")

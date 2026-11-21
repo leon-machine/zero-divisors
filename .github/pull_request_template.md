@@ -12,6 +12,7 @@ store/<kind>/<id>/. For a correction, say what changed and why. -->
 - [ ] Every new or changed claim states `proposed_by` and `ai_involved` truthfully
 - [ ] Every new claim has a `credit` list: your name as you want it shown, with your ORCID iD,
       and the AI model, with its version, that drafted the proof or amendment (shown as you give it)
+- [ ] I am credited myself, even where an AI did all the work (`role: submitted and checked`)
 - [ ] My ORCID record lists my GitHub profile (`https://github.com/<login>`) among its websites
       and social links, visible to everyone
 - [ ] Substantive edits (statement, derivations, status, evidence) bump `version`
