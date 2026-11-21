@@ -2498,7 +2498,7 @@ const RCLS = { consistent: "good", confirms: "good", tension: "warn", contested:
 let recSel = {};
 function renderRecord() {
   const el = document.getElementById("record");
-  const tabs = [["predictions", "Predictions"], ["refutations", "Refutations"], ["notebook", "Lab notebook"]];
+  const tabs = [["predictions", "Predictions"], ["refutations", "Refutations"], ["notebook", "Research notebook"]];
   el.innerHTML = `<div class="eyebrow">What could prove it wrong, and what already has</div><h2>The record</h2>
     <p class="lead">The predictions with the measurements that would refute them, the natural conjectures that were tried and refuted, and the pre-registered research runs with their outcomes.</p>
     <div class="tabs">${tabs.map(([k, t]) => `<button data-tab="${k}" aria-pressed="${k === recTab}">${t}</button>`).join("")}</div><div id="recbody"></div>`;
