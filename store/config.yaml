@@ -92,6 +92,6 @@ reviews:
   server:
     base_url: ""
     orcid_base: https://orcid.org
-    graph_repo: leon-machine/phys-graph
+    graph_repo: leon-machine/zero-divisors
     log_repo: leon-machine/review-log
     privacy_contact: ""

@@ -70,7 +70,7 @@ def server_settings(config: dict, env=os.environ) -> dict:
                        or "https://orcid.org").rstrip("/"),
         "client_id": env.get("TP_ORCID_CLIENT_ID") or raw.get("client_id") or "",
         "client_secret": env.get("TP_ORCID_CLIENT_SECRET") or "",
-        "graph_repo": raw.get("graph_repo") or "leon-machine/phys-graph",
+        "graph_repo": raw.get("graph_repo") or "leon-machine/zero-divisors",
         "log_repo": raw.get("log_repo") or "leon-machine/review-log",
         "github_token": env.get("TP_GITHUB_TOKEN") or "",
         "site_url": ((config or {}).get("site_url") or "").rstrip("/"),

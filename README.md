@@ -22,8 +22,8 @@ read it, check it and try to break it.
    (docs/HOSTING.md); once it is up, its address goes on the site's Explore with AI page.
 2. **On your own computer**, which you need to check drafts or contribute:
 
-       git clone https://github.com/leon-machine/phys-graph
-       cd phys-graph
+       git clone https://github.com/leon-machine/zero-divisors
+       cd zero-divisors
        pip install -r requirements.txt          # Python 3.11 or later
        claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"
 

@@ -7,7 +7,7 @@ authors:
     given-names: Leon
     orcid: "https://orcid.org/0009-0006-4449-5617"
 license: CC-BY-4.0
-repository-code: "https://github.com/leon-machine/phys-graph"
+repository-code: "https://github.com/leon-machine/zero-divisors"
 keywords:
   - Clifford algebras
   - geometric algebra

@@ -10,7 +10,7 @@ You write the trails for the subjects you are given. For each subject:
 
 ## 1. Choose the spine (6 to 10 results)
 
-Work in /home/claude/phys-graph. Read store/subjects.yaml for the
+Work in /home/claude/zero-divisors. Read store/subjects.yaml for the
 subject's title and scope. List the subject's entities:
 
     python3 - <<'EOF'
