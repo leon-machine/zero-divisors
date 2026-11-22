@@ -55,7 +55,9 @@ jobs:
       # branch under test and is not trusted. It runs
       # in a container with no network, the repository mounted read-only and a
       # throwaway temporary folder, so a hostile check can neither reach out nor
-      # change the tree.
+      # change the tree. Each check runs in Python's isolated mode (-I), which ignores
+      # PYTHONPATH, so the dependencies are also mounted as the interpreter's own
+      # site-packages, where isolated mode still looks.
       - name: Evidence (layer 4) in an isolated container
         run: |
           pip install --quiet --target .ci-deps pyyaml jsonschema numpy scipy   # five legacy verify scripts use numpy/scipy
@@ -63,6 +65,7 @@ jobs:
             --tmpfs /tmp:rw,size=512m --tmpfs /cache:rw,size=256m \
             -e HOME=/tmp -e PYTHONDONTWRITEBYTECODE=1 \
             -e PYTHONPATH=/lab/.ci-deps \
+            -v "$PWD/.ci-deps":/usr/local/lib/python3.11/site-packages:ro \
             -v "$PWD":/lab:ro -w /lab python:3.11-slim \
             python -m tp check --store store --layers 4 --keep-going --cache-dir /cache --full
       - name: Build
