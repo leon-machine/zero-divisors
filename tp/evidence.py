@@ -251,8 +251,11 @@ globals().pop("_main")()
 '''
 
 
+CHECK_TIMEOUT = 180     # seconds per check run; TP_CHECK_TIMEOUT overrides
+
+
 def run_check(store_root: str, folder: str, source: str, func: str,
-              timeout: int = 60) -> dict:
+              timeout: int | None = None) -> dict:
     """Run one check function in a separate interpreter under an audit hook.
 
     The hook stops accidents and casual misuse: no network, no process spawning,
@@ -261,6 +264,11 @@ def run_check(store_root: str, folder: str, source: str, func: str,
     layer inside a container with no network and a read-only source tree.  The
     result line is marked with a per-run nonce the check cannot read, so a check
     cannot print a forged result."""
+    if timeout is None:
+        try:
+            timeout = int(os.environ.get("TP_CHECK_TIMEOUT") or CHECK_TIMEOUT)
+        except ValueError:
+            timeout = CHECK_TIMEOUT
     nonce = secrets.token_hex(16)
     # the check runs with a temporary folder as its working directory
     store_root, folder = os.path.abspath(store_root), os.path.abspath(folder)

@@ -36,7 +36,12 @@ jobs:
           cp /tmp/base/reviews-lock.json store/.tp-reviews-lock.json
           # ORCID's keys come from the base branch too: a pull request cannot add a key of its own
           if [ -d /tmp/base/store/orcid_keys ]; then rm -rf store/orcid_keys && cp -r /tmp/base/store/orcid_keys store/; fi
-          rm -rf tp lib && cp -r /tmp/base/tp /tmp/base/lib .
+          # the repository owner's own pull requests keep their own toolkit, so a change to the
+          # toolkit is tested in its own run; anyone else's runs with the base branch's (and the
+          # guard workflow refuses their changes to tp/ and lib/ in any case)
+          if [ "${{ github.event.pull_request.author_association }}" != "OWNER" ]; then
+            rm -rf tp lib && cp -r /tmp/base/tp /tmp/base/lib .
+          fi
       - name: Tests
         run: python -m unittest discover -s tests -t .
       - name: Validate the store, layers 1-3, 5 and 6
@@ -64,7 +69,10 @@ jobs:
       # cache comes from GitHub's cache, saved by the run on main after each merge. A cache
       # saved in a pull request is visible only to that pull request, so a pull request
       # cannot plant results for main or for anyone else. The record committed in the
-      # repository (store/.tp-layer4.json) is not used here. A manual run (Run workflow) or a
+      # repository (store/.tp-layer4.json) is not used here. On pull requests the mutation
+      # test (each check rerun with its numbers altered, to show it can fail) runs only for
+      # results the pull request adds or changes; runs on main and manual runs test them all.
+      # Each check run has 180 seconds (TP_CHECK_TIMEOUT overrides). A manual run (Run workflow) or a
       # run with no cache yet reruns everything.
       - name: Layer-4 results from main's last run
         uses: actions/cache/restore@v4
@@ -75,6 +83,8 @@ jobs:
       - name: Evidence (layer 4) in an isolated container
         env:
           TP_FULL: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+          # on pull requests, only new and changed results are mutation-tested (TP_MUTANTS)
+          TP_MUTANTS: ${{ github.event_name == 'pull_request' && 'changed' || '' }}
         run: |
           mkdir -p "$RUNNER_TEMP/l4/scripts"
           [ -f "$RUNNER_TEMP/l4/layer4.json" ] || echo '{}' > "$RUNNER_TEMP/l4/layer4.json"
@@ -84,7 +94,7 @@ jobs:
             -e HOME=/tmp -e PYTHONDONTWRITEBYTECODE=1 \
             -e PYTHONPATH=/lab/.ci-deps \
             -e TP_L4_CACHE=/cache/layer4.json \
-            ${TP_FULL:+-e TP_FULL=1} \
+            ${TP_FULL:+-e TP_FULL=1} ${TP_MUTANTS:+-e TP_MUTANTS=$TP_MUTANTS} \
             -v "$PWD/.ci-deps":/usr/local/lib/python3.11/site-packages:ro \
             -v "$RUNNER_TEMP/l4":/cache:rw \
             -v "$PWD":/lab:ro -w /lab python:3.11-slim \

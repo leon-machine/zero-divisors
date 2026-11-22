@@ -352,6 +352,29 @@ class Layer4Evidence(StoreCase):
                    "    assert len(g.all_blades(2)) >= 0\n")
         self.assertFires("E408", L4, run_mutants=True)
 
+    WEAK = ("import GA as g\n\ndef test_dimension():\n"
+            "    assert len(g.all_blades(2)) >= 0\n")
+
+    def test_mutants_changed_only_skips_an_accepted_check(self):
+        self.write("fx.algebra.dimension", "check.py", self.WEAK)
+        write_lock(load_store(self.root))      # the weak check is the accepted version
+        os.environ["TP_MUTANTS"] = "changed"
+        try:
+            rep = self.run_layers(L4, run_mutants=True)
+        finally:
+            del os.environ["TP_MUTANTS"]
+        self.assertNotIn("perturbation", " ".join(f.message for f in rep.findings if f.code == "E408"))
+        self.assertFires("E408", L4, run_mutants=True)      # a full run still tests it
+
+    def test_mutants_changed_only_tests_a_changed_check(self):
+        write_lock(load_store(self.root))
+        self.write("fx.algebra.dimension", "check.py", self.WEAK)   # changed since the lock
+        os.environ["TP_MUTANTS"] = "changed"
+        try:
+            self.assertFires("E408", L4, run_mutants=True)
+        finally:
+            del os.environ["TP_MUTANTS"]
+
     def test_W408_nothing_to_perturb(self):
         self.write("fx.algebra.dimension", "check.py",
                    "import GA as g\nTWO = len('ab')\n\ndef test_dimension():\n"
