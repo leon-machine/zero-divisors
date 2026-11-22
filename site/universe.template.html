@@ -2950,9 +2950,9 @@ const INTRO_VIEWS = ["principle", "ga", "singularity"];
 // the header's two menus: [menu, caret, group] element ids
 const NAVMENUS = { intro: ["intromenu", "introcaret", "introgroup"], graph: ["graphmenu", "graphcaret", "graphgroup"] };
 const $id = s => document.getElementById(s);
-// the source repository: null until it is public. While null, the "open source" link on About and the
-// footer's "Source on GitHub" point nowhere and say so; set the address here to switch them on.
-const REPO_URL = null;   // "https://github.com/leon-machine/phys-graph"
+// the source repository (public from the first release). Set to null to switch off the "open source" link on About
+// and the footer's "Source on GitHub", which then point nowhere and say so.
+const REPO_URL = "https://github.com/leon-machine/phys-graph";
 document.querySelectorAll(".repolink").forEach(a => {
   if (REPO_URL) { a.href = REPO_URL; a.target = "_blank"; a.rel = "noopener"; }
   else { a.title = "The source repository will be public soon"; a.setAttribute("aria-disabled", "true"); a.addEventListener("click", ev => ev.preventDefault()); }

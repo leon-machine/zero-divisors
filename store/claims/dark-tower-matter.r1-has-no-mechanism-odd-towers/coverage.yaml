@@ -12,6 +12,8 @@ functions:
     clauses: ["in the three-dimensional towers the coupling is dimensionful, so there is no dimensional transmutation"]
     omits: "the dimension of e^2 is 1, 0, -1 in d = 3, 4, 5 from [A] = (d - 2)/2; that the three-dimensional gauge algebra is abelian is the premise, and that nothing confines in five dimensions is the cited proposition"
 untouched_premises:
+  dark-matter.e-equal-mass-per-unit-ball: "postulate cited for the density whose shares the check takes from the imported rule; no number of its own"
+  dark-tower-matter.population: "cited for the open question of what fills the odd towers; assembly level, no computable content"
   dark-matter.mirror-share-one-how-fragile: "cited for the context of the mirror and this tower, whose mass m = c Lambda is a cited result; not recomputed"
   dark-tower-matter.three-dimensional-content: "cited for the absence of chirality; content not recomputed in this check"
   dark-tower-matter.anomalies: "cited for parity broken by the forced Chern-Simons level; not recomputed here"
