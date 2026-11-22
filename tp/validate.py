@@ -1018,6 +1018,19 @@ def _l4_key(store, e, eid, toolchain, legacy_dir, run_mutants, cone_memo,
     return _sha(json.dumps(blob, sort_keys=True).encode())
 
 
+def _mutants_for(store, eid, run_mutants) -> bool:
+    """Whether layer 4 mutation-tests eid's checks. TP_MUTANTS=changed (set by CI on pull
+    requests) limits the test to entities that are new or changed against the accepted
+    lock, since an unchanged check was mutation-tested when it was accepted; otherwise
+    every entity is tested when run_mutants is on."""
+    if not run_mutants:
+        return False
+    if os.environ.get("TP_MUTANTS", "").strip().lower() != "changed":
+        return True
+    old, e = store.lock.get(eid), store.entities.get(eid)
+    return old is None or e is None or e.substantive_hash() != old.get("hash")
+
+
 def l4_jobs() -> int:
     """Worker processes for layer 4: TP_JOBS, else the CPU count."""
     try:
@@ -1052,7 +1065,7 @@ def _entity_job(arg):
     sub = Report()
     runs = []
     _layer4_entity(store, sub, eid, store.entities[eid], _JOB["legacy_dir"], _JOB["cache"],
-                   legacy_results, _JOB["run_mutants"], runs=runs)
+                   legacy_results, _mutants_for(store, eid, _JOB["run_mutants"]), runs=runs)
     return eid, {"findings": [[f.code, f.entity, f.message, f.fix] for f in sub.findings],
                  "result": sub.check_results.get(eid), "failed": eid in sub.check_failed,
                  "runs": runs}
@@ -1118,10 +1131,17 @@ def layer4(store: Store, rep: Report, run_mutants=True, incremental=None, jobs=N
     new, cone_memo, keys, records, todo = {}, {}, {}, {}, []
     rep.l4_stats = {"replayed": 0, "ran": 0, "jobs": jobs}
     for eid, e in store.entities.items():
-        key = _l4_key(store, e, eid, toolchain, legacy_dir, run_mutants, cone_memo,
-                      libs=libs, qdigest=qdigest)
-        keys[eid] = key
+        mutate = _mutants_for(store, eid, run_mutants)
+        key = _l4_key(store, e, eid, toolchain, legacy_dir, mutate,
+                      cone_memo, libs=libs, qdigest=qdigest)
         hit = old.get(eid)
+        if incremental and hit and hit.get("key") != key and run_mutants and not mutate:
+            # a record from a run that also mutation-tested this check covers this run
+            full = _l4_key(store, e, eid, toolchain, legacy_dir, True,
+                           cone_memo, libs=libs, qdigest=qdigest)
+            if hit.get("key") == full:
+                key = full
+        keys[eid] = key
         if incremental and hit and hit.get("key") == key:
             records[eid] = hit
             rep.l4_stats["replayed"] += 1
