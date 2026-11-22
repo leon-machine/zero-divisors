@@ -919,7 +919,7 @@ INSTRUCTIONS = (
     "imaginary units and how results are stored. Then `search_claims` or `list_subjects` to find a "
     "way in, `get_claim` / `get_proof` / `neighbourhood` to read and move around, and "
     "`list_open_problems` for what is open. Pitch explanations at the user's level. New results and "
-    "corrections come in as pull requests to github.com/leon-machine/phys-graph (CONTRIBUTING.md).")
+    "corrections come in as pull requests to github.com/leon-machine/zero-divisors (CONTRIBUTING.md).")
 
 # prompts: one-click starting points that clients show to the user
 PROMPTS = [

@@ -2819,7 +2819,7 @@ const TOOL_GROUPS = [
 // how to connect: one set of steps for every app that takes a server by its address, then the two
 // routes that need no hosted server; the address appears once store/config.yaml mcp_url is set
 const llmsUrl = () => { try { return new URL("llms.txt", DATA.site_url || location.href).href; } catch (e) { return "llms.txt"; } };
-const LOCAL_CLONE = `git clone https://github.com/leon-machine/phys-graph\ncd phys-graph\npip install -r requirements.txt`;
+const LOCAL_CLONE = `git clone https://github.com/leon-machine/zero-divisors\ncd zero-divisors\npip install -r requirements.txt`;
 function connectHtml(code) {
   const live = !!DATA.mcp_url, addr = DATA.mcp_url || "https://<the hosted address>/mcp";
   const go = k => `<a href="#" data-route-go="${k}">route ${k}</a>`;
@@ -2851,9 +2851,9 @@ function connectHtml(code) {
       <li><b>Get the graph and what it needs:</b>${code(LOCAL_CLONE)}</li>
       <li><b>Connect it to your app.</b>
         <ul>
-          <li><b>Claude Code</b>: from the <code>phys-graph</code> folder, run${code(`claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}</li>
+          <li><b>Claude Code</b>: from the <code>zero-divisors</code> folder, run${code(`claude mcp add --env PYTHONPATH="$PWD" --transport stdio physics-graph -- python -m tp.mcp_server --store "$PWD/store"`)}</li>
           <li><b>The Claude desktop app</b> on Windows: from the folder, run this in PowerShell, then quit Claude fully and reopen it:${code(`powershell -ExecutionPolicy Bypass -File register_mcp.ps1`)}</li>
-          <li><b>The Claude desktop app</b> elsewhere, or <b>any app that runs local MCP servers</b>: add this to its server list (in the Claude desktop app, <b>Settings</b> › <b>Developer</b> › <b>Edit Config</b>, inside <code>"mcpServers"</code>), with your own path, then restart the app:${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],\n  "env": {"PYTHONPATH": "/path/to/phys-graph"}\n}`)}</li>
+          <li><b>The Claude desktop app</b> elsewhere, or <b>any app that runs local MCP servers</b>: add this to its server list (in the Claude desktop app, <b>Settings</b> › <b>Developer</b> › <b>Edit Config</b>, inside <code>"mcpServers"</code>), with your own path, then restart the app:${code(`"physics-graph": {\n  "command": "python",\n  "args": ["-m", "tp.mcp_server", "--store", "/path/to/zero-divisors/store"],\n  "env": {"PYTHONPATH": "/path/to/zero-divisors"}\n}`)}</li>
         </ul></li>
       <li><b>Check that it is working</b>, as in ${go(1)}.</li>
     </ol>
@@ -2912,7 +2912,7 @@ function renderContribute() {
         </ul>
         An amendment is judged by what it fixes, not by how much it changes. A wording change keeps the version and earns no credit entry. A <b>correction</b> (a proof step, a check, the status or a link was wrong; the statement stands) or a <b>restatement</b> (the statement itself was wrong) raises the version and adds an <code>amendments</code> entry saying what was wrong with the accepted version, <code>{version, kind, defect, evidence}</code>, where the evidence is a check of the result that shows the fix. It keeps every credit entry already there, so the original author stays named, and adds one for you and one for the AI that drafted the change, each with the new version. A different or stronger conclusion is a new result, linked to the original. <code>validate_draft</code> refuses an amendment that drops an earlier credit, adds none of its own, does not say what it fixes, or declares a kind that does not match what changed. The full rules are in <code>docs/CONTRIBUTING-rules.md</code>.</li>
       <li><b>Check it yourself.</b> <code>validate_draft</code> runs the graph's rules against your draft and reports every problem it introduces, including any it causes in other results. Then put the folder under <code>store/</code> in your copy and run its checks: <code>python -m tp check-one &lt;id&gt; --store store</code>, and the whole store's with <code>python -m tp check --store store --keep-going</code>.</li>
-      <li><b>Open a pull request.</b> Fork <a href="https://github.com/leon-machine/phys-graph" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request against <code>main</code>. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with the rules taken from <code>main</code> and every contributed <code>check.py</code> sealed off from the network. Nothing is merged until it has been reviewed.</li>
+      <li><b>Open a pull request.</b> Fork <a href="https://github.com/leon-machine/zero-divisors" target="_blank" rel="noopener">the repository</a> on GitHub, add your folder under <code>store/</code> on a branch, and open a pull request against <code>main</code>. Commit only result folders, not <code>build/</code>, <code>site/</code> or the lock files. The same checks run there automatically, with the rules taken from <code>main</code> and every contributed <code>check.py</code> sealed off from the network. Nothing is merged until it has been reviewed.</li>
     </ol>
     ${ex["entity.md"] ? `<details><summary><b>A worked example</b>: a small result in the graph's form, which passes every check</summary>
       <p><code>entity.md</code></p>${code(ex["entity.md"])}
@@ -2952,7 +2952,7 @@ const NAVMENUS = { intro: ["intromenu", "introcaret", "introgroup"], graph: ["gr
 const $id = s => document.getElementById(s);
 // the source repository (public from the first release). Set to null to switch off the "open source" link on About
 // and the footer's "Source on GitHub", which then point nowhere and say so.
-const REPO_URL = "https://github.com/leon-machine/phys-graph";
+const REPO_URL = "https://github.com/leon-machine/zero-divisors";
 document.querySelectorAll(".repolink").forEach(a => {
   if (REPO_URL) { a.href = REPO_URL; a.target = "_blank"; a.rel = "noopener"; }
   else { a.title = "The source repository will be public soon"; a.setAttribute("aria-disabled", "true"); a.addEventListener("click", ev => ev.preventDefault()); }

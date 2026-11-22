@@ -53,6 +53,6 @@ time the fix round ends. Nothing is synced to Leon's machine before the end.
   always Leon's, asked once, together, with a recommendation each.
 
 ## 5. Sync
-The lab is the private repository `leon-machine/phys-graph`. A session ends with one commit and
+The lab is the repository `leon-machine/zero-divisors`. A session ends with one commit and
 push; Leon pulls. Retirements are deletions in git. The paper verify scripts stay in
 TP_Papers_Suite; point `TP_LEGACY_DIR` at that folder.

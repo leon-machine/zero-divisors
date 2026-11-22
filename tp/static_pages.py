@@ -188,7 +188,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
                 H(c.get("name", "")) + f" ({H(c.get('role', ''))}"
                 + (f", version {c['version']}" if c.get("version") else "") + ")" for c in credit) + ".</p>")
         parts.append("<footer>Zero Divisors: Physics Graph. Results are licensed CC BY 4.0. "
-                     '<a href="https://github.com/leon-machine/phys-graph">Source and contributions</a> · '
+                     '<a href="https://github.com/leon-machine/zero-divisors">Source and contributions</a> · '
                      '<a href="../llms.txt">For AI agents</a></footer>')
         desc = _plain_tex(lv["one-liner"] or titles[eid])[:280]
         canon = f"{base}results/{eid}.html" if base else ""
@@ -226,7 +226,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
     ops = st.open_problems or []
     lines = ["# Open problems", "", "What the Physics Graph does not yet settle. Each says why it matters, "
              "what is known, where to start and what would settle it. Work on one goes in as a pull request "
-             "(https://github.com/leon-machine/phys-graph, CONTRIBUTING.md).", ""]
+             "(https://github.com/leon-machine/zero-divisors, CONTRIBUTING.md).", ""]
     for op in ops:
         lines += [f"## {op.get('title', op.get('id'))}", "",
                   f"`{op.get('id')}` · {op.get('area', '')} · {op.get('kind', '')} · "
@@ -258,7 +258,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         "how results are stored. Each result page says what the result holds given (its postulates and "
         "imported facts), so trace those before relying on a result.", "",
         "## Connect an AI", "",
-        connect + "- Local MCP server (needed to contribute): clone https://github.com/leon-machine/phys-graph, "
+        connect + "- Local MCP server (needed to contribute): clone https://github.com/leon-machine/zero-divisors, "
         "`pip install -r requirements.txt`, run `python -m tp.mcp_server --store store` as a stdio server.",
         "- Corrections and new results come in as pull requests; CONTRIBUTING.md has the rules.", "",
         "## Start here", "",
@@ -272,7 +272,7 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
                         f"{s.get('about', '')} ({len(by_subject[s['id']])} results)")
     llms += ["", "## Optional", "",
              "- [The papers on Zenodo](https://zenodo.org/communities/transport-papers)",
-             "- [Source repository](https://github.com/leon-machine/phys-graph)", ""]
+             "- [Source repository](https://github.com/leon-machine/zero-divisors)", ""]
     with open(os.path.join(site, "llms.txt"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(llms))
     if site_url:

@@ -35,7 +35,7 @@ ABOUT = (
     "to your AI as a remote MCP server (in claude.ai: a custom connector), then ask it to call "
     "<code>conventions</code> first.</p>"
     "<p>Source, and how to contribute: "
-    "<a href='https://github.com/leon-machine/phys-graph'>github.com/leon-machine/phys-graph</a>.</p>")
+    "<a href='https://github.com/leon-machine/zero-divisors'>github.com/leon-machine/zero-divisors</a>.</p>")
 
 
 class Handler(BaseHTTPRequestHandler):

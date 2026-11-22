@@ -46,8 +46,8 @@ The Claude desktop app, or any client that runs stdio MCP servers:
 
     "physics-graph": {
       "command": "python",
-      "args": ["-m", "tp.mcp_server", "--store", "/path/to/phys-graph/store"],
-      "env": {"PYTHONPATH": "/path/to/phys-graph"}
+      "args": ["-m", "tp.mcp_server", "--store", "/path/to/zero-divisors/store"],
+      "env": {"PYTHONPATH": "/path/to/zero-divisors"}
     }
 
 On Windows, `register_mcp.ps1` registers the server with the desktop app.
