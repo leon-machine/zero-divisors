@@ -1,6 +1,6 @@
 ## What this changes
 
-<!-- New claims, changed claims, new evidence, or toolkit changes. One result per folder,
+<!-- New claims, changed claims or new evidence (changes to the toolkit, checks or rules go in an issue). One result per folder,
 store/<kind>/<id>/. For a correction, say what changed and why. -->
 
 ## Checklist
