@@ -7,6 +7,8 @@ functions:
     kind: exact
     clauses: ["mirror 18.6 percent", "each three-dimensional tower 24.9 percent", "each five-dimensional tower 15.8 percent"]
     omits: ""
+untouched_premises:
+  dark-matter.e-equal-mass-per-unit-ball: "postulate with no number of its own: the check codes the density rule it gives, with R3, as the shares and computes those"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

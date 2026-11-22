@@ -17,6 +17,7 @@ credit:
   source: authorship disclosure of T00a, deposited version
 comments_on:
 - synthesis.frobenius-and-universality-in-clifford-algebras
+- std-algebra.quaternions
 locators:
   paper: T00a
   number: Ex D

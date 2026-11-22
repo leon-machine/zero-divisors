@@ -11,6 +11,8 @@ functions:
     kind: exact
     clauses: ["in phase (T) e^2/m > 7e7", "collisionless threshold 5.9e6 from the phase-shift bound 1.7e-7"]
     omits: "the bound (m/e^2)^2 <= 2e-16 and the phase-shift bound 1.7e-7 are typed in; that phase (C) fails R2 by itself rests on the imported confinement and is not computable"
+untouched_premises:
+  dark-matter.r1-equal-mass-per-quantum: "postulate of the particle model, cited for the count of quanta; the check types in the density it gives and computes from there"
 judge:
   by: coverage-judge-2026-10-23
   date: '2026-10-23'

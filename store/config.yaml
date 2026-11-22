@@ -53,7 +53,7 @@ programmes:
 # the public address of the site (the page that serves index.html), e.g. https://zerodivisors.org/
 # when set, shared links use it, link previews name absolute images, and each result gets a small
 # share page r/<id>.html carrying its own preview. Empty until the site is hosted.
-site_url: ""
+site_url: "https://zerodivisors.org/"
 # the public, read-only MCP endpoint (tp/mcp_http.py, docs/HOSTING.md), e.g. https://mcp.zerodivisors.org/mcp
 # when set, the Explore with AI page and llms.txt offer it first, so a visitor can connect an AI
 # with no install. Empty until it is hosted.
