@@ -23,7 +23,9 @@ taken when enough has been merged to be worth a new version.
 ## Each release
 
 1. On `main`: `python -m tp check --store store --keep-going`, the unit tests, `python -m tp build`,
-   `python -m tp.layout`; commit anything they change.
+   `python -m tp.layout`; commit anything they change. On GitHub, run the check workflow by hand
+   (Actions, check, Run workflow): a manual run reruns every machine check, ignoring the cache that
+   pull requests use, and should pass before the release.
 2. Choose the tag, `vMAJOR.MINOR.PATCH`: `v1.0.0` for the first release; raise MINOR when results
    are added, corrected or restated; raise PATCH for corrections of wording, notation or citations.
 3. Draft the release notes: `python -m tp release-notes vX.Y.Z`. It writes `releases/vX.Y.Z.md`,
