@@ -7,6 +7,9 @@ technical, plain words, one line), its proof, the results it rests on (pinned to
 versions used), an exact machine check, and a record of who did what. Everything is
 written in geometric algebra.
 
+The site is at **https://zerodivisors.org**: the graph to explore, guided trails, the
+generated papers, the record of predictions and research runs, and the open problems.
+
 The papers themselves are on Zenodo, in the
 [Transport Papers community](https://zenodo.org/communities/transport-papers), and remain
 the version of record; this repository is the living store. Releases are archived on
@@ -16,8 +19,8 @@ read it, check it and try to break it.
 
 ## Read it with an AI
 
-1. **On the web, with nothing to install**: point an AI that can browse at the site's
-   `llms.txt`, which lists the conventions, every subject as one file in dependency
+1. **On the web, with nothing to install**: point an AI that can browse at
+   https://zerodivisors.org/llms.txt, which lists the conventions, every subject as one file in dependency
    order, and a page for every result. A hosted, read-only MCP endpoint is planned
    (docs/HOSTING.md); once it is up, its address goes on the site's Explore with AI page.
 2. **On your own computer**, which you need to check drafts or contribute:
@@ -36,8 +39,13 @@ To run one result's machine checks: `python -m tp check-one <id> --store store`.
 
 Corrections, sharper checks and new results come in as pull requests; nothing enters
 `main` until the maintainer has reviewed it, and every accepted result credits you by
-name (and the AI model that drafted it). CONTRIBUTING.md says how, and
-`docs/example-contribution/` is a complete worked example. The open problems are on the
+name (and the AI model that drafted it). Every person credited needs an ORCID iD, and the
+ORCID record of the person who opens the pull request must list their GitHub account; work
+done by an AI alone credits the model and the person who submits it. A pull request may
+change results under `store/` only: changes to the toolkit, the checks or the rules are
+proposed in an issue. Accepted contributors are listed on the Physics Graph's Zenodo record
+from the next release. CONTRIBUTING.md says how, and `docs/example-contribution/` is a
+complete worked example. The open problems are on the
 site and through the MCP tools `list_open_problems` and `get_open_problem`.
 
 Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
@@ -54,7 +62,7 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
       subjects.yaml     the subject tree the map and documents are organised by
       config.yaml       transport roots, house style, governance, legacy script folder
       notation.yaml     macro registry (from the papers' preambles)
-      notebook.yaml     the lab notebook: pre-registered runs and their outcomes
+      notebook.yaml     the research runs: pre-registered runs and their outcomes
       labels.yaml       every \label of the series and what now carries it (tp.notes)
       tags.yaml         the tag vocabulary: cross-cutting themes, several per result
       tombstones.yaml   retired ids, never reused
@@ -70,6 +78,9 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
     site/               page templates and the built site (index.html), with the
                         pages that need no JavaScript (results/, subjects/, llms.txt)
     seed/               extraction inputs and reports, typing and prose instructions
+    deposits/           the deposited papers' sources, one per Zenodo version (docs/DEPOSITS.md)
+    releases/           the release notes, one file per release (RELEASING.md)
+    colony/             the research-run tooling and the records of past runs
 
 ## Commands (run from this folder)
 
@@ -84,6 +95,9 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
     python -m tp.site                                  build site/index.html
     python -m tp check-one ID --store store             run one result's machine checks
     python -m tp reviews check --store store            expert reviews sealed by ORCID (docs/REVIEWS.md)
+    python -m tp release-notes vX.Y.Z                  draft a release's notes (RELEASING.md)
+    python -m tp.pdfs                                  compile the documents to site/pdf
+    python -m tp.orcid_link --store store --author LOGIN   ORCID records link the pull request's account
     python -m tp.mcp_server --store store              MCP server over stdio
     python -m tp.mcp_http --store store [--port 8080]   read-only MCP server over HTTP (docs/HOSTING.md)
     python -m tp.gate   recipes/falling-in.yaml ../G00_transport_papers_guide.tex
@@ -105,8 +119,8 @@ the start of its name, for runs whose checks carry no paper labels.
 
 ## The site
 
-`site/index.html` is one self-contained page, with two guided introductions
-(The Transport Principle, The Singularity) and the Physics Graph:
+`site/index.html` is one self-contained page, with three guided introductions
+(The Transport Principle, Why Geometric Algebra, The Singularity) and the Physics Graph:
 
 - **The graph**: every result as a point in a 3D ball, placed so that each sits
   next to what it rests on and what rests on it (see `tp/layout.py` for the
@@ -118,10 +132,11 @@ the start of its name, for runs whose checks carry no paper labels.
   and copy it for an AI. Drag the reader's left edge to widen it.
 - **Documents**: the generated documents, readable in the page.
 - **The record**: predictions with their kill conditions, the refutations,
-  and the lab notebook.
+  and the research runs.
 
 - **Open problems** and **Release notes**.
-- **Explore with AI**: how to connect an AI, and how contributions are checked.
+- **Explore with AI**: how to connect an AI, and how contributions are checked and credited.
+- **About**: what the site is, how the work came to be and was checked, and a contact button.
 
 Beside it, `tp.site` writes pages that need no JavaScript, for AI agents that read the
 web and for search engines (tp/static_pages.py): `results/<id>.html` for every result,
@@ -184,8 +199,16 @@ the quick ways to move around it.
   mounted read-only.
 - In CI the toolkit, `store/config.yaml` and the lock come from the base
   branch, so a pull request cannot change the rules it is judged by.
-  `governance.github_logins` lists the GitHub logins with maintainer rights;
-  set it to your login before the first pull request.
+  `governance.github_logins` lists the GitHub logins with maintainer rights.
+- A pull request's own copy of `check.yml` is what runs on it, so a second
+  workflow, `guard.yml`, runs from the base branch (`pull_request_target`),
+  reads only the list of changed files, and fails a contributor's pull request
+  that touches the toolkit, the checks, the site or the governance files.
+  Both `check` and `guard` are required to merge into `main`.
+- Every person a contribution credits gives an ORCID iD (E610), at least one
+  person is credited (E614), and the public ORCID record of someone credited
+  must list the GitHub account that opened the pull request (E611,
+  `tp/orcid_link.py`).
 - The people rules (layer 6) apply to new entities as well as to changes: a
   contributor cannot add an imported or postulate entity, or a proved claim in
   a core region.
