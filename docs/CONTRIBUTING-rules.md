@@ -24,7 +24,10 @@ Only reviewed changes reach the published graph. The site's Contribute page
    `.github/workflows/check.yml` run the tests and all six validator layers,
    with the toolkit and rules taken from the base branch, and run layer 4 in a
    container with no network and the repository mounted read-only. A failing
-   check blocks the merge. A maintainer reviews and merges.
+   check blocks the merge. A second check, `guard` (`.github/workflows/guard.yml`),
+   runs from the base branch, so a pull request cannot edit it, and refuses a
+   contributor's pull request that changes the toolkit, the checks, the site or the
+   governance files. A maintainer reviews and merges.
 
 `propose_claim` validates a draft and, if it is clean, files it under
 `proposals/<id>/` in the same copy, for a maintainer working there to accept

@@ -1,0 +1,48 @@
+name: guard
+# A pull request's own copy of check.yml runs on that pull request, so it could be edited to
+# pass whatever it contains. This workflow runs on pull_request_target, so GitHub always takes
+# it from the base branch: a pull request cannot change it. It never checks out or runs the
+# pull request's code. It reads only the list of files the pull request changes, and fails if
+# a contributor changes the toolkit, the checks or the rules they are judged by. Make the
+# `guard` job a required status check on main, beside `check`.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, edited]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  guard:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Contributors change results only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+          ASSOCIATION: ${{ github.event.pull_request.author_association }}
+        run: |
+          if [ "$ASSOCIATION" = "OWNER" ]; then
+            echo "Pull request by the repository owner: not restricted."
+            exit 0
+          fi
+          gh api --paginate "repos/$REPO/pulls/$PR/files" \
+            --jq '.[] | .filename, (.previous_filename // empty)' > changed.txt
+          blocked=0
+          while IFS= read -r f; do
+            case "$f" in
+              .github/*|tp/*|lib/*|tests/*|legacy/*|tools/*|colony/*|seed/*|site/*|build/*|recipes/*|documents/*|deposits/*|releases/*|\
+              store/config.yaml|store/subjects.yaml|store/tombstones.yaml|store/tags.yaml|store/orcid_keys/*|\
+              store/.tp-lock.json|store/.tp-layer4.json|store/.tp-reviews-lock.json|store/reviews/redactions.yaml|\
+              Dockerfile|requirements.txt|.gitattributes|.gitignore|.zenodo.json|CITATION.cff|LICENSE*|register_mcp.ps1)
+                echo "::error file=$f::a contributor's pull request may not change $f"
+                blocked=1 ;;
+            esac
+          done < changed.txt
+          if [ "$blocked" = 1 ]; then
+            echo "This pull request changes the toolkit, the checks, the site or the rules, which only the"
+            echo "maintainer changes. A contribution adds or changes results under store/ (CONTRIBUTING.md);"
+            echo "propose a change to the toolkit in an issue."
+            exit 1
+          fi
+          echo "Changes are confined to results: $(wc -l < changed.txt) file(s)."

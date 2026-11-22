@@ -124,7 +124,10 @@ credit:
 1. Fork this repository on GitHub and make a branch in your fork.
 2. Add your result folder (or edit an existing one) under `store/`. Commit only
    result folders: not `build/`, `site/`, `store/.tp-lock.json` or
-   `store/.tp-layer4.json`, which the maintainer updates when merging.
+   `store/.tp-layer4.json`, which the maintainer updates when merging. A pull request that
+   changes the toolkit (`tp/`, `lib/`), the checks (`.github/`, `tests/`, `legacy/`), the
+   site or the governance files in `store/` is refused automatically by the `guard` check;
+   propose such a change in an issue.
 3. Run your result's checks with `python -m tp check-one <id> --store store`, then the
    whole store's with `python -m tp check --store store --keep-going`.
 4. Open a pull request against `main` and fill in the checklist.
