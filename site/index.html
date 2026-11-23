@@ -2866,7 +2866,7 @@ function connectHtml(code) {
 
     <div ${panel(3)}><h4>3. An AI that reads the web, with nothing connected</h4>
     <p>Any AI that can open web pages can read the graph. Give it this address:${code(llmsUrl())}for example: "Read ${esc(llmsUrl())}, then the conventions it links to, then explain ...". It lists the conventions, every subject as one file in dependency order, and a page for every result with its proof and checks.</p>
-    <p class="note">This route reads only: it cannot search the graph, follow what rests on what, or check a draft. For those, use ${go(1)} or ${go(2)}.</p></div>`;
+    <p class="note"><b>We recommend the MCP server for real exploration.</b> This route gives an AI the same content, but only by fetching whole files: it cannot search the graph, trace what a result rests on, move between neighbouring results or check a draft, as the MCP tools let it, and the larger subject files may be more than some AIs read in one go. It is the way in with nothing to set up; for anything more, use ${go(1)} or ${go(2)}.</p></div>`;
 }
 // one way to connect is shown at a time; the tabs, and the "route n" links in the text, switch it
 let CONNECT_ROUTE = 1;

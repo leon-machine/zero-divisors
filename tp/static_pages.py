@@ -260,7 +260,10 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         "## Connect an AI", "",
         connect + "- Local MCP server (needed to contribute): clone https://github.com/leon-machine/zero-divisors, "
         "`pip install -r requirements.txt`, run `python -m tp.mcp_server --store store` as a stdio server.",
-        "- Corrections and new results come in as pull requests; CONTRIBUTING.md has the rules.", "",
+        "- Corrections and new results come in as pull requests; CONTRIBUTING.md has the rules.",
+        "- The files below are the same content for reading only, a whole subject at a time. An MCP server is "
+        "better for exploring: it can search the graph, trace what a result rests on and move between "
+        "neighbouring results, and some subject files are large.", "",
         "## Start here", "",
         f"- [Conventions]({u}conventions.md): how the graph is written",
         f"- [Every result, by subject]({u}results/index.html)",
