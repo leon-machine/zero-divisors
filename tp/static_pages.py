@@ -276,7 +276,8 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
     with open(os.path.join(site, "llms.txt"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(llms))
     if site_url:
-        urls = [site_url, site_url + "results/index.html"] + [f"{site_url}results/{x}.html" for x in sorted(ents)]
+        urls = ([site_url] + [site_url + p for p in ("principle.html", "ga.html", "singularity.html")]
+                + [site_url + "results/index.html"]) + [f"{site_url}results/{x}.html" for x in sorted(ents)]
         with open(os.path.join(site, "sitemap.xml"), "w", encoding="utf-8") as fh:
             fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                      + "".join(f"<url><loc>{H(x)}</loc></url>\n" for x in urls) + "</urlset>\n")
