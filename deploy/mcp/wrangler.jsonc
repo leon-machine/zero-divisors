@@ -1,0 +1,26 @@
+// The hosted, read-only MCP endpoint at mcp.zerodivisors.org, on Cloudflare Containers
+// (docs/HOSTING.md). The Worker in src/index.ts passes every request to one container that
+// runs tp/mcp_http.py, built from the repository's Dockerfile. Deployed by
+// .github/workflows/deploy-mcp.yml at each release (and by hand from the Actions page).
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "physics-graph-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "routes": [{ "pattern": "mcp.zerodivisors.org", "custom_domain": true }],
+  "containers": [
+    {
+      "class_name": "GraphServer",
+      // the repository's Dockerfile; the build context is its folder, the repository root
+      "image": "../../Dockerfile",
+      // 1 GiB of memory, a quarter of a CPU: the server holds the store in about 150 MB
+      "instance_type": "basic",
+      "max_instances": 2
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "GRAPH", "class_name": "GraphServer" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GraphServer"] }],
+  "observability": { "enabled": true }
+}

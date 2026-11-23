@@ -1,0 +1,8 @@
+{
+  "name": "physics-graph-mcp",
+  "private": true,
+  "description": "Cloudflare Worker and Container for the hosted MCP endpoint (docs/HOSTING.md)",
+  "scripts": { "deploy": "wrangler deploy" },
+  "dependencies": { "@cloudflare/containers": "latest" },
+  "devDependencies": { "wrangler": "^4" }
+}

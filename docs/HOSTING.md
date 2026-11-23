@@ -27,7 +27,29 @@ Or with Docker, from the repository root:
 
 The image loads the store at start (a few seconds) and then holds it in memory (a few hundred MB).
 
-## Deploy
+## Deploy on Cloudflare (how zerodivisors.org runs it)
+
+`deploy/mcp/` holds a Cloudflare Worker and its Container: the Worker passes every request to
+one container built from this repository's Dockerfile, which sleeps after 15 minutes without a
+request and wakes on the next (about 10 seconds while the store loads). The container type is
+`basic` (1 GiB, a quarter of a CPU); the server holds the store in about 150 MB.
+
+One-off set-up, in the Cloudflare dashboard and on GitHub:
+
+1. Cloudflare: subscribe to the Workers Paid plan (Containers are not on the free plan).
+2. Cloudflare: create an API token from the "Edit Cloudflare Workers" template, scoped to the
+   account and to the zerodivisors.org zone, and note the account id.
+3. GitHub: Settings, Secrets and variables, Actions: add the repository secrets
+   `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+4. GitHub: Actions, deploy-mcp, Run workflow. It builds the image, deploys the Worker with the
+   custom domain mcp.zerodivisors.org, and waits for `/health` to answer.
+5. Set `mcp_url: https://mcp.zerodivisors.org/mcp` in `store/config.yaml` and rebuild the site.
+
+After that, publishing a release redeploys it from the release's tag
+(`.github/workflows/deploy-mcp.yml`). The workflow never runs on pull requests, so their code
+never sees the secrets, and the guard check refuses a contributor's change to `deploy/`.
+
+## Deploy elsewhere
 
 Any host that runs a container and gives it an HTTPS address will do. Choose one that scales to
 zero or has a free allowance, since the server is idle most of the time, and one whose own limits

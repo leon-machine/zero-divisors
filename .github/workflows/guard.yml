@@ -34,7 +34,7 @@ jobs:
               .github/*|tp/*|lib/*|tests/*|legacy/*|tools/*|colony/*|seed/*|site/*|build/*|recipes/*|documents/*|deposits/*|releases/*|\
               store/config.yaml|store/subjects.yaml|store/tombstones.yaml|store/tags.yaml|store/orcid_keys/*|\
               store/.tp-lock.json|store/.tp-layer4.json|store/.tp-reviews-lock.json|store/reviews/redactions.yaml|\
-              Dockerfile|requirements.txt|.gitattributes|.gitignore|.zenodo.json|CITATION.cff|LICENSE*|register_mcp.ps1)
+              Dockerfile|.dockerignore|deploy/*|requirements.txt|.gitattributes|.gitignore|.zenodo.json|CITATION.cff|LICENSE*|register_mcp.ps1)
                 echo "::error file=$f::a contributor's pull request may not change $f"
                 blocked=1 ;;
             esac

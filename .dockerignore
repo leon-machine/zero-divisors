@@ -1,0 +1,17 @@
+# The image needs only what the Dockerfile copies (tp/, lib/, store/, documents/, recipes/,
+# requirements.txt); everything else stays out of the build context.
+.git
+.github
+build
+site
+colony
+deposits
+legacy
+seed
+releases
+proposals
+deploy
+tests
+tools
+**/__pycache__
+store/.tp-cache
