@@ -57,7 +57,7 @@ site_url: "https://zerodivisors.org/"
 # the public, read-only MCP endpoint (tp/mcp_http.py, docs/HOSTING.md), e.g. https://mcp.zerodivisors.org/mcp
 # when set, the Explore with AI page and llms.txt offer it first, so a visitor can connect an AI
 # with no install. Empty until it is hosted.
-mcp_url: ""
+mcp_url: "https://mcp.zerodivisors.org/mcp"
 # the private preview of the site (the claude.ai artifact): used for shared links while site_url is
 # empty and the viewer cannot see the page's own address
 preview_url: "https://claude.ai/artifact/U5uQ2AitmiRZCwEDFEa8qQ"
