@@ -58,6 +58,10 @@ site_url: "https://zerodivisors.org/"
 # when set, the Explore with AI page and llms.txt offer it first, so a visitor can connect an AI
 # with no install. Empty until it is hosted.
 mcp_url: "https://mcp.zerodivisors.org/mcp"
+# the Physics Graph's concept DOI on Zenodo ("all versions"; resolves to the latest release):
+# shown on the site, in llms.txt and in the page's structured data. Each release also has its own
+# version DOI, listed on the Zenodo record.
+doi: "10.5281/zenodo.24462176"
 # the private preview of the site (the claude.ai artifact): used for shared links while site_url is
 # empty and the viewer cannot see the page's own address
 preview_url: "https://claude.ai/artifact/U5uQ2AitmiRZCwEDFEa8qQ"

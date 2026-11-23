@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zero Divisors: geometric algebra, black holes and quantum physics</title>
@@ -13,6 +14,7 @@
 <meta property="og:image" content="/*SITE_URL*/img/share.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<!--__JSONLD__-->
 <script>(function () { var t = "dark"; try { var v = localStorage.getItem("tp-theme"); if (v === "light" || v === "dark") t = v; } catch (e) {} document.documentElement.setAttribute("data-tp-theme", t); })();</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -532,6 +534,8 @@ footer .bmc svg { width: 16px; height: 16px; flex: none; }
     <p>The graph was designed in collaboration with the AI, in the form it found easiest to navigate: separate results linked to what they rest on, read through tools rather than by searching long documents. That same design opens it to others, whether or not they work with an AI of their own.</p>
     <p>By design and where possible, all theorems and proofs are written in geometric algebra. The graph therefore also consolidates the physics it covers into one mathematical framework.</p>
     <p class="aboutnote">Leon Butler is an independent researcher and holds a BSc (Hons) in Mathematics from the University of Manchester.</p>
+    <h3 id="citehead" hidden>How to cite</h3>
+    <p id="citeline" hidden></p>
     <h3>Contact</h3>
     <div class="contactrow" id="contactrow"><button class="btn" type="button" id="contactbtn">Show email address</button></div>
   </div></section>
@@ -2624,7 +2628,7 @@ let docSel = null;
 function releaseLine() {
   const r = DATA.release;
   if (!r) return `<p class="note">A preview: the Physics Graph has not had its first release yet. <a href="#releases">Release notes</a></p>`;
-  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph".${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""} <a href="#releases">Release notes</a></p>`;
+  return `<p class="note">This site shows release ${esc(r.tag)} of the Physics Graph (${esc(r.date)}), archived on Zenodo as "Zero Divisors: Physics Graph"${DATA.doi ? ` (<a class="ref" href="https://doi.org/${esc(DATA.doi)}" target="_blank" rel="noopener">doi:${esc(DATA.doi)}</a>)` : ""}.${r.ahead ? ` This copy also includes ${r.ahead} later change${r.ahead === 1 ? "" : "s"} not yet released.` : ""} <a href="#releases">Release notes</a></p>`;
 }
 // release notes: releases/vX.Y.Z.md, written at each release (RELEASING.md); a small Markdown subset
 function relInline(t) {
@@ -2964,6 +2968,12 @@ document.querySelectorAll(".repolink").forEach(a => {
 });
 // the contact address on About: kept out of the page as text (shifted character codes, reversed) and
 // put together only when a reader asks for it, so that scrapers reading the page do not find it
+// how to cite the Physics Graph (store/config.yaml doi: the concept DOI, which resolves to the latest release)
+if (DATA.doi) {
+  const c = $id("citeline");
+  c.innerHTML = `Leon Butler, <i>Zero Divisors: Physics Graph</i>, Zenodo, <a class="ref" href="https://doi.org/${esc(DATA.doi)}" target="_blank" rel="noopener">doi:${esc(DATA.doi)}</a>. This DOI always leads to the latest release; to cite a fixed version, use that release's own DOI, listed on the Zenodo record.`;
+  c.hidden = false; $id("citehead").hidden = false;
+}
 $id("contactbtn")?.addEventListener("click", () => {
   const a = [112, 114, 102, 49, 111, 108, 100, 112, 106, 67, 107, 119, 100, 112, 49, 117, 104, 111, 119, 120, 101, 111].reverse().map(c => String.fromCharCode(c - 3)).join("");
   const row = $id("contactrow");

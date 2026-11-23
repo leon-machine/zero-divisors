@@ -49,6 +49,28 @@ After that, publishing a release redeploys it from the release's tag
 (`.github/workflows/deploy-mcp.yml`). The workflow never runs on pull requests, so their code
 never sees the secrets, and the guard check refuses a contributor's change to `deploy/`.
 
+## The site on Cloudflare Pages
+
+zerodivisors.org itself is a static site: a Cloudflare Pages project, `zero-divisors`, made by
+direct upload (not connected to git), with the custom domain zerodivisors.org, a proxied CNAME to
+`zero-divisors.pages.dev`, and a redirect rule sending `www.zerodivisors.org/*` to
+`https://zerodivisors.org/${1}` (301). It is deployed by hand from each release's tag
+(RELEASING.md, step 5):
+
+    python -m tp.pdfs && python -m tp.site && python -m tp.pages_bundle
+    npx wrangler login                     # once per computer, in the browser
+    npx wrangler pages deploy build/pages --project-name zero-divisors --branch main
+
+Use wrangler, not the dashboard's drag-and-drop: the dashboard takes at most 1,000 files and
+the site has several thousand (wrangler takes up to 20,000, each at most 25 MiB, which
+`tp.pages_bundle` checks). The site is not built by Cloudflare from git because it needs the
+PDFs, which are compiled with pdflatex and not kept in git, and because it must show the release
+tag rather than whatever is on `main`. A GitHub workflow on release, like deploy-mcp, could do the
+same steps; it needs pdflatex in the runner and the API token to have Cloudflare Pages: Edit.
+
+Leave Cloudflare's Bot Fight Mode off for the zone: it challenges clients that are not browsers,
+which would block AI tools reading `llms.txt` and connecting to mcp.zerodivisors.org.
+
 ## Deploy elsewhere
 
 Any host that runs a container and gives it an HTTPS address will do. Choose one that scales to

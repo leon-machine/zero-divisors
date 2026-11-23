@@ -15,6 +15,7 @@ artifact's file list; the public host serves them):
   open-problems.md      the curated open problems.
   llms.txt              what this is and where an AI should start (llmstxt.org).
   sitemap.xml, robots.txt   when site_url is set.
+  404.html              the page a static host shows for an address the site does not have.
 """
 import html
 import os
@@ -33,7 +34,7 @@ EVIDENCE = {"pass": "machine-checked: its own exact check passes",
             "proof-only": "a written proof, with no machine check",
             "fail": "a check fails", "none": "no check recorded", "unverified": "not checked here"}
 FOLDERS = ("results", "subjects")
-FILES = ("conventions.md", "open-problems.md", "llms.txt", "sitemap.xml", "robots.txt")
+FILES = ("conventions.md", "open-problems.md", "llms.txt", "sitemap.xml", "robots.txt", "404.html")
 
 
 def _claim_html(text, titles):
@@ -114,7 +115,7 @@ def _list(ids, titles, empty="none"):
     return "<ul>" + "".join(f'<li><a href="{H(x)}.html">{H(titles[x])}</a></li>' for x in ids) + "</ul>"
 
 
-def write(site, lab, site_url="", mcp_url="", checks=None):
+def write(site, lab, site_url="", mcp_url="", checks=None, doi=""):
     """Write the pages into `site` from an MCP Lab (tp.mcp_server.Lab); returns how many results."""
     from .site import _display_title, _plain_tex
     st = lab.store
@@ -273,11 +274,16 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         if by_subject.get(s["id"]):
             llms.append(f"- [{s.get('title', s['id'])}]({u}subjects/{s['id']}.md): "
                         f"{s.get('about', '')} ({len(by_subject[s['id']])} results)")
+    if doi:
+        llms += ["", "## Cite", "",
+                 f"- Leon Butler, Zero Divisors: Physics Graph, Zenodo, https://doi.org/{doi} "
+                 "(this DOI leads to the latest release; each release has its own DOI on the Zenodo record)"]
     llms += ["", "## Optional", "",
              "- [The papers on Zenodo](https://zenodo.org/communities/transport-papers)",
              "- [Source repository](https://github.com/leon-machine/zero-divisors)", ""]
     with open(os.path.join(site, "llms.txt"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(llms))
+    _not_found(site, base)
     if site_url:
         urls = ([site_url] + [site_url + p for p in ("principle.html", "ga.html", "singularity.html")]
                 + [site_url + "results/index.html"]) + [f"{site_url}results/{x}.html" for x in sorted(ents)]
@@ -287,3 +293,32 @@ def write(site, lab, site_url="", mcp_url="", checks=None):
         with open(os.path.join(site, "robots.txt"), "w", encoding="utf-8") as fh:
             fh.write(f"User-agent: *\nAllow: /\nSitemap: {site_url}sitemap.xml\n")
     return len(ents)
+
+
+def _not_found(site, base):
+    """site/404.html: what a host shows, with status 404, for an address the site does not have.
+    Static hosts such as Cloudflare Pages otherwise answer every unknown address with the home
+    page and status 200, which search engines index as copies of it. Links are absolute (from the
+    site root) because the page is served at whatever address was asked for."""
+    root = base or "/"
+    page = f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Not found: Zero Divisors</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>
+body {{ margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: #0d1117; color: #e6e6e6; font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif; }}
+main {{ max-width: 34em; padding: 2em; }}
+h1 {{ font-weight: 600; font-size: 1.6em; margin: 0 0 .4em; }}
+a {{ color: #8ab4f8; }}
+</style></head>
+<body><main>
+<h1>This page does not exist</h1>
+<p>The address may be mistyped, or the page may belong to an earlier version of the site.</p>
+<p><a href="{H(root)}">The Physics Graph</a> &middot; <a href="{H(root)}results/index.html">Every result, by subject</a></p>
+</main></body></html>
+"""
+    with open(os.path.join(site, "404.html"), "w", encoding="utf-8") as fh:
+        fh.write(page)
