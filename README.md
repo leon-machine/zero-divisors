@@ -1,5 +1,7 @@
 # Zero Divisors: Physics Graph
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24462176.svg)](https://doi.org/10.5281/zenodo.24462176)
+
 An open, machine-checkable graph of the results of the Transport Papers, a research
 programme that reads general relativity and quantum theory through the zero divisors of
 Clifford algebras. Each result is one entry: its statement at four levels (formal,
@@ -19,11 +21,13 @@ read it, check it and try to break it.
 
 ## Read it with an AI
 
-1. **On the web, with nothing to install**: point an AI that can browse at
-   https://zerodivisors.org/llms.txt, which lists the conventions, every subject as one file in dependency
-   order, and a page for every result. A hosted, read-only MCP endpoint is planned
-   (docs/HOSTING.md); once it is up, its address goes on the site's Explore with AI page.
-2. **On your own computer**, which you need to check drafts or contribute:
+1. **Connect it, with nothing to install**: add `https://mcp.zerodivisors.org/mcp` to your AI
+   as a remote MCP server (in claude.ai, a custom connector). It serves the reading tools:
+   search the graph, trace what a result rests on, move between neighbouring results.
+2. **On the web**: point an AI that can browse at https://zerodivisors.org/llms.txt, which
+   lists the conventions, every subject as one file in dependency order, and a page for every
+   result. The MCP server is better for exploring; these files suit reading a subject whole.
+3. **On your own computer**, which you need to check drafts or contribute:
 
        git clone https://github.com/leon-machine/zero-divisors
        cd zero-divisors
@@ -34,6 +38,13 @@ read it, check it and try to break it.
    call `conventions` first.
 
 To run one result's machine checks: `python -m tp check-one <id> --store store`.
+
+## Cite it
+
+Leon Butler, *Zero Divisors: Physics Graph*, Zenodo,
+[doi:10.5281/zenodo.24462176](https://doi.org/10.5281/zenodo.24462176). That DOI always leads
+to the latest release; to cite a fixed version, use that release's own DOI, listed on the
+Zenodo record. CITATION.cff has the same, and GitHub's "Cite this repository" button reads it.
 
 ## Contribute
 
@@ -97,6 +108,7 @@ Results are licensed CC BY 4.0 and the code MIT (LICENSE.md).
     python -m tp reviews check --store store            expert reviews sealed by ORCID (docs/REVIEWS.md)
     python -m tp release-notes vX.Y.Z                  draft a release's notes (RELEASING.md)
     python -m tp.pdfs                                  compile the documents to site/pdf
+    python -m tp.pages_bundle                          the folder the public host serves (RELEASING.md)
     python -m tp.orcid_link --store store --author LOGIN   ORCID records link the pull request's account
     python -m tp.mcp_server --store store              MCP server over stdio
     python -m tp.mcp_http --store store [--port 8080]   read-only MCP server over HTTP (docs/HOSTING.md)
@@ -136,13 +148,15 @@ the start of its name, for runs whose checks carry no paper labels.
 
 - **Open problems** and **Release notes**.
 - **Explore with AI**: how to connect an AI, and how contributions are checked and credited.
-- **About**: what the site is, how the work came to be and was checked, and a contact button.
+- **About**: what the site is, how the work came to be and was checked, how to cite it, and a contact button.
 
 Beside it, `tp.site` writes pages that need no JavaScript, for AI agents that read the
 web and for search engines (tp/static_pages.py): `results/<id>.html` for every result,
 `results/index.html`, `subjects/<subject>.md` (a whole subject in dependency order),
 `conventions.md`, `open-problems.md`, `llms.txt`, and, once `site_url` is set,
-`sitemap.xml` and `robots.txt`. They are not kept in git; the public host serves them.
+`sitemap.xml` and `robots.txt`, and `404.html` for addresses the site does not have. They
+are not kept in git; the public host serves them. With `site_url` set, the page also carries
+structured data (a schema.org Dataset with the DOI, licence and creator) for search engines.
 
 The arrangement never depends on the papers: they are optional collections.
 Trails are stored documents (`recipes/trail-<subject>.yaml`) with

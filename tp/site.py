@@ -960,19 +960,22 @@ def main(build="build", site="site", store="store", template="universe.template.
             "unreleased": _releases.unreleased(lab, store, st),
             "site_url": _site_url(st.config),
             "mcp_url": str(st.config.get("mcp_url") or ""),
+            "doi": _doi(st.config),
             "preview_url": str(st.config.get("preview_url") or "")}
     _dump({d["id"]: d["blocks"] for d in documents}, os.path.join(ddir, "documents.json"))
     tpl = open(os.path.join(site, template), encoding="utf-8").read()
     html = tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, default=str,
                                                       separators=(",", ":")).replace("<", "\\u003c"))
     html = html.replace("/*SITE_URL*/", _site_url(st.config))
+    html = html.replace("<!--__JSONLD__-->", _jsonld(st.config, data["release"]))
     path = os.path.join(site, out)
     open(path, "w", encoding="utf-8").write(html)
     _share_pages(site, nodes, _site_url(st.config))
     # pages that need no JavaScript, for AI agents and search engines (tp/static_pages.py)
     from . import static_pages
     from .mcp_server import Lab
-    static_pages.write(site, Lab(store), _site_url(st.config), str(st.config.get("mcp_url") or ""))
+    static_pages.write(site, Lab(store), _site_url(st.config), str(st.config.get("mcp_url") or ""),
+                       doi=_doi(st.config))
     _singularity(site, nodes, store, _site_url(st.config))
     _publish_list(site)
     return path
@@ -980,6 +983,51 @@ def main(build="build", site="site", store="store", template="universe.template.
 
 VERDICT_STATE = {"consistent": "hold", "confirms": "hold", "survived": "hold", "tension": "press",
                  "contested": "press", "refutes": "press", "killed": "press"}
+
+
+def _doi(config):
+    """store/config.yaml doi, the Physics Graph's concept DOI on Zenodo, as a bare 10.x/y; '' if unset."""
+    d = str((config or {}).get("doi") or "").strip()
+    return re.sub(r"^(https?://(dx\.)?doi\.org/|doi:)", "", d, flags=re.I)
+
+
+KEYWORDS = ["geometric algebra", "Clifford algebras", "zero divisors", "mathematical physics",
+            "general relativity", "quantum theory", "black holes", "dark matter", "Standard Model",
+            "knowledge graph"]
+
+
+def _jsonld(config, release):
+    """The page's structured data (schema.org Dataset), so search engines and dataset search can
+    read what the site is, who made it, its licence and its DOI. '' when site_url is unset (a
+    preview), since the identifiers would point nowhere."""
+    url = _site_url(config)
+    if not url:
+        return ""
+    d = {"@context": "https://schema.org", "@type": "Dataset",
+         "name": "Zero Divisors: Physics Graph",
+         "alternateName": "Physics Graph of the Transport Papers",
+         "description": ("An open, machine-checked graph of new results in mathematical physics: division "
+                         "by zero in geometric algebra, applied to black holes, quantum theory, dark matter "
+                         "and the Standard Model. Each result is stored with its statement, proof, the "
+                         "results it rests on and an exact machine check."),
+         "url": url,
+         "keywords": KEYWORDS,
+         "license": "https://creativecommons.org/licenses/by/4.0/",
+         "isAccessibleForFree": True,
+         "creator": {"@type": "Person", "name": "Leon Butler", "givenName": "Leon", "familyName": "Butler",
+                     "sameAs": "https://orcid.org/0009-0006-4449-5617"},
+         "distribution": [{"@type": "DataDownload", "encodingFormat": "text/markdown",
+                           "contentUrl": url + "llms.txt"}]}
+    doi = _doi(config)
+    if doi:
+        d["identifier"] = "https://doi.org/" + doi
+        d["sameAs"] = "https://doi.org/" + doi
+    if release and not release.get("ahead"):
+        d["version"] = release["tag"].lstrip("v")
+        if release.get("date"):
+            d["dateModified"] = release["date"]
+    body = json.dumps(d, ensure_ascii=False, indent=1).replace("<", "\\u003c")
+    return f'<script type="application/ld+json">\n{body}\n</script>'
 
 
 def _site_url(config):

@@ -87,3 +87,58 @@ class TestSiteHelpers(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestPublicSite(unittest.TestCase):
+    """The DOI, the structured data, the 404 page and the folder deployed to the static host."""
+
+    def test_doi(self):
+        for v in ("10.5281/zenodo.1", "https://doi.org/10.5281/zenodo.1", "doi:10.5281/zenodo.1",
+                  "https://dx.doi.org/10.5281/zenodo.1"):
+            self.assertEqual(site._doi({"doi": v}), "10.5281/zenodo.1")
+        self.assertEqual(site._doi({}), "")
+
+    def test_jsonld(self):
+        import json
+        self.assertEqual(site._jsonld({}, None), "")
+        cfg = {"site_url": "https://example.org", "doi": "10.5281/zenodo.1"}
+        tag = site._jsonld(cfg, {"tag": "v1.2.0", "date": "2026-11-23", "ahead": 0})
+        self.assertTrue(tag.startswith('<script type="application/ld+json">'))
+        d = json.loads(tag.split(">", 1)[1].rsplit("<", 1)[0])
+        self.assertEqual(d["@type"], "Dataset")
+        self.assertEqual(d["url"], "https://example.org/")
+        self.assertEqual(d["identifier"], "https://doi.org/10.5281/zenodo.1")
+        self.assertEqual(d["version"], "1.2.0")
+        # a copy built past the tag is not that version
+        d = json.loads(site._jsonld(cfg, {"tag": "v1.2.0", "date": "x", "ahead": 3}).split(">", 1)[1].rsplit("<", 1)[0])
+        self.assertNotIn("version", d)
+
+    def test_not_found_page(self):
+        from tp import static_pages
+        with tempfile.TemporaryDirectory() as d:
+            static_pages._not_found(d, "https://example.org/")
+            page = open(os.path.join(d, "404.html"), encoding="utf-8").read()
+            self.assertIn('name="robots" content="noindex"', page)
+            self.assertIn('href="https://example.org/results/index.html"', page)
+            static_pages._not_found(d, "")
+            self.assertIn('href="/results/index.html"', open(os.path.join(d, "404.html"), encoding="utf-8").read())
+
+    def test_pages_bundle(self):
+        from tp import pages_bundle
+        with tempfile.TemporaryDirectory() as d:
+            s, out = os.path.join(d, "site"), os.path.join(d, "out")
+            os.makedirs(os.path.join(s, "results"))
+            for f, t in (("index.html", "<!DOCTYPE html>\n<p>x"), ("universe.template.html", "t"),
+                         ("publish_files.json", "{}"), ("check_runs.json", "{}"), ("guides.yaml", "[]"),
+                         ("404.html", "<!doctype html>"), ("sitemap.xml", "<urlset/>"),
+                         ("results/a.html", "a")):
+                open(os.path.join(s, f), "w").write(t)
+            n, problems, notes = pages_bundle.bundle(s, out)
+            self.assertEqual(sorted(os.listdir(out)), ["404.html", "index.html", "results", "sitemap.xml"])
+            self.assertEqual((n, problems), (4, []))
+            self.assertTrue(any("PDF" in x for x in notes))
+            open(os.path.join(s, "index.html"), "w").write("<meta charset=utf-8>")
+            os.remove(os.path.join(s, "404.html"))
+            _, problems, _ = pages_bundle.bundle(s, out)
+            self.assertTrue(any("DOCTYPE" in p for p in problems))
+            self.assertTrue(any("404" in p for p in problems))

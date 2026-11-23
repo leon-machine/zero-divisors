@@ -44,9 +44,13 @@ taken when enough has been merged to be worth a new version.
 5. Build and publish the public site from the tag (with `site_url` in `store/config.yaml` set to the
    site's public address, so shared links and link previews use it and each result gets its share
    page `site/r/<id>.html`):
-   `git checkout vX.Y.Z && python -m tp.site`, then deploy `site/`, then `git checkout main`.
-   `site/` then also holds the pages that need no JavaScript (`results/`, `subjects/`,
-   `llms.txt`, and with `site_url` set `sitemap.xml` and `robots.txt`); deploy them with the rest.
+   `git checkout vX.Y.Z`, then `python -m tp.pdfs` (the papers' PDFs, needs pdflatex),
+   `python -m tp.site` and `python -m tp.pages_bundle`, which copies what is served into
+   `build/pages` and checks it; then deploy that folder
+   (`npx wrangler pages deploy build/pages --project-name zero-divisors --branch main`;
+   docs/HOSTING.md), then `git checkout -- site/ && git checkout main`. The folder holds the page,
+   the pages that need no JavaScript (`results/`, `subjects/`, `llms.txt`, and with `site_url`
+   set `sitemap.xml` and `robots.txt`), `404.html`, the share pages and the PDFs.
    If the hosted MCP endpoint is running, rebuild and redeploy it from the same tag
    (docs/HOSTING.md).
 6. If the papers' deposits changed in the same period, record them first (before step 3) with

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use the Physics Graph, please cite it as below. To cite a specific release, use that version's DOI on Zenodo."
+message: "If you use the Physics Graph, please cite it as below. The DOI leads to the latest release; to cite a specific release, use that version's DOI, listed on the Zenodo record."
 title: "Zero Divisors: Physics Graph"
 type: dataset
 authors:
@@ -7,6 +7,12 @@ authors:
     given-names: Leon
     orcid: "https://orcid.org/0009-0006-4449-5617"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.24462176"
+url: "https://zerodivisors.org"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24462176"
+    description: "Concept DOI: all versions, resolving to the latest release"
 repository-code: "https://github.com/leon-machine/zero-divisors"
 keywords:
   - Clifford algebras
