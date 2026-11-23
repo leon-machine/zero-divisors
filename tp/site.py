@@ -702,8 +702,7 @@ def main(build="build", site="site", store="store", template="universe.template.
     reviews_on = _reviews.enabled(st.config)
     review_rows = (_reviews.standing(_reviews.load(st.root, st.config, st.entities),
                                      st.entities, st.config) if reviews_on else {})
-    known = {"proved", "imported", "conjectured", "refuted", "postulate", "defined",
-             "live", "confirmed", "killed", "open", "settled"}
+    from .model import RESULT_STATUSES as known
     g["nodes"] = [n for n in g["nodes"] if isinstance(n.get("id"), str)
                   and ID_RE.fullmatch(n["id"]) and n.get("status") in known
                   and n["id"] in lay["positions"]]

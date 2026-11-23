@@ -130,8 +130,9 @@ def notes(tag, date, store, ch=None, since=None):
     lines = [f"# {tag} ({date})", "",
              "<!-- a line or two on the main changes; everything below is generated -->", ""]
     if ch is None:
-        n = len(store.entities)
-        proofs = sum(1 for e in store.entities.values() if e.proofs)
+        from .model import RESULT_STATUSES
+        shown = [e for e in store.entities.values() if e.status in RESULT_STATUSES]
+        n, proofs = len(shown), sum(1 for e in shown if e.proofs)
         lines += [f"The first release of the Physics Graph: {n} results, {proofs} of them with "
                   "proofs, each with its premises, evidence and credit.", ""]
         return "\n".join(lines).rstrip() + "\n"

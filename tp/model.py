@@ -243,6 +243,12 @@ def load_store(root: str) -> Store:
                  open_problems=_read_yaml(os.path.join(root, "open_problems.yaml"), []))
 
 
+# the statuses of the results the graph shows and counts (the site's "results" and the release
+# notes' count): everything but notes (remark, example, setting) and quantity records
+RESULT_STATUSES = frozenset({"proved", "imported", "conjectured", "refuted", "postulate", "defined",
+                             "live", "confirmed", "killed", "open", "settled"})
+
+
 def lock_entry(e: Entity) -> dict:
     assumes = sorted({a for d in e.derivations() if isinstance(d, dict)
                       for a in (d.get("assumes") or [])})
