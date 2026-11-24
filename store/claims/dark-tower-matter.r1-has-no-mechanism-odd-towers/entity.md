@@ -56,6 +56,10 @@ locators:
   label: prop:R1
   line: 799
 extraction:
+  maintainer_pass_2026_11_24:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Scope note, version kept, no statement changed (Leon''s word of 24 November 2026). A note after the deposited text says that the requirement on m/e^2 is the particle model''s reading of a floor on the coupling (synthesis.sheet-relic-bounds-under-e-fix-the-coupling-not-the-cells-mass). The deposited sentences and the edges are unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-20
     date: '2026-11-20'
@@ -93,6 +97,8 @@ extraction:
 
 ## formal
 In this tower and the mirror a quantum's mass is a confinement scale, $m = c\Lambda$ \cite[Prop.~4.7]{ButlerT14}. In the three-dimensional towers the gauge algebra is abelian and the coupling dimensionful, so there is no dimensional transmutation and the cells' masses are bare parameters; the viable phase needs $m/e^{2}$ below $1.1$ to $1.5 \times 10^{-8}$, which nothing in the content protects (no chirality; parity broken by the forced Chern-Simons level). In the five-dimensional towers nothing confines (Computation \claimref{dark-tower-matter.five-dimensional-towers}(ii)) and the quanta are elementary with bare masses. The odd towers carry no asymmetry, so nothing fixes their number either (Observation \claimref{dark-tower-matter.population}). So nothing in the content fixes the masses or the densities that E equates across towers, for about $81$ percent of the dark matter; still less does it supply the particle model's equal masses. T14 already concedes that nothing sets an odd tower's quanta's mass to ours \cite[Rem.~7.8, Sec.~8]{ButlerT14}. What this note adds is the reason, and one correction: T14's Section 8 reads the odd towers' quanta as composites of sectors whose confinement scales the series does not derive, whereas here they are elementary in five dimensions and unconfined in the viable three-dimensional phase. Assembly level.
+
+\emph{Note (E and R3 alone).} The sentence that the viable phase needs $m/e^{2}$ below $1.1$ to $1.5 \times 10^{-8}$ is the particle model's reading, with the cell's mass the nucleon's and metre spacing. On E and R3 alone the cell's mass cancels from that condition, which is a floor on the coupling, $e^{2}$ above $6.3$ to $8.7 \times 10^{7}$ GeV $\times \sqrt{d/d_{b}}$, for every cell mass well below it (Proposition \claimref{synthesis.sheet-relic-bounds-under-e-fix-the-coupling-not-the-cells-mass}); no ratio near $10^{-8}$ needs protecting. The observation's conclusion is unchanged and gains two items: nothing in the content fixes that coupling or the common length either.
 
 ## technical
 At assembly level. In this tower and the mirror a quantum's mass is a confinement scale, $m = c\Lambda$. In the three-dimensional towers the gauge algebra is abelian and the coupling dimensionful, so there is no dimensional transmutation and the cells' masses are bare parameters; the viable phase needs $m/e^{2}$ below $1.1$ to $1.5 \times 10^{-8}$, which nothing in the content protects (no chirality, and parity broken by the forced Chern-Simons level). In the five-dimensional towers nothing confines and the quanta are elementary with bare masses. The odd towers carry no asymmetry, so nothing fixes their number either.

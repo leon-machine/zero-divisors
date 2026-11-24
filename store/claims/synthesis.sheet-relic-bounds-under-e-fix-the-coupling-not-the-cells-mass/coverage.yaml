@@ -1,0 +1,33 @@
+functions:
+  check_sheet_density_is_fixed_by_e_alone:
+    kind: exact
+    clauses:
+    - "(i) E with V_2 = pi and V_3 = 4 pi/3 gives Sigma = (4/3) rho_b d, as an identity with pi factored out, at five common lengths; at d = d_b it is one nucleon mass per disc of radius d_b"
+  check_depletion_scales_as_x_and_the_mass_cancels_in_phase_t:
+    kind: sampled
+    clauses:
+    - "(ii) the depletion term is X times its particle-model value, at five (mass, length) samples"
+    - "(iii) with P = (m/e^2)^2 the term takes one exact value, 2 Sigma ln/(e^4 a^2 H), for five masses from 1 keV to 1e7 GeV, at three couplings and three lengths"
+    omits: "the depletion law itself is the proof's (and is checked as an identity in dark-tower-matter.survival-sheets); all masses is the proof's"
+  check_phase_t_floor_on_the_coupling:
+    kind: exact
+    clauses:
+    - "(ii) P_max = 2.164e-16, 1.782e-16, 1.21e-16 at g = 3.36, 10.75, 106.75, by rational intervals whose ends agree to the digits stated"
+    - "(iii) the floor 6.376e7, 7.025e7, 8.506e7 GeV at d = d_b, the particle model's reading m/e^2 below 1.471e-8, 1.335e-8, 1.102e-8; one percent under the floor fails and one percent over passes for every sample mass"
+    omits: "the value 25.8 of the logarithm and its dependence on the mass (stated under Limits) are inputs, not checked"
+  check_cluster_bound_scales_as_x_and_loses_the_mass:
+    kind: exact
+    clauses:
+    - "(iv) sqrt(S*) = 1.6856e-7 from the bound 1 cm^2/g, overdensity 1e4, z = 0.3, 3000 km/s; the bound on sin^2 scales exactly as 1/X at five samples; with sin = m/e^2 one floor for every mass, 5.564e6 GeV at d = d_b, more than eleven times below the survival floor"
+    omits: "the choice of 1 cm^2/g within the imported range 0.47 to 2 is the source's; small-angle sin is not expanded"
+  check_full_strength_puts_the_bound_on_the_mass:
+    kind: exact
+    clauses:
+    - "(v) at P = 1 and d = d_b, 8.7e7 GeV passes and 6.3e7 GeV fails at every g; at the nucleon mass the depletion exceeds 4e13"
+    omits: "the composite-strength scalings for clusters (a as 1/m, a fixed) are the proof's argument and are not computed"
+  check_one_length_and_the_five_dimensional_depth:
+    kind: exact
+    clauses:
+    - "(vi) the exponent does not contain m_5 at three quark masses; kappa = 224, 269, 481 (whole parts) at g_s = 106.75, 61.75, 10.75; the confinement length exceeds 1.37e26 m at d = 0.3 m and is below it at 0.1 m for three g_s, with e bracketed by rationals; the survival floor at d = 0.3 m is at least 3.52e7 GeV"
+    omits: "the model itself (pure-glue coefficient 11, the strong-coupling value, evaluation at m_5/20) is the clause's hypothesis"
+untouched_premises: {}

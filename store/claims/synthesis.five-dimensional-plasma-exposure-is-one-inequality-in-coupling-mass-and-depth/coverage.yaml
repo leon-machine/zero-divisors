@@ -1,0 +1,30 @@
+functions:
+  check_zero_mode_coupling_does_not_contain_the_mass:
+    kind: exact
+    clauses:
+    - "(i) g_5^2/(4 pi L) with g_5^2 = 8 pi^3/E_s equals 2 pi^2/(E_s L), with pi factored out, at five (scale, mass, depth) samples; 3.974e-26 at E_s = 1e11 GeV, d = d_b"
+  check_the_inequality_and_its_constant:
+    kind: exact
+    clauses:
+    - "(ii) K = 9.46e15 and 5.09e12 GeV^3 by rational intervals; alpha_4/(c (m/TeV)^2) = K/(E_s m^2 d/d_b) exactly at five samples, and the two forms agree on which side of the limit each sample lies"
+    omits: "the hypotheses (Z) and (PL) and the two coefficients are inputs"
+  check_readings_at_one_gev_and_at_the_rung_scale:
+    kind: exact
+    clauses:
+    - "(iii) a deposit at 1e11 GeV exceeds the limits by 9.46e4 and 50.9 at a GeV (whole parts 946 hundreds and 50); the mass thresholds are 307.6 GeV and 7.1 GeV at 1e11 GeV, d_b (whole parts 307 and 71 tenths); m^2 E_s d is constant along the threshold"
+  check_a_tower_share_relaxes_the_limit:
+    kind: exact
+    clauses:
+    - "(iv) 8/(11 pi + 16) = 0.158; the mass thresholds fall by 2.51"
+    omits: "that the limits go as m^2/rho is the proof's argument from the plasma frequency, not computed"
+  check_short_range_bound_and_binding:
+    kind: sampled
+    clauses:
+    - "(v) sigma_5/(L m) with sigma_5 = 100 beta^2/(mu v)^3 goes exactly as 1/m^2 at three masses; binding at m = 3 E_s/(8 pi) = 1.19e10 GeV for E_s = 1e11 GeV"
+    omits: "the exact stability of the lightest coloured species is the proof's argument from triality"
+  check_the_weaker_coefficient_is_the_square_of_the_charge_bound:
+    kind: exact
+    clauses:
+    - "(vi) (2.8e-14)^2 at a TeV is 7.8e-22; over 4 pi it is 6.2e-23, K = 6.37e13 GeV^3 and the threshold at 1e11 GeV is 25 GeV"
+    omits: "which convention the cited charge bound uses is not established here"
+untouched_premises: {}
