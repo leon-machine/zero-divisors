@@ -52,6 +52,10 @@ locators:
   label: prop:sheetsurvival
   line: 782
 extraction:
+  maintainer_pass_2026_11_24:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Scope note, version kept, no statement changed (Leon''s word of 24 November 2026). A note after the deposited text says that the bounds are the particle model''s reading and gives the form they take on E and R3 alone (synthesis.sheet-relic-bounds-under-e-fix-the-coupling-not-the-cells-mass). The deposited sentences, the edges and the checks are unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-20
     date: '2026-11-20'
@@ -82,6 +86,8 @@ extraction:
 
 ## formal
 Decimal. On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_{1}v = 2P/m$ ($P$ the absorption probability per encounter) depletes a symmetric population logarithmically, $1/N_{f} = 1/N_{0} + (2P/m)\ln(a_{f}/a_{i})/(a^{2}H)$. At the particle model's density a symmetric sheet relic keeps $99$ percent of its number only for $P$ below $1$ to $2 \times 10^{-16}$, the range spanning the number of relativistic species; at $P = 1$ a fraction of order $10^{-14}$ survives ($1.2 \times 10^{-14}$ with the inputs here, K3; T14 gives about $3 \times 10^{-14}$ for the same estimate \cite[Sec.~7.7]{ButlerT14}). In phase (T) this needs $e^{2}/m$ above $7 \times 10^{7}$ to $9 \times 10^{7}$, which also makes the relic collisionless in clusters (threshold $5.9 \times 10^{6}$, from the in-sheet phase-shift bound $1.7 \times 10^{-7}$ of T14b's cluster computation \cite[Comp.~3.3, Prem.~2.12]{ButlerT14b}) (K4). Phase (C) fails the particle model's density by itself.
+
+\emph{Note (E and R3 alone).} The bounds above are stated at the particle model's density, the nucleon's mass and metre spacing. With the cell's mass $m$ and the common length $d$ free, the depletion is $(d/d_{b})(m_{N}/m)^{2}$ times the value used here, and in phase (T) the mass cancels: the condition is $e^{2}$ above $6.3$ to $8.7 \times 10^{7}$ GeV $\times \sqrt{d/d_{b}}$, of which ``$e^{2}/m$ above $7 \times 10^{7}$ to $9 \times 10^{7}$'' is the reading at $m = m_{N}$, $d = d_{b}$ (Proposition \claimref{synthesis.sheet-relic-bounds-under-e-fix-the-coupling-not-the-cells-mass}).
 
 ## technical
 Decimal, assuming the particle model's density (R1 and R2). On a sheet the comoving number per unit area and the expansion rate both fall as $a^{-2}$ in radiation domination, so two-dimensional s-wave annihilation with $\sigma_1 v = 2P/m$, $P$ the absorption probability per encounter, depletes a symmetric population only logarithmically, $1/N_f = 1/N_0 + (2P/m)\ln(a_f/a_i)/(a^2H)$. A symmetric sheet relic keeps $99$ percent of its number only for $P$ below $1$ to $2 \times 10^{-16}$, the range spanning the number of relativistic species, and at $P = 1$ a fraction of order $10^{-14}$ survives.
