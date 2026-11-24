@@ -1,0 +1,13 @@
+functions:
+  check_fibre_sums_of_asymmetry_and_sea_energy_are_the_generalised_bernoulli_numbers:
+    kind: sampled
+    clauses: ["(ii) for 14 real characters modulo 2M: the twists solve M delta = 1/2 modulo 1, the stored additivity of B_2, multiplicativity of the character on the odd residues, and the two fibre sums against the generalised Bernoulli numbers", "(iii) the parity statement in each case"]
+    omits: "the two sides of (ii) are the same finite sum arranged twice, so this function tests the bookkeeping only; the identification with L-values is hypothesis (H1) and its independent test is the next function; characters that are not real are not sampled"
+  check_the_values_agree_with_class_numbers_and_with_the_divisor_sum_formula:
+    kind: sampled
+    clauses: ["(v) L(0, chi_D) from the generalised Bernoulli number equals 2h(D)/w(D), h by counting reduced forms, for D = -3, -4, -7, -8, -11, -15, -20, -23", "(v) L(-1, chi_D) equals the divisor-sum value for D = 5, 8, 12, 13", "the factors at the primes dividing 2M and not D"]
+    omits: "(H2) and (H3) are classical theorems used as hypotheses; agreement on twelve discriminants is evidence that the conventions are right, not a proof of them"
+  check_the_two_halves_of_the_stored_array_and_the_character_of_the_quarter_turn:
+    kind: exact
+    clauses: ["(iv) B_2(1/4) = B_2(3/4) = -1/48, the asymmetries +-1/2, L(0, chi_4) = 1/2, L(-1, chi_4) = 0, and chi_4(a) as the grade-zero part of -J J^a computed in Cl(2,0) for a = 1..8"]
+    omits: "nothing of (iv)"

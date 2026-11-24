@@ -1,0 +1,6 @@
+W413  synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three
+      6 of 8 perturbations of check_norm_of_the_even_subalgebra_is_a_sum_of_four_squares_and_multiplicative's literals still pass: the check is weak
+W413  synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three
+      6 of 8 perturbations of check_positive_rationals_are_squares_and_positive_semidefinite_matrices_are_sums_of_squares's literals still pass: the check is weak
+
+synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three: 0 error(s), 2 other finding(s); check result: pass
