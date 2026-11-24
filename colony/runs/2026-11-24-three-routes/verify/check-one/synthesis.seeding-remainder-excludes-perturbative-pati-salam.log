@@ -1,0 +1,4 @@
+synthesis.seeding-remainder-excludes-perturbative-pati-salam (version 3): A seeding-relic remainder excludes perturbative Pati-Salam
+  pass  check.py::check_seeding_remainder_excludes_perturbative_pati_salam
+  proof main: a written proof (read it with get_proof)
+all 1 checks passed

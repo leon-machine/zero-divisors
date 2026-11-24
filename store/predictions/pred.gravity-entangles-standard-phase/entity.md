@@ -1,7 +1,7 @@
 ---
 id: pred.gravity-entangles-standard-phase
 kind: prediction
-version: 3
+version: 4
 title: Gravity entangles two masses by the standard phase
 status: live
 subject: one-relation
@@ -24,6 +24,15 @@ credit:
   role: 'basis linked to the operator Newtonian coupling, which derives the phase and its sign; the reading and premises stay outside the store; prediction unchanged'
   version: 3
   source: 'maintainer pass of 2026-11-18 (run 2026-11-18-leads)'
+- name: Claude Fable 5.2
+  role: 'one dated sentence: premise P-v as restated by the third addendum, and the phase unchanged by the canonical pair adopted on 24 November 2026; prediction and kill condition unchanged'
+  version: 4
+  source: 'maintainer pass of 2026-11-24 (run 2026-11-24-three-routes)'
+amendments:
+- version: 4
+  kind: restatement
+  defect: 'the text names premises P-i to P-vi without saying that P-v was restated by the third addendum of 12 October 2026, and says that the series holds no quantised gravitational field without the decision of 24 November 2026, which posits a canonical pair at first order and leaves the phase unchanged'
+  evidence: 'field-theory.operator-newtonian-coupling: check.py::check_operator_coupling_gives_registered_phase'
 review: draft
 kill_condition:
   threshold: A null result at a sensitivity that resolves the standard phase on the experiment's geometry,
@@ -63,6 +72,10 @@ locators:
   number: registration 2026-10-09, third addendum
   label: ''
 extraction:
+  maintainer_pass_2026_11_24_three_routes:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Version 3 -> 4, on Leon''s decision of 24 November 2026. One dated sentence is added at the formal and technical levels and nothing else is touched: premise P-v was restated by the third addendum of 12 October 2026 to the registration (the phase is computed at the instantaneous order), and the canonical pair on the two free directions adopted on 24 November 2026 (synthesis.premise-canonical-pair-on-the-two-null-directions) does not change the phase. The wording of the restated P-v is taken from Leon''s decisions of 24 November; the registration is a working note outside the store and was not read in this pass. The scope sentence of 10 November (that the series holds no quantised gravitational field), the lay level, the one-liner, the kill condition and the status are left as they were; the added sentence says to what extent the decision of 24 November replaces the scope sentence.'
   maintainer_pass_2026_11_18_basis:
     by: maintainer-2026-11-18
     date: '2026-11-18'
@@ -96,7 +109,7 @@ derivations:
 ## formal
 Gravity entangles two masses, each held in a superposition of two places, by the standard phase $\Phi = (G m_A m_B/\hbar)\int (1/r_{11} + 1/r_{22} - 1/r_{12} - 1/r_{21})\,dt$, under the element reading and premises P-i to P-vi.
 
-\emph{Scope.} The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it.
+\emph{Scope.} The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it. \emph{Note (24 November 2026).} Premise P-v was restated by the third addendum of 12 October 2026 to the registration (the phase is computed at the instantaneous order), and the premise adopted by Leon's decision of 24 November 2026, that at first order the two free directions of the gravitational gauge field at null momentum carry a canonical pair (Premise \claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}), which from that date replaces the words above that the series holds no quantised gravitational field, to that extent and no further, does not change the phase.
 
 ## technical
 Registered prediction (registered 2026-10-09; reading chosen 2026-10-12, third addendum). Under the element reading of the frozen-point connection's equations, and under premises P-i to P-vi, held fixed before any result (P-ii is unitary evolution), two masses $m_A$ and $m_B$, each held in a superposition of two places, become entangled by the standard phase
@@ -105,7 +118,7 @@ with $r_{ij}$ the distance between branch $i$ of the first mass and branch $j$ o
 
 The prediction was first registered under the other reading of the same equations, the value reading (a single grade-two connection with real coefficients), as no entanglement; choosing the element reading inverted it. A null result at a sensitivity that resolves the standard phase on the experiment's geometry, with coherence kept for the duration, refutes the element reading together with P-i to P-vi. The phase and its sign are derived in the store from a coupling built from commuting conserved numbers (Proposition \claimref{field-theory.operator-newtonian-coupling}); the element reading and the premises, under which that coupling is the gravitational one, are a working note, not a series paper, and are not stored premises.
 
-The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it.
+The prediction concerns the phase only. It makes no claim about a mediator and is not a test of a quantised gravitational field: the series holds none, gravity here being the classical gauge field of Gauge Theory Gravity with the masses the field theory's fermions. An observed entanglement by the standard phase would agree with this prediction and with every account that gives that phase; only a null result at resolving sensitivity bears on it. \emph{Note (24 November 2026).} Premise P-v was restated by the third addendum of 12 October 2026 to the registration (the phase is computed at the instantaneous order), and the premise adopted by Leon's decision of 24 November 2026, that at first order the two free directions of the gravitational gauge field at null momentum carry a canonical pair (Premise \claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}), which from that date replaces the words above that the series holds no quantised gravitational field, to that extent and no further, does not change the phase.
 
 ## lay
 Take two small masses and put each into a superposition of being in two places at once. This prediction says that, under one of the two readings the framework's equations allow (the element reading, chosen on 12 October 2026) and six premises fixed in advance (P-i to P-vi, one of them that quantum evolution stays unitary), gravity between the masses entangles them by exactly the standard amount, the phase that Newtonian gravity gives in ordinary quantum mechanics. Under the other reading the framework had predicted no entanglement at all. Tabletop experiments have not yet reached this sensitivity; a clear null result at the needed sensitivity, with the superpositions kept coherent throughout, would refute the chosen reading together with its premises. The prediction is about the size of the effect only. It says nothing about what carries gravity between the masses and is not a test of whether gravity comes in quanta: in this framework gravity is a classical field, and seeing the effect would not show otherwise.

@@ -1,0 +1,26 @@
+functions:
+  check_certificate_and_bound_from_values_of_one_party_given_the_other_partys_outcomes:
+    kind: sampled
+    clauses: ["(i) the identity at three configurations of directions on two modes and six values of t, each term equal to y y^dagger with F a self-adjoint idempotent; the identity on four modes with observables that neither commute nor anticommute within a party", "(ii) the value 4 - v^2/2 at t = v/2; the box functional: value 4 and the four values -1/2 at t = 1; s^2 as a non-negative combination of the two outcome idempotents of a direction"]
+    omits: "the identity for all elements is the proof's (it is polynomial of degree two in t and uses only the four relations); the density step that takes (L) to (CP) is the proof's"
+  check_weights_of_records_of_one_party_of_two_modes_give_the_bound:
+    kind: sampled
+    clauses: ["(iii) one function mu on three modes, from a density that is not a state (weight -1/2 on a self-adjoint idempotent): non-negative weights summing to 1 at the four pairs of settings, V = -14/5, the four conditional forms of party 1 without negative direction on the 16 blades of its algebra, and the four values summing to 4 + 2t^2 - 2tV at three t"]
+    omits: "that every admissible mu has linear conditional weights is the stored theorem on additive weights; the check exhibits one mu that comes from a linear functional"
+  check_reversal_on_one_party_is_well_defined_and_fixes_products_of_local_observables:
+    kind: partial
+    clauses: ["Preliminaries: on four modes the 256 monomials are signed blades, each blade once; the twisted generators commute with party 1 and generate party 2's monomials", "(iv) the adjoint and the reversal on monomials; theta^2 = 1; theta commutes with the adjoint; the 100 products of self-adjoint monomials of the two parties are fixed; a product with an anti-self-adjoint factor of party 2 is negated; the module property for party 1 and for a self-adjoint element of party 2, on one sample element"]
+    omits: "general m and n are the proof's; the statements about functionals follow from these identities by linearity"
+  check_reversal_of_the_two_mode_state_and_two_copies_select_the_end_points:
+    kind: partial
+    clauses: ["(v) theta(M_c) = M_{-c} at five c; the four weights of lambda_1; inertia (12,4,0) and (4,0,12)", "(v) two copies: the product functional on all 256 monomials at four c; the weight formula at all sixteen sign choices and four c; the values -3/64 and -1/2; the reversal sends c to -c; the density at c = -1 is 16 times a self-adjoint idempotent; equality of the two end points on the 100 products of self-adjoint monomials; -1/2 on an atom of one copy"]
+    omits: "the formula for every c is the proof's (the weight is a polynomial of degree two in c, checked at four values)"
+  check_one_unitary_between_the_parties_exposes_the_reversed_functional:
+    kind: partial
+    clauses: ["(vi) the instance: u self-adjoint with u^2 = 1 carries the local atom to the joint outcome; weights 1/4, 1/4 before and -1/2, 0 after", "(vi) the two facts behind the orbit: the reflection formula on three pairs of vectors of equal norm; multiplicativity of the rotor norm on two pairs"]
+    omits: "the equivalence itself (orbit of one atom, density of a norm class, continuity) is the proof's; the matrix form of two modes is the stored theorem's clause (i)"
+  check_field_theory_unit_makes_the_separating_blade_a_product_of_local_observables:
+    kind: complete
+    clauses: ["(vii) every relation, in Cl_Q(3,5)"]
+    omits: "nothing; the statement over another ordered field is the same computation with integer structure constants"
+untouched_premises: {}

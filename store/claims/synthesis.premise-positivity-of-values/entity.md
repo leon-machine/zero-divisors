@@ -1,7 +1,7 @@
 ---
 id: synthesis.premise-positivity-of-values
 kind: claim
-version: 2
+version: 3
 title: 'Premise (P): positivity of values'
 status: postulate
 region: synthesis
@@ -21,6 +21,15 @@ credit:
   role: 'premise wording: what the counter-model shows restated (local weights already give the bound in the one-mode realisation); pointers to the results on weights on effects, on the split and on sharp states'
   version: 2
   source: maintainer pass of 2026-11-10
+- name: Claude Fable 5.2
+  role: 'dated note: the bound follows already from (CP), which (P) implies and which does not imply (P); the premise unchanged'
+  version: 3
+  source: 'maintainer pass of 2026-11-24 (run 2026-11-24-three-routes)'
+amendments:
+- version: 3
+  kind: restatement
+  defect: 'the paragraph on what the premise costs said that positivity across settings is not shown to be what the bound needs, and did not record what the bound does need: the stored result on local records gives the bound from Hypothesis (CP), which (P) implies and which does not imply (P); the three clauses of the premise and the split are unchanged'
+  evidence: 'synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them: check.py::check_certificate_and_bound_from_values_of_one_party_given_the_other_partys_outcomes'
 review: draft
 about:
 - obj.std-algebra.clifford-algebra
@@ -34,6 +43,10 @@ lineage:
   - synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional
 extraction:
+  maintainer_pass_2026_11_24_three_routes:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Version 2 -> 3. One dated note at the formal level and one at the technical level, after Leon''s decisions of 24 November 2026: the bound 2 sqrt 2 follows already from Hypothesis (CP) of the stored result on local records, which (P) implies and which does not imply (P). The three clauses of the premise (normalisation, positivity, reality) and the split are unchanged, so results assuming version 2 assume the same premise. By Leon''s decision (RP), the reading that every rational projector can label a record, is not written into this premise. A scope sentence on Krein expectation values was not added: it is not a consequence of stored text and is put to Leon.'
   maintainer_pass_2026_11_10_b:
     by: maintainer-2026-11-10
     date: '2026-11-10'
@@ -91,12 +104,16 @@ What it extends. The stored definition of a state is an element $\rho = \sum_{r}
 
 What it costs, and what it leaves open. Positivity is asked on every element $xx^{\dagger}$, including those that combine quantities which the two parties never measure together, and it is assumed. What the counter-model shows is narrower than version 1 of this premise said: in the one-mode realisation, local weights already give the bound, that is, non-negative weights at every pair of local directions give $\omega(C)^{2} \le 8$ with no positivity on any other element, and the box has a negative weight at such a pair outside its four (Theorem \claimref{synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values}, clauses (ii) and (iii)); positivity across settings is what the box violates, and it is not shown to be what the bound needs. What positivity on all elements adds to non-negative local weights is not visible in the values of products of local observables: a family of functionals with the same values on all of them satisfies (P) at one parameter only (clause (iv) of the same theorem). In terms of weights, (P) is equivalent to: the values of effects are non-negative, normalised and additive, additivity being asked also across effects that do not commute (Theorem \claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects}, clause (ii), for $k = \Q$ and Archimedean ordered $k$); that is the non-contextuality assumption, and it is inside the premise. Under (P) a state sharp on an atom is fixed and its weights are squared norms (Theorem \claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional}); that theorem does not derive (P) or sharpness. No derivation of (P) from the series' account of measurement is stored (the store's Born account, Proposition \claimref{one-relation.measure-indifference-borns-rule-located}, rests on (P) from its version 4 and does not derive it; the envariance argument of Zurek is prior art there), and (P) has not been shown independent of the store's other premises: the counter-model is a functional on one algebra, not a model of the whole store. The premise does not say which self-adjoint elements are observables. In particular it does not decide whether elements odd under the total parity are observables: both settings are recorded side by side (clause (vii) of the theorem above; Theorem \claimref{synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist}). These questions are the open problem op.positivity-of-values.
 
+\emph{Note (24 November 2026).} The bound $\omega(C)^{2} \le 8$ follows already from Hypothesis (CP) of Theorem \claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them}(ii), that a linear normalised functional is non-negative on the elements $s^{2}F$ with $s$ a self-adjoint combination of $1$ and one party's two observables and $F$ an outcome idempotent of the other party; (P) implies (CP), and (CP) does not imply (P), since the reversal on one party of a state satisfies (CP) and need not satisfy (P) (clauses (iv) and (v) of that theorem). The premise is unchanged.
+
 ## technical
 The series' results on correlations between two or three parties speak of the values of elements of a Clifford algebra with rational coefficients (or coefficients in any ordered field). This premise says what a value is: values are given by a state, a linear functional $\omega$ on the algebra with $\omega(1) = 1$ (normalisation), $\omega(xx^{\dagger}) \ge 0$ for every $x$ (positivity) and $\omega(x^{\dagger}) = \omega(x)$ (reality), where the adjoint $\dagger$ is the inverse on blades extended linearly. It is assumed, not derived, and it is not one of the four foundation postulates: those give the algebra, and this is a separate premise about values, which the results using it hold given.
 
 The adjoint is fixed by the choice of generators, so the premise is relative to a split of the generators into those of square $+1$ and those of square $-1$. The split meant is the one that defines the modes, the pairs $e_{j}$, $f_{j}$ of the null pairs. In definite signature the adjoint does not depend on the frame. In indefinite signature another split gives another adjoint, other self-adjoint elements and other states, and a bound that holds under (P) for one split can fail for elements that are self-adjoint for another: a stored example gives the CHSH combination the value $17/4$, above $2\sqrt{2}$ and above $4$. For the mode algebras the stored null pairs, as vectors, fix the split; the two isotropic subspaces alone do not, and what fixes the pairs within them is open.
 
 Under the premise the identity for the square of the CHSH combination, which holds in the algebra without it and needs only the first three foundation postulates, becomes Tsirelson's bound: the squared value is at most $8$. Without the positivity clause the bound fails: a linear, normalised, real functional gives the combination the value $4$, with a legitimate probability table at each of its four pairs of settings, and is negative only on elements that combine different pairs among those four. That does not make positivity across settings the part the bound needs: with one mode per party, non-negative weights at every pair of local directions already give the bound, and the functional has a negative weight at a pair outside its four. In terms of weights the premise says that the values of effects are non-negative, normalised and additive, also across effects that do not commute. The premise extends the stored definition of a state, an element that is a sum of terms $xx^{\dagger}$ of unit trace, from elements to functionals. It does not say which self-adjoint elements are observables, and in particular not whether parity-odd elements are; a derivation of the premise from the series' structure, or a proof that it is independent of the other premises, is an open problem.
+
+(Note, 24 November 2026: the bound follows already from the weaker condition (CP), non-negativity of one party's values on its squares given each outcome of the other party, which (P) implies and which does not imply (P), \claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them}. The premise is unchanged.)
 
 ## lay
 This is an assumption about what the average result of a measurement is. The series builds an algebra of directions from very simple starting points, and its results on correlations between distant experimenters need to say what number an average takes. The assumption, called (P), is that averages are given by a rule with three properties: the average of a sum is the sum of the averages; the trivial quantity 1 has average 1; and a quantity multiplied by its mirror image (its adjoint) never has a negative average, with a quantity and its mirror image having the same average. It is assumed, not proved, and it is not one of the four basic assumptions the algebra itself is built from.

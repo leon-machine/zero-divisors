@@ -29,7 +29,7 @@ derivations:
   - synthesis.positive-structure-is-twistor-form-at-imaginary-time@5
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

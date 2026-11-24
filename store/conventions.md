@@ -402,37 +402,86 @@ Known limits of these conventions (recorded findings, not settled):
 
 ## Gravity and the graviton
 
-Gravity in this series is the classical gauge field of Gauge Theory Gravity. The series holds no quantum of that
-field: the graviton does not exist here. Where stored text says graviton it names a helicity-2 channel of the
-classical field, a counting convention, or prior art; no stored result is to be read as resting on a quantised
-gravitational field, and results that import such a process are flagged.
+Gravity in this series is the gauge field of Gauge Theory Gravity on flat spacetime. What the series holds about a
+quantum of that field was decided in steps, on 10, 18 and 24 November 2026. The Decision of 24 November 2026 is the
+current position. The earlier paragraphs are kept below it as dated history, each with what still stands of it and
+what replaced the rest.
 
-Scope of that position (18 November 2026). At first order the field is fixed by its source at every non-null
-momentum, so processes there (the plasma's production of a gravitationally coupled species among them) need no
-state of the field, given the operator source of that result, (OS), which is kept as its hypothesis (a mean-field
-source gives no such process), and are stored as derived on that hypothesis. What the series says of the two components at null momentum that
-the source does not fix, and whether it requires its gravitational field to commute with matter observables at
-spacelike separation, is not decided: open problem op.gravitational-field-at-null-momentum. Until it is, no
-stored result is to be read as asserting or denying a free part of the field with states of its own.
+Decision (24 November 2026). Premise (TT) is adopted, by Leon's decision of that date
+(`synthesis.premise-canonical-pair-on-the-two-null-directions`): at first order, at each nonzero null momentum, the
+two transverse trace-free directions that the first-order equations of the gravitational gauge field leave free
+carry a canonical pair on polynomials, one mode over $\mathrm{span}\{1, I_{4}\}$ per null momentum, as the stored
+photon modes do (`field-theory.fock-space-maxwell-modes`). It has the photon's status: a pair on polynomials, not an
+element of a floor of the tower, not derived from the tower. Its scope is first order only. This reverses the
+sentence of 10 November 2026 that the series holds no quantum of the gravitational gauge field and posits none: from
+24 November 2026 the series posits states on the two free directions at first order and nothing more (no quantised
+geometry beyond first order, no element of the tower, no self-coupling). Grounds: the series requires no signal
+outside the light cone (the Requirement of 18 November below); a field with no variables of its own fails that (the
+stored lattice results); in the stored lattice model of the first-order field the field's own canonical variables
+with a dressed detection meet it, which is sufficiency in a model, at first order. Limits: the premise is not shown
+necessary, the other way named being the gravitational field as the response of the stored quantum fields, for which
+the store holds no result; and one mass moved alone has no localised dressing (the dipole obstruction), whatever the
+free part is made of. The premise selects no state. The registered entangling phase
+(`pred.gravity-entangles-standard-phase`) is unchanged. The burst ratio of `pred.dimmed-evaporation-bursts` is $(2 +
+g + o)/(1 + g)$; the prediction carries a proviso on the state of the pair near the hole, which the premise does not
+address.
 
-Requirement (18 November 2026). The series requires that no signal pass outside the light cone. So a gravitational
-field with no variables of its own, a field slaved to its source, is not the full account of the field. This
-replaces the clause of the paragraph above that left the requirement undecided. How the requirement is met is not
+What the word graviton names (from 24 November 2026). Where stored text says graviton for a quantum of the
+gravitational field, it names the mode of (TT) at first order: one mode over $\mathrm{span}\{1, I_{4}\}$ at each
+nonzero null momentum, of helicity two, and nothing beyond first order. The three readings of 10 November stay for
+the texts they were written for: a helicity-2 channel of the field, a counting convention, or prior art (the list,
+grouped, is `note.synthesis.where-stored-text-names-a-graviton`). Processes at non-null momentum that their sources
+describe as the exchange of a graviton use no state of that mode: there the first-order field is fixed by its source
+(the Scope paragraph below). No stored result is to be read as resting on quantised geometry beyond first order, on
+a self-coupling of the mode, or on a graviton that is an element of the tower.
+
+Position of 10 November 2026 (history; its second sentence reversed and its last clause restated on 24 November
+2026). The paragraph read: "Gravity in this series is the classical gauge field of Gauge Theory Gravity. The series
+holds no quantum of that field: the graviton does not exist here. Where stored text says graviton it names a
+helicity-2 channel of the classical field, a counting convention, or prior art; no stored result is to be read as
+resting on a quantised gravitational field, and results that import such a process are flagged." As restated: the
+field is the classical gauge field except that, at first order, its two free directions at null momentum carry
+states, by Premise (TT); the sentence that the series holds no quantum of the field and that the graviton does not
+exist here is reversed to that extent and no further; the three readings stay as said above; and no stored result is
+to be read as resting on a quantised gravitational field beyond the mode of (TT) at first order. The flag on the
+imported production rate was replaced on 18 November 2026 by the stored derivation of that rate from the operator
+source, which uses no state of the field.
+
+Scope of that position (18 November 2026; its two closing sentences restated on 24 November 2026). At first order
+the field is fixed by its source at every non-null momentum, so processes there (the plasma's production of a
+gravitationally coupled species among them) need no state of the field, given the operator source of that result,
+(OS), which is kept as its hypothesis (a mean-field source gives no such process), and are stored as derived on that
+hypothesis. This part stands. The paragraph closed, on 18 November: "What the series says of the two components at
+null momentum that the source does not fix, and whether it requires its gravitational field to commute with matter
+observables at spacelike separation, is not decided: open problem op.gravitational-field-at-null-momentum. Until it
+is, no stored result is to be read as asserting or denying a free part of the field with states of its own." Both
+questions are now decided, the requirement on 18 November (next paragraph) and the two components on 24 November
+(the Decision above). As restated: at first order the two components at null momentum carry a canonical pair, by
+Premise (TT); no result stored before 24 November 2026 rests on that free part (none assumes the premise), and a
+text restated in its light says so with the date.
+
+Requirement (18 November 2026; its closing sentence restated on 24 November 2026). The series requires that no
+signal pass outside the light cone. So a gravitational field with no variables of its own, a field slaved to its
+source, is not the full account of the field. This replaced the clause of the paragraph above that left the
+requirement undecided. This part stands. The paragraph closed, on 18 November: "How the requirement is met is not
 decided and stays open problem op.gravitational-field-at-null-momentum: no stored result is to be read as saying
 that the two components at null momentum carry states or variables of their own, that the field has a quantum, or
-that those components carry none.
+that those components carry none." As restated: how the requirement is met at first order is decided by adoption,
+not by derivation: the two components carry a canonical pair of their own (Premise (TT)), on the grounds and within
+the limits of the Decision above. A derivation of the premise, or a proof that the other way named fails, and
+everything beyond first order stay open (open problem op.gravitational-field-at-null-momentum).
 
-The stored results behind the requirement, each with its own label. Proved: at null momentum the first-order field
-has exactly two directions that the source does not fix, the transverse trace-free ones, and four of its ten
-equations are constraints
+The stored results behind the requirement and the decision, each with its own label. Proved: at null momentum the
+first-order field has exactly two directions that the source does not fix, the transverse trace-free ones, and four
+of its ten equations are constraints
 (`synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints`). Proved,
 in an exact two-dimensional lattice Maxwell model with a Gauss constraint (an electromagnetic model; the step to
-gravity is by analogy): a field with no variable of its own fails to commute with matter at a distance, the static
-Coulomb choice on 76 of 82 links with every matter element that does not commute with the charge, and the retarded
-slaved field obeying the field equation with the source's later detection at 878 of 2750 events spacelike to that
-detection, all in the forward cone of the source event; the constraint and the Coulomb dressing do not restore
-commutation, and in that model canonical transverse variables with a string dressing do, which is a statement about
-the model and not about how the series meets the requirement
+gravity was by analogy until the lattice model of the first-order field below): a field with no variable of its own
+fails to commute with matter at a distance, the static Coulomb choice on 76 of 82 links with every matter element
+that does not commute with the charge, and the retarded slaved field obeying the field equation with the source's
+later detection at 878 of 2750 events spacelike to that detection, all in the forward cone of the source event; the
+constraint and the Coulomb dressing do not restore commutation, and in that model canonical transverse variables
+with a string dressing do, which is a statement about that electromagnetic model
 (`synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes`).
 Proved in the stored lattice model under that result's hypothesis (D), that a classical device couples to the slaved
 field by the model's own coupling: the failure is a signal of first order in the device's strength, in a unitary
@@ -440,6 +489,23 @@ model; argued from it: its gravitational size outside the light cone is at most 
 proposed experiments, and of order one for a source near 190 kg at a metre against a superposed mass of $10^{-14}$
 kg; and a survey finds no stored premise that implies commutation or bounds the failure
 (`synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound`).
+Proved, with the counts computed, in an exact periodic lattice model of the stored first-order gravitational field
+with its four constraints (the symmetry of the cube, the lattice's own cone of one site a step, twice the wave
+speed, matter at rest; first order only): with no variable of its own the static slaved field, the Newtonian one,
+fails to commute on 3858 of 4317 curvature components and the retarded one at 8736 of the 9310 events outside the
+detection's lattice cone and inside the source's (3490 of them inside the source's cone of unit speed, 3423 of these
+also outside the detection's); with the field's own canonical variables the detection of a pair of masses in two
+arrangements about one centre, dressed on the string between them, commutes at all 202171 events outside the lattice
+cone and a coupled device has no effect there at any order, as in any local canonical lattice model once a dressing
+of compact support exists; and one mass on two sites has no dressing by one Weyl operator of compact support or of
+confined curvature
+(`synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction`). Proved: on
+one null generator, with channel weights $\pm\tfrac12$, no fermion pair mode has helicity two, and for a coupling at
+a point with no constraint a medium whose own elements commute with the unit $J$ of that model and with one another
+outside the cone commutes exactly with the detection at spacelike events; argued from these: the lowest four-fermion
+modes of helicity two on a generator are not a free part of the kind (TT) posits, and without a constraint
+commutation alone does not force a canonical pair
+(`synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane`).
 
 ## Working with the store
 

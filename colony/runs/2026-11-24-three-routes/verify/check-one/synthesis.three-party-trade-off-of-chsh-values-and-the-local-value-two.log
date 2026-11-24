@@ -1,0 +1,7 @@
+synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two (version 1): Three-party trade-off of CHSH values under positivity (P), and the values 2 and 4
+  pass  check.py::check_sum_and_difference_of_two_observables_anticommute
+  pass  check.py::check_two_chsh_values_sharing_a_party_have_squares_summing_to_at_most_eight
+  pass  check.py::check_commuting_directions_give_square_four_and_values_two
+  pass  check.py::check_pair_state_value_and_what_it_leaves_a_third_party
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

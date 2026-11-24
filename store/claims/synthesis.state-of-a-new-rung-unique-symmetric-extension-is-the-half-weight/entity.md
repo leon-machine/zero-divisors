@@ -28,9 +28,9 @@ derivations:
   - rungs.imported-totality-minimality-completion@6
   - synthesis.set-and-clear-of-a-bit-generate-the-hyperbolic-plane@1
   - synthesis.exchange-of-set-and-clear-is-inner-and-fixed-by-no-integer-state@1
-  - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them@1
+  - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them@2
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

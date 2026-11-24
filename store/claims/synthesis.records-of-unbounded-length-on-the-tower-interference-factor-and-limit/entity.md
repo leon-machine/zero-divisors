@@ -29,7 +29,7 @@ derivations:
   - tower.algebraic-limit-even-charge@3
   - synthesis.imported-powers-stormer-takesaki-disjointness@3
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

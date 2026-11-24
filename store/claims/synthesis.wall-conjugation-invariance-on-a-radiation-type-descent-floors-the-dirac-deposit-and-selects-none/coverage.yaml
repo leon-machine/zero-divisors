@@ -1,0 +1,30 @@
+functions:
+  check_wall_reflection_and_charge_conjugation_in_the_spacetime_algebra:
+    kind: complete
+    clauses: ["(i)(a) W commutes with the mass part and the right unit and anticommutes with the momentum part; W phi(-eta) is a solution exactly for odd M", "(i)(a) c anticommutes with the right unit and carries momentum k to -k; theta = cW is an antilinear symmetry for odd M", "setting: the mode generator squares to -(k^2 + M^2) and is antisymmetric"]
+    omits: "operator identities on the eight even blades at four rational samples of (k, M) (complete by linearity in phi; the dependence on k and M is linear or bilinear); the reduction of W to the unitary sigma_3 on a sector is argued in the text, not checked"
+  check_exactly_two_reflections_of_bloch_vectors_preserve_the_mode_equation:
+    kind: partial
+    clauses: ["(i)(b) of the eight diagonal sign maps exactly O_A and O_B intertwine the Bloch equation with eta -> -eta", "(i)(c) s -> -s preserves the equation at fixed eta"]
+    omits: "only diagonal sign maps are enumerated; that no other orthogonal map qualifies is the two-line argument of the proof; which one-particle map induces which reflection is argued in the text"
+  check_invariant_states_are_a_disk_per_mode_and_the_flow_is_isometric:
+    kind: sampled
+    clauses: ["(ii) O_A-invariance exactly when v(0).sigma_3 = 0, O_B-invariance exactly when v(0) is along sigma_3", "(iii) at mu = 0 the multiples of sigma_1 are stationary and an invariant v(0) with a sigma_2 part is not", "setting: scalar products of solutions are constant"]
+    omits: "power series in eta to order 24 at three (k, mu) and seven initial vectors; the general statement is uniqueness of solutions of a linear equation, in the text"
+  check_late_time_vacuum_series_is_on_the_invariant_circle_to_every_order:
+    kind: partial
+    clauses: ["(iv)(a) the derivative-ordered series: solvability, unit norm, d_1 = c sigma_2/2, residual of order delta^(N+1), O_A covariance, no sigma_3 part at the wall", "(v)(b) the wall-instant vacuum has 1 - S(0).sigma_1 = delta^2/8 + O(delta^4)"]
+    omits: "exact polynomials through order 6; all orders by the induction and the uniqueness argument in the text; the bound on s_out - S_N (rotation flow, integral of the residual), the existence of s_out and every Hadamard conclusion are in the text, not checked"
+  check_invariant_circle_occupations_and_the_minimum:
+    kind: sampled
+    clauses: ["(iv)(b) q = (s_out(0).sigma_3)^2, equal occupation over s_in and s_out on the circle, n_chi = (1 - sqrt(1-q) cos chi)/2, minimum n_0 with 4 n_0 (1 - n_0) = q, mixtures", "(vi) the opposite point has occupation 1 - n"]
+    omits: "identities of the sphere's geometry at rational points (four vacua, five angles); s_out itself is not computed, any unit vector stands for s_out(0)"
+  check_pair_bound_without_isotropy:
+    kind: sampled
+    clauses: ["(vii) n_k + n_{-k} = 1 - sqrt(1-q) v.m >= 2 n_0 with equality only at v = m; the pair (s_out, s_in) has occupations 0 and q"]
+    omits: "rational points (four vacua, nine vectors); that theta pairs the sectors of k and -k and acts as O_A between them is argued in the text, not checked"
+  check_weber_form_and_transition_probability_bookkeeping:
+    kind: partial
+    clauses: ["(iv)(c) the second-order forms of the mode equation and the Weber index p = -1 - I nu/2", "(iv)(c) the arithmetic of the exponents and the identity 2 sinh(y) exp(-y) = 1 - exp(-2y) on rational values"]
+    omits: "exponent bookkeeping only: the asymptotic form of the parabolic cylinder functions, the connection formula and the reflection formula of the Gamma function are classical facts cited in the text and are not checked; the value q = exp(-pi k^2/mu) is therefore proof-only (confirmed numerically outside the check)"
+untouched_premises: {}

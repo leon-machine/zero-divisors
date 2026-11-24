@@ -1,0 +1,7 @@
+synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit (version 1): Records of unbounded length on the tower: the interference factor and the limit state
+  pass  check.py::check_fock_module_is_the_clifford_algebra_of_the_ladder_pairs
+  pass  check.py::check_interference_factor_on_a_full_basis_for_three_pairs
+  pass  check.py::check_interference_is_full_for_an_element_touching_every_pair
+  pass  check.py::check_record_modes_differ_by_a_fixed_hilbert_schmidt_amount_per_pair
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

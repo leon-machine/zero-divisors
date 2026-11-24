@@ -31,7 +31,7 @@ derivations:
   - synthesis.univalence-even-extension-split@3
   - synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional@1
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

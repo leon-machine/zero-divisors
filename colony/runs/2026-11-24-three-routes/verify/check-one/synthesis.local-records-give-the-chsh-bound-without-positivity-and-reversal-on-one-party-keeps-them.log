@@ -1,0 +1,10 @@
+synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them (version 1): Under (CP) one party's values bound CHSH without (P); local record weights do not fix (P)
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_certificate_and_bound_from_values_of_one_party_given_the_other_partys_outcomes
+  pass  check.py::check_weights_of_records_of_one_party_of_two_modes_give_the_bound
+  pass  check.py::check_weights_of_records_of_one_party_of_three_modes_give_the_bound
+  pass  check.py::check_reversal_on_one_party_is_well_defined_and_fixes_products_of_local_observables
+  pass  check.py::check_reversal_of_the_two_mode_state_and_two_copies_select_the_end_points
+  pass  check.py::check_one_unitary_between_the_parties_exposes_the_reversed_functional
+  pass  check.py::check_field_theory_unit_makes_the_separating_blade_a_product_of_local_observables
+all 7 checks passed

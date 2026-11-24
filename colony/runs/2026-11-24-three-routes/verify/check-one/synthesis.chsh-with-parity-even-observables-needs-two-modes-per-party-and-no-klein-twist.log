@@ -1,0 +1,6 @@
+synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-no-klein-twist (version 1): CHSH with parity-even observables: two modes per party, and no Klein twist
+  pass  check.py::check_even_observables_commute_without_twist_and_one_mode_has_only_the_parity
+  pass  check.py::check_two_modes_per_party_reach_square_eight_with_even_observables_and_even_states
+  pass  check.py::check_twisted_one_mode_split_exceeds_two_only_through_odd_observables
+  proof main: a written proof (read it with get_proof)
+all 3 checks passed

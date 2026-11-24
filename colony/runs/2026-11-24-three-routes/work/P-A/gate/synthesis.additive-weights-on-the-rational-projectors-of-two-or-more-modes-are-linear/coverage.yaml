@@ -1,0 +1,25 @@
+functions:
+  check_three_modes_are_the_rational_matrices_of_size_eight_and_even_elements_are_two_blocks:
+    kind: complete
+    clauses: ["(i) for three modes: the ladder relations, P_0 a self-adjoint idempotent of scalar part 1/8, s_S^dagger s_T = delta P_0, the resolution of 1, the map m on all 64 blades (rank 64, multiplicative on generator times sixteen blades, m of the adjoint is the transpose)", "(i) even blades give matrices that vanish between subsets of different parity, odd blades the opposite; the 32 even blades have rank 32, two blocks of size four"]
+    omits: "the argument for every number of modes is the proof's; only three modes are computed"
+  check_every_positive_rational_is_the_norm_of_a_rational_rotor:
+    kind: sampled
+    clauses: ["(ii) multiplicativity of the rotor norm and the inverse, on three pairs, with the product of Cl(3,0)", "(ii) the induction on primes run for every integer below 300: distinct squares modulo p, a and b with a^2 + b^2 + 1 = m p and m < p, and the resulting rational rotor of norm p; seven sample rationals"]
+    omits: "the pigeonhole count and the induction for all primes are the proof's"
+  check_one_reflection_puts_a_vector_in_a_four_space_isometric_to_the_standard_one:
+    kind: sampled
+    clauses: ["(iii) on six vectors of Q^5 to Q^8: s in four coordinates with s.s = r.r, the reflection in r - s sends s to r, the image of the coordinate four-space has an orthonormal rational basis, contains r and lies in the span of the four coordinates and r", "(iii) the reflection is x -> -m x m^-1 in Cl(5,0), on the four basis vectors for one sample"]
+    omits: "the general statement is three lines of algebra in the proof"
+  check_quadratic_form_on_the_four_space_is_fixed_by_vectors_of_smaller_support:
+    kind: sampled
+    clauses: ["(v) induction step on the six samples: the coordinate forms restricted to W are nonzero, span the dual and fall in at least four classes of proportionality; the evaluations of quadratic forms at vectors of three of the hyperplanes span all ten dimensions and contain the evaluation at r", "(v) the lemma is sharp: with two hyperplanes the rank is 9 and the evaluation at r is not in the span"]
+    omits: "that the restriction of F to W is a quadratic form is the two-mode theorem, used as a premise and not recomputed; the base of the induction is the proof's"
+  check_two_vectors_embed_only_if_their_determinant_is_a_sum_of_three_squares:
+    kind: complete
+    clauses: ["(iv) the identity for the determinant of a pair as the norm of the bivector part of y x~, on four pairs", "(iv) the pair has determinant 7; sums of three squares modulo 8 are never 7; 7 n^2 is 7 modulo 8 for odd n; a sum of three squares divisible by 4 has all three even", "(iv) no solution of 7 n^2 = a^2 + b^2 + c^2 for n below 24, as a redundant search"]
+    omits: "the clearing of denominators is the proof's"
+  check_linear_functionals_give_additive_weights_and_fifteen_values_recover_them:
+    kind: sampled
+    clauses: ["(v) converse and uniqueness for a sample symmetric rho of size five: the frame sums on three orthogonalised frames equal the trace, and rho is recovered from the values at e_i and e_i + e_j", "(vi) the sample is negative on one ray (value -4/7), so additivity does not give the sign"]
+    omits: "the passage from non-negative weights to states is the proof's"

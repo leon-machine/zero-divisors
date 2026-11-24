@@ -1,0 +1,9 @@
+synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes (version 2): Lattice Maxwell in two dimensions: Coulomb slaved field fails, string dressing commutes
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_bare_recombiner_breaks_the_constraint_and_the_string_dressed_one_keeps_it
+  pass  check.py::check_string_dressed_detection_commutes_with_the_field_off_the_string
+  pass  check.py::check_constrained_part_alone_fails_and_the_transverse_part_cancels_it
+  pass  check.py::check_string_shaped_slaved_field_keeps_the_constraint_and_is_not_static
+  pass  check.py::check_in_one_space_dimension_the_constrained_part_is_the_string
+  pass  check.py::check_dynamics_string_dressed_detection_commutes_at_spacelike_events_and_the_slaved_field_does_not
+all 6 checks passed

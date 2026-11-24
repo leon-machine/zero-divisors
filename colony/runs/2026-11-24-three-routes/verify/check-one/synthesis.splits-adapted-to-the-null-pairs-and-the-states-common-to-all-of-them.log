@@ -1,0 +1,7 @@
+synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them (version 1): Splits adapted to the isotropic subspaces of the null pairs; states of (P) common to all
+  pass  check.py::check_adapted_frames_and_the_stored_boosted_frame
+  pass  check.py::check_number_parity_and_sector_projectors_are_self_adjoint_for_every_adapted_split
+  pass  check.py::check_functionals_real_for_all_adapted_splits_are_functions_of_the_number
+  pass  check.py::check_pair_state_depends_on_the_split_and_common_states_stay_at_two
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

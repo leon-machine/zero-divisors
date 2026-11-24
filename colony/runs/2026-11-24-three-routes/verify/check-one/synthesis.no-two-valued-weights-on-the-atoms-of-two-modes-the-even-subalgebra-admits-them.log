@@ -1,0 +1,6 @@
+synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them (version 2): No two-valued weights on the rational atoms of two modes; the even subalgebra admits them
+  pass  check.py::check_eighteen_atoms_in_nine_contexts_admit_no_two_valued_weight
+  pass  check.py::check_square_of_nine_blades_has_no_multiplicative_sign_assignment
+  pass  check.py::check_even_subalgebra_of_two_modes_has_a_two_valued_weight
+  proof main: a written proof (read it with get_proof)
+all 3 checks passed

@@ -1,0 +1,13 @@
+functions:
+  check_chsh_element_is_a_combination_of_four_rational_projectors_in_two_commuting_pairs:
+    kind: complete
+    clauses: ["(i) the settings are self-adjoint of square one and the pairs commute across; the four E_ij are projectors of scalar part 1/2; C = 2(E_11 + E_12 + E_21 - E_22) - 2", "(i) exactly two pairs of the T_ij commute and four anticommute; D_1 + D_2 = C, D_k^2 = 2 + 2K, D_k^3 = 4 D_k, D_1 and D_2 do not commute"]
+    omits: "nothing of clause (i)"
+  check_chsh_element_has_no_decomposition_into_commuting_rational_projectors:
+    kind: complete
+    clauses: ["(ii) C^2 = 4 + 4K, C^3 = 8C, C is not 0 and C^2 is not 8; the kernel projector 1 - C^2/8 is a projector of scalar part 1/2 annihilated by C", "(ii) 8 q^2 = p^2 has no solution in a box (the proof gives the reason)"]
+    omits: "the argument with the joint idempotents and the greatest common divisor is the proof's"
+  check_sum_of_correlators_is_the_linear_value_bounded_for_states_and_four_for_the_box:
+    kind: sampled
+    clauses: ["(iii), (iv) for the states of all atoms with integer entries up to 3: the sum of four correlators computed from weights of projectors equals the value of C, S^2 <= 4 + 4 L(K) <= 8 and S^2 < 8; the largest value is 14/5, at the ray (-1,2,-2,-1), with correlators 3/5, 4/5, 4/5, -3/5", "(v) the functional of value 4: normalised, correlators 1, 1, 1, -1, values 0 and 1/2 on the sixteen joint outcomes, -1/4 on the atom of (1,0,0,1)"]
+    omits: "that every additive function on the projectors is linear is the two-mode theorem, used as a premise and not recomputed; states other than those of atoms are not sampled"

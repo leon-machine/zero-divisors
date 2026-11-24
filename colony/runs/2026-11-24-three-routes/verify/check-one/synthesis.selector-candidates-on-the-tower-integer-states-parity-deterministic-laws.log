@@ -1,0 +1,8 @@
+synthesis.selector-candidates-on-the-tower-integer-states-parity-deterministic-laws (version 1): Four candidates for a selector of outcomes on finite towers: none selects
+  pass  check.py::check_integer_states_of_one_rung_in_the_two_integer_forms
+  pass  check.py::check_parity_gives_two_sectors_and_no_record_superselection
+  pass  check.py::check_no_deterministic_law_on_strings
+  pass  check.py::check_unread_rungs_carry_the_uniform_weight
+  pass  check.py::check_odd_coupling_and_the_stored_descent
+  proof main: a written proof (read it with get_proof)
+all 5 checks passed

@@ -33,7 +33,7 @@ derivations:
   - synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight@1
   - tower.answers-iteration-question@5
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

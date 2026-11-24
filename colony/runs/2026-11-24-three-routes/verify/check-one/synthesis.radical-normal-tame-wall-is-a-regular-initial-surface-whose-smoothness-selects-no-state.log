@@ -1,0 +1,9 @@
+synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state (version 4): A radical-normal tame wall is a regular initial surface that selects no state
+  pass  check.py::check_aligned_tame_walls_regular_iff_radical_normal
+  pass  check.py::check_radiation_origin_is_conformally_a_radical_normal_wall
+  pass  check.py::check_wall_smooth_scalar_solutions_are_a_lagrangian_half
+  pass  check.py::check_wall_smooth_dirac_solutions_are_static_zero_modes
+  pass  check.py::check_radiation_field_smoothness_in_t_depends_on_the_conformal_weight
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_gtg_wall_field_strengths
+all 6 checks passed

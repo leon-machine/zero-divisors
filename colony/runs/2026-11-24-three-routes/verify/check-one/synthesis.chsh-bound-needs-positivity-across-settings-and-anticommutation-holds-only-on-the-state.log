@@ -1,0 +1,4 @@
+synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-holds-only-on-the-state (version 2): A box functional reaches 4: weights at four setting pairs do not bound CHSH; (P) does
+  pass  check.py::check_box_functional_has_value_four_and_fails_positivity_only_across_settings
+  proof main: a written proof (read it with get_proof)
+all 1 checks passed
