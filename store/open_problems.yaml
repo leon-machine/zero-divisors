@@ -272,6 +272,23 @@
       \claimref{synthesis.imported-null-plane-modular-hamiltonian-first-law})
       and test whether the change across cuts is a fixed multiple of the area
       change with a curvature-independent coefficient.
+    - >-
+      New (24 November). Three routes of op.einstein-from-the-field-theory
+      bear on the clauses of (Loc) and are stated there in full. Under
+      Premise (TT)
+      (\claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}),
+      the coupling of a helicity-two mode with states would give the
+      one-coupling clause together with the whole-stress clause (Weinberg
+      1964, 1965; cited from memory, to be read first); the one-coupling half
+      is stored at soft momentum only, and the route ends if (TT) is retired.
+      The self-coupling iteration from the stored first-order bilinear (Deser
+      1970; cited from memory) ends if it cannot close without a premise
+      equivalent to the field-space postulate. The whole-stress clause as a
+      theorem on the Clausius route, the heat read as modular energy through
+      the imported null-plane first law, ends if defining $T$ already needs a
+      variation off the Weyl-flat class; it can deliver the clause for the
+      expected stress only, and must say whether the state-independent
+      anomalous stress is a source (argued).
   success: >-
     A derivation of the one-coupling clause of (Loc), and of its curvature
     clause off the calibrated paths, from the series' structure on the
@@ -1453,7 +1470,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "Leon's aim of 22 October (a field theory from the series' own objects that yields Einstein's equations) and the review of 1 November; the twistor-flat, induced-gravity and attachment-transport results and Leon's decision naming the whole-stress clause, 1 November; the Weyl-flat channel, induced-gravity and Krein-quartet results and Leon's decisions of 2 November (the clause recorded as: the trace-free stress is a source); the null-momentum result accepted 18 November (which stored results test the trace-free channel)"
+  source: "Leon's aim of 22 October (a field theory from the series' own objects that yields Einstein's equations) and the review of 1 November; the twistor-flat, induced-gravity and attachment-transport results and Leon's decision naming the whole-stress clause, 1 November; the Weyl-flat channel, induced-gravity and Krein-quartet results and Leon's decisions of 2 November (the clause recorded as: the trace-free stress is a source); the null-momentum result accepted 18 November (which stored results test the trace-free channel); Leon's decision of 24 November (the canonical pair on the two null directions adopted at first order, Premise (TT)) and the results accepted that day that bear on the routes"
   statement: >-
     Einstein's equations come from Clausius with (C$_{\mathrm{loc}}$), (N$_{+}$)
     and (Loc) (\claimref{synthesis.einstein-equations-from-c-loc-and-clausius}),
@@ -1520,6 +1537,38 @@
     $12(\alpha - 1) + 8(1 - 6\xi_{R})$
     (\claimref{synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike}).
     The doublets' curvature coupling $\xi_{R}$ is an open datum.
+
+    (24 November.) By Leon's decision of that day the two free directions of the first-order field at null
+    momentum carry a canonical pair (Premise (TT),
+    \claimref{synthesis.premise-canonical-pair-on-the-two-null-directions};
+    op.gravitational-field-at-null-momentum). The premise is first order, grants no self-coupling and derives
+    no field equation, so it settles nothing here; what it changes is that the route through the coupling of a
+    helicity-two mode with states is open (attack item below). The second way named beside the canonical pair,
+    the gravitational field as the response of the stored quantum fields
+    (\claimref{synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane},
+    Reading; argued), belongs to this problem; it is not adopted, and no stored result realises it. Two
+    observations bear on the routes, both argued from stored texts. First, the stored Clausius theorem takes
+    the stress as an expectation value and as given: its hypothesis (H3) has a given conserved map, classical
+    or a renormalised expectation value (\claimref{synthesis.einstein-equations-from-c-loc-and-clausius}), so
+    that route delivers an equation for the expected stress and nothing at the level of operators or on the
+    two null directions; and the stored inverse-problem result admits the heat tensor as the Hilbert stress
+    up to a matter-independent term (\claimref{synthesis.inverse-problem-for-the-clausius-route}). The
+    anomalous stress of a Hadamard state on a Weyl-flat field is such a term, independent of the state, so the
+    store's routes do not decide whether it is a source; this is the content of the word whole in hypothesis
+    (E) of the trace-anomaly result
+    (\claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}, Reading), and under
+    the response way that term would be a source without further assumption, while (TT) says nothing about
+    it. Second, the stored content's spin-two response has no pole at null momentum without the induced
+    Einstein-Hilbert term. The Weyl-square weights $3, 9, 36$ of the trace anomaly per real scalar, Weyl field
+    and gauge vector are three times the stored channel weights $1, 3, 12$ of the first-order production rate
+    (the same result, clause (ii); computed); for the stored content they sum to $888$, that is $296$ in the
+    units of the channel weights (arithmetic from the stored weights and the stored content, not a stored
+    result). Read as the weight of the spin-two response of the free conformal content, which is from memory
+    and standard and is not proved in the store, this is a continuum with no pole at null momentum; a pole
+    needs the induced Einstein-Hilbert term, whose coefficient the store holds to depend on the cut-off and
+    the gauge
+    (\claimref{synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off}). So the
+    response way is narrowed by a stored result, and is not closed by it.
   attack:
     - "The state on Weyl-curved fields: a Hadamard state where the Weyl curvature is nonzero, derived or imported, from which the renormalised stress, the source, can be built (shared with op.qft-on-gtg-fields)."
     - >-
@@ -1538,11 +1587,51 @@
       (computed, given (OS)). Neither a derivation of the clause nor its independence is obtained.
     - "Induced gravity without a fit: a series datum fixing the cut-off in Planck units, together with the doublets' curvature coupling xi_R (an open datum) and the gauge on which the quadratic coefficient depends."
     - "The modular flow of the matter field theory as the source of (N+) and (Loc)."
+    - >-
+      New (24 November). Under Premise (TT): a mode of helicity two with states couples in a Lorentz-covariant
+      way only to the whole conserved stress, with one coupling constant (Weinberg 1964, 1965; cited from
+      memory, to be read before any import), which would give the whole-stress clause and the one-coupling
+      clause of (Loc) together. The one-coupling half is already stored at soft momentum for point sources
+      (\claimref{synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel},
+      clause (vi); computed, standard), so the route's new content is the whole-stress half. The matter of the
+      stored lattice model has no stress and does not test it
+      (\claimref{synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction}).
+      The argument's hypotheses, a Lorentz-covariant coupling of the mode to matter, are to be set against
+      what (TT) grants: first order, no self-coupling. The route was to end if the requirement of
+      op.gravitational-field-at-null-momentum were met without states; by the decision of 24 November it is
+      met with them, at first order. It would end if (TT) were retired in favour of the response way, under
+      which its antecedent is false.
+    - >-
+      New (24 November). The response way: the gravitational field as the response of the stored quantum
+      fields, with no states of its own on the two null directions. It is the reading under which the
+      anomalous stress is a source without further assumption. It needs a pole at null momentum in the
+      spin-two response of the stored content, which the free content does not have without the induced
+      Einstein-Hilbert term; so it ends unless the cut-off and the gauge of that term are fixed by the series
+      (the item above on induced gravity without a fit; argued), and it would have to be shown to meet the
+      requirement of no signal outside the light cone with the gravitational constraints in place, which no
+      stored result does.
+    - >-
+      New (24 November). The self-coupling iteration (Deser 1970; cited from memory, to be read first)
+      carried out in Gauge Theory Gravity: start from the stored first-order bilinear, couple the first-order
+      field to its own stress, and iterate, with no imported action. It ends if the iteration cannot close
+      without a premise equivalent to the field-space postulate
+      (\claimref{synthesis.field-space-premise-parallel-frozen-point}). No stored result bears on closure:
+      every stored model of the field is first order with commuting constraints.
+    - >-
+      New (24 November). The whole-stress clause as a theorem on the Clausius route: read the heat as modular
+      energy, which the imported null-plane first law equates with the flux $T(k,k)$
+      (\claimref{synthesis.imported-null-plane-modular-hamiltonian-first-law}). It ends if defining $T$
+      already needs a variation off the Weyl-flat class. Two limits from stored texts (argued): the stored
+      Clausius theorem takes $T$ as an expectation value, so the route can deliver the clause for the expected
+      stress only, not at the level of operators; and the modular-energy reading of the heat gives the
+      state-dependent null flux, so it leaves out the state-independent anomalous stress, which the stored
+      inverse-problem result admits as a matter-independent term. The route must say whether that term is a
+      source.
   success: >-
     Einstein's equations from the field theory's consistency with fewer
     premises than the present routes, or a proof that no algebra of the
     series' objects does it.
-  entities: [synthesis.einstein-equations-from-c-loc-and-clausius, synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel, synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off, synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike, synthesis.twistor-flat-fields-give-nordstrom-not-einstein, synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations, synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians, synthesis.field-space-premise-parallel-frozen-point, synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints]
+  entities: [synthesis.einstein-equations-from-c-loc-and-clausius, synthesis.weyl-flat-variations-carry-only-the-stress-trace-and-the-whole-stress-clause-is-the-trace-free-channel, synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off, synthesis.krein-quartet-drops-from-the-induced-einstein-hilbert-coefficient-only-under-a-regulator-that-treats-it-alike, synthesis.twistor-flat-fields-give-nordstrom-not-einstein, synthesis.attachment-modules-give-sakharov-weights-cancelling-at-three-separate-generations, synthesis.imported-lovelock-and-anderson-duchamp-natural-lagrangians, synthesis.field-space-premise-parallel-frozen-point, synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints, synthesis.premise-canonical-pair-on-the-two-null-directions, synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane]
   added: 2026-11-01
 
 - id: op.qft-structural-inputs
@@ -1826,7 +1915,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "The field-theory runs of 1 November: the gravitational side and the quantum side both need a Hadamard state on fields with nonzero Weyl curvature, and the descent's deposit is the series' only state-selecting mechanism; the deposit-state results and Leon's decisions of 1 November (the Hadamard deposit premise adopted, the radiation-type descent a stated hypothesis, the imports); the Hadamard scaling results and Leon's decisions of 2 November ((HS) restated as a statement about the field); the Hadamard scaling-bound results and Leon's decisions of 2 November ((HS) retired to a theorem); the spin-product and thermality results and Leon's decisions of 2 November (notes on (HD) and on (N$_{+}$))"
+  source: "The field-theory runs of 1 November: the gravitational side and the quantum side both need a Hadamard state on fields with nonzero Weyl curvature, and the descent's deposit is the series' only state-selecting mechanism; the deposit-state results and Leon's decisions of 1 November (the Hadamard deposit premise adopted, the radiation-type descent a stated hypothesis, the imports); the Hadamard scaling results and Leon's decisions of 2 November ((HS) restated as a statement about the field); the Hadamard scaling-bound results and Leon's decisions of 2 November ((HS) retired to a theorem); the spin-product and thermality results and Leon's decisions of 2 November (notes on (HD) and on (N$_{+}$)); the wall-conjugation and trace-anomaly results accepted 24 November and Leon's decision of that day (the radiation-type descent restated for the collar only)"
   statement: >-
     The field theory on a gravitational field needs a state: a Hadamard state on
     fields with nonzero Weyl curvature is the one datum needed by the renormalised
@@ -1981,9 +2070,76 @@
     \claimref{synthesis.frozen-point-geometry-reads-descent-as-vacuum}, which assumes the Hadamard
     property, cannot supply it. The premise is also the carrier of (N$_{+}$)'s orientation datum on the
     fields it reaches (op.r-premises-external, 7 November), so deriving it would source that datum.
+
+    (24 November.) Two results and a decision. The wall conjugation
+    (\claimref{synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none};
+    conditional on three named hypotheses, none a stored premise: (RD), the descent is of radiation type down
+    to the wall; (DF), the far side of the wall is the other sign of conformal time, so that $M = ma$ is odd
+    across it; and (CW), the deposited state is invariant under the conjugation across the wall). Which
+    conjugation (proved): a conjugation of the stored type, fixing every point and reversing the energy,
+    exchanges no sides of the wall and has the tracial state as its only invariant state in the isotropic
+    class; the reflection in the wall used as an automorphism reverses the energy, and its invariant Fock
+    states have occupation one half at the wall and tend to one half at large momentum (argued not
+    Hadamard); the route needs the reflection with charge conjugation, or followed by the exchange of
+    particles and holes. No selection (proved): for that conjugation, among quasi-free Dirac states that are
+    homogeneous, isotropic, diagonal in helicity with the same vector in both helicities, and
+    charge-symmetric, the invariant states are a disk of Bloch vectors per mode, so (CW) selects no state.
+    For a massless field every stationary charge-symmetric deposit diagonal over the conformal vacuum is
+    invariant, the thermal ones at every temperature included. The floor: for a massive field the one
+    consequence of the invariance is that the occupation over the late-time vacuum is at least
+    $n_{0}(k) = \tfrac12\bigl(1 - \sqrt{1 - e^{-\pi k^{2}/(ma')}}\bigr)$, attained by one Fock state, and every
+    profile between $n_{0}$ and $1 - n_{0}$ occurs (the floor proved; the exponent given classical facts on
+    Weber functions cited from memory); without isotropy, for the conjugation with charge conjugation, only
+    the bound on each pair of sectors of opposite momenta holds. The floor state is Hadamard given the
+    imported Fact on adiabatic states
+    (\claimref{synthesis.imported-dirac-hadamard-form-propagates-and-adiabatic-states-are-hadamard}); the
+    wall-instant vacuum is invariant and, given the same Fact, not Hadamard; so (CW) neither implies (HD) nor
+    is implied by it. What the bundle trades (argued): the floor state is singled out only by adding purity,
+    least occupation and the orientation that tells the vacuum from the filled sea; that orientation is the
+    datum that (N$_{+}$) assumes and that (HD) already carries where it reaches
+    (\claimref{note.synthesis.n-plus-orientation-datum}), so the bundle of (CW), purity, least occupation and
+    orientation does not source it: it trades (HD) for the same datum and three further clauses. The mirror
+    tension (argued): in either reading of the mirror an invariant quasi-free state gives the two sides equal
+    occupations, a temperature ratio $1$ against the stored cap $0.448$
+    (\claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}); this is a cost of (CW) alone, no stored
+    premise asks the state to be invariant under the exchange, and no stored theorem is contradicted. The
+    profile, the free function and the choice of least number are those of Boyle, Finn and Turok
+    (arXiv:1803.08930, locators confirmed in review; the journal reference is from memory), and no priority is
+    claimed for them. (CW) is not adopted and stays a named hypothesis of that result. The trace anomaly
+    (\claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}; proved given two named
+    hypotheses, neither a stored premise: (A), the standard anomalous trace of a Hadamard state of free
+    conformally covariant content, and (E), the whole expected stress is the source): the exact radiation
+    field $a = t^{1/2}$ solves the field equation for no state and no value of the free coefficient $b$; for
+    a power law the order $t^{-4}$ balances only at an exponent other than $\tfrac12$ (that a solution with it
+    exists is not shown); with $b = 0$ the branch joined to late radiation ends at a positive scale factor,
+    at $T_{\max} \approx 0.86\,\bar{M}_{P}$, before any wall (standard; stated for the series' content, not as
+    new). Computed: the Euler weight of the content is $1016$ real-scalar units ($1008$ without the doublets),
+    $\alpha = 127/(720\pi^{2})$; at the stored ceiling $6 \times 10^{14}$ GeV, read as a temperature, the
+    anomalous density is below $1.7 \times 10^{-15}$ of the total, and on the radiation field the anomalous
+    trace equals the density near one Planck time. So the chain of this problem does not break on a collar at
+    or below the stored ceiling: the deposit results use there a smooth scale factor and the vanishing of the
+    Weyl part, which stand. What does not stand, given (A) and (E), is the extrapolation to the wall. (A) and
+    (E) stay named hypotheses of that result, and nothing is imported. The two results cannot hold with all
+    of (A), (E), (RD) and (DF): the wall-conjugation result is for a test field on a prescribed background,
+    and each result says so. The decision (Leon, 24 November): the radiation-type descent is restated for the
+    collar only. It is a hypothesis about a Cauchy collar of the descent (a smooth scale factor,
+    Weyl-flatness, the conformal vacuum an admissible reference there); it is not a statement that the field
+    is the exact radiation field down to the wall. A result that uses the wall itself (a mass term linear in
+    conformal time through it, a continuation across it, the wall as the initial slice of half of Minkowski
+    space) must name what it assumes there. The sentences above that under the radiation-type descent
+    $M = ma$ is smooth at the origin, and the attack item that states a massive reference at a radiation
+    origin, are to be read with that restriction. Obstruction (O5) is specific to the conformal group: the
+    wall conjugation leaves every stationary charge-symmetric massless deposit invariant, so it neither
+    selects nor excludes a hot deposit. Not stored, argued in working notes of 24 November: the necessity
+    route gives nothing the store requires. The published theorem that finite fluctuations of Wick
+    polynomials force the Hadamard form (Fewster and Verch 2013; cited from memory, not read) is recalled as
+    being for scalar fields on ultrastatic slabs, which does not reach Dirac fields on a Robertson-Walker
+    collar, and every stored requirement uses finitely many moments of the profile (obstruction (O3)); in
+    the stored diagonal class (HD) is equivalent to finiteness of every derivative bilinear, which is a
+    restatement. Both results are transport-absent.
   attack:
     - "Select the profile from the series' structures: a principle of the series that fixes the deposit's occupation profile over the reference vacuum on the collar (for example a deposited I-state at the descent temperature, Hadamard for the massless Dirac field), so that (HD) becomes derived rather than adopted; the Dirac spin product is ruled out as the selector for massless fields."
-    - "Dirac propagation into the horizon results: with the Dirac propagation now imported, carry the propagated deposit to the generators of the collapse result's ingoing sheet through its s-wave reduction, and state a massive reference on a collar of a radiation origin (where M = ma vanishes linearly in conformal time and is smooth)."
+    - "Dirac propagation into the horizon results: with the Dirac propagation now imported, carry the propagated deposit to the generators of the collapse result's ingoing sheet through its s-wave reduction, and state a massive reference on a collar of a radiation origin (where M = ma vanishes linearly in conformal time and is smooth). (24 November: by Leon's decision of that day the radiation-type descent is a hypothesis about the collar only; the clause on M = ma vanishing linearly in conformal time uses the wall itself and must name what it assumes there.)"
     - "The Kasner branch: decide whether a state carried by (P2) across a Weyl-curved Kasner wall can be Hadamard on a collar after the descent, and what reference vacuum it is measured against there."
     - "The ground-state clause of (N+): no Hadamard condition gives it, and on Robertson-Walker generators the conformal vacuum meets it only on de Sitter and flat fields; find the global datum (such as stationarity at the edge) that the deposit would have to carry; on generators each of whose points is the edge of a Killing wedge the clause is equivalent to geometric modular action, which a modular-covariance premise would supply, while the eternal hole is not reached that way."
     - >-
@@ -2010,13 +2166,48 @@
       (\claimref{synthesis.q-splits-maximum-entropy-affine-weights}): any finite set of moment constraints
       with a positive leading power gives an exponential tail and every moment finite, but the principle
       needs a new collar premise naming the flow, since the wall's own pair boost is gauge.
+    - >-
+      Closed by its own condition (24 November;
+      \claimref{synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none}).
+      The item: read the mirror as the far side of the radical-normal wall and require the state to be
+      invariant under the conjugation across it (Boyle, Finn and Turok 2018; arXiv:1803.08930 confirmed in
+      review, the journal reference from memory); it was to end if the profile has a power-law tail or no
+      state is selected. It ended in the second form: under (RD), (DF) and (CW) the invariant states are a
+      disk per mode. The state of least occupation has a Gaussian tail and no free number; the wall-instant
+      vacuum is also invariant and has the stored tail $\mu^{2}/(16k^{4})$. What is left of it: a floor under
+      the massive Dirac deposit, conditional on the three hypotheses, and the bundle with purity, least
+      occupation and orientation, which trades (HD) for the orientation datum and three further clauses
+      (argued) and is in tension with the series' cold mirror (argued). (CW) is not adopted.
+    - >-
+      Done (24 November;
+      \claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}). The item: set the
+      trace anomaly's Euler term ($t^{-4}$) against the density ($t^{-2}$) near the wall, to bound the
+      radiation-type hypothesis or show where the chain breaks. Given (A) and (E) the hypothesis holds on the
+      store's window to within two parts in $10^{15}$ and fails as an extrapolation to the wall. Not done: the
+      solutions with a nonzero free coefficient beyond their power-law origins; massive and interacting
+      content; the Weyl-curved Kasner branch; whether (A) is imported or kept as a hypothesis.
+    - >-
+      Closed (24 November; argued, in working notes, not stored). The item: obtain (HD) from necessity,
+      finite fluctuations of Wick polynomials forcing the Hadamard form (Fewster and Verch 2013; cited from
+      memory, not read); it was to end if the hypotheses do not reach Dirac fields on a Robertson-Walker
+      collar. They do not, as the theorem is recalled, and the store requires only finitely many moments. A
+      requirement that every local bilinear with any number of derivatives have a finite expectation value
+      would give (HD) in the stored diagonal class, and would be a new premise equivalent to it there.
+    - >-
+      New (24 November; Leon's decision of that day on the radiation-type descent). A selection of the state
+      that uses the wall itself must say what it assumes at the wall: that the field equation is not imposed
+      between the wall and the collar, that added content cancels the Euler weight (the stored cancellation
+      needs thirty-six dimension-zero scalars, which the content does not have), or that it works on the
+      collar only. This applies to the item above on the Riemannian far side, which otherwise stays as posed,
+      the massive Dirac case included, and to any junction rule at the wall
+      (op.descent-state-and-spectrum).
   success: >-
     A derivation of (HD) from the series' structure, that is, a selection of
     the deposit's occupation profile over an admissible reference vacuum on a
     Cauchy collar, with the consequences for (N$_{+}$) and the stress tensor;
     or a proof that the deposit is not Hadamard, which would refute (HD) and
     locate the point where the chain fails.
-  entities: [synthesis.hadamard-deposit-premise, synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite, synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard, synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state, synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian, synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard, synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state, synthesis.hadamard-scaling-limit-premise]
+  entities: [synthesis.hadamard-deposit-premise, synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite, synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard, synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoothness-selects-no-state, synthesis.weyl-flat-fields-need-no-scaling-limit-premise-and-robertson-walker-generators-see-the-schwarzian, synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard, synthesis.thermality-of-every-future-half-generator-fixes-the-period-and-the-null-ground-state, synthesis.hadamard-scaling-limit-premise, synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none, synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall]
   added: 2026-11-01
 
 # ---------------------------------------------------------------- walls
@@ -2420,7 +2611,7 @@
   kind: research
   difficulty: frontier
   status: open
-  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side); the six results on positivity and the Born rule accepted 10 November and Leon's decision 4 of that day (the stored Born account rests on (P) and sharpness in place of the imported envariance argument); the additive-weights and running-maxima results accepted 18 November"
+  source: "The CHSH results accepted 10 November and Leon's decisions of 10 November (positivity of values adopted as a named premise, with reality, relative to the split that defines the modes; both parity settings recorded side by side); the six results on positivity and the Born rule accepted 10 November and Leon's decision 4 of that day (the stored Born account rests on (P) and sharpness in place of the imported envariance argument); the additive-weights and running-maxima results accepted 18 November; the results on the parity-even form, on Hypothesis (RP) and on Hypothesis (CP) with the reversal on one party accepted 24 November, and Leon's decision of that day ((RP) a named hypothesis, neither adopted nor rejected; the fork recorded)"
   statement: >-
     Premise (P), positivity of values (\claimref{synthesis.premise-positivity-of-values}), says that values are
     given by a state: a $k$-linear $\omega$ on the Clifford algebra $\Cl_{k}(p,q)$ over an ordered field with
@@ -2432,11 +2623,18 @@
     which stored premise supplies the split that defines the adjoint when the signature is indefinite, and
     whether elements odd under the total parity are observables.
   why: >-
-    Every stored statement about CHSH values holds given (P), and (P) is the only premise about values between
-    the algebra of the foundation and the quantum bound: the identity for the square of the CHSH element is a
-    theorem of the algebra, the bound $2\sqrt{2}$ on its value is not, and without positivity the value $4$
-    occurs. So whether the series derives the quantum limit on correlations, or assumes it in the form of (P),
-    turns on this problem. The same premise is where the Born rule enters: from 10 November the store's Born
+    Restated 24 November. (P) is the only stored premise about values between the algebra of the foundation and
+    the quantum bound, and until 24 November every stored statement about CHSH values held given (P): the
+    identity for the square of the CHSH element is a theorem of the algebra, the bound $2\sqrt{2}$ on its value
+    is not, and with no sign condition the value $4$ occurs. But (P) is not the least condition that gives the
+    bound. The bound follows already from Hypothesis (CP), non-negative values of one party given each recorded
+    outcome of the other, which (P) implies and which does not imply (P)
+    (\claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them},
+    clauses (ii), (iv) and (v); (CP) is a hypothesis of that result, not a stored premise). So the question whether
+    the series derives the quantum limit on correlations or assumes it has two parts: what supplies the sign on
+    one party's records, which is all the bound needs, and what supplies the rest of (P), which no condition on
+    the weights of local records of two fixed parties fixes (argued in that result). The same premise is where
+    the Born rule enters: from 10 November the store's Born
     account rests on (P) with a sharpness condition, in place of an imported argument, so a derivation of (P) or
     of sharpness is what a derivation of the Born rule in the series now requires.
   known: >-
@@ -2570,6 +2768,69 @@
     orthogonal rational projections, the trace-form theorems of 1995 and 1998 being on the larger logic of all
     idempotents, and the paper of 1995, where the question is posed, is still to be read in full. Not done:
     size three; ordered fields other than $\Q$.
+
+    (24 November, second pass.) Three results and a decision. The parity-even form
+    (\claimref{synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on}; proved, a
+    corollary of the theorem for every size from four, on which it rests entirely): the even subalgebra of
+    $\ell$ modes is the commutant of the pseudoscalar, two matrix blocks of size $2^{\ell-1}$, so for
+    $\ell \ge 3$ every function defined only on the self-adjoint idempotents of the even subalgebra that adds on
+    orthogonal ones is the restriction of a linear map on the even subalgebra. With non-negativity and
+    normalisation it is the restriction of a state of (P), the only one that vanishes on odd elements;
+    vanishing on odd elements is a choice of extension, and other states may restrict to the same weight. For
+    $\ell = 2$ the blocks have size two and the statement fails (a parity weight). No additive weight on the
+    even projectors of three or more modes is two-valued, which answers the question the two-valued result
+    left open (whether three modes suffice: they do). So the tie between the item on which projectors can
+    label a record and the item on parity holds on two modes only: from three modes on, the passage from
+    additive weights to a linear functional needs no projector that is odd under the total parity. The result
+    does not decide whether odd elements are observables, gives no sign, and says nothing of the values of odd
+    elements. Hypothesis (RP)
+    (\claimref{synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-modes}): the reading
+    that every self-adjoint projector with rational coefficients can label a record, with frequencies that are
+    non-negative, do not depend on the context and add on orthogonal projectors. On two modes at the stored
+    settings the CHSH element is $C = 2(E_{11} + E_{12} + E_{21} - E_{22}) - 2$ with four rational projectors,
+    and it is a rational combination of no commuting family of projectors ($C^{3} = 8C$, $C^{2} = 4 + 4K \ne 8$;
+    proved), so no record has $C$ as its mean. The quantity a CHSH test reports, the sum $S$ of four
+    correlators recorded separately, equals $L(C)$ for the linear functional of the two-mode theorem, and under
+    (RP) $S^{2} < 8$, with no assumption on the value of the element $C$ (proved, given the two-mode theorem).
+    That $L(C)$ is the value of $C$ itself stays a convention, or the part of (P) that (RP) does not give. The
+    stored functional of value $4$ is excluded only by the sign on projectors that are not joint local
+    outcomes (computed, restating stored results). (RP) with non-negative additive weights is equivalent to
+    (P) on the projectors, by the two-mode theorem: the result relocates (P) into a statement about records
+    and derives neither (P) nor (RP) (argued, and said in the result). Its extension past two modes is named
+    there and is not carried out or checked. Leon's decision (24 November): (RP) is a named hypothesis,
+    neither adopted nor rejected; it stays a hypothesis of the results that use it, and (P) stays the
+    postulate; the fork (every rational projector, or products of local outcomes only) stays open and is
+    recorded on the attack item below. The bound needs only (CP), and local records do not fix (P)
+    (\claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them}):
+    for two parties holding any numbers of modes, over any ordered field, $4 + 2t^{2} - 2tC$ is for every $t$ a
+    sum of four elements $s^{2}F$, with $s$ a self-adjoint element of one party and $F$ an outcome idempotent
+    of the other, so a normalised linear functional that is non-negative on those elements (Hypothesis (CP), a
+    hypothesis of that result and not a stored premise) has $\lambda(C)^{2} \le 8$, strictly over $\Q$
+    (proved). (P) implies (CP) and (CP) does not imply (P), so the quantum bound needs strictly less than (P).
+    Over $\Q$, for a first party of two or more modes, (CP) follows from weights of that party's records,
+    given each outcome of the other party, that are non-negative, add on orthogonal projectors and have the
+    same marginal for both of the other party's settings, with no linearity assumed and no projector that is
+    not a product of local ones (proved, given the stored theorems on additive weights). The reversal on one
+    party: the adjoint applied on one party's factor is a linear involution, and a state composed with it is a
+    linear, normalised, real functional with the state's weight on every sequence of local records at every
+    number of modes, and the state's values on products of one observable of each party, not on all products
+    of local observables (proved). On two modes the reversal of the state of the stored one-parameter family
+    has weight $-\tfrac12$ on a joint outcome and violates (P), and within that family two copies leave only
+    the state and its reversal (proved). So no condition on the weights of records of local observables of
+    two fixed parties implies (P), while (P) implies all of them: this is argued, in the result's Reading, on
+    the scope of two fixed parties (a laboratory pair), and that the stored recording premises are conditions
+    of that kind is a reading. It is not a model of the whole premise set. It is fragile: one unitary that
+    mixes the parties' modes, followed by a local record, gives the reversed functional a negative weight, and
+    on two modes a linear functional is non-negative on all $xx^{\dagger}$ exactly when one atom has
+    non-negative weight after every unitary (proved for $\Q$ and two modes). Where the unit $I_{4}$ multiplies
+    both parties' elements the blade that separates a state from its reversal is a product of one
+    self-adjoint element of each party (proved); that the reversal is then the partial transposition is prior
+    art cited from memory. Not stored, from working notes of 24 November, each with its label: the Krein-form
+    premise and (P) are not one premise (computed); (N$_{+}$) does not supply the split, being stated on an
+    algebra whose adjoint is already given (argued); the stored recording premises do not imply macroscopic
+    locality (argued, with a certificate computed). The literature the three results name (Wootters; Hardy
+    and Wootters; Caves, Fuchs and Rungta; Barnum and others; Navascues and Wunderlich; Bell) is cited from
+    memory, and nothing of it is imported. All three results are transport-absent.
   attack:
     - >-
       Derive (P) from the series' structure, for instance from the record-chain account of measurement
@@ -2580,7 +2841,17 @@
       positivity, \claimref{synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects}, clause (iv)), and premises that speak only of the values of products of
       local observables cannot supply it on two modes (\claimref{synthesis.local-weights-give-the-chsh-bound-and-do-not-fix-positivity-of-values}, clause (iv); that the stored recording
       premises are of that kind is argued). What remains: a derivation of (P), or of sharpness on an atom,
-      from the measurement premises, or the independence proof.
+      from the measurement premises, or the independence proof. Narrowed further (24 November;
+      \claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them}):
+      the bound itself needs only (CP), which is strictly weaker than (P), so a derivation of the bound and a
+      derivation of (P) are two tasks. The reversal on one party carries the two-mode family to every state and
+      every number of modes: a state and its reversal have the same weight on every sequence of local records
+      (proved), so no condition on such weights for two fixed parties supplies (P) (argued on that scope). What
+      separates the two is a record of a projector that is not a product of local ones, or a local record
+      after a unitary that mixes the parties' modes (proved on two modes over $\Q$). This is still not the
+      independence proof: a reading of the stored postulates on the scope of a laboratory pair found the
+      reversed functional to pass every premise other than (P) (argued, working notes of 24 November, not
+      stored), and it fails as soon as the parties' modes can be brought together and recorded.
     - >-
       Answered in part (10 November; \claimref{synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-them}): in the mode algebras the stored null pairs as vectors
       fix the split, and the two isotropic subspaces they span fix it only up to a positive definite form; that
@@ -2589,7 +2860,15 @@
       as posed: decide which stored premise supplies the split of the generators into squares $+1$ and $-1$ that defines
       the adjoint in indefinite signature. The flag as datum
       (\claimref{dark-matter.premise-flag-as-datum}) is the candidate: test whether its datum fixes the split
-      that defines the modes, or only part of it, and what (P) becomes under a change of flag.
+      that defines the modes, or only part of it, and what (P) becomes under a change of flag. (24 November; from
+      working notes, not stored.) A route through the positive-energy half of the null translations, with
+      states as the vacuum conjugated by elements, is answered in part: (N$_{+}$) does not supply the split,
+      since it is stated on an algebra whose adjoint is already given, and the orientation datum of (N$_{+}$)
+      is a different datum from the split, which the exchange of the two isotropic subspaces leaves unchanged
+      (argued); covariance and locality fix the form along a generator up to scale, and the transverse and
+      internal form stays a datum (argued). What is left: whether the indefinite form of a floor carrying
+      ghost or regulator modes reaches physical values; an expectation in the Krein form there is not a state
+      of (P) unless the vector is an eigenvector of the involution (computed on one floor, not stored).
     - >-
       Decide whether elements odd under the total parity are observables. Both settings are recorded side by
       side: parity-even observables need two modes per party and no twist; the one-mode Klein-twisted
@@ -2601,7 +2880,12 @@
       if univalence is asked to hold after the sector average of an observable as well as before, the
       observable is even or odd (\claimref{synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables}), which is a reading of recording and not a theorem about it,
       recorded side by side with the stationary-implies-even theorem (\claimref{synthesis.univalence-from-even-stationary-dynamics}). Which observables are
-      physical stays open.
+      physical stays open. (24 November;
+      \claimref{synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on}.) The tie
+      between this item and the item on which projectors can label a record holds on two modes only: from
+      three modes on, additive weights on the projectors of the even subalgebra alone are linear on the even
+      subalgebra, and none is two-valued (proved, given the theorem for every size from four). This does not
+      decide the item: it says nothing on whether odd elements are observables or on their values.
     - >-
       Done (10 November; \claimref{synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional}): for every atom of every $\Cl_{k}(p,q)$ and every state sharp on it;
       the stored Born account cites it in place of the imported envariance argument (Leon's decision 4), which
@@ -2621,7 +2905,8 @@
       $\Q$) are restrictions of linear functionals, a statement of Gleason type; two-valued weights are excluded
       there
       (\claimref{synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them}).
-      Not done: more than two modes; other ordered fields.
+      Not done: more than two modes; other ordered fields. (24 November: more than two modes is done, see the
+      paragraph of that day under known; other ordered fields are not.)
     - >-
       Done (18 November;
       \claimref{synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals}):
@@ -2630,7 +2915,22 @@
       are the running maxima among pure-state values for every denominator; this had been computed for
       denominators up to $400$ in the stored check and below $1200$ in a separate computation.
     - >-
-      New (18 November). Which projectors can label a record: every projector with rational coefficients that is
+      Answered in part (24 November). The fork stays open and is recorded here by Leon's decision of 24
+      November: the first reading, that every self-adjoint projector with rational coefficients can label a
+      record, is Hypothesis (RP), a named hypothesis that is neither adopted nor rejected; it stays a hypothesis
+      of the results that use it, and (P) stays the postulate. On the first branch
+      (\claimref{synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-modes}): (RP) with
+      non-negative, context-independent, additive weights is (P) on the projectors, a relocation of (P) and
+      not a derivation of it (argued); the sum of four separately recorded correlators is then bounded,
+      $S^{2} < 8$, with no assumption on the value of the CHSH element, which no record has as its mean
+      (proved on two modes at the stored settings; the extension to more modes is named and not carried out).
+      On the second branch, products of local outcomes only
+      (\claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them}):
+      the bound still follows, from (CP) (proved), and (P) is fixed at no number of modes, by the reversal on
+      one party (argued on the scope of two fixed parties). The tie to the parity item holds on two modes only
+      (\claimref{synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on}). The first
+      step toward more than two modes named below is superseded by the paragraph of 24 November under known.
+      The item as posed (18 November): which projectors can label a record: every projector with rational coefficients that is
       self-adjoint for the split, or only products of local outcomes? On the first reading, with weights that
       are non-negative, do not depend on the context and add on orthogonal projectors, the weights on two modes
       are the restriction of one state of (P), by the result on additive weights, and what (P) still assumes
@@ -2644,6 +2944,30 @@
       positive rationals by positive definite rational forms of dimension at least four (named as the candidate,
       not checked); and the prior art, to be read before the result is described as new: Mushtari, Lobachevskii
       J. Math. 9 (2001) 47, so far read through a summary only.
+    - >-
+      New (24 November). The flag-sector form of (RP): take as record labels only the sector projectors of
+      Witt flags adapted to the split, the family that the wording of the stored recording premise names
+      (\claimref{one-relation.recorded-sectors-superselected-premise}; that premise names neither weights nor a
+      sign). These projectors are parity-even and form a proper subfamily of the even projectors, which the
+      corollary on even projectors does not cover
+      (\claimref{synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on}, note). On
+      two modes the family gives nothing, the blocks having size two. An exact test at three modes: decide
+      whether the vacua of the maximal isotropic subspaces of $\Q^{3,3}$ are exactly the rational rays of the
+      two blocks of size four (conjectured; the Klein correspondence, from memory). If they are, the
+      corollary applies to them, and the flag-sector form with non-negative additive frequencies would be (P)
+      on the even subalgebra of three modes, with no projector beyond those the recording premises already
+      name. It ends at three modes if the identification fails. For four or more modes
+      the flag vacua are a proper subfamily of the rays and the question is open either way. Nothing of this
+      is computed.
+    - >-
+      New (24 November; conjectured). Decide whether a functional whose weights on products of local records
+      are non-negative at every number of copies is a state or the reversal of a state on one party. Known:
+      within the stored one-parameter family on two modes, two copies leave exactly the state and its reversal
+      (\claimref{synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them},
+      clause (v)). The general question is that of positivity of maps under tensor powers (prior art, cited
+      from memory, to be read first). A proof would say that local records at every number of copies fix (P)
+      up to the reversal; a third survivor would be a further candidate for an independence model. Ordered
+      fields other than $\Q$ are not treated.
   success: >-
     (P) derived from the series' structure, or shown independent of the full premise set; with the split that
     defines the adjoint traced to a stored premise (or shown to be a further datum), and the status of
@@ -2662,6 +2986,9 @@
     - synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals
     - synthesis.additive-weights-on-the-rational-projectors-are-linear-in-every-size-from-four
     - synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three
+    - synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on
+    - synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-modes
+    - synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them
   added: "2026-11-10"
 
 # ---------------------------------------------------------------- completion
@@ -4413,6 +4740,12 @@
     $T_{3R}$-odd degree-four part of the square of the Majorana element splits up-type from down-type masses,
     provided its family matrix is not that of the $10$; it needs a dynamics that selects that truncation, and
     with an $S_{3}$-invariant Majorana sector it is family-blind on the light plane (argued).
+  - >-
+    New (24 November). Freedom of $v/H$ by two models over the registered premises, together with $N$ (the
+    route is stated on op.the-number-n). For $\xi G$ at fixed $N$ a two-model result is stored
+    (\claimref{synthesis.d-term-level-free-at-fixed-n}), on a branch the record excludes; what the route adds
+    is the same argument over the full list of registered premises and for both numbers at once. It ends if a
+    stored relation is found that ties $v/H$ to another registered number.
   success: A derived value of $\xi G$ (equivalently of $v/M_{P}$), which would refute the registered premise, or a
     Lagrangian for the rung field with its level as an input (the working branch), a potential consistent with the
     measured Higgs mass and a charged pair and second doublet consistent with collider and flavour limits; and the up-down hierarchy accounted for under the covariant
@@ -4705,6 +5038,14 @@
       If the mass dictionary is revised from pole masses (the face mass form fixed above the lepton
       thresholds), restate the targets (ratio about $210.7$, pair-number threshold about $6.4$ million) and
       say what cancels the logarithmic QED term that exact Koide would then need.
+    - >-
+      New (24 November). One non-Gaussian frozen vacuum for two numbers: the rule that selects the frozen
+      vacuum for the 207 (the first item) would also give, if that state is deposited, the non-Gaussian
+      modulator that op.descent-state-and-spectrum leaves open. It ends if the state has no long-range order.
+      Two remarks (argued): the Hadamard deposit premise and the stored result on invariance across the wall
+      classify quasi-free states only, so a non-Gaussian deposit is outside both; and the non-quasi-free
+      class is the one in which invariance under the exchange of towers and a cold mirror coexist
+      (\claimref{synthesis.cold-mirror-needs-non-equilibrium-descent}, clause (iii)).
   success: >-
     The 207 derived with no fitted number, passing the relabelling-signature condition; a construction that
     needs a second free number does not count.
@@ -5392,6 +5733,14 @@
     expectation is $(2 + o)/(1 + g)$; the value $D = 2 + o$ given above for $g = 0$ is the ratio to a baseline
     from which the term has also been removed, which is not the standard expectation. Which option holds is with
     op.gravitational-field-at-null-momentum.
+
+    (24 November.) By Leon's decision of that day the series posits a canonical pair on the two free directions
+    at null momentum, at first order (Premise (TT),
+    \claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}), which supersedes at first order
+    the sentence of the statement above that the series holds no such quantum; for this problem it changes
+    wording and not the rate, which is a process at non-null momentum, holds under (OS) as stored and does not
+    depend on (TT), while the stored texts that name a graviton are restated on that decision and the burst
+    ratio is $(2 + g + o)/(1 + g)$ (op.gravitational-field-at-null-momentum).
   attack:
     - >-
       First computation: the operator source beyond the static limit. Replace the Newtonian potential of the
@@ -6269,6 +6618,41 @@
     - >-
       Under (UE), carry out the analysis of the largest observed scales that turns the rough ceiling on the
       descent temperature, near $10^{9}$ GeV, into a bound with a stated confidence.
+    - >-
+      New (24 November). A negative settlement by two models: exhibit two deposits that satisfy every stored
+      premise, (HD) included, and differ in their band data. That would prove, on a stated scope, the first
+      half of the negative clause of the success statement. Toward it: adding invariance under the
+      conjugation across the wall does not remove the freedom, the invariant states being a disk per mode
+      with a continuum of them Hadamard
+      (\claimref{synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none},
+      under its three named hypotheses); and no stored requirement uses more than finitely many moments of
+      the profile (argued, working notes of 24 November, not stored). A sorting of the stored postulates into
+      those that name a state and those that say nothing about values exists in the same working notes and
+      is a place to start. It ends if a stored premise is found that ties the band data, which would be the
+      selection the problem asks for.
+    - >-
+      New (24 November). The spectrum as a response: the inverse of the stress two-point function of the
+      wall's modes, as in holographic cosmology (McFadden and Skenderis; cited from memory, to be read
+      before any use). It ends if the count it needs matches no stored count, and it counts only if the
+      amplitude comes from the same structure. A flag to check first: if the count is the coefficient of the
+      stress two-point function of the stored content, its value is $296$ in the units of the stored channel
+      weights (arithmetic from stored weights, not a stored result), which is recalled as far below what the
+      measured amplitude needs in the published fits (conjectured, from memory, not checked).
+    - >-
+      New (24 November). A junction rule for the slice datum from the forcing-half wall data: a
+      scale-invariant spectrum is a slice curvature spectrum linear in $k$. It ends if the rule gives a flat
+      slice. A condition, by Leon's decision of 24 November on the radiation-type descent: ``from the wall
+      data'' presupposes a wall, and given hypotheses (A) and (E) of the trace-anomaly result the exact
+      radiation field with the stored content is not a solution and, for a vanishing free coefficient, the
+      corrected field ends before any wall
+      (\claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}). The route must say
+      which it assumes: the collar only, added content that cancels the Euler weight, or no field equation
+      imposed at the wall.
+    - >-
+      New (24 November). A non-Gaussian deposited state from the rule that would select the frozen vacuum
+      for the 207 (the route is stated on op.non-gaussian-completion): if that state is deposited it is a
+      candidate for the non-Gaussian modulator of the first item above. It ends if the state has no
+      long-range order.
   success: >-
     A mechanism in the series for the measured amplitude and index, with a computed $n_{s}$ to set against the
     measured value; or a proof that the series cannot fix the deposited occupation numbers and that no
@@ -6448,26 +6832,40 @@
   area: quantum-fields
   kind: research
   difficulty: frontier
-  status: reformulated
-  source: "The lattice-model result of 18 November 2026, the working notes of 12 October 2026 behind the registered entanglement prediction, and Leon's decision of 18 November (record as open; no position changed); the three results on the field accepted later on 18 November (the free directions at null momentum, the lattice Maxwell model, the first-order signal) and Leon's decision of that day (the series requires no signal outside the light cone; how the requirement is met is this problem)"
+  status: partial
+  source: "The lattice-model result of 18 November 2026, the working notes of 12 October 2026 behind the registered entanglement prediction, and Leon's decision of 18 November (record as open; no position changed); the three results on the field accepted later on 18 November (the free directions at null momentum, the lattice Maxwell model, the first-order signal) and Leon's decision of that day (the series requires no signal outside the light cone; how the requirement is met is this problem); the lattice model of first-order gravity and the result on helicity-two composites accepted 24 November, and Leon's decision of that day (the canonical pair on the two null directions adopted at first order, Premise (TT))"
   statement: >-
-    Restated 18 November, after Leon's decision of that day. The series requires that no signal pass outside the
-    light cone (conventions, section ``Gravity and the graviton'', the requirement of 18 November 2026). In the
-    stored lattice model a field with no variables of its own, slaved to the matter's operator source, fails to
-    commute with the source's later detection at spacelike separation
+    Restated 24 November, after Leon's decision of that day. The series requires that no signal pass outside the
+    light cone (conventions, section ``Gravity and the graviton'', the requirement of 18 November 2026). At first
+    order the gravitational gauge field is fixed by its source at every non-null momentum; at a null momentum
+    two directions, the transverse trace-free ones, are not, and four of the ten first-order equations are
+    constraints
+    (\claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}).
+    In the stored lattice models a field with no variables of its own, slaved to the matter's operator source,
+    fails to commute with the source's later detection at spacelike separation
     (\claimref{synthesis.field-slaved-to-an-operator-source-does-not-commute-at-spacelike-separation}), and
     under the hypothesis that a classical device couples to such a field the failure is a signal of first order
-    (\claimref{synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound};
-    its transfer to the gravitational field is argued). So, by that decision, a gravitational field with no
-    variables of its own is not the full account of the field. The series holds no quantum of the gravitational
-    gauge field and posits none. At first order the field is fixed by its source at every non-null momentum; at
-    a null momentum two directions, the transverse trace-free ones, are not, and four of the ten first-order
-    equations are constraints
-    (\claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}).
-    Open: how the requirement is met. Whether the two free directions carry states or variables of their own is
-    not decided, in either sense, and no other way of meeting the requirement is stored. Say how the series'
-    gravitational field meets the requirement, and restate the burst baseline and the stored readings that name
-    a graviton to match.
+    (\claimref{synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound});
+    since 24 November both are shown in an exact lattice model of the stored first-order gravitational field
+    with its four constraints, where the transfer to gravity no longer rests on analogy alone
+    (\claimref{synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction}).
+    By Leon's decision of 24 November the requirement is met at first order by the adopted premise (TT)
+    (\claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}): at each nonzero null momentum the
+    two free directions carry a canonical pair on polynomials, one mode over $\mathrm{span}\{1, I_{4}\}$, as the
+    stored photon modes do (\claimref{field-theory.fock-space-maxwell-modes}). The premise has the photon's
+    status: a pair on polynomials, not an element of a floor of the tower and not derived from the tower. It
+    reverses the sentence of 10 November 2026, repeated in this statement on 18 November, that the series holds
+    no quantum of the gravitational gauge field and posits none: from 24 November the series posits states on
+    the two free directions at first order and nothing more (no quantised geometry beyond first order, no
+    element of the tower, no self-coupling). What the lattice model shows is sufficiency, in a model and at
+    first order: with the field's own variables the dressed detection of a pair of masses commutes with the
+    field at every event outside the lattice's cone. Necessity is not shown: the other way named, the
+    gravitational field as the response of the stored quantum fields, has no stored result for or against it
+    beyond one that narrows it. Open: a derivation of (TT), or a proof that the response way fails; anything
+    beyond first order; one mass moved alone, which has no dressing of compact support whatever the free part
+    is made of (the dipole obstruction), and its recoil partner (argued, not modelled); dressings by sums of
+    Weyl operators; moving matter. Whether the adoption of (TT) meets the success clause below is not decided,
+    and until it is the problem stays in this file with status partial.
   why: >-
     The third addendum to the entanglement registration (12 October 2026) says that the full theory needs a
     radiative sector with quantum states; the conventions (10 November 2026) say the field has no quantum.
@@ -6475,7 +6873,11 @@
     registered phase does not depend on the answer, but three stored items do: the baseline of the dimmed
     evaporation burst (emission into the helicity-two channels, the term $g$), the ontology readings of the
     note listing where stored text names a graviton, and the one-algebra programme of
-    op.einstein-from-the-field-theory.
+    op.einstein-from-the-field-theory. (24 November.) By Leon's decision of that day the sentence of 10 November
+    is reversed at first order (Premise (TT)), and the three items follow the decision: the burst ratio is
+    $(2 + g + o)/(1 + g)$, the readings of the note listing where stored text names a graviton are restated on
+    the decision, and for the one-algebra programme the route through the coupling of a helicity-two mode opens
+    while the response way stays a standing alternative.
   known: >-
     (18 November.) In the lattice model the slaved field fails to commute with the source's later detection
     at $172$ of $502$ spacelike events; its own bracket vanishes, so the stored locality theorem for free
@@ -6531,6 +6933,75 @@
     cutoff and local-horizon premises, with its scope listed, found none that implies commutation for the
     gravitational field, none that bounds the failure or makes it unobservable, and no other condition in its
     place; that is the outcome of a survey, not a theorem about the store.
+
+    (24 November.) Two results and a decision. The lattice model of first-order gravity
+    (\claimref{synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction};
+    its clauses proved, the counts computed in exact rational arithmetic, its two Readings argued): the stored
+    first-order Einstein map in the gauge $h(e_{0}) = 0$ of a frame, on a periodic cubic lattice in three
+    space dimensions, with four commuting constraints and two transverse trace-free pairs at each nonzero
+    momentum; matter is a pair of equal masses in one of two arrangements about one centre. Every statement is
+    about this model: it has the cube's symmetry and no rotations, no Lorentz covariance, matter with no
+    momentum or stress, and the lattice's own cone of one site a step, twice the wave speed. With no variable
+    of its own the constraints do not fix the field. The static slaved field, the Newtonian one, differs in
+    curvature between the arrangements on $3858$ of $4317$ components away from the string and fails to
+    commute there with every matter element that does not commute with the mass density. The retarded slaved
+    field fails at $8736$ of the $9310$ events outside the lattice's cone of the detection and inside that of
+    the source event, and a coupled device then changes the detection probability at first order at $1304$
+    events not later than the detection. Against a cone of unit speed, $3490$ of the $8736$ are inside the
+    cone of the source event ($3423$ of these also outside the unit-speed cone of the detection) and $5246$
+    are outside it, lattice precursors that a wave of unit speed would not produce. With the field's own
+    variables the detection of the pair dressed on the string commutes with the curvature at all $202171$
+    events outside the lattice's cone, and a coupled device has no effect there at any order; this much holds
+    in any local canonical lattice model once a dressing of compact support exists and is not specific to
+    spin two. The dipole obstruction (proved in the model; standard): the Hamiltonian constraint is a double
+    divergence, so a dressing by one Weyl operator of compact support, or with curvature confined to a box,
+    exists only for a rearrangement that keeps the mass and the centre. One mass moved alone between two sites
+    has none, in the slaved variant as in the other and whatever the free part is made of. The experiment
+    behind the registered prediction is of the single-mass type: the model gives it a local dressed detection
+    only with its recoil partner included, which is argued and not modelled, the model having no momentum of
+    matter. In two space dimensions there is no free part. So the step from the lattice Maxwell model to the
+    gravitational constraints is taken, at first order and in a model, and no longer rests on analogy alone;
+    what it shows is sufficiency of the field's own variables, not their necessity. Helicity-two composites
+    (\claimref{synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane};
+    its clauses proved, its Reading argued throughout): on one null generator, with channel weights
+    $\pm\tfrac12$, no fermion bilinear has helicity two; the lowest four-fermion helicity-two modes have sea
+    values $(q^{3} - q)/6$ (two flavours) and $\binom{q+3}{7}$ (one species) against $q$ for a current, and
+    the two-flavour mode has a commutator that is not a number and no second quantum at $q = 2, 3$; two null
+    momenta sum to a null one only when parallel; and for any medium coupled at a point with no constraint,
+    whose elements commute with one another outside the cone, the field's commutator with the later detection
+    vanishes exactly at spacelike events with no canonical commutator used, while the medium's response
+    depends on its state. Argued from these: the lowest helicity-two four-fermion modes on a generator are not
+    a free part in the sense of the lattice results; that no helicity-two composite on a generator is
+    canonical is argued from two families and not proved; and without a constraint commutation alone does not
+    force a canonical pair, whereas a response that is the same in every state and linear in the source does.
+    Two ways of meeting the requirement are named there, and the list is not shown complete: a canonical pair
+    on the two directions, or the gravitational field as the response of the stored quantum fields
+    (op.einstein-from-the-field-theory). The second is narrowed by a stored result: the spin-two response of
+    the stored free content is a continuum with no pole at null momentum, and a pole needs the induced
+    Einstein-Hilbert term, whose coefficient the store holds to depend on the cut-off
+    (\claimref{synthesis.series-content-induces-a-newton-coupling-only-through-an-unfixed-cut-off}; argued).
+    The decision (Leon, 24 November): the first way is adopted at first order as Premise (TT)
+    (\claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}), a postulate of the series from
+    that date with the photon's status (a pair on polynomials, \claimref{field-theory.fock-space-maxwell-modes};
+    not an element of a floor of the tower, \claimref{field-theory.no-canonical-commutation-relations-tower};
+    not derived from the tower). Its grounds and limits, as decided: the series requires no signal outside the
+    light cone; a field with no variables of its own fails that in the stored lattice results; in the stored
+    lattice model of the first-order field the field's own canonical variables with a dressed detection meet
+    it, which is sufficiency in a model at first order; it is not shown necessary, the other way named being
+    the response of the stored quantum fields, for which the store holds no result; and one mass moved alone
+    has no localised dressing, whatever the free part is made of. It reverses the sentence of 10 November 2026
+    that the series holds no quantum of the gravitational gauge field and posits none, and with it the
+    sentences of 18 November above that no quantum is posited and that whether the two directions carry states
+    is not decided: the series posits states on the two free directions at first order and nothing more. The
+    registered entangling phase is unchanged; it does not depend on (TT). The burst ratio is
+    $(2 + g + o)/(1 + g)$, the option $g_{\mathrm{h}} = g_{\mathrm{s}}$ of the stored theorem's clause (viii);
+    the lattice result's Reading attaches to it the proviso that the state of the pair near a hole is the one
+    regular on the future horizon, as for the other fields, and (TT) selects no state. Not stored, argued in
+    working notes of 24 November: the recording route (the recording premises turning the source into a number
+    before a first-order signal builds) removes the registered entangling phase together with the signal, so
+    it ends by its own condition. The prior art the two results name (Weinberg 1964, 1965; Deser 1970;
+    Weinberg and Witten 1980) is cited from memory and nothing of it is imported. Both results are
+    transport-absent.
   attack:
     - >-
       Answered (18 November;
@@ -6565,9 +7036,19 @@
       equation that is fitted to one detection's time commutes with that detection and fails for a detection at
       another time (computed). With transverse variables, a detection dressed by one Weyl operator along a
       string commutes with the field at every spacelike event. What remains: the same question for the
-      gravitational constraints, where the reading is argued by analogy only.
+      gravitational constraints, where the reading is argued by analogy only. (24 November: done at first
+      order in an exact lattice model with the four gravitational constraints,
+      \claimref{synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction};
+      the three conclusions carry over in the model, and one is added, that one mass moved alone has no
+      dressing of compact support. Sufficiency in a model, not necessity; nothing beyond first order.)
     - >-
-      Restated (18 November;
+      Answered (24 November; Leon's decision of that day,
+      \claimref{synthesis.premise-canonical-pair-on-the-two-null-directions}). The two directions are given
+      states at first order by Premise (TT), by the construction of the stored photon modes, so of the two
+      options below the first holds: the burst ratio is $(2 + g + o)/(1 + g)$, with the proviso of the lattice
+      result's Reading that the state of the pair near a hole is the one regular on the future horizon, which
+      (TT) does not select. The wording of the burst prediction and of the conventions follows that decision.
+      The item as it stood: Restated (18 November;
       \claimref{synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints}).
       The count is made: two free directions at each null momentum, the transverse trace-free ones, forming one
       mode over $\mathrm{span}\{1, I_{4}\}$, and four constraint equations. If the two directions were given
@@ -6584,6 +7065,35 @@
       fraction is read from the abstract of Page's 1976 paper), and the prediction's kill condition, an undimmed
       burst, does not distinguish them. What remains: which option holds, which follows from how the requirement
       is met; then the wording of the burst prediction and of the conventions.
+    - >-
+      Closed negatively on a generator (24 November;
+      \claimref{synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane}).
+      The item: obtain the pair on the two directions as a bilinear current of the light-ray fermions on the
+      generators, the canonical commutator arising as a Schwinger term in the continuum; it was to end if that
+      term vanishes in the trace-free channel. On one generator no fermion bilinear of helicity two exists
+      (proved), the lowest four-fermion modes of helicity two have a commutator that is not a number and are
+      not a free part in the sense of the lattice results (argued from two families), and off the null plane a
+      pair of null momenta is at non-null momentum unless the two are parallel (proved). What is left: the
+      contraction smeared over many generators, and bilinears with transverse derivatives; linear combinations
+      of four-fermion modes, other flavour structures and six or more fermions are not treated. A composite
+      route would be a derivation of (TT) from stored content; none is obtained.
+    - >-
+      Closed negatively (24 November; argued, in working notes, not stored). The item: test whether the
+      recording premises turn the source into a number before a first-order signal builds; it was to end if
+      they give no rate or if the route removes the registered entangling phase. It removes the registered
+      phase together with the signal, since the two carry the same factor, so it ends by its own condition.
+    - >-
+      New (24 November). What stays open under (TT), each a separate task. (a) Derive (TT) from the series'
+      structure, or show that the other way named, the gravitational field as the response of the stored
+      quantum fields, fails; the stored result that the content induces a Newton coupling only through an
+      unfixed cut-off narrows that way and does not close it. (b) Anything beyond first order: (TT) grants no
+      self-coupling and no quantised geometry, and every stored model of the field is first order with
+      commuting constraints. (c) The single mass: model the recoil partner of one mass moved alone, in a model
+      whose matter has momentum, and decide whether the dressed detection of mass and partner together is
+      local; in the stored model this is argued and not modelled. (d) Dressings by sums of Weyl operators,
+      which neither lattice result treats. (e) Moving matter and a cone of unit speed: the stored model has
+      matter at rest and the lattice's own cone, and $5246$ of its $8736$ failures of the retarded slaved
+      field are lattice precursors.
   success: >-
     A stored statement of how the series' gravitational field meets the requirement of no signal outside the
     light cone, derived or adopted as a premise with its grounds; with it the status of the two free directions
@@ -6599,6 +7109,9 @@
     - synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints
     - synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-string-dressed-detection-commutes
     - synthesis.with-a-coupled-device-the-slaved-field-failure-is-a-first-order-signal-and-a-survey-finds-no-stored-bound
+    - synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction
+    - synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane
+    - synthesis.premise-canonical-pair-on-the-two-null-directions
   added: 2026-11-18
 - id: op.the-number-n
   title: "The number N: a counting rule and a selection that fix it, or a proof that it is free"
@@ -6650,6 +7163,26 @@
     - >-
       The kind of number: with the promotion adopted, decide whether any stored result still uses $N$ as a
       parameter of the laws, and restate it if so.
+    - >-
+      New (24 November). Freedom by two models, for $N$ and $v/H$ together: the freedom item above carried
+      out over the full list of registered premises and for both registered numbers (the second is with
+      op.rung-unit), replacing the pattern search. A sorting of the stored postulates into those that name a
+      state and those that say nothing about values exists in working notes of 24 November (not stored) and
+      is a place to start. It ends if a stored relation is found that fixes either number. One candidate
+      relation is excluded (argued): the de Sitter root $H^{2} = \bar{M}_{P}^{2}/(2\alpha)$ of the
+      anomaly-corrected field equation
+      (\claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}, clause (v), given
+      its hypotheses) gives $N$ of order one, not the registered number.
+    - >-
+      New (24 November). The global pair: under the promotion (\claimref{programme.n-parameter-of-the-laws})
+      read $N$ as the state of one pair, $\Lambda$ and its conjugate time. The route has two outcomes:
+      pinning the time leaves $N$ free for a structural reason, and pinning $\Lambda$ derives it. As first
+      posed it asked whether a selection of the state by invariance across the wall fixes the pair; that
+      selection selects no state
+      (\claimref{synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none}),
+      so that form is struck. What can be asked instead: whether the orientation datum, which a symmetry of
+      the wall cannot supply (the same result, clause (vi)), is the same bit for the global pair. No stored
+      result answers it, and the reading of $N$ as the state of a pair is itself to be stated first.
   success: >-
     A derivation of $N$ or of a relation tying it to another registered number, which refutes the premise as
     registered; or a proof on a stated scope that the stored structure selects no counting rule and fixes no

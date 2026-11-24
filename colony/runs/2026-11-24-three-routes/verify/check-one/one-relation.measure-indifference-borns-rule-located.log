@@ -1,0 +1,12 @@
+one-relation.measure-indifference-borns-rule-located (version 4): Born's rule located: the Dirac density; squared-norm weights under (P) for a sharp state
+  ...   running verify_T16.py (the paper's verify script; the first run can take minutes)
+  pass  verify_T16.py: prop:born / lem:current: J^0 = psibar gamma^0 psi = psi^dagger psi is a sum of squared moduli, positive and zero only on the zero state, on exact instances
+  pass  verify_T16.py: prop:born: on n = 2, 3, 4, 5 equal-norm components the weight vectors invariant under all transpositions form a one-dimensional space, the uniform assignment: indifference on an exact orbit forces equality
+  pass  verify_T16.py: prop:born: under an INTRANSITIVE subgroup the conclusion fails: one transposition on four components leaves a three-dimensional invariant space and two disjoint transpositions a two-dimensional one (one dimension per orbit), while the transitive Klein four-group leaves one dimension: equality is forced by transitivity on the components, which is what an exact orbit supplies
+  pass  verify_T16.py: prop:born: fine-graining on three rational instances: equal weight on the constituents adds up to the squared norms on the branches (the step whose additivity presupposition the paper isolates)
+  pass  check.py::check_density_is_positive_and_frame_relative
+  pass  check.py::check_indifference_forces_equality_on_transitive_orbits
+  pass  check.py::check_fine_graining_returns_squared_norms
+  pass  check.py::check_squared_norm_of_the_split_is_the_dirac_density
+  pass  check.py::check_sharp_state_weights_are_squared_norm_ratios
+all 9 checks passed

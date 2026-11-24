@@ -1,0 +1,49 @@
+functions:
+  check_lattice_operators_are_the_stored_first_order_map_in_the_frame_gauge:
+    kind: sampled
+    clauses:
+    - '(1) the three components of the stored first-order Einstein map in the gauge h(e_0) = 0, as vectors of Cl(1,3) and as the leading symbols of the lattice stencils, at three momenta on one symmetric map; the vanishing of the zeroth and first moments of the stencils'
+    omits: 'three momenta and one map: the general statement is the proof''s (the stored formula for the Einstein map); the identification of the lattice operators with the symbols is to leading order in the lattice spacing only, and this function does not tell a forward from a backward difference (replacing s_i s_j by s_i b_j in one stencil leaves it passing): the exact stencils are tested by the identities function'
+  check_displacement_invariance_commuting_constraints_and_two_free_pairs_per_momentum:
+    kind: sampled
+    clauses:
+    - '(2) on integer sample fields on 64 sites: G and D vanish on displacements, the adjoint identity, the contracted identity, the symmetry and trace of G, D p as the divergence of the momentum constraints, the decomposition of G; the ranks on 27 sites giving 58'
+    omits: 'sample fields on one lattice, the identities being polynomial identities proved in the text; that the constraints commute and that a step is canonical are the proof''s (the canonical property is sampled in the dynamics check); the count is made on the lattice of 27 sites only'
+  check_one_mass_on_two_sites_has_no_dressing_of_compact_support_and_the_pair_has_one:
+    kind: sampled
+    clauses:
+    - '(3) the vanishing monopole and dipole of D on a sample field filling 27 sites; the dipole of one mass on two neighbouring sites; the moments of the two arrangements; D f for the field on the string; the momentum whose p is f/2 and its momentum constraint on the two links crossed'
+    omits: 'one sample field: the statement for every field supported in a box is the proof''s (summation by parts); no statement is checked for dressings whose curvature, but not whose support, is compact'
+  check_curvature_confined_to_a_box_rules_out_a_dipole_of_the_constraint_source:
+    kind: sampled
+    clauses:
+    - '(3a) the displacement by the quadratic xi equals 4 x_l delta plus the stated constant field on the 125 sites about the centre, for each l; for one field of unbounded support with curvature confined to those sites, the curvature pairs to zero with the three quadratic displacements and the six constant fields, D of it is minus twice the trace of its curvature and has no monopole and no dipole; for one mass on two neighbouring sites the dressing with no transverse trace-free part has curvature on 3590 of the 4212 components outside the 27 sites about the centre'
+    omits: 'one sample field, built as a compact field plus a displacement plus a constant, for which the conclusion also follows from (3) and invariance; the statement for every field with confined curvature is the proof''s; one dressing of the one-mass rearrangement is exhibited, the statement for all being the proof''s'
+  check_bare_recombiner_breaks_the_constraint_and_the_dressed_detection_commutes_off_the_string:
+    kind: complete
+    clauses:
+    - '(4) the commutator of the Hamiltonian constraint with the bare recombiner at all 729 sites, the inverse and square of the dressed recombiner, the form of the dressed detection, its commutators with the constraint at all sites, with h on all 4374 components and with the curvature on eight sampled components; the counts 4365, 57, 22, 4317'
+    omits: 'one lattice, one coupling 2/3, one recombiner (3/5, 4/5); the Weyl operators are formal symbols with the stated relations, not operators on a state space; the momentum constraints commute with every element of this form by construction and are not exercised; the commutator with the curvature is evaluated on eight components, the count of the support of G[f] on all'
+  check_newtonian_slaved_field_fails_and_the_transverse_part_cancels_the_constrained_part:
+    kind: complete
+    clauses:
+    - '(5) the exact potential difference on 729 sites, the count 3858 of 4317, two named values, the curvature unchanged after two steps, the commutator with the bare detection on two components'
+    - '(6) the constrained part of the curvature as a function of D h on two components, by a second exact solution each, and the opposite commutators of the two parts with the dressed detection there'
+    - '(7) the string-shaped field keeps D and changes its curvature on 499 components after two steps'
+    omits: 'the potentials of the two arrangements separately (with the uniform number) are not constructed, only their difference; two steps; (6) on two components, the rest by linearity; the commutator with every matter element is the proof''s'
+  check_dynamics_dressed_detection_commutes_outside_its_cone_and_the_retarded_slaved_field_does_not:
+    kind: complete
+    clauses:
+    - '(8) the constraints at every step of both solutions; the supports of the solution from the detection step inside the cone; its curvature zero at all 202171 events outside the cone and nonzero at 2164 inside; the retarded slaved difference nonzero at 8736 of them, none before step 2, 1304 not later than the detection, all among the 9310 inside the cone of the source event; one named value; the split of the failures against a cone of unit speed (3490 with Euclidean distance from the support of G[f] at most n/2, 5246 beyond; 671 of the 3490 not later than the detection, 3423 beyond |n - 3|/2 of which 604 not later than the detection, the other 67 all at step 3 at sites where G[f] is nonzero); the Remark (1252 of 198771); the step canonical and inverted on sampled data'
+    omits: 'one lattice of 4913 sites, seven steps of 1/2, one detection step; every cone is the lattice''s own unless the unit-speed split is named, and that split uses base sites, so a plaquette component is placed at its base site; the identification of the commutators with the classical solutions is the proof''s; the canonical property on two sampled data'
+  check_device_signal_is_of_first_order_for_the_slaved_field_and_absent_with_the_free_part:
+    kind: complete
+    clauses:
+    - '(9) the change of the detection probability for the slaved field at two rational angles in Cl(1,2); the first-order coefficient nonzero at 1304 of the 115792 events outside the cone and not later than the detection, with one named value; the angle of the field with its own variables zero at all of them and nonzero only inside the cone'
+    omits: 'two angles and one state; that the device multiplies the Weyl operator by a phase, and so acts at every order through that angle alone, is the proof''s; the expectation in a state of field and matter is not computed'
+  check_in_two_space_dimensions_the_constraint_leaves_no_free_part:
+    kind: sampled
+    clauses:
+    - '(10) the ranks on the periodic square lattice of 16 sites; the Einstein map of two space directions zero on three sample maps in Cl(1,2)'
+    omits: 'one lattice and three maps; the general vanishing is the proof''s'
+untouched_premises:

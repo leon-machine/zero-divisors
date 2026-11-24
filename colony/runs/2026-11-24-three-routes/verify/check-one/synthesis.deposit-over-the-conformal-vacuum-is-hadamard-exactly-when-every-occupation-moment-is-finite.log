@@ -1,0 +1,7 @@
+synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite (version 4): A diagonal deposit is Hadamard exactly when its moments are finite
+  pass  check.py::check_massless_shell_projectors
+  pass  check.py::check_coincidence_differences_have_one_sign
+  pass  check.py::check_thermal_profile_has_every_moment
+  pass  check.py::check_power_tail_profile_has_finite_shot_term_but_not_every_moment
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

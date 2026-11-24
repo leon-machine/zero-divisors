@@ -32,7 +32,7 @@ derivations:
   uses:
   - standard-model.fits-record-level@6
   - standard-model.chain@8
-  - dark-matter.imported-massless-graviton-production-rate@4
+  - dark-matter.imported-massless-graviton-production-rate@5
   - synthesis.gravitational-pair-production-from-the-operator-source-at-first-order@2
   assumes:
   - neutrino.r-descent-reheats-below-lower-heavy@1

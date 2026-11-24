@@ -1,7 +1,7 @@
 ---
 id: synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-occupation-moment-is-finite
 kind: claim
-version: 3
+version: 4
 title: 'A diagonal deposit is Hadamard exactly when its moments are finite'
 status: proved
 region: synthesis
@@ -21,6 +21,15 @@ credit:
   role: notation pass, imaginary unit written as the geometric-algebra pseudoscalar
   version: 3
   source: maintainer pass 2026-11-07 (GA units)
+- name: Claude Fable 5.2
+  role: 'restatement of the hypothesis sentence: the radiation-type descent hypothesis is stated for a Cauchy collar only; the result uses the collar only; clauses unchanged'
+  version: 4
+  source: 'maintainer pass of 2026-11-24 (run 2026-11-24-three-routes)'
+amendments:
+- version: 4
+  kind: restatement
+  defect: 'the hypothesis sentence compared the collar hypothesis with ''a descent of radiation type'' without saying that the radiation-type descent hypothesis is about a Cauchy collar only and asserts nothing about the field down to the wall; the hypothesis of this result (a smooth positive scale factor on the collar where the deposit is set) and clauses (i) to (v) are unchanged'
+  evidence: 'synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall: check.py::check_no_power_law_origin_is_tame_unless_the_anomaly_vanishes'
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -53,6 +62,10 @@ lineage:
   - synthesis.hadamard-scaling-limit-premise
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
 extraction:
+  maintainer_pass_2026_11_24_three_routes:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Version 3 -> 4. By Leon''s decision of 24 November 2026 the radiation-type descent hypothesis is restated for the collar only. The hypothesis of this result was already a hypothesis on the collar; the words ''as for a descent of radiation type'' at the formal, technical and one-liner levels and in a flag now name the hypothesis in its collar form, with the sentence that a result using the wall itself must name what it assumes there and that this result uses the collar only. The passage of the note below ''which is conformally a regular wall with Cauchy slices from any collar'' describes the exact radiation field as a prescribed field and is not part of the hypothesis. No mathematics, link or check changed.'
   maintainer_pass_pin_review:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -98,11 +111,11 @@ extraction:
   flags:
   - 'massless Dirac field only: a massive field has no conformal vacuum; no massive analogue of the moment criterion is claimed'
   - 'deposit diagonal in the plane-wave quasi-particle modes of the conformal vacuum, occupations independent of helicity; particle-antiparticle pair coherences, helicity coherences and coherences between momenta are not treated'
-  - 'descended field of Robertson-Walker form with smooth positive scale factor near the descent (as for a descent of radiation type): a stated hypothesis, not derived; on the Kasner branch the field is Weyl-curved and the result does not apply'
+  - 'descended field of Robertson-Walker form with smooth positive scale factor near the descent (as under the radiation-type descent hypothesis, restated for a Cauchy collar only on 24 November 2026; nothing is used at the wall): a stated hypothesis, not derived; on the Kasner branch the field is Weyl-curved and the result does not apply'
 ---
 
 ## formal
-Units $\hbar = c = 1$. \emph{Hypothesis:} the descended field near the descent is the Weyl-flat gravitational field on flat spacetime $\hb(b) = b/a(t)$, $t = x\cdot e_{0}$ the conformal time, $a$ smooth and positive on the collar where the deposit is set (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}; derived metric $a(t)^{2}$ times the flat one, a Robertson-Walker field, read through Fact \claimref{synthesis.imported-gtg-dictionary}), as for a descent of radiation type. Let $\psi$ be the massless Dirac field of Proposition \claimref{field-theory.second-quantisation} on it, $\chi = a^{3/2}\psi$ the conformally rescaled field, which solves the flat massless Dirac equation, and $\omega_{c}$ the conformal vacuum, the flat massless vacuum of $\chi$. A \emph{diagonal homogeneous deposit} is a gauge-invariant quasi-free state $\omega$ diagonal in the plane-wave quasi-particle modes of $\omega_{c}$ (no particle-antiparticle pair coherence, no coherence between momenta or helicities), with particle and antiparticle occupations $n_{+}(p), n_{-}(p) \in [0, 1]$ per comoving momentum $\vec p$ and helicity, $p = |\vec p|$; write $M_{k} = 2\int d^{3}p\,p^{k}\,(n_{+} + n_{-})$ and $R^{(\pm)} = \mathcal{G}_{\omega}^{(\pm)} - \mathcal{G}_{\omega_{c}}^{(\pm)}$ for the remainders of both orderings (Fact \claimref{synthesis.imported-microlocal-hadamard-condition}(b)).
+Units $\hbar = c = 1$. \emph{Hypothesis:} the descended field near the descent is the Weyl-flat gravitational field on flat spacetime $\hb(b) = b/a(t)$, $t = x\cdot e_{0}$ the conformal time, $a$ smooth and positive on the collar where the deposit is set (Definition \claimref{obj.synthesis.gtg-flat-spacetime-gauge-fields}; derived metric $a(t)^{2}$ times the flat one, a Robertson-Walker field, read through Fact \claimref{synthesis.imported-gtg-dictionary}), as under the radiation-type descent hypothesis. That hypothesis is a hypothesis about a Cauchy collar of the descent and nothing more (restated for the collar only by Leon's decision of 24 November 2026): on the collar the scale factor is smooth, the field is Weyl-flat and the conformal vacuum is an admissible reference. It does not say that the field is the exact radiation field down to the wall, and a result that uses the wall itself (a mass term linear in conformal time through it, a continuation across it, the wall as the initial slice of half of Minkowski space) must name what it assumes there. The present result uses the collar only and assumes nothing at the wall. Let $\psi$ be the massless Dirac field of Proposition \claimref{field-theory.second-quantisation} on it, $\chi = a^{3/2}\psi$ the conformally rescaled field, which solves the flat massless Dirac equation, and $\omega_{c}$ the conformal vacuum, the flat massless vacuum of $\chi$. A \emph{diagonal homogeneous deposit} is a gauge-invariant quasi-free state $\omega$ diagonal in the plane-wave quasi-particle modes of $\omega_{c}$ (no particle-antiparticle pair coherence, no coherence between momenta or helicities), with particle and antiparticle occupations $n_{+}(p), n_{-}(p) \in [0, 1]$ per comoving momentum $\vec p$ and helicity, $p = |\vec p|$; write $M_{k} = 2\int d^{3}p\,p^{k}\,(n_{+} + n_{-})$ and $R^{(\pm)} = \mathcal{G}_{\omega}^{(\pm)} - \mathcal{G}_{\omega_{c}}^{(\pm)}$ for the remainders of both orderings (Fact \claimref{synthesis.imported-microlocal-hadamard-condition}(b)).
 \begin{enumerate}
 \item[(i)] \emph{(Reference; standard.)} $\omega_{c}$ is Hadamard.
 \item[(ii)] \emph{(Criterion; the standard flat criterion carried by conformal covariance; the converse given the moment lemma.)} If $M_{k} < \infty$ for every $k$, both remainders are smooth on $M \times M$ and $\omega$ is Hadamard. Conversely, if $\omega$ is Hadamard, every $M_{k}$ is finite. More precisely, $M_{0}, \dots, M_{j} < \infty$ gives remainders of class $C^{j}$, and a remainder of class $C^{2m+1}$ along a timelike line gives $M_{2m+1} < \infty$.
@@ -115,7 +128,7 @@ So under the hypothesis the stored thermal deposit is a Hadamard state on the de
 ## technical
 The question is whether the state the descent deposits on the fields is a Hadamard state, the class on which a renormalised stress tensor exists and which the horizon premises need. The store describes the deposit as the vacuum plus quanta, with a bound on its fluctuations in terms of the number of quanta and their energy spread.
 
-The result assumes that the descended field near the descent is of Robertson-Walker form with a smooth scale factor, as for a descent of radiation type; a kink in the scale factor would make the Hadamard condition undefined there. It treats the massless Dirac field, which is conformally the flat one, so the conformal vacuum is Hadamard, and deposits diagonal in that vacuum's particle modes, with no particle-antiparticle pair coherence. Such a deposit is Hadamard exactly when every moment of its occupation profile is finite. This is the standard flat-space criterion, carried over by conformal covariance: sufficiency by differentiating under the integral, necessity because odd time derivatives at coincidence weigh particles and antiparticles with the same sign, so their finiteness forces the moments.
+The result assumes that the descended field near the descent is of Robertson-Walker form with a smooth scale factor, as under the radiation-type descent hypothesis, which is about a Cauchy collar of the descent only and not about the field down to the wall (restated for the collar only by Leon's decision of 24 November 2026); nothing is used at the wall; a kink in the scale factor would make the Hadamard condition undefined there. It treats the massless Dirac field, which is conformally the flat one, so the conformal vacuum is Hadamard, and deposits diagonal in that vacuum's particle modes, with no particle-antiparticle pair coherence. Such a deposit is Hadamard exactly when every moment of its occupation profile is finite. This is the standard flat-space criterion, carried over by conformal covariance: sufficiency by differentiating under the integral, necessity because odd time derivatives at coincidence weigh particles and antiparticles with the same sign, so their finiteness forces the moments.
 
 The thermal profile decays exponentially and has every moment, so the thermal deposit is Hadamard. A profile falling as the sixth inverse power has a finite shot term, the kind of data the stored bound uses, yet infinite moments from the third on: it is twice but not three times differentiable at coincidence and not Hadamard. So the number of quanta does not decide the Hadamard property. A finite number alone still makes the remainder bounded, so the deposit looks like the vacuum at short distances even when it is not Hadamard. Transport-absent.
 
@@ -123,4 +136,4 @@ The thermal profile decays exponentially and has every moment, so the thermal de
 When the universe's earlier phase handed its contents to the later one, it left the quantum fields in some state. Physics in a gravitational field needs that state to be of a particular well-behaved kind, called Hadamard, which roughly means it looks like empty space at very short distances in a smooth way. This result shows, for massless spin-one-half particles and assuming the young universe was uniform and expanding smoothly, that a thermal hand-over, the kind the series uses, is of that kind. It also shows that the series' earlier calculation of how much the hand-over can disturb things, which uses only how many particles there are and how their energies spread, cannot settle the question: what matters is how fast the number of particles falls off at high energy.
 
 ## one-liner
-On a descended field of Robertson-Walker form with smooth scale factor (a stated hypothesis, as for a descent of radiation type), a homogeneous deposit of the massless Dirac field diagonal in the conformal vacuum's quasi-particle modes (no pair coherence) is Hadamard exactly when every moment of its occupation profile is finite (the standard criterion, carried by conformal covariance); the thermal deposit is Hadamard, the shot-noise data (number and energy spread) do not decide it (a $(1 + p/T)^{-6}$ tail has them and is not), and a finite number alone gives a bounded remainder and the vacuum's scaling limit.
+On a descended field of Robertson-Walker form with smooth scale factor (a stated hypothesis on the collar where the deposit is set, as under the radiation-type descent hypothesis, which is about a Cauchy collar only), a homogeneous deposit of the massless Dirac field diagonal in the conformal vacuum's quasi-particle modes (no pair coherence) is Hadamard exactly when every moment of its occupation profile is finite (the standard criterion, carried by conformal covariance); the thermal deposit is Hadamard, the shot-noise data (number and energy spread) do not decide it (a $(1 + p/T)^{-6}$ tail has them and is not), and a finite number alone gives a bounded remainder and the vacuum's scaling limit.

@@ -1,0 +1,7 @@
+synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects (version 1): Positivity (P) as additive weights on effects (reading argued); parity average adds none
+  pass  check.py::check_self_adjoint_blades_and_the_order_unit
+  pass  check.py::check_an_effect_relation_forces_the_born_weight_on_one_mode
+  pass  check.py::check_parity_average_keeps_the_cone_and_adds_no_positivity
+  pass  check.py::check_even_atom_sees_the_products_of_odd_directions
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

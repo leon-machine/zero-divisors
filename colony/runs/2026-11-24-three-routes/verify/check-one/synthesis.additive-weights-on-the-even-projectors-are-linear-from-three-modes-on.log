@@ -1,0 +1,7 @@
+synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on (version 1): Additive weights on parity-even rational projectors are linear from three modes on
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_even_subalgebra_of_three_modes_is_the_commutant_of_the_pseudoscalar_and_two_blocks_of_size_four
+  pass  check.py::check_block_atoms_of_three_modes_are_even_projectors_and_a_linear_weight_is_recovered_block_by_block
+  pass  check.py::check_two_modes_have_blocks_of_size_two_and_a_parity_weight_on_a_block_is_additive_and_not_linear
+  pass  check.py::check_a_quadratic_weight_with_values_zero_and_one_fails_on_the_line_through_two_frame_rays
+all 4 checks passed

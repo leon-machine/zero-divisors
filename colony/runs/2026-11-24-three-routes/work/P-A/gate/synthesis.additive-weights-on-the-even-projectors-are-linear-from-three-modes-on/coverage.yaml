@@ -1,0 +1,13 @@
+functions:
+  check_even_subalgebra_of_three_modes_is_the_commutant_of_the_pseudoscalar_and_two_blocks_of_size_four:
+    kind: complete
+    clauses: ["(i) for three modes: Gamma is the product of the three e_j f_j, squares to 1, is self-adjoint, acts on the eight s_I by the sign of the parity of I, commutes with the 32 even blades and anticommutes with the 32 odd ones", "(i) the matrices of all 64 blades through the s_I: rank 64, even blades vanish between the blocks and odd blades inside them, the even blades have rank 32; the elements (1 +- Gamma)/2 are even projectors of scalar part 1/2 and equal the sums of s_I s_I^dagger over the block"]
+    omits: "the argument for every number of modes is the proof's; only three modes are computed"
+  check_block_atoms_of_three_modes_are_even_projectors_and_a_linear_weight_is_recovered_block_by_block:
+    kind: sampled
+    clauses: ["(i), (ii) for three modes: atoms of rays of either block are even projectors, atoms of different blocks are orthogonal and add to a projector, the atom of a ray with components in both blocks is not even", "(ii) converse and uniqueness on a sample rho in two blocks: the weight computed in the algebra equals the quadratic value on four rays (61/30 and -1/5 among them), the block identity has the block trace, and the twenty values at coordinate rays and sums of two give rho back", "(iii) the sample has the value -1 on an even projector: additivity does not give the sign"]
+    omits: "that every additive weight on a block is linear is the stored theorem, used as a premise and not recomputed"
+  check_two_modes_have_blocks_of_size_two_and_a_parity_weight_on_a_block_is_additive_and_not_linear:
+    kind: complete
+    clauses: ["(iv) for two modes the blocks have size two; the parity weight sums to 1 on the pair (a,b), (-b,a) for all 144 primitive vectors with entries up to 7; for three pairs the two atoms are orthogonal even projectors with sum (1 + Gamma)/2", "(iv) the candidate form from the values at (1,0), (0,1), (1,1) is r_0^2 / r.r, which gives 1/5 at (1,2), where the weight is 1"]
+    omits: "the parity argument for all primitive vectors is the proof's"

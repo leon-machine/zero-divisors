@@ -1,0 +1,7 @@
+synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-trace-functional (version 1): Born weights under positivity (P): a state sharp on an atom is that atom's functional
+  pass  check.py::check_maximal_commuting_blade_sets_give_atoms_in_every_small_signature
+  pass  check.py::check_orbit_atoms_hermitian_squares_and_overlap_weights
+  pass  check.py::check_sharpness_on_an_atom_leaves_one_functional
+  pass  check.py::check_reality_positivity_and_the_atom_condition_are_each_needed
+  proof main: a written proof (read it with get_proof)
+all 4 checks passed

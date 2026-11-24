@@ -1,0 +1,10 @@
+synthesis.first-order-gravitational-field-has-two-free-directions-at-null-momentum-and-four-constraints (version 2): First-order gravitational field: two free directions at null momentum, four constraints
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_kernel_at_null_momentum_is_displacements_plus_two_transverse_trace_free_maps
+  pass  check.py::check_image_at_null_momentum_is_the_sources_without_transverse_trace_free_part
+  pass  check.py::check_pole_at_the_null_cone_is_in_the_transverse_trace_free_part
+  pass  check.py::check_constraint_components_carry_no_second_power_of_the_frequency
+  pass  check.py::check_free_directions_are_exchanged_by_the_pseudoscalar
+  pass  check.py::check_static_coupling_does_not_separate_the_channels_and_pair_production_does
+  pass  check.py::check_burst_ratio_under_the_options_for_the_gravitational_term
+all 7 checks passed

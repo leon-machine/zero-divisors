@@ -1,0 +1,42 @@
+0 all 4 checks passed :: synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-mod
+0 all 5 checks passed :: synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-
+0 all 9 checks passed :: synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-an
+0 all 7 checks passed :: synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal
+0   no checks recorded :: synthesis.premise-canonical-pair-on-the-two-null-directions
+0 all 5 checks passed :: synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall
+0 all 3 checks passed :: synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-
+0 all 7 checks passed :: synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-th
+0 all 7 checks passed :: dark-matter.coefficients-floors-they-give-what-gravity
+0   no checks recorded :: dark-matter.imported-massless-graviton-production-rate
+0 all 9 checks passed :: dark-matter.seeding-gravity-floor-dark-towers-temperature
+0 all 11 checks passed :: field-theory.operator-newtonian-coupling
+0 all 9 checks passed :: one-relation.measure-indifference-borns-rule-located
+0 all 4 checks passed :: synthesis.born-weights-under-positivity-a-state-sharp-on-an-atom-is-its-tra
+0 all 8 checks passed :: synthesis.chsh-bound-for-two-subsystems-of-a-clifford-algebra-by-a-rational
+0 all 1 checks passed :: synthesis.chsh-bound-needs-positivity-across-settings-and-anticommutation-h
+0 all 3 checks passed :: synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-reco
+0 all 3 checks passed :: synthesis.chsh-with-parity-even-observables-needs-two-modes-per-party-and-n
+0 all 4 checks passed :: synthesis.deposit-over-the-conformal-vacuum-is-hadamard-exactly-when-every-
+0 all 7 checks passed :: synthesis.first-order-gravitational-field-has-two-free-directions-at-null-m
+0   no checks recorded :: synthesis.hadamard-deposit-premise
+0 all 7 checks passed :: synthesis.infinite-strings-tail-classes-and-reading-rules-linear-and-not
+0 all 6 checks passed :: synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-no
+0 all 3 checks passed :: synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgeb
+0 all 4 checks passed :: synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-eff
+0   no checks recorded :: synthesis.premise-positivity-of-values
+0 all 6 checks passed :: synthesis.radical-normal-tame-wall-is-a-regular-initial-surface-whose-smoot
+0 all 3 checks passed :: synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observa
+0 all 4 checks passed :: synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-
+0 all 1 checks passed :: synthesis.seeding-remainder-excludes-perturbative-pati-salam
+0 all 5 checks passed :: synthesis.selector-candidates-on-the-tower-integer-states-parity-determinis
+0 all 3 checks passed :: synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-t
+0 all 6 checks passed :: synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chira
+0 all 4 checks passed :: synthesis.splits-adapted-to-the-null-pairs-and-the-states-common-to-all-of-
+0 all 6 checks passed :: synthesis.state-of-a-new-rung-unique-symmetric-extension-is-the-half-weight
+0 all 4 checks passed :: synthesis.three-party-trade-off-of-chsh-values-and-the-local-value-two
+0 all 6 checks passed :: synthesis.two-dimensional-lattice-maxwell-coulomb-slaved-field-fails-and-st
+0 all 1 checks passed :: synthesis.untuned-fit-caps-lightest-heavy-neutrino
+0   no checks recorded :: note.synthesis.where-stored-text-names-a-graviton
+0   no checks recorded :: pred.dimmed-evaporation-bursts
+0   no checks recorded :: pred.gravity-entangles-standard-phase
+0   no checks recorded :: pred.no-indirect-dark-signals

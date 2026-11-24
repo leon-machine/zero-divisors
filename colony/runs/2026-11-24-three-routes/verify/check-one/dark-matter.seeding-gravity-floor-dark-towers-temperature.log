@@ -1,0 +1,12 @@
+dark-matter.seeding-gravity-floor-dark-towers-temperature (version 6): Seeding by gravity: the floor on a dark tower's temperature
+  ...   running verify_T14.py (the paper's verify script; the first run can take minutes)
+  pass  verify_T14.py: prop:gravseed (convention): the reduced-mass Friedmann coefficient sqrt(pi^2 g*/90) equals 1.66 sqrt(g*)/sqrt(8 pi) to three figures (1.66 sqrt(g*) T^2/M_Pl with M_Pl = sqrt(8 pi) M_P is the same rate), and kappa_s = sqrt(pi^2 g*/90) (2 pi^2/45) g_s is in (145, 146) at g* = g_s = 100
+  pass  verify_T14.py: prop:gravseed: the floor prefactor is xi = 9.6e-4 c^(1/4) (16/g_d)^(1/4) at the ceiling reheating: with g_d = 16, xi in (9.6, 9.7) x 10^-4 at c = 1, (1.7, 1.75) x 10^-3 at c = 10, (3.0, 3.1) x 10^-4 at c = 0.01; xi scales as T_desc^(3/4) (halving T_desc gives a factor in (0.59, 0.60), and the bottom of the ceiling range, 3.5e11 GeV, a factor in (3.5, 4.5) x 10^-3); and the non-reduced Planck mass would lower it by (2.435/12.2)^(3/4) in (0.29, 0.31)
+  pass  verify_T14.py: prop:gravseed: the Boltzmann integral at the paper's coefficients: the yield c T_desc^3/(3 kappa_s M_P^3) lies between the lower and upper Riemann sums of the integrand c T^2/(kappa_s M_P^3) over [0, T_desc] with 200 steps, for c = 0.053 and 0.078, and the sums bracket it to within two percent
+  pass  check.py::check_boltzmann_yield
+  pass  check.py::check_kappa_and_convention
+  pass  check.py::check_mean_energy_per_event
+  pass  check.py::check_floor_prefactor_and_scaling
+  pass  check.py::check_ceiling_range_factor
+  pass  check.py::check_later_evolution_of_the_ratio
+all 9 checks passed

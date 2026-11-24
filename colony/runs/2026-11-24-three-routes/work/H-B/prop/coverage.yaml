@@ -1,0 +1,37 @@
+functions:
+  check_euler_density_of_the_robertson_walker_gauge_field:
+    kind: sampled
+    clauses:
+    - '(i) field strength (addot/a) on the planes g0 gi and H^2 on their duals, Weyl part zero, scalar 6(addot/a + H^2), Euler density 24 H^2 addot/a, at four rational instants on exact jets'
+    - '(i) Euler density equals -4 Tr((I_4 R)^2) on those instants, the radiation field, a vacuum Kasner field and a Bianchi field with Weyl and Ricci parts; on the last two the Weyl part commutes with the duality, the trace-free Ricci part anticommutes, and their traces are as the proof uses'
+    - '(i) radiation field at t = 4 and t = 9: scalar 0, Ricci square 3/(4 t^4), Euler density -3/(2 t^4) = -2 Ric.Ric'
+    omits: 'sampled instants and fields; the statement for every scale factor and the dual-trace identity for every field are the proof''s'
+  check_anomaly_weights_from_the_stored_heat_kernel_coefficient:
+    kind: complete
+    clauses:
+    - '(ii) the connection-curvature traces -K/2 (spinor module) and -K (vector index), computed in the algebra on a field with both parts'
+    - '(ii) the triples (2, -2, 0), (7, 8, -5), (-26, 176, -50) and the weights (3, 1), (9, 11/2), (36, 62), no R^2 remainder; 5 for the minimal scalar'
+    - '(ii) the content 1008 = 28 x 36 and 1016; the test against the stored Fact (c): weights (-28, -8)'
+    - '(ii) the Weyl-square weights (3, 9, 36) are three times (1, 3, 12), the stored channel weights quoted in text'
+    omits: 'the identification of the anomalous trace with the weighted a_4 density is hypothesis (A); the operators (their E terms and ghosts) are inputs, entered as stated in the proof; the sign of the Euler term in the trace is an input of (A), taken in the proof from the cited source, and no check can test it; the stored channel weights are entered as literals'
+  check_anomalous_stress_map_its_trace_and_conservation:
+    kind: sampled
+    clauses:
+    - '(iii) the map T_A on four instants: 6 H^4 on g0, -(2 H^4 - 8 H^2 addot/a) on gi, trace equal to the Euler density'
+    - '(iii) the two conservation identities to the truncation order, for two scale factors with seven arbitrary rational Taylor coefficients each'
+    - '(iii) radiation field: scalar identically zero to the truncation order, rho_A = 3/(8 t^4), P_A = 5/(8 t^4)'
+    omits: 'alpha and b are set to one; conservation is checked as an identity of truncated Taylor series, the proof gives it in closed form; conservation of T_A on Weyl-flat fields that are not Robertson-Walker is not claimed'
+  check_no_power_law_origin_is_tame_unless_the_anomaly_vanishes:
+    kind: sampled
+    clauses:
+    - '(iv) orders t^-4 of the density and of the trace for a = t^p on a grid of p, alpha and b, their closed forms and the conservation relation between them'
+    - '(iv) at p = 1/2 the orders are 3 alpha/8 and -3 alpha/2 for every b; the solving value of b for p other than 1/2; the exact radiation field has scalar 0 and Euler density -3/(2 t^4)'
+    - '(iv) the sign pattern of q(p) = 2 alpha p^2 - 6 b p + 3 b at p = 0, 1/2, 1 for b < 0 and b > 2 alpha/3, the negative discriminant between, the double root at b = 2 alpha/3, and one rational balancing exponent on each side'
+    omits: 'a grid; the statement for every p and b is the proof''s algebra; existence of a solution with a balancing power law as its leading behaviour is not shown; origins that are not power laws are not treated; tameness at 2p = 1 only is the cited theorem''s, touched not recomputed'
+  check_branch_bound_and_the_numbers_for_the_stored_content:
+    kind: complete
+    clauses:
+    - '(v) x(1 - x) = 1/4 - (x - 1/2)^2; roots 0 and 1 without radiation'
+    - '(vi) alpha pi^2 = 127/720, g = 116, T_max^4 = 2025/3683 in reduced Planck units, its brackets in GeV, the ratios at 6 x 10^14 GeV, t_eq in Planck times'
+    omits: 'the divergence of the derivative of H at the end of the branch is the proof''s; pi enters through the bracket 3.14 < pi < 3.15; the thermal density (pi^2/30) g T^4 is standard and entered as such, and identifies C/a^4 with it; the ceiling 6 x 10^14 GeV is a literal transcribed from the prose of the cited result, where it is a mass conditional on Hypothesis (U)'
+untouched_premises: {}

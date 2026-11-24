@@ -1,0 +1,6 @@
+synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-modes (version 1): Under Hypothesis (RP): record weights bound the CHSH sum of correlators on two modes
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_chsh_element_is_a_combination_of_four_rational_projectors_in_two_commuting_pairs
+  pass  check.py::check_chsh_element_has_no_decomposition_into_commuting_rational_projectors
+  pass  check.py::check_sum_of_correlators_is_the_linear_value_bounded_for_states_and_four_for_the_box
+all 3 checks passed

@@ -1,0 +1,6 @@
+synthesis.signatures-in-which-commuting-observables-exceed-the-chsh-value-two (version 1): Signatures in which two commuting pairs of one real Clifford algebra exceed CHSH value 2
+  pass  check.py::check_excluded_signatures_have_only_an_anticommuting_frame_of_observables
+  pass  check.py::check_remaining_signatures_carry_blades_with_chsh_square_four_plus_four_k
+  pass  check.py::check_excluded_list_is_matrix_size_at_most_two_in_the_classification
+  proof main: a written proof (read it with get_proof)
+all 3 checks passed

@@ -1,0 +1,6 @@
+synthesis.chsh-over-the-rationals-pure-states-on-a-circle-and-the-pell-records (version 2): CHSH over the rationals at fixed settings: a circle of pure states and a Pell sequence
+  pass  check.py::check_quarter_turned_chsh_elements_anticommute_and_values_lie_in_a_disc
+  pass  check.py::check_pure_states_of_the_sector_are_rational_points_of_the_circle_of_square_radius_eight
+  pass  check.py::check_denominator_law_and_the_pell_records
+  proof main: a written proof (read it with get_proof)
+all 3 checks passed

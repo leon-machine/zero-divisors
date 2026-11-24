@@ -1,0 +1,15 @@
+field-theory.operator-newtonian-coupling (version 4): The operator Newtonian coupling
+  proof main: a written proof (read it with get_proof)
+  ...   running verify_GRV.py (the paper's verify script; the first run can take minutes)
+  pass  verify_GRV.py: G4 H_N = -G sum M_i M_j N_i N_j / r_ij (three layouts) is self-adjoint, commutes with every number (no matter quanta created or moved, by construction), has the branch states as eigenstates, and gives the relative phase arg(c11 c22 / (c12 c21)) = +Phi = (G M_A M_B / hbar)(1/r11 + 1/r22 - 1/r12 - 1/r21) t: the registration's phase with its sign
+  pass  verify_GRV.py: G4c (algebraic identity) the entangling determinant is c12 c21 (u - 1), u = exp(I4 Phi): zero exactly when the phase ratio is 1, for an initial product state (three rational unit phases)
+  pass  verify_GRV.py: G5 N_A1 N_A2 and N_B1 N_B2 annihilate every state with one body A and one body B: the operator source gives no gravitational interaction between a body's own branches
+  pass  verify_GRV.py: G5c control: the mean-field (Schrodinger-Newton) source <N> gives branch energies whose combination E11 + E22 - E12 - E21 vanishes (no entanglement from a product state), and each branch carries a self term -G M^2 <N_other branch> / r from the body's own other branch, absent from the operator coupling
+  pass  verify_GRV.py: G4m (the G4 model in the quasi-particle basis) massive bodies at rest, K = 0 mass blocks on the massive vacuum, three layouts: the branch states gamma_a^* gamma_b^* Omega are eigenstates of H_free and H_N, the free energies are branch-independent, and the relative phase is again +Phi
+  pass  verify_GRV.py: G4q (added after review) the same with the block charges Q = n_a - n_c, which lie in the rung algebra, as the source: same eigenstates, same +Phi at all three layouts
+  pass  verify_GRV.py: G6 composite rigid bodies (two constituents each, collinear, D = 20, separation 4): the internal terms are branch-independent and cancel from Phi; Phi equals the single-rung phase of mass M = 2m up to a correction that scales as a^2 (ratio 7317565/1791933 on halving a): (P-iv) at monopole order, derived
+  pass  check.py::check_operator_coupling_gives_registered_phase
+  pass  check.py::check_no_self_interaction_unlike_mean_field
+  pass  check.py::check_massive_sources_quasi_particles_and_block_charges
+  pass  check.py::check_rigid_composites_monopole_plus_a_squared
+all 11 checks passed

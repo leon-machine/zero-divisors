@@ -1,0 +1,9 @@
+synthesis.spin-product-state-of-the-massless-dirac-field-is-odd-under-chirality-and-never-hadamard (version 3): The massless Dirac spin-product state is never Hadamard
+  pass  check.py::check_spin_product_is_odd_and_current_even_under_chirality
+  pass  check.py::check_block_density_and_block_chirality
+  pass  check.py::check_massless_spin_product_state_is_perpendicular_to_the_conformal_vacuum
+  pass  check.py::check_massive_block_reproduces_the_fewster_lang_angle
+  pass  check.py::check_sharp_collar_does_not_decay_and_the_softened_bound
+  pass  check.py::check_conformal_weight_of_the_spin_product
+  proof main: a written proof (read it with get_proof)
+all 6 checks passed

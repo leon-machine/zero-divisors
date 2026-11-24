@@ -1,0 +1,10 @@
+synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none (version 1): (CW) on a radiation-type descent: a floor under the Dirac deposit, no selection
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_wall_reflection_and_charge_conjugation_in_the_spacetime_algebra
+  pass  check.py::check_exactly_two_reflections_of_bloch_vectors_preserve_the_mode_equation
+  pass  check.py::check_invariant_states_are_a_disk_per_mode_and_the_flow_is_isometric
+  pass  check.py::check_late_time_vacuum_series_is_on_the_invariant_circle_to_every_order
+  pass  check.py::check_invariant_circle_occupations_and_the_minimum
+  pass  check.py::check_pair_bound_without_isotropy
+  pass  check.py::check_weber_form_and_transition_probability_bookkeeping
+all 7 checks passed

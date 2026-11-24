@@ -1,0 +1,12 @@
+synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction (version 1): Lattice model of first-order gravity: slaved field, dressed pair, the dipole obstruction
+  proof main: a written proof (read it with get_proof)
+  pass  check.py::check_lattice_operators_are_the_stored_first_order_map_in_the_frame_gauge
+  pass  check.py::check_displacement_invariance_commuting_constraints_and_two_free_pairs_per_momentum
+  pass  check.py::check_one_mass_on_two_sites_has_no_dressing_of_compact_support_and_the_pair_has_one
+  pass  check.py::check_curvature_confined_to_a_box_rules_out_a_dipole_of_the_constraint_source
+  pass  check.py::check_bare_recombiner_breaks_the_constraint_and_the_dressed_detection_commutes_off_the_string
+  pass  check.py::check_newtonian_slaved_field_fails_and_the_transverse_part_cancels_the_constrained_part
+  pass  check.py::check_dynamics_dressed_detection_commutes_outside_its_cone_and_the_retarded_slaved_field_does_not
+  pass  check.py::check_device_signal_is_of_first_order_for_the_slaved_field_and_absent_with_the_free_part
+  pass  check.py::check_in_two_space_dimensions_the_constraint_leaves_no_free_part
+all 9 checks passed

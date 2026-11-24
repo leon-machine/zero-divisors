@@ -1,0 +1,26 @@
+{
+ "ok": true,
+ "layers_run": [
+  1,
+  2,
+  3
+ ],
+ "replaces_existing": false,
+ "findings": [
+  {
+   "code": "E610",
+   "severity": "warning",
+   "entity": "synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on",
+   "message": "credit: Leon Butler gives no ORCID iD; a pull request from anyone but a maintainer is refused without one",
+   "fix": "add orcid: <the person's iD, 0000-0000-0000-0000> to the credit entry (free at orcid.org)"
+  },
+  {
+   "code": "I305",
+   "severity": "info",
+   "entity": "store",
+   "message": "this change touches 74 entities; 18 claims and 0 documents depend on them and need re-confirmation (the build marks a claim stale only when every derivation of it is broken)",
+   "fix": ""
+  }
+ ],
+ "note": "check.py was not run (validate_draft never runs code). Put the folder under store/ in your copy and run `python -m tp check-one <id> --store store`; the pull request's checks run it again"
+}

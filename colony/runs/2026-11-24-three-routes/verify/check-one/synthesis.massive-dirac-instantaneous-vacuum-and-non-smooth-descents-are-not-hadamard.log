@@ -1,0 +1,9 @@
+synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard (version 5): Massive Dirac: instantaneous vacua and non-smooth descents are not Hadamard
+  pass  check.py::check_pauli_two_level_bloch_form
+  pass  check.py::check_adiabatic_series_solves_the_bloch_equation
+  pass  check.py::check_instantaneous_vacuum_differs_at_order_k_minus_two
+  pass  check.py::check_deposits_diagonal_over_the_instantaneous_vacuum_keep_the_gap
+  pass  check.py::check_jump_law
+  pass  check.py::check_stored_sudden_start_differs_from_bunch_davies_unboundedly
+  proof main: a written proof (read it with get_proof)
+all 6 checks passed

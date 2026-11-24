@@ -1,0 +1,16 @@
+Placed in store/claims/ on 24 November 2026 (Leon's decisions of that day), each after two or three blind review
+passes with fixes applied and a clean central check4 and validate_draft (verify/check4-final, check4-final2,
+check4-rebased, check4-rebased2, verify/validate-rebased):
+  synthesis.additive-weights-on-the-even-projectors-are-linear-from-three-modes-on
+  synthesis.under-rp-record-weights-bound-the-chsh-sum-of-correlators-on-two-modes
+  synthesis.local-records-give-the-chsh-bound-without-positivity-and-reversal-on-one-party-keeps-them
+  synthesis.lattice-model-of-first-order-gravity-slaved-field-dressed-pair-and-the-dipole-obstruction
+      (id renamed from synthesis.spin-two-lattice-model-static-slaved-field-fails-and-dressed-pair-detection-commutes)
+  synthesis.helicity-two-composites-of-light-ray-fermions-on-a-generator-and-off-the-null-plane
+  synthesis.wall-conjugation-invariance-on-a-radiation-type-descent-floors-the-dirac-deposit-and-selects-none
+  synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall
+`tp accept` was not used to completion: in this workspace its whole-store layer-4 pass cannot replay the stored
+record (the record's toolchain key includes the Python version, 3.13 here) and reruns every entity, well over an
+hour per call. The folders were copied as `tp accept` copies them (without proposal.json). Layers 1 to 3 of the
+whole store and layer 4 on the changed entities are run in the workspace; the pull request's required check runs
+layer 4 in full.

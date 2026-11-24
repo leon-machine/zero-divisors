@@ -1,7 +1,7 @@
 ---
 id: synthesis.massive-dirac-instantaneous-vacuum-and-non-smooth-descents-are-not-hadamard
 kind: claim
-version: 4
+version: 5
 title: 'Massive Dirac: instantaneous vacua and non-smooth descents are not Hadamard'
 status: proved
 region: synthesis
@@ -25,6 +25,15 @@ credit:
   role: 'consistency pass, cross products written as the dual of the outer product'
   version: 4
   source: maintainer pass 2026-11-07 (consistency)
+- name: Claude Fable 5.2
+  role: 'dated note: the radiation-type descent hypothesis is stated for a Cauchy collar only; the remark on a radiation-type origin is marked as a statement about the wall itself; no clause changed'
+  version: 5
+  source: 'maintainer pass of 2026-11-24 (run 2026-11-24-three-routes)'
+amendments:
+- version: 5
+  kind: restatement
+  defect: 'the remark that at a radiation-type origin M vanishes linearly in conformal time and the jump law does not fire used the wall itself without saying so; the radiation-type descent hypothesis as restated for the collar gives a smooth M on the collar only, and with the whole expected stress as source the exact radiation field is not a solution given hypotheses (A) and (E) of the trace-anomaly result; clauses (i) to (iv), the proof and the checks are unchanged'
+  evidence: 'synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall: check.py::check_no_power_law_origin_is_tame_unless_the_anomaly_vanishes'
 review: draft
 about:
 - obj.synthesis.gtg-flat-spacetime-gauge-fields
@@ -57,6 +66,10 @@ lineage:
   - synthesis.frozen-point-geometry-reads-descent-as-vacuum
   - synthesis.imported-propagation-of-hadamard-form
 extraction:
+  maintainer_pass_2026_11_24_three_routes:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Version 4 -> 5. By Leon''s decision of 24 November 2026 the radiation-type descent hypothesis is restated for the collar only. No clause of this theorem takes that hypothesis; the technical level''s remark on a radiation-type origin is restated (on the collar M is smooth by the hypothesis; linearity of M at the origin is a statement about the wall itself for the exact radiation field as a prescribed field), and a dated note at the formal level says the same and cites the trace-anomaly result with its named hypotheses (A) and (E). The sentence of the note below ''At a radiation-type origin M = ma vanishes linearly in conformal time and is smooth'' is to be read in that way. No mathematics, link or check changed.'
   maintainer_pass_ga_units:
     by: maintainer-2026-11-07
     date: '2026-11-07'
@@ -124,10 +137,12 @@ For $n = 0$ (the mass switched on at once) the number density of quanta diverges
 \end{enumerate}
 Consequently a massive Dirac deposit equal to, or diagonal over, the instantaneous vacuum at an instant where $ma' \neq 0$, or carried through a descent that is not smooth in $M = ma$, is not Hadamard; the instantaneous vacuum has finitely many quanta above a Hadamard state, so the number of quanta does not decide the Hadamard property.
 
+\emph{Note (24 November 2026; the radiation-type descent hypothesis).} Clauses (i) to (iv) are for a prescribed scale factor and are unchanged. The radiation-type descent hypothesis, where a result takes it, is a hypothesis about a Cauchy collar of the descent and nothing more (restated for the collar only by Leon's decision of 24 November 2026): on the collar the scale factor is smooth, the field is Weyl-flat and the conformal vacuum is an admissible reference. Under it $M = ma$ is smooth on the collar, so the jump law (iii) does not fire there. It does not say that the field is the exact radiation field down to the wall, and a result that uses the wall itself (a mass term linear in conformal time through it, a continuation across it, the wall as the initial slice of half of Minkowski space) must name what it assumes there. That $M$ vanishes linearly in conformal time at a radiation-type origin, so that (iii) does not fire at the origin either, is a statement about the wall itself, true of the exact radiation field as a prescribed field and not part of the hypothesis. With the whole expected stress as the source the exact radiation field is not a solution of the field equation, given hypotheses (A) and (E) of Theorem \claimref{synthesis.trace-anomaly-leaves-no-exact-radiation-field-at-a-tame-wall}, which are named hypotheses of that result and not stored premises.
+
 ## technical
 The stored deposit result reads the descent's deposit as a vacuum plus shot noise, with the vacuum any pure quasi-free state. The Hadamard condition concerns the ultraviolet tail of the deposit relative to a Hadamard reference, and the outside literature offers several principles for picking a vacuum. This result tests the simplest one, and the smoothness of the descent, on the massive Dirac field, the deposit's own field, on the descended Robertson-Walker field. Each momentum and helicity sector is a two-level system, and in the Pauli algebra a pure state is a unit Bloch vector precessing about $h = k\sigma_{1} + M\sigma_{3}$, $M = ma$. Its adiabatic expansion is a formal series in $1/k$ whose coefficients are polynomials in the derivatives of $M$; the recursion is $\sigma_{1} \times c_{n+1} = \tfrac12(c_{n}' - 2M\sigma_{3} \times c_{n})$ with the $\sigma_{1}$ part fixed by the norm, and it is computed exactly to order nine.
 
-Three facts follow. The instantaneous eigenvector $h/|h|$, the vacuum obtained by diagonalising the Hamiltonian at one instant, misses the term $\tfrac12M'\sigma_{2}/k^{2}$, so where $ma' \neq 0$ its Bogoliubov coefficient against an adiabatic state of infinite order is $|\beta_{k}|^{2} = M'^{2}/(16k^{4})$: few enough quanta for a finite number density, too many for a finite energy density (the energy moment is logarithmic). Since adiabatic states of infinite order are Hadamard (Hollands) and two Hadamard states differ by a smooth kernel, the instantaneous vacuum is not Hadamard. A deposit diagonal over it, with any occupations, has a one-particle symbol commuting with $h$, so it keeps the same $\sigma_{2}$ gap and fails too. Second, a derivative $M^{(n)}$ first enters the series at order $k^{-(n+1)}$, alone and with coefficient of size $2^{-n}$, so a descent across which $M^{(n)}$ jumps leaves $|\beta_{k}| = |\Delta M^{(n)}|/(2k)^{n+1}$: a sudden switch-on of the mass gives infinitely many quanta, a kink in the scale factor's growth rate a logarithmically infinite energy, and any finite smoothness a power-law tail, never a Hadamard state. At a radiation-type origin $M$ vanishes linearly in conformal time and is smooth, so this clause does not fire there. The stored sudden-descent model's instantaneous start of a massless scalar is the scalar instance: at the descent it differs from the Bunch-Davies state by logarithmically divergent mode sums already in $\langle\chi^{2}\rangle$.
+Three facts follow. The instantaneous eigenvector $h/|h|$, the vacuum obtained by diagonalising the Hamiltonian at one instant, misses the term $\tfrac12M'\sigma_{2}/k^{2}$, so where $ma' \neq 0$ its Bogoliubov coefficient against an adiabatic state of infinite order is $|\beta_{k}|^{2} = M'^{2}/(16k^{4})$: few enough quanta for a finite number density, too many for a finite energy density (the energy moment is logarithmic). Since adiabatic states of infinite order are Hadamard (Hollands) and two Hadamard states differ by a smooth kernel, the instantaneous vacuum is not Hadamard. A deposit diagonal over it, with any occupations, has a one-particle symbol commuting with $h$, so it keeps the same $\sigma_{2}$ gap and fails too. Second, a derivative $M^{(n)}$ first enters the series at order $k^{-(n+1)}$, alone and with coefficient of size $2^{-n}$, so a descent across which $M^{(n)}$ jumps leaves $|\beta_{k}| = |\Delta M^{(n)}|/(2k)^{n+1}$: a sudden switch-on of the mass gives infinitely many quanta, a kink in the scale factor's growth rate a logarithmically infinite energy, and any finite smoothness a power-law tail, never a Hadamard state. On a collar of a radiation-type descent the scale factor is smooth by hypothesis (the radiation-type descent hypothesis is about a Cauchy collar only, restated so by Leon's decision of 24 November 2026), so $M$ is smooth and this clause does not fire on the collar. At the origin of the exact radiation field, taken as a prescribed field, $M$ vanishes linearly in conformal time and is smooth, so the clause does not fire there either; that is a statement about the wall itself, which the hypothesis does not assert and which a result using it must name as its own assumption. The stored sudden-descent model's instantaneous start of a massless scalar is the scalar instance: at the descent it differs from the Bunch-Davies state by logarithmically divergent mode sums already in $\langle\chi^{2}\rangle$.
 
 What is not claimed: that a Hadamard deposit's reference vacuum must be adiabatic. An adiabatic state of infinite order is itself a finite number of pair-coherent quanta over the instantaneous vacuum, so the Hadamard property is a property of the deposit as a whole. For the massless Dirac field the conformal vacuum is exact and the question reduces to the occupation profile. The content is standard adiabatic theory; the series supplies the question.
 

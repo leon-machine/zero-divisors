@@ -1,0 +1,6 @@
+synthesis.records-keep-even-states-even-only-for-parity-homogeneous-observables (version 1): Sector average (x + axa)/2 keeps even states of (P) even iff a is parity-homogeneous
+  pass  check.py::check_record_map_commutes_with_parity_exactly_for_homogeneous_observables
+  pass  check.py::check_one_mode_per_party_at_homogeneous_settings_even_states_give_at_most_two
+  pass  check.py::check_two_modes_per_party_odd_homogeneous_observables_exceed_two_on_an_even_state
+  proof main: a written proof (read it with get_proof)
+all 3 checks passed

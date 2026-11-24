@@ -36,7 +36,7 @@ derivations:
   - synthesis.records-of-unbounded-length-on-the-tower-interference-factor-and-limit@1
   - singularity.p-reduced-metric-level-reading-many@7
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

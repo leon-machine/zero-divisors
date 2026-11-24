@@ -27,7 +27,7 @@ derivations:
   - singularity.descent-parity-average@5
   - synthesis.positivity-of-values-is-additivity-of-non-negative-weights-on-effects@1
   assumes:
-  - synthesis.premise-positivity-of-values@2
+  - synthesis.premise-positivity-of-values@3
   proof: proof-main.tex
 checked_by:
 - kind: check

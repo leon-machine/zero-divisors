@@ -1,0 +1,4 @@
+synthesis.untuned-fit-caps-lightest-heavy-neutrino (version 2): The untuned fit caps the lightest heavy neutrino
+  pass  check.py::check_untuned_fit_caps_lightest_heavy_neutrino
+  proof main: a written proof (read it with get_proof)
+all 1 checks passed
