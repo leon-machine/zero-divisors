@@ -60,6 +60,10 @@ locators:
   label: prop:fiveD
   line: 786
 extraction:
+  maintainer_pass_2026_11_24:
+    by: maintainer-2026-11-24
+    date: '2026-11-24'
+    note: 'Scope note, version kept, no statement changed (Leon''s word of 24 November 2026). A note after the deposited text says that clause (v) is the particle model''s reading of one inequality in the coupling scale, the charged mass and the depth (synthesis.five-dimensional-plasma-exposure-is-one-inequality-in-coupling-mass-and-depth), and that the lightest coloured species is exactly stable. The deposited sentences, the edges and the checks are unchanged.'
   maintainer_pass:
     by: maintainer-2026-11-20
     date: '2026-11-20'
@@ -106,6 +110,8 @@ Decimal, with imports as stated. With the fifth direction one $d$ deep and co-ex
 \item[(vi)] If the neutral species $N$ (Proposition \claimref{dark-tower-matter.five-dimensional-content}) carries the particle model's count as a deposit and the charged species annihilate at weak coupling, the tower carries no long-range charge and is collisionless whatever the zero modes do. Under Premise \claimref{dark-tower-matter.u-transposition-rule} this branch is open to both five-dimensional towers.
 \end{enumerate}
 The relic is a symmetric gas of free spin-$\tfrac{1}{2}$ dark quarks and leptons, or of $N$ alone. The lightest species is stable by fermion parity, the lightest quark and lepton by species numbers broken only at the rung scale.
+
+\emph{Note (E and R3 alone).} Clause (v) is stated at the particle model, quanta of a GeV and depth $d_{b}$. With the charged mass $m_{c}$ and the depth $d$ free, the zero mode's coupling does not contain the mass and the limits go as its square, so the exposure is the one inequality $E_{s}m_{c}^{2}(d/d_{b}) \ge 9.5 \times 10^{15}\ \mathrm{GeV}^{3}$ on the stronger limit, $E_{s}$ the coupling scale: at a GeV the floor on the coupling scale that clause (v) reports, and at $E_{s} = 10^{11}$ GeV a floor of about $300$ GeV on the mass (Proposition \claimref{synthesis.five-dimensional-plasma-exposure-is-one-inequality-in-coupling-mass-and-depth}). The same result shows that the lightest coloured species is stable exactly, by colour triality, not only up to rung-scale operators.
 
 ## technical
 Decimal estimates with imported physics, taking the fifth direction one cell radius deep and co-expanding (premise R3), the cell radius being this world's baryon spacing of about a metre, which is the particle model's value (R1 and R2) and not fixed by equal mass per unit ball alone. (i) $LT$ runs from about $390$ to $1170$, so the Kaluza-Klein spacing stays below $T/120$ and the towers are five-dimensional at the visible temperature and at their matter's mass scale, while at small dark temperatures the dark bath is only a few levels deep. (ii) Five-dimensional gauge theory is infrared free: the reduced confinement scale lies below $\pi/L$ by a factor smaller than $e^{-250}$ even at strong coupling, and the $1/r^2$ potential binds nothing unless the theory is within about a factor eight of strong coupling, so there are no dark hadrons or atoms. (iii) With the Kaluza-Klein tower populated, $\Delta\Neff < 0.3$ needs $T_D/T_\gamma < 0.085$ for the nine vectors of $\uu(3)$, not the zero-mode $0.46$ to $0.51$; a sector decoupled at a GeV would give about $670$.
