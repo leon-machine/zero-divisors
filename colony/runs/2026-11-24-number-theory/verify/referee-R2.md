@@ -83,7 +83,7 @@ Justified. Every step is Q-linear: extend f Q-linearly to Q[G] -> V, factor thro
 ## 4. Refutation attempts (point 4)
 Kill condition, registered before computing: a nonconstant class function with constant frame sums on the frames used, or an inner set of rays whose projected solution space stays above 10 as the box grows. No kill.
 
-**Box test.** f on all primitive rays with |entries| <= B, and c, with sum_F f = c on every orthogonal frame inside the box. The rank is computed mod a prime p (exact integer arithmetic), so dim_p >= dim_Q. Primes used: 33554393, plus 16777213 at B = 3 and B = 5 (identical results).
+**Box test.** f on all primitive rays with |entries| <= B, and c, with sum_F f = c on every orthogonal frame inside the box. The rank is computed mod a prime p (exact integer arithmetic), so dim_p >= dim_Q. Primes used: 33554393, plus 16777213 at B = 3 (identical results).
 
 | B | rays | frames | dim of solutions (10 = quadratic forms) | projection onto box-1 rays + c | onto box-2 rays + c | onto box-3 rays + c |
 |---|---|---|---|---|---|---|
@@ -91,7 +91,7 @@ Kill condition, registered before computing: a nonconstant class function with c
 | 2 | 272 | 380 | 88 | 19 | 88 | - |
 | 3 | 1120 | 2652 | 253 | 19 | 67 | 253 |
 | 4 | 2928 | 8756 | 568 | **10** | 34 | 196 |
-| 5 | BOX5 |
+| 5 | not completed (stopped by me after about 50 minutes of CPU, no output) | | | | | |
 
 Reading:
 - The total excess over 10 grows with the box (9, 78, 243, 558). No ray is in zero frames. The excess sits on rays near the box boundary, which lie in few frames.
@@ -105,7 +105,7 @@ Reading:
 - the primitive vector mod 2 (15 classes), mod 3 (40), mod 4 (120) and mod 5 (312);
 - v_2(r.r), v_3(r.r) and v_5(r.r);
 - the class of r.r mod squares at the primes 2, 3, 5, 7, 11 (32 classes).
-MOD8LINE
+Not run here: mod 8 (1920 classes) and the mixed families (r mod 4 with v_2(r.r); r.r mod 8 with r.r mod 5). The entity reports full rank for mod 8 on 9000 frames; I did not re-verify that.
 
 **Not a counterexample, but a check of the hypothesis's role.** The parity weight of (v) is non-quadratic on the unit atoms. By (iii) it has no extension to all rays with constant frame sums. No contradiction arises: the extra frames through non-unit rays are exactly what (iii) uses.
 
