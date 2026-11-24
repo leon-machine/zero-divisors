@@ -11,7 +11,7 @@ functions:
     kind: sampled
     clauses: ["(iv) the order of 1 - chi^(N/2) in Z[chi]/(chi^N - 1, (chi - 1)^(n+1)), computed directly: 2^n for N = 2 and 2^ceil(n/4) for N = 8 (n up to 24), 2^ceil(n/8) for N = 16 (n up to 12)"]
     omits: "that these rings are the K-rings of the lens spaces for N other than 4 is classical and not checked"
-  check_rung_bound_for_every_n_against_the_stored_bounds:
+  check_ceiling_of_half_n_against_the_two_bounds_stored_before:
     kind: sampled
     clauses: ["(iii) 1 + ceil(n/2) against the stored 1 + floor(n/2): equal for even n, one more for odd n, n up to 40; the stored instances 3, 4, 5 on L^7(4), L^11(4), L^15(4) and the value 2 at n = 1"]
-    omits: "the obstruction 2^(k-1)(1 - xi) = 0 itself is the cited stored clause, conditional on the lambda-operations"
+    omits: "arithmetic of the two expressions only; the obstruction 2^(k-1)(1 - xi) = 0 and the bound are the stored result's, which cites this one"

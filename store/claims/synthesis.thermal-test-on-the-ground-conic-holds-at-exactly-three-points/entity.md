@@ -24,7 +24,7 @@ outside_ga:
 derivations:
 - name: main
   uses:
-  - synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter@1
+  - synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter@2
   - synthesis.null-ordering-of-counted-units-is-zeta-symmetric@4
   proof: proof-main.tex
 checked_by:
@@ -45,9 +45,10 @@ lineage:
 extraction:
   open_problem: op.residue-killing-weights
   note: >-
-    Remark 1 of synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter records that
-    a floating-point scan finds no further zero of the thermal test on the conic and that the absence of a fourth
-    point is "computed, not proved". This result proves it. A test fixed before computing: whether
+    Remark 1 of synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter recorded, at
+    its version 1, that a floating-point scan finds no further zero of the thermal test on the conic and that the
+    absence of a fourth point is "computed, not proved". This result proves it, and from version 2 that remark
+    points here. A test fixed before computing: whether
     certified rational enclosures fail to isolate the zeros (a fourth zero, or an interval that cannot be
     decided at feasible cost). They do not fail: 73 intervals decide the three stretches, and the derivative
     enclosures hold on 16, 20 and 40 pieces near the three points. What is machine-verified: every sign in
@@ -80,7 +81,7 @@ simple zeros at $\tfrac14$ and $\tfrac13$ and a double zero at $\tfrac12$. So th
 \[
 (1, \tfrac12), \qquad (\tfrac12, \tfrac14), \quad (\tfrac12, \tfrac34), \qquad (\sqrt{2/3}, \tfrac13), \quad (\sqrt{2/3}, \tfrac23),
 \]
-the three points of clause (ii) of the cited theorem and their mirror twists. There is no fourth point, with or without the parity clause of Premise (Q): Remark 1 of the cited theorem, stored as computed, is a theorem. That $T$ vanishes at the three twists is the cited clause (ii); what is proved here is that it vanishes nowhere else.
+the three points of clause (ii) of the cited theorem and their mirror twists. There is no fourth point, with or without the parity clause of Premise (Q): Remark 1 of the cited theorem, stored as computed at its version 1, is a theorem. That $T$ vanishes at the three twists is the cited clause (ii); what is proved here is that it vanishes nowhere else.
 
 ## technical
 The stored theorem found three arrays whose sea energy matches the continuum's boost ground state over the window and whose thermal mean energy vanishes: the array of Premise (Q), its particle-hole half, and one more at twist one third. It recorded, from a floating-point scan, that there seemed to be no fourth. This result proves there is none. The ground test confines the pair of ratio and twist to a conic, on which the thermal test is the vanishing of one function $T$ of the twist. For windows shorter than three twentieths of a thermal period the thermal sum is too small to cancel the sea energy, by an explicit exponential bound. On the rest of the conic, $T$ and its first two derivatives are enclosed by interval arithmetic in integers with outward rounding: $T$ is negative from the short-window cut to just below one quarter, increasing through one quarter, positive up to just below one third, decreasing through one third, negative up to $0.46$, and concave from there to one half, where $T$ and its derivative vanish by the stored theorem and by the mirror symmetry of the twist. So the zeros are the three stored ones. The size of $T$ between the zeros is small, of order $10^{-4}$ to $10^{-3}$, which is why the scan could not settle it and why enclosures with a derivative term are used. Nothing changes for the open problem on the count unit: the two energy equalities still admit three slopes, and now provably only three.

@@ -1,0 +1,12 @@
+functions:
+  check_level_formula_reproduces_the_stored_counts_and_lies_between_the_stored_bounds:
+    kind: sampled
+    clauses: ["(i) the statement in n against the imported formula at m = n + 1, n up to 200; the values 3, 5, 6, 7, 9, 9, 9, 11", "(i) agreement with the stored 3 and 5 and with the stored window on L^7(4)", "(ii) for n up to 200 the count lies between the stored lower bounds and the stored upper bound by explicit maps; at m = 1, outside the imported range, the formula would exceed that upper bound"]
+    omits: "this tests the transcription of the import against stored numbers; it does not prove the imported theorem"
+  check_explicit_maps_are_optimal_exactly_in_four_dimensions_and_the_period_is_eight:
+    kind: sampled
+    clauses: ["(iii) the explicit bound equals the count exactly at n = 1, 2, 3, 5 for n up to 400, with excess 1 at n = 4 and at least 2 from n = 6", "(iv) the count minus n has period 8 in n and not 4", "(ii) the K-theory lower bound is within 2 of half the count, n up to 400"]
+    omits: "the statements for every n are the proof's"
+untouched_premises:
+  synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side: "supplies the bound of at least four rungs from dimension five, quoted in (ii) for the two windows; nothing in it is recomputed"
+  synthesis.wall-rung-count-is-height-of-dying-line-class: "supplies the sufficiency clause (k rungs suffice when the dying line sits in a trivial bundle of rank k), cited in (ii); nothing in it is recomputed"

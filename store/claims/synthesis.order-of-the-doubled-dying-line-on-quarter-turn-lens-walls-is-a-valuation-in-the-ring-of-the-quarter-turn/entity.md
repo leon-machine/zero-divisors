@@ -25,7 +25,6 @@ derivations:
 - name: main
   uses:
   - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1
-  - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height@2
   - std-algebra.complex-numbers@3
   proof: proof-main.tex
 checked_by:
@@ -38,7 +37,7 @@ checked_by:
 - kind: check
   ref: check.py::check_order_of_the_sign_line_for_the_half_turn_and_the_eighth_turn
 - kind: check
-  ref: check.py::check_rung_bound_for_every_n_against_the_stored_bounds
+  ref: check.py::check_ceiling_of_half_n_against_the_two_bounds_stored_before
 lineage:
   motivated_by:
   - sheaf.wall-class
@@ -47,11 +46,13 @@ lineage:
 extraction:
   open_problem: op.wall-class-invariant
   note: >-
-    The stored K-theory bound on the rungs of the quarter-turn lens walls rests on the order of $1 - \chi^{2}$ in
+    The stored proof already maps the K-ring to the ring of the quarter turn modulo a power of $J - 1$ (there
+    written $I$ and $\pi = I - 1$) and reads off a lower bound; dividing the relation by $\chi - 1$ first gives
+    the exact order. The stored K-theory bound on the rungs of the quarter-turn lens walls rests on the order of $1 - \chi^{2}$ in
     the stored K-ring, which was proved to be at least $2^{\lfloor n/2 \rfloor}$ for every $n$ and computed to be
     $2^{\lfloor (n+1)/2 \rfloor}$ for $n \le 8$ (for $n \le 14$ in the cohomology theorem's own record). Clause
     (ii) proves the computed value for every $n$, so the bound $1 + \lfloor (n+1)/2 \rfloor$ holds for every $n$
-    (clause (iii)); like the stored bound it stays conditional on the lambda-operations (L1) and, through the
+    (stated in the lens-wall result from its version 3; clause (iii) here is a pointer to it); like the stored bound it stays conditional on the lambda-operations (L1) and, through the
     K-ring, on the imported Atiyah-Hirzebruch filtration. A test fixed before computing: whether for
     some $n$ the order computed directly in the quotient ring differs from the least power of $2$ divisible by
     $(J - 1)^{n}$ in $\Z[J]$. It does not for $n \le 40$, nor for the half turn and the eighth and sixteenth
@@ -88,19 +89,15 @@ Let $\Sig_{n} = L^{2n+1}(4)$, $\eta$, $\shL$ and $\chi$ be as in \claimref{synth
 2^{\lceil n/2 \rceil} = 2^{\lfloor (n+1)/2 \rfloor}.
 \]
 Precisely: $2^{m}(1 - \chi^{2}) = 0$ in that ring if and only if $2^{m}$ is divisible by $(J - 1)^{n}$ in $\Z[J]$, the ring obtained from $\Z[\chi]$ by setting $\chi = J$.
-\item[(iii)] \emph{(The rung bound for every $n$; proved given (L1) and the stored K-ring.)} Under the hypotheses of \claimref{synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height} (tameness; the lambda-operations (L1), cited there from memory; the stored K-ring), every tame wall with cross-section $L^{2n+1}(4)$ and $w_{1}(\shL) \ne 0$ has
-\[
-k(\Sig) \;\ge\; 1 + \lceil n/2 \rceil
-\]
-on every side, for every $n \ge 1$. This replaces the pair of bounds stored there, $1 + \lfloor n/2 \rfloor$ for all $n$ and $1 + \lfloor (n+1)/2 \rfloor$ for $n \le 8$; it is larger than the first exactly when $n$ is odd.
-\item[(iv)] \emph{(Other two-power turns; proved as algebra.)} Let $N = 2^{a}$, $a \ge 1$. In $\Z[\chi]/(\chi^{N} - 1, (\chi - 1)^{n+1})$ the additive order of $1 - \chi^{N/2}$ is $2^{\lceil 2n/N \rceil}$: $2^{n}$ for the half turn, $2^{\lceil n/2 \rceil}$ for the quarter turn, $2^{\lceil n/4 \rceil}$ for the eighth turn. The exponent is $n$ divided by $N/2$, rounded up, and $N/2$ is the power to which the element $\zeta - 1$ must be raised to give $2$ up to an invertible factor in the ring $\Z[x]/(x^{N/2} + 1)$ of the $N$-th turn $\zeta$. If $K(L^{2n+1}(N))$ is that quotient ring with $\chi^{N/2}$ the complexified dying line (classical, not stored for $N \ne 4$), clause (1) of the cited result gives $k(\Sig) \ge 1 + \lceil 2n/N \rceil$ on walls with cross-section $L^{2n+1}(N)$: the bound from complex K-theory weakens as the turn gets finer.
+\item[(iii)] \emph{(Consequence for the rungs; drawn in the stored result, not here.)} By clause (1) of \claimref{synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height} a $k$-rung completion forces $2^{k-1}(1 - \xi) = 0$ in $K(\Sig)$, so (ii) gives $k(\Sig) \ge 1 + \lceil n/2 \rceil$ on every side of every tame wall with cross-section $L^{2n+1}(4)$ and $w_{1}(\shL) \ne 0$, for every $n \ge 1$. That statement, with its hypotheses (tameness; the lambda-operations, cited there from memory; the stored K-ring), is clause (2) of the cited result from its version 3, which cites (ii); it is recorded here as a pointer and no edge is drawn from this result to that one. Before, that clause had $1 + \lfloor n/2 \rfloor$ for all $n$ and $1 + \lfloor (n+1)/2 \rfloor$ for $n \le 8$; the new bound is larger than the first exactly when $n$ is odd.
+\item[(iv)] \emph{(Other two-power turns; proved as algebra.)} Let $N = 2^{a}$, $a \ge 1$. In $\Z[\chi]/(\chi^{N} - 1, (\chi - 1)^{n+1})$ the additive order of $1 - \chi^{N/2}$ is $2^{\lceil 2n/N \rceil}$: $2^{n}$ for the half turn, $2^{\lceil n/2 \rceil}$ for the quarter turn, $2^{\lceil n/4 \rceil}$ for the eighth turn. The exponent is $n$ divided by $N/2$, rounded up, and $N/2$ is the power to which the element $\zeta - 1$ must be raised to give $2$ up to an invertible factor in the ring $\Z[x]/(x^{N/2} + 1)$ of the $N$-th turn $\zeta$. Remark, not part of this result: if $K(L^{2n+1}(N))$ is that quotient ring with $\chi^{N/2}$ the complexified dying line (classical, not stored for $N \ne 4$), clause (1) of the result named in (iii) would give $k(\Sig) \ge 1 + \lceil 2n/N \rceil$ on walls with cross-section $L^{2n+1}(N)$, so the bound from complex K-theory weakens as the turn gets finer.
 \end{enumerate}
 
 ## technical
-The stored K-theory obstruction says that a completion with $k$ rungs forces $2^{k-1}(1 - \xi) = 0$ in the K-theory of the wall, $\xi$ the complexified dying line. On the quarter-turn lens spaces $\xi = \chi^{2}$ in the stored ring $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$, and the order of $1 - \chi^{2}$ had been bounded below for all $n$ and computed for small $n$. This result computes it for every $n$: it is $2^{\lceil n/2 \rceil}$. The reason is arithmetic in the ring of the quarter turn itself. Since $\chi^{4} - 1 = (\chi^{2} - 1)(\chi^{2} + 1)$ and $\chi^{2} - 1$ is $\chi - 1$ times an element prime to $\chi - 1$, the multiple $2^{m}(1 - \chi^{2})$ vanishes in the quotient exactly when $2^{m}$ lies in the ideal generated by $\chi^{2} + 1$ and $(\chi - 1)^{n}$, that is when $2^{m}$ is divisible by $(J - 1)^{n}$ in $\Z[J]$, $J$ the quarter-turn bivector. There $2 = J(J - 1)^{2}$ and $J - 1$ is not invertible, so the condition is $2m \ge n$. The rung bound becomes $k \ge 1 + \lceil n/2 \rceil$ for every $n$, conditional as before on the lambda-operations and on the stored K-ring. The same algebra for the $2^{a}$-th turn gives the order $2^{\lceil 2n/N \rceil}$, with the half turn recovering the order $2^{n}$ of the real projective spaces; for $N \ne 4$ the K-ring is classical and not stored, so the consequence for rungs is conditional on it. Three routes give the number for the quarter turn: the valuation in $\Z[J]$ (the proof), a direct computation in the quotient ring for $n \le 40$ (the check), and the classical formula for twisted spectral asymmetries for $n \le 8$ (not filed and not part of this result; computed for $n \le 8$, it indicates that those asymmetries see nothing more than the complex K-ring, so the spin class stays the input of the stored result on $L^{5}(4)$).
+The stored K-theory obstruction says that a completion with $k$ rungs forces $2^{k-1}(1 - \xi) = 0$ in the K-theory of the wall, $\xi$ the complexified dying line. On the quarter-turn lens spaces $\xi = \chi^{2}$ in the stored ring $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$, and the order of $1 - \chi^{2}$ had been bounded below for all $n$ and computed for small $n$. This result computes it for every $n$: it is $2^{\lceil n/2 \rceil}$. The reason is arithmetic in the ring of the quarter turn itself. Since $\chi^{4} - 1 = (\chi^{2} - 1)(\chi^{2} + 1)$ and $\chi^{2} - 1$ is $\chi - 1$ times an element prime to $\chi - 1$, the multiple $2^{m}(1 - \chi^{2})$ vanishes in the quotient exactly when $2^{m}$ lies in the ideal generated by $\chi^{2} + 1$ and $(\chi - 1)^{n}$, that is when $2^{m}$ is divisible by $(J - 1)^{n}$ in $\Z[J]$, $J$ the quarter-turn bivector. There $2 = J(J - 1)^{2}$ and $J - 1$ is not invertible, so the condition is $2m \ge n$. The stored rung bound becomes $k \ge 1 + \lceil n/2 \rceil$ for every $n$, conditional as before on the lambda-operations and on the stored K-ring; that consequence is stated in the stored result, which cites this one. The same algebra for the $2^{a}$-th turn gives the order $2^{\lceil 2n/N \rceil}$, with the half turn recovering the order $2^{n}$ of the real projective spaces; for $N \ne 4$ the K-ring is classical and not stored, so the consequence for rungs is conditional on it. Three routes give the number for the quarter turn: the valuation in $\Z[J]$ (the proof), a direct computation in the quotient ring for $n \le 40$ (the check), and the classical formula for twisted spectral asymmetries for $n \le 8$ (not filed and not part of this result; computed for $n \le 8$, it indicates that those asymmetries see nothing more than the complex K-ring, so the spin class stays the input of the stored result on $L^{5}(4)$).
 
 ## lay
 The series counts how many extra pairs of directions (rungs) are needed to complete the geometry across a wall. For a family of walls built from a quarter turn, an earlier result gave a lower bound on that count from a quantity that had been proved only partly and computed in small cases. This result computes the quantity in every dimension. The answer comes from the arithmetic of the quarter turn itself: in the whole-number system generated by a quarter turn $J$, the number $2$ is the quarter turn times the square of $J - 1$, and counting how many times $J - 1$ divides a power of two gives the bound.
 
 ## one-liner
-In the stored K-ring $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$ of $L^{2n+1}(4)$ the order of $1 - \chi^{2}$ is $2^{\lceil n/2 \rceil}$ for every $n$, because $2^{m}(1 - \chi^{2}) = 0$ exactly when $(J - 1)^{n}$ divides $2^{m}$ in the ring $\Z[J]$ of the quarter turn, where $2 = J(J - 1)^{2}$; so, given the lambda-operations and the stored K-ring, the walls need $k \ge 1 + \lceil n/2 \rceil$ rungs on every side for every $n$, and for the $2^{a}$-th turn the same algebra gives the order $2^{\lceil 2n/2^{a} \rceil}$.
+In the stored K-ring $\Z[\chi]/(\chi^{4} - 1, (\chi - 1)^{n+1})$ of $L^{2n+1}(4)$ the order of $1 - \chi^{2}$ is $2^{\lceil n/2 \rceil}$ for every $n$, because $2^{m}(1 - \chi^{2}) = 0$ exactly when $(J - 1)^{n}$ divides $2^{m}$ in the ring $\Z[J]$ of the quarter turn, where $2 = J(J - 1)^{2}$; so the stored K-theory bound on the rungs of these walls becomes $k \ge 1 + \lceil n/2 \rceil$ on every side for every $n$ (drawn in the stored result, given the lambda-operations), and for the $2^{a}$-th turn the same algebra gives the order $2^{\lceil 2n/2^{a} \rceil}$.

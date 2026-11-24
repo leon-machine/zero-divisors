@@ -169,8 +169,7 @@ def check_order_of_the_sign_line_for_the_half_turn_and_the_eighth_turn():
     return ok
 
 
-def check_rung_bound_for_every_n_against_the_stored_bounds():
-    premise("synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height")
+def check_ceiling_of_half_n_against_the_two_bounds_stored_before():
     ok = True
     for n in range(1, 41):
         new = 1 + ceil_div(n, 2)

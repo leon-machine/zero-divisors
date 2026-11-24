@@ -1,0 +1,28 @@
+PASS 24 octahedral rays
+PASS O closed under product and conjugate (mod scalars)
+PASS 9 bivectors, 4 orthogonal triples
+PASS each triple: a*b ~ c
+PASS 24 distinct 4-element frames inside O
+PASS they are orthogonal frames
+PASS all orthogonal frames inside O are these 24 (count 24)
+PASS rank of the 24 frame relations = 15
+PASS R(O) spans 9-dim matrix space
+PASS R kills each frame relation
+PASS block q=3/10 has 1 frames
+PASS block q=-1/5 has 2 frames
+PASS block q=1/10 has 18 frames
+PASS block q=-1/10 has 13 frames
+PASS 34 frames parsed from tex
+PASS tex certificate == check.py CERT
+PASS every certificate set is 4 distinct primitive vectors, pairwise orthogonal
+PASS every certificate frame is a coset of a half-turn Klein group
+PASS coefficient sum 2/5
+PASS target (2,1,0,0) has total 1
+PASS all other nonzero totals are on O (18 of them)
+PASS rays outside O other than target occurring: 43 (tex says 43)
+PASS t_s values in the tex match the computed totals
+PASS certificate consistent with all 10 quadratic forms
+PASS conjugates of 2+B1 by O are exactly the 6 rays 2 +- B_k
+PASS mod-5 table: all 145 classes of norm 0 mod 5 have a left divisor among the six
+PASS all 6248 integer quaternions of norm 625 factor into 4 of the six and a unit
+PASS Step 4 on 2017 primitive integer bivectors (|entries|<=8; 372 with 5|N, 834 with 2|N), axes B1,B2: all conjugates integer of norm 5^(2e+s) and factor (max s=136)

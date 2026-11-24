@@ -16,4 +16,5 @@ functions:
     clauses: ["(3) B = e2e3 is an isometry of H^r with B^2 = -1 (r = 2, 3)", "(3) f(q) = e3e1 q is a unit tangent field with f(Bq) = -B f(q): its span is the twisted line", "(3) the cometric is single valued, degenerates to first order along f at t = 0, and has signature (2n+1, 1) or (2n+2, 0) on the physical side"]
     omits: "checked at sampled rational points for L^7(4) and L^11(4); general odd n and the descent to the quotient are the proof's"
 untouched_premises:
+  synthesis.order-of-the-doubled-dying-line-on-quarter-turn-lens-walls-is-a-valuation-in-the-ring-of-the-quarter-turn: "supplies the exact order of 1 - chi^2 for every n, which clause (2) cites from version 3; the checks of this result compute the order directly for n up to 8 and the lower bound, as before"
   synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure: "supplies the K-ring of the lens spaces (L2) and x^2 = 0, which the proof cites; the checks compute in the presented ring and do not call it"

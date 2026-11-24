@@ -106,6 +106,7 @@ CASES = [(-4, 2), (8, 4), (-8, 4), (-3, 3), (12, 6), (5, 5), (-7, 7), (-20, 10),
 def check_fibre_sums_of_asymmetry_and_sea_energy_are_the_generalised_bernoulli_numbers():
     premise("synthesis.light-ray-continuum-is-the-twist-integral-of-arrays-and-window-values-are-twist-averages")
     premise("synthesis.null-ordering-of-counted-units-is-zeta-symmetric")
+    premise("synthesis.imported-hurwitz-zeta-values-and-dirichlet-l-functions-as-hurwitz-sums")
     ok, count = True, 0
     seen = {}
     for D, M in CASES:
@@ -141,6 +142,9 @@ def check_fibre_sums_of_asymmetry_and_sea_energy_are_the_generalised_bernoulli_n
 
 
 def check_the_values_agree_with_class_numbers_and_with_the_divisor_sum_formula():
+    premise("synthesis.imported-hurwitz-zeta-values-and-dirichlet-l-functions-as-hurwitz-sums")
+    premise("synthesis.imported-class-number-formula-at-zero-for-negative-discriminants")
+    premise("synthesis.imported-zeta-of-a-real-quadratic-field-at-minus-one-as-a-divisor-sum")
     ok = True
     units = {-3: 6, -4: 4}
     # odd characters: L(0, chi_D) = 2 h(D) / w(D) at the conductor, times 1 - chi(2) when 2M has an extra factor 2
