@@ -1,0 +1,6 @@
+I405  synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height
+      synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure is declared and untouched, as expected: coverage.yaml: supplies the K-ring of the lens spaces (L2) and x^2 = 0, which the proof cites; the checks compute in the presented ring and do not call it
+I405  synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height
+      synthesis.order-of-the-doubled-dying-line-on-quarter-turn-lens-walls-is-a-valuation-in-the-ring-of-the-quarter-turn is declared and untouched, as expected: coverage.yaml: supplies the exact order of 1 - chi^2 for every n, which clause (2) cites from version 3; the checks of this result compute the order directly for n up to 8 and the lower bound, as before
+
+synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height: 0 error(s), 2 other finding(s); check result: pass

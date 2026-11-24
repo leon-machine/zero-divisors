@@ -1,0 +1,6 @@
+W413  synthesis.thermal-test-on-the-ground-conic-holds-at-exactly-three-points
+      5 of 8 perturbations of check_no_zero_for_windows_shorter_than_three_twentieths_of_a_period's literals still pass: the check is weak
+W413  synthesis.thermal-test-on-the-ground-conic-holds-at-exactly-three-points
+      5 of 8 perturbations of check_monotone_near_one_quarter_and_one_third_and_concave_near_one_half's literals still pass: the check is weak
+
+synthesis.thermal-test-on-the-ground-conic-holds-at-exactly-three-points: 0 error(s), 2 other finding(s); check result: pass

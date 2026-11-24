@@ -2224,6 +2224,32 @@
     residue is the clock mismatch $2$, and clause (c) refers to the eigenbundle class of the transfer clause in
     place of the refuted conjecture of the first paper. It stays conjectured; the comparison across the collar
     is its proved part.
+
+    (24 November.) The order of $1 - \chi^{2}$ in the stored K-ring of $L^{2n+1}(4)$ is $2^{\lceil n/2 \rceil}$
+    for every $n$ (\claimref{synthesis.order-of-the-doubled-dying-line-on-quarter-turn-lens-walls-is-a-valuation-in-the-ring-of-the-quarter-turn}; proved): the question reduces to the divisibility of a power of
+    $2$ by a power of $J - 1$ in the ring $\Z[J]$ of the quarter turn, where $2 = J(J - 1)^{2}$. So the K-theory
+    bound is $k(\Sigma) \ge 1 + \lceil n/2 \rceil$ on every side for every $n$, in place of $1 + \lfloor n/2
+    \rfloor$ for all $n$ and the larger value computed for small $n$; it stays conditional on the lambda-
+    operations. For the $2^{a}$-th turn the same algebra gives the order $2^{\lceil 2n/2^{a} \rceil}$, the
+    consequence for rungs being conditional on the classical K-ring, which is not stored. A route examined and
+    closed: the spectral asymmetries of the lens spaces twisted by characters (classical formula, from memory;
+    an exact computation for $n \le 8$, not filed) give the same order and nothing beyond complex K-theory, and
+    a real refinement needs a spin structure, which $L^{5}(4)$ lacks; the spin class $q_{1}$ stays the input of
+    the two-rung and three-rung results in dimension five. The definite side on this family: the theorem of
+    Stolz (1989) on the level of real projective spaces under the quarter turn is imported as a Fact by Leon's
+    decision of 24 November (\claimref{synthesis.imported-stolz-level-of-real-projective-spaces-under-the-quarter-turn}; taken from its review and two later quotations,
+    the paper not read), and with the stored reduction it gives the rung count on a definite side of every
+    $L^{2n+1}(4)$ wall: $n + 2$ for $n \equiv 1, 7$, $n + 4$ for $n \equiv 5$ and $n + 3$ otherwise modulo $8$,
+    that is $3, 5, 6, 7, 9, 9, 9, 11$ for $n = 1, \dots, 8$ (\claimref{synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level}; proved given the import). It agrees
+    with the stored $3$ and $5$ and closes the stored window on $L^{7}(4)$ at $6$; that one new value lies in the
+    residue $n + 1 \equiv 4$ modulo $8$, where by the review the paper's general bounds differ, so it should be
+    read against the paper before anything is built on it. The stored explicit maps are optimal exactly for
+    $n = 1, 2, 3, 5$. What this does not settle: indefinite sides, where it is an upper bound only and the
+    windows on $L^{5}(4)$ and $L^{7}(4)$ stay $4 \le k \le 5$ and $4 \le k \le 6$; walls outside this family;
+    and the datum. On this family the count is decided by the residue of $n + 1$ modulo $8$, and no class of
+    the wall's cohomology or K-theory is identified that carries that residue, so the question of which
+    integral datum decides the definite side stays open in the form: name the invariant of $(\Sigma, \mathcal
+    L)$ whose value on the quarter-turn lens walls is the level.
   attack:
     - >-
       Answered in the negative (9 November) on lens-space walls, given the
@@ -2307,6 +2333,9 @@
     - synthesis.imported-steenrod-cup-one-square-is-a-natural-cohomology-operation
     - synthesis.strict-completions-exist-exactly-when-the-signature-does-not-jump
     - synthesis.eigenbundle-class-of-a-corank-one-wall-is-the-dying-line
+    - synthesis.order-of-the-doubled-dying-line-on-quarter-turn-lens-walls-is-a-valuation-in-the-ring-of-the-quarter-turn
+    - synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level
+    - synthesis.imported-stolz-level-of-real-projective-spaces-under-the-quarter-turn
   added: "2026-10-22"
 
 # ---------------------------------------------------------------- conformal spacetime
@@ -2519,6 +2548,28 @@
     for every denominator. This is a statement about pure states at the stored settings; among all state values
     the Pell values are not the running maxima (stored). The sentence above that linearity is undecided is
     superseded.
+
+    (24 November.) More than two modes: done for every size from four. Every function on the symmetric
+    idempotents of $\Mat_{n}(\Q)$, $n \ge 4$, that adds on orthogonal ones, with values in a rational vector
+    space and no sign condition, is the restriction of a linear functional, so the same holds on the algebra of
+    $\ell \ge 2$ modes, and with non-negativity and normalisation the weights are the restrictions of the states
+    of (P) (\claimref{synthesis.additive-weights-on-the-rational-projectors-are-linear-in-every-size-from-four};
+    proved, given the stored theorem for size four, on which it rests entirely). The first step named in the
+    item of 18 November is false: two rational vectors lie in a four-dimensional subspace similar to the
+    standard one only if the square of their bivector is, up to sign, a sum of three rational squares, and for
+    $e_{1}$ and $e_{2} + e_{3} + e_{4} + 2e_{5}$ it is $7$. The proof goes instead by one reflection per vector
+    and induction on the support, and its one arithmetic input is the four-square theorem, proved in the store
+    with the product of the even subalgebra of $\Cl_{\Q}(3,0)$ (\claimref{synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three}); the fact on positive definite rational forms named as the
+    candidate import is true and is not needed. The same result records that the rational field has exactly one
+    ordering, whose positive scalars are the squares $x\tilde{x}$ of that even subalgebra, so over the rational
+    scalars the ordered field of (P) is no further datum. For one mode the statement on additive weights is
+    false (a parity weight on the rays of $\Q^{2}$). The stored theorem for size four, on which this rests, was reviewed line by line on 24 November
+    with every finite step recomputed by separate code, and no gap was found. The prior art named on 18
+    November was read in part: the paper of 2001 in full (through a summarising tool), the papers of 1995 and
+    1998 through abstracts and the author's slides; nothing read proves a trace form for weights on the
+    orthogonal rational projections, the trace-form theorems of 1995 and 1998 being on the larger logic of all
+    idempotents, and the paper of 1995, where the question is posed, is still to be read in full. Not done:
+    size three; ordered fields other than $\Q$.
   attack:
     - >-
       Derive (P) from the series' structure, for instance from the record-chain account of measurement
@@ -2609,6 +2660,8 @@
     - synthesis.no-two-valued-weights-on-the-atoms-of-two-modes-the-even-subalgebra-admits-them
     - synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear
     - synthesis.pell-values-are-the-running-maxima-of-the-pure-state-chsh-values-over-the-rationals
+    - synthesis.additive-weights-on-the-rational-projectors-are-linear-in-every-size-from-four
+    - synthesis.positive-rationals-are-the-squares-of-the-even-subalgebra-of-cl-three
   added: "2026-11-10"
 
 # ---------------------------------------------------------------- completion
@@ -3484,6 +3537,16 @@
     of (Q) (\claimref{synthesis.window-energy-tests-with-free-spacing-admit-twists-half-third-and-quarter}; version 3 of
     \claimref{synthesis.window-reading-array-killing-energy}). The counterfactual residue $3/(4\pi)$ per unit of two
     components is recorded and not adopted. None of this derives the count unit.
+
+    (24 November.) The remark that no fourth array passes both energy tests, stored as computed, is proved
+    (\claimref{synthesis.thermal-test-on-the-ground-conic-holds-at-exactly-three-points}): on the ground conic
+    the thermal test holds only at twists $\tfrac14$, $\tfrac13$, $\tfrac12$ and their mirror twists, by an
+    exponential bound for short windows and enclosures in integer arithmetic elsewhere. So the two energy
+    equalities admit exactly the three stored slopes. Invariance of the sea under the whole modular group of the
+    window was examined and adds nothing to the stored one-window and two-window recurrences. A dictionary is
+    recorded beside these results: character sums over the twist fibres of an array are values of Dirichlet
+    L-functions at $0$ and $-1$ (\claimref{synthesis.character-sums-over-the-twist-fibres-of-an-array-are-dirichlet-l-values}); its three classical hypotheses
+    are now imported Facts, cited from memory; it constrains nothing. None of this derives the count unit.
   attack:
     - >-
       Derive the count unit from the boundary-mode structure: show that a
@@ -3550,6 +3613,7 @@
     - singularity.q-joint-quasi-freeness-s-wave
     - pred.boundary-mode-density
     - synthesis.the-residue-requires-two-arrays-per-unit-on-average-and-fixes-no-grouping
+    - synthesis.thermal-test-on-the-ground-conic-holds-at-exactly-three-points
   added: "2026-10-22"
 
 - id: op.counted-mode-energy

@@ -1,0 +1,4 @@
+B=4 p=33554393 rays=2928 frames=8756 rays_in_no_frame=0 rank_p=2361 dim_p=568 excess_over_10_plus_isolated=558
+  projection onto the 40 rays of box 1 and c: dim 10 (10 = quadratic forms only)
+  projection onto the 272 rays of box 2 and c: dim 34
+  projection onto the 1120 rays of box 3 and c: dim 196

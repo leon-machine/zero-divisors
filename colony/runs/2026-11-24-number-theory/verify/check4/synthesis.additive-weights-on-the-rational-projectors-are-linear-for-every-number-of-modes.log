@@ -1,0 +1,7 @@
+W413  synthesis.additive-weights-on-the-rational-projectors-are-linear-for-every-number-of-modes
+      5 of 8 perturbations of check_two_rational_vectors_need_not_lie_in_a_four_space_similar_to_the_standard_one's literals still pass: the check is weak
+W405  synthesis.additive-weights-on-the-rational-projectors-are-linear-for-every-number-of-modes
+      synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear is declared but none of the entity's 5 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+
+synthesis.additive-weights-on-the-rational-projectors-are-linear-for-every-number-of-modes: 0 error(s), 2 other finding(s); check result: pass

@@ -1,0 +1,17 @@
+functions:
+  check_two_is_the_quarter_turn_times_the_square_of_j_minus_one:
+    kind: complete
+    clauses: ["(i) J^2 = -1, (J - 1)^2 = -2J, J (J - 1)^2 = 2 and (J - 1)(J - 1)~ = 2, computed in Cl(2,0)", "(i) for n = 1..40 the least m with 2^m (J - 1)^(-n) integral is ceil(n/2)"]
+    omits: "complete for the identities; the divisibility statement is checked for n up to 40 and proved in general"
+  check_order_of_one_minus_chi_squared_in_the_stored_k_ring_is_two_to_the_ceiling_of_n_over_two:
+    kind: sampled
+    clauses: ["(ii) for n = 1..40: the order of 1 - chi^2 in Z[chi]/(chi^4 - 1, (chi - 1)^(n+1)), computed directly as lattice membership over the integers, is 2^ceil(n/2)", "the instance n = 2: 4 sigma^2 = 0 and 2 sigma^2 is not 0"]
+    omits: "n above 40 is the proof's; the computation does not pass through Z[J], so it tests the reduction of the proof and not only its last step"
+  check_order_of_the_sign_line_for_the_half_turn_and_the_eighth_turn:
+    kind: sampled
+    clauses: ["(iv) the order of 1 - chi^(N/2) in Z[chi]/(chi^N - 1, (chi - 1)^(n+1)), computed directly: 2^n for N = 2 and 2^ceil(n/4) for N = 8 (n up to 24), 2^ceil(n/8) for N = 16 (n up to 12)"]
+    omits: "that these rings are the K-rings of the lens spaces for N other than 4 is classical and not checked"
+  check_ceiling_of_half_n_against_the_two_bounds_stored_before:
+    kind: sampled
+    clauses: ["(iii) 1 + ceil(n/2) against the stored 1 + floor(n/2): equal for even n, one more for odd n, n up to 40; the stored instances 3, 4, 5 on L^7(4), L^11(4), L^15(4) and the value 2 at n = 1"]
+    omits: "arithmetic of the two expressions only; the obstruction 2^(k-1)(1 - xi) = 0 and the bound are the stored result's, which cites this one"

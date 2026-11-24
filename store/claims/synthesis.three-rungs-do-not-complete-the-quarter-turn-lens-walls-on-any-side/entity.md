@@ -25,7 +25,7 @@ derivations:
   uses:
   - synthesis.wall-rung-count-is-height-of-dying-line-class@2
   - synthesis.two-rungs-need-the-doubled-dying-line-stably-trivial@2
-  - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height@2
+  - synthesis.lens-space-walls-need-more-rungs-than-the-mod-two-height@3
   - synthesis.cohomology-of-the-quarter-turn-lens-spaces-from-the-equivariant-cell-structure@1
   - synthesis.imported-atiyah-hirzebruch-filtration-of-complex-k-theory@1
   - synthesis.imported-whitney-product-formula-and-projective-space@2

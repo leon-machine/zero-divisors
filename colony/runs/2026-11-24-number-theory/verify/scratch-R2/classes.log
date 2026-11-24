@@ -1,0 +1,8 @@
+primitive vector mod 2                   classes seen=   15 distinct frame rows=   39 dim of solutions=1  (only constants: exact)
+mod 3                                    classes seen=   40 distinct frame rows=  360 dim of solutions=1  (only constants: exact)
+mod 4                                    classes seen=  120 distinct frame rows= 1216 dim of solutions=1  (only constants: exact)
+mod 5                                    classes seen=  312 distinct frame rows= 5128 dim of solutions=1  (only constants: exact)
+v2(r.r)                                  classes seen=    3 distinct frame rows=    5 dim of solutions=1  (only constants: exact)
+v5(r.r)                                  classes seen=    6 distinct frame rows=   23 dim of solutions=1  (only constants: exact)
+v3(r.r)                                  classes seen=    7 distinct frame rows=   41 dim of solutions=1  (only constants: exact)
+r.r mod squares (2,3,5,7,11 parity)      classes seen=   32 distinct frame rows=  624 dim of solutions=1  (only constants: exact)

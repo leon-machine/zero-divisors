@@ -1,0 +1,9 @@
+W405  synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level
+      sheaf.tameness is declared but none of the entity's 2 check function(s) touches it
+      fix:   touch it with premise() where the check uses it, drop it from the derivation, or excuse it in coverage.yaml untouched_premises
+I405  synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level
+      synthesis.three-rungs-do-not-complete-the-quarter-turn-lens-walls-on-any-side is declared and untouched, as expected: coverage.yaml: supplies the bound of at least four rungs from dimension five, quoted in (ii) for the two windows; nothing in it is recomputed
+I405  synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level
+      synthesis.wall-rung-count-is-height-of-dying-line-class is declared and untouched, as expected: coverage.yaml: supplies the sufficiency clause (k rungs suffice when the dying line sits in a trivial bundle of rank k), cited in (ii); nothing in it is recomputed
+
+synthesis.definite-side-rung-count-on-every-quarter-turn-lens-wall-is-the-level: 0 error(s), 3 other finding(s); check result: pass

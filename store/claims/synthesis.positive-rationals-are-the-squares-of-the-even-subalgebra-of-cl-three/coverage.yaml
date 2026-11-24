@@ -1,0 +1,21 @@
+functions:
+  check_norm_of_the_even_subalgebra_is_a_sum_of_four_squares_and_multiplicative:
+    kind: sampled
+    clauses: ["(i) the products of the unit bivectors; x x~ equal to the sum of the four squared components on 8 even elements; N(xy) = N(x)N(y) on 64 pairs"]
+    omits: "the identities are polynomial and proved in two lines; the samples are a guard on the conventions (which bivector is B_k, the reverse)"
+  check_descent_writes_every_odd_prime_below_two_hundred_as_a_square_of_an_integer_even_element:
+    kind: sampled
+    clauses: ["(ii) step 1 for the 45 odd primes below 200: a solution of a^2 + b^2 + 1 = 0 modulo p with m < p", "(ii) step 2 run to the end for each: the halving step for even m, and for odd m the reduced element y, the product x y~ computed in Cl(3,0), its divisibility by m and the smaller m'"]
+    omits: "the general argument is the proof's; primes above 200 are not run"
+  check_integers_to_three_thousand_are_sums_of_four_squares_and_three_fail_exactly_on_the_sevens:
+    kind: complete
+    clauses: ["(ii) every integer from 1 to 3000 is a sum of four squares, by search", "(iv) in that range the integers that are not sums of three squares are exactly those of the form 4^a(8b+7)"]
+    omits: "complete only for the stated range; that every integer not of the form 4^a(8b+7) is a sum of three squares (the hard half of Legendre's theorem) is computed here for the range and is not claimed"
+  check_seven_times_a_square_is_never_a_sum_of_three_squares:
+    kind: complete
+    clauses: ["(iv) the tables modulo 8 and modulo 4 used by the proof; no solution with d up to 40"]
+    omits: "the descent on |d| is the proof's"
+  check_positive_rationals_are_squares_and_positive_semidefinite_matrices_are_sums_of_squares:
+    kind: sampled
+    clauses: ["(ii) eight positive rationals written as x x~", "(v) one positive definite 3 by 3 rational matrix diagonalised and written as a sum of at most 12 squares"]
+    omits: "the semidefinite case with a vanishing pivot is the proof's and is not sampled"

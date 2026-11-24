@@ -1,0 +1,27 @@
+functions:
+  check_three_modes_are_the_rational_matrices_of_size_eight_and_the_adjoint_is_the_transpose:
+    kind: complete
+    clauses: ["(i) for three modes: s_I^dagger s_J = delta_IJ P_0 on all 64 pairs; the matrices of e_k are symmetric and of f_k antisymmetric; the 64 blades map to 64 independent matrices"]
+    omits: "complete for three modes only; the statement for every number of modes is the proof's"
+  check_a_reflection_carries_a_coordinate_four_space_onto_one_through_the_vector:
+    kind: sampled
+    clauses: ["(ii) on ten vectors of support 5 to 8: r' in the coordinate four-space with the same square, found from four squares; -u r' u^-1 = r computed in Cl(n,0); the images of the four basis vectors are orthonormal and have support in the support of r"]
+    omits: "ten vectors are sampled, among them the vector of eight ones and vectors whose square is 4^a(8b+7) times a square; the general statement is four lines of algebra in the proof"
+  check_vectors_of_smaller_support_fill_at_least_three_hyperplanes_and_force_a_quadratic_form_to_vanish:
+    kind: sampled
+    clauses: ["(ii) on the same ten vectors: the coordinate functionals are nonzero and of rank 4; at least three of the five kernels are distinct; on each kernel the image has the smaller support claimed", "the lemma used in (iii): the ten monomials of a quadratic form on a four-space have rank 10 on 18 points of three of the hyperplanes"]
+    omits: "the lemma for values in an arbitrary rational vector space and the induction are the proof's"
+  check_two_rational_vectors_need_not_lie_in_a_four_space_similar_to_the_standard_one:
+    kind: sampled
+    clauses: ["(v) the bivector of e_1 and e_2 + e_3 + e_4 + 2 e_5 in Cl(5,0) has -(u ^ w)^2 = 7; the identity N(x)N(y) - <x y~>_0^2 = sum of three squares on 36 pairs of even elements of Cl(3,0); 7 is not a sum of three squares of rationals with denominator up to 12"]
+    omits: "that 7 is not a sum of three rational squares is the cited clause; the bounded search here only guards it"
+  check_linear_weights_sum_to_the_trace_on_a_reflected_frame_and_are_recovered_from_their_values:
+    kind: sampled
+    clauses: ["(iii), the easy direction and the uniqueness: a linear weight on Q^6 sums to the trace on a reflected frame, is constant on a ray, and its matrix is recovered from the values at e_i and e_i + e_j"]
+    omits: "the hard direction of (iii) is not machine-checked: it is the induction of the proof on top of the stored theorem for size four, whose finite computations are in that theorem's check"
+  check_one_mode_admits_a_non_negative_additive_weight_that_is_not_linear:
+    kind: sampled
+    clauses: ["the note's statement on one mode: the parity weight on the rays of Q^2 is non-negative, sums to 1 on the 360 frames with entries up to 9 and is not of the quadratic form (value 1 at (1,2) against 1/5)"]
+    omits: "that it sums to 1 on every frame is two lines (a primitive pair and its rotation by a quarter turn have complementary parities); not a clause of the theorem, which starts at size four"
+untouched_premises:
+  synthesis.additive-weights-on-the-rational-projectors-of-two-modes-are-linear: "the stored theorem for size four is used by Step 1 of the proof of (iii) as a theorem; no check here re-runs it, its finite computations being in its own check"
