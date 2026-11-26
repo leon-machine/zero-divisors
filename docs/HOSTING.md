@@ -54,8 +54,38 @@ never sees the secrets, and the guard check refuses a contributor's change to `d
 zerodivisors.org itself is a static site: a Cloudflare Pages project, `zero-divisors`, made by
 direct upload (not connected to git), with the custom domain zerodivisors.org, a proxied CNAME to
 `zero-divisors.pages.dev`, and a redirect rule sending `www.zerodivisors.org/*` to
-`https://zerodivisors.org/${1}` (301). It is deployed by hand from each release's tag
-(RELEASING.md, step 5):
+`https://zerodivisors.org/${1}` (301).
+
+Publishing a release deploys it (`.github/workflows/deploy-site.yml`): the workflow checks out
+the release's tag, runs the machine checks, builds the PDFs, the page and the folder to serve,
+and uploads that folder to the Pages project with wrangler. It then waits until zerodivisors.org
+shows the new release. Nothing is downloaded or uploaded by hand.
+
+- **Two jobs.** `build` has no secrets. It runs the machine checks in the same sealed container
+  as the check workflow (no network, the repository read-only), then builds. `deploy` holds the
+  Cloudflare token and runs none of the repository's code: it takes the folder `build` made and
+  hands it to wrangler. Pull requests never run the workflow, and the guard check refuses a
+  contributor's change to `.github/`.
+- **How long it takes.** The checks' results are reused from main's last run of the check
+  workflow, so a release made from an up-to-date main takes a few minutes. If GitHub has dropped
+  that cache (it keeps a cache for seven days after its last use), every check runs again: the
+  same result, about as long as a manual run of the check workflow.
+- **What stops it.** A failing check, a paper that does not compile, a folder that fails
+  `tp.pages_bundle`'s tests, or a page that does not name the release. The live site is then
+  left as it was.
+- **By hand.** Actions, deploy-site, Run workflow deploys the latest release again; give a tag
+  to deploy an earlier one (any release after v1.0.0, which predates `tp.pages_bundle`). It never deploys
+  `main`. Each run keeps the folder it deployed for 30 days, as the artifact `pages`.
+- **Rolling back.** In the Cloudflare dashboard, the project's Deployments list keeps every
+  deployment; "Rollback to this deployment" on an earlier one restores it at once.
+
+One-off set-up: the repository secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, the
+same two the MCP endpoint uses. The token needs Account, Cloudflare Pages, Edit, which the "Edit
+Cloudflare Workers" template includes; if the deploy step fails with an authentication error,
+edit the token and add it.
+
+To deploy from your own computer instead (the workflow does the same steps), from the release's
+tag and after `python -m tp build --store store --layers 1-5` and `python -m tp.layout`:
 
     python -m tp.pdfs && python -m tp.site && python -m tp.pages_bundle
     npx wrangler login                     # once per computer, in the browser
@@ -64,9 +94,8 @@ direct upload (not connected to git), with the custom domain zerodivisors.org, a
 Use wrangler, not the dashboard's drag-and-drop: the dashboard takes at most 1,000 files and
 the site has several thousand (wrangler takes up to 20,000, each at most 25 MiB, which
 `tp.pages_bundle` checks). The site is not built by Cloudflare from git because it needs the
-PDFs, which are compiled with pdflatex and not kept in git, and because it must show the release
-tag rather than whatever is on `main`. A GitHub workflow on release, like deploy-mcp, could do the
-same steps; it needs pdflatex in the runner and the API token to have Cloudflare Pages: Edit.
+PDFs, which are compiled with pdflatex and not kept in git, the checks' results, and the release
+tag rather than whatever is on `main`.
 
 Leave Cloudflare's Bot Fight Mode off for the zone: it challenges clients that are not browsers,
 which would block AI tools reading `llms.txt` and connecting to mcp.zerodivisors.org.
