@@ -11,8 +11,9 @@ taken when enough has been merged to be worth a new version.
   All versions share one DOI for the record as a whole, and each version has its own. Files marked
   `export-ignore` in `.gitattributes` are left out of the snapshot. A published version's files
   cannot be changed; only its description can.
-- **The public site** is built from the release tag, so it shows exactly what was archived. Its
-  Documents page names the release it was built from.
+- **The public site** is built from the release tag and deployed by a GitHub workflow when the
+  release is published, so it shows exactly what was archived. Its Documents page names the
+  release it was built from.
 
 ## One-off set-up
 
@@ -41,18 +42,20 @@ taken when enough has been merged to be worth a new version.
    (without its first line) as the description, and optionally Generate release notes below it for
    the list of merged pull requests; Publish. Zenodo issues the new version's DOI within minutes
    and keeps the description with the version.
-5. Build and publish the public site from the tag (with `site_url` in `store/config.yaml` set to the
-   site's public address, so shared links and link previews use it and each result gets its share
-   page `site/r/<id>.html`):
-   `git checkout vX.Y.Z`, then `python -m tp.pdfs` (the papers' PDFs, needs pdflatex),
-   `python -m tp.site` and `python -m tp.pages_bundle`, which copies what is served into
-   `build/pages` and checks it; then deploy that folder
-   (`npx wrangler pages deploy build/pages --project-name zero-divisors --branch main`;
-   docs/HOSTING.md), then `git checkout -- site/ && git checkout main`. The folder holds the page,
+5. Nothing to do: publishing the release builds the public site from its tag and deploys it to
+   zerodivisors.org (`.github/workflows/deploy-site.yml`), and redeploys the hosted MCP endpoint
+   from the same tag (`deploy-mcp.yml`). Watch both on the Actions page; deploy-site ends by
+   checking that zerodivisors.org shows the new release. `site_url` in `store/config.yaml` must
+   be the site's public address, so shared links and link previews use it and each result gets
+   its share page `site/r/<id>.html`. If a run fails, fix the cause on `main` and release a
+   PATCH version, or, if the tag itself is sound, run the workflow again (Actions, deploy-site,
+   Run workflow). The same steps by hand, should you ever need them, are in docs/HOSTING.md:
+   `git checkout vX.Y.Z`, `python -m tp build --store store --layers 1-5`, then `python -m tp.pdfs`
+   (needs pdflatex), `python -m tp.site`, `python -m tp.pages_bundle` and
+   `npx wrangler pages deploy build/pages --project-name zero-divisors --branch main`, then
+   `git checkout -- site/ && git checkout main`. The folder holds the page,
    the pages that need no JavaScript (`results/`, `subjects/`, `llms.txt`, and with `site_url`
    set `sitemap.xml` and `robots.txt`), `404.html`, the share pages and the PDFs.
-   If the hosted MCP endpoint is running, rebuild and redeploy it from the same tag
-   (docs/HOSTING.md).
 6. If the papers' deposits changed in the same period, record them first (before step 3) with
    `python -m tp.deposits record <code> --tex FILE --doi DOI --version V`, so the release carries them.
 

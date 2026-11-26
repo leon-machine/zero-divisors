@@ -1,0 +1,156 @@
+name: deploy-site
+# Builds the public site from a release's tag and deploys it to the Cloudflare Pages project
+# zero-divisors, which serves zerodivisors.org (docs/HOSTING.md; RELEASING.md, step 5).
+# Runs when a release is published, so the site shows what was archived, and by hand
+# (Actions > deploy-site > Run workflow), which deploys the latest release again or the tag
+# you name. It never deploys main. Needs two repository secrets, the same two deploy-mcp
+# uses: CLOUDFLARE_API_TOKEN (with Account > Cloudflare Pages > Edit) and CLOUDFLARE_ACCOUNT_ID.
+#
+# Two jobs. `build` has no secrets: it runs the machine checks in the same sealed container as
+# the check workflow, then builds the PDFs, the page and the folder to serve. `deploy` holds
+# the Cloudflare token and runs none of the repository's code: it takes the folder `build`
+# made and hands it to wrangler. Pull requests never run this workflow.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to deploy, e.g. v1.1.0 (blank: the latest release)"
+        required: false
+        default: ""
+permissions:
+  contents: read
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    outputs:
+      tag: ${{ steps.rel.outputs.tag }}
+      sha: ${{ steps.at.outputs.sha }}
+    steps:
+      - name: Which release
+        id: rel
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          if [ -z "$TAG" ]; then
+            TAG=$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName --jq .tagName)
+          fi
+          case "$TAG" in
+            v[0-9]*.[0-9]*.[0-9]*) ;;
+            *) echo "::error::'$TAG' is not a release tag (vMAJOR.MINOR.PATCH)"; exit 1 ;;
+          esac
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Deploying release $TAG" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@v5
+        with:
+          ref: refs/tags/${{ steps.rel.outputs.tag }}
+          # the whole history and every tag: the page names its release (git describe) and
+          # reads the store's history
+          fetch-depth: 0
+      - name: The commit the tag names
+        id: at
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      # The machine checks (layer 4), exactly as the check workflow runs them: in a container
+      # with no network and the repository mounted read-only, so no check can reach out or
+      # change what is built. Their results are what the page reports for each result. They
+      # are reused from main's last run of the check workflow (GitHub's cache, keyed per
+      # result by everything its outcome depends on), so a release made from an up-to-date
+      # main replays them in a minute or two; with no cache they all run again, which takes
+      # much longer but gives the same answer. A failing check stops the deployment.
+      - name: Layer-4 results from main's last run
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/l4
+          key: layer4-main-${{ steps.at.outputs.sha }}
+          restore-keys: layer4-main-
+      - name: Evidence (layer 4) in an isolated container
+        run: |
+          mkdir -p "$RUNNER_TEMP/l4/scripts"
+          [ -f "$RUNNER_TEMP/l4/layer4.json" ] || echo '{}' > "$RUNNER_TEMP/l4/layer4.json"
+          pip install --quiet --target .ci-deps pyyaml jsonschema numpy scipy   # five legacy verify scripts use numpy/scipy
+          docker run --rm --network none --read-only \
+            --tmpfs /tmp:rw,size=512m \
+            -e HOME=/tmp -e PYTHONDONTWRITEBYTECODE=1 \
+            -e PYTHONPATH=/lab/.ci-deps \
+            -e TP_L4_CACHE=/cache/layer4.json \
+            -v "$PWD/.ci-deps":/usr/local/lib/python3.11/site-packages:ro \
+            -v "$RUNNER_TEMP/l4":/cache:rw \
+            -v "$PWD":/lab:ro -w /lab python:3.11-slim \
+            python -m tp check --store store --layers 4 --keep-going --cache-dir /cache/scripts
+          # the container wrote the record as root; the build below reads its own copy
+          cp "$RUNNER_TEMP/l4/layer4.json" "$RUNNER_TEMP/layer4.json"
+      # The graph the page is built from. Layer 4 is replayed from the record the container
+      # just wrote (same Python version, same keys), so nothing from the store runs here.
+      # Layer 6 (people) judges a pull request by its author, so it is left out.
+      - name: Build the graph and its layout
+        env:
+          TP_L4_CACHE: ${{ runner.temp }}/layer4.json
+        run: |
+          python -m tp build --store store --layers 1-5
+          python -m tp.layout > /dev/null
+      - name: pdflatex, for the papers' PDFs
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends texlive-latex-base texlive-latex-recommended
+      - name: PDFs, the page and the folder to serve
+        run: |
+          python -m tp.pdfs
+          python -m tp.site
+          python -m tp.pages_bundle
+      - name: The page names this release
+        env:
+          TAG: ${{ steps.rel.outputs.tag }}
+        run: |
+          [ "$(git describe --tags --exact-match)" = "$TAG" ] || { echo "::error::not built from $TAG"; exit 1; }
+          grep -qF "\"tag\":\"$TAG\"" build/pages/index.html \
+            || { echo "::error::build/pages/index.html does not name release $TAG"; exit 1; }
+          echo "Built $(find build/pages -type f | wc -l) files, $(du -sh build/pages | cut -f1)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: pages
+          path: build/pages
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/download-artifact@v6
+        with:
+          name: pages
+          path: pages
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TAG: ${{ needs.build.outputs.tag }}
+          SHA: ${{ needs.build.outputs.sha }}
+        run: |
+          npx --yes wrangler@4 pages deploy pages --project-name zero-divisors --branch main \
+            --commit-hash "$SHA" --commit-message "Release $TAG" --commit-dirty=true
+      - name: Check the site shows this release
+        env:
+          TAG: ${{ needs.build.outputs.tag }}
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fsS -m 30 https://zerodivisors.org/ | grep -qF "\"tag\":\"$TAG\""; then
+              echo "zerodivisors.org shows $TAG" | tee -a "$GITHUB_STEP_SUMMARY"; exit 0
+            fi
+            sleep 10
+          done
+          echo "zerodivisors.org did not show $TAG within 5 minutes" >&2; exit 1
