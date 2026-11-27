@@ -3933,3 +3933,60 @@ Tarski1959:
     What is elementary geometry?,
 
     in \emph{The Axiomatic Method}, ed.\ L.~Henkin, P.~Suppes and A.~Tarski, North-Holland, Amsterdam (1959), 16--29.'
+Sachs1962:
+  citation: R. K. Sachs, On the characteristic initial value problem in gravitational theory, J. Math. Phys.
+    3 (1962), 908--914.
+  doi: 10.1063/1.1724305
+  first_in: synthesis
+  latex: 'R. K. Sachs, On the characteristic initial value problem in gravitational theory, J. Math. Phys. 3 (1962), 908--914.'
+Penrose1965:
+  citation: R. Penrose, A remarkable property of plane waves in general relativity, Rev. Mod. Phys. 37 (1965),
+    215--220.
+  doi: 10.1103/RevModPhys.37.215
+  first_in: synthesis
+  latex: 'R. Penrose, A remarkable property of plane waves in general relativity, Rev. Mod. Phys. 37 (1965), 215--220.'
+Rendall1990:
+  citation: A. D. Rendall, Reduction of the characteristic initial value problem to the Cauchy problem and its
+    applications to the Einstein equations, Proc. R. Soc. Lond. A 427 (1990), 221--239.
+  doi: 10.1098/rspa.1990.0009
+  first_in: synthesis
+  latex: 'A. D. Rendall, Reduction of the characteristic initial value problem to the Cauchy problem and its applications to the Einstein equations, Proc. R. Soc. Lond. A 427 (1990), 221--239.'
+CiambelliFreidelLeigh2024:
+  citation: 'L. Ciambelli, L. Freidel and R. G. Leigh, Null Raychaudhuri: canonical structure and the dressing
+    time, J. High Energy Phys. 01 (2024), 166; arXiv:2309.03932.'
+  doi: 10.1007/JHEP01(2024)166
+  first_in: synthesis
+  latex: 'L. Ciambelli, L. Freidel and R. G. Leigh, Null Raychaudhuri: canonical structure and the dressing time, J. High Energy Phys. 01 (2024), 166; arXiv:2309.03932.'
+CarlipTeitelboim1995:
+  citation: 'S. Carlip and C. Teitelboim, The off-shell black hole, Class. Quantum Grav. 12 (1995), 1699--1704; arXiv:gr-qc/9312002.'
+  doi: 10.1088/0264-9381/12/7/011
+  first_in: synthesis
+  latex: 'S. Carlip and C. Teitelboim, The off-shell black hole, Class. Quantum Grav. 12 (1995), 1699--1704; arXiv:gr-qc/9312002.'
+DonnellyFreidel2016:
+  citation: 'W. Donnelly and L. Freidel, Local subsystems in gauge theory and gravity, J. High Energy Phys. 09 (2016), 102; arXiv:1601.04744.'
+  doi: 10.1007/JHEP09(2016)102
+  first_in: synthesis
+  latex: 'W. Donnelly and L. Freidel, Local subsystems in gauge theory and gravity, J. High Energy Phys. 09 (2016), 102; arXiv:1601.04744.'
+AbbottDeser1982:
+  citation: 'L. F. Abbott and S. Deser, Stability of gravity with a cosmological constant, Nucl. Phys. B 195 (1982), 76--96.'
+  doi: 10.1016/0550-3213(82)90049-9
+  first_in: synthesis
+  latex: 'L. F. Abbott and S. Deser, Stability of gravity with a cosmological constant, Nucl. Phys. B 195 (1982), 76--96.'
+Isaacson1968:
+  citation: 'R. A. Isaacson, Gravitational radiation in the limit of high frequency. II. Nonlinear terms and the effective stress tensor, Phys. Rev. 166 (1968), 1272--1280.'
+  doi: 10.1103/PhysRev.166.1272
+  first_in: synthesis
+  latex: 'R.~A.~Isaacson,
+
+    Gravitational radiation in the limit of high frequency. II. Nonlinear terms and the effective stress tensor,
+
+    Phys. Rev. \textbf{166} (1968), 1272--1280.'
+Deser1970:
+  citation: 'S. Deser, Self-interaction and gauge invariance, Gen. Rel. Grav. 1 (1970), 9--18; arXiv:gr-qc/0411023.'
+  doi: 10.1007/BF00759198
+  first_in: synthesis
+  latex: 'S.~Deser,
+
+    Self-interaction and gauge invariance,
+
+    Gen. Rel. Grav. \textbf{1} (1970), 9--18; arXiv:gr-qc/0411023.'
